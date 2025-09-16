@@ -16,7 +16,7 @@
 title: 来去之间的抽象物理空间
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my page. Have a good day!
+  欢迎来访, 祝你一切顺利!
 twitter_username: NO
 github_username: username
 minimal_mistakes_skin: dark
@@ -56,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Zen!"
+  name   : "来去之间"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Good luck! Have fun!"
+  bio    : "来是Come去是Go, 来去之间Come and Go!"
   links:
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
@@ -89,7 +89,7 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: 所有条目
     values:
       layout: single
       author_profile: true
