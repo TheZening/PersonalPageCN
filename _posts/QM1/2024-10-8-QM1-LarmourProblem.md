@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Larmour问题"
+title: "QM1 Larmour问题"
 date: 2024-10-08T08:06:00-05:00
 categories:
-  - QM1+
+  - QM1
 ---
 在这篇文章中, 我们讨论Larmour问题.
 我们首先介绍轨道和自旋电子磁矩.
