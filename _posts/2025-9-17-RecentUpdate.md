@@ -34,7 +34,7 @@ categories:
 2024-Apr-02: 我们在Ge空穴自旋量子比特体系中关于$$1/f$$噪音的研究, 现在发表在 Physical Review B上了.
 [Dephasing of planar Ge hole spin qubits due to 1/f charge noise](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403)
 
-2024-Aug-1: 离开了UNSW, 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!
+2024-Aug-1: 离开了UNSW, 这真是个令人伤心的地方. 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!
 
 2024-Aug-15: 我与好朋友Xiangjun合作关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的研究, 现在发表在 IEEE Transaction on quantum engineering 上了, 格外值得注意地, Xiangjun作为一名本科生主导了本次项目, 未来可期!
 [Toward axion signal extraction in semiconductor spin qubits via spectral engineering](https://ieeexplore.ieee.org/abstract/document/11127003)
