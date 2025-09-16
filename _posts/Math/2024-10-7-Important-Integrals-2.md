@@ -7,10 +7,10 @@ tags:
   - Integral Table
 ---
 
-Here we summarize some useful intergation results in assignments.
+有一些常见的积分结果, 知道总比不知道要好...
 
 $$
-\int_{-\infty}^{\infty} e^{-x^2} d x=\sqrt{\pi}
+\int_{-\infty}^{\infty} e^{-x^2} \dd{x}=\sqrt{\pi}
 $$
 
 $$
