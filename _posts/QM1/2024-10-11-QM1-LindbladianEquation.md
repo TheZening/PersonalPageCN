@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Lindbladian quantum kinetic equations"
+title: "QM2 Lindbladian量子动力学系统"
 date: 2024-10-12T08:06:00-05:00
 categories:
-  - QM1+
+  - QM2
 ---
 In this post, we discuss some features of an open quantum system, which consists of the system $$H_S$$, the environment $$H_B$$, and the interaction part $$H_{SB}$$:
 $$

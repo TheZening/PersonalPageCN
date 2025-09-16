@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Rabi problem"
+title: "QM1 Rabi问题"
 date: 2024-10-09T08:06:00-05:00
 categories:
-  - QM1+
+  - QM1
 ---
 In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:
 
@@ -185,57 +185,3 @@ $$
 \end{equation}
 $$
 This is again the Rabi oscillation formula!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

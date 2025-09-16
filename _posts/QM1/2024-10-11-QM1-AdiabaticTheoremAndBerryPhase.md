@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Adiabatic theorem and Berry phase"
+title: "QM1 绝热定理与Berry相位"
 date: 2024-10-11T08:06:00-05:00
 categories:
-  - QM1+
+  - QM1
 ---
 In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.
 

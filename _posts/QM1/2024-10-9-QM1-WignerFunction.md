@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Wigner functions"
+title: "QM+ Wigner functions入门"
 date: 2024-10-09T08:06:00-05:00
 categories:
-  - QM1+
+  - QM+
 ---
 In this post, we discuss Wigner functions and Weyl transforms.
 

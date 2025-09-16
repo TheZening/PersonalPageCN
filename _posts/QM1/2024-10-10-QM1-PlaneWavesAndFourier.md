@@ -1,8 +1,8 @@
 ---
-title: "QM1+ Plane waves and Fourier "
+title: "QM1 平面波和Fourier变换 "
 date: 2024-10-10T08:06:00-05:00
 categories:
-  - QM1+
+  - QM1
 ---
 In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.
 

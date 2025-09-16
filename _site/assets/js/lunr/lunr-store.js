@@ -23,34 +23,34 @@ var store = [{
         "url": "/PersonalPageCN/qm1+/QM1-LarmourProblem/",
         "teaser": null
       },{
-        "title": "QM1+ Rabi problem",
-        "excerpt":"In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian: \\[\\begin{equation} H = \\mqty[E_1 &amp; W_{1,2} \\\\ W_{2,1} &amp; E_2] \\end{equation}\\] The first level has energy \\(E_1\\) while the second level has energy \\(E_2\\), the coupling term \\(W_{1,2}\\) means...","categories": ["QM1+"],
+        "title": "QM1 Rabi问题",
+        "excerpt":"In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian: \\[\\begin{equation} H = \\mqty[E_1 &amp; W_{1,2} \\\\ W_{2,1} &amp; E_2] \\end{equation}\\] The first level has energy \\(E_1\\) while the second level has energy \\(E_2\\), the coupling term \\(W_{1,2}\\) means...","categories": ["QM1"],
         "tags": [],
-        "url": "/PersonalPageCN/qm1+/QM1-RabiProblem/",
+        "url": "/PersonalPageCN/qm1/QM1-RabiProblem/",
         "teaser": null
       },{
-        "title": "QM1+ Wigner functions",
-        "excerpt":"In this post, we discuss Wigner functions and Weyl transforms. It would be desirable to have a function that displays the probability distribution simultaneously in the \\(x\\) and \\(p\\) variables. This is what Wigner functions do. Another reason for a representation of a quantum state in phase space is to...","categories": ["QM1+"],
+        "title": "QM+ Wigner functions入门",
+        "excerpt":"In this post, we discuss Wigner functions and Weyl transforms. It would be desirable to have a function that displays the probability distribution simultaneously in the \\(x\\) and \\(p\\) variables. This is what Wigner functions do. Another reason for a representation of a quantum state in phase space is to...","categories": ["QM+"],
         "tags": [],
-        "url": "/PersonalPageCN/qm1+/QM1-WignerFunction/",
+        "url": "/PersonalPageCN/qm+/QM1-WignerFunction/",
         "teaser": null
       },{
-        "title": "QM1+ Plane waves and Fourier ",
-        "excerpt":"In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations. The starting point is to consider the plane wave: \\(\\begin{equation} \\braket{x}{p} = \\frac{1}{\\sqrt{2\\pi\\hbar}} \\exp(\\frac{i}{\\hbar}xp) \\end{equation}\\) You can...","categories": ["QM1+"],
+        "title": "QM1 平面波和Fourier变换 ",
+        "excerpt":"In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations. The starting point is to consider the plane wave: \\(\\begin{equation} \\braket{x}{p} = \\frac{1}{\\sqrt{2\\pi\\hbar}} \\exp(\\frac{i}{\\hbar}xp) \\end{equation}\\) You can...","categories": ["QM1"],
         "tags": [],
-        "url": "/PersonalPageCN/qm1+/QM1-PlaneWavesAndFourier/",
+        "url": "/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/",
         "teaser": null
       },{
-        "title": "QM1+ Adiabatic theorem and Berry phase",
-        "excerpt":"In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post. The first topic is called the adiabatic approximation, we consider a Hamiltonian depend on a vector parameter \\(\\boldsymbol{\\zeta}(t)\\) which trace a closed llop...","categories": ["QM1+"],
+        "title": "QM1 绝热定理与Berry相位",
+        "excerpt":"In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post. The first topic is called the adiabatic approximation, we consider a Hamiltonian depend on a vector parameter \\(\\boldsymbol{\\zeta}(t)\\) which trace a closed llop...","categories": ["QM1"],
         "tags": [],
-        "url": "/PersonalPageCN/qm1+/QM1-AdiabaticTheoremAndBerryPhase/",
+        "url": "/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/",
         "teaser": null
       },{
-        "title": "QM1+ Lindbladian quantum kinetic equations",
-        "excerpt":"In this post, we discuss some features of an open quantum system, which consists of the system \\(H_S\\), the environment \\(H_B\\), and the interaction part \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) The dynamics of the whole system (system + environment), described by the density matrix...","categories": ["QM1+"],
+        "title": "QM2 Lindbladian量子动力学系统",
+        "excerpt":"In this post, we discuss some features of an open quantum system, which consists of the system \\(H_S\\), the environment \\(H_B\\), and the interaction part \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) The dynamics of the whole system (system + environment), described by the density matrix...","categories": ["QM2"],
         "tags": [],
-        "url": "/PersonalPageCN/qm1+/QM1-LindbladianEquation/",
+        "url": "/PersonalPageCN/qm2/QM1-LindbladianEquation/",
         "teaser": null
       },{
         "title": "新闻",
