@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T00:44:32+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:38:17+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -32,668 +32,683 @@
 <p>2024-Aug-15: 我与好朋友Xiangjun合作关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的研究, 现在发表在 IEEE Transaction on quantum engineering 上了, 格外值得注意地, Xiangjun作为一名本科生主导了本次项目, 未来可期!
 <a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
 
-<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授! 期待未来的合作! 天津大学风景真不错, 待遇尚可, 足见对于青年人才的支持.</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学系统</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学系统" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/"><![CDATA[<p>In this post, we discuss some features of an open quantum system, which consists of the system \(H_S\), the environment \(H_B\), and the interaction part \(H_{SB}\):
+<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授! 期待未来的合作! 天津大学风景真不错, 待遇尚可, 足见对于青年人才的支持.</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学系统</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学系统" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
+系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\):
 \(\begin{equation}
   H(t) = H_S + H_B + \alpha H_{SB}
-\end{equation}\)
-The dynamics of the whole system (system + environment), described by the density matrix \(\rho_{SB}\), are given by:
+\end{equation}\)</p>
+
+<p>整体(系统 + 环境)的动力学由密度矩阵 \(\rho_{SB}\) 描述, 满足:
 \(\begin{equation}
   \dv{}{t} \rho_{SB} = -\frac{i}{\hbar} \left[H_S + H_B + \alpha H_{SB}, \rho_{SB}\right]
-\end{equation}\)
-In the interaction picture, the Hamiltonian evolves as:
+\end{equation}\)</p>
+
+<p>在相互作用绘景里, Hamiltonian 的演化是:
 \(\begin{equation}
   H(t) = \exp\left(\frac{i}{\hbar}(H_S + H_B)t\right) H_{SB} \exp\left(-\frac{i}{\hbar}(H_S + H_B)t\right)
-\end{equation}\)
-And the density matrix transforms accordingly:
+\end{equation}\)</p>
+
+<p>密度矩阵也相应变换为:
 \(\begin{equation}
   \rho(t) = \exp\left(\frac{i}{\hbar}(H_S + H_B)t\right) \rho_{SB}(t) \exp\left(-\frac{i}{\hbar}(H_S + H_B)t\right)
-\end{equation}\)
-This leads to a new equation:
+\end{equation}\)</p>
+
+<p>于是得到新的方程:
 \(\begin{equation}
   \dv{}{t} \rho = -\frac{i}{\hbar} \alpha \left[H(t), \rho(t)\right]
-\end{equation}\)
-Since we are only interested in the evolution of the system, we take the partial trace over the environment: \(\rho_S = \Tr_B(\rho_{SB})\). The first step is to consider \(\rho_{SB}\), which is the inverse of \(\rho\) in the interaction picture:
+\end{equation}\)</p>
+
+<p>因为我们只关心系统的演化, 所以对环境做偏迹:\(\rho_S = \Tr_B(\rho_{SB})\).
+第一步, 回到相互作用绘景下 \(\rho_{SB}\) 的表达(它是上式中 \(\rho\) 的逆变换):
 \(\begin{equation}
   \rho_{SB} = \exp\left(-\frac{i}{\hbar}(H_S+H_B)t\right) \rho_{SB}(t) \exp\left(\frac{i}{\hbar}(H_S+H_B)t\right)
-\end{equation}\)
-Our approach is as follows:</p>
+\end{equation}\)</p>
+
+<p>我们的套路是:</p>
 <ol>
-  <li>Solve the equations in the interaction picture.</li>
-  <li>Find \(\rho_{SB}\).</li>
-  <li>Take the partial trace.</li>
+  <li>在相互作用绘景下解方程；</li>
+  <li>求出 \(\rho_{SB}\)；</li>
+  <li>做偏迹得到系统态.</li>
 </ol>
 
-<p>Now, to solve the kinetic equation, we use an iterative approach:
+<p>为了解动力学方程, 我们用迭代(积分)形式:
 \(\begin{equation}
   \dv{\rho}{t} = \rho(0) - \frac{i}{\hbar} \alpha \int_0^t \left[H(t'), \rho(t')\right] \dd{t'}
-\end{equation}\)
-Then, the original equation becomes:
+\end{equation}\)</p>
+
+<p>于是原方程变成:
 \(\begin{equation}
 \begin{aligned}
   \dv{\rho}{t} =&amp; -\frac{i}{\hbar} \alpha \left[H(t), \rho(0)\right] \\
   &amp; - \frac{1}{\hbar^2} \alpha^2 \left[H(t), \int_0^t \left[H(t'), \rho(t')\right] \dd{t'}\right]
 \end{aligned}
-\end{equation}\)
-Next, we take the partial trace to remove the environment:
+\end{equation}\)</p>
+
+<p>接着, 我们对环境做偏迹:
 \(\begin{equation}
 \begin{aligned}
   \dv{\rho_S}{t} =&amp; -\frac{i}{\hbar} \alpha \Tr_B\left[H(t), \rho(0)\right] \\
   &amp;- \frac{1}{\hbar^2} \alpha^2 \Tr_B\left[H(t), \int_0^t \left[H(t'), \rho(t')\right] \dd{t'}\right]
 \end{aligned}
 \end{equation}\)</p>
+
 <blockquote>
-  <p>\(H_{SB}\) can often be defined in such a way that the first term on the right vanishes.</p>
+  <p>\(H_{SB}\) 可以直接想办法给他定义成使得右边第一项为 0的那种形式.</p>
 </blockquote>
 
-<p>Thus, we arrive at:
+<p>于是得到:
 \(\begin{equation}
   \dv{\rho_S}{t} = \frac{1}{\hbar^2} \alpha^2 \Tr_B\left[H(t), \int_0^t \left[H(t'), \rho(t')\right] \dd{t'}\right]
-\end{equation}\)
-Now, let’s perform the integrations:
+\end{equation}\)</p>
+
+<p>现在做时间积分:
 \(\begin{equation}
   \rho_S(t) - \rho_S(t') = -\frac{1}{\hbar^2} \alpha^2 \int_t^{t'} \Tr_B\left[H(t'), \int_0^{t'} \left[H(t''), \rho(t'')\right] \dd{t''}\right] \dd{t'}
 \end{equation}\)</p>
+
 <blockquote>
-  <p>This implies that \(\rho(t'')\) is very close to \(\rho(t)\), allowing us to approximate \(\rho(t')\) by \(\rho(t)\).</p>
+  <p>这意味着 \(\rho(t'')\) 与 \(\rho(t)\) 非常接近, 于是可以用 \(\rho(t)\) 来近似 \(\rho(t')\).</p>
 </blockquote>
 
-<p>Thus, we have:
+<p>因此有:
 \(\begin{equation}
   \dv{\rho_S}{t} = \frac{1}{\hbar^2} \alpha^2 \Tr_B\left[H(t), \int_0^t \left[H(t'), \rho(t)\right] \dd{t'}\right]
-\end{equation}\)
-Setting \(\alpha = 1\), the equation simplifies to:
+\end{equation}\)</p>
+
+<p>令 \(\alpha = 1\), 方程化简为:
 \(\begin{equation}
   \dv{\rho_S}{t} = \frac{1}{\hbar^2} \Tr_B\left[H(t), \int_0^t \left[H(t'), \rho(t)\right] \dd{t'}\right]
 \end{equation}\)</p>
+
 <blockquote>
-  <p>Next, we assume \(\rho(t) = \rho_S(t) \otimes \rho_B(t)\).</p>
+  <p>接下来, 假设 \(\rho(t) = \rho_S(t) \otimes \rho_B(t)\).</p>
 </blockquote>
 
-<p>The equation becomes:
+<p>方程变为:
 \(\begin{equation}
   \dv{\rho_S}{t} = -\frac{1}{\hbar^2} \Tr_B\left[H(t), \int_0^\infty \left[H(t'), \rho_S(t)\rho_B(t)\right] \dd{t'}\right]
 \end{equation}\)</p>
+
 <blockquote>
-  <p>This is known as the Born-Markov master equation.</p>
+  <p>这就是著名的 Born-Markov 方程.</p>
 </blockquote>
 
-<p>Now, we consider a specific model for the system-bath interaction:
+<p>现在考虑一个具体的系统-热浴相互作用模型:
 \(\begin{equation}
   H_{SB} = \hbar\left(SB^\dagger + S^\dagger B\right)
 \end{equation}\)
-where \(S\) is a general operator acting on the system, and \(B\) is an operator acting on the environment.</p>
+其中 \(S\) 作用在系统上, \(B\) 作用在环境上.</p>
 <blockquote>
-  <p>We assume \(S\) is time-independent:</p>
+  <p>假设 \(S\) 与时间无关:</p>
 </blockquote>
 
 \[\begin{equation}
   \left[S, H_S\right] = 0
 \end{equation}\]
 
-<p>We consider a bosonic bath for the environment, with the Hamiltonian:</p>
-
-\[\begin{equation}
+<p>环境取为Boson heat bath, 现在Hamiltonian写为:
+\(\begin{equation}
   H_B = \hbar \sum_{k} \omega_{k} \hat{a}_{k}^\dagger \hat{a}_{k}
-\end{equation}\]
+\end{equation}\)</p>
 
-<p>The \(B\) operator is defined as:</p>
-
-\[\begin{equation}
+<p>定义:
+\(\begin{equation}
   B = \sum_{k} g_{k}^* \hat{a}_{k}
-\end{equation}\]
+\end{equation}\)</p>
 
-<p>where \(g_{k}^*\) is the coupling constant. In the interaction picture, \(B(t)\) evolves as:</p>
-
-\[\begin{equation}
+<p>其中 \(g_{k}^*\) 是耦合常数.
+在相互作用绘景中, \(B(t)\) 的演化为:
+\(\begin{equation}
 \begin{aligned}
   B(t) &amp;= \exp\left(\frac{i}{\hbar} H_B t\right) B \exp\left(-\frac{i}{\hbar} H_B t\right) \\
   &amp;= \sum_{k} g_{k}^* \hat{a}_{k} \exp\left(-i \omega_{k} t\right)
 \end{aligned}
-\end{equation}\]
+\end{equation}\)</p>
 
-<p>To reach the last step, some calculations are necessary—it’s a good exercise for understanding the time evolution.</p>
+<p>要得到最后一步需要做一些运算, 这是理解时间演化的不错练习.</p>
 
-<p>Next, we need to compute a series of commutators, and it’s important to remember that <strong>in this model, we assume \(S\) is time-independent</strong>:</p>
-
-\[\begin{equation}
+<p>接下来要计算一串对易子.<strong>在这个模型里, 我们假设 \(S\) 与时间无关</strong>:
+\(\begin{equation}
   [H(t), [H(t'), \rho_B(t) \rho_S(t)]] = \hbar [S B^\dagger + S^\dagger B, [H(t'), \rho_B(t) \rho_S(t)]]
-\end{equation}\]
+\end{equation}\)</p>
 
-<p>Skipping some tedious calculations, we arrive at:</p>
-
-\[\begin{equation}
+<p>跳过冗长的代数, 得到:
+$$
+\begin{equation}
 \begin{aligned}
-  &amp; [S B^\dagger(t), [H(t'), \rho_B(t) \rho_S(t)]] \\
-  =&amp; + \hbar S S \rho_S(t) B^\dagger(t) B^\dagger(t') \rho_B + \hbar S S^\dagger \rho_S(t) B^\dagger(t) B(t') \rho_B \\
-  &amp; - \hbar S \rho_S(t) S B^\dagger(t) \rho_B B^\dagger - \hbar S \rho_S(t) S^\dagger B^\dagger(t) \rho_B B(t') \\
-  &amp; - \hbar S \rho_S(t) S B^\dagger(t') \rho_B B^\dagger(t) - \hbar S^\dagger \rho_S(t) S B(t') \rho_B B^\dagger(t) \\
-  &amp; + \hbar \rho_S(t) S S \rho_B B^\dagger(t') B^\dagger(t) + \hbar \rho_S(t) S^\dagger S \rho_B B(t') B^\dagger(t)
-\end{aligned}
-\end{equation}\]
+  &amp; [S B^\dagger(t), [H(t’), \rho_B(t) \rho_S(t)]] <br />
+  =&amp; + \hbar S S \rho_S(t) B^\dagger(t) B^\dagger(t’) \rho_B + \hbar S S^\dagger \rho_S(t) B^\dagger(t) B(t’) \rho_B <br />
+  &amp; - \hbar S \rho_S(t) S B^\dagger(t) \rho_B B^\dagger - \hbar S \rho_S(t) S^\dagger B^\dagger(t) \rho_B B(t’) <br />
+  &amp; - \hbar S \rho_S(t) S B^\dagger(t’) \rho_B B^\dagger(t) - \hbar S^\dagger \rho_S(t) S B(t’) \rho_B B^\dagger(t) \</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征.
+本文就来讨论这个特征.</p>
 
-<p>Next, we trace over all the bath terms:</p>
+<hr />
 
-\[\begin{equation}
-  \Tr_B\left[B(t), B(t') \rho_B\right] = \Tr_B\left[B^\dagger(t) B^\dagger(t') \rho_B\right] = 0
-\end{equation}\]
+<h3 id="绝热近似-adiabatic-approximation">绝热近似 (Adiabatic Approximation)</h3>
 
-<p>Using this property, we trace out the bath terms and obtain:
-\(\begin{equation}
-\begin{aligned}
-  &amp;\Tr_B\Bqty{[H(t),[H(t'),\rho_B(t)\rho_S(t)]} \\
-  =&amp; + \hbar^2\left[{S} {S}^{\dagger} {\rho}_S(t)-{S}^{\dagger} {\rho}_S(t) {S}\right] \Tr_B\left\{B^{\dagger}(t) B\left(t^{\prime}\right) {\rho}_B\right\} \\
-  &amp; + \hbar^2[\rho_S(t)S^\dagger S - S \rho_S(t) S^\dagger] \Tr_B\Bqty{B(t')B^\dagger(t)\rho_B} \\
-  &amp; + \hbar^2[S^\dagger S \rho_S(t)- S \rho_S(t) S^\dagger] \Tr_B\Bqty{B(t) B^\dagger(t')\rho_B} \\
-  &amp; + \hbar^2[\rho_S(t) S^\dagger S - S^\dagger \rho_S(t) S] \Tr_B\Bqty{B^\dagger(t')B(t)\rho_B}
-\end{aligned}
-\end{equation}\)
-To summarize the operators we introduced, we have:</p>
+<p>我们考虑一个依赖于向量参数 \(\boldsymbol{\zeta}(t)\) 的 Hamiltonian, 参数在参数空间里走一条闭合回路.
+Hamiltonian 写作:</p>
 
 \[\begin{equation}
-  F(t) = \int_0^t \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] \dd{t'}
-\end{equation}\]
-
-\[\begin{equation}
-  G(t) = \int_0^t \Tr_B\left[B^\dagger(t') B(t) \rho_B\right] \dd{t'}
-\end{equation}\]
-
-\[\begin{equation}
-  F^*(t) = \int_0^t \Tr_B\left[B(t') B^\dagger(t) \rho_B\right] \dd{t'}
-\end{equation}\]
-
-\[\begin{equation}
-  G^*(t) = \int_0^t \Tr_B\left[B^\dagger(t) B(t') \rho_B\right] \dd{t'}
-\end{equation}\]
-
-<p>Now that we have cleared the algebra, the evolution of \(\rho_S(t)\) becomes:</p>
-
-\[\begin{equation}
-\begin{aligned}
-  \frac{d \rho_S}{d t} &amp;= - \left[S S^\dagger \rho_S(t) - S^\dagger \rho_S(t) S\right] G^*(t) \\
-  &amp;- \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger\right] F^*(t) \\
-  &amp;- \left[S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger\right] F(t) \\
-  &amp;- \left[\rho_S(t) S S^\dagger - S^\dagger \rho_S(t) S\right] G(t)
-\end{aligned}
-\end{equation}\]
-
-<blockquote>
-  <p>Consider the environment’s initial state as a vacuum:</p>
-</blockquote>
-
-\[\begin{equation}
-  \rho_B = \ket{0}\bra{0} \otimes \ket{0}\bra{0} \dots
-\end{equation}\]
-
-<p>Recalling that:</p>
-
-\[\begin{equation}
-  B^\dagger(t) = \sum_{k} g_k \hat{a}_k^\dagger \exp(i \omega_k t)
-\end{equation}\]
-
-<p>The partial trace over \(F(t)\) and \(G(t)\) is then evaluated as:</p>
-
-\[\begin{equation}
-  \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] = \Tr_B\left[B(t) B^\dagger(t') \ket{0}\bra{0}\right]
-\end{equation}\]
-
-<p>Expanding the trace:</p>
-
-\[\begin{equation}
-\begin{aligned}
-  \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] &amp;= \sum_{k, k'} g_k^* g_{k'} \exp\left(-i (\omega_k t - \omega_{k'} t')\right) \langle 0 | \hat{a}_k \hat{a}_{k'}^\dagger | 0 \rangle \\
-  &amp;= \sum_{k} |g_k|^2 \exp\left(-i \omega_k (t - t')\right)
-\end{aligned}
-\end{equation}\]
-
-<p>Therefore:</p>
-
-\[\begin{equation}
-  F(t) = \sum_k |g_k|^2 \int_0^t \exp(-i \omega_k (t - t')) \dd{t'}
-\end{equation}\]
-
-<p>While:</p>
-
-\[\begin{equation}
-  G(t) = 0
-\end{equation}\]
-
-<p>To integrate \(F(t)\), we use the general definition for the density of states:</p>
-
-\[\begin{equation}
-  J(\omega) = \sum_l |g_l|^2 \delta(\omega - \omega_l)
-\end{equation}\]
-
-<p>Thus:</p>
-
-\[\begin{equation}
-  F(t) = \int_0^\infty \int_0^t J(\omega) \exp(-i \omega (t - t')) \dd{t'} \dd{\omega}
-\end{equation}\]
-
-<p>A small substitution simplifies this:</p>
-
-\[\begin{equation}
-  \tau = t - t' \quad \dd{\tau} = -\dd{t'}
-\end{equation}\]
-
-<p>Thus:</p>
-
-\[\begin{equation}
-  \int_0^t \dd{t'} = \int_0^t \dd{\tau}
-\end{equation}\]
-
-<p>The integral becomes:</p>
-
-\[\begin{equation}
-  F(t) = \int_0^\infty \int_0^t J(\omega) \exp(-i \omega \tau) \dd{\tau} \dd{\omega}
-\end{equation}\]
-
-<p>Using the identity:</p>
-
-\[\begin{equation}
-  \int_0^\infty \exp(-i \omega \tau) \dd{\tau} = \pi \delta(\omega) - i \, \text{P.V.} \frac{1}{\omega}
-\end{equation}\]
-
-<p>We find:</p>
-
-\[\begin{equation}
-  F(t) = \pi \int_0^\infty J(\omega) \delta(\omega) \dd{\omega} - i \, \text{P.V.} \int_0^\infty \frac{J(\omega)}{\omega} \dd{\omega}
-\end{equation}\]
-
-<p>Finally, we can express \(F\) as:</p>
-
-\[\begin{equation}
-  F = \frac{1}{2} \gamma + \frac{i}{2} \epsilon
-\end{equation}\]
-
-<p>Thus, the equation for \(\rho_S(t)\) becomes:</p>
-
-\[\begin{equation}
-\begin{aligned}
-  \frac{d \rho_S(t)}{d t} &amp;= - \frac{\gamma}{2} \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger + S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger\right] \\
-  &amp;\quad + i \frac{\epsilon}{2} \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger - S^\dagger S \rho_S(t) + S \rho_S(t) S^\dagger\right]
-\end{aligned}
-\end{equation}\]
-
-<blockquote>
-  <p>If we assume the density of states leads to \(\epsilon = 0\), the final result becomes:</p>
-</blockquote>
-
-\[\begin{equation}
-  \frac{d \rho_S(t)}{d t} = \gamma \left[S \rho_S(t) S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S(t)\right\}\right]
-\end{equation}\]
-
-<p>Returning to the original picture (omitting the steps for brevity), we get the renowned Lindblad quantum kinetic equation.</p>
-
-\[\begin{equation}
-  \frac{d \rho_S}{d t} = -\frac{i}{\hbar} \left[H_S, \rho_S\right] + \gamma \left[S \rho_S S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S\right\}\right]
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[In this post, we discuss some features of an open quantum system, which consists of the system \(H_S\), the environment \(H_B\), and the interaction part \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\) The dynamics of the whole system (system + environment), described by the density matrix \(\rho_{SB}\), are given by: \(\begin{equation} \dv{}{t} \rho_{SB} = -\frac{i}{\hbar} \left[H_S + H_B + \alpha H_{SB}, \rho_{SB}\right] \end{equation}\) In the interaction picture, the Hamiltonian evolves as: \(\begin{equation} H(t) = \exp\left(\frac{i}{\hbar}(H_S + H_B)t\right) H_{SB} \exp\left(-\frac{i}{\hbar}(H_S + H_B)t\right) \end{equation}\) And the density matrix transforms accordingly: \(\begin{equation} \rho(t) = \exp\left(\frac{i}{\hbar}(H_S + H_B)t\right) \rho_{SB}(t) \exp\left(-\frac{i}{\hbar}(H_S + H_B)t\right) \end{equation}\) This leads to a new equation: \(\begin{equation} \dv{}{t} \rho = -\frac{i}{\hbar} \alpha \left[H(t), \rho(t)\right] \end{equation}\) Since we are only interested in the evolution of the system, we take the partial trace over the environment: \(\rho_S = \Tr_B(\rho_{SB})\). The first step is to consider \(\rho_{SB}\), which is the inverse of \(\rho\) in the interaction picture: \(\begin{equation} \rho_{SB} = \exp\left(-\frac{i}{\hbar}(H_S+H_B)t\right) \rho_{SB}(t) \exp\left(\frac{i}{\hbar}(H_S+H_B)t\right) \end{equation}\) Our approach is as follows: Solve the equations in the interaction picture. Find \(\rho_{SB}\). Take the partial trace.]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.</p>
-
-<p>The first topic is called the adiabatic approximation, we consider a Hamiltonian depend on a vector parameter \(\boldsymbol{\zeta}(t)\) which trace a closed llop in the parameter space. The Hamiltonian will read:
-\(\begin{equation}
   \imath \hbar \dv{}{t}|\psi;t\rangle=\hat{H}[\boldsymbol{\zeta}(t)]|\psi;t\rangle
-\end{equation}\)
-The eigenvalue equation of the Hamiltonian is:
-\(\begin{equation}
-  \hat{H}[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle=E_n[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle
-\end{equation}\)
-where \(\ket{n[\boldsymbol{\zeta}(t)]}\) is an instantaneous eigenstate of the Hamiltonian. Now, consider we have a general state at \(t=0\):
-\(\begin{equation}
-  \ket{\psi;0} = \sum_n c_n(0) \ket{n[\boldsymbol{\zeta}(0)]}
-\end{equation}\)
-Now, we consider the time evolution of this state:
-\(\begin{equation}
-  \ket{\psi;t} = \sum_{n} \psi_n(t) \exp(\frac{i}{\hbar}\phi_n^{(d)}(t)) \ket{n[\boldsymbol{\zeta}(t)]}
-\end{equation}\)
-where
-\(\begin{equation}
-  \phi_n^{(d)}(t) = \int_0^t E_n[\boldsymbol{\zeta}(t')] \dd{t'}
-\end{equation}\)
-is the dynamical phase for a time-dependent system. The equation can be expressed as:
-\(\begin{equation}
-  \dv{}{t} \phi_n^{(d)}(t) = E_n[\boldsymbol{\zeta}(t')]
-\end{equation}\)
-Now we can take the derivative of the general state \(\ket{\psi;t}\):</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>Hamiltonian 的本征方程是:</p>
+
+\[\begin{equation}
+  \hat{H}[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle=E_n[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle
+\end{equation}\]
+
+<p>其中 \(\ket{n[\boldsymbol{\zeta}(t)]}\) 是瞬时本征态.
+假设 \(t=0\) 时系统的一般态是:</p>
+
+\[\begin{equation}
+  \ket{\psi;0} = \sum_n c_n(0) \ket{n[\boldsymbol{\zeta}(0)]}
+\end{equation}\]
+
+<p>时间演化写成:</p>
+
+\[\begin{equation}
+  \ket{\psi;t} = \sum_{n} \psi_n(t) \exp(\frac{i}{\hbar}\phi_n^{(d)}(t)) \ket{n[\boldsymbol{\zeta}(t)]}
+\end{equation}\]
+
+<p>其中</p>
+
+\[\begin{equation}
+  \phi_n^{(d)}(t) = \int_0^t E_n[\boldsymbol{\zeta}(t')] \dd{t'}
+\end{equation}\]
+
+<p>是随时间演化的 <strong>动力学相位</strong>.它的导数是:</p>
+
+\[\begin{equation}
+  \dv{}{t} \phi_n^{(d)}(t) = E_n[\boldsymbol{\zeta}(t')]
+\end{equation}\]
+
+<hr />
+
+<h3 id="推导过程">推导过程</h3>
+
+<p>把一般态对时间求导:</p>
+
+\[\begin{equation}
 \begin{aligned}
   &amp;i\hbar\dv{}{t} \ket{\psi;t} \\
   =&amp; i\hbar \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} }+ \sum_n E_n c_n \exp(-i\phi_n^{(d)})
 \end{aligned}
-\end{equation}\)
-From the definitions of the states, we can derive:
-\(\begin{equation}
-  H[\boldsymbol{\zeta}(t)] \ket{\psi;t} = \sum_n E_n \psi_n \exp(-i\phi_n^{(d)})\ket{n}
-\end{equation}\)
-Combined with the previous results:
-\(\begin{equation}
-  \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} } = 0
-\end{equation}\)
-Project another state \(\ket{m}\) onto it:
-\(\begin{equation}
-  \dv{c_m}{t} = -\mel**{m}{\dv{}{t}}{m} - \sum_{n\neq m} \exp(i(\phi_n^{(d)}-\phi_m^{(d)})) \mel**{m}{\dv{}{t}}{n} c_n
-\end{equation}\)
-<em>Note that we just igonore the \(t\) dependence for space!</em> Even the system begins in an initial state given by a single energy eigenstate, all the other energy eigenstates come into play!</p>
+\end{equation}\]
 
-<p>Now we place the \(\boldsymbol{\zeta}(t)\) dependence on, and write down the full expression:
-\(\begin{equation}
+<p>同时, 根据本征态定义:</p>
+
+\[\begin{equation}
+  H[\boldsymbol{\zeta}(t)] \ket{\psi;t} = \sum_n E_n \psi_n \exp(-i\phi_n^{(d)})\ket{n}
+\end{equation}\]
+
+<p>结合两式:</p>
+
+\[\begin{equation}
+  \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} } = 0
+\end{equation}\]
+
+<p>再投影到另一态 \(\ket{m}\) 上:</p>
+
+\[\begin{equation}
+  \dv{c_m}{t} = -\mel**{m}{\dv{}{t}}{m} - \sum_{n\neq m} \exp(i(\phi_n^{(d)}-\phi_m^{(d)})) \mel**{m}{\dv{}{t}}{n} c_n
+\end{equation}\]
+
+<p>也就是说, 即使系统最初只在一个能量本征态里, 别的能量本征态也会逐渐出现.</p>
+
+<hr />
+
+<h3 id="参数依赖与绝热近似">参数依赖与绝热近似</h3>
+
+<p>把参数依赖写全:</p>
+
+\[\begin{equation}
 \begin{aligned}
   M_{m,n} =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\dv{}{t}}{n[\boldsymbol{\zeta}(t)]} \\
   =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\nabla_{\boldsymbol{\zeta}}}{n[\boldsymbol{\zeta}(t)]} \dv{\boldsymbol{\zeta(t)}}{t}
 \end{aligned}
-\end{equation}\)
-If the parameter do not strongly depende on the time, then \(c_n(t)\) will also change marginally, which means that if the system is initially in the energy eigenstate \(\ket{j[\boldsymbol{\zeta}(t_0)]}\), then the system will reamins in the same intantneous energy eigenstate.</p>
+\end{equation}\]
 
-<p>In the mean time, the phase factor will make the second term smaller, and we throw it out under <strong>adiabatic approximation</strong>. Now we have:
-\(\begin{equation}
+<p>如果参数随时间变化得不剧烈, 那么 \(c_n(t)\) 变化也很小.
+于是如果系统最初在态 \(\ket{j[\boldsymbol{\zeta}(t_0)]}\), 它会保持在对应的瞬时本征态中.</p>
+
+<p>这就是 <strong>绝热近似</strong>.在这个条件下, 第二项可以忽略, 得到:</p>
+
+\[\begin{equation}
   \dv{c_m(t)}{t} = -\mel**{m[\boldsymbol{\zeta(t)}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta(t)}]} \dv{\boldsymbol{\zeta(t)}}{t} c_m(t)
-\end{equation}\)
-In this case, Berry told us that after a <strong>cycle</strong> in the parameter space, the system will gain a geometric phase factor, which is different from the dynamical phase!</p>
+\end{equation}\]
+
+<hr />
+
+<h3 id="berry-相位-geometric-phase">Berry 相位 (Geometric Phase)</h3>
+
+<p>Berry 告诉我们: 在参数空间走一圈闭合路径后, 系统会获得一个新的 <strong>几何相位</strong>, 它不同于动力学相位.</p>
+
 <blockquote>
-  <p>Geometric phase = The geometry of the parameter space!</p>
+  <p>Geometric phase = 参数空间的几何特征！</p>
 </blockquote>
 
-<p>The starting point is to realize that:
-\(\begin{equation}
+<p>先注意到:</p>
+
+\[\begin{equation}
   \overline{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} + \mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]} = 0
-\end{equation}\)
-Remember that \(c+\overline{c}\)=real part, we conclude that:
-\(\begin{equation}
-  2\Re\Bqty{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} = 0 
-\end{equation}\)
-\(\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}\) is purely imagniary! Then we can integrate the equation:
-\(\begin{equation}
-  \dv{c_m(t)}{t} = -\mel**{m[\boldsymbol{\zeta(t)}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta(t)}]} \dv{\boldsymbol{\zeta(t)}}{t} c_m(t)
-\end{equation}\)
-which is:
-\(\begin{equation}
-  c_m(t) = \exp(\frac{i}{\hbar}\phi_m^{(g)}) c_m(0)
-\end{equation}\)
-where:
-\(\begin{equation}
-  \phi_m^{(g)}(t) = -\int_{\boldsymbol{\zeta}(0)}^{\boldsymbol{\zeta}(t)} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
-\end{equation}\)
-is just the geometric phase. For a closed loop, we have
-\(\begin{equation}
-  \phi_m^{(g)}(t) = -\oint_{\text{C}} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
-\end{equation}\)
-The Berry connection is defined as:
-\(\begin{equation}
-  \mathcal{A}_m[\boldsymbol{\zeta}] = i \mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']} = -\Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}}
-\end{equation}\)
-The Berry curvature is defined as:
-\(\begin{equation}
-  \Omega_{m; \mu,\nu}[\boldsymbol{\zeta}] = \pdv{}{\zeta^\mu} \mathcal{A}_{m; \nu}[\boldsymbol{\zeta}] - \pdv{}{\zeta^\nu} \mathcal{A}_{m; \mu}[\boldsymbol{\zeta}]
-\end{equation}\)
-If the parameter is 3D, we have:
-\(\begin{equation}
-  \boldsymbol{\Omega}_{m}[\boldsymbol{\zeta}]=\nabla_{\boldsymbol{\zeta}}\times \mathcal{A}_m[\boldsymbol{\zeta}]
-\end{equation}\)
-For a detailed exmple, readers are recommended to have a look at <a href="https://arxiv.org/pdf/1606.06687">Prof. David Tong’s note on QHE</a>. We will discuss its energy spectrum version and its usefullness in solid state series, where the parameter space can be the reciprocal space, a nature parameter space for Bloch electrons.</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.</p>
+\end{equation}\]
 
-<p>The starting point is to consider the plane wave:
-\(\begin{equation}
+<p>于是有:</p>
+
+\[\begin{equation}
+  2\Re\Bqty{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} = 0 
+\end{equation}\]
+
+<p>所以 \(\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}\) 是纯虚数.积分得到:</p>
+
+\[\begin{equation}
+  c_m(t) = \exp(\frac{i}{\hbar}\phi_m^{(g)}) c_m(0)
+\end{equation}\]
+
+<p>其中:</p>
+
+\[\begin{equation}
+  \phi_m^{(g)}(t) = -\int_{\boldsymbol{\zeta}(0)}^{\boldsymbol{\zeta}(t)} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
+\end{equation}\]
+
+<p>对于闭合回路:</p>
+
+\[\begin{equation}
+  \phi_m^{(g)}(t) = -\oint_{\text{C}} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
+\end{equation}\]
+
+<hr />
+
+<h3 id="berry-规范场">Berry 规范场</h3>
+
+<ul>
+  <li><strong>Berry 联络 (Berry connection)</strong> 定义为:</li>
+</ul>
+
+\[\begin{equation}
+  \mathcal{A}_m[\boldsymbol{\zeta}] = i \mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']} = -\Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}}
+\end{equation}\]
+
+<ul>
+  <li><strong>Berry 曲率 (Berry curvature)</strong> 定义为:</li>
+</ul>
+
+\[\begin{equation}
+  \Omega_{m; \mu,\nu}[\boldsymbol{\zeta}] = \pdv{}{\zeta^\mu} \mathcal{A}_{m; \nu}[\boldsymbol{\zeta}] - \pdv{}{\zeta^\nu} \mathcal{A}_{m; \mu}[\boldsymbol{\zeta}]
+\end{equation}\]
+
+<p>如果参数空间是 3D:</p>
+
+\[\begin{equation}
+  \boldsymbol{\Omega}_{m}[\boldsymbol{\zeta}]=\nabla_{\boldsymbol{\zeta}}\times \mathcal{A}_m[\boldsymbol{\zeta}]
+\end{equation}\]
+
+<hr />
+
+<p>更多细节可以参考 <a href="https://arxiv.org/pdf/1606.06687">David Tong 教授的 QHE 笔记</a>.在固体物理中, 这些思想非常有用, 因为参数空间可以选成倒空间 (reciprocal space), 这是 Bloch 电子的天然参数空间.</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征. 本文就来讨论这个特征.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
+为了简化, 我们一直用 1D 的例子.
+这里我们不会去深入讨论 Fourier 变换的性质.</p>
+
+<hr />
+
+<h3 id="平面波">平面波</h3>
+
+<p>从平面波出发:</p>
+
+\[\begin{equation}
   \braket{x}{p} = \frac{1}{\sqrt{2\pi\hbar}} \exp(\frac{i}{\hbar}xp)
-\end{equation}\)
-You can use \(k\) as the variable as well:
-\(\begin{equation}
+\end{equation}\]
+
+<p>你也可以用 \(k\) 作为变量:</p>
+
+\[\begin{equation}
   \braket{x}{k} = \frac{1}{\sqrt{2\pi}} \exp(\frac{i}{\hbar}xk)
-\end{equation}\)
-The Fourier transformation is defined as:
-\(\begin{equation}
+\end{equation}\]
+
+<hr />
+
+<h3 id="fourier-变换">Fourier 变换</h3>
+
+<p>Fourier 变换定义为:</p>
+
+\[\begin{equation}
   \tilde{f}(k) = \frac{1}{\sqrt{2\pi}} \int_-^+ f(x) \exp(-ikx) \dd{x}
-\end{equation}\)
-The inverse Fourier transforamtion is:
-\(\begin{equation}
+\end{equation}\]
+
+<p>反 Fourier 变换是:</p>
+
+\[\begin{equation}
   f(x) = \frac{1}{\sqrt{2\pi}} \int_-^+ \tilde{f}(k) \exp(ikx) \dd{k}
-\end{equation}\)
-or we can use \(p\) as the variable:
-\(\begin{equation}
+\end{equation}\]
+
+<p>如果我们用 \(p\) 作为变量, 则写法是:</p>
+
+\[\begin{equation}
   \tilde{f}(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_-^+ f(x) \exp(-\frac{i}{\hbar}px) \dd{x}
-\end{equation}\)
-\(\begin{equation}
+\end{equation}\]
+
+\[\begin{equation}
   f(x) = \frac{1}{\sqrt{2\pi\hbar}} \int_-^+ f(p) \exp(\frac{i}{\hbar}px) \dd{p}
-\end{equation}\)</p>
+\end{equation}\]
+
+<hr />
 
 <blockquote>
-  <p>The \(\hbar\) factor is actually determined by the normalization condition, which can be summarized into the following 3 equations:</p>
+  <p>这里的 \(\hbar\) 因子其实是由 <strong>归一化条件</strong> 决定的, 可以总结为下面 3 个方程:</p>
 </blockquote>
 
-<p>\(\begin{equation}
+\[\begin{equation}
 \begin{aligned}
   \braket{x}{x'} =&amp; \delta(x-x') \\
   \braket{p}{p'} =&amp; \delta(p-p') \\
   \braket{k}{k'} =&amp; \delta(k-k')
 \end{aligned}
-\end{equation}\)
-And the following identity:
-\(\begin{equation}
+\end{equation}\]
+
+<p>以及以下恒等式:</p>
+
+\[\begin{equation}
 \begin{aligned}
   \int_-^+ \exp(i(k-k')x) \dd{x} =&amp; 2\pi\delta(k-k') \\
   \int_-^+ \exp(\frac{i}{\hbar}(p-p')x) \dd{x} =&amp; 2\pi\hbar\delta(p-p')
 \end{aligned}
-\end{equation}\)
-The connection between \(p\) and \(k\) is:
-\(\begin{equation}
+\end{equation}\]
+
+<hr />
+
+<h3 id="p-和-k-的关系">\(p\) 和 \(k\) 的关系</h3>
+
+<p>二者的关系是:</p>
+
+\[\begin{equation}
   \delta(p-p') = \frac{1}{\hbar} \delta(k-k')
-\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.]]></summary></entry><entry><title type="html">QM+ Wigner functions入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/" rel="alternate" type="text/html" title="QM+ Wigner functions入门" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/"><![CDATA[<p>In this post, we discuss Wigner functions and Weyl transforms.</p>
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质.]]></summary></entry><entry><title type="html">QM+ Wigner functions入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/" rel="alternate" type="text/html" title="QM+ Wigner functions入门" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>Wigner 函数</strong> 和 <strong>Weyl 变换</strong>.</p>
 
 <blockquote>
-  <p>It would be desirable to have a function that displays the probability distribution simultaneously in the \(x\) and \(p\) variables. This is what Wigner functions do.</p>
+  <p>我们希望能有一个函数, 可以同时在 \(x\) 和 \(p\) 变量上展示概率分布.这就是 Wigner 函数要做的事.</p>
 </blockquote>
 
 <blockquote>
-  <p>Another reason for a representation of a quantum state in phase space is to examine the connection between quantum and classical mechanics.</p>
+  <p>另外, 把量子态放到相空间来表示, 还有助于研究量子力学和经典力学之间的联系.</p>
 </blockquote>
 
-<p>Originally, Wigner try to find a quantum correction to the Boltzmann distribution, which includes both position and momentum, retricted by the Heisenberg uncertainty principle. Therefore, we expect it can cover the quantum part in some limits, and cover the classical part in another limit.</p>
+<p>最初, Wigner 是想找到一个对 <strong>Boltzmann 分布</strong> 的量子修正, 这个分布同时包含位置和动量, 但受到 <strong>海森堡不确定性原理</strong> 的限制.所以我们可以预期:在某些极限下, 它表现出量子特性；在另一些极限下, 它又能覆盖经典特性.</p>
 
-<p>Some general comments:</p>
+<p>一些总体性的评论:</p>
 <ol>
-  <li>Wigner function is not a simple probability distribution.</li>
-  <li>Closely associated Weyl transforms of the operators.</li>
-  <li>The Weyl transform converts an operator into a function of \(x\) and \(p\).</li>
+  <li>Wigner 函数并不是一个普通的概率分布.</li>
+  <li>它和算符的 Weyl 变换紧密相关.</li>
+  <li>Weyl 变换会把一个算符转成 \(x\) 和 \(p\) 的函数.</li>
 </ol>
 
-<p>We begin our discuss from Weyl transformation of an operator \(\hat{O}\):
-\(\begin{equation}
+<hr />
+
+<h3 id="weyl-变换">Weyl 变换</h3>
+
+<p>我们从算符 \(\hat{O}\) 的 Weyl 变换开始:</p>
+
+\[\begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(-\frac{i}{\hbar}py) \mel**{x+\frac{y}{2}}{\hat{O}}{x-\frac{y}{2}} \dd{y}
-\end{equation}\)
-We will put a tilde on top of the operators to indicate it is a Weyl transformed. The above equation can also be referred to as:
-\(\begin{equation}
+\end{equation}\]
+
+<p>我们会在算符上加个波浪号, 表示这是 Weyl 变换过的.上面的式子也可以写成:</p>
+
+\[\begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
-\end{equation}\)
-All the details is presented in the very end of the post. A good feature of the Weyl transformations is:
-\(\begin{equation}
+\end{equation}\]
+
+<p>Weyl 变换的一个好处是:</p>
+
+\[\begin{equation}
   \Tr(\hat{A} \hat{B})=\frac{1}{2\pi\hbar} \int_-^+ \tilde{A}(x, p) \widetilde{B}(x, p) \dd{x}\dd{p}
-\end{equation}\)
-The appearance of the trace encourage us to use density matrix \(\rho=\ketbra{\psi}{\psi}\), if we need to evaluate the expectation, we can use
-\(\begin{equation}
+\end{equation}\]
+
+<p>这里出现了迹运算, 自然让我们想到 <strong>密度矩阵</strong> \(\rho=\ketbra{\psi}{\psi}\).如果要求期望值, 可以写成:</p>
+
+\[\begin{equation}
   \Tr[\hat{\rho} \hat{O}]=\operatorname{Tr}[|\psi\rangle\langle\psi| \hat{O}]=\langle\psi| \hat{O}|\psi\rangle=\langle O\rangle
-\end{equation}\)
-But remember the property of the Weyl transforamtion:
-\(\begin{equation}
+\end{equation}\]
+
+<p>而 Weyl 变换的性质告诉我们:</p>
+
+\[\begin{equation}
   \langle O\rangle=\operatorname{Tr}[\hat{\rho} \hat{O}]=\frac{1}{2\pi\hbar} \int \tilde{\rho} \tilde{O} \dd{x}\dd{p}
-\end{equation}\)
-We immediately have the <em>Wigner function</em>:
-\(\begin{equation}
+\end{equation}\]
+
+<hr />
+
+<h3 id="wigner-函数">Wigner 函数</h3>
+
+<p>于是我们马上得到 <strong>Wigner 函数</strong>:</p>
+
+\[\begin{equation}
 \begin{aligned}
   W(x,p) =&amp; \frac{\tilde{\rho}}{2\pi\hbar} \\
   =&amp; \frac{1}{2\pi\hbar} \int \exp(-\frac{i}{\hbar}py) \psi(x+y/2)\psi^*(x-y/2) \dd{y}
 \end{aligned}
-\end{equation}\)
-Then the expectation value of \(\hat{O}\) is given by:
-\(\begin{equation}
+\end{equation}\]
+
+<p>然后, 算符 \(\hat{O}\) 的期望值就是:</p>
+
+\[\begin{equation}
   \langle O\rangle=\int W(x, p) \tilde{O}(x, p) \dd{x}\dd{p}
-\end{equation}\)
-Now the expectation appears to be the Weyl form averaged over the distribution \(W(x,p)\). Looking at \(W\), we notice the following:
-\(\begin{equation}
+\end{equation}\]
+
+<p>这样一来, 期望值就变成了:Weyl 形式在 Wigner 分布 \(W(x,p)\) 上的加权平均.</p>
+
+<p>看一下 \(W\), 我们注意到:</p>
+
+\[\begin{equation}
 \begin{aligned}
   \int W(x, p) \dd{p}&amp;=\psi^*(x) \psi(x) \\
   \int W(x, p) \dd{x}&amp;=\varphi^*(p) \varphi(p)
 \end{aligned}
-\end{equation}\)
-Good! Next, we demonstrate some important properties:</p>
+\end{equation}\]
+
+<p>这就对了!</p>
+
+<hr />
+
+<h3 id="一些重要性质">一些重要性质</h3>
+
+<p>Wigner 函数和 Weyl 变换有一些关键性质:</p>
 <ol>
-  <li>The momentum basis Wigner funtion.</li>
-  <li>Trace of two operators in Weyl transforamtion.</li>
-  <li>Wigner function \(W\) is real.</li>
-  <li>Weyl transformation of \(\mathbb{1}\) is stiall \(\mathbb{1}\).</li>
-  <li>Intergration of \(W\) over \(x\) and \(p\) is 1.</li>
-  <li>We can recover the wavefunction from the Wigner function.</li>
+  <li>动量表象下的 Wigner 函数.</li>
+  <li>两个算符的迹, 可以写成 Weyl 变换形式.</li>
+  <li>Wigner 函数 \(W\) 是实数.</li>
+  <li>单位算符的 Weyl 变换还是 \(\mathbb{1}\).</li>
+  <li>\(W\) 在整个 \(x,p\) 上积分等于 1.</li>
+  <li>可以从 Wigner 函数恢复波函数.</li>
 </ol>
 
-<p>Now let us prove all the results one by one:
-\(\begin{equation}
+<hr />
+
+<h3 id="证明思路">证明思路</h3>
+
+<p>比如我们再看 Weyl 变换的另一种写法:</p>
+
+\[\begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
-\end{equation}\)
-We have:
-\(\begin{equation}
+\end{equation}\]
+
+<p>我们有:</p>
+
+\[\begin{equation}
 \begin{aligned}
   &amp;\int_-^+ \exp(-\frac{i}{\hbar}py) \mel**{x+\frac{y}{2}}{\hat{O}}{x-\frac{y}{2}} \dd{y} \\
   =&amp; \int_-^+ \exp(-\frac{i}{\hbar}py) \braket{x+\frac{y}{2}}{p'}\mel**{p'}{\hat{O}}{p}\braket{p}{x-\frac{y}{2}} \dd{y}\dd{p}\dd{p'}\\
-  =&amp; \text{Integrate out all the plane waves} \\
+  =&amp; \text{把所有平面波积分掉} \\
   =&amp; \int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
 \end{aligned}
-\end{equation}\)
-Next we prove:
-\(\begin{equation}
+\end{equation}\]
+
+<p>再比如, 两个算符的迹:</p>
+
+\[\begin{equation}
   \Tr(\hat{A}\hat{B}) = \frac{1}{2\pi\hbar} \int \tilde{A} \tilde{B} \dd{x}\dd{p}
-\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[In this post, we discuss Wigner functions and Weyl transforms.]]></summary></entry><entry><title type="html">QM1 Rabi问题</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/" rel="alternate" type="text/html" title="QM1 Rabi问题" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/"><![CDATA[<p>In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:</p>
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 Wigner 函数 和 Weyl 变换.]]></summary></entry><entry><title type="html">QM1 Rabi问题</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/" rel="alternate" type="text/html" title="QM1 Rabi问题" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/"><![CDATA[<p>在这篇文章里, 我们要讨论 <strong>Rabi 振荡</strong>, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的:</p>
 
 \[\begin{equation}
   H = \mqty[E_1 &amp; W_{1,2} \\ W_{2,1} &amp; E_2]
 \end{equation}\]
 
 <blockquote>
-  <p>The first level has energy \(E_1\) while the second level has energy \(E_2\), the coupling term \(W_{1,2}\) means this off-diagonal term will mix the two levels, so we call it <strong>coupling</strong></p>
+  <p>第一能级的能量是 \(E_1\), 第二能级的能量是 \(E_2\).中间的耦合项 \(W_{1,2}\) 会让两个能级混合, 所以我们叫它 <strong>coupling</strong>.</p>
 </blockquote>
 
 <blockquote>
-  <p>Reminder, this \(H\) is written in the basis of \((1,0)\) and \((0,1)\), we will call them \(\ket{+}\) and \(\ket{-}\).</p>
+  <p>注意, 这个 \(H\) 是在 \((1,0)\) 和 \((0,1)\) 这组基下写的, 我们把它们叫做 \(\ket{+}\) 和 \(\ket{-}\).</p>
 </blockquote>
 
-<p>We first evaluate the eigenvalues of this two level system, which is quite easy:</p>
+<p>接下来我们先算一下这个二能级系统的本征值, 很简单:</p>
 
 <p>\(\begin{align}
   E_\pm = \frac{\Tr(H) \pm \sqrt{(\Tr(H))^2-4 \det(H)}}{2}
 \end{align}\)
-We have</p>
+算出来就是</p>
 
-<p>\(\begin{equation}
+\[\begin{equation}
   E_{ \pm}=\frac{1}{2}\left[E_1+E_2 \pm \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{12}}^2}\right]
-\end{equation}\)
-Then we define the following terms:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>接着我们定义几个量:</p>
+
+\[\begin{equation}
   \tan \theta=\frac{2\norm{W_{12}}}{E_1-E_2} \quad e^{i \phi}=\frac{W_{21}}{2\norm{W_{12}}}
-\end{equation}\)
-We can check the following eigen-pairs:</p>
+\end{equation}\]
 
-<p>\(\begin{align}
+<p>那么本征态可以写成:</p>
+
+\[\begin{align}
   &amp; E_+ \, \text{and} \,  \boldsymbol{v}_+ = (\cos\theta/2, e^{i\phi}\sin\theta/2)^T \\
   &amp; E_- \, \text{and} \, \boldsymbol{v}_- = (\sin\theta/2, -e^{i\phi}\cos\theta/2)^T
-\end{align}\)
-We can check our original basis can be expressed as</p>
+\end{align}\]
 
-<p>\(\begin{align}
+<p>原来的基矢也可以用这两个本征态表示成:</p>
+
+\[\begin{align}
   \ket{+} =&amp; \cos \frac{\theta}{2}\left|v_{+}\right\rangle+\sin \frac{\theta}{2}\left|v_{-}\right\rangle \\
   \ket{-} =&amp; \left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi} \\
-\end{align}\)
-We put it here and do not use it for now. Instead, we consider a general state in \(\boldsymbol{v}\) basis:</p>
+\end{align}\]
 
-<p>\(\begin{equation}
+<p>先放这, 暂时不用.我们现在考虑一个一般的态, 用 \(\boldsymbol{v}\) 基写出来:</p>
+
+\[\begin{equation}
   |\psi;t\rangle=c_{+} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle+c_{-} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle
-\end{equation}\)
-Assuming our system starts from \(\ket{-}\):</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>假设系统一开始在 \(\ket{-}\):</p>
+
+\[\begin{equation}
   |\psi;0\rangle=\left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi}
-\end{equation}\)
-Now we apply the time-evolution operator on it, which is easy in this basis since \(H\) is already diagonal!</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>因为在这个基下 \(H\) 已经对角化, 所以时间演化很方便:</p>
+
+\[\begin{equation}
   |\psi(t)\rangle=\left(\sin \frac{\theta}{2} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle-\cos \frac{\theta}{2} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle\right) e^{-i \phi}
-\end{equation}\)
-What is the probability amplitude of being in state \(\ket{-}\)?</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>那我们来问: 系统在 \(\ket{-}\) 态时, 出现在 \(\ket{+}\) 的概率振幅是多少?</p>
+
+\[\begin{equation}
   \braket{+}{\psi;t}=\sin \frac{\theta}{2} \cos \frac{\theta}{2} e^{-i \phi}\left(e^{-i E_{+} t / \hbar}-e^{-i E_{-} t / \hbar}\right)
-\end{equation}\)</p>
+\end{equation}\]
+
 <blockquote>
-  <p>So, if we start from \(\ket{-}\), the probability of have \(\ket{+}\) is the following.</p>
+  <p>所以, 如果一开始在 \(\ket{-}\), 系统出现在 \(\ket{+}\) 的概率就是下面这个:</p>
 </blockquote>
 
-<p>\(\begin{equation}
+\[\begin{equation}
   P(\ket{-} \to \ket{+})=\sin ^2 \theta \sin ^2\left(\frac{E_{+}-E_{-}}{2 \hbar} t\right)
-\end{equation}\)
-Now express this trigonometry in original matrix elements:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>把它用原始矩阵元写出来:</p>
+
+\[\begin{equation}
   \frac{4\norm{W_{1,2}}^2}{4\norm{W_{1,2}}^2+\left(E_1-E_2\right)^2} \sin ^2\left(\frac{t}{2 \hbar} \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{1,2}}^2}\right)
-\end{equation}\)
-Now we look at a problem in magnetic fields, consider a spin-1/2 particle in magnetic fields. The magnetic fields is composed of a stationary part \(\boldsymbol{B}\) and \(\boldsymbol{B_1}(t)\). The Hamiltonian will read:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<hr />
+
+<p>现在我们把它用在一个磁场问题上: 考虑一个 <strong>自旋-1/2 粒子</strong> 在磁场中.磁场分成静态的部分 \(\boldsymbol{B}\) 和一个随时间变化的部分 \(\boldsymbol{B_1}(t)\).Hamiltonian 写成:</p>
+
+\[\begin{equation}
   H=-\gamma \boldsymbol{S} \cdot\left(\boldsymbol{B}_0+\boldsymbol{B}_1(t)\right)
-\end{equation}\)
-Furthermore, we ask the magnetic fields to have the form:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>静态场取成:</p>
+
+\[\begin{equation}
   \boldsymbol{B}_0 = -\frac{\omega_0}{\gamma} \hat{z}
-\end{equation}\)
-and</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>而随时间变化的场是:</p>
+
+\[\begin{equation}
   \boldsymbol{B}_1(t)=-\left(\omega_1 / \gamma\right)(\cos (\omega t) \hat{x}+\sin (\omega t) \hat{y})
-\end{equation}\)
-Then the matrix form is:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>那么矩阵形式就是:</p>
+
+\[\begin{equation}
   H = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0]
-\end{equation}\)
-Consider an arbitrary initial state:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>随便取一个初态:</p>
+
+\[\begin{equation}
   |\psi(t)\rangle=c_{+}(t)|+\rangle+c_{-}(t)|-\rangle
-\end{equation}\)
-Its evoution is governed by Schördinger equation;</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>它的演化满足 Schrödinger 方程:</p>
+
+\[\begin{equation}
   i\hbar \dv{}{t} \mqty[ c_+ \\ c_-] = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0] \mqty[c_+ \\ c_-]
-\end{equation}\)
-No good, smart people think we should do this:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>看上去不太好解.
+我们可以做个变换:</p>
+
+\[\begin{equation}
   c_{+}(t)=e^{-i \omega t / 2} \alpha_{+}(t) \quad c_{-}(t)=e^{i \omega t / 2} \alpha_{-}(t)
-\end{equation}\)
-Then we have:</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>代进去以后变成:</p>
+
+\[\begin{equation}
   i\hbar \dv{}{t} \mqty[\alpha_+ \\ \alpha_-] = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)] \mqty[\alpha_+ \\ \alpha_-]
-\end{equation}\)
-A new Hamiltonian in the new coefficients???</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>相当于一个新的 Hamiltonian:</p>
+
+\[\begin{equation}
   \tilde{H} = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)]
-\end{equation}\)
-Ok, let us disregard whatever we are considering now, we just look at this new matrix and the dynamics of \(\alpha\)! We can project this Hamiltonian onto our results for the 2-levels derived earlier.</p>
+\end{equation}\]
 
-<p>\(\begin{align}
+<p>那我们暂时不管原问题了, 就直接看这个新矩阵和 \(\alpha\) 的动力学.其实它正好对应前面我们推过的二能级系统:</p>
+
+\[\begin{align}
   &amp; E_1 \to \frac{\hbar}{2}\left(\omega_0-\omega\right) \\
   &amp; E_2 \rightarrow-\frac{\hbar}{2}\left(\omega_0-\omega\right) \\
   &amp; W_{21} \rightarrow \frac{\hbar}{2} \omega_1
-\end{align}\)
-Good, but we do a trick here, if we want to find the probability of a state initial at \(\ket{-}\) and after \(t\), it is in \(\ket{+}\), we have:</p>
+\end{align}\]
 
-<p>\(\begin{equation}
+<p>好, 用这个小 trick, 我们要找的是: 一开始在 \(\ket{-}\) 态, 经过时间 \(t\) 之后在 \(\ket{+}\) 态的概率.因为相位在算概率的时候会消掉, 所以只要解有效的 \(\tilde{H}\) 就行了:</p>
+
+\[\begin{equation}
   \norm{\braket{+}{\psi;t}}^2 = \norm{c_+}^2 = \norm{\alpha_+}^2
-\end{equation}\)
-The phase term vanish in evaluating probabilities!!! So by evaluating the effective \(\tilde{H}\), we solve the original problem! The probability is</p>
+\end{equation}\]
 
-<p>\(\begin{equation}
+<p>最后得到的概率是:</p>
+
+\[\begin{equation}
   \frac{\omega_1^2}{\left(\omega-\omega_0\right)^2+\omega_1^2} \sin ^2\left(\frac{t}{2} \sqrt{\left(\omega-\omega_0\right)^2+\omega_1^2}\right)
-\end{equation}\)
-This is again the Rabi oscillation formula!</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:]]></summary></entry><entry><title type="html">QM1+ Larmour问题</title><link href="http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem/" rel="alternate" type="text/html" title="QM1+ Larmour问题" /><published>2024-10-09T00:06:00+11:00</published><updated>2024-10-09T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem/"><![CDATA[<p>在这篇文章中, 我们讨论Larmour问题.
+\end{equation}\]
+
+<p>这就是 Rabi 振荡公式!</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们要讨论 Rabi 振荡, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的:]]></summary></entry><entry><title type="html">QM1+ Larmour问题</title><link href="http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem/" rel="alternate" type="text/html" title="QM1+ Larmour问题" /><published>2024-10-09T00:06:00+11:00</published><updated>2024-10-09T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1+/QM1-LarmourProblem/"><![CDATA[<p>在这篇文章中, 我们讨论Larmour问题.
 我们首先介绍轨道和自旋电子磁矩.
 先定义Bohr磁子:</p>
 

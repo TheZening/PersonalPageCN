@@ -24,31 +24,31 @@ var store = [{
         "teaser": null
       },{
         "title": "QM1 Rabi问题",
-        "excerpt":"In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian: \\[\\begin{equation} H = \\mqty[E_1 &amp; W_{1,2} \\\\ W_{2,1} &amp; E_2] \\end{equation}\\] The first level has energy \\(E_1\\) while the second level has energy \\(E_2\\), the coupling term \\(W_{1,2}\\) means...","categories": ["QM1"],
+        "excerpt":"在这篇文章里, 我们要讨论 Rabi 振荡, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的: \\[\\begin{equation} H = \\mqty[E_1 &amp; W_{1,2} \\\\ W_{2,1} &amp; E_2] \\end{equation}\\] 第一能级的能量是 \\(E_1\\), 第二能级的能量是 \\(E_2\\).中间的耦合项 \\(W_{1,2}\\) 会让两个能级混合, 所以我们叫它 coupling. 注意, 这个 \\(H\\) 是在 \\((1,0)\\) 和 \\((0,1)\\) 这组基下写的, 我们把它们叫做 \\(\\ket{+}\\) 和 \\(\\ket{-}\\). 接下来我们先算一下这个二能级系统的本征值, 很简单: \\(\\begin{align} E_\\pm = \\frac{\\Tr(H) \\pm \\sqrt{(\\Tr(H))^2-4 \\det(H)}}{2} \\end{align}\\) 算出来就是...","categories": ["QM1"],
         "tags": [],
         "url": "/PersonalPageCN/qm1/QM1-RabiProblem/",
         "teaser": null
       },{
         "title": "QM+ Wigner functions入门",
-        "excerpt":"In this post, we discuss Wigner functions and Weyl transforms. It would be desirable to have a function that displays the probability distribution simultaneously in the \\(x\\) and \\(p\\) variables. This is what Wigner functions do. Another reason for a representation of a quantum state in phase space is to...","categories": ["QM+"],
+        "excerpt":"在这篇文章里, 我们来讨论 Wigner 函数 和 Weyl 变换. 我们希望能有一个函数, 可以同时在 \\(x\\) 和 \\(p\\) 变量上展示概率分布.这就是 Wigner 函数要做的事. 另外, 把量子态放到相空间来表示, 还有助于研究量子力学和经典力学之间的联系. 最初, Wigner 是想找到一个对 Boltzmann 分布 的量子修正, 这个分布同时包含位置和动量, 但受到 海森堡不确定性原理 的限制.所以我们可以预期:在某些极限下, 它表现出量子特性；在另一些极限下, 它又能覆盖经典特性. 一些总体性的评论: Wigner 函数并不是一个普通的概率分布. 它和算符的 Weyl 变换紧密相关. Weyl 变换会把一个算符转成 \\(x\\) 和 \\(p\\) 的函数. Weyl 变换 我们从算符 \\(\\hat{O}\\) 的 Weyl 变换开始: \\[\\begin{equation}...","categories": ["QM+"],
         "tags": [],
         "url": "/PersonalPageCN/qm+/QM1-WignerFunction/",
         "teaser": null
       },{
         "title": "QM1 平面波和Fourier变换 ",
-        "excerpt":"In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations. The starting point is to consider the plane wave: \\(\\begin{equation} \\braket{x}{p} = \\frac{1}{\\sqrt{2\\pi\\hbar}} \\exp(\\frac{i}{\\hbar}xp) \\end{equation}\\) You can...","categories": ["QM1"],
+        "excerpt":"在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质. 平面波 从平面波出发: \\[\\begin{equation} \\braket{x}{p} = \\frac{1}{\\sqrt{2\\pi\\hbar}} \\exp(\\frac{i}{\\hbar}xp) \\end{equation}\\] 你也可以用 \\(k\\) 作为变量: \\[\\begin{equation} \\braket{x}{k} = \\frac{1}{\\sqrt{2\\pi}} \\exp(\\frac{i}{\\hbar}xk) \\end{equation}\\] Fourier 变换 Fourier 变换定义为: \\[\\begin{equation} \\tilde{f}(k) = \\frac{1}{\\sqrt{2\\pi}} \\int_-^+ f(x) \\exp(-ikx) \\dd{x} \\end{equation}\\] 反 Fourier 变换是: \\[\\begin{equation} f(x) = \\frac{1}{\\sqrt{2\\pi}}...","categories": ["QM1"],
         "tags": [],
         "url": "/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/",
         "teaser": null
       },{
         "title": "QM1 绝热定理与Berry相位",
-        "excerpt":"In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post. The first topic is called the adiabatic approximation, we consider a Hamiltonian depend on a vector parameter \\(\\boldsymbol{\\zeta}(t)\\) which trace a closed llop...","categories": ["QM1"],
+        "excerpt":"在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征. 本文就来讨论这个特征. 绝热近似 (Adiabatic Approximation) 我们考虑一个依赖于向量参数 \\(\\boldsymbol{\\zeta}(t)\\) 的 Hamiltonian, 参数在参数空间里走一条闭合回路. Hamiltonian 写作: \\[\\begin{equation} \\imath \\hbar \\dv{}{t}|\\psi;t\\rangle=\\hat{H}[\\boldsymbol{\\zeta}(t)]|\\psi;t\\rangle \\end{equation}\\] Hamiltonian 的本征方程是: \\[\\begin{equation} \\hat{H}[\\boldsymbol{\\zeta}(t)]|n[\\boldsymbol{\\zeta}(t)]\\rangle=E_n[\\boldsymbol{\\zeta}(t)]|n[\\boldsymbol{\\zeta}(t)]\\rangle \\end{equation}\\] 其中 \\(\\ket{n[\\boldsymbol{\\zeta}(t)]}\\) 是瞬时本征态. 假设 \\(t=0\\) 时系统的一般态是: \\[\\begin{equation} \\ket{\\psi;0} = \\sum_n c_n(0) \\ket{n[\\boldsymbol{\\zeta}(0)]} \\end{equation}\\] 时间演化写成: \\[\\begin{equation} \\ket{\\psi;t} = \\sum_{n} \\psi_n(t) \\exp(\\frac{i}{\\hbar}\\phi_n^{(d)}(t)) \\ket{n[\\boldsymbol{\\zeta}(t)]} \\end{equation}\\] 其中 \\[\\begin{equation} \\phi_n^{(d)}(t)...","categories": ["QM1"],
         "tags": [],
         "url": "/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/",
         "teaser": null
       },{
         "title": "QM2 Lindbladian量子动力学系统",
-        "excerpt":"In this post, we discuss some features of an open quantum system, which consists of the system \\(H_S\\), the environment \\(H_B\\), and the interaction part \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) The dynamics of the whole system (system + environment), described by the density matrix...","categories": ["QM2"],
+        "excerpt":"在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \\(H_S\\)、环境(热浴)部分 \\(H_B\\), 以及相互作用项 \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) 整体(系统 + 环境)的动力学由密度矩阵 \\(\\rho_{SB}\\) 描述, 满足: \\(\\begin{equation} \\dv{}{t} \\rho_{SB} = -\\frac{i}{\\hbar} \\left[H_S + H_B + \\alpha H_{SB}, \\rho_{SB}\\right] \\end{equation}\\) 在相互作用绘景里, Hamiltonian 的演化是: \\(\\begin{equation} H(t) = \\exp\\left(\\frac{i}{\\hbar}(H_S + H_B)t\\right) H_{SB} \\exp\\left(-\\frac{i}{\\hbar}(H_S + H_B)t\\right) \\end{equation}\\)...","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM1-LindbladianEquation/",
         "teaser": null

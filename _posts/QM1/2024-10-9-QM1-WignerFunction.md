@@ -4,52 +4,69 @@ date: 2024-10-09T08:06:00-05:00
 categories:
   - QM+
 ---
-In this post, we discuss Wigner functions and Weyl transforms.
+在这篇文章里, 我们来讨论 **Wigner 函数** 和 **Weyl 变换**.
 
+> 我们希望能有一个函数, 可以同时在 $$x$$ 和 $$p$$ 变量上展示概率分布.这就是 Wigner 函数要做的事.
 
-> It would be desirable to have a function that displays the probability distribution simultaneously in the $$x$$ and $$p$$ variables. This is what Wigner functions do.
+> 另外, 把量子态放到相空间来表示, 还有助于研究量子力学和经典力学之间的联系.
 
-> Another reason for a representation of a quantum state in phase space is to examine the connection between quantum and classical mechanics.
+最初, Wigner 是想找到一个对 **Boltzmann 分布** 的量子修正, 这个分布同时包含位置和动量, 但受到 **海森堡不确定性原理** 的限制.所以我们可以预期:在某些极限下, 它表现出量子特性；在另一些极限下, 它又能覆盖经典特性.
 
-Originally, Wigner try to find a quantum correction to the Boltzmann distribution, which includes both position and momentum, retricted by the Heisenberg uncertainty principle. Therefore, we expect it can cover the quantum part in some limits, and cover the classical part in another limit.
+一些总体性的评论:
+1. Wigner 函数并不是一个普通的概率分布.
+2. 它和算符的 Weyl 变换紧密相关.
+3. Weyl 变换会把一个算符转成 $$x$$ 和 $$p$$ 的函数.
 
-Some general comments:
-1. Wigner function is not a simple probability distribution.
-2. Closely associated Weyl transforms of the operators.
-3. The Weyl transform converts an operator into a function of $$x$$ and $$p$$.
+---
 
+### Weyl 变换
 
-We begin our discuss from Weyl transformation of an operator $$\hat{O}$$:
+我们从算符 $$\hat{O}$$ 的 Weyl 变换开始:
+
 $$
 \begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(-\frac{i}{\hbar}py) \mel**{x+\frac{y}{2}}{\hat{O}}{x-\frac{y}{2}} \dd{y}
 \end{equation}
 $$
-We will put a tilde on top of the operators to indicate it is a Weyl transformed. The above equation can also be referred to as:
+
+我们会在算符上加个波浪号, 表示这是 Weyl 变换过的.上面的式子也可以写成:
+
 $$
 \begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
 \end{equation}
 $$
-All the details is presented in the very end of the post. A good feature of the Weyl transformations is:
+
+Weyl 变换的一个好处是:
+
 $$
 \begin{equation}
   \Tr(\hat{A} \hat{B})=\frac{1}{2\pi\hbar} \int_-^+ \tilde{A}(x, p) \widetilde{B}(x, p) \dd{x}\dd{p}
 \end{equation}
 $$
-The appearance of the trace encourage us to use density matrix $$\rho=\ketbra{\psi}{\psi}$$, if we need to evaluate the expectation, we can use
+
+这里出现了迹运算, 自然让我们想到 **密度矩阵** $$\rho=\ketbra{\psi}{\psi}$$.如果要求期望值, 可以写成:
+
 $$
 \begin{equation}
   \Tr[\hat{\rho} \hat{O}]=\operatorname{Tr}[|\psi\rangle\langle\psi| \hat{O}]=\langle\psi| \hat{O}|\psi\rangle=\langle O\rangle
 \end{equation}
 $$
-But remember the property of the Weyl transforamtion:
+
+而 Weyl 变换的性质告诉我们:
+
 $$
 \begin{equation}
   \langle O\rangle=\operatorname{Tr}[\hat{\rho} \hat{O}]=\frac{1}{2\pi\hbar} \int \tilde{\rho} \tilde{O} \dd{x}\dd{p}
 \end{equation}
 $$
-We immediately have the *Wigner function*:
+
+---
+
+### Wigner 函数
+
+于是我们马上得到 **Wigner 函数**:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -58,13 +75,19 @@ $$
 \end{aligned}
 \end{equation}
 $$
-Then the expectation value of $$\hat{O}$$ is given by:
+
+然后, 算符 $$\hat{O}$$ 的期望值就是:
+
 $$
 \begin{equation}
   \langle O\rangle=\int W(x, p) \tilde{O}(x, p) \dd{x}\dd{p}
 \end{equation}
 $$
-Now the expectation appears to be the Weyl form averaged over the distribution $$W(x,p)$$. Looking at $$W$$, we notice the following:
+
+这样一来, 期望值就变成了:Weyl 形式在 Wigner 分布 $$W(x,p)$$ 上的加权平均.
+
+看一下 $$W$$, 我们注意到:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -73,37 +96,54 @@ $$
 \end{aligned}
 \end{equation}
 $$
-Good! Next, we demonstrate some important properties:
-1. The momentum basis Wigner funtion.
-2. Trace of two operators in Weyl transforamtion.
-3. Wigner function $$W$$ is real.
-4. Weyl transformation of $$\mathbb{1}$$ is stiall $$\mathbb{1}$$.
-5. Intergration of $$W$$ over $$x$$ and $$p$$ is 1.
-6. We can recover the wavefunction from the Wigner function.
 
-Now let us prove all the results one by one:
+这就对了!
+
+---
+
+### 一些重要性质
+
+Wigner 函数和 Weyl 变换有一些关键性质:
+1. 动量表象下的 Wigner 函数.
+2. 两个算符的迹, 可以写成 Weyl 变换形式.
+3. Wigner 函数 $$W$$ 是实数.
+4. 单位算符的 Weyl 变换还是 $$\mathbb{1}$$.
+5. $$W$$ 在整个 $$x,p$$ 上积分等于 1.
+6. 可以从 Wigner 函数恢复波函数.
+
+---
+
+### 证明思路
+
+比如我们再看 Weyl 变换的另一种写法:
+
 $$
 \begin{equation}
   \tilde{O}(x, p)=\int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
 \end{equation}
 $$
-We have:
+
+我们有:
+
 $$
 \begin{equation}
 \begin{aligned}
   &\int_-^+ \exp(-\frac{i}{\hbar}py) \mel**{x+\frac{y}{2}}{\hat{O}}{x-\frac{y}{2}} \dd{y} \\
   =& \int_-^+ \exp(-\frac{i}{\hbar}py) \braket{x+\frac{y}{2}}{p'}\mel**{p'}{\hat{O}}{p}\braket{p}{x-\frac{y}{2}} \dd{y}\dd{p}\dd{p'}\\
-  =& \text{Integrate out all the plane waves} \\
+  =& \text{把所有平面波积分掉} \\
   =& \int_-^+ \exp(\frac{i}{\hbar}xu) \mel**{p+\frac{u}{2}}{\hat{O}}{p-\frac{u}{2}} \dd{u}
 \end{aligned}
 \end{equation}
 $$
-Next we prove:
+
+再比如, 两个算符的迹:
+
 $$
 \begin{equation}
   \Tr(\hat{A}\hat{B}) = \frac{1}{2\pi\hbar} \int \tilde{A} \tilde{B} \dd{x}\dd{p}
 \end{equation}
 $$
+
 
 
 
