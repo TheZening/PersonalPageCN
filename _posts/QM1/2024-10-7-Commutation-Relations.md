@@ -14,7 +14,7 @@ $$
 最重要的对易关系是位置和动量的对易关系:
 
 $$
-  \bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=i\hbar\delta_{\alpha\beta}
+  \bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=\mathrm{i}\hbar\delta_{\alpha\beta}
 $$
 
 简单介绍一下Levi-Civita符号:
@@ -33,15 +33,15 @@ $$
 接下来, 我们讨论角动量算符:
 
 $$
-  \left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma
+  \left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma
 $$
 
 $$
-  \left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma
+  \left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma
 $$
 
 $$
-  \left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma
+  \left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma
 $$
 
 为了证明这些关系, 我们还需要以下两个公式:
@@ -65,8 +65,8 @@ $$
     \bqty{\hat{L}_\alpha,\,\hat{x}_\beta} =& \bqty{\epsilon_{\alpha\mu\nu}\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} = \epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} \\
   =& \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+\epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu,\,\hat{x}_\beta}\hat{p}_\nu \\
   =& \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+0\\
-  =& \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-i\hbar\delta_{\nu\beta}) \\
-  =& \epsilon_{\alpha\beta\mu} i \hbar \hat{x}_\mu
+  =& \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-\mathrm{i}\hbar\delta_{\nu\beta}) \\
+  =& \epsilon_{\alpha\beta\mu} \mathrm{i} \hbar \hat{x}_\mu
 \end{aligned}
 $$
 
@@ -78,20 +78,20 @@ $$
 \left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=&\left[\epsilon_{\alpha \mu \nu} \hat{x}_\mu \hat{p}_\nu, \epsilon_{\beta \lambda \tau} \hat{x}_\lambda \hat{p}_\tau\right]\\
 =& \varepsilon_{\alpha \mu \nu}\varepsilon_{\beta \lambda \tau}\left[\hat{x}_\mu \hat{p}_v, \hat{x}_\lambda \hat{p}_\tau\right]\\
 =& \text{Expand everything}\\
-=& i \hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-i \hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
-=& i\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-i \hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
-=& i \hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
+=& \mathrm{i}\hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
+=& \mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
+=& \mathrm{i}\hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
 \end{aligned}
 $$
 
-关键在于要认识到指标 $\mu$ 和 $\nu$ 是任意的, 当 $\alpha=\beta$ 时, 结果为 0.
-此外，我们可以利用 $\delta$ 来简化表达式.
+关键在于要认识到指标$$\mu$$和$$\nu$$是任意的, 当$$\alpha=\beta$$时, 结果为0.
+此外，我们可以利用$$\delta$$来简化表达式.
 你可以展开右边作为一个简单的检查.
 自旋的对易关系也是一样的:
 
 
 $$
-  \left[\hat{S}_\alpha, \hat{S}_\beta\right]=i \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma
+  \left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma
 $$
 
 
