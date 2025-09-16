@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:38:17+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:45:07+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -172,14 +172,150 @@
   [H(t), [H(t'), \rho_B(t) \rho_S(t)]] = \hbar [S B^\dagger + S^\dagger B, [H(t'), \rho_B(t) \rho_S(t)]]
 \end{equation}\)</p>
 
-<p>跳过冗长的代数, 得到:
-$$
-\begin{equation}
+<p>跳过一些繁琐的计算, 我们得到:
+\(\begin{equation}
 \begin{aligned}
-  &amp; [S B^\dagger(t), [H(t’), \rho_B(t) \rho_S(t)]] <br />
-  =&amp; + \hbar S S \rho_S(t) B^\dagger(t) B^\dagger(t’) \rho_B + \hbar S S^\dagger \rho_S(t) B^\dagger(t) B(t’) \rho_B <br />
-  &amp; - \hbar S \rho_S(t) S B^\dagger(t) \rho_B B^\dagger - \hbar S \rho_S(t) S^\dagger B^\dagger(t) \rho_B B(t’) <br />
-  &amp; - \hbar S \rho_S(t) S B^\dagger(t’) \rho_B B^\dagger(t) - \hbar S^\dagger \rho_S(t) S B(t’) \rho_B B^\dagger(t) \</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征.
+  &amp; [S B^\dagger(t), [H(t'), \rho_B(t) \rho_S(t)]] \\
+  =&amp; + \hbar S S \rho_S(t) B^\dagger(t) B^\dagger(t') \rho_B + \hbar S S^\dagger \rho_S(t) B^\dagger(t) B(t') \rho_B \\
+  &amp; - \hbar S \rho_S(t) S B^\dagger(t) \rho_B B^\dagger - \hbar S \rho_S(t) S^\dagger B^\dagger(t) \rho_B B(t') \\
+  &amp; - \hbar S \rho_S(t) S B^\dagger(t') \rho_B B^\dagger(t) - \hbar S^\dagger \rho_S(t) S B(t') \rho_B B^\dagger(t) \\
+  &amp; + \hbar \rho_S(t) S S \rho_B B^\dagger(t') B^\dagger(t) + \hbar \rho_S(t) S^\dagger S \rho_B B(t') B^\dagger(t)
+\end{aligned}
+\end{equation}\)</p>
+
+<p>接下来, 对所有浴自由度做偏迹:
+\(\begin{equation}
+  \Tr_B\left[B(t), B(t') \rho_B\right] = \Tr_B\left[B^\dagger(t) B^\dagger(t') \rho_B\right] = 0
+\end{equation}\)</p>
+
+<p>利用这个性质, 把浴迹掉后得到:
+\(\begin{equation}
+\begin{aligned}
+  &amp;\Tr_B\Bqty{[H(t),[H(t'),\rho_B(t)\rho_S(t)]} \\
+  =&amp; + \hbar^2\left[{S} {S}^{\dagger} {\rho}_S(t)-{S}^{\dagger} {\rho}_S(t) {S}\right] \Tr_B\left\{B^{\dagger}(t) B\left(t^{\prime}\right) {\rho}_B\right\} \\
+  &amp; + \hbar^2[\rho_S(t)S^\dagger S - S \rho_S(t) S^\dagger] \Tr_B\Bqty{B(t')B^\dagger(t)\rho_B} \\
+  &amp; + \hbar^2[S^\dagger S \rho_S(t)- S \rho_S(t) S^\dagger] \Tr_B\Bqty{B(t) B^\dagger(t')\rho_B} \\
+  &amp; + \hbar^2[\rho_S(t) S^\dagger S - S^\dagger \rho_S(t) S] \Tr_B\Bqty{B^\dagger(t')B(t)\rho_B}
+\end{aligned}
+\end{equation}\)</p>
+
+<p>把上文引入的核算符做个小结:
+\(\begin{equation}
+  F(t) = \int_0^t \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] \dd{t'}
+\end{equation}\)
+\(\begin{equation}
+  G(t) = \int_0^t \Tr_B\left[B^\dagger(t') B(t) \rho_B\right] \dd{t'}
+\end{equation}\)
+\(\begin{equation}
+  F^*(t) = \int_0^t \Tr_B\left[B(t') B^\dagger(t) \rho_B\right] \dd{t'}
+\end{equation}\)
+\(\begin{equation}
+  G^*(t) = \int_0^t \Tr_B\left[B^\dagger(t) B(t') \rho_B\right] \dd{t'}
+\end{equation}\)</p>
+
+<p>代数处理清楚之后, \(\rho_S(t)\) 的演化为:
+\(\begin{equation}
+\begin{aligned}
+  \frac{d \rho_S}{d t} &amp;= - \left[S S^\dagger \rho_S(t) - S^\dagger \rho_S(t) S\right] G^*(t) \\
+  &amp;- \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger\right] F^*(t) \\
+  &amp;- \left[S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger\right] F(t) \\
+  &amp;- \left[\rho_S(t) S S^\dagger - S^\dagger \rho_S(t) S\right] G(t)
+\end{aligned}
+\end{equation}\)</p>
+
+<blockquote>
+  <p>把环境的初态取为真空:
+\(\begin{equation}
+  \rho_B = \ket{0}\bra{0} \otimes \ket{0}\bra{0} \dots
+\end{equation}\)</p>
+</blockquote>
+
+<p>回忆:
+\(\begin{equation}
+  B^\dagger(t) = \sum_{k} g_k \hat{a}_k^\dagger \exp(i \omega_k t)
+\end{equation}\)</p>
+
+<p>于是 \(F(t)\)、\(G(t)\) 的偏迹为:
+\(\begin{equation}
+  \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] = \Tr_B\left[B(t) B^\dagger(t') \ket{0}\bra{0}\right]
+\end{equation}\)</p>
+
+<p>展开来看:
+\(\begin{equation}
+\begin{aligned}
+  \Tr_B\left[B(t) B^\dagger(t') \rho_B\right] &amp;= \sum_{k, k'} g_k^* g_{k'} \exp\left(-i (\omega_k t - \omega_{k'} t')\right) \langle 0 | \hat{a}_k \hat{a}_{k'}^\dagger | 0 \rangle \\
+  &amp;= \sum_{k} |g_k|^2 \exp\left(-i \omega_k (t - t')\right)
+\end{aligned}
+\end{equation}\)</p>
+
+<p>因此:
+\(\begin{equation}
+  F(t) = \sum_k |g_k|^2 \int_0^t \exp(-i \omega_k (t - t')) \dd{t'}
+\end{equation}\)</p>
+
+<p>而:
+\(\begin{equation}
+  G(t) = 0
+\end{equation}\)</p>
+
+<p>为了积分 \(F(t)\), 用到态密度的一般定义:
+\(\begin{equation}
+  J(\omega) = \sum_l |g_l|^2 \delta(\omega - \omega_l)
+\end{equation}\)</p>
+
+<p>于是:
+\(\begin{equation}
+  F(t) = \int_0^\infty \int_0^t J(\omega) \exp(-i \omega (t - t')) \dd{t'} \dd{\omega}
+\end{equation}\)</p>
+
+<p>做个小代换更方便:
+\(\begin{equation}
+  \tau = t - t' \quad \dd{\tau} = -\dd{t'}
+\end{equation}\)
+因此:
+\(\begin{equation}
+  \int_0^t \dd{t'} = \int_0^t \dd{\tau}
+\end{equation}\)</p>
+
+<p>积分变成:
+\(\begin{equation}
+  F(t) = \int_0^\infty \int_0^t J(\omega) \exp(-i \omega \tau) \dd{\tau} \dd{\omega}
+\end{equation}\)</p>
+
+<p>利用恒等式:
+\(\begin{equation}
+  \int_0^\infty \exp(-i \omega \tau) \dd{\tau} = \pi \delta(\omega) - i \, \text{P.V.} \frac{1}{\omega}
+\end{equation}\)</p>
+
+<p>得到:
+\(\begin{equation}
+  F(t) = \pi \int_0^\infty J(\omega) \delta(\omega) \dd{\omega} - i \, \text{P.V.} \int_0^\infty \frac{J(\omega)}{\omega} \dd{\omega}
+\end{equation}\)</p>
+
+<p>最后把 \(F\) 写成:
+\(\begin{equation}
+  F = \frac{1}{2} \gamma + \frac{i}{2} \epsilon
+\end{equation}\)</p>
+
+<p>于是 \(\rho_S(t)\) 的方程为:
+\(\begin{equation}
+\begin{aligned}
+  \frac{d \rho_S(t)}{d t} &amp;= - \frac{\gamma}{2} \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger + S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger\right] \\
+  &amp;\quad + i \frac{\epsilon}{2} \left[\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger - S^\dagger S \rho_S(t) + S \rho_S(t) S^\dagger\right]
+\end{aligned}
+\end{equation}\)</p>
+
+<blockquote>
+  <p>如果假设态密度使得 \(\epsilon = 0\), 最后得到:
+\(\begin{equation}
+  \frac{d \rho_S(t)}{d t} = \gamma \left[S \rho_S(t) S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S(t)\right\}\right]
+\end{equation}\)</p>
+</blockquote>
+
+<p>回到原绘景(略去细节), 就得到著名的 Lindblad 量子动力学方程:
+\(\begin{equation}
+  \frac{d \rho_S}{d t} = -\frac{i}{\hbar} \left[H_S, \rho_S\right] + \gamma \left[S \rho_S S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S\right\}\right]
+\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征.
 本文就来讨论这个特征.</p>
 
 <hr />
