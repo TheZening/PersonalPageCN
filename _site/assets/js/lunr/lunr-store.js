@@ -5,12 +5,6 @@ var store = [{
         "url": "/PersonalPageCN/math/Important-Integrals/",
         "teaser": null
       },{
-        "title": "Recent Updates",
-        "excerpt":"This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits. 2020-Aug-25: Thanks to the efforts made by brilliant and insightful experimentallists, our work on 2D helical edge states in Dirac semi-metals is publishedon on Nano Letter now. Helical Edge Transport...","categories": ["Updates"],
-        "tags": [],
-        "url": "/PersonalPageCN/updates/RecentUpdate/",
-        "teaser": null
-      },{
         "title": "积分表 - Gauss积分",
         "excerpt":"有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了… \\[\\int_{-\\infty}^{\\infty} \\mathrm{-x^2} \\dd{x} = \\sqrt{\\pi}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{-a(x+b)^2} \\dd{x} = \\sqrt{\\frac{\\pi}{a}}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{-\\left(a x^2+b x+c\\right)} \\dd{x} = \\sqrt{\\frac{\\pi}{a}} \\mathrm{e}^{\\frac{b^2}{4 a}-c}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{\\frac{1}{2} i t^2} \\dd{t} = \\mathrm{e}^{i \\pi / 4} \\sqrt{2 \\pi}\\] \\[\\int_0^{\\infty} \\mathrm{e}^{-x^2} \\dd{x} = \\frac{\\sqrt{\\pi}}{2}\\] \\[\\int_{-\\infty}^{\\infty} x^{2 n} \\mathrm{e}^{-\\alpha x^2} \\dd{x} = \\sqrt{\\frac{\\pi}{\\alpha}} \\frac{(2 n-1)!!}{(2...","categories": ["Math"],
         "tags": ["Integral Table"],
@@ -57,5 +51,11 @@ var store = [{
         "excerpt":"In this post, we discuss some features of an open quantum system, which consists of the system \\(H_S\\), the environment \\(H_B\\), and the interaction part \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) The dynamics of the whole system (system + environment), described by the density matrix...","categories": ["QM1+"],
         "tags": [],
         "url": "/PersonalPageCN/qm1+/QM1-LindbladianEquation/",
+        "teaser": null
+      },{
+        "title": "新闻",
+        "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的新文章, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维空穴系统的新文章, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for ultrafast,...","categories": ["Updates"],
+        "tags": [],
+        "url": "/PersonalPageCN/updates/RecentUpdate/",
         "teaser": null
       }]

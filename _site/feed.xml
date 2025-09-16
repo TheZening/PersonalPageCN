@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-16T23:57:34+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM1+ Lindbladian quantum kinetic equations</title><link href="http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM1+ Lindbladian quantum kinetic equations" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation/"><![CDATA[<p>In this post, we discuss some features of an open quantum system, which consists of the system \(H_S\), the environment \(H_B\), and the interaction part \(H_{SB}\):
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T00:33:14+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+
+<p>2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了.<br />
+<a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
+
+<p>2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的新文章, 现在发表在 Physics Review B上了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201">Theory of hole-spin qubits in strained germanium quantum dots</a></p>
+
+<p>2021-Apr-01: 我们关于二维空穴系统的新文章, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
+<a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
+
+<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了,了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
+
+<p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的新文章, 现在发表在 Nature Communications.<br />
+<a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
+
+<p>2023-Dec-04: 我们组员 Abhik 在 Physical Review B 上发表了关于平面Ge量子点空穴量子比特的系统研究.
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
+
+<p>2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的研究, 现在发表在 Physical Review B上了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427">Electrical operation of hole spin qubits in planar MOS silicon quantum dots</a></p>
+
+<p>2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在硅系统中展示了单重态-三重态空穴量子比特, 这项成果现在发表在 Nature Communications上了.<br />
+<a href="https://www.nature.com/articles/s41467-024-51902-9">A singlet-triplet hole-spin qubit in MOS silicon</a></p>
+
+<p>2024-Apr-02: 我们在Ge空穴自旋量子比特体系中关于\(1/f\)噪音的研究, 现在发表在 Physical Review B上了.
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403">Dephasing of planar Ge hole spin qubits due to 1/f charge noise</a></p>
+
+<p>2024-Aug-1: 离开了UNSW, 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!</p>
+
+<p>2024-Aug-15: 我与好朋友Xiangjun合作关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的研究, 现在发表在 IEEE Transaction on quantum engineering 上了, 格外值得注意地, Xiangjun作为一名本科生主导了本次项目, 未来可期!
+<a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM1+ Lindbladian quantum kinetic equations</title><link href="http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM1+ Lindbladian quantum kinetic equations" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1+/QM1-LindbladianEquation/"><![CDATA[<p>In this post, we discuss some features of an open quantum system, which consists of the system \(H_S\), the environment \(H_B\), and the interaction part \(H_{SB}\):
 \(\begin{equation}
   H(t) = H_S + H_B + \alpha H_{SB}
 \end{equation}\)
@@ -721,31 +753,7 @@ This is again the Rabi oscillation formula!</p>]]></content><author><name>来去
 \end{align}\]
 
 <p>这表明 \(S_x, S_y\) 的期望值将以频率 \(2\Omega\) 围绕z轴旋转!
-这就是我们称之为Larmour进动的原因。</p>]]></content><author><name>来去之间</name></author><category term="QM1+" /><summary type="html"><![CDATA[在这篇文章中, 我们讨论Larmour问题. 我们首先介绍轨道和自旋电子磁矩. 先定义Bohr磁子:]]></summary></entry><entry><title type="html">积分表 - Gauss积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/" rel="alternate" type="text/html" title="积分表 - Gauss积分" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals-2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/"><![CDATA[<p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
-
-\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
-
-\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
-
-\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
-
-\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
-
-<p>双阶乘的定义如下:</p>
-
-\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
-
-<p>Gamma函数的定义如下:</p>
-
-\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
-
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…]]></summary></entry><entry><title type="html">QM1 常见对易关系的推导和结果</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/" rel="alternate" type="text/html" title="QM1 常见对易关系的推导和结果" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/"><![CDATA[<p>这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:</p>
+这就是我们称之为Larmour进动的原因。</p>]]></content><author><name>来去之间</name></author><category term="QM1+" /><summary type="html"><![CDATA[在这篇文章中, 我们讨论Larmour问题. 我们首先介绍轨道和自旋电子磁矩. 先定义Bohr磁子:]]></summary></entry><entry><title type="html">QM1 常见对易关系的推导和结果</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/" rel="alternate" type="text/html" title="QM1 常见对易关系的推导和结果" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/"><![CDATA[<p>这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:</p>
 
 \[\bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0\]
 
@@ -805,31 +813,31 @@ This is again the Rabi oscillation formula!</p>]]></content><author><name>来去
 你可以展开右边作为一个简单的检查.
 自旋的对易关系也是一样的:</p>
 
-\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:]]></summary></entry><entry><title type="html">Recent Updates</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="Recent Updates" /><published>2024-10-07T00:06:00+11:00</published><updated>2024-10-07T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.</p>
+\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:]]></summary></entry><entry><title type="html">积分表 - Gauss积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/" rel="alternate" type="text/html" title="积分表 - Gauss积分" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals-2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/"><![CDATA[<p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
 
-<p>2020-Aug-25: Thanks to the efforts made by brilliant and insightful experimentallists, our work on 2D helical edge states in Dirac semi-metals is publishedon on Nano Letter now.
-<a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
+\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
 
-<p>2021-March-15: Our new article on hole-spin qubits in strained germanium quantum dots now on Physics Review B
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201">Theory of hole-spin qubits in strained germanium quantum dots</a></p>
+\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
 
-<p>2021-Apr-01: Our new article on 2D hole systems now on Nature partern journal: npj Quantum information.
-<a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
+\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
 
-<p>2021-Aug-20: A following theory work on 2D helical edge states in Dirac semi-metals using Boltzmann equations is now on Physics Review B.
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
+\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
 
-<p>2022-Jan-11: Thanks to the efforts made by brilliant and insightful experimentallists, our new article on Ge qubits with ultrafast oscillations now on Nature communications
-<a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
+\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
 
-<p>2023-Dec-04: Our group member Abhik published a throughout study of the planar germanium quantum dot hole qubits in Physical Review B.
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
+\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
 
-<p>2024-Feb-22: Our work on silicon hole spin qubits in metal-oxide-semiconductor system is now on Physical Review B.
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427">Electrical operation of hole spin qubits in planar MOS silicon quantum dots</a></p>
+\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
 
-<p>2024-Sep-03: Thanks to the efforts made by brilliant and insightful experimentallists, a singlet-triplet hole qubit in silicon system is demonstrated, which is published on Nature communication now:
-<a href="https://www.nature.com/articles/s41467-024-51902-9">A singlet-triplet hole-spin qubit in MOS silicon</a></p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.]]></summary></entry><entry><title type="html">积分表 - 三角函数积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals/" rel="alternate" type="text/html" title="积分表 - 三角函数积分" /><published>2024-10-06T19:06:00+11:00</published><updated>2024-10-06T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals/"><![CDATA[<p>Here we summarize some useful intergation results in assignments.</p>
+<p>双阶乘的定义如下:</p>
+
+\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
+
+<p>Gamma函数的定义如下:</p>
+
+\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
+
+<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…]]></summary></entry><entry><title type="html">积分表 - 三角函数积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals/" rel="alternate" type="text/html" title="积分表 - 三角函数积分" /><published>2024-10-06T19:06:00+11:00</published><updated>2024-10-06T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals/"><![CDATA[<p>Here we summarize some useful intergation results in assignments.</p>
 
 \[\int \sin ^2 ax \dd{x}=\frac{x}{2}-\frac{1}{4 a} \sin 2 a x+C\]
 

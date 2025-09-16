@@ -1,35 +1,40 @@
 ---
-title: "Recent Updates"
-date: 2024-10-06T08:06:00-05:00
+title: "新闻"
+date: 2025-09-17 00:05
 categories:
   - Updates
 ---
 
-This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.
+这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.
 
-2020-Aug-25: Thanks to the efforts made by brilliant and insightful experimentallists, our work on 2D helical edge states in Dirac semi-metals is publishedon on Nano Letter now.
+2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了.  
 [Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi](https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649)
 
-2021-March-15: Our new article on hole-spin qubits in strained germanium quantum dots now on Physics Review B
+2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的新文章, 现在发表在 Physics Review B上了.  
 [Theory of hole-spin qubits in strained germanium quantum dots](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201)
 
-2021-Apr-01: Our new article on 2D hole systems now on Nature partern journal: npj Quantum information.
+2021-Apr-01: 我们关于二维空穴系统的新文章, 现在发表在 Nature 合作期刊 npj Quantum Information上了.  
 [Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits](https://www.nature.com/articles/s41534-021-00386-2)
 
-2021-Aug-20: A following theory work on 2D helical edge states in Dirac semi-metals using Boltzmann equations is now on Physics Review B.
+2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了,了.  
 [Unidirectional magnetotransport of linearly dispersing topological edge states](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406)
 
-2022-Jan-11: Thanks to the efforts made by brilliant and insightful experimentallists, our new article on Ge qubits with ultrafast oscillations now on Nature communications
+2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的新文章, 现在发表在 Nature Communications.  
 [Ultrafast coherent control of a hole spin qubit in a germanium quantum dot](https://www.nature.com/articles/s41467-021-27880-7)
 
-2023-Dec-04: Our group member Abhik published a throughout study of the planar germanium quantum dot hole qubits in Physical Review B.
+2023-Dec-04: 我们组员 Abhik 在 Physical Review B 上发表了关于平面Ge量子点空穴量子比特的系统研究.
 [Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301)
 
-2024-Feb-22: Our work on silicon hole spin qubits in metal-oxide-semiconductor system is now on Physical Review B.
+2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的研究, 现在发表在 Physical Review B上了.  
 [Electrical operation of hole spin qubits in planar MOS silicon quantum dots](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427)
 
-2024-Sep-03: Thanks to the efforts made by brilliant and insightful experimentallists, a singlet-triplet hole qubit in silicon system is demonstrated, which is published on Nature communication now:
+2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在硅系统中展示了单重态-三重态空穴量子比特, 这项成果现在发表在 Nature Communications上了.  
 [A singlet-triplet hole-spin qubit in MOS silicon](https://www.nature.com/articles/s41467-024-51902-9)
 
+2024-Apr-02: 我们在Ge空穴自旋量子比特体系中关于$$1/f$$噪音的研究, 现在发表在 Physical Review B上了.
+[Dephasing of planar Ge hole spin qubits due to 1/f charge noise](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403)
 
+2024-Aug-1: 离开了UNSW, 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!
 
+2024-Aug-15: 我与好朋友Xiangjun合作关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的研究, 现在发表在 IEEE Transaction on quantum engineering 上了, 格外值得注意地, Xiangjun作为一名本科生主导了本次项目, 未来可期!
+[Toward axion signal extraction in semiconductor spin qubits via spectral engineering](https://ieeexplore.ieee.org/abstract/document/11127003)
