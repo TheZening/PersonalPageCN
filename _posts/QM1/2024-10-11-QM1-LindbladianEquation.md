@@ -1,5 +1,5 @@
 ---
-title: "QM2 Lindbladian量子动力学系统"
+title: "QM2 Lindbladian量子动力学方程"
 date: 2024-10-12T08:06:00-05:00
 categories:
   - QM2

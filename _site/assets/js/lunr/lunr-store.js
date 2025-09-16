@@ -47,7 +47,7 @@ var store = [{
         "url": "/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/",
         "teaser": null
       },{
-        "title": "QM2 Lindbladian量子动力学系统",
+        "title": "QM2 Lindbladian量子动力学方程",
         "excerpt":"在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \\(H_S\\)、环境(热浴)部分 \\(H_B\\), 以及相互作用项 \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) 整体(系统 + 环境)的动力学由密度矩阵 \\(\\rho_{SB}\\) 描述, 满足: \\(\\begin{equation} \\dv{}{t} \\rho_{SB} = -\\frac{i}{\\hbar} \\left[H_S + H_B + \\alpha H_{SB}, \\rho_{SB}\\right] \\end{equation}\\) 在相互作用绘景里, Hamiltonian 的演化是: \\(\\begin{equation} H(t) = \\exp\\left(\\frac{i}{\\hbar}(H_S + H_B)t\\right) H_{SB} \\exp\\left(-\\frac{i}{\\hbar}(H_S + H_B)t\\right) \\end{equation}\\)...","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM1-LindbladianEquation/",
