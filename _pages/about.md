@@ -3,14 +3,18 @@ permalink: /about/
 title: "About"
 ---
 
-Hello and Welcome!
+**你好，旅人...**
 
-Thank you for visiting my personal page. Here, you’ll find some of my latest projects alongside insights from previous research. My main focus lies in mesoscopic systems and other fascinating areas within condensed matter physics.
+你已进入我的一隅. 这里藏着我近年的探索, 以及旧日研究的痕迹. 我的兴趣集中在介观体系与凝聚态物理的深处, 那些边界模糊却蕴含奇异规律的领域.
 
-In 2019, I graduated from the University of New South Wales with First Class Honors in Physics. With the encouragement of my supervisor, Prof. Dimitrie Culcer, I began a Ph.D. in his group, focusing on quantum transport and mesoscopic systems. I am now a postdoctoral researcher in the group.
+2019年, 我自UNSW以物理一等荣誉毕业, 随后在同组踏上博士之途, 专注于量子输运与介观体系的研究. 如今, 我加入了Materials Science Institute of Madrid, CSIC进一步深造, 继续前行.
 
-I owe much of my development to the guidance and inspiration of my teachers, supervisors, and peers, each of whom has played a pivotal role in shaping my understanding and fueling my passion for exploring the brilliant ideas of both past and present researchers.
+我的成长, 离不开老师与同伴的启迪. 他们的声音, 塑造了我看待知识的方式, 也推动我去追寻亚瑞特先人和当代思想的光芒.
 
-I hope my posts provide clarity and, perhaps, spark curiosity—without causing too much confusion along the way!
+愿我写下的文字, 能带来一些启发, 或点燃你的好奇-而不是让迷雾更深.
 
-Thank you again for stopping by!
+感谢你驻足于此.
+
+2023年1月1日, 于沙漠明珠 - 鲁.高因
+
+------

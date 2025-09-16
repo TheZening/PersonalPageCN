@@ -89,7 +89,7 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: 所有条目
+      type: posts
     values:
       layout: single
       author_profile: true
