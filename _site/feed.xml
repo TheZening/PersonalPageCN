@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-08T16:15:03+11:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">A Personal Page</title><subtitle>Welcome to my page. Have a good day!</subtitle><author><name>Zen!</name></author><entry><title type="html">Commutation Relations</title><link href="http://localhost:4000/qm1+/Commutation-Relations/" rel="alternate" type="text/html" title="Commutation Relations" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/qm1+/Commutation-Relations</id><content type="html" xml:base="http://localhost:4000/qm1+/Commutation-Relations/"><![CDATA[<p>Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:</p>
+
+\[\bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0\]
+
+<p>The most important commutation relations:</p>
+
+\[\bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=i\hbar\delta_{\alpha\beta}\]
+
+<p>Before we preceed further, we introduce the Levi-Civita tensor:</p>
+
+\[\epsilon_{\alpha \beta \gamma}\]
+
+<p>For example:</p>
+
+\[\epsilon_{123}=\epsilon_{231}=\epsilon_{312}= 1 \quad \epsilon_{132}=\epsilon_{213}=\epsilon_{321}= -1\]
+
+<p>If there is any repeated index, the Levi-Civita tensor will be 0. Next, we discuss the angular momentum operators:</p>
+
+\[\left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma\]
+
+\[\left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma\]
+
+\[\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma\]
+
+<p>To prove these relations, we need to use the following relations:</p>
+
+\[\epsilon_{\alpha\beta\gamma}\epsilon_{\rho\tau\gamma}=\delta_{\alpha\rho}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\rho}\]
+
+\[\left[\hat{A}\hat{B},\,\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right] + \left[\hat{A},\hat{C}\right]\hat{B}\]
+
+\[\left[\hat{A},\,\hat{B}\hat{C}\right]=\left[\hat{A},\,\hat{B}\right]\hat{C} + \hat{B}\left[\hat{A},\,\hat{C}\right]\]
+
+<p>Noe we prove the first one:</p>
+
+\[\begin{aligned}
+    \bqty{\hat{L}_\alpha,\,\hat{x}_\beta} =&amp; \bqty{\epsilon_{\alpha\mu\nu}\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} = \epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} \\
+  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+\epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu,\,\hat{x}_\beta}\hat{p}_\nu \\
+  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+0\\
+  =&amp; \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-i\hbar\delta_{\nu\beta}) \\
+  =&amp; \epsilon_{\alpha\beta\mu} i \hbar \hat{x}_\mu
+\end{aligned}\]
+
+<p>The second commutation relation can be proved in a smilar way. For the third one, we have:</p>
+
+\[\begin{aligned}
+\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=&amp;\left[\epsilon_{\alpha \mu \nu} \hat{x}_\mu \hat{p}_\nu, \epsilon_{\beta \lambda \tau} \hat{x}_\lambda \hat{p}_\tau\right]\\
+=&amp; \varepsilon_{\alpha \mu \nu}\varepsilon_{\beta \lambda \tau}\left[\hat{x}_\mu \hat{p}_v, \hat{x}_\lambda \hat{p}_\tau\right]\\
+=&amp; \text{Expand everything}\\
+=&amp; i \hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-i \hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
+=&amp; i\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-i \hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
+=&amp; i \hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
+\end{aligned}\]
+
+<p>The key is realizing that the index \(\mu\) and \(\nu\) are arbitary, when \(\alpha=\beta\), the result will be 0. Furthermore, we can simplify the expression using the \(\delta\). You can expand the right hand side as an easy test. The spin commutation relations are the same:</p>
+
+\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=i \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>Zen!</name></author><category term="QM1+" /><summary type="html"><![CDATA[Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:]]></summary></entry><entry><title type="html">Integral Table - Gaussian</title><link href="http://localhost:4000/math/Important-Integrals-2/" rel="alternate" type="text/html" title="Integral Table - Gaussian" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/math/Important-Integrals-2</id><content type="html" xml:base="http://localhost:4000/math/Important-Integrals-2/"><![CDATA[<p>Here we summarize some useful intergation results in assignments.</p>
+
+\[\int_{-\infty}^{\infty} e^{-x^2} d x=\sqrt{\pi}\]
+
+\[\int_{-\infty}^{\infty} e^{-a(x+b)^2} d x=\sqrt{\frac{\pi}{a}}\]
+
+\[\int_{-\infty}^{\infty} e^{-\left(a x^2+b x+c\right)} d x=\sqrt{\frac{\pi}{a}} e^{\frac{b^2}{4 a}-c}\]
+
+\[\int_{-\infty}^{\infty} e^{\frac{1}{2} i t^2} d t=e^{i \pi / 4} \sqrt{2 \pi}\]
+
+\[\int_0^{\infty} e^{-x^2} d x=\frac{\sqrt{\pi}}{2}\]
+
+<p>Some general identities:</p>
+
+\[\int_{-\infty}^{\infty} x^{2 n} e^{-\alpha x^2} d x=\sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
+
+\[\int_0^{\infty} x^n e^{-a x^b} d x=\frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
+
+<p>The double factorial can be understood as:</p>
+
+\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
+
+<p>The Gamma function is defined as:</p>
+
+\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
+
+<p>If these identities do not answer you questions, you can further refer to <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>Zen!</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[Here we summarize some useful intergation results in assignments.]]></summary></entry><entry><title type="html">Recent Updates</title><link href="http://localhost:4000/updates/RecentUpdate/" rel="alternate" type="text/html" title="Recent Updates" /><published>2024-10-07T00:06:00+11:00</published><updated>2024-10-07T00:06:00+11:00</updated><id>http://localhost:4000/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/updates/RecentUpdate/"><![CDATA[<p>This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.</p>]]></content><author><name>Zen!</name></author><category term="Updates" /><summary type="html"><![CDATA[This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.]]></summary></entry><entry><title type="html">Integral Table - Trigonometry</title><link href="http://localhost:4000/math/Important-Integrals/" rel="alternate" type="text/html" title="Integral Table - Trigonometry" /><published>2024-10-06T19:06:00+11:00</published><updated>2024-10-06T19:06:00+11:00</updated><id>http://localhost:4000/math/Important-Integrals</id><content type="html" xml:base="http://localhost:4000/math/Important-Integrals/"><![CDATA[<p>Here we summarize some useful intergation results in assignments.</p>
+
+\[\int \sin ^2 ax \dd{x}=\frac{x}{2}-\frac{1}{4 a} \sin 2 a x+C\]
+
+\[\int \cos ^2 ax \dd{x}=\frac{x}{2}+\frac{1}{4 a} \sin 2 a x+C\]
+
+\[\int \sin ^3 a x \dd{x}=\frac{\cos 3 a x}{12 a}-\frac{3 \cos a x}{4 a}+C\]
+
+\[\int x \sin a x \dd{x}=\frac{\sin a x}{a^2}-\frac{x \cos a x}{a}+C\]
+
+\[\int x \cos a x \dd{x}=\frac{\cos a x}{a^2}+\frac{x \sin a x}{a}+C\]
+
+\[\int x \sin^2 a x \dd{x}=\frac{x^2}{4}-\frac{x}{4 a} \sin 2 a x-\frac{1}{8 a^2} \cos 2 a x+C\]
+
+\[\int x^2 \sin ^2 a x \dd{x}=\frac{x^3}{6}-\left(\frac{x^2}{4 a}-\frac{1}{8 a^3}\right) \sin 2 a x-\frac{x}{4 a^2} \cos 2 a x+C\]
+
+\[\int x^2 \cos ^2 a x \dd{x}=\frac{x^3}{6}+\left(\frac{x^2}{4 a}-\frac{1}{8 a^3}\right) \sin 2 a x+\frac{x}{4 a^2} \cos 2 a x+C\]
+
+\[\int(\sin a x)(\cos a x) \dd{x}=\frac{1}{2 a} \sin ^2 a x+C\]
+
+<p>For the following three equations, the coefficients are different!</p>
+
+\[\int\left(\sin b_1 x\right)\left(\sin b_2 x\right) \dd{x}=\frac{\sin \left(\left(b_2-b_1\right) x\right)}{2\left(b_2-b_1\right)}-\frac{\sin \left(\left(b_1+b_2\right) x\right)}{2\left(b_1+b_2\right)}+C\]
+
+\[\int\left(\cos a_1 x\right)\left(\cos a_2 x\right) \dd{x}=\frac{\sin \left(\left(a_2-a_1\right) x\right)}{2\left(a_2-a_1\right)}+\frac{\sin \left(\left(a_2+a_1\right) x\right)}{2\left(a_2+a_1\right)}+C\]
+
+\[\int\left(\sin a_1 x\right)\left(\cos a_2 x\right) \dd{x}=-\frac{\cos \left(\left(a_1-a_2\right) x\right)}{2\left(a_1-a_2\right)}-\frac{\cos \left(\left(a_1+a_2\right) x\right)}{2\left(a_1+a_2\right)}+C\]
+
+\[\int_0^{2 \pi} \sin ^{2 m+1} x \cos ^n x \dd{x}=0 \quad n, m \in \mathbb{Z}\]
+
+\[\int_0^{2 \pi} \sin ^m x \cos ^{2 n+1} x \dd{x}=0 \quad n, m \in \mathbb{Z}\]
+
+\[\int_{-a/2}^{a/2} x^2 \cos ^2 \frac{n \pi x}{a} \dd{x}=\frac{a^3\left(n^2 \pi^2-6\right)}{24 n^2 \pi^2} \quad(\text { for } n=1,3,5 \ldots)\]
+
+\[\int_{-a/2}^{a/2} x^2 \sin ^2 \frac{n \pi x}{a} \dd{x}=\frac{a^3}{24}\left(1-6 \frac{(-1)^n}{n^2 \pi^2}\right) \quad(\text { for } n=1,2,3, \ldots)\]
+
+<p>If these identities do not answer you questions, you can further refer to <a href="https://en.wikipedia.org/wiki/List_of_integrals_of_trigonometric_functions">Wiki Pages</a></p>]]></content><author><name>Zen!</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[Here we summarize some useful intergation results in assignments.]]></summary></entry></feed>
