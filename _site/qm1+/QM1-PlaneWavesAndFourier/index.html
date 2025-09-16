@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
-  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -10,39 +10,39 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Commutation Relations - A Personal Page</title>
-<meta name="description" content="Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:">
+<!-- begin _includes/seo.html --><title>QM1+ Plane waves and Fourier  - 来去之间</title>
+<meta name="description" content="In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.">
 
 
-  <meta name="author" content="Zen!">
+  <meta name="author" content="来去之间">
   
-  <meta property="article:author" content="Zen!">
+  <meta property="article:author" content="来去之间">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="A Personal Page">
-<meta property="og:title" content="Commutation Relations">
-<meta property="og:url" content="http://localhost:4000/qm1+/Commutation-Relations/">
+<meta property="og:site_name" content="来去之间">
+<meta property="og:title" content="QM1+ Plane waves and Fourier">
+<meta property="og:url" content="http://localhost:4000/qm1+/QM1-PlaneWavesAndFourier/">
 
 
-  <meta property="og:description" content="Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-10-07T19:06:00+11:00">
+  <meta property="og:description" content="In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/qm1+/Commutation-Relations/">
+
+  <meta property="article:published_time" content="2024-10-11T00:06:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/qm1+/QM1-PlaneWavesAndFourier/">
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="A Personal Page Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -114,7 +114,7 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          A Personal Page
+          来去之间
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
@@ -177,18 +177,18 @@
   
     <div class="author__avatar">
       <a href="http://localhost:4000/">
-        <img src="/assets/images/bio-photo.jpg" alt="Zen!" itemprop="image" class="u-photo">
+        <img src="/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
       </a>
     </div>
   
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Zen!</a>
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">来去之间</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Good luck! Have fun!</p>
+        <p>来去之际, 举手投足, 皆是风景.</p>
 
       </div>
     
@@ -276,16 +276,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Commutation Relations">
-    <meta itemprop="description" content="Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:">
-    <meta itemprop="datePublished" content="2024-10-07T19:06:00+11:00">
+    <meta itemprop="headline" content="QM1+ Plane waves and Fourier">
+    <meta itemprop="description" content="In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.">
+    <meta itemprop="datePublished" content="2024-10-11T00:06:00+11:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/qm1+/Commutation-Relations/" itemprop="url">Commutation Relations
+            <a href="http://localhost:4000/qm1+/QM1-PlaneWavesAndFourier/" itemprop="url">QM1+ Plane waves and Fourier
 </a>
           </h1>
           
@@ -302,7 +302,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -314,62 +314,54 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:</p>
+        <p>In this post, we discuss the plane waves and the convention of Fourier transformations, we use 1D as the example all the time. We will not discuss the properties of the Forrier transformations.</p>
 
-\[\bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0\]
+<p>The starting point is to consider the plane wave:
+\(\begin{equation}
+  \braket{x}{p} = \frac{1}{\sqrt{2\pi\hbar}} \exp(\frac{i}{\hbar}xp)
+\end{equation}\)
+You can use \(k\) as the variable as well:
+\(\begin{equation}
+  \braket{x}{k} = \frac{1}{\sqrt{2\pi}} \exp(\frac{i}{\hbar}xk)
+\end{equation}\)
+The Fourier transformation is defined as:
+\(\begin{equation}
+  \tilde{f}(k) = \frac{1}{\sqrt{2\pi}} \int_-^+ f(x) \exp(-ikx) \dd{x}
+\end{equation}\)
+The inverse Fourier transforamtion is:
+\(\begin{equation}
+  f(x) = \frac{1}{\sqrt{2\pi}} \int_-^+ \tilde{f}(k) \exp(ikx) \dd{k}
+\end{equation}\)
+or we can use \(p\) as the variable:
+\(\begin{equation}
+  \tilde{f}(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_-^+ f(x) \exp(-\frac{i}{\hbar}px) \dd{x}
+\end{equation}\)
+\(\begin{equation}
+  f(x) = \frac{1}{\sqrt{2\pi\hbar}} \int_-^+ f(p) \exp(\frac{i}{\hbar}px) \dd{p}
+\end{equation}\)</p>
 
-<p>The most important commutation relations:</p>
+<blockquote>
+  <p>The \(\hbar\) factor is actually determined by the normalization condition, which can be summarized into the following 3 equations:</p>
+</blockquote>
 
-\[\bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=i\hbar\delta_{\alpha\beta}\]
-
-<p>Before we preceed further, we introduce the Levi-Civita tensor:</p>
-
-\[\epsilon_{\alpha \beta \gamma}\]
-
-<p>For example:</p>
-
-\[\epsilon_{123}=\epsilon_{231}=\epsilon_{312}= 1 \quad \epsilon_{132}=\epsilon_{213}=\epsilon_{321}= -1\]
-
-<p>If there is any repeated index, the Levi-Civita tensor will be 0. Next, we discuss the angular momentum operators:</p>
-
-\[\left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma\]
-
-\[\left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma\]
-
-\[\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma\]
-
-<p>To prove these relations, we need to use the following relations:</p>
-
-\[\epsilon_{\alpha\beta\gamma}\epsilon_{\rho\tau\gamma}=\delta_{\alpha\rho}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\rho}\]
-
-\[\left[\hat{A}\hat{B},\,\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right] + \left[\hat{A},\hat{C}\right]\hat{B}\]
-
-\[\left[\hat{A},\,\hat{B}\hat{C}\right]=\left[\hat{A},\,\hat{B}\right]\hat{C} + \hat{B}\left[\hat{A},\,\hat{C}\right]\]
-
-<p>Noe we prove the first one:</p>
-
-\[\begin{aligned}
-    \bqty{\hat{L}_\alpha,\,\hat{x}_\beta} =&amp; \bqty{\epsilon_{\alpha\mu\nu}\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} = \epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} \\
-  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+\epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu,\,\hat{x}_\beta}\hat{p}_\nu \\
-  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+0\\
-  =&amp; \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-i\hbar\delta_{\nu\beta}) \\
-  =&amp; \epsilon_{\alpha\beta\mu} i \hbar \hat{x}_\mu
-\end{aligned}\]
-
-<p>The second commutation relation can be proved in a smilar way. For the third one, we have:</p>
-
-\[\begin{aligned}
-\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=&amp;\left[\epsilon_{\alpha \mu \nu} \hat{x}_\mu \hat{p}_\nu, \epsilon_{\beta \lambda \tau} \hat{x}_\lambda \hat{p}_\tau\right]\\
-=&amp; \varepsilon_{\alpha \mu \nu}\varepsilon_{\beta \lambda \tau}\left[\hat{x}_\mu \hat{p}_v, \hat{x}_\lambda \hat{p}_\tau\right]\\
-=&amp; \text{Expand everything}\\
-=&amp; i \hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-i \hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
-=&amp; i\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-i \hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
-=&amp; i \hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
-\end{aligned}\]
-
-<p>The key is realizing that the index \(\mu\) and \(\nu\) are arbitary, when \(\alpha=\beta\), the result will be 0. Furthermore, we can simplify the expression using the \(\delta\). You can expand the right hand side as an easy test. The spin commutation relations are the same:</p>
-
-\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=i \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]
+<p>\(\begin{equation}
+\begin{aligned}
+  \braket{x}{x'} =&amp; \delta(x-x') \\
+  \braket{p}{p'} =&amp; \delta(p-p') \\
+  \braket{k}{k'} =&amp; \delta(k-k')
+\end{aligned}
+\end{equation}\)
+And the following identity:
+\(\begin{equation}
+\begin{aligned}
+  \int_-^+ \exp(i(k-k')x) \dd{x} =&amp; 2\pi\delta(k-k') \\
+  \int_-^+ \exp(\frac{i}{\hbar}(p-p')x) \dd{x} =&amp; 2\pi\hbar\delta(p-p')
+\end{aligned}
+\end{equation}\)
+The connection between \(p\) and \(k\) is:
+\(\begin{equation}
+  \delta(p-p') = \frac{1}{\hbar} \delta(k-k')
+\end{equation}\)</p>
 
 
         
@@ -397,32 +389,41 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-07T19:06:00+11:00">October 7, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-11T00:06:00+11:00">October 11, 2024</time></p>
 
       </footer>
 
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://twitter.com/intent/tweet?text=Commutation+Relations%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FCommutation-Relations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://x.com/intent/tweet?text=QM1%2B+Plane+waves+and+Fourier+%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-PlaneWavesAndFourier%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FCommutation-Relations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-PlaneWavesAndFourier%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/qm1+/Commutation-Relations/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/qm1+/QM1-PlaneWavesAndFourier/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM1%2B+Plane+waves+and+Fourier+%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-PlaneWavesAndFourier%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/updates/RecentUpdate/" class="pagination--pager" title="Recent Updates
-">Previous</a>
+      <a href="/qm1+/QM1-WignerFunction/" class="pagination--pager" title="QM1+ Wigner functions">Previous</a>
     
     
-      <a href="/math/Important-Integrals-2/" class="pagination--pager" title="Integral Table - Gaussian
-">Next</a>
+      <a href="/qm1+/QM1-AdiabaticTheoremAndBerryPhase/" class="pagination--pager" title="QM1+ Adiabatic theorem and Berry phase">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -447,7 +448,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/math/Important-Integrals-2/" rel="permalink">Integral Table - Gaussian
+        <a href="/qm1+/QM1-LindbladianEquation/" rel="permalink">QM1+ Lindbladian quantum kinetic equations
 </a>
       
     </h2>
@@ -465,14 +466,54 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          6 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Here we summarize some useful intergation results in assignments.
+    <p class="archive__item-excerpt" itemprop="description">In this post, we discuss some features of an open quantum system, which consists of the system \(H_S\), the environment \(H_B\), and the interaction part \(H...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/qm1+/QM1-AdiabaticTheoremAndBerryPhase/" rel="permalink">QM1+ Adiabatic theorem and Berry phase
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.
 
 </p>
   </article>
@@ -489,7 +530,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/updates/RecentUpdate/" rel="permalink">Recent Updates
+        <a href="/qm1+/QM1-WignerFunction/" rel="permalink">QM1+ Wigner functions
 </a>
       
     </h2>
@@ -507,14 +548,15 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This post will announce some important updates regarding our sites, along with upcoming work plans, including holidays and scheduled visits.
+    <p class="archive__item-excerpt" itemprop="description">In this post, we discuss Wigner functions and Weyl transforms.
+
 </p>
   </article>
 </div>
@@ -530,7 +572,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/math/Important-Integrals/" rel="permalink">Integral Table - Trigonometry
+        <a href="/qm1+/QM1-RabiProblem/" rel="permalink">QM1+ Rabi problem
 </a>
       
     </h2>
@@ -548,14 +590,14 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          3 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Here we summarize some useful intergation results in assignments.
+    <p class="archive__item-excerpt" itemprop="description">In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:
 
 </p>
   </article>
@@ -590,7 +632,9 @@
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
 
@@ -608,7 +652,8 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">A Personal Page</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

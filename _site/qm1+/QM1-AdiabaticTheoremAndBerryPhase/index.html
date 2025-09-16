@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>积分表 - Gauss积分 - 来去之间</title>
-<meta name="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
+<!-- begin _includes/seo.html --><title>QM1+ Adiabatic theorem and Berry phase - 来去之间</title>
+<meta name="description" content="In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.">
 
 
   <meta name="author" content="来去之间">
@@ -23,26 +23,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="来去之间">
-<meta property="og:title" content="积分表 - Gauss积分">
-<meta property="og:url" content="http://localhost:4000/math/Important-Integrals-2/">
+<meta property="og:title" content="QM1+ Adiabatic theorem and Berry phase">
+<meta property="og:url" content="http://localhost:4000/qm1+/QM1-AdiabaticTheoremAndBerryPhase/">
 
 
-  <meta property="og:description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-10-07T19:06:00+11:00">
+  <meta property="og:description" content="In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/math/Important-Integrals-2/">
+
+  <meta property="article:published_time" content="2024-10-12T00:06:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/qm1+/QM1-AdiabaticTheoremAndBerryPhase/">
 
 
 
@@ -276,16 +276,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="积分表 - Gauss积分">
-    <meta itemprop="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
-    <meta itemprop="datePublished" content="2024-10-07T19:06:00+11:00">
+    <meta itemprop="headline" content="QM1+ Adiabatic theorem and Berry phase">
+    <meta itemprop="description" content="In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.">
+    <meta itemprop="datePublished" content="2024-10-12T00:06:00+11:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/math/Important-Integrals-2/" itemprop="url">积分表 - Gauss积分
+            <a href="http://localhost:4000/qm1+/QM1-AdiabaticTheoremAndBerryPhase/" itemprop="url">QM1+ Adiabatic theorem and Berry phase
 </a>
           </h1>
           
@@ -302,7 +302,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -314,31 +314,109 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
+        <p>In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
+<p>The first topic is called the adiabatic approximation, we consider a Hamiltonian depend on a vector parameter \(\boldsymbol{\zeta}(t)\) which trace a closed llop in the parameter space. The Hamiltonian will read:
+\(\begin{equation}
+  \imath \hbar \dv{}{t}|\psi;t\rangle=\hat{H}[\boldsymbol{\zeta}(t)]|\psi;t\rangle
+\end{equation}\)
+The eigenvalue equation of the Hamiltonian is:
+\(\begin{equation}
+  \hat{H}[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle=E_n[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle
+\end{equation}\)
+where \(\ket{n[\boldsymbol{\zeta}(t)]}\) is an instantaneous eigenstate of the Hamiltonian. Now, consider we have a general state at \(t=0\):
+\(\begin{equation}
+  \ket{\psi;0} = \sum_n c_n(0) \ket{n[\boldsymbol{\zeta}(0)]}
+\end{equation}\)
+Now, we consider the time evolution of this state:
+\(\begin{equation}
+  \ket{\psi;t} = \sum_{n} \psi_n(t) \exp(\frac{i}{\hbar}\phi_n^{(d)}(t)) \ket{n[\boldsymbol{\zeta}(t)]}
+\end{equation}\)
+where
+\(\begin{equation}
+  \phi_n^{(d)}(t) = \int_0^t E_n[\boldsymbol{\zeta}(t')] \dd{t'}
+\end{equation}\)
+is the dynamical phase for a time-dependent system. The equation can be expressed as:
+\(\begin{equation}
+  \dv{}{t} \phi_n^{(d)}(t) = E_n[\boldsymbol{\zeta}(t')]
+\end{equation}\)
+Now we can take the derivative of the general state \(\ket{\psi;t}\):</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
+<p>\(\begin{equation}
+\begin{aligned}
+  &amp;i\hbar\dv{}{t} \ket{\psi;t} \\
+  =&amp; i\hbar \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} }+ \sum_n E_n c_n \exp(-i\phi_n^{(d)})
+\end{aligned}
+\end{equation}\)
+From the definitions of the states, we can derive:
+\(\begin{equation}
+  H[\boldsymbol{\zeta}(t)] \ket{\psi;t} = \sum_n E_n \psi_n \exp(-i\phi_n^{(d)})\ket{n}
+\end{equation}\)
+Combined with the previous results:
+\(\begin{equation}
+  \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} } = 0
+\end{equation}\)
+Project another state \(\ket{m}\) onto it:
+\(\begin{equation}
+  \dv{c_m}{t} = -\mel**{m}{\dv{}{t}}{m} - \sum_{n\neq m} \exp(i(\phi_n^{(d)}-\phi_m^{(d)})) \mel**{m}{\dv{}{t}}{n} c_n
+\end{equation}\)
+<em>Note that we just igonore the \(t\) dependence for space!</em> Even the system begins in an initial state given by a single energy eigenstate, all the other energy eigenstates come into play!</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
+<p>Now we place the \(\boldsymbol{\zeta}(t)\) dependence on, and write down the full expression:
+\(\begin{equation}
+\begin{aligned}
+  M_{m,n} =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\dv{}{t}}{n[\boldsymbol{\zeta}(t)]} \\
+  =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\nabla_{\boldsymbol{\zeta}}}{n[\boldsymbol{\zeta}(t)]} \dv{\boldsymbol{\zeta(t)}}{t}
+\end{aligned}
+\end{equation}\)
+If the parameter do not strongly depende on the time, then \(c_n(t)\) will also change marginally, which means that if the system is initially in the energy eigenstate \(\ket{j[\boldsymbol{\zeta}(t_0)]}\), then the system will reamins in the same intantneous energy eigenstate.</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
+<p>In the mean time, the phase factor will make the second term smaller, and we throw it out under <strong>adiabatic approximation</strong>. Now we have:
+\(\begin{equation}
+  \dv{c_m(t)}{t} = -\mel**{m[\boldsymbol{\zeta(t)}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta(t)}]} \dv{\boldsymbol{\zeta(t)}}{t} c_m(t)
+\end{equation}\)
+In this case, Berry told us that after a <strong>cycle</strong> in the parameter space, the system will gain a geometric phase factor, which is different from the dynamical phase!</p>
+<blockquote>
+  <p>Geometric phase = The geometry of the parameter space!</p>
+</blockquote>
 
-\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
-
-\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
-
-\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
-
-<p>双阶乘的定义如下:</p>
-
-\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
-
-<p>Gamma函数的定义如下:</p>
-
-\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
-
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>
+<p>The starting point is to realize that:
+\(\begin{equation}
+  \overline{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} + \mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]} = 0
+\end{equation}\)
+Remember that \(c+\overline{c}\)=real part, we conclude that:
+\(\begin{equation}
+  2\Re\Bqty{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} = 0 
+\end{equation}\)
+\(\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}\) is purely imagniary! Then we can integrate the equation:
+\(\begin{equation}
+  \dv{c_m(t)}{t} = -\mel**{m[\boldsymbol{\zeta(t)}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta(t)}]} \dv{\boldsymbol{\zeta(t)}}{t} c_m(t)
+\end{equation}\)
+which is:
+\(\begin{equation}
+  c_m(t) = \exp(\frac{i}{\hbar}\phi_m^{(g)}) c_m(0)
+\end{equation}\)
+where:
+\(\begin{equation}
+  \phi_m^{(g)}(t) = -\int_{\boldsymbol{\zeta}(0)}^{\boldsymbol{\zeta}(t)} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
+\end{equation}\)
+is just the geometric phase. For a closed loop, we have
+\(\begin{equation}
+  \phi_m^{(g)}(t) = -\oint_{\text{C}} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
+\end{equation}\)
+The Berry connection is defined as:
+\(\begin{equation}
+  \mathcal{A}_m[\boldsymbol{\zeta}] = i \mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']} = -\Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}}
+\end{equation}\)
+The Berry curvature is defined as:
+\(\begin{equation}
+  \Omega_{m; \mu,\nu}[\boldsymbol{\zeta}] = \pdv{}{\zeta^\mu} \mathcal{A}_{m; \nu}[\boldsymbol{\zeta}] - \pdv{}{\zeta^\nu} \mathcal{A}_{m; \mu}[\boldsymbol{\zeta}]
+\end{equation}\)
+If the parameter is 3D, we have:
+\(\begin{equation}
+  \boldsymbol{\Omega}_{m}[\boldsymbol{\zeta}]=\nabla_{\boldsymbol{\zeta}}\times \mathcal{A}_m[\boldsymbol{\zeta}]
+\end{equation}\)
+For a detailed exmple, readers are recommended to have a look at <a href="https://arxiv.org/pdf/1606.06687">Prof. David Tong’s note on QHE</a>. We will discuss its energy spectrum version and its usefullness in solid state series, where the parameter space can be the reciprocal space, a nature parameter space for Bloch electrons.</p>
 
 
         
@@ -347,21 +425,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#integral-table" class="page__taxonomy-item p-category" rel="tag">Integral Table</a>
-    
-    </span>
-  </p>
-
-
 
 
   
@@ -373,7 +436,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#math" class="page__taxonomy-item p-category" rel="tag">Math</a>
+      <a href="/categories/#qm1" class="page__taxonomy-item p-category" rel="tag">QM1+</a>
     
     </span>
   </p>
@@ -381,26 +444,26 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-07T19:06:00+11:00">October 7, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-12T00:06:00+11:00">October 12, 2024</time></p>
 
       </footer>
 
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=QM1%2B+Adiabatic+theorem+and+Berry+phase%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-AdiabaticTheoremAndBerryPhase%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-AdiabaticTheoremAndBerryPhase%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/math/Important-Integrals-2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/qm1+/QM1-AdiabaticTheoremAndBerryPhase/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=QM1%2B+Adiabatic+theorem+and+Berry+phase%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-AdiabaticTheoremAndBerryPhase%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -409,10 +472,10 @@
       
   <nav class="pagination">
     
-      <a href="/updates/RecentUpdate/" class="pagination--pager" title="Recent Updates">Previous</a>
+      <a href="/qm1+/QM1-PlaneWavesAndFourier/" class="pagination--pager" title="QM1+ Plane waves and Fourier">Previous</a>
     
     
-      <a href="/qm1/QM1-Commutation-Relations/" class="pagination--pager" title="QM1 常见对易关系的推导和结果">Next</a>
+      <a href="/qm1+/QM1-LindbladianEquation/" class="pagination--pager" title="QM1+ Lindbladian quantum kinetic equations">Next</a>
     
   </nav>
 
@@ -480,48 +543,6 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/qm1+/QM1-AdiabaticTheoremAndBerryPhase/" rel="permalink">QM1+ Adiabatic theorem and Berry phase
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">In 1984, Berry pointed out a feature in quantum mechanics that has been studied in the past 60 years. We will discuss this features in the post.
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
         <a href="/qm1+/QM1-PlaneWavesAndFourier/" rel="permalink">QM1+ Plane waves and Fourier
 </a>
       
@@ -540,7 +561,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -588,6 +609,48 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">In this post, we discuss Wigner functions and Weyl transforms.
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/qm1+/QM1-RabiProblem/" rel="permalink">QM1+ Rabi problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:
 
 </p>
   </article>

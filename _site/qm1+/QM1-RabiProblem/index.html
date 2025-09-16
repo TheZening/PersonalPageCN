@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>积分表 - Gauss积分 - 来去之间</title>
-<meta name="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
+<!-- begin _includes/seo.html --><title>QM1+ Rabi problem - 来去之间</title>
+<meta name="description" content="In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:">
 
 
   <meta name="author" content="来去之间">
@@ -23,26 +23,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="来去之间">
-<meta property="og:title" content="积分表 - Gauss积分">
-<meta property="og:url" content="http://localhost:4000/math/Important-Integrals-2/">
+<meta property="og:title" content="QM1+ Rabi problem">
+<meta property="og:url" content="http://localhost:4000/qm1+/QM1-RabiProblem/">
 
 
-  <meta property="og:description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-10-07T19:06:00+11:00">
+  <meta property="og:description" content="In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/math/Important-Integrals-2/">
+
+  <meta property="article:published_time" content="2024-10-10T00:06:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/qm1+/QM1-RabiProblem/">
 
 
 
@@ -276,16 +276,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="积分表 - Gauss积分">
-    <meta itemprop="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
-    <meta itemprop="datePublished" content="2024-10-07T19:06:00+11:00">
+    <meta itemprop="headline" content="QM1+ Rabi problem">
+    <meta itemprop="description" content="In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:">
+    <meta itemprop="datePublished" content="2024-10-10T00:06:00+11:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/math/Important-Integrals-2/" itemprop="url">积分表 - Gauss积分
+            <a href="http://localhost:4000/qm1+/QM1-RabiProblem/" itemprop="url">QM1+ Rabi problem
 </a>
           </h1>
           
@@ -302,7 +302,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          3 minute read
         
       </span>
     
@@ -314,31 +314,142 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
+        <p>In this post, we discuss the Rabi oscillations by considering a minimal 2-level system, which is described by the following Hamiltonian:</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
+\[\begin{equation}
+  H = \mqty[E_1 &amp; W_{1,2} \\ W_{2,1} &amp; E_2]
+\end{equation}\]
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
+<blockquote>
+  <p>The first level has energy \(E_1\) while the second level has energy \(E_2\), the coupling term \(W_{1,2}\) means this off-diagonal term will mix the two levels, so we call it <strong>coupling</strong></p>
+</blockquote>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
+<blockquote>
+  <p>Reminder, this \(H\) is written in the basis of \((1,0)\) and \((0,1)\), we will call them \(\ket{+}\) and \(\ket{-}\).</p>
+</blockquote>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
+<p>We first evaluate the eigenvalues of this two level system, which is quite easy:</p>
 
-\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
+<p>\(\begin{align}
+  E_\pm = \frac{\Tr(H) \pm \sqrt{(\Tr(H))^2-4 \det(H)}}{2}
+\end{align}\)
+We have</p>
 
-\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
+<p>\(\begin{equation}
+  E_{ \pm}=\frac{1}{2}\left[E_1+E_2 \pm \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{12}}^2}\right]
+\end{equation}\)
+Then we define the following terms:</p>
 
-\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
+<p>\(\begin{equation}
+  \tan \theta=\frac{2\norm{W_{12}}}{E_1-E_2} \quad e^{i \phi}=\frac{W_{21}}{2\norm{W_{12}}}
+\end{equation}\)
+We can check the following eigen-pairs:</p>
 
-<p>双阶乘的定义如下:</p>
+<p>\(\begin{align}
+  &amp; E_+ \, \text{and} \,  \boldsymbol{v}_+ = (\cos\theta/2, e^{i\phi}\sin\theta/2)^T \\
+  &amp; E_- \, \text{and} \, \boldsymbol{v}_- = (\sin\theta/2, -e^{i\phi}\cos\theta/2)^T
+\end{align}\)
+We can check our original basis can be expressed as</p>
 
-\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
+<p>\(\begin{align}
+  \ket{+} =&amp; \cos \frac{\theta}{2}\left|v_{+}\right\rangle+\sin \frac{\theta}{2}\left|v_{-}\right\rangle \\
+  \ket{-} =&amp; \left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi} \\
+\end{align}\)
+We put it here and do not use it for now. Instead, we consider a general state in \(\boldsymbol{v}\) basis:</p>
 
-<p>Gamma函数的定义如下:</p>
+<p>\(\begin{equation}
+  |\psi;t\rangle=c_{+} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle+c_{-} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle
+\end{equation}\)
+Assuming our system starts from \(\ket{-}\):</p>
 
-\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
+<p>\(\begin{equation}
+  |\psi;0\rangle=\left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi}
+\end{equation}\)
+Now we apply the time-evolution operator on it, which is easy in this basis since \(H\) is already diagonal!</p>
 
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>
+<p>\(\begin{equation}
+  |\psi(t)\rangle=\left(\sin \frac{\theta}{2} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle-\cos \frac{\theta}{2} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle\right) e^{-i \phi}
+\end{equation}\)
+What is the probability amplitude of being in state \(\ket{-}\)?</p>
+
+<p>\(\begin{equation}
+  \braket{+}{\psi;t}=\sin \frac{\theta}{2} \cos \frac{\theta}{2} e^{-i \phi}\left(e^{-i E_{+} t / \hbar}-e^{-i E_{-} t / \hbar}\right)
+\end{equation}\)</p>
+<blockquote>
+  <p>So, if we start from \(\ket{-}\), the probability of have \(\ket{+}\) is the following.</p>
+</blockquote>
+
+<p>\(\begin{equation}
+  P(\ket{-} \to \ket{+})=\sin ^2 \theta \sin ^2\left(\frac{E_{+}-E_{-}}{2 \hbar} t\right)
+\end{equation}\)
+Now express this trigonometry in original matrix elements:</p>
+
+<p>\(\begin{equation}
+  \frac{4\norm{W_{1,2}}^2}{4\norm{W_{1,2}}^2+\left(E_1-E_2\right)^2} \sin ^2\left(\frac{t}{2 \hbar} \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{1,2}}^2}\right)
+\end{equation}\)
+Now we look at a problem in magnetic fields, consider a spin-1/2 particle in magnetic fields. The magnetic fields is composed of a stationary part \(\boldsymbol{B}\) and \(\boldsymbol{B_1}(t)\). The Hamiltonian will read:</p>
+
+<p>\(\begin{equation}
+  H=-\gamma \boldsymbol{S} \cdot\left(\boldsymbol{B}_0+\boldsymbol{B}_1(t)\right)
+\end{equation}\)
+Furthermore, we ask the magnetic fields to have the form:</p>
+
+<p>\(\begin{equation}
+  \boldsymbol{B}_0 = -\frac{\omega_0}{\gamma} \hat{z}
+\end{equation}\)
+and</p>
+
+<p>\(\begin{equation}
+  \boldsymbol{B}_1(t)=-\left(\omega_1 / \gamma\right)(\cos (\omega t) \hat{x}+\sin (\omega t) \hat{y})
+\end{equation}\)
+Then the matrix form is:</p>
+
+<p>\(\begin{equation}
+  H = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0]
+\end{equation}\)
+Consider an arbitrary initial state:</p>
+
+<p>\(\begin{equation}
+  |\psi(t)\rangle=c_{+}(t)|+\rangle+c_{-}(t)|-\rangle
+\end{equation}\)
+Its evoution is governed by Schördinger equation;</p>
+
+<p>\(\begin{equation}
+  i\hbar \dv{}{t} \mqty[ c_+ \\ c_-] = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0] \mqty[c_+ \\ c_-]
+\end{equation}\)
+No good, smart people think we should do this:</p>
+
+<p>\(\begin{equation}
+  c_{+}(t)=e^{-i \omega t / 2} \alpha_{+}(t) \quad c_{-}(t)=e^{i \omega t / 2} \alpha_{-}(t)
+\end{equation}\)
+Then we have:</p>
+
+<p>\(\begin{equation}
+  i\hbar \dv{}{t} \mqty[\alpha_+ \\ \alpha_-] = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)] \mqty[\alpha_+ \\ \alpha_-]
+\end{equation}\)
+A new Hamiltonian in the new coefficients???</p>
+
+<p>\(\begin{equation}
+  \tilde{H} = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)]
+\end{equation}\)
+Ok, let us disregard whatever we are considering now, we just look at this new matrix and the dynamics of \(\alpha\)! We can project this Hamiltonian onto our results for the 2-levels derived earlier.</p>
+
+<p>\(\begin{align}
+  &amp; E_1 \to \frac{\hbar}{2}\left(\omega_0-\omega\right) \\
+  &amp; E_2 \rightarrow-\frac{\hbar}{2}\left(\omega_0-\omega\right) \\
+  &amp; W_{21} \rightarrow \frac{\hbar}{2} \omega_1
+\end{align}\)
+Good, but we do a trick here, if we want to find the probability of a state initial at \(\ket{-}\) and after \(t\), it is in \(\ket{+}\), we have:</p>
+
+<p>\(\begin{equation}
+  \norm{\braket{+}{\psi;t}}^2 = \norm{c_+}^2 = \norm{\alpha_+}^2
+\end{equation}\)
+The phase term vanish in evaluating probabilities!!! So by evaluating the effective \(\tilde{H}\), we solve the original problem! The probability is</p>
+
+<p>\(\begin{equation}
+  \frac{\omega_1^2}{\left(\omega-\omega_0\right)^2+\omega_1^2} \sin ^2\left(\frac{t}{2} \sqrt{\left(\omega-\omega_0\right)^2+\omega_1^2}\right)
+\end{equation}\)
+This is again the Rabi oscillation formula!</p>
 
 
         
@@ -347,21 +458,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#integral-table" class="page__taxonomy-item p-category" rel="tag">Integral Table</a>
-    
-    </span>
-  </p>
-
-
 
 
   
@@ -373,7 +469,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#math" class="page__taxonomy-item p-category" rel="tag">Math</a>
+      <a href="/categories/#qm1" class="page__taxonomy-item p-category" rel="tag">QM1+</a>
     
     </span>
   </p>
@@ -381,26 +477,26 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-07T19:06:00+11:00">October 7, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-10-10T00:06:00+11:00">October 10, 2024</time></p>
 
       </footer>
 
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=QM1%2B+Rabi+problem%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-RabiProblem%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-RabiProblem%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/math/Important-Integrals-2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/qm1+/QM1-RabiProblem/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=QM1%2B+Rabi+problem%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2B%2FQM1-RabiProblem%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -409,10 +505,10 @@
       
   <nav class="pagination">
     
-      <a href="/updates/RecentUpdate/" class="pagination--pager" title="Recent Updates">Previous</a>
+      <a href="/qm1+/QM1-LarmourProblem/" class="pagination--pager" title="QM1+ Larmour问题">Previous</a>
     
     
-      <a href="/qm1/QM1-Commutation-Relations/" class="pagination--pager" title="QM1 常见对易关系的推导和结果">Next</a>
+      <a href="/qm1+/QM1-WignerFunction/" class="pagination--pager" title="QM1+ Wigner functions">Next</a>
     
   </nav>
 

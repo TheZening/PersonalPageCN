@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>积分表 - Gauss积分 - 来去之间</title>
-<meta name="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
+<!-- begin _includes/seo.html --><title>QM1 常见对易关系的推导和结果 - 来去之间</title>
+<meta name="description" content="这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:">
 
 
   <meta name="author" content="来去之间">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="来去之间">
-<meta property="og:title" content="积分表 - Gauss积分">
-<meta property="og:url" content="http://localhost:4000/math/Important-Integrals-2/">
+<meta property="og:title" content="QM1 常见对易关系的推导和结果">
+<meta property="og:url" content="http://localhost:4000/qm1/QM1-Commutation-Relations/">
 
 
-  <meta property="og:description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
+  <meta property="og:description" content="这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/math/Important-Integrals-2/">
+<link rel="canonical" href="http://localhost:4000/qm1/QM1-Commutation-Relations/">
 
 
 
@@ -276,8 +276,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="积分表 - Gauss积分">
-    <meta itemprop="description" content="有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…">
+    <meta itemprop="headline" content="QM1 常见对易关系的推导和结果">
+    <meta itemprop="description" content="这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:">
     <meta itemprop="datePublished" content="2024-10-07T19:06:00+11:00">
     
 
@@ -285,7 +285,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/math/Important-Integrals-2/" itemprop="url">积分表 - Gauss积分
+            <a href="http://localhost:4000/qm1/QM1-Commutation-Relations/" itemprop="url">QM1 常见对易关系的推导和结果
 </a>
           </h1>
           
@@ -314,31 +314,67 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
+        <p>这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
+\[\bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0\]
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
+<p>最重要的对易关系是位置和动量的对易关系:</p>
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
+\[\bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=\mathrm{i}\hbar\delta_{\alpha\beta}\]
 
-\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
+<p>简单介绍一下Levi-Civita符号:</p>
 
-\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
+\[\epsilon_{\alpha \beta \gamma}\]
 
-\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
+<p>正着来就是+1, 反着来就是-1:</p>
 
-\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
+\[\epsilon_{123}=\epsilon_{231}=\epsilon_{312}= 1 \quad \epsilon_{132}=\epsilon_{213}=\epsilon_{321}= -1\]
 
-<p>双阶乘的定义如下:</p>
+<p>一旦有指标重复了, 结果就是0.
+接下来, 我们讨论角动量算符:</p>
 
-\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
+\[\left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma\]
 
-<p>Gamma函数的定义如下:</p>
+\[\left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma\]
 
-\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
+\[\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma\]
 
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>
+<p>为了证明这些关系, 我们还需要以下两个公式:</p>
+
+\[\epsilon_{\alpha\beta\gamma}\epsilon_{\rho\tau\gamma}=\delta_{\alpha\rho}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\rho}\]
+
+\[\left[\hat{A}\hat{B},\,\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right] + \left[\hat{A},\hat{C}\right]\hat{B}\]
+
+\[\left[\hat{A},\,\hat{B}\hat{C}\right]=\left[\hat{A},\,\hat{B}\right]\hat{C} + \hat{B}\left[\hat{A},\,\hat{C}\right]\]
+
+<p>先证明第一个:</p>
+
+\[\begin{aligned}
+    \bqty{\hat{L}_\alpha,\,\hat{x}_\beta} =&amp; \bqty{\epsilon_{\alpha\mu\nu}\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} = \epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} \\
+  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+\epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu,\,\hat{x}_\beta}\hat{p}_\nu \\
+  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+0\\
+  =&amp; \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-\mathrm{i}\hbar\delta_{\nu\beta}) \\
+  =&amp; \epsilon_{\alpha\beta\mu} \mathrm{i} \hbar \hat{x}_\mu
+\end{aligned}\]
+
+<p>第二个证明方法类似.
+现在看看第三个</p>
+
+\[\begin{aligned}
+\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=&amp;\left[\epsilon_{\alpha \mu \nu} \hat{x}_\mu \hat{p}_\nu, \epsilon_{\beta \lambda \tau} \hat{x}_\lambda \hat{p}_\tau\right]\\
+=&amp; \varepsilon_{\alpha \mu \nu}\varepsilon_{\beta \lambda \tau}\left[\hat{x}_\mu \hat{p}_v, \hat{x}_\lambda \hat{p}_\tau\right]\\
+=&amp; \text{Expand everything}\\
+=&amp; \mathrm{i}\hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
+=&amp; \mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
+=&amp; \mathrm{i}\hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
+\end{aligned}\]
+
+<p>关键在于要认识到指标\(\mu\)和\(\nu\)是任意的, 当\(\alpha=\beta\)时, 结果为0.
+此外，我们可以利用\(\delta\)来简化表达式.
+你可以展开右边作为一个简单的检查.
+自旋的对易关系也是一样的:</p>
+
+\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]
 
 
         
@@ -347,21 +383,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#integral-table" class="page__taxonomy-item p-category" rel="tag">Integral Table</a>
-    
-    </span>
-  </p>
-
-
 
 
   
@@ -373,7 +394,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#math" class="page__taxonomy-item p-category" rel="tag">Math</a>
+      <a href="/categories/#qm1" class="page__taxonomy-item p-category" rel="tag">QM1</a>
     
     </span>
   </p>
@@ -388,19 +409,19 @@
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=QM1+%E5%B8%B8%E8%A7%81%E5%AF%B9%E6%98%93%E5%85%B3%E7%B3%BB%E7%9A%84%E6%8E%A8%E5%AF%BC%E5%92%8C%E7%BB%93%E6%9E%9C%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2FQM1-Commutation-Relations%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fqm1%2FQM1-Commutation-Relations%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/math/Important-Integrals-2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/qm1/QM1-Commutation-Relations/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=%E7%A7%AF%E5%88%86%E8%A1%A8+-+Gauss%E7%A7%AF%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2FImportant-Integrals-2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=QM1+%E5%B8%B8%E8%A7%81%E5%AF%B9%E6%98%93%E5%85%B3%E7%B3%BB%E7%9A%84%E6%8E%A8%E5%AF%BC%E5%92%8C%E7%BB%93%E6%9E%9C%20http%3A%2F%2Flocalhost%3A4000%2Fqm1%2FQM1-Commutation-Relations%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -409,10 +430,10 @@
       
   <nav class="pagination">
     
-      <a href="/updates/RecentUpdate/" class="pagination--pager" title="Recent Updates">Previous</a>
+      <a href="/math/Important-Integrals-2/" class="pagination--pager" title="积分表 - Gauss积分">Previous</a>
     
     
-      <a href="/qm1/QM1-Commutation-Relations/" class="pagination--pager" title="QM1 常见对易关系的推导和结果">Next</a>
+      <a href="/qm1+/QM1-LarmourProblem/" class="pagination--pager" title="QM1+ Larmour问题">Next</a>
     
   </nav>
 
