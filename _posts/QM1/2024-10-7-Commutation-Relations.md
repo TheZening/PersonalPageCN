@@ -1,35 +1,36 @@
 ---
-title: "Commutation Relations"
+title: "常见对易关系的推导和结果"
 date: 2024-10-07T08:06:00
 categories:
   - QM1+
 ---
 
-Here we discuss some fundamental commutation relations useful in assignments. We start from the baiscs:
+这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:
 
 $$
   \bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0
 $$
 
-The most important commutation relations:
+最重要的对易关系是位置和动量的对易关系:
 
 $$
   \bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=i\hbar\delta_{\alpha\beta}
 $$
 
-Before we preceed further, we introduce the Levi-Civita tensor:
+简单介绍一下Levi-Civita符号:
 
 $$
 \epsilon_{\alpha \beta \gamma}
 $$
 
-For example:
+正着来就是+1, 反着来就是-1:
 
 $$
   \epsilon_{123}=\epsilon_{231}=\epsilon_{312}= 1 \quad \epsilon_{132}=\epsilon_{213}=\epsilon_{321}= -1
 $$
 
-If there is any repeated index, the Levi-Civita tensor will be 0. Next, we discuss the angular momentum operators:
+一旦有指标重复了, 结果就是0.
+接下来, 我们讨论角动量算符:
 
 $$
   \left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma
@@ -43,7 +44,7 @@ $$
   \left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=i\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma
 $$
 
-To prove these relations, we need to use the following relations:
+为了证明这些关系, 我们还需要以下两个公式:
 
 $$
   \epsilon_{\alpha\beta\gamma}\epsilon_{\rho\tau\gamma}=\delta_{\alpha\rho}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\rho}
@@ -57,7 +58,7 @@ $$
   \left[\hat{A},\,\hat{B}\hat{C}\right]=\left[\hat{A},\,\hat{B}\right]\hat{C} + \hat{B}\left[\hat{A},\,\hat{C}\right]
 $$
 
-Noe we prove the first one:
+先证明第一个:
 
 $$
 \begin{aligned}
@@ -69,7 +70,8 @@ $$
 \end{aligned}
 $$
 
-The second commutation relation can be proved in a smilar way. For the third one, we have:
+第二个证明方法类似.
+现在看看第三个
 
 $$
 \begin{aligned}
@@ -82,7 +84,11 @@ $$
 \end{aligned}
 $$
 
-The key is realizing that the index $$\mu$$ and $$\nu$$ are arbitary, when $$\alpha=\beta$$, the result will be 0. Furthermore, we can simplify the expression using the $$\delta$$. You can expand the right hand side as an easy test. The spin commutation relations are the same:
+关键在于要认识到指标 $\mu$ 和 $\nu$ 是任意的, 当 $\alpha=\beta$ 时, 结果为 0.
+此外，我们可以利用 $\delta$ 来简化表达式.
+你可以展开右边作为一个简单的检查.
+自旋的对易关系也是一样的:
+
 
 $$
   \left[\hat{S}_\alpha, \hat{S}_\beta\right]=i \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma
