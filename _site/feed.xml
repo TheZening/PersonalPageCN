@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:48:28+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:52:16+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
-<p>2020-Aug-25: 感谢才华横溢、洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的研究, 现在发表在 Nano Letter 上了.<br />
+<p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
 
-<p>2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的新文章, 现在发表在 Physics Review B上了.<br />
+<p>2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了.<br />
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201">Theory of hole-spin qubits in strained germanium quantum dots</a></p>
 
-<p>2021-Apr-01: 我们关于二维空穴系统的新文章, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
+<p>2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
 <a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
 
 <p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了,了.<br />
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
 
-<p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的新文章, 现在发表在 Nature Communications.<br />
+<p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.<br />
 <a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
 
-<p>2023-Dec-04: 我们组员 Abhik 在 Physical Review B 上发表了关于平面Ge量子点空穴量子比特的系统研究.
+<p>2023-Dec-04: 我们在关于平面Ge量子点空穴量子比特的理论研究, 现在发表在 Physics Review B上了.
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
 
-<p>2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的研究, 现在发表在 Physical Review B上了.<br />
+<p>2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的理论研究, 现在发表在 Physical Review B上了.<br />
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427">Electrical operation of hole spin qubits in planar MOS silicon quantum dots</a></p>
 
-<p>2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在硅系统中展示了单重态-三重态空穴量子比特, 这项成果现在发表在 Nature Communications上了.<br />
+<p>2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在Si系统中展示了singlet-triplet的空穴量子比特, 这项成果现在发表在 Nature Communications上了.<br />
 <a href="https://www.nature.com/articles/s41467-024-51902-9">A singlet-triplet hole-spin qubit in MOS silicon</a></p>
 
-<p>2024-Apr-02: 我们在Ge空穴自旋量子比特体系中关于\(1/f\)噪音的研究, 现在发表在 Physical Review B上了.
+<p>2024-Apr-02: 我们在Ge空穴自旋量子比特体系中关于\(1/f\)噪音的理论研究, 现在发表在 Physical Review B上了.
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403">Dephasing of planar Ge hole spin qubits due to 1/f charge noise</a></p>
 
 <p>2024-Aug-1: 离开了UNSW, 这真是个令人伤心的地方. 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!</p>
 
-<p>2024-Aug-15: 我与好朋友Xiangjun合作关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的研究, 现在发表在 IEEE Transaction on quantum engineering 上了, 格外值得注意地, Xiangjun作为一名本科生主导了本次项目, 未来可期!
+<p>2024-Aug-15: 我们关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的理论研究, 现在发表在 IEEE Transaction on quantum engineering 上了.
 <a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
 
-<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授! 期待未来的合作! 天津大学风景真不错, 待遇尚可, 足见对于青年人才的支持.</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
+<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\):
 \(\begin{equation}
   H(t) = H_S + H_B + \alpha H_{SB}
