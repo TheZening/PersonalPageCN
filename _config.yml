@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 来去之间的抽象物理空间
+title: 来去之间
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   欢迎来访, 祝你一切顺利!
@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "来去之间"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "来是Come去是Go, 来去之间Come and Go!"
+  bio    : "来去之际, 举手投足, 皆是风景."
   links:
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
