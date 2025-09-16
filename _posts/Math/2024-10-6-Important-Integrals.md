@@ -1,5 +1,5 @@
 ---
-title: "Integral Table - Trigonometry"
+title: "积分表 - 三角函数积分"
 date: 2024-10-06T08:06:00
 categories:
   - Math
