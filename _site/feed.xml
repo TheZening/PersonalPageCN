@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T16:43:58+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T18:35:25+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -327,8 +327,19 @@ Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中�
 虽然都是Adiabatic这个词, 但是我们这里强调的是:</p>
 
 <blockquote>
-  <p>(经典力学说法) 当外界参数变化非常缓慢时, 系统慢到来不及激发出额外效应. <br />
-(量子力学说法) 当系统的Hamiltonian缓慢变化时, 系统始终保持在它的瞬时本征态中, 不会跳到别的能级.</p>
+  <p><strong>(经典力学说法)</strong><br />
+当外界参数变化非常缓慢时, 系统慢到来不及激发出额外效应”, 存在绝热不变量保持不变.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>(量子力学说法, 非简并)</strong><br />
+当系统的 Hamiltonian 缓慢变化时, 若某个本征值 \(E_n(t)\) 与其他本征值 \(E_m(t)\) 之间有能隙, 且系统初始时刻处于本征态\(\ket{n(0)}\), 那么在任意时刻\(t\)系统仍然会在瞬时本征态\(\ket{n(t)}\)上, 只是会获得相位因子: 动力学相位 + Berry 相位.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>(量子力学说法, 简并版本)</strong><br />
+当系统的 Hamiltonian 缓慢变化时, 若某个简并子空间\(D_n(t)\)与其他简并子空间\(D_m(t)\)之间有能隙, 且系统初始时刻在\(D_n(0)\), 那么在任意时刻\(t\)系统仍然会在瞬时简并子空间\(D_n(t)\)中, 只是会获得一个Unitary矩阵的变换, 而不能保证保持在某个固定的本征态上.
+这对应于非阿贝尔Berry相位(Wilczek–Zee phase).</p>
 </blockquote>
 
 <p>举一个生活中的例子, 你坐在汽车上, 汽车缓慢加速, 你会感觉不到任何变化, 你仍然感觉自己静止在汽车上.
@@ -356,7 +367,164 @@ Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中�
 <p>但是如果势能\(V(x)\)是缓慢变化的, 我们的波函数会怎么反应.
 <img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/slowchange.gif" alt="Slow Change" />
 可以看到波函数始终保持在它的瞬时本征态中, 只是随着势能的变化, 波函数也缓慢变化.
-这就像你坐在一辆缓慢加速的汽车上, 你感觉不到任何变化.</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
+这就像你坐在一辆缓慢加速的汽车上, 你感觉不到任何变化.</p>
+
+<hr />
+
+<h2 id="量子绝热定理的数学证明">量子绝热定理的数学证明</h2>
+
+<p>我们先考虑一个非简并的Hamiltonian\(H(\lambda)\), 其中\(\lambda\)是一个外界参数, 例如磁场强度, 势阱深度等, 而且\(\lambda\)是时间的函数\(\lambda(t)\).
+假设在任意时刻\(t\), \(H(\lambda(t))\)的本征值和本征态分别为\(E_n(t)\)和\(\ket{n(t)}\), 满足:</p>
+
+\[\begin{equation}
+H(\lambda(t))\ket{n(t)} = E_n(t)\ket{n(t)}
+\end{equation}\]
+
+<p>注意, 这只是在\(t\)时刻的瞬时本征值和本征态, 它们都是时间的函数.
+\(\ket{n(t)}\)并不是系统的真实态, 也不是Schrödinger方程的解, 他就是照相机在\(t\)时刻拍下的系统的本征态.
+而且不同时刻的\(\ket{n(t)}\)之间没有任何关系, 你只能在一张照片内谈论正交:</p>
+
+\[\begin{equation}
+  \braket{n(t)}{m(t)} = \delta_{nm}, \quad \braket{n(t)}{n(t')} \neq 1, \quad t \neq t'
+\end{equation}\]
+
+<p>并且假设\(E_n(t)\)与其他本征值\(E_m(t)\)之间有能隙, 即\(E_n(t) \neq E_m(t)\), \(\forall m \neq n\), \(\forall t\).
+系统的状态\(\ket{\psi(t)}\)满足薛定谔方程:</p>
+
+\[\begin{equation}
+\mathrm{i}\,\hbar \pdv{}{t}\ket{\psi(t)} = H(\lambda(t))\ket{\psi(t)}
+\end{equation}\]
+
+<p>推导上的一个技巧来了, 我们对于满足Schrödinger方程的\(\ket{\psi(t)}\), 在任意时刻\(t\)都可以将其展开在瞬时本征态\(\ket{n(t)}\)上:</p>
+
+\[\begin{equation}
+\ket{\psi(t)} = \sum_n c_n(t) \mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\int_0^t E_n(t')\,\dd{t'}} \ket{n(t)}
+\end{equation}\]
+
+<p>这里额外加了一个相位:</p>
+
+\[\begin{equation}
+\theta_n(t) = -\frac{1}{\hbar}\int_0^t E_n(t')\,\dd{t'} \Rightarrow \mathrm{i}\,\dot{\theta_m}(t) = -\frac{\mathrm{i}}{\hbar}E_m(t)
+\end{equation}\]
+
+<p>我们当然可以把那个相位因子并到\(c_n(t)\)里, 但是这样会出现一个非常简单的化简, 等下就能看到.
+将上式代入Schrödinger方程, 左边:</p>
+
+\[\begin{align}
+\sum_n \quad &amp; \mathrm{i}\,\hbar \dot{c}_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)} + c_n(t) E_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)} + \\
+&amp; \mathrm{i}\,\hbar c_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \pdv{}{t}\ket{n(t)} 
+\end{align}\]
+
+<p>右边:
+\(\begin{equation}
+\sum_n c_n(t) E_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)}
+\end{equation}\)</p>
+
+<p>左右能消掉(因为我们之前定义的\(\theta_n(t)\)就是为了消掉这个项), 得到:</p>
+
+\[\begin{equation}
+\sum_n \left( \mathrm{i}\,\hbar \dot{c}_n(t) \ket{n(t)} + \mathrm{i}\,\hbar c_n(t) \pdv{}{t}\ket{n(t)} \right) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
+\end{equation}\]
+
+<p>我们左乘\(\bra{m(t)}\), 得到:</p>
+
+\[\begin{equation}
+\sum_n \dot{c}_n(t) \braket{m(t)}{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} + c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
+\end{equation}\]
+
+<p>瞬时本征态确实是正交的, 所以我们左边有\(\braket{m(t)}{n(t)} = \delta_{mn}\), 得到:</p>
+
+\[\begin{equation}
+\dot{c}_m(t) \mathrm{e}^{\mathrm{i}\,\theta_m(t)} + \sum_n c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
+\end{equation}\]
+
+<p>获得了一个关于\(c_n(t)\)的耦合微分方程组.</p>
+
+\[\begin{equation}
+\dot{c}_m(t) = -\sum_n c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
+\end{equation}\]
+
+<p>关于时间求导的那个部分要展开一下, 从瞬时本征态方程出发: \(H(t)\ket{n(t)} = E_n(t)\ket{n(t)}\), 对时间求导:</p>
+
+\[\begin{equation}
+\dot{H}(t)\ket{n(t)} + H(t)\pdv{}{t}\ket{n(t)} = \dot{E}_n(t)\ket{n(t)} + E_n(t)\pdv{}{t}\ket{n(t)}
+\end{equation}\]
+
+<p>左乘\(\bra{m(t)}\), 得到:</p>
+
+\[\begin{equation}
+\bra{m(t)}\dot{H}(t)\ket{n(t)} + E_m(t)\bra{m(t)}\pdv{}{t}\ket{n(t)} = \dot{E}_n(t)\braket{m(t)}{n(t)} + E_n(t)\bra{m(t)}\pdv{}{t}\ket{n(t)}
+\end{equation}\]
+
+<p>注意\(\braket{m(t)}{n(t)} = \delta_{mn}\), 所以当\(m \neq n\)时, 上式化简为:</p>
+
+\[\begin{equation}
+\bra{m(t)}\pdv{}{t}\ket{n(t)} = \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)}, \quad m \neq n
+\end{equation}\]
+
+<p>带回原来的式子:</p>
+
+\[\begin{equation}
+\dot{c}_m(t) = - c_m(t) \bra{m(t)}\pdv{}{t}\ket{m(t)} - \sum_{n \neq m} c_n(t) \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
+\end{equation}\]
+
+<p>这时候一个重要的物理意义就来了:</p>
+
+\[\begin{equation}
+\pdv{H}{t} = \pdv{H}{\lambda} \dv{\lambda}{t}
+\end{equation}\]
+
+<p>如果是绝热, 那么参数不怎么变化, 从而我们可以直接忽略掉\(\pdv{H}{t}\), 也就是忽略掉上式的第二项!</p>
+
+\[\begin{equation}
+\dot{c}_m(t) = - c_m(t) \bra{m(t)}\pdv{}{t}\ket{m(t)}
+\end{equation}\]
+
+<p>现在我们可以很好的求解这个微分方程:</p>
+
+\[\begin{equation}
+c_m(t) = c_m(0) \exp\left(-\int_0^t \bra{m(t')}\pdv{}{t'}\ket{m(t')}\,\dd{t'}\right)
+\end{equation}\]
+
+<p>也就是说哈, 如果我们一开始就在\(\ket{n(0)}\)上, 那么\(c_n(0) = 1\), \(c_{m \neq n}(0) = 0\), 那么在任意时刻\(t\), 我们都有:</p>
+
+\[\begin{equation}
+\ket{\psi(t)} = \exp\left(-\frac{\mathrm{i}}{\hbar}\int_0^t E_n(t')\,\dd{t'}\right) \exp\left(-\int_0^t \bra{n(t')}\pdv{}{t'}\ket{n(t')}\,\dd{t'}\right) \ket{n(t)}
+\end{equation}\]
+
+<p>就是说, 系统始终保持在瞬时本征态\(\ket{n(t)}\)上, 只是获得了两个相位因子: 动力学相位 + Berry 相位</p>
+
+\[\begin{equation}
+\gamma_n(t) = \mathrm{i}\,\int_0^t \bra{n(t')}\pdv{}{t'}\ket{n(t')}\,\dd{t'} \quad \theta_n(t) = -\frac{1}{\hbar}\int_0^t E_n(t')\,\dd{t'}
+\end{equation}\]
+
+<hr />
+
+<h2 id="多慢算绝热">多慢算绝热?</h2>
+
+<p>我们之前扔掉的那个项是:</p>
+
+\[\begin{equation}
+\sum_{n \neq m} c_n(t) \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
+\end{equation}\]
+
+<p>我们能注意到如下的量含有时间的单位, 若\(n\)不等于\(m\), 那这个量告诉了我们有多少的部分变化到了除了\(m\)以外的其他态上:</p>
+
+\[\begin{equation}
+\frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)}
+\end{equation}\]
+
+<p>他应该小于系统内部时间, 由能级差给出:</p>
+
+\[\begin{equation}
+\tau_{mn} = \frac{\hbar}{|E_n(t) - E_m(t)|}
+\end{equation}\]
+
+<p>从而我们得到:</p>
+
+\[\begin{equation}
+\left| \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{(E_n(t) - E_m(t))^2} \right| \ll 1, \quad \forall m \neq n, \quad \forall t
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
 为了简化, 我们一直用 1D 的例子.
 这里我们不会去深入讨论 Fourier 变换的性质.</p>
 
