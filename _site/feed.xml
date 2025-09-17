@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T01:52:43+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T16:35:13+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -9,7 +9,7 @@
 <p>2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
 <a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
 
-<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了,了.<br />
+<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了.<br />
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
 
 <p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.<br />
@@ -315,175 +315,38 @@
 <p>回到原绘景(略去细节), 就得到著名的 Lindblad 量子动力学方程:
 \(\begin{equation}
   \frac{d \rho_S}{d t} = -\frac{i}{\hbar} \left[H_S, \rho_S\right] + \gamma \left[S \rho_S S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S\right\}\right]
-\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征.
-本文就来讨论这个特征.</p>
+\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位.
+Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性.
+这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.</p>
 
 <hr />
 
-<h3 id="绝热近似-adiabatic-approximation">绝热近似 (Adiabatic Approximation)</h3>
+<h2 id="绝热定理">绝热定理</h2>
 
-<p>我们考虑一个依赖于向量参数 \(\boldsymbol{\zeta}(t)\) 的 Hamiltonian, 参数在参数空间里走一条闭合回路.
-Hamiltonian 写作:</p>
-
-\[\begin{equation}
-  \imath \hbar \dv{}{t}|\psi;t\rangle=\hat{H}[\boldsymbol{\zeta}(t)]|\psi;t\rangle
-\end{equation}\]
-
-<p>Hamiltonian 的本征方程是:</p>
-
-\[\begin{equation}
-  \hat{H}[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle=E_n[\boldsymbol{\zeta}(t)]|n[\boldsymbol{\zeta}(t)]\rangle
-\end{equation}\]
-
-<p>其中 \(\ket{n[\boldsymbol{\zeta}(t)]}\) 是瞬时本征态.
-假设 \(t=0\) 时系统的一般态是:</p>
-
-\[\begin{equation}
-  \ket{\psi;0} = \sum_n c_n(0) \ket{n[\boldsymbol{\zeta}(0)]}
-\end{equation}\]
-
-<p>时间演化写成:</p>
-
-\[\begin{equation}
-  \ket{\psi;t} = \sum_{n} \psi_n(t) \exp(\frac{i}{\hbar}\phi_n^{(d)}(t)) \ket{n[\boldsymbol{\zeta}(t)]}
-\end{equation}\]
-
-<p>其中</p>
-
-\[\begin{equation}
-  \phi_n^{(d)}(t) = \int_0^t E_n[\boldsymbol{\zeta}(t')] \dd{t'}
-\end{equation}\]
-
-<p>是随时间演化的 <strong>动力学相位</strong>.它的导数是:</p>
-
-\[\begin{equation}
-  \dv{}{t} \phi_n^{(d)}(t) = E_n[\boldsymbol{\zeta}(t')]
-\end{equation}\]
-
-<hr />
-
-<h3 id="推导过程">推导过程</h3>
-
-<p>把一般态对时间求导:</p>
-
-\[\begin{equation}
-\begin{aligned}
-  &amp;i\hbar\dv{}{t} \ket{\psi;t} \\
-  =&amp; i\hbar \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} }+ \sum_n E_n c_n \exp(-i\phi_n^{(d)})
-\end{aligned}
-\end{equation}\]
-
-<p>同时, 根据本征态定义:</p>
-
-\[\begin{equation}
-  H[\boldsymbol{\zeta}(t)] \ket{\psi;t} = \sum_n E_n \psi_n \exp(-i\phi_n^{(d)})\ket{n}
-\end{equation}\]
-
-<p>结合两式:</p>
-
-\[\begin{equation}
-  \sum_{n} e^{-i\phi_n^{(d)}} \bqty{\dv{c_n}{t} \ket{n} + c_n \dv{\ket{n}}{t} } = 0
-\end{equation}\]
-
-<p>再投影到另一态 \(\ket{m}\) 上:</p>
-
-\[\begin{equation}
-  \dv{c_m}{t} = -\mel**{m}{\dv{}{t}}{m} - \sum_{n\neq m} \exp(i(\phi_n^{(d)}-\phi_m^{(d)})) \mel**{m}{\dv{}{t}}{n} c_n
-\end{equation}\]
-
-<p>也就是说, 即使系统最初只在一个能量本征态里, 别的能量本征态也会逐渐出现.</p>
-
-<hr />
-
-<h3 id="参数依赖与绝热近似">参数依赖与绝热近似</h3>
-
-<p>把参数依赖写全:</p>
-
-\[\begin{equation}
-\begin{aligned}
-  M_{m,n} =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\dv{}{t}}{n[\boldsymbol{\zeta}(t)]} \\
-  =&amp; \mel**{m[\boldsymbol{\zeta}(t)]}{\nabla_{\boldsymbol{\zeta}}}{n[\boldsymbol{\zeta}(t)]} \dv{\boldsymbol{\zeta(t)}}{t}
-\end{aligned}
-\end{equation}\]
-
-<p>如果参数随时间变化得不剧烈, 那么 \(c_n(t)\) 变化也很小.
-于是如果系统最初在态 \(\ket{j[\boldsymbol{\zeta}(t_0)]}\), 它会保持在对应的瞬时本征态中.</p>
-
-<p>这就是 <strong>绝热近似</strong>.在这个条件下, 第二项可以忽略, 得到:</p>
-
-\[\begin{equation}
-  \dv{c_m(t)}{t} = -\mel**{m[\boldsymbol{\zeta(t)}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta(t)}]} \dv{\boldsymbol{\zeta(t)}}{t} c_m(t)
-\end{equation}\]
-
-<hr />
-
-<h3 id="berry-相位-geometric-phase">Berry 相位 (Geometric Phase)</h3>
-
-<p>Berry 告诉我们: 在参数空间走一圈闭合路径后, 系统会获得一个新的 <strong>几何相位</strong>, 它不同于动力学相位.</p>
+<p>首先要对于绝热这个词做出说明, 我们这里考虑的绝热过程不是热力学中系统与外界没有热量交换的意思.
+虽然都是Adiabatic这个词, 但是我们这里强调的是:</p>
 
 <blockquote>
-  <p>Geometric phase = 参数空间的几何特征！</p>
+  <p>(经典力学说法) 当外界参数变化非常缓慢时, 系统慢到来不及激发出额外效应. <br />
+(量子力学说法) 当系统的Hamiltonian缓慢变化时, 系统始终保持在它的瞬时本征态中, 不会跳到别的能级.</p>
 </blockquote>
 
-<p>先注意到:</p>
+<p>举一个生活中的例子, 你坐在汽车上, 汽车缓慢加速, 你会感觉不到任何变化, 你仍然感觉自己静止在汽车上.
+但是如果汽车突然加速, 你会有推背感.</p>
 
-\[\begin{equation}
-  \overline{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} + \mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]} = 0
-\end{equation}\]
+<p>再举一个例子, 你测量单摆的周期, 如果你考虑的是一个麻绳, 那么麻绳可能一年才会自动拉伸一点点, 你间隔1min测单摆周期是不会变化的.
+但是如果你的摆巨长无比, 一次振动就需要两年, 那么你每次测量的周期都会变化.</p>
 
-<p>于是有:</p>
-
-\[\begin{equation}
-  2\Re\Bqty{\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}} = 0 
-\end{equation}\]
-
-<p>所以 \(\mel**{m[\boldsymbol{\zeta}]}{\nabla_{\boldsymbol{\zeta}}}{m[\boldsymbol{\zeta}]}\) 是纯虚数.积分得到:</p>
-
-\[\begin{equation}
-  c_m(t) = \exp(\frac{i}{\hbar}\phi_m^{(g)}) c_m(0)
-\end{equation}\]
-
-<p>其中:</p>
-
-\[\begin{equation}
-  \phi_m^{(g)}(t) = -\int_{\boldsymbol{\zeta}(0)}^{\boldsymbol{\zeta}(t)} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
-\end{equation}\]
-
-<p>对于闭合回路:</p>
-
-\[\begin{equation}
-  \phi_m^{(g)}(t) = -\oint_{\text{C}} \Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}} \dd{\boldsymbol{\zeta}'}
-\end{equation}\]
+<p>换句话说, 但对于系统内部时间(你关心的时间尺度)\(\tau\), 如果一个参数\(\lambda\)的变化速率满足:
+\(\begin{equation}
+\tau \dv{\lambda}{t} \ll \lambda
+\end{equation}\)
+那就是这个参数变化非常缓慢, 系统可以被认为是绝热的.
+我们现在看看怎么在量子力学里说明白这个事情.</p>
 
 <hr />
 
-<h3 id="berry-规范场">Berry 规范场</h3>
-
-<ul>
-  <li><strong>Berry 联络 (Berry connection)</strong> 定义为:</li>
-</ul>
-
-\[\begin{equation}
-  \mathcal{A}_m[\boldsymbol{\zeta}] = i \mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']} = -\Im\Bqty{\mel**{m[\boldsymbol{\zeta}']}{\nabla_{\boldsymbol{\zeta}'}}{m[\boldsymbol{\zeta}']}}
-\end{equation}\]
-
-<ul>
-  <li><strong>Berry 曲率 (Berry curvature)</strong> 定义为:</li>
-</ul>
-
-\[\begin{equation}
-  \Omega_{m; \mu,\nu}[\boldsymbol{\zeta}] = \pdv{}{\zeta^\mu} \mathcal{A}_{m; \nu}[\boldsymbol{\zeta}] - \pdv{}{\zeta^\nu} \mathcal{A}_{m; \mu}[\boldsymbol{\zeta}]
-\end{equation}\]
-
-<p>如果参数空间是 3D:</p>
-
-\[\begin{equation}
-  \boldsymbol{\Omega}_{m}[\boldsymbol{\zeta}]=\nabla_{\boldsymbol{\zeta}}\times \mathcal{A}_m[\boldsymbol{\zeta}]
-\end{equation}\]
-
-<hr />
-
-<p>更多细节可以参考 <a href="https://arxiv.org/pdf/1606.06687">David Tong 教授的 QHE 笔记</a>.在固体物理中, 这些思想非常有用, 因为参数空间可以选成倒空间 (reciprocal space), 这是 Bloch 电子的天然参数空间.</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在 1984 年, Berry指出量子力学中关于波函数的一个重要几何特征. 本文就来讨论这个特征.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
+<h2 id="量子绝热定理的直观感受">量子绝热定理的直观感受</h2>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
 为了简化, 我们一直用 1D 的例子.
 这里我们不会去深入讨论 Fourier 变换的性质.</p>
 
