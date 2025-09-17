@@ -1,4 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T18:35:25+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T22:21:31+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
+
+\[\begin{equation}
+H = \mqty[ E_1 &amp; V \\ V^* &amp; E_2 ]
+\end{equation}\]
+
+<p>其中, $E_1$和$E_2$是两个能级的能量, $V$是两个能级之间的耦合强度.
+迅速熟悉双能级系统可以为很多计算提供便利.
+首先我们能一下子就写出来他的能级:</p>
+
+\[\begin{align}
+E_+ = \frac{E_1 + E_2}{2} + \sqrt{\left(\frac{E_1 - E_2}{2}\right)^2 + |V|^2} \\
+E_- = \frac{E_1 + E_2}{2} - \sqrt{\left(\frac{E_1 - E_2}{2}\right)^2 + |V|^2}
+\end{align}\]
+
+<p>我们做如下的符号约定:</p>
+
+\[\begin{equation}
+  \tilde{E} = \frac{E_1 + E_2}{2}, \quad \delta = \frac{E_1 - E_2}{2}, \quad \Delta = \sqrt{\delta^2 + |V|^2}
+\end{equation}\]
+
+<p>所以:</p>
+
+\[\begin{equation}
+E_+ = \tilde{E} + \Delta, \quad E_- = \tilde{E} - \Delta
+\end{equation}\]
+
+<hr />
+
+<h2 id="无效的推导">无效的推导</h2>
+
+<p>现在我们来尝试求本征态</p>
+
+\[\begin{equation}
+\mqty[ E_1 - E_+ &amp; V \\ V^* &amp; E_2 - E_+ ] \mqty[ a \\ b ] = 0
+\end{equation}\]
+
+<p>我们解出来\(b\):</p>
+
+\[\begin{equation}
+b = -\frac{E_1 - E_+}{V} a = \frac{E_+ - E_1}{V} a
+\end{equation}\]
+
+<p>归一化:</p>
+
+\[\begin{equation}
+|a|^2 + |b|^2 = |a|^2 + \left|\frac{E_+ - E_1}{V} a\right|^2 = 1
+\end{equation}\]
+
+<p>能解出来\(a\):</p>
+
+\[\begin{equation}
+|a| = \frac{1}{\sqrt{1 + \left|\frac{E_+ - E_1}{V}\right|^2}} = \frac{|V|}{\sqrt{|V|^2 + |E_+ - E_1|^2}}
+\end{equation}\]
+
+<p>从而我们有本征态:</p>
+
+\[\begin{align}
+\ket{+} =&amp; \frac{1}{\sqrt{|V|^2 + |E_+ - E_1|^2}} \mqty[ V \\ E_+ - E_1 ] \\
+\ket{-} =&amp; \frac{1}{\sqrt{|V|^2 + |E_- - E_1|^2}} \mqty[ V \\ E_- - E_1 ]
+\end{align}\]
+
+<p>这是机会没什么帮助的, 我们用的更多的形式如下.</p>
+
+<hr />
+
+<h2 id="有效的推导">有效的推导</h2>
+
+<p>我们可以把哈密顿量写成如下形式:</p>
+
+\[\begin{equation}
+H = \mqty[ E_1 &amp; |V| \mathrm{e}^{\mathrm{i}\phi} \\ |V| \mathrm{e}^{-\mathrm{i}\phi} &amp; E_2 ]
+\end{equation}\]
+
+<p>其中\(\phi\)的角度没要求.
+我们定义一个混合角, 描述了耦合强度和能级差的关系:</p>
+
+\[\begin{equation}
+\tan 2\theta = \frac{|V|}{E_1 - E_2} = \frac{|V|}{\delta}
+\end{equation}\]
+
+<p>一下子就能看出来:</p>
+
+\[\begin{equation}
+\sin 2\theta = \frac{|V|}{\Delta}, \quad \cos 2\theta = \frac{\delta}{\Delta}
+\end{equation}\]
+
+<p>利用三角恒等式:</p>
+
+\[\begin{align}
+\cos \theta =&amp; \sqrt{\frac{1 + \cos 2\theta}{2}} = \sqrt{\frac{\Delta + \delta}{2\Delta}} \\
+\sin \theta =&amp; \sqrt{\frac{1 - \cos 2\theta}{2}} = \sqrt{\frac{\Delta - \delta}{2\Delta}}
+\end{align}\]
+
+<p>现在我们提升一下之前的推导:</p>
+
+\[\begin{align}
+\ket{+} = \frac{1}{\sqrt{|V|^2 + |E_+ - E_1|^2}} \mqty[ V \\ E_+ - E_1 ]
+\end{align}\]
+
+<p>就看上面的那个分量:</p>
+
+\[\begin{align}
+&amp; \frac{|V| \mathrm{e}^{\mathrm{i}\phi}}{\sqrt{|V|^2 + |E_+ - E_1|^2}} = \mathrm{e}^{\mathrm{i}\phi} \frac{1}{\sqrt{1 + \left(\frac{E_+ - E_1}{|V|}\right)^2}}\\
+=&amp; \mathrm{e}^{\mathrm{i}\phi} \frac{1}{\sqrt{1 + \left(\frac{\Delta-\delta}{|V|}\right)^2}} = \mathrm{e}^{\mathrm{i}\phi} \frac{1}{\sqrt{1 + \frac{\Delta^2 - 2\Delta\delta + \delta^2}{\Delta^2 - \delta^2}}}\\
+=&amp; \mathrm{e}^{\mathrm{i}\phi} \frac{\sqrt{(\Delta+\delta)(\Delta-\delta)}}{\sqrt{2\Delta(\Delta-\delta)}} = \mathrm{e}^{\mathrm{i}\phi} \sqrt{\frac{\Delta+\delta}{2\Delta}}\\
+=&amp; \mathrm{e}^{\mathrm{i}\phi} \cos \theta
+\end{align}\]
+
+<p>这样就好记很多了!
+类似地, 我们可以得到:</p>
+
+\[\begin{align}
+&amp; E_+ = \tilde{E} + \Delta \quad \ket{+} = \mqty[ \mathrm{e}^{\mathrm{i}\phi} \cos \theta \\ \sin \theta ] \\
+&amp; E_- = \tilde{E} - \Delta \quad \ket{-} = \mqty[ -\mathrm{e}^{\mathrm{i}\phi} \sin \theta \\ \cos \theta ]
+\end{align}\]
+
+<hr />
+
+<h2 id="例子">例子</h2>
+
+<p>我们做一个口算检查, 如果考虑如下的Hamiltonin:</p>
+
+\[\begin{equation}
+H = g \mu_{\text{B}} \boldsymbol{B} \cdot \boldsymbol{\sigma} = g \mu_{\text{B}} (B_x \sigma_x + B_y \sigma_y + B_z \sigma_z)
+\end{equation}\]
+
+<p>写成矩阵形式:</p>
+
+\[\begin{equation}
+H = g \mu_{\text{B}} \mqty[ B_z &amp; B_x - \mathrm{i} B_y \\ B_x + \mathrm{i} B_y &amp; -B_z ]
+\end{equation}\]
+
+<p>立刻写出能级:</p>
+
+\[\begin{align}
+E_+ = + g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2} \\
+E_- = - g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2}
+\end{align}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:]]></summary></entry><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -601,7 +739,7 @@ c_m(t) = c_m(0) \exp\left(-\int_0^t \bra{m(t')}\pdv{}{t'}\ket{m(t')}\,\dd{t'}\ri
 
 \[\begin{equation}
   \delta(p-p') = \frac{1}{\hbar} \delta(k-k')
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质.]]></summary></entry><entry><title type="html">QM+ Wigner functions入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/" rel="alternate" type="text/html" title="QM+ Wigner functions入门" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM1-WignerFunction/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>Wigner 函数</strong> 和 <strong>Weyl 变换</strong>.</p>
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质.]]></summary></entry><entry><title type="html">QM+ Wigner functions入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-WignerFunction/" rel="alternate" type="text/html" title="QM+ Wigner functions入门" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-WignerFunction</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-WignerFunction/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>Wigner 函数</strong> 和 <strong>Weyl 变换</strong>.</p>
 
 <blockquote>
   <p>我们希望能有一个函数, 可以同时在 \(x\) 和 \(p\) 变量上展示概率分布.这就是 Wigner 函数要做的事.</p>
@@ -1031,40 +1169,4 @@ c_m(t) = c_m(0) \exp\left(-\int_0^t \bra{m(t')}\pdv{}{t'}\ket{m(t')}\,\dd{t'}\ri
 
 \[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
 
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…]]></summary></entry><entry><title type="html">积分表 - 三角函数积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals/" rel="alternate" type="text/html" title="积分表 - 三角函数积分" /><published>2024-10-06T19:06:00+11:00</published><updated>2024-10-06T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals/"><![CDATA[<p>Here we summarize some useful intergation results in assignments.</p>
-
-\[\int \sin ^2 ax \dd{x}=\frac{x}{2}-\frac{1}{4 a} \sin 2 a x+C\]
-
-\[\int \cos ^2 ax \dd{x}=\frac{x}{2}+\frac{1}{4 a} \sin 2 a x+C\]
-
-\[\int \sin ^3 a x \dd{x}=\frac{\cos 3 a x}{12 a}-\frac{3 \cos a x}{4 a}+C\]
-
-\[\int x \sin a x \dd{x}=\frac{\sin a x}{a^2}-\frac{x \cos a x}{a}+C\]
-
-\[\int x \cos a x \dd{x}=\frac{\cos a x}{a^2}+\frac{x \sin a x}{a}+C\]
-
-\[\int x \sin^2 a x \dd{x}=\frac{x^2}{4}-\frac{x}{4 a} \sin 2 a x-\frac{1}{8 a^2} \cos 2 a x+C\]
-
-\[\int x^2 \sin ^2 a x \dd{x}=\frac{x^3}{6}-\left(\frac{x^2}{4 a}-\frac{1}{8 a^3}\right) \sin 2 a x-\frac{x}{4 a^2} \cos 2 a x+C\]
-
-\[\int x^2 \cos ^2 a x \dd{x}=\frac{x^3}{6}+\left(\frac{x^2}{4 a}-\frac{1}{8 a^3}\right) \sin 2 a x+\frac{x}{4 a^2} \cos 2 a x+C\]
-
-\[\int(\sin a x)(\cos a x) \dd{x}=\frac{1}{2 a} \sin ^2 a x+C\]
-
-<p>For the following three equations, the coefficients are different!</p>
-
-\[\int\left(\sin b_1 x\right)\left(\sin b_2 x\right) \dd{x}=\frac{\sin \left(\left(b_2-b_1\right) x\right)}{2\left(b_2-b_1\right)}-\frac{\sin \left(\left(b_1+b_2\right) x\right)}{2\left(b_1+b_2\right)}+C\]
-
-\[\int\left(\cos a_1 x\right)\left(\cos a_2 x\right) \dd{x}=\frac{\sin \left(\left(a_2-a_1\right) x\right)}{2\left(a_2-a_1\right)}+\frac{\sin \left(\left(a_2+a_1\right) x\right)}{2\left(a_2+a_1\right)}+C\]
-
-\[\int\left(\sin a_1 x\right)\left(\cos a_2 x\right) \dd{x}=-\frac{\cos \left(\left(a_1-a_2\right) x\right)}{2\left(a_1-a_2\right)}-\frac{\cos \left(\left(a_1+a_2\right) x\right)}{2\left(a_1+a_2\right)}+C\]
-
-\[\int_0^{2 \pi} \sin ^{2 m+1} x \cos ^n x \dd{x}=0 \quad n, m \in \mathbb{Z}\]
-
-\[\int_0^{2 \pi} \sin ^m x \cos ^{2 n+1} x \dd{x}=0 \quad n, m \in \mathbb{Z}\]
-
-\[\int_{-a/2}^{a/2} x^2 \cos ^2 \frac{n \pi x}{a} \dd{x}=\frac{a^3\left(n^2 \pi^2-6\right)}{24 n^2 \pi^2} \quad(\text { for } n=1,3,5 \ldots)\]
-
-\[\int_{-a/2}^{a/2} x^2 \sin ^2 \frac{n \pi x}{a} \dd{x}=\frac{a^3}{24}\left(1-6 \frac{(-1)^n}{n^2 \pi^2}\right) \quad(\text { for } n=1,2,3, \ldots)\]
-
-<p>If these identities do not answer you questions, you can further refer to <a href="https://en.wikipedia.org/wiki/List_of_integrals_of_trigonometric_functions">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[Here we summarize some useful intergation results in assignments.]]></summary></entry></feed>
+<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…]]></summary></entry></feed>

@@ -23,16 +23,16 @@ var store = [{
         "url": "/PersonalPageCN/qm1/QM1-LarmourProblem/",
         "teaser": null
       },{
+        "title": "QM+ Wigner functions入门",
+        "excerpt":"在这篇文章里, 我们来讨论 Wigner 函数 和 Weyl 变换. 我们希望能有一个函数, 可以同时在 \\(x\\) 和 \\(p\\) 变量上展示概率分布.这就是 Wigner 函数要做的事. 另外, 把量子态放到相空间来表示, 还有助于研究量子力学和经典力学之间的联系. 最初, Wigner 是想找到一个对 Boltzmann 分布 的量子修正, 这个分布同时包含位置和动量, 但受到 海森堡不确定性原理 的限制.所以我们可以预期:在某些极限下, 它表现出量子特性；在另一些极限下, 它又能覆盖经典特性. 一些总体性的评论: Wigner 函数并不是一个普通的概率分布. 它和算符的 Weyl 变换紧密相关. Weyl 变换会把一个算符转成 \\(x\\) 和 \\(p\\) 的函数. Weyl 变换 我们从算符 \\(\\hat{O}\\) 的 Weyl 变换开始: \\[\\begin{equation}...","categories": ["QM+"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm+/QM+-WignerFunction/",
+        "teaser": null
+      },{
         "title": "QM1 Rabi问题",
         "excerpt":"在这篇文章里, 我们要讨论 Rabi 振荡, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的: \\[\\begin{equation} H = \\mqty[E_1 &amp; W_{1,2} \\\\ W_{2,1} &amp; E_2] \\end{equation}\\] 第一能级的能量是 \\(E_1\\), 第二能级的能量是 \\(E_2\\).中间的耦合项 \\(W_{1,2}\\) 会让两个能级混合, 所以我们叫它 coupling. 注意, 这个 \\(H\\) 是在 \\((1,0)\\) 和 \\((0,1)\\) 这组基下写的, 我们把它们叫做 \\(\\ket{+}\\) 和 \\(\\ket{-}\\). 接下来我们先算一下这个二能级系统的本征值, 很简单: \\(\\begin{align} E_\\pm = \\frac{\\Tr(H) \\pm \\sqrt{(\\Tr(H))^2-4 \\det(H)}}{2} \\end{align}\\) 算出来就是...","categories": ["QM1"],
         "tags": [],
         "url": "/PersonalPageCN/qm1/QM1-RabiProblem/",
-        "teaser": null
-      },{
-        "title": "QM+ Wigner functions入门",
-        "excerpt":"在这篇文章里, 我们来讨论 Wigner 函数 和 Weyl 变换. 我们希望能有一个函数, 可以同时在 \\(x\\) 和 \\(p\\) 变量上展示概率分布.这就是 Wigner 函数要做的事. 另外, 把量子态放到相空间来表示, 还有助于研究量子力学和经典力学之间的联系. 最初, Wigner 是想找到一个对 Boltzmann 分布 的量子修正, 这个分布同时包含位置和动量, 但受到 海森堡不确定性原理 的限制.所以我们可以预期:在某些极限下, 它表现出量子特性；在另一些极限下, 它又能覆盖经典特性. 一些总体性的评论: Wigner 函数并不是一个普通的概率分布. 它和算符的 Weyl 变换紧密相关. Weyl 变换会把一个算符转成 \\(x\\) 和 \\(p\\) 的函数. Weyl 变换 我们从算符 \\(\\hat{O}\\) 的 Weyl 变换开始: \\[\\begin{equation}...","categories": ["QM+"],
-        "tags": [],
-        "url": "/PersonalPageCN/qm+/QM1-WignerFunction/",
         "teaser": null
       },{
         "title": "QM1 平面波和Fourier变换 ",
@@ -57,5 +57,11 @@ var store = [{
         "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for...","categories": ["Updates"],
         "tags": [],
         "url": "/PersonalPageCN/updates/RecentUpdate/",
+        "teaser": null
+      },{
+        "title": "QM1 双能级系统",
+        "excerpt":"在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为: \\[\\begin{equation} H = \\mqty[ E_1 &amp; V \\\\ V^* &amp; E_2 ] \\end{equation}\\] 其中, $E_1$和$E_2$是两个能级的能量, $V$是两个能级之间的耦合强度. 迅速熟悉双能级系统可以为很多计算提供便利. 首先我们能一下子就写出来他的能级: \\[\\begin{align} E_+ = \\frac{E_1 + E_2}{2} + \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\\\ E_- = \\frac{E_1 + E_2}{2} - \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\end{align}\\]...","categories": ["QM1"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm1/QM1-TwoLevelSystem/",
         "teaser": null
       }]
