@@ -37,3 +37,13 @@ $$
 ---
 
 ## 量子绝热定理的直观感受
+
+我们先看看如果一个势能$$V(x)$$是快速变化的, 我们的波函数会怎么反应.
+![Quick Change](https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/quickchange.gif)
+可以说是乱七八糟, 毫无规律.
+不过这也正常, 就想你突然被人推了一把, 你会乱跑.
+
+但是如果势能$$V(x)$$是缓慢变化的, 我们的波函数会怎么反应.
+![Slow Change](https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/slowchange.gif)
+可以看到波函数始终保持在它的瞬时本征态中, 只是随着势能的变化, 波函数也缓慢变化.
+这就像你坐在一辆缓慢加速的汽车上, 你感觉不到任何变化.

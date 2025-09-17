@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T16:35:13+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T16:43:58+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -346,7 +346,17 @@ Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中�
 
 <hr />
 
-<h2 id="量子绝热定理的直观感受">量子绝热定理的直观感受</h2>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
+<h2 id="量子绝热定理的直观感受">量子绝热定理的直观感受</h2>
+
+<p>我们先看看如果一个势能\(V(x)\)是快速变化的, 我们的波函数会怎么反应.
+<img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/quickchange.gif" alt="Quick Change" />
+可以说是乱七八糟, 毫无规律.
+不过这也正常, 就想你突然被人推了一把, 你会乱跑.</p>
+
+<p>但是如果势能\(V(x)\)是缓慢变化的, 我们的波函数会怎么反应.
+<img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/slowchange.gif" alt="Slow Change" />
+可以看到波函数始终保持在它的瞬时本征态中, 只是随着势能的变化, 波函数也缓慢变化.
+这就像你坐在一辆缓慢加速的汽车上, 你感觉不到任何变化.</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
 为了简化, 我们一直用 1D 的例子.
 这里我们不会去深入讨论 Fourier 变换的性质.</p>
 
