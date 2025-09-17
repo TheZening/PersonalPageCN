@@ -228,6 +228,80 @@ $$
 \end{equation}
 $$
 
+现在我们来看看这个几何相位, 如果是相位, 要确保$$\gamma_n(t)$$是实数:
+
+$$
+\begin{equation}
+\dv{}{t} \braket{n(t)}{n(t)} = 0 \Rightarrow \braket{n(t)}{\pdv{}{t}}{n(t)} + \bra{\pdv{}{t}n(t)}{n(t)} = 0
+\end{equation}
+$$
+
+自己加自己的共轭是0, 说明$$\bra{n(t)}\pdv{}{t}\ket{n(t)}$$是纯虚数, 然后整体前面有个$$i$$, 所以$$\gamma_n(t)$$是实数.
+没问题, 接下来我们稍微变个形式, 把参数空间的特性体现出来.
+
+$$
+\begin{equation}
+\mel{n(t)}{\pdv{}{t}}{n(t)} = \mel{n(t)}{\pdv{}{\lambda}}{n(t)} \dv{\lambda}{t}
+\end{equation}
+$$
+
+所以原来的式子可以写成:
+
+$$
+\begin{align}
+\gamma_n(t) &= \mathrm{i}\,\int_0^t \bra{n(t')}\pdv{}{\lambda}\ket{n(t')} \dv{\lambda}{t'}\,\dd{t'} \\
+&= \mathrm{i}\,\int_{\lambda(0)}^{\lambda(t)} \mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}\,\dd{\lambda}
+\end{align}
+$$
+
+开放路径一般很难做比较, 而且在参数空间走一圈才是回到了原点, 这时候我们就有闭合路径了, 这时候Berry相位就变成了:
+
+$$
+\begin{equation}
+\gamma_n = \mathrm{i}\,\oint \mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}\,\dd{\lambda}
+\end{equation}
+$$
+
+实际上, 我们可以定义如下的Berry connection:
+
+$$
+\begin{equation}
+\mathcal{A}_n(\lambda) = \mathrm{i}\,\mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}
+\end{equation}
+$$
+
+从而把我们的积分写为:
+
+$$
+\begin{equation}
+\gamma_n = \oint \mathcal{A}_n(\lambda)\,\dd{\lambda}
+\end{equation}
+$$
+
+如果推广到多维参数空间 (我们参数使用了$$R$$, 因为加粗字体的$$\lambda$$基本看不出来)那么我们有:
+
+$$
+\begin{equation}
+\gamma_n = \oint \mathcal{A}_n(\boldsymbol{R}) \cdot \dd{\boldsymbol{R}}, \quad \mathcal{A}_n(\boldsymbol{R}) = \mathrm{i}\,\mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})}
+\end{equation}
+$$
+
+同时, 我们可以定义Berry curvature:
+
+$$
+\begin{equation}
+\Omega_{n,\mu\nu} = \pdv{}{R^\mu} \mathcal{A}_{n}^\nu - \pdv{}{R^\nu} \mathcal{A}_{n}^\mu
+\end{equation}
+$$
+
+如果恰好是三维的, 我们还有:
+
+$$
+\begin{equation}
+\boldsymbol{\Omega}_n = \nabla_{\boldsymbol{R}} \times \mathcal{\boldsymbol{A}}_n
+\end{equation}
+$$
+
 ---
 
 ## 多慢算绝热?
@@ -263,3 +337,93 @@ $$
 \left| \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{(E_n(t) - E_m(t))^2} \right| \ll 1, \quad \forall m \neq n, \quad \forall t
 \end{equation}
 $$
+
+---
+
+## 规范不变性问题
+
+我们注意到, 我们的瞬时本征态$$\ket{n(t)}$$可以做如下的规范变换:
+
+$$
+\begin{equation}
+\ket{n(t)} \to \mathrm{e}^{\mathrm{i}\,\chi(\boldsymbol{R})} \ket{n(t)}
+\end{equation}
+$$
+
+我们先来检查Berry phase如何变化的:
+
+$$
+\begin{align}
+\gamma_n &= \mathrm{i}\,\oint \mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} \cdot \dd{\boldsymbol{R}} \\
+&\to \mathrm{i}\,\oint \mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} \cdot \dd{\boldsymbol{R}} + \oint \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R}) \cdot \dd{\boldsymbol{R}} \\
+&= \gamma_n + 2\pi m, \quad m \in \mathbb{Z}
+\end{align}
+$$
+
+也就是说, Berry phase会变化一个$$2\pi$$的整数倍, 这并不影响物理, 因为相位本来就是模$$2\pi$$的!
+但是Berry connection会变化:
+
+$$
+\begin{align}
+\mathcal{A}_n(\boldsymbol{R}) &\to \mathrm{i}\,\mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} + \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R}) \\
+&= \mathcal{A}_n(\boldsymbol{R}) + \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R})
+\end{align}
+$$
+
+所以他也不能是一个物理量, 就是说你实验上想测是不太行的.
+最后我们来看看Berry curvature:
+
+
+$$
+\begin{align}
+\Omega_{n,\mu\nu} &\to \pdv{}{R^\mu} \left( \mathcal{A}_{n}^\nu + \pdv{}{R^\nu} \chi(\boldsymbol{R}) \right) - \pdv{}{R^\nu} \left( \mathcal{A}_{n}^\mu + \pdv{}{R^\mu} \chi(\boldsymbol{R}) \right) \\
+&= \pdv{}{R^\mu} \mathcal{A}_{n}^\nu - \pdv{}{R^\nu} \mathcal{A}_{n}^\mu \\
+&= \Omega_{n,\mu\nu}
+\end{align}
+$$
+
+嗯, 虽然他是不变的, 可是曲率曲率, 他到底是描述什么几何的弯曲的呢?
+
+---
+
+## 例子: 自旋在磁场中
+
+我们考虑一个最经典的例子, 一个自旋$$1/2$$的粒子在一个磁场$$\boldsymbol{B}$$中, 一个平面磁场绕着z轴旋转:
+
+$$
+\begin{equation}
+\boldsymbol{B}(t) = B(\cos\omega t, \sin\omega t, 0)
+\end{equation}
+$$
+
+此时我们的Hamiltonian是:
+
+$$
+\begin{equation}
+H(t) = g \mu_{B} \boldsymbol{B}(t) \cdot \boldsymbol{\sigma} = \mqty[0 & g \mu_{B} B \mathrm{e}^{-\mathrm{i}\,\omega t} \\ g \mu_{B} B \mathrm{e}^{\mathrm{i}\,\omega t} & 0]
+\end{equation}
+$$
+
+我们不负责任的要求这个磁场旋转的非常非常慢, 也就是$$\omega$$非常非常小, 从而我们可以使用绝热定理.
+这个Hamiltonian的本征值和本征态分别为:
+
+$$
+\begin{align}
+E_+ =& g \mu_{B} B, \quad &\ket{+} = \frac{1}{\sqrt{2}} [\mathrm{e}^{-\mathrm{i}\,\omega t}, 1]^\mathrm{T} \\
+E_- =& -g \mu_{B} B, \quad &\ket{-} = \frac{1}{\sqrt{2}} [-\mathrm{e}^{-\mathrm{i}\,\omega t}, 1]^\mathrm{T}
+\end{align}
+$$
+
+用关于时间的积分来算:
+
+$$
+\begin{equation}
+\gamma_+ = \mathrm{i}\,\int_0^T \mel{+}{\pdv{}{t}}{+}\,\dd{t} = \mathrm{i}\,\int_0^T \frac{1}{2}(-\mathrm{i}\,\omega)\,\dd{t} = \frac{\omega T}{2} = \pi
+\end{equation}
+$$
+
+看起来好像是和几何有点关系?
+
+---
+
+## Aharonov-Bohm效应
