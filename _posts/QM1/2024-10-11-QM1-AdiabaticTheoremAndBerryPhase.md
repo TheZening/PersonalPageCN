@@ -427,3 +427,50 @@ $$
 ---
 
 ## Aharonov-Bohm效应
+
+![AB 效应示意图](https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/ABeffect.png "Aharonov-Bohm 效应图示")
+
+
+如上图所示, 我们有一个无限长的细线圈, 线圈内有一个均匀的磁场$$B$$, 线圈外部磁场为零.
+外面没有磁场, 但是可能有向量势能$$\boldsymbol{A}$$. 
+对于一个电子来说, 走上面和下面的路径, 经历的磁场是一样的, 但是由于有向量势能$$\boldsymbol{A}$$, 电子会获得一个额外的相位差.
+
+我们之前那说过, 如果有一个向量势能$$\boldsymbol{A}$$, 那么动量算符要替换为$$\boldsymbol{p} - q \boldsymbol{A}$$, 从而波函数会获得一个额外的相位因子:
+
+$$
+\begin{equation}
+\psi(\boldsymbol{x}) = \psi_0(\boldsymbol{x}) \exp\left(\frac{\mathrm{i}\,q}{\hbar} \chi(\boldsymbol{x}) \right)
+\end{equation}
+$$
+
+其中$$\psi_0(\boldsymbol{x})$$是没有向量势能时的波函数, $$\chi(\boldsymbol{x})$$满足:
+
+$$
+\begin{equation}
+\nabla \chi(\boldsymbol{x}) = \boldsymbol{A}(\boldsymbol{x}) \Rightarrow \chi(\boldsymbol{x}) = \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'}
+\end{equation}
+$$
+
+此时, 我们的平移算符(把粒子挪动一点点)变成了:
+
+$$
+\begin{equation}
+T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}} \cdot (\boldsymbol{p} - q \boldsymbol{A}) \right)
+\end{equation}
+$$
+
+我们沿着某个路径, 每次挪一点点, 挪着挪着就到中点了, 求和变积分, 所以会累计出来一个几何相位:
+
+$$
+\begin{equation}
+\psi(\boldsymbol{x}) = \exp\left(\frac{\mathrm{i}q}{\hbar} \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} \right) \psi_0(\boldsymbol{x})
+\end{equation}
+$$
+
+上面走一条, 下面走一条, 这样就出现相位差了:
+
+$$
+\begin{equation}
+\Delta \phi = \frac{q}{\hbar} \oint \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} = \frac{q}{\hbar} \int \boldsymbol{B} \cdot \dd{\boldsymbol{S}} = \frac{q}{\hbar} \Phi_B
+\end{equation}
+$$

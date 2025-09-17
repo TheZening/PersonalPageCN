@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-17T23:47:06+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T00:17:30+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
 
 \[\begin{equation}
 H = \mqty[ E_1 &amp; V \\ V^* &amp; E_2 ]
@@ -791,7 +791,43 @@ E_- =&amp; -g \mu_{B} B, \quad &amp;\ket{-} = \frac{1}{\sqrt{2}} [-\mathrm{e}^{-
 
 <hr />
 
-<h2 id="aharonov-bohm效应">Aharonov-Bohm效应</h2>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
+<h2 id="aharonov-bohm效应">Aharonov-Bohm效应</h2>
+
+<p><img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/ABeffect.png" alt="AB 效应示意图" title="Aharonov-Bohm 效应图示" /></p>
+
+<p>如上图所示, 我们有一个无限长的细线圈, 线圈内有一个均匀的磁场\(B\), 线圈外部磁场为零.
+外面没有磁场, 但是可能有向量势能\(\boldsymbol{A}\). 
+对于一个电子来说, 走上面和下面的路径, 经历的磁场是一样的, 但是由于有向量势能\(\boldsymbol{A}\), 电子会获得一个额外的相位差.</p>
+
+<p>我们之前那说过, 如果有一个向量势能\(\boldsymbol{A}\), 那么动量算符要替换为\(\boldsymbol{p} - q \boldsymbol{A}\), 从而波函数会获得一个额外的相位因子:</p>
+
+\[\begin{equation}
+\psi(\boldsymbol{x}) = \psi_0(\boldsymbol{x}) \exp\left(\frac{\mathrm{i}\,q}{\hbar} \chi(\boldsymbol{x}) \right)
+\end{equation}\]
+
+<p>其中\(\psi_0(\boldsymbol{x})\)是没有向量势能时的波函数, \(\chi(\boldsymbol{x})\)满足:</p>
+
+\[\begin{equation}
+\nabla \chi(\boldsymbol{x}) = \boldsymbol{A}(\boldsymbol{x}) \Rightarrow \chi(\boldsymbol{x}) = \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'}
+\end{equation}\]
+
+<p>此时, 我们的平移算符(把粒子挪动一点点)变成了:</p>
+
+\[\begin{equation}
+T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}} \cdot (\boldsymbol{p} - q \boldsymbol{A}) \right)
+\end{equation}\]
+
+<p>我们沿着某个路径, 每次挪一点点, 挪着挪着就到中点了, 求和变积分, 所以会累计出来一个几何相位:</p>
+
+\[\begin{equation}
+\psi(\boldsymbol{x}) = \exp\left(\frac{\mathrm{i}q}{\hbar} \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} \right) \psi_0(\boldsymbol{x})
+\end{equation}\]
+
+<p>上面走一条, 下面走一条, 这样就出现相位差了:</p>
+
+\[\begin{equation}
+\Delta \phi = \frac{q}{\hbar} \oint \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} = \frac{q}{\hbar} \int \boldsymbol{B} \cdot \dd{\boldsymbol{S}} = \frac{q}{\hbar} \Phi_B
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry><entry><title type="html">QM1 平面波和Fourier变换</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/" rel="alternate" type="text/html" title="QM1 平面波和Fourier变换" /><published>2024-10-11T00:06:00+11:00</published><updated>2024-10-11T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-PlaneWavesAndFourier/"><![CDATA[<p>在这篇文章里, 我们来讨论 <strong>平面波</strong> 和 <strong>Fourier 变换的约定</strong>.
 为了简化, 我们一直用 1D 的例子.
 这里我们不会去深入讨论 Fourier 变换的性质.</p>
 
