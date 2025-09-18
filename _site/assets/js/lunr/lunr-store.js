@@ -50,7 +50,7 @@ var store = [{
         "title": "QM2 Lindbladian量子动力学方程",
         "excerpt":"在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \\(H_S\\)、环境(热浴)部分 \\(H_B\\), 以及相互作用项 \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) 整体(系统 + 环境)的动力学由密度矩阵 \\(\\rho_{SB}\\) 描述, 满足: \\(\\begin{equation} \\dv{}{t} \\rho_{SB} = -\\frac{i}{\\hbar} \\left[H_S + H_B + \\alpha H_{SB}, \\rho_{SB}\\right] \\end{equation}\\) 在相互作用绘景里, Hamiltonian 的演化是: \\(\\begin{equation} H(t) = \\exp\\left(\\frac{i}{\\hbar}(H_S + H_B)t\\right) H_{SB} \\exp\\left(-\\frac{i}{\\hbar}(H_S + H_B)t\\right) \\end{equation}\\)...","categories": ["QM2"],
         "tags": [],
-        "url": "/PersonalPageCN/qm2/QM1-LindbladianEquation/",
+        "url": "/PersonalPageCN/qm2/QM2-LindbladianEquation/",
         "teaser": null
       },{
         "title": "新闻",
@@ -63,5 +63,11 @@ var store = [{
         "excerpt":"在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为: \\[\\begin{equation} H = \\mqty[ E_1 &amp; V \\\\ V^* &amp; E_2 ] \\end{equation}\\] 其中, $E_1$和$E_2$是两个能级的能量, $V$是两个能级之间的耦合强度. 迅速熟悉双能级系统可以为很多计算提供便利. 首先我们能一下子就写出来他的能级: \\[\\begin{align} E_+ = \\frac{E_1 + E_2}{2} + \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\\\ E_- = \\frac{E_1 + E_2}{2} - \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\end{align}\\]...","categories": ["QM1"],
         "tags": [],
         "url": "/PersonalPageCN/qm1/QM1-TwoLevelSystem/",
+        "teaser": null
+      },{
+        "title": "QM+ Floquet system入门",
+        "excerpt":"关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了 什么是Floquet system? 我们知道一个态 \\(\\ket{\\psi(t)}\\) 的时间演化是由Schrödinger方程决定的: \\[\\begin{equation} \\mathrm{i}\\,\\hbar \\pdv{}{t} \\ket{\\psi; t} = H(t) \\ket{\\psi; t} \\end{equation}\\] 或者说我们想知道态的演化也可以考虑时间演化算符: \\[\\begin{equation} \\ket{\\psi; t} = U(t, t_0) \\ket{\\psi; t_0} \\end{equation}\\] 但是这两种方法都绕不过去一个抽象的事儿, 那就是时间演化算符能写但是基本没有办法算: \\[\\begin{align} U(t, t_0) =&amp; \\mathcal{T} \\exp\\left[-\\frac{\\mathrm{i}}{\\hbar} \\int_{t_0}^{t} H(t') \\dd{t'}\\right] \\\\ =&amp; \\mathbb{1} + \\left(-\\frac{\\mathrm{i}}{\\hbar}\\right) \\int_{t_0}^{t} H(t_1) \\dd{t_1} + \\\\...","categories": ["QM+"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm+/QM+-FloquetSystem/",
         "teaser": null
       }]

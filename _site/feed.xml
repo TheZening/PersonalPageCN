@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T00:17:55+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T01:12:19+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
+  <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
+</blockquote>
+
+<h2 id="什么是floquet-system">什么是Floquet system?</h2>
+
+<p>我们知道一个态 \(\ket{\psi(t)}\) 的时间演化是由Schrödinger方程决定的:</p>
+
+\[\begin{equation}
+\mathrm{i}\,\hbar \pdv{}{t} \ket{\psi; t} = H(t) \ket{\psi; t}
+\end{equation}\]
+
+<p>或者说我们想知道态的演化也可以考虑时间演化算符:</p>
+
+\[\begin{equation}
+\ket{\psi; t} = U(t, t_0) \ket{\psi; t_0}
+\end{equation}\]
+
+<p>但是这两种方法都绕不过去一个抽象的事儿, 那就是时间演化算符能写但是基本没有办法算:</p>
+
+\[\begin{align}
+U(t, t_0) =&amp; \mathcal{T} \exp\left[-\frac{\mathrm{i}}{\hbar} \int_{t_0}^{t} H(t') \dd{t'}\right] \\
+=&amp; \mathbb{1} + \left(-\frac{\mathrm{i}}{\hbar}\right) \int_{t_0}^{t} H(t_1) \dd{t_1} + \\
+&amp; \left(-\frac{\mathrm{i}}{\hbar}\right)^2 \int_{t_0}^{t} H(t_1) \int_{t_0}^{t_1} H(t_2) \dd{t_2} \dd{t_1} + \cdots
+\end{align}\]
+
+<p>这东西算起来有点麻烦.
+但是我们考虑的Floqeut system有一个特别的地方, 就是我们Hamiltonian的时间依赖性一般是人为调制的, 比如说周期性的控制电场, 广场, 声场.
+这样的话, 我们很简单的可以赋予他一个周期性:</p>
+
+\[\begin{equation}
+H(t + T) = H(t)
+\end{equation}\]
+
+<p>我们称这样的系统叫做Floquet system, 所以一般往往跟随着人工调控的周期性变化.
+如果这个Hamiltonian有周期性, 我们立刻可以借用Floquet theorem:</p>
+
+<blockquote>
+  <p><strong>Floquet theorem</strong>: 对于周期性Hamiltonian \(H(t + T) = H(t)\), 对应的Schrödinger方程的解可以写成:</p>
+
+\[\begin{equation}
+\ket{\psi_\alpha(t)} = \mathrm{e}^{-\frac{\mathrm{i}}{\hbar} \epsilon_\alpha t} \ket{u_\alpha(t)}
+\end{equation}\]
+
+  <p>其中 \(\ket{u_\alpha(t)}\) 是周期性的, 即 \(\ket{u_\alpha(t + T)} = \ket{u_\alpha(t)}\), \(\epsilon_\alpha\) 是一个实数, 称为Floquet quasi-energy, \(\alpha\) 是态的标号.</p>
+</blockquote>
+
+<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
 
 \[\begin{equation}
 H = \mqty[ E_1 &amp; V \\ V^* &amp; E_2 ]
@@ -170,7 +217,7 @@ E_- = - g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2}
 <p>2024-Aug-15: 我们关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的理论研究, 现在发表在 IEEE Transaction on quantum engineering 上了.
 <a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
 
-<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM1-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
+<p>2024-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\):
 \(\begin{equation}
   H(t) = H_S + H_B + \alpha H_{SB}
@@ -1310,28 +1357,4 @@ T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}}
 你可以展开右边作为一个简单的检查.
 自旋的对易关系也是一样的:</p>
 
-\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:]]></summary></entry><entry><title type="html">积分表 - Gauss积分</title><link href="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/" rel="alternate" type="text/html" title="积分表 - Gauss积分" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/math/Important-Integrals-2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/Important-Integrals-2/"><![CDATA[<p>有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
-
-\[\int_{-\infty}^{\infty} \mathrm{-x^2} \dd{x} = \sqrt{\pi}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-a(x+b)^2} \dd{x} = \sqrt{\frac{\pi}{a}}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{-\left(a x^2+b x+c\right)} \dd{x} = \sqrt{\frac{\pi}{a}} \mathrm{e}^{\frac{b^2}{4 a}-c}\]
-
-\[\int_{-\infty}^{\infty} \mathrm{e}^{\frac{1}{2} i t^2} \dd{t} = \mathrm{e}^{i \pi / 4} \sqrt{2 \pi}\]
-
-\[\int_0^{\infty} \mathrm{e}^{-x^2} \dd{x} = \frac{\sqrt{\pi}}{2}\]
-
-\[\int_{-\infty}^{\infty} x^{2 n} \mathrm{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} \frac{(2 n-1)!!}{(2 \alpha)^n}\]
-
-\[\int_0^{\infty} x^n \mathrm{e}^{-a x^b} \dd{x} = \frac{\Gamma((n+1) / b)}{b a^{(n+1) / b}}\]
-
-<p>双阶乘的定义如下:</p>
-
-\[(2n-1)!!=(2n-1)(2n-3)(2n-5)...\]
-
-<p>Gamma函数的定义如下:</p>
-
-\[\Gamma\left(\frac{1}{2}+n\right)=\frac{(2 n)!}{4^n n!} \sqrt{\pi} \quad \Gamma\left(\frac{1}{2}-n\right)=\frac{(-4)^n n!}{(2 n)!} \sqrt{\pi}\]
-
-<p>如果这些还是不够用, 可以考虑使用维基百科 <a href="https://en.wikipedia.org/wiki/Gaussian_integral">Wiki Pages</a></p>]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Integral Table" /><summary type="html"><![CDATA[有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…]]></summary></entry></feed>
+\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:]]></summary></entry></feed>
