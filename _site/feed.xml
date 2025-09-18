@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T17:27:59+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T22:28:11+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
   <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
 </blockquote>
 
@@ -45,7 +45,32 @@ H(t + T) = H(t)
   <p>其中 \(\ket{u_\alpha(t)}\) 是周期性的, 即 \(\ket{u_\alpha(t + T)} = \ket{u_\alpha(t)}\), \(\epsilon_\alpha\) 是一个实数, 称为Floquet quasi-energy, \(\alpha\) 是态的标号.</p>
 </blockquote>
 
-<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
+<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry><entry><title type="html">QM2 密度矩阵</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix/" rel="alternate" type="text/html" title="QM2 密度矩阵" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix/"><![CDATA[<blockquote>
+  <p>量子力学的随机性:
+演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足.
+你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.</p>
+</blockquote>
+
+<blockquote>
+  <p>经典概率的随机性:
+经典随机性来自于复杂性和信息的不完全性, 原则上你扔一个骰子是完全可预测的, 但是由于你无法掌握所有的初始条件, 只能用概率来描述结果.</p>
+</blockquote>
+
+<p>在这个背景下, 针对系综(一模一样的系统的综合)的问题, 我们就考虑使用密度矩阵, density matrix来容纳这种经典的随机性.
+另外, 密度矩阵还能解决一类问题: 当一个子系统与整个系统的其余部分纠缠时, 对该子系统的描述中必然包含随机性, 这种随机性就由密度矩阵描述.</p>
+
+<blockquote>
+  <p>纯态:
+完整地包含了关于该量子系统的所有可知信息, 可以用态矢量 \(\ket{\psi}\) 来描述.</p>
+</blockquote>
+
+<blockquote>
+  <p>混合态:
+我们对系统没有完全的信息, 或者系统与外界发生了纠缠, 只能用密度矩阵 \(\rho\) 来描述.</p>
+</blockquote>
+
+<hr />
+<h2 id="经典随机性">经典随机性</h2>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[量子力学的随机性: 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足. 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.]]></summary></entry><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
 
 \[\begin{equation}
 H = \mqty[ E_1 &amp; V \\ V^* &amp; E_2 ]
@@ -1297,64 +1322,4 @@ T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}}
 \end{align}\]
 
 <p>这表明 \(S_x, S_y\) 的期望值将以频率 \(2\Omega\) 围绕z轴旋转!
-这就是我们称之为Larmour进动的原因。</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章中, 我们讨论Larmour问题. 我们首先介绍轨道和自旋电子磁矩. 先定义Bohr磁子:]]></summary></entry><entry><title type="html">QM1 常见对易关系的推导和结果</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/" rel="alternate" type="text/html" title="QM1 常见对易关系的推导和结果" /><published>2024-10-07T19:06:00+11:00</published><updated>2024-10-07T19:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-Commutation-Relations/"><![CDATA[<p>这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:</p>
-
-\[\bqty{\hat{x}_\alpha,\,\hat{x}_\beta}=0 \quad \bqty{\hat{p}_\alpha,\,\hat{p}_\beta}=0\]
-
-<p>最重要的对易关系是位置和动量的对易关系:</p>
-
-\[\bqty{\hat{x}_\alpha,\,\hat{p}_\beta}=\mathrm{i}\hbar\delta_{\alpha\beta}\]
-
-<p>简单介绍一下Levi-Civita符号:</p>
-
-\[\epsilon_{\alpha \beta \gamma}\]
-
-<p>正着来就是+1, 反着来就是-1:</p>
-
-\[\epsilon_{123}=\epsilon_{231}=\epsilon_{312}= 1 \quad \epsilon_{132}=\epsilon_{213}=\epsilon_{321}= -1\]
-
-<p>一旦有指标重复了, 结果就是0.
-接下来, 我们讨论角动量算符:</p>
-
-\[\left[\hat{L}_\alpha,\,\hat{x}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{x}_\gamma\]
-
-\[\left[\hat{L}_\alpha,\,\hat{p}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{p}_\gamma\]
-
-\[\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=\mathrm{i}\hbar\epsilon_{\alpha\beta\gamma}\hat{L}_\gamma\]
-
-<p>为了证明这些关系, 我们还需要以下两个公式:</p>
-
-\[\epsilon_{\alpha\beta\gamma}\epsilon_{\rho\tau\gamma}=\delta_{\alpha\rho}\delta_{\beta\tau} - \delta_{\alpha\tau}\delta_{\beta\rho}\]
-
-\[\left[\hat{A}\hat{B},\,\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right] + \left[\hat{A},\hat{C}\right]\hat{B}\]
-
-\[\left[\hat{A},\,\hat{B}\hat{C}\right]=\left[\hat{A},\,\hat{B}\right]\hat{C} + \hat{B}\left[\hat{A},\,\hat{C}\right]\]
-
-<p>先证明第一个:</p>
-
-\[\begin{aligned}
-    \bqty{\hat{L}_\alpha,\,\hat{x}_\beta} =&amp; \bqty{\epsilon_{\alpha\mu\nu}\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} = \epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu\hat{p}_\nu,\,\hat{x}_\beta} \\
-  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+\epsilon_{\alpha\mu\nu}\bqty{\hat{x}_\mu,\,\hat{x}_\beta}\hat{p}_\nu \\
-  =&amp; \epsilon_{\alpha\mu\nu}\hat{x}_\mu\bqty{\hat{p}_\nu,\,\hat{x}_\beta}+0\\
-  =&amp; \epsilon_{\alpha\mu\nu} \hat{x}_\mu (-\mathrm{i}\hbar\delta_{\nu\beta}) \\
-  =&amp; \epsilon_{\alpha\beta\mu} \mathrm{i} \hbar \hat{x}_\mu
-\end{aligned}\]
-
-<p>第二个证明方法类似.
-现在看看第三个</p>
-
-\[\begin{aligned}
-\left[\hat{L}_\alpha,\,\hat{L}_\beta\right]=&amp;\left[\epsilon_{\alpha \mu \nu} \hat{x}_\mu \hat{p}_\nu, \epsilon_{\beta \lambda \tau} \hat{x}_\lambda \hat{p}_\tau\right]\\
-=&amp; \varepsilon_{\alpha \mu \nu}\varepsilon_{\beta \lambda \tau}\left[\hat{x}_\mu \hat{p}_v, \hat{x}_\lambda \hat{p}_\tau\right]\\
-=&amp; \text{Expand everything}\\
-=&amp; \mathrm{i}\hbar \epsilon_{\alpha \mu \nu} \epsilon_{\beta \tau v} \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar \epsilon_{\alpha \nu \mu} \epsilon_{\beta \lambda \mu} \hat{x}_\lambda \hat{p}_\nu \\
-=&amp; \mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\mu \tau}-\delta_{\alpha \tau} \delta_{\mu \beta}\right) \hat{x}_\mu \hat{p}_\tau-\mathrm{i}\hbar\left(\delta_{\alpha \beta} \delta_{\nu \lambda}-\delta_{\alpha \lambda} \delta_{\nu \beta}\right) \hat{x}_\lambda \hat{p}_\nu \\
-=&amp; \mathrm{i}\hbar\left(\hat{x}_\alpha \hat{p}_\beta-\hat{x}_\beta \hat{p}_\alpha\right)
-\end{aligned}\]
-
-<p>关键在于要认识到指标\(\mu\)和\(\nu\)是任意的, 当\(\alpha=\beta\)时, 结果为0.
-此外，我们可以利用\(\delta\)来简化表达式.
-你可以展开右边作为一个简单的检查.
-自旋的对易关系也是一样的:</p>
-
-\[\left[\hat{S}_\alpha, \hat{S}_\beta\right]=\mathrm{i} \hbar \epsilon_{\alpha \beta \gamma} \hat{S}_\gamma\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:]]></summary></entry></feed>
+这就是我们称之为Larmour进动的原因。</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章中, 我们讨论Larmour问题. 我们首先介绍轨道和自旋电子磁矩. 先定义Bohr磁子:]]></summary></entry></feed>
