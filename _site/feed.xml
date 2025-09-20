@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T22:28:11+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-09-18T23:56:55+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
   <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
 </blockquote>
 
@@ -591,8 +591,15 @@ H(\lambda(t))\ket{n(t)} = E_n(t)\ket{n(t)}
 \end{equation}\]
 
 <p>注意, 这只是在\(t\)时刻的瞬时本征值和本征态, 它们都是时间的函数.
-\(\ket{n(t)}\)并不是系统的真实态, 也不是Schrödinger方程的解, 他就是照相机在\(t\)时刻拍下的系统的本征态.
-而且不同时刻的\(\ket{n(t)}\)之间没有任何关系, 你只能在一张照片内谈论正交:</p>
+\(\ket{n(t)}\)并不是系统的真实态, 也不是Schrödinger方程的解, 他就是照相机在\(t\)时刻拍下的系统的本征态.</p>
+
+<blockquote>
+  <p>所以\(\ket{n;t}\)是一个瞬时的概念, 如果我们以他为初态, 我们在\(t+t_1\)时刻得到的态是\(U(t+t_1, t)\ket{n;t}\), 这一般不等于\(\ket{n;t+t_1}\).
+而\(\ket{n;t+t_1}\)是另一个时刻的瞬时本征态, 它与\(\ket{n;t}\)没有直接的关系.
+而绝热定理就告诉了我们什么情况下可能有关系.</p>
+</blockquote>
+
+<p>而且不同时刻的\(\ket{n(t)}\)之间没有任何关系, 你只能在一张照片内谈论正交:</p>
 
 \[\begin{equation}
   \braket{n(t)}{m(t)} = \delta_{nm}, \quad \braket{n(t)}{n(t')} \neq 1, \quad t \neq t'
