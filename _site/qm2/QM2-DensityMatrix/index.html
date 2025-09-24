@@ -463,6 +463,75 @@ E_B = \left\{ \left( \frac{1}{2}, \ket{\uparrow} \right), \left( \frac{1}{2}, \k
   <li>\(\tr{\rho^2} \leq 1\), 当且仅当 \(\rho\) 是纯态时取等号.</li>
 </ol>
 
+<p>我们来一个一个的说明, 考虑密度矩阵:</p>
+
+\[\begin{equation}
+\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \Rightarrow \rho^\dagger = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \rho
+\end{equation}\]
+
+<p>这个确实是很直白的, 没什么好说的.</p>
+
+<p>我们来证明第二个性质, \(\rho\) 的本征值非负, 是半正定的.</p>
+
+\[\begin{equation}
+\mel{\psi}{\rho}{\psi} = \sum_{i} p_i \braket{\psi}{\psi_i} \braket{\psi_i}{\psi} = \sum_{i} p_i |\braket{\psi}{\psi_i}|^2 \geq 0
+\end{equation}\]
+
+<p>自然而然的, 本征值是非负的.
+我们来证明第三个性质, \(\tr(\rho) = 1\).</p>
+
+\[\begin{align}
+\tr(\rho) &amp;= \sum_{i} p_i \tr(\ket{\psi_i} \bra{\psi_i}) \\
+&amp;= \sum_{i} p_i \braket{\psi_i}{\psi_i} \\
+&amp;= \sum_{i} p_i \cdot 1 \\
+&amp;= 1
+\end{align}\]
+
+<p>毕竟对于每个系统态是归一化的, 而且经典概率层面上也要求概率和为1.
+我们来证明第四个性质, \(\rho\) 不受到态的相位影响.</p>
+
+\[\begin{equation}
+\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \sum_{i} p_i e^{i\phi_i} \ket{\psi_i} e^{-i\phi_i} \bra{\psi_i} = \rho
+\end{equation}\]
+
+<p>一个是ket, 一个是bra, 自然是相消的, 所以密度矩阵不受相位影响.
+我们来证明第五个性质, \(\tr{\rho^2} \leq 1\), 当且仅当 \(\rho\) 是纯态时取等号.</p>
+
+\[\begin{align}
+\tr{\rho^2} &amp;= \tr{\left( \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \right)^2} \\
+&amp;= \tr{\sum_{i,j} p_i p_j \ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
+&amp;= \sum_{i,j} p_i p_j \tr{\ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
+&amp;= \sum_{i,j} p_i p_j \braket{\psi_i}{\psi_j} \braket{\psi_j}{\psi_i} \\
+&amp;= \sum_{i,j} p_i p_j |\braket{\psi_i}{\psi_j}|^2
+\end{align}\]
+
+<p>如果 \(\rho\) 是纯态, 那么 \(\rho = \ket{\psi} \bra{\psi}\), 这时候:</p>
+
+\[\begin{align}
+\tr{\rho^2} &amp;= \tr{\ket{\psi} \bra{\psi} \ket{\psi} \bra{\psi}} \\
+&amp;= \tr{\ket{\psi} \bra{\psi}} \\
+&amp;= \braket{\psi}{\psi} \\
+&amp;= 1
+\end{align}\]
+
+<hr />
+<h2 id="纯度">纯度</h2>
+
+<p>一旦我们注意到 \(\tr{\rho^2}\) 的性质, 我们就可以定义一个量来衡量混合态的纯度:</p>
+
+\[\begin{equation}
+P = \tr{\rho^2}
+\end{equation}\]
+
+<p>纯度的范围是 \(0 \leq P \leq 1\), 当且仅当 \(P = 1\) 时, \(\rho\) 是纯态.
+纯度越接近1, 混合态越接近纯态; 纯度越接近0, 混合态越接近完全混合态.
+我们现在尝试来说明这件事.
+如果密度矩阵是对角的, 我们有:</p>
+
+\[\begin{equation}
+\rho = \operatorname{diag}(p_1, p_2, \ldots, p_n) \Rightarrow \tr{\rho^2} = \sum_{i} p_i^2
+\end{equation}\]
+
         
       </section>
 

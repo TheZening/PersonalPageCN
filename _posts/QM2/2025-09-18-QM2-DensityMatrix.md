@@ -187,3 +187,88 @@ $$
 3. $$\tr(\rho) = 1$$.
 4. $$\rho$$ 不收到态的相位影响.
 5. $$\tr{\rho^2} \leq 1$$, 当且仅当 $$\rho$$ 是纯态时取等号.
+
+
+我们来一个一个的说明, 考虑密度矩阵:
+
+$$
+\begin{equation}
+\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \Rightarrow \rho^\dagger = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \rho
+\end{equation}
+$$
+
+这个确实是很直白的, 没什么好说的.
+
+我们来证明第二个性质, $$\rho$$ 的本征值非负, 是半正定的.
+
+$$
+\begin{equation}
+\mel{\psi}{\rho}{\psi} = \sum_{i} p_i \braket{\psi}{\psi_i} \braket{\psi_i}{\psi} = \sum_{i} p_i |\braket{\psi}{\psi_i}|^2 \geq 0
+\end{equation}
+$$
+
+自然而然的, 本征值是非负的.
+我们来证明第三个性质, $$\tr(\rho) = 1$$.
+
+$$
+\begin{align}
+\tr(\rho) &= \sum_{i} p_i \tr(\ket{\psi_i} \bra{\psi_i}) \\
+&= \sum_{i} p_i \braket{\psi_i}{\psi_i} \\
+&= \sum_{i} p_i \cdot 1 \\
+&= 1
+\end{align}
+$$
+
+毕竟对于每个系统态是归一化的, 而且经典概率层面上也要求概率和为1.
+我们来证明第四个性质, $$\rho$$ 不受到态的相位影响.
+
+$$
+\begin{equation}
+\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \sum_{i} p_i e^{i\phi_i} \ket{\psi_i} e^{-i\phi_i} \bra{\psi_i} = \rho
+\end{equation}
+$$
+
+一个是ket, 一个是bra, 自然是相消的, 所以密度矩阵不受相位影响.
+我们来证明第五个性质, $$\tr{\rho^2} \leq 1$$, 当且仅当 $$\rho$$ 是纯态时取等号.
+
+$$
+\begin{align}
+\tr{\rho^2} &= \tr{\left( \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \right)^2} \\
+&= \tr{\sum_{i,j} p_i p_j \ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
+&= \sum_{i,j} p_i p_j \tr{\ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
+&= \sum_{i,j} p_i p_j \braket{\psi_i}{\psi_j} \braket{\psi_j}{\psi_i} \\
+&= \sum_{i,j} p_i p_j |\braket{\psi_i}{\psi_j}|^2
+\end{align}
+$$
+
+如果 $$\rho$$ 是纯态, 那么 $$\rho = \ket{\psi} \bra{\psi}$$, 这时候:
+
+$$\begin{align}
+\tr{\rho^2} &= \tr{\ket{\psi} \bra{\psi} \ket{\psi} \bra{\psi}} \\
+&= \tr{\ket{\psi} \bra{\psi}} \\
+&= \braket{\psi}{\psi} \\
+&= 1
+\end{align}$$
+
+
+---
+## 纯度
+
+一旦我们注意到 $$\tr{\rho^2}$$ 的性质, 我们就可以定义一个量来衡量混合态的纯度:
+
+$$
+\begin{equation}
+P = \tr{\rho^2}
+\end{equation}
+$$
+
+纯度的范围是 $$0 \leq P \leq 1$$, 当且仅当 $$P = 1$$ 时, $$\rho$$ 是纯态.
+纯度越接近1, 混合态越接近纯态; 纯度越接近0, 混合态越接近完全混合态.
+我们现在尝试来说明这件事.
+如果密度矩阵是对角的, 我们有:
+
+$$
+\begin{equation}
+\rho = \operatorname{diag}(p_1, p_2, \ldots, p_n) \Rightarrow \tr{\rho^2} = \sum_{i} p_i^2
+\end{equation}
+$$
