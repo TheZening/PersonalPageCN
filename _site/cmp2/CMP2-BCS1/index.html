@@ -1,0 +1,562 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CMP2 BCS超导理论1 - 来去之间</title>
+<meta name="description" content="在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注    低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了.   低温金属, 主要是简单金属, 比如铝, 铅, 汞等.   某些合金, 比如NbTi, Nb3Sn等.">
+
+
+  <meta name="author" content="来去之间">
+  
+  <meta property="article:author" content="来去之间">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="来去之间">
+<meta property="og:title" content="CMP2 BCS超导理论1">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/">
+
+
+  <meta property="og:description" content="在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注    低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了.   低温金属, 主要是简单金属, 比如铝, 铅, 汞等.   某些合金, 比如NbTi, Nb3Sn等.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-09-12T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          来去之间
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">来去之间</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>来去之际, 举手投足, 皆是风景.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CMP2 BCS超导理论1">
+    <meta itemprop="description" content="在这篇文章里, 我们来讨论BCS超导理论的基本内容.BCS理论于Bardeen, Cooper, Schrieffer在1957年提出.我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系.他主要关注  低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了.  低温金属, 主要是简单金属, 比如铝, 铅, 汞等.  某些合金, 比如NbTi, Nb3Sn等.">
+    <meta itemprop="datePublished" content="2025-09-12T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" itemprop="url">CMP2 BCS超导理论1
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>在这篇文章里, 我们来讨论BCS超导理论的基本内容.
+BCS理论于Bardeen, Cooper, Schrieffer在1957年提出.
+我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系.
+他主要关注</p>
+<ol>
+  <li>低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了.</li>
+  <li>低温金属, 主要是简单金属, 比如铝, 铅, 汞等.</li>
+  <li>某些合金, 比如NbTi, Nb3Sn等.</li>
+</ol>
+
+<p>超导不仅仅是要满足电阻为0, 还要满足如下条件, 否则无法区分超导这种新的物质状态, 和完美的一根导线:</p>
+<ol>
+  <li>完全抗磁性(迈斯纳效应): 进入超导态后, 会把体内的磁场完全排斥出去(除表面一层渗透深度).</li>
+  <li>但是存在一个临界磁场, 能完全破坏超导态的最小磁场强度\(H_c\).</li>
+  <li>存在一个能维持超导态的最大电流(临界电流\(I_c\)), 超过这个电流超导态就会被破坏.</li>
+</ol>
+
+<blockquote>
+  <p>我们经常会在文献上看到I型超导, II型超导的说法, 这是超导体宏观电磁性质的分类, 和什么理论没关系.
+I型超导是指那些在临界磁场\(H_c\)以下完全抗磁的超导体, 典型的I型超导体是铝,铅等.
+II型超导是指那些在临界磁场\(H_{c1}\)以下完全抗磁, 在\(H_{c1} &lt; H &lt; H_{c2}\)之间部分抗磁 (磁场以量子化磁通涡旋的形式进入), 在\(H &gt; H_{c2}\)完全失去超导性的超导体.
+BCS理论仍然可以描述II型超导体, 比如NbTi, Nb3Sn等材料.</p>
+</blockquote>
+
+<hr />
+<h2 id="基本假设">基本假设</h2>
+
+<p>我们现在从一些固体物理学的基础假设出发.</p>
+
+<ol>
+  <li>我们假设电子在近零温晶格中运动, 受到周期势的影响, 但是没有外部磁场, 没有磁性杂质, 所以体系具有时间反演对称性.</li>
+  <li>晶格动量是守恒的, 所以\(\boldsymbol{k}_1 + \boldsymbol{k}_2 = \boldsymbol{k}_3 + \boldsymbol{k}_4 + \boldsymbol{G}\), 其中\(\boldsymbol{G}\)是倒格矢.</li>
+  <li>只有一条能带穿过费米面, 其他能带离费米面较远, 可以忽略.</li>
+  <li>在费米面附近的色散关系就是简单的二次型.</li>
+  <li>我们考虑巨正则系综, 总电子数在平均意义上固定即可, 而不是一个严格的总电子数.</li>
+  <li>我们只考虑零总动量最省能配对.</li>
+</ol>
+
+<p>现在我们先关注一个更基础的问题: 任意弱吸引必然束缚态.
+这个结论是BCS理论的基础, 也是BCS理论的一个重要假设.
+我们考虑一个被填满的费米海, 然后在上面加入两个电子, 要求他们总体晶格动量是0, 这两个电子的动量分别是\(\boldsymbol{k}\)和\(-\boldsymbol{k}\).
+轨道是对称的, 从而自旋是单态的.
+举个例子, 对于\(\boldsymbol{k}\), 我们立刻形成了一个自旋单态:</p>
+
+\[\begin{equation}
+\ket{\boldsymbol{k}, -\boldsymbol{k}; S=0} = \frac{1}{\sqrt{2}} \left( \hat{c}^\dagger_{\boldsymbol{k}, \uparrow} \hat{c}^\dagger_{-\boldsymbol{k}, \downarrow} - \hat{c}^\dagger_{\boldsymbol{k}, \downarrow} \hat{c}^\dagger_{-\boldsymbol{k}, \uparrow} \right) \ket{\text{FS}}
+\end{equation}\]
+
+<p>其中\(\ket{\text{FS}}\)是费米海, \(\hat{c}^\dagger_{\boldsymbol{k}, \sigma}\)是产生一个动量为\(\boldsymbol{k}\), 自旋为\(\sigma\)的电子的产生算符.
+我们假设在费米海上多出来的那两只电子的整体量子态, 是所有可能的叠加:</p>
+
+\[\begin{equation}
+\ket{\Psi} = \sum_{|\boldsymbol{k}| &gt; k_F} a_{\boldsymbol{k}} \ket{\boldsymbol{k}, -\boldsymbol{k}; S=0}
+\end{equation}\]
+
+<p>其中\(k_F\)是费米wavevector, \(a_{\boldsymbol{k}}\)就是组合系数.
+此时的自由Hamiltonian就是:</p>
+
+\[\begin{equation}
+H_0 = \sum_{|\boldsymbol{q}| &gt; k_F, \sigma} \xi_{\boldsymbol{q}} \hat{c}^\dagger_{\boldsymbol{q}, \sigma} \hat{c}_{\boldsymbol{q}, \sigma} \quad \xi_{\boldsymbol{q}} = \epsilon_{\boldsymbol{q}} - \mu
+\end{equation}\]
+
+<p>举个例子:</p>
+
+\[\begin{equation}
+H_0 \ket{\boldsymbol{k}, -\boldsymbol{k}; S=0} = 2 \xi_{\boldsymbol{k}} \ket{\boldsymbol{k}, -\boldsymbol{k}; S=0}
+\end{equation}\]
+
+<p>接下来我们引入相互作用, 我们就假设他是一个常数相互作用, 我们有:</p>
+
+\[\begin{equation}
+H_{\text{int}} = \sum_{|\boldsymbol{k}|, |\boldsymbol{k}'| &gt; k_F} V_{\boldsymbol{k}, \boldsymbol{k}'} \ket{\boldsymbol{k}, -\boldsymbol{k}; S=0} \bra{\boldsymbol{k}', -\boldsymbol{k}'; S=0}
+\end{equation}\]
+
+<p>其中矩阵元:</p>
+
+\[\begin{equation}
+V_{\boldsymbol{k}, \boldsymbol{k}'} = \mel{\boldsymbol{k}, -\boldsymbol{k}; S=0}{V}{\boldsymbol{k}', -\boldsymbol{k}'; S=0}
+\end{equation}\]
+
+<p>他满足:</p>
+
+\[\begin{equation}
+V_{\boldsymbol{k}, \boldsymbol{k}'} = \begin{cases} -V &lt; 0, &amp; \text{if } |\xi_{\boldsymbol{k}}|, |\xi_{\boldsymbol{k}'}| &lt; \hbar \omega_D \\ 0, &amp; \text{otherwise} \end{cases}
+\end{equation}\]
+
+<p>只在费米面附近一小段能量壳内有近似各向同性, 而且常数样式的吸引.
+这些记号有点长, 我们引入如下的记号解决空间:</p>
+
+\[\begin{equation}
+\hat{b}_{\boldsymbol{k}}^\dagger = \frac{1}{\sqrt{2}} \left( \hat{c}^\dagger_{\boldsymbol{k}, \uparrow} \hat{c}^\dagger_{-\boldsymbol{k}, \downarrow} - \hat{c}^\dagger_{\boldsymbol{k}, \downarrow} \hat{c}^\dagger_{-\boldsymbol{k}, \uparrow} \right)
+\end{equation}\]
+
+<p>这样我们的相互作用势能就写成了:</p>
+
+\[\begin{equation}
+H_{\text{int}} = \sum_{|\boldsymbol{k}|, |\boldsymbol{k}'| &gt; k_F} V_{\boldsymbol{k}, \boldsymbol{k}'} \hat{b}_{\boldsymbol{k}}^\dagger \hat{b}_{\boldsymbol{k}'}
+\end{equation}\]
+
+<p>现在我们要求解的问题是:</p>
+
+\[\begin{equation}
+(H_0 + H_{\text{int}}) \ket{\Psi} = E \ket{\Psi}
+\end{equation}\]
+
+<p>变成:</p>
+
+\[\begin{equation}
+\left( 2 \xi_{\boldsymbol{k}} a_{\boldsymbol{k}} + \sum_{|\boldsymbol{k}'| &gt; k_F} V_{\boldsymbol{k}, \boldsymbol{k}'} a_{\boldsymbol{k}'} \right) = E a_{\boldsymbol{k}}
+\end{equation}\]
+
+<p>这等价于:</p>
+
+\[\begin{equation}
+(2 \xi_{\boldsymbol{k}} - E) a_{\boldsymbol{k}} = V \sum_{|\boldsymbol{k}'| &gt; k_F} a_{\boldsymbol{k}'}
+\end{equation}\]
+
+<p>和Schrödinger方程没啥两样的, 你还是得把系数\(a_{\boldsymbol{k}}\)解出来.</p>
+
+\[\begin{equation}
+a_{\boldsymbol{k}} = \frac{V}{2 \xi_{\boldsymbol{k}} - E} \sum_{|\boldsymbol{k}'| &gt; k_F} a_{\boldsymbol{k}'}
+\end{equation}\]
+
+<p>两侧同时对\(\boldsymbol{k}\)求和, 得到:</p>
+
+\[\begin{equation}
+1 = V \sum_{|\boldsymbol{k}| &gt; k_F} \frac{1}{2 \xi_{\boldsymbol{k}} - E}
+\end{equation}\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#cmp2" class="page__taxonomy-item p-category" rel="tag">CMP2</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-09-12T00:00:00+10:00">September 12, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=CMP2+BCS%E8%B6%85%E5%AF%BC%E7%90%86%E8%AE%BA1%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp2%2FCMP2-BCS1%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp2%2FCMP2-BCS1%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=CMP2+BCS%E8%B6%85%E5%AF%BC%E7%90%86%E8%AE%BA1%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp2%2FCMP2-BCS1%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-LindbladianEquation/" class="pagination--pager" title="QM2 Lindbladian量子动力学方程">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/updates/RecentUpdate/" class="pagination--pager" title="新闻">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

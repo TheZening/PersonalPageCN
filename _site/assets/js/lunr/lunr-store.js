@@ -53,6 +53,12 @@ var store = [{
         "url": "/PersonalPageCN/qm2/QM2-LindbladianEquation/",
         "teaser": null
       },{
+        "title": "CMP2 BCS超导理论1",
+        "excerpt":"在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \\(T_c &lt; 30\\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等. 超导不仅仅是要满足电阻为0, 还要满足如下条件, 否则无法区分超导这种新的物质状态, 和完美的一根导线: 完全抗磁性(迈斯纳效应): 进入超导态后, 会把体内的磁场完全排斥出去(除表面一层渗透深度). 但是存在一个临界磁场, 能完全破坏超导态的最小磁场强度\\(H_c\\). 存在一个能维持超导态的最大电流(临界电流\\(I_c\\)), 超过这个电流超导态就会被破坏. 我们经常会在文献上看到I型超导, II型超导的说法, 这是超导体宏观电磁性质的分类, 和什么理论没关系. I型超导是指那些在临界磁场\\(H_c\\)以下完全抗磁的超导体, 典型的I型超导体是铝,铅等. II型超导是指那些在临界磁场\\(H_{c1}\\)以下完全抗磁, 在\\(H_{c1} &lt; H &lt; H_{c2}\\)之间部分抗磁 (磁场以量子化磁通涡旋的形式进入), 在\\(H &gt;...","categories": ["CMP2"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp2/CMP2-BCS1/",
+        "teaser": null
+      },{
         "title": "新闻",
         "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for...","categories": ["Updates"],
         "tags": [],
