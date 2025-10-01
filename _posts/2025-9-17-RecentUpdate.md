@@ -16,11 +16,13 @@ categories:
 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.  
 [Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits](https://www.nature.com/articles/s41534-021-00386-2)
 
-2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了.  
+2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B 上了.  
 [Unidirectional magnetotransport of linearly dispersing topological edge states](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406)
 
 2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.  
 [Ultrafast coherent control of a hole spin qubit in a germanium quantum dot](https://www.nature.com/articles/s41467-021-27880-7)
+
+2022-Jan-1: 灾厄来临, 休学一年. 时间如此漫长...
 
 2023-Dec-04: 我们在关于平面Ge量子点空穴量子比特的理论研究, 现在发表在 Physics Review B上了.
 [Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301)
