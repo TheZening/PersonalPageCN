@@ -1,6 +1,6 @@
 ---
 title: "三角函数查询表格"
-date: 2025-10-2
+date: 2025-10-2-16:00:00+08:00
 categories:
   - Math
 tags:

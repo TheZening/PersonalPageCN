@@ -82,10 +82,4 @@ var store = [{
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix/",
         "teaser": null
-      },{
-        "title": "三角函数查询表格",
-        "excerpt":"基本定义 基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念. 这是最重要的, 不要忘掉… \\[\\begin{align} \\sin \\theta &amp;= \\frac{\\text{opposite}}{\\text{hypotenuse}}\\\\ \\cos \\theta &amp;= \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\\\ \\tan \\theta &amp;= \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin \\theta}{\\cos \\theta} \\end{align}\\] 还有三个倒数函数 \\[\\begin{align} \\csc \\theta &amp;= \\frac{1}{\\sin \\theta} = \\frac{\\text{hypotenuse}}{\\text{opposite}}\\\\ \\sec \\theta &amp;= \\frac{1}{\\cos \\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}\\\\ \\cot \\theta &amp;= \\frac{1}{\\tan \\theta} = \\frac{\\text{adjacent}}{\\text{opposite}} = \\frac{\\cos...","categories": ["Math"],
-        "tags": ["Trigs Table"],
-        "url": "/PersonalPageCN/math/TrigsTable/",
-        "teaser": null
       }]
