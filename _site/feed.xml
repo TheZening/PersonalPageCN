@@ -1,4 +1,351 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-02T15:30:50+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-03T01:22:30+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-10-03T00:05:00+10:00</published><updated>2025-10-03T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+
+<p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
+<a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
+
+<p>2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201">Theory of hole-spin qubits in strained germanium quantum dots</a></p>
+
+<p>2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
+<a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
+
+<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B 上了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
+
+<p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.<br />
+<a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
+
+<p>2022-Jan-1: 灾厄来临, 休学一年. 时间如此漫长…</p>
+
+<p>2023-Dec-04: 我们在关于平面Ge量子点空穴量子比特的理论研究, 现在发表在 Physics Review B上了.
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
+
+<p>2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的理论研究, 现在发表在 Physical Review B上了.<br />
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427">Electrical operation of hole spin qubits in planar MOS silicon quantum dots</a></p>
+
+<p>2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在Si系统中展示了singlet-triplet的空穴量子比特, 这项成果现在发表在 Nature Communications上了.<br />
+<a href="https://www.nature.com/articles/s41467-024-51902-9">A singlet-triplet hole-spin qubit in MOS silicon</a></p>
+
+<p>2025-Apr-02: 我们在Ge空穴自旋量子比特体系中关于\(1/f\)噪音的理论研究, 现在发表在 Physical Review B上了.
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403">Dephasing of planar Ge hole spin qubits due to 1/f charge noise</a></p>
+
+<p>2025-Aug-1: 离开了UNSW, 这真是个令人伤心的地方. 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!</p>
+
+<p>2025-Aug-15: 我们关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的理论研究, 现在发表在 IEEE Transaction on quantum engineering 上了.
+<a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
+
+<p>2025-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T18:00:00+10:00</published><updated>2025-10-02T18:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+
+<p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
+这是最重要的, 不要忘掉…</p>
+
+\[\begin{align}
+\sin \theta &amp;= \frac{\text{opposite}}{\text{hypotenuse}}\\
+\cos \theta &amp;= \frac{\text{adjacent}}{\text{hypotenuse}}\\
+\tan \theta &amp;= \frac{\text{opposite}}{\text{adjacent}} = \frac{\sin \theta}{\cos \theta}
+\end{align}\]
+
+<p>还有三个倒数函数</p>
+
+\[\begin{align}
+\csc \theta &amp;= \frac{1}{\sin \theta} = \frac{\text{hypotenuse}}{\text{opposite}}\\
+\sec \theta &amp;= \frac{1}{\cos \theta} = \frac{\text{hypotenuse}}{\text{adjacent}}\\
+\cot \theta &amp;= \frac{1}{\tan \theta} = \frac{\text{adjacent}}{\text{opposite}} = \frac{\cos \theta}{\sin \theta}
+\end{align}\]
+
+<hr />
+<h2 id="一般情况下怎么用边求值">一般情况下怎么用边求值?</h2>
+
+<p>如果不是直角三角形, 也可以用正弦定理和余弦定理来求值.</p>
+
+<p>角\(A, B, C\) 对应的边分别是 \(a, b, c\), 就是对边.
+\(R\)是外接圆半径.</p>
+
+<p>从而我们有正弦定理:</p>
+
+\[\begin{equation}
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+\end{equation}\]
+
+<p>三角形面积公式:</p>
+
+\[\begin{equation}
+\text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{abc}{4R}
+\end{equation}\]
+
+<p>当然还有余弦定理:</p>
+
+\[\begin{align}
+\cos A &amp;= \frac{b^2 + c^2 - a^2}{2bc}\\
+\cos B &amp;= \frac{a^2 + c^2 - b^2}{2ac}\\
+\cos C &amp;= \frac{a^2 + b^2 - c^2}{2ab}
+\end{align}\]
+
+<p>当角是钝角时, 余弦为负数, 可以用余弦定理判断三角形的形状!</p>
+
+<hr />
+<h2 id="求值问题">求值问题</h2>
+<p>一些常见的三角函数值, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">角度 (°)</th>
+      <th style="text-align: center">0</th>
+      <th style="text-align: center">30</th>
+      <th style="text-align: center">45</th>
+      <th style="text-align: center">60</th>
+      <th style="text-align: center">90</th>
+      <th style="text-align: center">120</th>
+      <th style="text-align: center">135</th>
+      <th style="text-align: center">150</th>
+      <th style="text-align: center">180</th>
+      <th style="text-align: center">210</th>
+      <th style="text-align: center">225</th>
+      <th style="text-align: center">240</th>
+      <th style="text-align: center">270</th>
+      <th style="text-align: center">300</th>
+      <th style="text-align: center">315</th>
+      <th style="text-align: center">330</th>
+      <th style="text-align: center">360</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">弧度 (π)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{6}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{2\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{3\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{6}\)</td>
+      <td style="text-align: center">\(\pi\)</td>
+      <td style="text-align: center">\(\tfrac{7\pi}{6}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{4\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{3\pi}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{7\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{11\pi}{6}\)</td>
+      <td style="text-align: center">\(2\pi\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\sin x\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\cos x\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\tan x\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\sqrt{3}\)</td>
+      <td style="text-align: center">不定义</td>
+      <td style="text-align: center">\(-\sqrt{3}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\sqrt{3}\)</td>
+      <td style="text-align: center">不定义</td>
+      <td style="text-align: center">\(-\sqrt{3}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>因为周期性是\(2\pi\), 所以这种加减乘除是最简单的, 如果是\(k\)为整数, 则有:</p>
+
+\[\begin{align}
+\sin(\theta + 2k\pi) &amp;= \sin \theta\\
+\cos(\theta + 2k\pi) &amp;= \cos \theta\\
+\tan(\theta + 2k\pi) &amp;= \tan \theta
+\end{align}\]
+
+<p>平移\(\pi\), 也不太复杂:</p>
+
+\[\begin{align}
+\sin(\theta + k\pi) &amp;= (-1)^k \sin \theta\\
+\cos(\theta + k\pi) &amp;= (-1)^k \cos \theta\\
+\tan(\theta + k\pi) &amp;= \tan \theta
+\end{align}\]
+
+<p>⚠️唯一需要小心的就是平移\(\pi/2\), 这个时候需要注意正负号:</p>
+
+\[\begin{align}
+\sin(\theta \pm \pi/2) &amp;= \cos \theta\\
+\cos(\theta \pm \pi/2) &amp;= \pm\sin \theta\\
+\tan(\theta \pm \pi/2) &amp;= \pm\cot \theta\\
+\end{align}\]
+
+<p>也能统一起来:</p>
+
+\[\begin{equation}
+\sin(\theta + k\pi/2) =
+\begin{cases}
+\sin \theta &amp; k \equiv 0 \pmod{4}\\
+\cos \theta &amp; k \equiv 1 \pmod{4}\\
+-\sin \theta &amp; k \equiv 2 \pmod{4}\\
+-\cos \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+\[\begin{equation}
+\cos(\theta + k\pi/2) =
+\begin{cases}
+\cos \theta &amp; k \equiv 0 \pmod{4}\\
+-\sin \theta &amp; k \equiv 1 \pmod{4}\\
+-\cos \theta &amp; k \equiv 2 \pmod{4}\\
+\sin \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+\[\begin{equation}
+\tan(\theta + k\pi/2) =
+\begin{cases}
+\tan \theta &amp; k \equiv 0 \pmod{4}\\
+\cot \theta &amp; k \equiv 1 \pmod{4}\\
+\tan \theta &amp; k \equiv 2 \pmod{4}\\
+\cot \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+<hr />
+<h2 id="角度加减法公式">角度加减法公式</h2>
+
+<p>角度的加减法是最一般的关系.</p>
+
+\[\begin{align}
+\sin(\alpha \pm \beta) &amp;= \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\\
+\cos(\alpha \pm \beta) &amp;= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta\\
+\tan(\alpha \pm \beta) &amp;= \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
+\end{align}\]
+
+<hr />
+<h2 id="倍角公式">倍角公式</h2>
+
+<p>就是怎么把\(2\)倍, \(4\)倍, 偶数倍这些东西变的简单一点.
+⚠️对于奇数倍的角, 实际上是De Moivre公式的应用.</p>
+
+\[\begin{align}
+\sin(2\theta) &amp;= 2\sin\theta\cos\theta\\
+\cos(2\theta) &amp;= \cos^2\theta - \sin^2\theta \\
+&amp;= 2\cos^2\theta - 1 = 1 - 2\sin^2\theta\\
+\tan(2\theta) &amp;= \frac{2\tan\theta}{1 - \tan^2\theta}
+\end{align}\]
+
+<p>也许万一能用得上:</p>
+
+\[\begin{align}
+\sin(3\theta) &amp;= 3\sin\theta - 4\sin^3\theta\\
+\cos(3\theta) &amp;= 4\cos^3\theta - 3\cos\theta\\
+\tan(3\theta) &amp;= \frac{3\tan\theta - \tan^3\theta}{1 - 3\tan^2\theta}
+\end{align}\]
+
+<hr />
+<h2 id="半角公式">半角公式</h2>
+
+<p>有一倍就有半倍, 也就是\(\theta/2\)</p>
+
+\[\begin{align}
+\sin(\theta/2) &amp;= \pm\sqrt{\frac{1 - \cos\theta}{2}}\\
+\cos(\theta/2) &amp;= \pm\sqrt{\frac{1 + \cos\theta}{2}}\\
+\tan(\theta/2) &amp;= \frac{\sin\theta}{1 + \cos\theta} = \frac{1 - \cos\theta}{\sin\theta}
+\end{align}\]
+
+<p>这里为什么有\(\pm\)号呢? 因为\(\theta/2\)的范围不确定, 需要根据具体情况来定.</p>
+
+<hr />
+<h2 id="积化和差公式">积化和差公式</h2>
+
+<p>这就是一些代数计算.</p>
+
+\[\begin{align}
+\sin\alpha\sin\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) - \cos(\alpha + \beta)]\\
+\cos\alpha\cos\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]\\
+\sin\alpha\cos\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)]\\
+\cos\alpha\sin\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)]
+\end{align}\]
+
+<hr />
+<h2 id="和差化积公式">和差化积公式</h2>
+
+<p>反过来算呗.</p>
+
+\[\begin{align}
+\sin\alpha \pm \sin\beta &amp;= 2\sin\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
+\cos\alpha \pm \cos\beta &amp;= 2\cos\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
+\end{align}\]
+
+<hr />
+<h2 id="降幂公式---微积分方法常用">降幂公式 - 微积分方法常用</h2>
+
+<p>有的时候我们会遇到换元方法, 他的起点就是:</p>
+
+\[\begin{equation}
+\sin^2 \theta + \cos^2 \theta = 1
+\end{equation}\]
+
+<p>这是最基本的, 其他的都是从这里推出来的.</p>
+
+\[\begin{equation}
+\tan^2 \theta + 1 = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta
+\end{equation}\]
+
+<p>配合二倍角, 半角公式, 也能得到:</p>
+
+\[\begin{equation}
+\sin^2 \theta = \frac{1 - \cos(2\theta)}{2}, \quad \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}
+\end{equation}\]
+
+<p>这样就能把平方降成一次了, 这样积分简单很多.
+还可以联系到\(\tan(\theta/2)\), 这样就能把三角函数都变成有理函数了.</p>
+
+\[\begin{align}
+\sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
+\cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
+\tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
+\end{align}\]]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 <p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
 
@@ -638,43 +985,7 @@ H = g \mu_{\text{B}} \mqty[ B_z &amp; B_x - \mathrm{i} B_y \\ B_x + \mathrm{i} B
 \[\begin{align}
 E_+ = + g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2} \\
 E_- = - g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2}
-\end{align}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:]]></summary></entry><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-09-17T00:05:00+10:00</published><updated>2025-09-17T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
-
-<p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
-<a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
-
-<p>2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了.<br />
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.125201">Theory of hole-spin qubits in strained germanium quantum dots</a></p>
-
-<p>2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
-<a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
-
-<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B 上了.<br />
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
-
-<p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.<br />
-<a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
-
-<p>2022-Jan-1: 灾厄来临, 休学一年. 时间如此漫长…</p>
-
-<p>2023-Dec-04: 我们在关于平面Ge量子点空穴量子比特的理论研究, 现在发表在 Physics Review B上了.
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
-
-<p>2024-Feb-22: 我们在金属-氧化物-半导体(MOS)系统中Si空穴自旋量子比特的理论研究, 现在发表在 Physical Review B上了.<br />
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.075427">Electrical operation of hole spin qubits in planar MOS silicon quantum dots</a></p>
-
-<p>2024-Sep-03: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 在Si系统中展示了singlet-triplet的空穴量子比特, 这项成果现在发表在 Nature Communications上了.<br />
-<a href="https://www.nature.com/articles/s41467-024-51902-9">A singlet-triplet hole-spin qubit in MOS silicon</a></p>
-
-<p>2025-Apr-02: 我们在Ge空穴自旋量子比特体系中关于\(1/f\)噪音的理论研究, 现在发表在 Physical Review B上了.
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.155403">Dephasing of planar Ge hole spin qubits due to 1/f charge noise</a></p>
-
-<p>2025-Aug-1: 离开了UNSW, 这真是个令人伤心的地方. 加入了Instituto de Ciencia de Materiales de Madrid (ICMM-CSIC), 西班牙国家科研委员会材料科学研究所, 期待新的开始!</p>
-
-<p>2025-Aug-15: 我们关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的理论研究, 现在发表在 IEEE Transaction on quantum engineering 上了.
-<a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
-
-<p>2025-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">CMP2 BCS超导理论1</title><link href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" rel="alternate" type="text/html" title="CMP2 BCS超导理论1" /><published>2025-09-12T00:00:00+10:00</published><updated>2025-09-12T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/"><![CDATA[<p>在这篇文章里, 我们来讨论BCS超导理论的基本内容.
+\end{align}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:]]></summary></entry><entry><title type="html">CMP2 BCS超导理论1</title><link href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" rel="alternate" type="text/html" title="CMP2 BCS超导理论1" /><published>2025-09-12T00:00:00+10:00</published><updated>2025-09-12T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/"><![CDATA[<p>在这篇文章里, 我们来讨论BCS超导理论的基本内容.
 BCS理论于Bardeen, Cooper, Schrieffer在1957年提出.
 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系.
 他主要关注</p>
@@ -1542,164 +1853,4 @@ T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}}
 
 \[\begin{equation}
   \delta(p-p') = \frac{1}{\hbar} \delta(k-k')
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质.]]></summary></entry><entry><title type="html">QM1 Rabi问题</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/" rel="alternate" type="text/html" title="QM1 Rabi问题" /><published>2024-10-10T00:06:00+11:00</published><updated>2024-10-10T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-RabiProblem/"><![CDATA[<p>在这篇文章里, 我们要讨论 <strong>Rabi 振荡</strong>, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的:</p>
-
-\[\begin{equation}
-  H = \mqty[E_1 &amp; W_{1,2} \\ W_{2,1} &amp; E_2]
-\end{equation}\]
-
-<blockquote>
-  <p>第一能级的能量是 \(E_1\), 第二能级的能量是 \(E_2\).中间的耦合项 \(W_{1,2}\) 会让两个能级混合, 所以我们叫它 <strong>coupling</strong>.</p>
-</blockquote>
-
-<blockquote>
-  <p>注意, 这个 \(H\) 是在 \((1,0)\) 和 \((0,1)\) 这组基下写的, 我们把它们叫做 \(\ket{+}\) 和 \(\ket{-}\).</p>
-</blockquote>
-
-<p>接下来我们先算一下这个二能级系统的本征值, 很简单:</p>
-
-<p>\(\begin{align}
-  E_\pm = \frac{\Tr(H) \pm \sqrt{(\Tr(H))^2-4 \det(H)}}{2}
-\end{align}\)
-算出来就是</p>
-
-\[\begin{equation}
-  E_{ \pm}=\frac{1}{2}\left[E_1+E_2 \pm \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{12}}^2}\right]
-\end{equation}\]
-
-<p>接着我们定义几个量:</p>
-
-\[\begin{equation}
-  \tan \theta=\frac{2\norm{W_{12}}}{E_1-E_2} \quad e^{i \phi}=\frac{W_{21}}{2\norm{W_{12}}}
-\end{equation}\]
-
-<p>那么本征态可以写成:</p>
-
-\[\begin{align}
-  &amp; E_+ \, \text{and} \,  \boldsymbol{v}_+ = (\cos\theta/2, e^{i\phi}\sin\theta/2)^T \\
-  &amp; E_- \, \text{and} \, \boldsymbol{v}_- = (\sin\theta/2, -e^{i\phi}\cos\theta/2)^T
-\end{align}\]
-
-<p>原来的基矢也可以用这两个本征态表示成:</p>
-
-\[\begin{align}
-  \ket{+} =&amp; \cos \frac{\theta}{2}\left|v_{+}\right\rangle+\sin \frac{\theta}{2}\left|v_{-}\right\rangle \\
-  \ket{-} =&amp; \left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi} \\
-\end{align}\]
-
-<p>先放这, 暂时不用.我们现在考虑一个一般的态, 用 \(\boldsymbol{v}\) 基写出来:</p>
-
-\[\begin{equation}
-  |\psi;t\rangle=c_{+} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle+c_{-} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle
-\end{equation}\]
-
-<p>假设系统一开始在 \(\ket{-}\):</p>
-
-\[\begin{equation}
-  |\psi;0\rangle=\left(\sin \frac{\theta}{2}\left|v_{+}\right\rangle-\cos \frac{\theta}{2}\left|v_{-}\right\rangle\right) e^{-i \phi}
-\end{equation}\]
-
-<p>因为在这个基下 \(H\) 已经对角化, 所以时间演化很方便:</p>
-
-\[\begin{equation}
-  |\psi(t)\rangle=\left(\sin \frac{\theta}{2} e^{-i E_{+} t / \hbar}\left|v_{+}\right\rangle-\cos \frac{\theta}{2} e^{-i E_{-} t / \hbar}\left|v_{-}\right\rangle\right) e^{-i \phi}
-\end{equation}\]
-
-<p>那我们来问: 系统在 \(\ket{-}\) 态时, 出现在 \(\ket{+}\) 的概率振幅是多少?</p>
-
-\[\begin{equation}
-  \braket{+}{\psi;t}=\sin \frac{\theta}{2} \cos \frac{\theta}{2} e^{-i \phi}\left(e^{-i E_{+} t / \hbar}-e^{-i E_{-} t / \hbar}\right)
-\end{equation}\]
-
-<blockquote>
-  <p>所以, 如果一开始在 \(\ket{-}\), 系统出现在 \(\ket{+}\) 的概率就是下面这个:</p>
-</blockquote>
-
-\[\begin{equation}
-  P(\ket{-} \to \ket{+})=\sin ^2 \theta \sin ^2\left(\frac{E_{+}-E_{-}}{2 \hbar} t\right)
-\end{equation}\]
-
-<p>把它用原始矩阵元写出来:</p>
-
-\[\begin{equation}
-  \frac{4\norm{W_{1,2}}^2}{4\norm{W_{1,2}}^2+\left(E_1-E_2\right)^2} \sin ^2\left(\frac{t}{2 \hbar} \sqrt{\left(E_1-E_2\right)^2+4\norm{W_{1,2}}^2}\right)
-\end{equation}\]
-
-<hr />
-
-<p>现在我们把它用在一个磁场问题上: 考虑一个 <strong>自旋-1/2 粒子</strong> 在磁场中.磁场分成静态的部分 \(\boldsymbol{B}\) 和一个随时间变化的部分 \(\boldsymbol{B_1}(t)\).Hamiltonian 写成:</p>
-
-\[\begin{equation}
-  H=-\gamma \boldsymbol{S} \cdot\left(\boldsymbol{B}_0+\boldsymbol{B}_1(t)\right)
-\end{equation}\]
-
-<p>静态场取成:</p>
-
-\[\begin{equation}
-  \boldsymbol{B}_0 = -\frac{\omega_0}{\gamma} \hat{z}
-\end{equation}\]
-
-<p>而随时间变化的场是:</p>
-
-\[\begin{equation}
-  \boldsymbol{B}_1(t)=-\left(\omega_1 / \gamma\right)(\cos (\omega t) \hat{x}+\sin (\omega t) \hat{y})
-\end{equation}\]
-
-<p>那么矩阵形式就是:</p>
-
-\[\begin{equation}
-  H = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0]
-\end{equation}\]
-
-<p>随便取一个初态:</p>
-
-\[\begin{equation}
-  |\psi(t)\rangle=c_{+}(t)|+\rangle+c_{-}(t)|-\rangle
-\end{equation}\]
-
-<p>它的演化满足 Schrödinger 方程:</p>
-
-\[\begin{equation}
-  i\hbar \dv{}{t} \mqty[ c_+ \\ c_-] = \frac{\hbar}{2} \mqty[ \omega_0 &amp; \omega_1 e^{-i\omega t} \\ \omega_1 e^{i\omega t} &amp; - \omega_0] \mqty[c_+ \\ c_-]
-\end{equation}\]
-
-<p>看上去不太好解.
-我们可以做个变换:</p>
-
-\[\begin{equation}
-  c_{+}(t)=e^{-i \omega t / 2} \alpha_{+}(t) \quad c_{-}(t)=e^{i \omega t / 2} \alpha_{-}(t)
-\end{equation}\]
-
-<p>代进去以后变成:</p>
-
-\[\begin{equation}
-  i\hbar \dv{}{t} \mqty[\alpha_+ \\ \alpha_-] = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)] \mqty[\alpha_+ \\ \alpha_-]
-\end{equation}\]
-
-<p>相当于一个新的 Hamiltonian:</p>
-
-\[\begin{equation}
-  \tilde{H} = \frac{\hbar}{2} \mqty[\omega_0 - \omega &amp; \omega_1 \\ \omega_1 &amp; -(\omega_0-\omega)]
-\end{equation}\]
-
-<p>那我们暂时不管原问题了, 就直接看这个新矩阵和 \(\alpha\) 的动力学.其实它正好对应前面我们推过的二能级系统:</p>
-
-\[\begin{align}
-  &amp; E_1 \to \frac{\hbar}{2}\left(\omega_0-\omega\right) \\
-  &amp; E_2 \rightarrow-\frac{\hbar}{2}\left(\omega_0-\omega\right) \\
-  &amp; W_{21} \rightarrow \frac{\hbar}{2} \omega_1
-\end{align}\]
-
-<p>好, 用这个小 trick, 我们要找的是: 一开始在 \(\ket{-}\) 态, 经过时间 \(t\) 之后在 \(\ket{+}\) 态的概率.因为相位在算概率的时候会消掉, 所以只要解有效的 \(\tilde{H}\) 就行了:</p>
-
-\[\begin{equation}
-  \norm{\braket{+}{\psi;t}}^2 = \norm{c_+}^2 = \norm{\alpha_+}^2
-\end{equation}\]
-
-<p>最后得到的概率是:</p>
-
-\[\begin{equation}
-  \frac{\omega_1^2}{\left(\omega-\omega_0\right)^2+\omega_1^2} \sin ^2\left(\frac{t}{2} \sqrt{\left(\omega-\omega_0\right)^2+\omega_1^2}\right)
-\end{equation}\]
-
-<p>这就是 Rabi 振荡公式!</p>]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们要讨论 Rabi 振荡, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的:]]></summary></entry></feed>
+\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论 平面波 和 Fourier 变换的约定. 为了简化, 我们一直用 1D 的例子. 这里我们不会去深入讨论 Fourier 变换的性质.]]></summary></entry></feed>

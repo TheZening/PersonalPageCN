@@ -59,12 +59,6 @@ var store = [{
         "url": "/PersonalPageCN/cmp2/CMP2-BCS1/",
         "teaser": null
       },{
-        "title": "新闻",
-        "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for...","categories": ["Updates"],
-        "tags": [],
-        "url": "/PersonalPageCN/updates/RecentUpdate/",
-        "teaser": null
-      },{
         "title": "QM1 双能级系统",
         "excerpt":"在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为: \\[\\begin{equation} H = \\mqty[ E_1 &amp; V \\\\ V^* &amp; E_2 ] \\end{equation}\\] 其中, $E_1$和$E_2$是两个能级的能量, $V$是两个能级之间的耦合强度. 迅速熟悉双能级系统可以为很多计算提供便利. 首先我们能一下子就写出来他的能级: \\[\\begin{align} E_+ = \\frac{E_1 + E_2}{2} + \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\\\ E_- = \\frac{E_1 + E_2}{2} - \\sqrt{\\left(\\frac{E_1 - E_2}{2}\\right)^2 + |V|^2} \\end{align}\\]...","categories": ["QM1"],
         "tags": [],
@@ -87,5 +81,17 @@ var store = [{
         "excerpt":"基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立: 基础步骤 (Base Case): 验证命题对第一个自然数 (通常是1) 成立. 归纳步骤 (Inductive Step): 假设命题对某个自然数 \\(k\\) 成立 (归纳假设), 然后证明命题对 \\(k+1\\) 也成立. 如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \\(n \\geq 1\\) 成立. 下结论: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立. 实际上有两类数学归纳法: 普通数学归纳法: 适用于证明命题对所有自然数成立. 强归纳法 (Strong Induction): 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \\(k\\) 的自然数成立, 然后证明对 \\(k+1\\) 也成立. 大多数情况下我们关心第一类的. 上纲上线 数学归纳法是一类基于严格逻辑推理的证明方法,...","categories": ["Math0"],
         "tags": [],
         "url": "/PersonalPageCN/math0/MIM/",
+        "teaser": null
+      },{
+        "title": "三角函数查询表格",
+        "excerpt":"基本定义 基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念. 这是最重要的, 不要忘掉… \\[\\begin{align} \\sin \\theta &amp;= \\frac{\\text{opposite}}{\\text{hypotenuse}}\\\\ \\cos \\theta &amp;= \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\\\ \\tan \\theta &amp;= \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin \\theta}{\\cos \\theta} \\end{align}\\] 还有三个倒数函数 \\[\\begin{align} \\csc \\theta &amp;= \\frac{1}{\\sin \\theta} = \\frac{\\text{hypotenuse}}{\\text{opposite}}\\\\ \\sec \\theta &amp;= \\frac{1}{\\cos \\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}\\\\ \\cot \\theta &amp;= \\frac{1}{\\tan \\theta} = \\frac{\\text{adjacent}}{\\text{opposite}} = \\frac{\\cos...","categories": ["Math"],
+        "tags": ["Trigs Table"],
+        "url": "/PersonalPageCN/math/TrigsTable/",
+        "teaser": null
+      },{
+        "title": "新闻",
+        "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for...","categories": ["Updates"],
+        "tags": [],
+        "url": "/PersonalPageCN/updates/RecentUpdate/",
         "teaser": null
       }]
