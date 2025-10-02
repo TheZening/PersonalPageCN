@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-02T14:14:04+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-02T14:26:35+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 
 <p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
 这是最重要的, 不要忘掉…</p>
@@ -738,11 +738,13 @@ E_- = - g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2}
 <p>2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了.<br />
 <a href="https://www.nature.com/articles/s41534-021-00386-2">Optimal operation points for ultrafast, highly coherent Ge hole spin-orbit qubits</a></p>
 
-<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B Letter上了.<br />
+<p>2021-Aug-20: 我们在Dirac semimetal中二维Helical edge state的后续理论研究(基于Boltzmann方程), 现在发表在 Physics Review B 上了.<br />
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L081406">Unidirectional magnetotransport of linearly dispersing topological edge states</a></p>
 
 <p>2022-Jan-11: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于具有超快振荡的Ge量子比特的实验研究, 现在发表在 Nature Communications上了.<br />
 <a href="https://www.nature.com/articles/s41467-021-27880-7">Ultrafast coherent control of a hole spin qubit in a germanium quantum dot</a></p>
+
+<p>2022-Jan-1: 灾厄来临, 休学一年. 时间如此漫长…</p>
 
 <p>2023-Dec-04: 我们在关于平面Ge量子点空穴量子比特的理论研究, 现在发表在 Physics Review B上了.
 <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.245301">Electrical operation of planar Ge hole spin qubits in an in-plane magnetic field</a></p>
