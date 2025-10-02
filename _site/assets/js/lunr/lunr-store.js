@@ -8,7 +8,7 @@ var store = [{
         "title": "积分表 - Gauss积分",
         "excerpt":"有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了… \\[\\int_{-\\infty}^{\\infty} \\mathrm{-x^2} \\dd{x} = \\sqrt{\\pi}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{-a(x+b)^2} \\dd{x} = \\sqrt{\\frac{\\pi}{a}}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{-\\left(a x^2+b x+c\\right)} \\dd{x} = \\sqrt{\\frac{\\pi}{a}} \\mathrm{e}^{\\frac{b^2}{4 a}-c}\\] \\[\\int_{-\\infty}^{\\infty} \\mathrm{e}^{\\frac{1}{2} i t^2} \\dd{t} = \\mathrm{e}^{i \\pi / 4} \\sqrt{2 \\pi}\\] \\[\\int_0^{\\infty} \\mathrm{e}^{-x^2} \\dd{x} = \\frac{\\sqrt{\\pi}}{2}\\] \\[\\int_{-\\infty}^{\\infty} x^{2 n} \\mathrm{e}^{-\\alpha x^2} \\dd{x} = \\sqrt{\\frac{\\pi}{\\alpha}} \\frac{(2 n-1)!!}{(2...","categories": ["Math"],
         "tags": ["Integral Table"],
-        "url": "/PersonalPageCN/math/Important-Integrals-2/",
+        "url": "/PersonalPageCN/math/Important-Integrals-2-copy/",
         "teaser": null
       },{
         "title": "QM1 常见对易关系的推导和结果",
@@ -81,5 +81,11 @@ var store = [{
         "excerpt":"量子力学的随机性: 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足. 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布. 经典概率的随机性: 经典随机性来自于复杂性和信息的不完全性, 原则上你扔一个骰子是完全可预测的, 但是由于你无法掌握所有的初始条件, 只能用概率来描述结果. 在这个背景下, 针对系综(一模一样的系统的综合)的问题, 我们就考虑使用密度矩阵, density matrix来容纳这种经典的随机性. 另外, 密度矩阵还能解决一类问题: 当一个子系统与整个系统的其余部分纠缠时, 对该子系统的描述中必然包含随机性, 这种随机性就由密度矩阵描述. 纯态: 完整地包含了关于该量子系统的所有可知信息, 可以用态矢量 \\(\\ket{\\psi}\\) 来描述. 混合态: 我们对系统没有完全的信息, 或者系统与外界发生了纠缠, 只能用密度矩阵 \\(\\rho\\) 来描述. 经典随机性 回到我们的经典的Stern-Gerlach实验, 我们的炉子有50%的概率发射自旋向上电子, 50%的概率发射自旋向下电子. 经典的随机性来自于我们对炉子发射电子的状态没有完全的信息, 只能说有50%的概率是向上, 50%的概率是向下. 从而我们可以用一个系综描述这个系统: \\[\\begin{equation} E_{\\text{z}} = \\left\\{ \\left( \\frac{1}{2}, \\ket{\\uparrow}...","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix/",
+        "teaser": null
+      },{
+        "title": "三角函数查询表格",
+        "excerpt":"基本定义 基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念. 这是最重要的, 不要忘掉… \\[\\begin{align} \\sin \\theta &amp;= \\frac{\\text{opposite}}{\\text{hypotenuse}}\\\\ \\cos \\theta &amp;= \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\\\ \\tan \\theta &amp;= \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin \\theta}{\\cos \\theta} \\end{align}\\] 还有三个倒数函数 \\[\\begin{align} \\csc \\theta &amp;= \\frac{1}{\\sin \\theta} = \\frac{\\text{hypotenuse}}{\\text{opposite}}\\\\ \\sec \\theta &amp;= \\frac{1}{\\cos \\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}\\\\ \\cot \\theta &amp;= \\frac{1}{\\tan \\theta} = \\frac{\\text{adjacent}}{\\text{opposite}} = \\frac{\\cos...","categories": ["Math"],
+        "tags": ["Trigs Table"],
+        "url": "/PersonalPageCN/math/TrigsTable/",
         "teaser": null
       }]

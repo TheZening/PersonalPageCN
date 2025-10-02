@@ -1,0 +1,761 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>三角函数查询表格 - 来去之间</title>
+<meta name="description" content="基本定义">
+
+
+  <meta name="author" content="来去之间">
+  
+  <meta property="article:author" content="来去之间">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="来去之间">
+<meta property="og:title" content="三角函数查询表格">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/math/TrigsTable/">
+
+
+  <meta property="og:description" content="基本定义">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-02T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/math/TrigsTable/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          来去之间
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">来去之间</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>来去之际, 举手投足, 皆是风景.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="三角函数查询表格">
+    <meta itemprop="description" content="基本定义">
+    <meta itemprop="datePublished" content="2025-10-02T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" itemprop="url">三角函数查询表格
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="基本定义">基本定义</h2>
+
+<p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
+这是最重要的, 不要忘掉…</p>
+
+\[\begin{align}
+\sin \theta &amp;= \frac{\text{opposite}}{\text{hypotenuse}}\\
+\cos \theta &amp;= \frac{\text{adjacent}}{\text{hypotenuse}}\\
+\tan \theta &amp;= \frac{\text{opposite}}{\text{adjacent}} = \frac{\sin \theta}{\cos \theta}
+\end{align}\]
+
+<p>还有三个倒数函数</p>
+
+\[\begin{align}
+\csc \theta &amp;= \frac{1}{\sin \theta} = \frac{\text{hypotenuse}}{\text{opposite}}\\
+\sec \theta &amp;= \frac{1}{\cos \theta} = \frac{\text{hypotenuse}}{\text{adjacent}}\\
+\cot \theta &amp;= \frac{1}{\tan \theta} = \frac{\text{adjacent}}{\text{opposite}} = \frac{\cos \theta}{\sin \theta}
+\end{align}\]
+
+<hr />
+<h2 id="一般情况下怎么用边求值">一般情况下怎么用边求值?</h2>
+
+<p>如果不是直角三角形, 也可以用正弦定理和余弦定理来求值.</p>
+
+<p>角\(A, B, C\) 对应的边分别是 \(a, b, c\), 就是对边.
+\(R\)是外接圆半径.</p>
+
+<p>从而我们有正弦定理:</p>
+
+\[\begin{equation}
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+\end{equation}\]
+
+<p>三角形面积公式:</p>
+
+\[\begin{equation}
+\text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{abc}{4R}
+\end{equation}\]
+
+<p>当然还有余弦定理:</p>
+
+\[\begin{align}
+\cos A &amp;= \frac{b^2 + c^2 - a^2}{2bc}\\
+\cos B &amp;= \frac{a^2 + c^2 - b^2}{2ac}\\
+\cos C &amp;= \frac{a^2 + b^2 - c^2}{2ab}
+\end{align}\]
+
+<p>当角是钝角时, 余弦为负数, 可以用余弦定理判断三角形的形状!</p>
+
+<hr />
+<h2 id="求值问题">求值问题</h2>
+<p>一些常见的三角函数值, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">角度 (°)</th>
+      <th style="text-align: center">0</th>
+      <th style="text-align: center">30</th>
+      <th style="text-align: center">45</th>
+      <th style="text-align: center">60</th>
+      <th style="text-align: center">90</th>
+      <th style="text-align: center">120</th>
+      <th style="text-align: center">135</th>
+      <th style="text-align: center">150</th>
+      <th style="text-align: center">180</th>
+      <th style="text-align: center">210</th>
+      <th style="text-align: center">225</th>
+      <th style="text-align: center">240</th>
+      <th style="text-align: center">270</th>
+      <th style="text-align: center">300</th>
+      <th style="text-align: center">315</th>
+      <th style="text-align: center">330</th>
+      <th style="text-align: center">360</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">弧度 (π)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{6}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{\pi}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{2\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{3\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{6}\)</td>
+      <td style="text-align: center">\(\pi\)</td>
+      <td style="text-align: center">\(\tfrac{7\pi}{6}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{4\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{3\pi}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{5\pi}{3}\)</td>
+      <td style="text-align: center">\(\tfrac{7\pi}{4}\)</td>
+      <td style="text-align: center">\(\tfrac{11\pi}{6}\)</td>
+      <td style="text-align: center">\(2\pi\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\sin x\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\cos x\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
+      <td style="text-align: center">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">\(\tan x\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\sqrt{3}\)</td>
+      <td style="text-align: center">不定义</td>
+      <td style="text-align: center">\(-\sqrt{3}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(0\)</td>
+      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(1\)</td>
+      <td style="text-align: center">\(\sqrt{3}\)</td>
+      <td style="text-align: center">不定义</td>
+      <td style="text-align: center">\(-\sqrt{3}\)</td>
+      <td style="text-align: center">\(-1\)</td>
+      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
+      <td style="text-align: center">\(0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>因为周期性是\(2\pi\), 所以这种加减乘除是最简单的, 如果是\(k\)为整数, 则有:</p>
+
+\[\begin{align}
+\sin(\theta + 2k\pi) &amp;= \sin \theta\\
+\cos(\theta + 2k\pi) &amp;= \cos \theta\\
+\tan(\theta + 2k\pi) &amp;= \tan \theta
+\end{align}\]
+
+<p>平移\(\pi\), 也不太复杂:</p>
+
+\[\begin{align}
+\sin(\theta + k\pi) &amp;= (-1)^k \sin \theta\\
+\cos(\theta + k\pi) &amp;= (-1)^k \cos \theta\\
+\tan(\theta + k\pi) &amp;= \tan \theta
+\end{align}\]
+
+<p>⚠️唯一需要小心的就是平移\(\pi/2\), 这个时候需要注意正负号:</p>
+
+\[\begin{align}
+\sin(\theta \pm \pi/2) &amp;= \cos \theta\\
+\cos(\theta \pm \pi/2) &amp;= \pm\sin \theta\\
+\tan(\theta \pm \pi/2) &amp;= \pm\cot \theta\\
+\end{align}\]
+
+<p>也能统一起来:</p>
+
+\[\begin{equation}
+\sin(\theta + k\pi/2) =
+\begin{cases}
+\sin \theta &amp; k \equiv 0 \pmod{4}\\
+\cos \theta &amp; k \equiv 1 \pmod{4}\\
+-\sin \theta &amp; k \equiv 2 \pmod{4}\\
+-\cos \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+\[\begin{equation}
+\cos(\theta + k\pi/2) =
+\begin{cases}
+\cos \theta &amp; k \equiv 0 \pmod{4}\\
+-\sin \theta &amp; k \equiv 1 \pmod{4}\\
+-\cos \theta &amp; k \equiv 2 \pmod{4}\\
+\sin \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+\[\begin{equation}
+\tan(\theta + k\pi/2) =
+\begin{cases}
+\tan \theta &amp; k \equiv 0 \pmod{4}\\
+\cot \theta &amp; k \equiv 1 \pmod{4}\\
+\tan \theta &amp; k \equiv 2 \pmod{4}\\
+\cot \theta &amp; k \equiv 3 \pmod{4}
+\end{cases}
+\end{equation}\]
+
+<hr />
+<h2 id="角度加减法公式">角度加减法公式</h2>
+
+<p>角度的加减法是最一般的关系.</p>
+
+\[\begin{align}
+\sin(\alpha \pm \beta) &amp;= \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\\
+\cos(\alpha \pm \beta) &amp;= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta\\
+\tan(\alpha \pm \beta) &amp;= \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
+\end{align}\]
+
+<hr />
+<h2 id="倍角公式">倍角公式</h2>
+
+<p>就是怎么把\(2\)倍, \(4\)倍, 偶数倍这些东西变的简单一点.
+⚠️对于奇数倍的角, 实际上是De Moivre公式的应用.</p>
+
+\[\begin{align}
+\sin(2\theta) &amp;= 2\sin\theta\cos\theta\\
+\cos(2\theta) &amp;= \cos^2\theta - \sin^2\theta \\
+&amp;= 2\cos^2\theta - 1 = 1 - 2\sin^2\theta\\
+\tan(2\theta) &amp;= \frac{2\tan\theta}{1 - \tan^2\theta}
+\end{align}\]
+
+<p>也许万一能用得上:</p>
+
+\[\begin{align}
+\sin(3\theta) &amp;= 3\sin\theta - 4\sin^3\theta\\
+\cos(3\theta) &amp;= 4\cos^3\theta - 3\cos\theta\\
+\tan(3\theta) &amp;= \frac{3\tan\theta - \tan^3\theta}{1 - 3\tan^2\theta}
+\end{align}\]
+
+<hr />
+<h2 id="半角公式">半角公式</h2>
+
+<p>有一倍就有半倍, 也就是\(\theta/2\)</p>
+
+\[\begin{align}
+\sin(\theta/2) &amp;= \pm\sqrt{\frac{1 - \cos\theta}{2}}\\
+\cos(\theta/2) &amp;= \pm\sqrt{\frac{1 + \cos\theta}{2}}\\
+\tan(\theta/2) &amp;= \frac{\sin\theta}{1 + \cos\theta} = \frac{1 - \cos\theta}{\sin\theta}
+\end{align}\]
+
+<p>这里为什么有\(\pm\)号呢? 因为\(\theta/2\)的范围不确定, 需要根据具体情况来定.</p>
+
+<hr />
+<h2 id="积化和差公式">积化和差公式</h2>
+
+<p>这就是一些代数计算.</p>
+
+\[\begin{align}
+\sin\alpha\sin\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) - \cos(\alpha + \beta)]\\
+\cos\alpha\cos\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]\\
+\sin\alpha\cos\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)]\\
+\cos\alpha\sin\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)]
+\end{align}\]
+
+<hr />
+<h2 id="和差化积公式">和差化积公式</h2>
+
+<p>反过来算呗.</p>
+
+\[\begin{align}
+\sin\alpha \pm \sin\beta &amp;= 2\sin\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
+\cos\alpha \pm \cos\beta &amp;= 2\cos\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
+\end{align}\]
+
+<hr />
+<h2 id="降幂公式---微积分方法常用">降幂公式 - 微积分方法常用</h2>
+
+<p>有的时候我们会遇到换元方法, 他的起点就是:</p>
+
+\[\begin{equation}
+\sin^2 \theta + \cos^2 \theta = 1
+\end{equation}\]
+
+<p>这是最基本的, 其他的都是从这里推出来的.</p>
+
+\[\begin{equation}
+\tan^2 \theta + 1 = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta
+\end{equation}\]
+
+<p>配合二倍角, 半角公式, 也能得到:</p>
+
+\[\begin{equation}
+\sin^2 \theta = \frac{1 - \cos(2\theta)}{2}, \quad \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}
+\end{equation}\]
+
+<p>这样就能把平方降成一次了, 这样积分简单很多.
+还可以联系到\(\tan(\theta/2)\), 这样就能把三角函数都变成有理函数了.</p>
+
+\[\begin{align}
+\sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
+\cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
+\tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
+\end{align}\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/tags/#trigs-table" class="page__taxonomy-item p-category" rel="tag">Trigs Table</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#math" class="page__taxonomy-item p-category" rel="tag">Math</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-02T00:00:00+10:00">October 2, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%9F%A5%E8%AF%A2%E8%A1%A8%E6%A0%BC%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath%2FTrigsTable%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath%2FTrigsTable%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/math/TrigsTable/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%9F%A5%E8%AF%A2%E8%A1%A8%E6%A0%BC%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath%2FTrigsTable%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix/" class="pagination--pager" title="QM2 密度矩阵">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
