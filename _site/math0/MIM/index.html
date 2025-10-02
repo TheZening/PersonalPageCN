@@ -1,0 +1,657 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Mathematical Induction Method - 来去之间</title>
+<meta name="description" content="基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:">
+
+
+  <meta name="author" content="来去之间">
+  
+  <meta property="article:author" content="来去之间">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="来去之间">
+<meta property="og:title" content="Mathematical Induction Method">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/math0/MIM/">
+
+
+  <meta property="og:description" content="基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-02T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/math0/MIM/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          来去之间
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">来去之间</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>来去之际, 举手投足, 皆是风景.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Mathematical Induction Method">
+    <meta itemprop="description" content="基本定义数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:">
+    <meta itemprop="datePublished" content="2025-10-02T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/math0/MIM/" itemprop="url">Mathematical Induction Method
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="基本定义">基本定义</h2>
+<p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
+它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
+
+<ol>
+  <li><strong>基础步骤 (Base Case)</strong>: 验证命题对第一个自然数 (通常是1) 成立.</li>
+  <li><strong>归纳步骤 (Inductive Step)</strong>: 假设命题对某个自然数 \(k\) 成立 (归纳假设), 然后证明命题对 \(k+1\) 也成立.
+如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \(n \geq 1\) 成立.</li>
+  <li><strong>下结论</strong>: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立.</li>
+</ol>
+
+<p>实际上有两类数学归纳法:</p>
+<ul>
+  <li><strong>普通数学归纳法</strong>: 适用于证明命题对所有自然数成立.</li>
+  <li><strong>强归纳法 (Strong Induction)</strong>: 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \(k\) 的自然数成立, 然后证明对 \(k+1\) 也成立.</li>
+</ul>
+
+<p>大多数情况下我们关心第一类的.</p>
+
+<hr />
+<h2 id="上纲上线">上纲上线</h2>
+
+<p>数学归纳法是一类基于严格逻辑推理的证明方法, 不依赖于直觉或经验.
+于此相反的是经验归纳法(empirical induction), 这种方法基于观察和实验, 通过归纳总结出一般规律, 但不保证结论的绝对正确性, 是一种概率性的推理方法.</p>
+
+<p>实际上, 归纳法是处理无限全称命题(Universal Quantification Predicate)的有效工具.
+这样避免了穷举法(exhaustive proof)的繁琐和不可能性.</p>
+
+<hr />
+<h2 id="形式逻辑">形式逻辑</h2>
+
+<p>应用数学归纳法的形式逻辑可以表示为五个步骤</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 是关于自然数 \(n\) 的命题, 就是在什么条件下, 什么是正确的.</li>
+  <li><strong>基础步骤</strong>: 验证 \(P(1)\) 成立, 也就是验证命题对第一个自然数成立.</li>
+  <li><strong>归纳假设</strong>: 假设 \(P(k)\) 成立, 也就是假设命题对某个自然数 \(k\) 成立.</li>
+  <li><strong>逻辑推理</strong>: 在归纳假设的基础上, 通过逻辑推理证明 \(P(k+1)\) 成立, 也就是证明命题对 \(k+1\) 也成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
+
+<p>在我们刚接触数学归纳法时, 一定要严格按照这类方法来, 避免逻辑漏洞.</p>
+
+<hr />
+<h2 id="求和问题">求和问题</h2>
+
+<p>高斯(Gauß)提出了等差数列(arithmetic sequence)求和公式, 也就是从1加到n的和的方法为: 首项加末项乘以项数除以2, 也就是:
+对于满足:</p>
+
+\[\begin{equation}
+a_n = a_1 + (n-1)d 
+\end{equation}\]
+
+<p>其中 \(a_n\) 是第 \(n\) 项, \(a_1\) 是首项, \(d\) 是公差.
+那么等差数列的和为:</p>
+
+\[\begin{equation}
+S_n = \frac{n}{2}(a_1 + a_n)
+\end{equation}\]
+
+<p>其中 \(S_n\) 是前 \(n\) 项的和.
+说明这个公式很简单, 我们只需要讨论有奇数项和偶数项的情况, 然后首尾进行配对.
+但是严格证明这个公式, 我们可以使用数学归纳法.</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 等差数列前\(n\)项的和为 \(S_n = \frac{n}{2}(a_1 + a_n)\).</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(S_1 = a_1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(S_k = \frac{k}{2}(a_1 + a_k)\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+就是说我们要明确的推导出来:
+\(\begin{equation}
+S_{k+1} = \frac{(k+1)}{2}(a_1 + a_{k+1})
+\end{equation}\)
+数学归纳法的难点从来不在于写出公式, 而在于逻辑推理.
+\(\begin{equation}
+S_{k+1} = S_k + a_{k+1} = \frac{k}{2}(a_1 + a_k) + a_{k+1}
+\end{equation}\)
+根据等差数列的定义, 有 \(a_{k+1} = a_1 + kd\), 所以:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(a_1 + a_k) + a_1 + kd
+\end{equation}\)
+将 \(a_k\) 替换为 \(a_1 + (k-1)d\), 得到:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(a_1 + a_1 + (k-1)d) + a_1 + kd
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(2a_1 + (k-1)d) + a_1 + kd = \frac{(k+1)}{2}(a_1 + a_{k+1})
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 等差数列前\(n\)项的和公式对所有自然数\(n \geq 1\)成立.
+因此, 我们成功地使用数学归纳法证明了等差数列求和公式.</li>
+</ol>
+
+<hr />
+<h2 id="求和问题-2">求和问题-2</h2>
+
+<p>数学归纳法的第二个难点: 你真的能归纳出来吗?
+我们首先进行经验观察:
+\(\begin{align}
+1^2 &amp;= 1\\
+1^2 + 2^2 &amp;= 5\\
+1^2 + 2^2 + 3^2 &amp;= 14\\
+1^2 + 2^2 + 3^2 + 4^2 &amp;= 30\\
+1^2 + 2^2 + 3^2 + 4^2 + 5^2 &amp;= 55
+\end{align}\)
+这能看出来啥规律?
+我们进行一个猜测:
+\(\begin{equation}
+1^2 + 2^2 + 3^2 + ... + n^2 = \sum_{i=1}^{n} i^2 \sim \int_1^n x^2 dx = \frac{n^3}{3}
+\end{equation}\)
+但是这个不对, 因为当\(n=1\)时, 左边是1, 右边是1/3.
+可是我们至少能注意到一个问题: 这个求和的结果应该是一个三次函数, 所以我们从最一般的开始猜:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn + D
+\end{equation}\)
+看看能否通过已知的5个点来确定4个系数.
+\(\begin{align}
+1 &amp;= A + B + C + D\\
+5 &amp;= 8A + 4B + 2C + D\\
+14 &amp;= 27A + 9B + 3C + D\\
+30 &amp;= 64A + 16B + 4C + D\\
+55 &amp;= 125A + 25B + 5C + D
+\end{align}\)
+解这个方程组, 我们得到:
+\(\begin{equation}
+A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
+\end{equation}\)
+所以我们猜测:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{n(n+1)(2n+1)}{6}
+\end{equation}\)
+我们给出两个证明方法, 首先是做如下考虑:
+\(\begin{equation}
+(n+1)^3 - n^3 = 3n^2 + 3n + 1
+\end{equation}\)
+同时对两侧求和, 左边是telescope series:
+\(\begin{equation}
+\sum_{n=1}^{k} ((n+1)^3 - n^3) = 2^3 - 1^3 + 3^3 - 2^3 + ... + (k+1)^3 - k^3 = (k+1)^3 - 1
+\end{equation}\)
+右边呢:
+\(\begin{equation}
+\sum_{n=1}^{k} (3n^2 + 3n + 1) = 3\sum_{n=1}^{k} n^2 + 3\sum_{n=1}^{k} n + \sum_{n=1}^{k} 1 = 3\sum_{n=1}^{k} n^2 + \frac{3k(k+1)}{2} + k
+\end{equation}\)
+这样就能得到:
+\(\begin{equation}
+\sum_{n=1}^{k} n^2 = \frac{(k+1)^3 - 1 - \frac{3k(k+1)}{2} - k}{3} = \frac{k(k+1)(2k+1)}{6}
+\end{equation}\)
+这还是需要点观察力的, 现在我们考虑使用数学归纳法:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 \(\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}\), 这是我们想证明的.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(\sum_{i=1}^{1} i^2 = 1\), 右边也是 \(\frac{1(1+1)(2*1+1)}{6} = 1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(\sum_{i=1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+也就是说我们要明确的推导出来:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}
+\end{equation}\)
+根据归纳假设, 有:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \sum_{i=1}^{k} i^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
+\end{equation}\)
+将右边进行通分, 得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)(k(2k+1) + 6(k+1))}{6}
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.
+因此, 我们成功地使用数学归纳法证明了平方和公式.</li>
+</ol>
+
+<hr />
+<h2 id="论点也可以归纳">论点也可以归纳</h2>
+
+<p>数学归纳法不仅可以用来证明数列求和公式, 还可以用来证明其他类型的数学命题, 比如不等式, 组合问题, 图论等.
+每个大于 1 的自然数都能写成素数的乘积(素数分解定理), 这个也可以用数学归纳法来证明.
+素数(prime number)是指大于 1 的自然数, 只能被 1 和它本身整除的数.
+我们来证明这个命题:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “每个大于 1 的自然数 \(n\) 都能写成素数的乘积”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=2\) 时, 2 是素数, 所以命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即 \(k\) 能写成素数的乘积.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+如果 \(k+1\) 是素数, 那么命题成立.
+如果 \(k+1\) 不是素数, 那么 \(k+1\) 可以写成两个小于 \(k+1\) 的自然数的乘积, 设为 \(a\) 和 \(b\), 即 \(k+1 = a \times b\), 其中 \(1 &lt; a, b &lt; k+1\).
+根据归纳假设, \(a\) 和 \(b\) 都能写成素数的乘积, 所以 \(k+1\) 也能写成素数的乘积.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有大于 1 的自然数 \(n\) 成立.
+因此, 我们成功地使用数学归纳法证明了素数分解定理.</li>
+</ol>
+
+<hr />
+<h2 id="不能乱归纳">不能乱归纳…</h2>
+
+<p>数学归纳法虽然强大, 但是偶尔应用不当也会出错.
+比如我们来证明一个错误的命题: “所有的马都是同一种颜色”.</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “在任意 \(n\) 匹马中, 所有马都是同一种颜色”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, 只有一匹马, 命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即在任意 \(k\) 匹马中, 所有马都是同一种颜色.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+我们考虑任意 \(k+1\) 匹马, 设为 \(M_1, M_2, ..., M_{k+1}\).
+根据归纳假设, 在前 \(k\) 匹马 \(M_1, M_2, ..., M_k\) 中, 所有马都是同一种颜色, 设为颜色 \(C_1\).
+同样, 在后 \(k\) 匹马 \(M_2, M_3, ..., M_{k+1}\) 中, 所有马也是同一种颜色, 设为颜色 \(C_2\).
+由于 \(M_2, M_3, ..., M_k\) 是前后两组马的交集, 它们的颜色必须相同, 即 \(C_1 = C_2\).
+因此, 所有 \(k+1\) 匹马都是同一种颜色, 命题成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
+
+<p>❌️❌️❌️但是这个命题显然是错误的, 因为不同的马可以有不同的颜色.
+这个错误的归纳证明在逻辑推理步骤中存在漏洞.
+当 \(n=1\) 时, 基础步骤成立.
+但是当 \(n=2\) 时, 归纳假设无法应用, 因为前后两组马没有交集, 所以无法得出 \(C_1 = C_2\).
+因此, 这个错误的归纳证明无法成立!
+这个例子提醒我们在使用数学归纳法时, 必须明确推理的范围和条件, 实际上, 解决这个问题有两个方法:</p>
+<ol>
+  <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
+  <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
+这两个方法都能帮助我们避免错误的归纳证明.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#math0" class="page__taxonomy-item p-category" rel="tag">Math0</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-02T00:00:00+10:00">October 2, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Mathematical+Induction+Method%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FMIM%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FMIM%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/math0/MIM/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Mathematical+Induction+Method%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FMIM%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix/" class="pagination--pager" title="QM2 密度矩阵">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
