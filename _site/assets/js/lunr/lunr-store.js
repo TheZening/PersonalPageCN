@@ -77,16 +77,16 @@ var store = [{
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix/",
         "teaser": null
       },{
-        "title": "Mathematical Induction Method",
-        "excerpt":"基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立: 基础步骤 (Base Case): 验证命题对第一个自然数 (通常是1) 成立. 归纳步骤 (Inductive Step): 假设命题对某个自然数 \\(k\\) 成立 (归纳假设), 然后证明命题对 \\(k+1\\) 也成立. 如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \\(n \\geq 1\\) 成立. 下结论: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立. 实际上有两类数学归纳法: 普通数学归纳法: 适用于证明命题对所有自然数成立. 强归纳法 (Strong Induction): 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \\(k\\) 的自然数成立, 然后证明对 \\(k+1\\) 也成立. 大多数情况下我们关心第一类的. 上纲上线 数学归纳法是一类基于严格逻辑推理的证明方法,...","categories": ["Math0"],
-        "tags": [],
-        "url": "/PersonalPageCN/math0/MIM/",
-        "teaser": null
-      },{
         "title": "三角函数查询表格",
         "excerpt":"基本定义 基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念. 这是最重要的, 不要忘掉… \\[\\begin{align} \\sin \\theta &amp;= \\frac{\\text{opposite}}{\\text{hypotenuse}}\\\\ \\cos \\theta &amp;= \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\\\ \\tan \\theta &amp;= \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin \\theta}{\\cos \\theta} \\end{align}\\] 还有三个倒数函数 \\[\\begin{align} \\csc \\theta &amp;= \\frac{1}{\\sin \\theta} = \\frac{\\text{hypotenuse}}{\\text{opposite}}\\\\ \\sec \\theta &amp;= \\frac{1}{\\cos \\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}\\\\ \\cot \\theta &amp;= \\frac{1}{\\tan \\theta} = \\frac{\\text{adjacent}}{\\text{opposite}} = \\frac{\\cos...","categories": ["Math"],
         "tags": ["Trigs Table"],
         "url": "/PersonalPageCN/math/TrigsTable/",
+        "teaser": null
+      },{
+        "title": "Mathematical Induction Method",
+        "excerpt":"基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立: 基础步骤 (Base Case): 验证命题对第一个自然数 (通常是1) 成立. 归纳步骤 (Inductive Step): 假设命题对某个自然数 \\(k\\) 成立 (归纳假设), 然后证明命题对 \\(k+1\\) 也成立. 如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \\(n \\geq 1\\) 成立. 下结论: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立. 实际上有两类数学归纳法: 普通数学归纳法: 适用于证明命题对所有自然数成立. 强归纳法 (Strong Induction): 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \\(k\\) 的自然数成立, 然后证明对 \\(k+1\\) 也成立. 大多数情况下我们关心第一类的. 上纲上线 数学归纳法是一类基于严格逻辑推理的证明方法,...","categories": ["Math0"],
+        "tags": [],
+        "url": "/PersonalPageCN/math0/MIM/",
         "teaser": null
       },{
         "title": "新闻",
