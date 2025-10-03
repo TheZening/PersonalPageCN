@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-03T13:35:55+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-10-03T00:05:00+10:00</published><updated>2025-10-03T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-03T13:48:58+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-10-03T00:05:00+10:00</published><updated>2025-10-03T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -1028,7 +1028,64 @@ S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
 C = \mqty[ 1/\sqrt{2} &amp; 0 \\ 1/2 &amp; 1/2 ]
 \end{equation}\]
 
-<p>实际上这就是\(\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}\)的系数矩阵.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry><entry><title type="html">QM2 密度矩阵1</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/" rel="alternate" type="text/html" title="QM2 密度矩阵1" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix%20copy</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/"><![CDATA[<blockquote>
+<p>实际上这就是\(\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}\)的系数矩阵.</p>
+
+<p>接下来我们计算\(\rho_A\):</p>
+
+\[\begin{align}
+\rho_A &amp;= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
+&amp;= \mqty[ 1/2 &amp; 1/(2\sqrt{2}) \\ 1/(2\sqrt{2}) &amp; 1/2 ]
+\end{align}\]
+
+<p>我们对\(\rho_A\)做本征分解, 计算特征值:</p>
+
+\[\begin{equation}
+p_1 = \frac{2+\sqrt{2}}{4}, \quad p_2 = \frac{2-\sqrt{2}}{4}
+\end{equation}\]
+
+<p>本征值为:</p>
+
+\[\begin{equation}
+\ket{u_1^A} = (\ket{+}+\ket{-})/\sqrt{2}, \quad \ket{u_2^A} = (\ket{+}-\ket{-})/\sqrt{2}
+\end{equation}\]
+
+<p>我们现在构造\(B\)系统的向量:</p>
+
+\[\begin{equation}
+\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}
+\end{equation}\]
+
+<p>考虑\(i=1\):</p>
+
+\[\begin{align}
+\ket{v_1^B} &amp;= \frac{1}{\sqrt{p_1}} \braket{u_1^A}{\psi_{AB}} \\
+&amp;= \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{align}\]
+
+<p>考虑\(i=2\):</p>
+
+\[\begin{equation}
+\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}\]
+
+<p>从而我们得到了Schmidt分解:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{u_1^A} \otimes \ket{v_1^B} + \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{u_2^A} \otimes \ket{v_2^B}
+\end{equation}\]
+
+<p>其中:</p>
+
+\[\begin{equation}
+\ket{u_1^A} = \frac{1}{\sqrt{2}} (\ket{+}+\ket{-}), \quad \ket{u_2^A} = \frac{1}{\sqrt{2}} (\ket{+}-\ket{-})
+\end{equation}\]
+
+<p>\(\begin{equation}
+\ket{v_1^B} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}\)
+\(\begin{equation}
+\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry><entry><title type="html">QM2 密度矩阵1</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/" rel="alternate" type="text/html" title="QM2 密度矩阵1" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix%20copy</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/"><![CDATA[<blockquote>
   <p>量子力学的随机性:
 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足.
 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.</p>

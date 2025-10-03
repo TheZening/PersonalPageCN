@@ -561,3 +561,80 @@ C = \mqty[ 1/\sqrt{2} & 0 \\ 1/2 & 1/2 ]
 $$
 
 实际上这就是$$\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}$$的系数矩阵.
+
+接下来我们计算$$\rho_A$$:
+
+$$
+\begin{align}
+\rho_A &= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
+&= \mqty[ 1/2 & 1/(2\sqrt{2}) \\ 1/(2\sqrt{2}) & 1/2 ]
+\end{align}
+$$
+
+我们对$$\rho_A$$做本征分解, 计算特征值:
+
+$$
+\begin{equation}
+p_1 = \frac{2+\sqrt{2}}{4}, \quad p_2 = \frac{2-\sqrt{2}}{4}
+\end{equation}
+$$
+
+本征值为:
+
+$$
+\begin{equation}
+\ket{u_1^A} = (\ket{+}+\ket{-})/\sqrt{2}, \quad \ket{u_2^A} = (\ket{+}-\ket{-})/\sqrt{2}
+\end{equation}
+$$
+
+我们现在构造$$B$$系统的向量:
+
+$$
+\begin{equation}
+\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}
+\end{equation}
+$$
+
+考虑$$i=1$$:
+
+$$
+\begin{align}
+\ket{v_1^B} &= \frac{1}{\sqrt{p_1}} \braket{u_1^A}{\psi_{AB}} \\
+&= \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{align}
+$$
+
+考虑$$i=2$$:
+
+$$
+\begin{equation}
+\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}
+$$
+
+从而我们得到了Schmidt分解:
+
+$$
+\begin{equation}
+\ket{\psi_{AB}} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{u_1^A} \otimes \ket{v_1^B} + \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{u_2^A} \otimes \ket{v_2^B}
+\end{equation}
+$$
+
+其中:
+
+$$
+\begin{equation}
+\ket{u_1^A} = \frac{1}{\sqrt{2}} (\ket{+}+\ket{-}), \quad \ket{u_2^A} = \frac{1}{\sqrt{2}} (\ket{+}-\ket{-})
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\ket{v_1^B} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}
+$$
+$$
+\begin{equation}
+\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
+\end{equation}
+$$
