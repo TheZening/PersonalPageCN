@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-03T13:28:34+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">来去之间</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>来去之间</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-10-03T00:05:00+10:00</published><updated>2025-10-03T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-03T13:35:55+10:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">新闻</title><link href="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/" rel="alternate" type="text/html" title="新闻" /><published>2025-10-03T00:05:00+10:00</published><updated>2025-10-03T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/updates/RecentUpdate</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/updates/RecentUpdate/"><![CDATA[<p>这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.</p>
 
 <p>2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了.<br />
 <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c01649">Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi</a></p>
@@ -34,7 +34,7 @@
 <p>2025-Aug-15: 我们关于利用频谱工程从半导体自旋量子比特中提取类轴子信号的理论研究, 现在发表在 IEEE Transaction on quantum engineering 上了.
 <a href="https://ieeexplore.ieee.org/abstract/document/11127003">Toward axion signal extraction in semiconductor spin qubits via spectral engineering</a></p>
 
-<p>2025-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>来去之间</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<p>2025-Sep-01: 于天津大学物理系和Wenkai师兄拜访了Hanjie师兄, 恭喜Hanjie师兄获聘为天津大学物理系教授!</p>]]></content><author><name>刘沛松</name></author><category term="Updates" /><summary type="html"><![CDATA[这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 
 <p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
 这是最重要的, 不要忘掉…</p>
@@ -345,7 +345,7 @@
 \sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
-\end{align}\]]]></content><author><name>来去之间</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 <p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
 
@@ -567,7 +567,7 @@ A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
   <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
   <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
 这两个方法都能帮助我们避免错误的归纳证明.</li>
-</ol>]]></content><author><name>来去之间</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry><entry><title type="html">QM2 密度矩阵2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="alternate" type="text/html" title="QM2 密度矩阵2" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/"><![CDATA[<h2 id="关于本征态的测量">关于本征态的测量</h2>
+</ol>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry><entry><title type="html">QM2 密度矩阵2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="alternate" type="text/html" title="QM2 密度矩阵2" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/"><![CDATA[<h2 id="关于本征态的测量">关于本征态的测量</h2>
 
 <p>我们考虑一个纯态 $\ket{\psi}$, 我们自然是可以用一组本征态( $\ket{i}$ )来测量他, 从而得到:</p>
 
@@ -1010,19 +1010,25 @@ S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
 \ket{\psi_{AB}} = \frac{1}{\sqrt{2}} \ket{+_A +_B} + \frac{1}{2} \ket{-_A +_B} + \frac{1}{2} \ket{-_A -_B}
 \end{equation}\]
 
-<p>我们计算\(\rho_A\):</p>
+<p>首先检查一下归一化:</p>
 
-\[\begin{align}
-\rho_A &amp;= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
-&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{2\sqrt{2}} \ketbra{+_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{2\sqrt{2}} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{-_B}{-_B}) \\
-&amp;= \mqty[ 3/4 &amp; 1/\sqrt{2} \\ 1/\sqrt{2} &amp; 1/4 ]
-\end{align}\]
+\[\begin{equation}
+\braket{\psi_{AB}}{\psi_{AB}} = \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1
+\end{equation}\]
 
-<p>还是进行对角化:</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry><entry><title type="html">QM2 密度矩阵1</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/" rel="alternate" type="text/html" title="QM2 密度矩阵1" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix%20copy</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/"><![CDATA[<blockquote>
+<p>接着, 我们按照如下的基底来检查系数矩阵:</p>
+
+\[\begin{equation}
+\ket{+_A +_B}, \ket{+_A -_B}, \ket{-_A +_B}, \ket{-_A -_B}
+\end{equation}\]
+
+<p>我们发现系数矩阵是:</p>
+
+\[\begin{equation}
+C = \mqty[ 1/\sqrt{2} &amp; 0 \\ 1/2 &amp; 1/2 ]
+\end{equation}\]
+
+<p>实际上这就是\(\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}\)的系数矩阵.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry><entry><title type="html">QM2 密度矩阵1</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/" rel="alternate" type="text/html" title="QM2 密度矩阵1" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix%20copy</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix-copy/"><![CDATA[<blockquote>
   <p>量子力学的随机性:
 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足.
 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.</p>
@@ -1316,7 +1322,7 @@ E = \left\{ \left( \lambda_i, \ket{i} \right) \right\}
 
 \[\begin{equation}
 \rho = \sum_{i} \lambda_i \ket{i} \bra{i}
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[量子力学的随机性: 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足. 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.]]></summary></entry><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[量子力学的随机性: 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足. 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.]]></summary></entry><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
   <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
 </blockquote>
 
@@ -1363,7 +1369,7 @@ H(t + T) = H(t)
   <p>其中 \(\ket{u_\alpha(t)}\) 是周期性的, 即 \(\ket{u_\alpha(t + T)} = \ket{u_\alpha(t)}\), \(\epsilon_\alpha\) 是一个实数, 称为Floquet quasi-energy, \(\alpha\) 是态的标号.</p>
 </blockquote>
 
-<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>来去之间</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
+<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>刘沛松</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry><entry><title type="html">QM1 双能级系统</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/" rel="alternate" type="text/html" title="QM1 双能级系统" /><published>2025-09-17T06:40:00+10:00</published><updated>2025-09-17T06:40:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-TwoLevelSystem/"><![CDATA[<p>在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:</p>
 
 \[\begin{equation}
 H = \mqty[ E_1 &amp; V \\ V^* &amp; E_2 ]
@@ -1501,7 +1507,7 @@ H = g \mu_{\text{B}} \mqty[ B_z &amp; B_x - \mathrm{i} B_y \\ B_x + \mathrm{i} B
 \[\begin{align}
 E_+ = + g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2} \\
 E_- = - g \mu_{\text{B}} \sqrt{B_x^2 + B_y^2 + B_z^2}
-\end{align}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:]]></summary></entry><entry><title type="html">CMP2 BCS超导理论1</title><link href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" rel="alternate" type="text/html" title="CMP2 BCS超导理论1" /><published>2025-09-12T00:00:00+10:00</published><updated>2025-09-12T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/"><![CDATA[<p>在这篇文章里, 我们来讨论BCS超导理论的基本内容.
+\end{align}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:]]></summary></entry><entry><title type="html">CMP2 BCS超导理论1</title><link href="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/" rel="alternate" type="text/html" title="CMP2 BCS超导理论1" /><published>2025-09-12T00:00:00+10:00</published><updated>2025-09-12T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/cmp2/CMP2-BCS1/"><![CDATA[<p>在这篇文章里, 我们来讨论BCS超导理论的基本内容.
 BCS理论于Bardeen, Cooper, Schrieffer在1957年提出.
 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系.
 他主要关注</p>
@@ -1628,7 +1634,7 @@ a_{\boldsymbol{k}} = \frac{V}{2 \xi_{\boldsymbol{k}} - E} \sum_{|\boldsymbol{k}'
 
 \[\begin{equation}
 1 = V \sum_{|\boldsymbol{k}| &gt; k_F} \frac{1}{2 \xi_{\boldsymbol{k}} - E}
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="CMP2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="CMP2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等.]]></summary></entry><entry><title type="html">QM2 Lindbladian量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindbladian量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/"><![CDATA[<p>在这篇文章里, 我们来讨论开放量子系统的一些特性.
 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\):
 \(\begin{equation}
   H(t) = H_S + H_B + \alpha H_{SB}
@@ -1911,7 +1917,7 @@ a_{\boldsymbol{k}} = \frac{V}{2 \xi_{\boldsymbol{k}} - E} \sum_{|\boldsymbol{k}'
 <p>回到原绘景(略去细节), 就得到著名的 Lindblad 量子动力学方程:
 \(\begin{equation}
   \frac{d \rho_S}{d t} = -\frac{i}{\hbar} \left[H_S, \rho_S\right] + \gamma \left[S \rho_S S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S\right\}\right]
-\end{equation}\)</p>]]></content><author><name>来去之间</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位.
+\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位.
 Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性.
 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.</p>
 
@@ -2292,4 +2298,4 @@ T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}}
 
 \[\begin{equation}
 \Delta \phi = \frac{q}{\hbar} \oint \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} = \frac{q}{\hbar} \int \boldsymbol{B} \cdot \dd{\boldsymbol{S}} = \frac{q}{\hbar} \Phi_B
-\end{equation}\]]]></content><author><name>来去之间</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry></feed>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry></feed>

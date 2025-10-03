@@ -536,19 +536,28 @@ $$
 \end{equation}
 $$
 
-我们计算$$\rho_A$$:
+首先检查一下归一化:
 
 $$
-\begin{align}
-\rho_A &= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
-&= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-& + \frac{1}{2\sqrt{2}} \ketbra{+_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-& + \frac{1}{2\sqrt{2}} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-& + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-& + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{-_B}{-_B}) \\
-&= \mqty[ 3/4 & 1/\sqrt{2} \\ 1/\sqrt{2} & 1/4 ]
-\end{align}
+\begin{equation}
+\braket{\psi_{AB}}{\psi_{AB}} = \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1
+\end{equation}
 $$
 
-还是进行对角化:
+接着, 我们按照如下的基底来检查系数矩阵:
 
+$$
+\begin{equation}
+\ket{+_A +_B}, \ket{+_A -_B}, \ket{-_A +_B}, \ket{-_A -_B}
+\end{equation}
+$$
+
+我们发现系数矩阵是:
+
+$$
+\begin{equation}
+C = \mqty[ 1/\sqrt{2} & 0 \\ 1/2 & 1/2 ]
+\end{equation}
+$$
+
+实际上这就是$$\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}$$的系数矩阵.

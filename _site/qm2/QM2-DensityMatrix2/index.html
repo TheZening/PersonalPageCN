@@ -10,19 +10,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>QM2 密度矩阵2 - 来去之间</title>
+<!-- begin _includes/seo.html --><title>QM2 密度矩阵2 - 刘沛松的赛道</title>
 <meta name="description" content="关于本征态的测量">
 
 
-  <meta name="author" content="来去之间">
+  <meta name="author" content="刘沛松">
   
-  <meta property="article:author" content="来去之间">
+  <meta property="article:author" content="刘沛松">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="来去之间">
+<meta property="og:site_name" content="刘沛松的赛道">
 <meta property="og:title" content="QM2 密度矩阵2">
 <meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/">
 
@@ -59,7 +59,7 @@
 
 
 
-  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -115,7 +115,7 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/PersonalPageCN/">
-          来去之间
+          刘沛松的赛道
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
@@ -178,18 +178,18 @@
   
     <div class="author__avatar">
       <a href="http://localhost:4000/PersonalPageCN/">
-        <img src="/PersonalPageCN/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
       </a>
     </div>
   
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">来去之间</a>
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>来去之际, 举手投足, 皆是风景.</p>
+        <p>项庄舞剑, 意在沛公</p>
 
       </div>
     
@@ -740,20 +740,25 @@ S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
 \ket{\psi_{AB}} = \frac{1}{\sqrt{2}} \ket{+_A +_B} + \frac{1}{2} \ket{-_A +_B} + \frac{1}{2} \ket{-_A -_B}
 \end{equation}\]
 
-<p>我们计算\(\rho_A\):</p>
+<p>首先检查一下归一化:</p>
 
-\[\begin{align}
-\rho_A &amp;= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
-&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{2\sqrt{2}} \ketbra{+_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{2\sqrt{2}} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{-_B}{-_B}) \\
-&amp;= \mqty[ 3/4 &amp; 1/\sqrt{2} \\ 1/\sqrt{2} &amp; 1/4 ]
-\end{align}\]
+\[\begin{equation}
+\braket{\psi_{AB}}{\psi_{AB}} = \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1
+\end{equation}\]
 
-<p>还是进行对角化:</p>
+<p>接着, 我们按照如下的基底来检查系数矩阵:</p>
 
+\[\begin{equation}
+\ket{+_A +_B}, \ket{+_A -_B}, \ket{-_A +_B}, \ket{-_A -_B}
+\end{equation}\]
+
+<p>我们发现系数矩阵是:</p>
+
+\[\begin{equation}
+C = \mqty[ 1/\sqrt{2} &amp; 0 \\ 1/2 &amp; 1/2 ]
+\end{equation}\]
+
+<p>实际上这就是\(\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}\)的系数矩阵.</p>
 
         
       </section>
@@ -867,7 +872,7 @@ S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

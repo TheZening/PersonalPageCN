@@ -1,4 +1,4 @@
-title: 来去之间
+title: 刘沛松的赛道
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   欢迎来访, 祝你一切顺利!
@@ -29,9 +29,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "来去之间"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "来去之际, 举手投足, 皆是风景."
+  name   : "刘沛松"
+  avatar : "/assets/images/bio-photo2.jpg"
+  bio    : "项庄舞剑, 意在沛公"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
