@@ -1,0 +1,891 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>QM2 密度矩阵2 - 来去之间</title>
+<meta name="description" content="关于本征态的测量">
+
+
+  <meta name="author" content="来去之间">
+  
+  <meta property="article:author" content="来去之间">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="来去之间">
+<meta property="og:title" content="QM2 密度矩阵2">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/">
+
+
+  <meta property="og:description" content="关于本征态的测量">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-02T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="来去之间 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          来去之间
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo.jpg" alt="来去之间" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">来去之间</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>来去之际, 举手投足, 皆是风景.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM2 密度矩阵2">
+    <meta itemprop="description" content="关于本征态的测量">
+    <meta itemprop="datePublished" content="2025-10-02T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" itemprop="url">QM2 密度矩阵2
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="关于本征态的测量">关于本征态的测量</h2>
+
+<p>我们考虑一个纯态 $\ket{\psi}$, 我们自然是可以用一组本征态( $\ket{i}$ )来测量他, 从而得到:</p>
+
+\[\begin{equation}
+P(\text{态在}i\text{上}) = |\braket{i|\psi}|^2
+\end{equation}\]
+
+<p>测量之后, 系统会坍缩到 $\ket{i}$ 上.
+我们现在可以把这一套语言完全的搬到密度矩阵上.
+此时, 我们发现系统在 $\ket{i}$ 上的概率会有一个经典的统计权重:</p>
+
+\[\begin{equation}
+P(\text{态在}i\text{上}) = \sum_{\alpha=1}^N p_\alpha |\braket{i|\psi_\alpha}|^2 = \mel{i}{\rho}{i}
+\end{equation}\]
+
+<p>这说明, 概率分布由密度矩阵本身给出, 而不是某个具体的系综表示.
+我们这么说, 是因为不同的系综分解可能会给出同样的密度矩阵.</p>
+
+<p>一旦我们完成了测量, 系统会坍缩到 $\ket{i}$ 上.
+此时, 系统的密度矩阵会变成:</p>
+
+\[\begin{equation}
+\rho \to \frac{\ket{i}\bra{i} \rho \ket{i}\bra{i}}{\mel{i}{\rho}{i}} = \ketbra{i}{i}
+\end{equation}\]
+
+<p>也就是说, 测量之后, 系统会变成一个纯态, 这个纯态就是测量的本征态.
+此时此刻我们可以定义projective measurement的测量算符, 是因为量子测量不仅给你一个随机结果, 还会改变系统的状态!</p>
+
+\[\begin{equation}
+M_i = \ketbra{i}{i}
+\end{equation}\]
+
+<ol>
+  <li>自伴随, \(M_i^\dagger = M_i\)</li>
+  <li>幂等, \(M_i^2 = M_i\)</li>
+  <li>完备, \(\sum_i M_i = I\)</li>
+</ol>
+
+<p>这正是我们在QM1中学到的投影测量.
+集合所有的测量算符, 我们发现:</p>
+
+<ol>
+  <li>两两正交, \(M_i M_j = \delta_{ij} M_i\)</li>
+  <li>覆盖所有可能的测量结果, \(\sum_i M_i = I\)</li>
+</ol>
+
+<p>他们组成一套完备的正交归一化投影测量 (complete set of orthogonal projectors).</p>
+
+<blockquote>
+  <p>想象一个袋子里有黑球和白球. 比例不一定是 50-50.
+你没摸之前, 这是个混合分布, 概率性描述.
+你伸手摸出一个球, 并且看见它是白球, 现在你对结果有了确定知识, 所以状态是白球, 纯态.
+但如果你摸完又把结果藏起来不给任何人看, 外部观察者只能说嗯, 它还是按一定概率是黑球/白球, 这就回到混合分布.</p>
+</blockquote>
+
+<p>举个例子, 我们考虑一个混合态:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} \ketbra{0}{0} + \frac{1}{2} \ketbra{+}{+}
+\end{equation}\]
+
+\[\begin{equation}
+\ket{+} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
+\end{equation}\]
+
+<p>也就是说, 系统有一半概率在 $\ket{0}$ 上, 另一半概率在 $\ket{+}$ 上.
+我们把 $\rho$ 写成矩阵形式:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} \mqty[ 1 &amp; 0 \\ 0 &amp; 0 ] + \frac{1}{2} \mqty[ 1/2 &amp; 1/2 \\ 1/2 &amp; 1/2 ] = \mqty[ 3/4 &amp; 1/4 \\ 1/4 &amp; 1/4 ]  
+\end{equation}\]
+
+<p>我们在 ${ \ket{0}, \ket{1} }$ 基底上测量, 也就是测量算符:</p>
+
+\[\begin{equation}
+M_0 = \ketbra{0}{0}, \quad M_1 = \ketbra{1}{1}
+\end{equation}\]
+
+\[\begin{equation}
+P(0) = \mel{0}{\rho}{0} = 3/4, \quad P(1) = \mel{1}{\rho}{1} = 1/4
+\end{equation}\]
+
+<p>如果测到了 \(0\), 系统坍缩到 \(\ket{0}\) 上, 密度矩阵变成 \(\rho \to \ketbra{0}{0}\).
+如果测到了 \(1\), 系统坍缩到 \(\ket{1}\) 上, 密度矩阵变成 \(\rho \to \ketbra{1}{1}\).
+此时我们要注意到:</p>
+
+<blockquote>
+  <p>看了结果 \(\Leftrightarrow\) 系统变成纯态.</p>
+</blockquote>
+
+<p>如果我们没看结果呢?
+我们只能说系统有 $3/4$ 概率在 $\ket{0}$ 上, $1/4$ 概率在 $\ket{1}$ 上.
+也就是说, 系统的密度矩阵变成:</p>
+
+\[\begin{equation}
+\rho \to \frac{3}{4} \ketbra{0}{0} + \frac{1}{4} \ketbra{1}{1} = \mqty[ 3/4 &amp; 0 \\ 0 &amp; 1/4 ]
+\end{equation}\]
+
+<p>也就是说虽然我们测量了, 换句话说, 系统和我们的测量装置发生了相互作用, 但是我们只关心了系统, 没去看那个测量装置的结果.
+我们如何系统性的取描述这件事呢?
+我们一步一步的来.</p>
+
+<hr />
+<h2 id="密度矩阵的演化">密度矩阵的演化</h2>
+
+<p>我们从Schrödinger方程出发, 讨论密度矩阵的演化.
+Schrödinger方程告诉我们, 如果系统在时间 $t=0$ 时刻处于纯态 $\ket{\psi(0)}$, 那么在时间 $t$ 时刻, 系统会演化到:</p>
+
+\[\begin{equation}
+\ket{\psi(t)} = U(t) \ket{\psi(0)}, \quad U(t) = \mathrm{e}^{-\mathrm{i}Ht/\hbar}
+\end{equation}\]
+
+<p>等价的说就是Schrödinger方程:</p>
+
+\[\begin{equation}
+\pdv{}{t} \ket{\psi(t)} = -\frac{\mathrm{i}}{\hbar} H \ket{\psi(t)}
+\end{equation}\]
+
+<p>从而我们可以计算:</p>
+
+\[\begin{equation}
+\pdv{}{t} \ketbra{\psi}{\psi} = -\frac{\mathrm{i}}{\hbar} H \ketbra{\psi}{\psi} + \ketbra{\psi}{\psi} \frac{\mathrm{i}}{\hbar} H = -\frac{\mathrm{i}}{\hbar} [H, \ketbra{\psi}{\psi}]
+\end{equation}\]
+
+<p>立刻升级到密度矩阵版本:</p>
+
+\[\begin{equation}
+\pdv{\rho}{t} = -\frac{\mathrm{i}}{\hbar} [H, \rho]
+\end{equation}\]
+
+<p>这就是密度矩阵的Liouville-von Neumann方程.
+我们立刻可以注意到一个小细节: 左侧是Hermitian的, 右侧\([H, \rho]\)是anti-Hermitian的, 乘以\(-\mathrm{i}\)之后是Hermitian的, 所以方程是自洽的.
+现在看看密度矩阵的时间演化:</p>
+
+\[\begin{equation}
+\rho(t) = U(t) \rho(0) U^\dagger(t)
+\end{equation}\]
+
+<p>我们也可以检查, unitary演化不会改变密度矩阵的纯度:</p>
+
+\[\begin{align}
+\dv{}{t} \tr(\rho^2) &amp;= \tr\left( \pdv{\rho}{t} \rho + \rho \pdv{\rho}{t} \right) \\
+&amp;= \frac{2}{\mathrm{i}\,\hbar} \tr( \rho [H, \rho] ) \\
+&amp;= \frac{2}{\mathrm{i}\,\hbar} \left( \tr(\rho H \rho) - \tr(H \rho^2) \right) \\
+&amp;= 0
+\end{align}\]
+
+<p>光有演化还不够, 我们还得考虑子系统的问题: 之前的讨论中, 研究的系统和仪器很明显是一个整体, 属于一个大系统的一部分.</p>
+
+<hr />
+<h2 id="子系统的密度矩阵">子系统的密度矩阵</h2>
+
+<p>我们考虑一个大系统, 他的Hilbert空间是 \(\mathcal{H} = \mathcal{H}_A \otimes \mathcal{H}_B\).
+我们之前在Alice和Bob的论证中已经见过这种情况, 我们当时说, 必须得考虑密度矩阵才能完全的描述整体.
+现在规定: 系统 \(A\) 的维度是 \(d_A\), 系统 \(B\) 的维度是 \(d_B\).
+他们的正交归一基如下:</p>
+
+\[\begin{align}
+\dim \mathcal{H}_A &amp;= d_A, \quad \{ e_1^A, e_2^A, \cdots, e_{d_A}^A \} \\
+\dim \mathcal{H}_B &amp;= d_B, \quad \{ e_1^B, e_2^B, \cdots, e_{d_B}^B \}
+\end{align}\]
+
+<p>整体的密度矩阵必然是 \(d_A d_B \times d_A d_B\) 的矩阵, \(\rho_{AB}\).
+我们现在问个问题: 如果我们只关心 \(A\) 系统, 那么 \(A\) 系统的密度矩阵 \(\rho_A\) 是什么?
+这就是约化密度矩阵 (reduced density matrix) 的概念:</p>
+
+\[\begin{equation}
+\rho_A = \tr_B(\rho_{AB}) = \sum_{k=1}^{d_B} \mel{e_k^B}{\rho_{AB}}{e_k^B}
+\end{equation}\]
+
+<p>也就是说, 我们把 \(B\) 系统的自由度给tr掉, 只留下 \(A\) 系统的密度矩阵.
+我们可以验证, \(\rho_A\) 仍然是一个合法的密度矩阵:</p>
+
+\[\begin{equation}
+\tr_A(\rho_A) = \tr_A(\rho_A) = \tr_A(\tr_B(\rho_{AB})) = \tr(\rho_{AB}) = 1
+\end{equation}\]
+
+<p>他是半正定的, Hermitian的.
+但最一锤定音还是如下的检查:</p>
+
+\[\begin{equation}
+\tr_A(\rho_A \mathcal{O}) = \tr(\rho_{AB} (\mathcal{O} \otimes I_B))
+\end{equation}\]
+
+<p>考虑到:</p>
+
+\[\begin{equation}
+\rho_{AB} = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{e_i^A e_j^A}{e_k^B e_l^B}
+\end{equation}\]
+
+<p>从而我们得到:</p>
+
+\[\begin{equation}
+\rho_A = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{e_i^A}{e_j^A} \braket{e_l^B}{e_k^B} = \sum_{i,j,k} \rho_{ij,kk} \ketbra{e_i^A}{e_j^A}
+\end{equation}\]
+
+<p>我们可以验证:</p>
+
+\[\begin{align}
+\tr_A(\rho_A \mathcal{O}) = &amp; \sum_{i,j,k} \rho_{ij,kk} \mel{e_j^A}{\mathcal{O}}{e_i^A} \\
+=&amp; \sum_{i,j,k,l,m} \rho_{ij,kl} \mel{e_j^A e_l^B}{\mathcal{O} \otimes I_B}{e_i^A e_k^B} \\
+=&amp; \tr(\rho_{AB} (\mathcal{O} \otimes I_B))
+\end{align}\]
+
+<p>自始至终我们都没用到任何关于\(\rho_B\)的信息, 这说明 \(\rho_A\) 的定义是完备的, 只要知道 \(\rho_{AB}\) 就能算出来.
+换句话说, 想找到描述 \(A\) 系统的密度矩阵是行的, 但是一个态描述 \(A\) 系统的态是不行的.</p>
+
+<p>还是看原来的例子, Alice和Bob共享一个纠缠态:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \frac{1}{\sqrt{2}} (\ket{+_A -_B} - \ket{-_A +_B})
+\end{equation}\]
+
+<p>我们立刻可以写出大系统的密度矩阵:</p>
+
+\[\begin{align}
+\rho_{AB} &amp;= \ketbra{\psi_{AB}}{\psi_{AB}} \\
+&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \otimes \ketbra{-_B}{-_B} \\
+&amp; - \frac{1}{2} \ketbra{+_A}{-_A} \otimes \ketbra{-_B}{+_B} \\
+&amp; - \frac{1}{2} \ketbra{-_A}{+_A} \otimes \ketbra{+_B}{-_B} \\
+&amp; + \frac{1}{2} \ketbra{-_A}{-_A} \otimes \ketbra{+_B}{+_B}
+\end{align}\]
+
+<p>我们现在计算 \(A\) 系统的约化密度矩阵:</p>
+
+\[\begin{align}
+\rho_A &amp;= \tr_B(\rho_{AB}) \\
+&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{-_B}{-_B}) \\
+&amp; - \frac{1}{2} \ketbra{+_A}{-_A} \tr(\ketbra{-_B}{+_B}) \\
+&amp; - \frac{1}{2} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{-_B}) \\
+&amp; + \frac{1}{2} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
+&amp;= \frac{1}{2} \ketbra{+_A}{+_A} + \frac{1}{2} \ketbra{-_A}{-_A}
+\end{align}\]
+
+<p>我们也可以计算 \(B\) 系统的约化密度矩阵:</p>
+
+<p>\(\begin{align}
+\rho_B &amp;= \tr_A(\rho_{AB}) \\
+&amp;= \frac{1}{2} \ketbra{-_B}{-_B} \tr(\ketbra{+_A}{+_A}) \\
+&amp; - \frac{1}{2} \ketbra{-_B}{+_B} \tr(\ketbra{+_A}{-_A}) \\
+&amp; - \frac{1}{2} \ketbra{+_B}{-_B} \tr(\ketbra{-_A}{+_A}) \\
+&amp; + \frac{1}{2} \ketbra{+_B}{+_B} \tr(\ketbra{-_A}{-_A}) \\
+&amp;= \frac{1}{2} \ketbra{-_B}{-_B} + \frac{1}{2} \ketbra{+_B}{+_B}
+\end{align}\)
+也就是说, Alice和Bob各自的系统都是一个完全混合态.
+这就是纠缠态的魔力: 整体是纯态, 局部是混合态.
+就是说原来的综合起来的纯态, 是非常纠缠的.</p>
+
+<hr />
+<h2 id="schmidt分解">Schmidt分解</h2>
+
+<p>我们发现, 我们刚才把一个纠缠态的整体密度矩阵约化到局部, 我们可以拓宽一下这个过程.</p>
+
+<blockquote>
+  <p>如果我们有一个复合系统, 由A,B两个子系统组成, 那么任何一个纯态, 我们总能找到一对正交归一基, 使得这个纯态可以写成如下形式:
+\(\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{r} \lambda_i \ket{u_i^A} \otimes \ket{v_i^B}
+\end{equation}\)
+其中 \(\{ \ket{u_i^A} \}\) 和 \(\{ \ket{v_i^B} \}\) 分别是 \(\mathcal{H}_A\) 和 \(\mathcal{H}_B\) 的正交归一基, \(\lambda_i &gt; 0\), \(r \leq \min(d_A, d_B)\).
+这个分解叫做Schmidt分解, \(\lambda_i\) 叫做Schmidt系数, \(r\) 叫做Schmidt秩.
+如果只有一个非零的Schmidt系数, 那么这个态是可分的, 否则是纠缠的.</p>
+</blockquote>
+
+<p>我们还是从最基础的出发:</p>
+
+\[\begin{equation}
+\rho_{AB} = \ketbra{\psi_{AB}}{\psi_{AB}}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+\rho_A = \tr_B(\rho_{AB})
+\end{equation}\]
+
+<p>我们还是在 \(\mathcal{H}_A\) 上找一组正交归一基 \(\{ \ket{u_i^A} \}\), \(i=1,2,\cdots,d_A\), 把 \(\rho_A\) 对角化, 从而我们得到eigen-system:</p>
+
+\[\begin{equation}
+\{ p_k, \ket{u_k^A} \}, \quad k=1,2,\cdots,d_A
+\end{equation}\]
+
+<p>也就是说:</p>
+
+\[\begin{equation}
+\rho_A = \sum_{k=1}^{d_A} p_k \ketbra{u_k^A}{u_k^A}, \quad p_k \geq 0, \quad \sum_{k=1}^{d_A} p_k = 1
+\end{equation}\]
+
+<p>如果\(\rho_A\)是纯态, 这个分解可能一项就结束了, 所以我们会发现能求和的项数一般小于\(d_A\).
+我们把\(p_k\)非零的项数叫做\(r\), 也就是Schmidt秩.
+我们于是重新排序一下, 让没有投影在本征态上的部分放在后面:</p>
+
+\[\begin{equation}
+\rho_A = \sum_{k=1}^{r} p_k \ketbra{u_k^A}{u_k^A}, r \leq d_A
+\end{equation}\]
+
+<p>其中, \(p_{k&gt;r} = 0\).
+我们回头看原来大系统的纯态, \(\ket{u_i^A}\) 是 \(\mathcal{H}_A\) 的一组完备基, 所以我们可以把 \(\ket{\psi_{AB}}\) 展开成:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B}
+\end{equation}\]
+
+<p>注意啊, 这时候有趣的来了:</p>
+
+<blockquote>
+  <p>\(\ket{\phi_i^B}\) 不一定是归一化的, 也不一定是正交的, 我们不太清楚他到底是个啥.
+但是, 对于每一个\(\ket{u_i^A}\), \(\ket{\phi_i^B}\)是唯一确定的.
+由于\(\ket{u_i^A}\)只有\(d_A\)个, 所以我们只需要考虑\(\ket{\phi_i^B}\), \(i=1,2,\cdots,d_A\)就够了.
+这就是Schmidt分解的关键点, 此时我们展开式只有\(d_A\)项, 而不是\(d_A d_B\)项.</p>
+</blockquote>
+
+<p>补充一下, 如果我们暴力张量积分解的话:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \sum_{j=1}^{d_B} c_{ij} \ket{e_i^A} \otimes \ket{e_j^B}
+\end{equation}\]
+
+<p>很明显, 这个展开式有 \(d_A d_B\) 项, 远远大于 \(d_A\).
+现在我们再写出来密度矩阵:</p>
+
+\[\begin{equation}
+\rho_{AB} = \sum_{i,j=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B} \bra{u_j^A} \otimes \bra{\phi_j^B}
+\end{equation}\]
+
+<p>对\(B\) 系统做trace:</p>
+
+\[\begin{equation}
+\rho_A = \tr_B(\rho_{AB}) = \sum_{i,j=1}^{d_A} \ketbra{u_i^A}{u_j^A} \braket{\phi_j^B}{\phi_i^B}
+\end{equation}\]
+
+<p>我们怎么把他联系到之前对角化基写下的那个\(\rho_A\)上呢?
+我们现在要复习一个rank的概念:</p>
+<blockquote>
+  <p>对于一个 \(m \times n\) 的矩阵 \(M\), 一个rank就是他的列向量中线性无关的个数.
+也就是说你的矩阵能照顾到的向量的一种描述.
+物理背景下就是, 目前的系统到底混合了多少个纯态.</p>
+</blockquote>
+
+<p>我们注意到\(A\)的系数部分, 构成了一个矩阵, 叫做Gram矩阵:</p>
+
+\[\begin{equation}
+G_{ij} = \braket{\phi_j^B}{\phi_i^B}
+\end{equation}\]
+
+<p>就是内积的各种组合的排列, 这个维度是\(d_A \times d_A\)的矩阵.
+如果我们计算\(\rho_A\)的矩阵元:</p>
+
+\[\begin{equation}
+\mel{u_k^A}{\rho_A}{u_l^A} = \sum_{i,j=1}^{d_A} \braket{u_k^A}{u_i^A} \braket{\phi_j^B}{\phi_i^B} \braket{u_j^A}{u_l^A} = G_{kl}
+\end{equation}\]
+
+<p>所以这就是说, \(G\)和\(\rho_A\)是相似矩阵, 他们有一样的rank.
+所以\(\ket{\phi_i^B}\)的线性无关个数, 也就是\(G\)的rank, 也就是\(\rho_A\)的rank, 也就是Schmidt秩\(r\).
+这个rank必须满足如下的不等式:</p>
+
+\[\begin{equation}
+r \leq \min(d_A, d_B)
+\end{equation}\]
+
+<p>小于等于\(d_A\)是显然的, 小于等于\(d_B\)是因为, \(\ket{\phi_i^B}\)的线性无关个数不会超过\(d_B\).</p>
+
+<p>于是我们可以缩小求和范围, 因为\(\rho_A\)只有\(r\)个非零的本征值:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{r} \ket{u_i^A} \otimes \ket{\phi_i^B}
+\end{equation}\]
+
+<p>从而我们的\(\rho_{AB}\)变成:</p>
+
+\[\begin{equation}
+\rho_{AB} = \sum_{i,j=1}^{r} \ket{u_i^A} \otimes \ket{\phi_i^B} \bra{u_j^A} \otimes \bra{\phi_j^B}
+\end{equation}\]
+
+<p>再做约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_A = \tr_B(\rho_{AB}) = \sum_{i,j=1}^{r} \ketbra{u_i^A}{u_j^A} \braket{\phi_j^B}{\phi_i^B}
+\end{equation}\]
+
+<p>再和\(\rho_A\)的本征分解对比, 我们发现:</p>
+
+\[\begin{equation}
+\braket{\phi_j^B}{\phi_i^B} = p_i \delta_{ij}
+\end{equation}\]
+
+<p>换句话说, \(\{ \ket{\phi_i^B} \}\)是正交的, 并且\(\braket{\phi_i^B}{\phi_i^B} = p_i\).
+从而, 我们可以定义归一化的\(\ket{v_i^B}\):</p>
+
+\[\begin{equation}
+\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \ket{\phi_i^B}
+\end{equation}\]
+
+<p>从而我们证明了:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{r} \sqrt{p_i} \ket{u_i^A} \otimes \ket{v_i^B}
+\end{equation}\]
+
+<p>其中 \(\{ \ket{u_i^A} \}\) 和 \(\{ \ket{v_i^B} \}\) 分别是 \(\mathcal{H}_A\) 和 \(\mathcal{H}_B\) 的正交归一基, \(p_i &gt; 0\), \(r \leq \min(d_A, d_B)\).
+这就是Schmidt分解.
+但我们要注意, \(\{ \ket{v_i^B} \}\) 和 \(\{ \ket{u_i^A} \}\) 没什么直接关系, 他们甚至来自于不同空间.
+从而我们总能写为:</p>
+
+\[\begin{equation}
+\rho_A = \sum_{i=1}^{r} p_i \ketbra{u_i^A}{u_i^A}, \quad \rho_B = \sum_{i=1}^{r} p_i \ketbra{v_i^B}{v_i^B}
+\end{equation}\]
+
+<p>总结一下Schimit分解的步骤:</p>
+
+<ol>
+  <li>给出一个复合系统的纯态 \(\ket{\psi_{AB}}\).</li>
+  <li>写成
+\(\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B}
+\end{equation}\)</li>
+  <li>对\(B\)系统做约化密度矩阵\(\rho_A = \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}})\).</li>
+  <li>对\(\rho_A\)做本征分解, 得到\(\{ p_i, \ket{u_i^A} \}\):
+\(\begin{equation}
+\rho_A = \sum_{i=1}^{r} p_i \ketbra{u_i^A}{u_i^A}
+\end{equation}\)</li>
+  <li>定义\(\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}\), 得到Schmidt分解:
+\(\begin{equation}
+\ket{\psi_{AB}} = \sum_{i=1}^{r} \sqrt{p_i} \ket{u_i^A} \otimes \ket{v_i^B}
+\end{equation}\)</li>
+</ol>
+
+<blockquote>
+  <p>如果此时计算纠缠熵:
+\(\begin{equation}
+S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
+\end{equation}\)
+这就是\(A\)系统的纠缠熵, 也是\(B\)系统的纠缠熵.
+纠缠熵是衡量两个子系统纠缠程度的一个重要指标.
+如果\(r=1\), 也就是只有一个非零的Schmidt系数, 那么\(S(\rho_A) = 0\), 说明\(A\)和\(B\)没有纠缠.</p>
+</blockquote>
+
+<p>我们考虑一个例子:</p>
+
+\[\begin{equation}
+\ket{\psi_{AB}} = \frac{1}{\sqrt{2}} \ket{+_A +_B} + \frac{1}{2} \ket{-_A +_B} + \frac{1}{2} \ket{-_A -_B}
+\end{equation}\]
+
+<p>我们计算\(\rho_A\):</p>
+
+\[\begin{align}
+\rho_A &amp;= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
+&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
+&amp; + \frac{1}{2\sqrt{2}} \ketbra{+_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
+&amp; + \frac{1}{2\sqrt{2}} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{+_B}) \\
+&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
+&amp; + \frac{1}{4} \ketbra{-_A}{-_A} \tr(\ketbra{-_B}{-_B}) \\
+&amp;= \mqty[ 3/4 &amp; 1/\sqrt{2} \\ 1/\sqrt{2} &amp; 1/4 ]
+\end{align}\]
+
+<p>还是进行对角化:</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm2" class="page__taxonomy-item p-category" rel="tag">QM2</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-02T00:00:00+10:00">October 2, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM2+%E5%AF%86%E5%BA%A6%E7%9F%A9%E9%98%B52%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-DensityMatrix2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-DensityMatrix2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM2+%E5%AF%86%E5%BA%A6%E7%9F%A9%E9%98%B52%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-DensityMatrix2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix-copy/" class="pagination--pager" title="QM2 密度矩阵1">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/math/TrigsTable/" class="pagination--pager" title="三角函数查询表格">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">来去之间</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "QM2 密度矩阵"
+title: "QM2 密度矩阵1"
 date: 2025-09-18
 categories:
   - QM2
@@ -270,5 +270,75 @@ $$
 $$
 \begin{equation}
 \rho = \operatorname{diag}(p_1, p_2, \ldots, p_n) \Rightarrow \tr{\rho^2} = \sum_{i} p_i^2
+\end{equation}
+$$
+
+我们想知道什么时候系统最接近混合态, 自然就是问什么时候 $$\sum_{i} p_i^2$$ 最小.
+我们用拉格朗日乘数法来求解这个问题, 我们要求:
+
+$$
+\begin{equation}
+\delta \left( \sum_{i} p_i^2 - \lambda \left( \sum_{i} p_i - 1 \right) \right) = 0
+\end{equation}
+$$
+
+我们对 $$p_j$$ 求导:
+
+$$
+\begin{equation}
+\frac{\partial}{\partial p_j} \left( \sum_{i} p_i^2 - \lambda \left( \sum_{i} p_i - 1 \right) \right) = 2 p_j - \lambda = 0
+\end{equation}
+$$
+
+所以我们有 $$p_j = \frac{\lambda}{2}$$, 也就是说所有的 $$p_j$$ 都相等.
+结合 $$\sum_{i} p_i = 1$$, 我们有 $$p_j = \frac{1}{n}$$.
+所以我们有:
+
+$$
+\begin{equation}
+\tr{\rho^2} = \sum_{i} p_i^2 = n \left( \frac{1}{n} \right)^2 = \frac{1}{n}
+\end{equation}
+$$
+
+这就是完全混合态的纯度.
+他的物理意义是, 系统在所有可能的态上均匀分布, 我们对系统一无所知.
+自然而然就是最混合的!
+
+
+---
+## 系综与密度矩阵
+
+我们现在提出一个定理:
+
+> 定理:
+> 如果一个矩阵是Hermitian的, 半正定的, 且迹为1, 那么它可以表示为一个系综的密度矩阵.
+
+我们来证明这个定理.
+我们考虑一个矩阵 $$\rho$$, 它是Hermitian的, 半正定的, 且迹为1.
+由于 $$\rho$$ 是Hermitian的, 它可以对角化:
+
+$$
+\begin{equation}
+\rho = \sum_{i} \lambda_i \ket{i} \bra{i} \quad \lambda_i \geq 0 \quad \sum_{i} \lambda_i = 1
+\end{equation}
+$$
+
+考虑一个系综:
+
+$$
+\begin{equation}
+E = \left\{ \left( \lambda_i, \ket{i} \right) \right\}
+\end{equation}
+$$
+
+我们立刻注意到:
+
+1. $$\lambda_i$$ 是非负的, $$\sum_{i} \lambda_i = 1$$, 所以它们可以作为概率.
+2. $$\ket{i}$$ 是归一化的, $$\braket{i}{i} = 1$$.
+3. $$\rho$$ 可以表示为这个系综的密度矩阵:
+
+$$
+\begin{equation}
+\rho = \sum_{i} \lambda_i \ket{i} \bra{i}
 \end{equation}
 $$
