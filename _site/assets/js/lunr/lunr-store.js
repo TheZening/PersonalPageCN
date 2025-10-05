@@ -47,8 +47,8 @@ var store = [{
         "url": "/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/",
         "teaser": null
       },{
-        "title": "QM2 Lindbladian量子动力学方程",
-        "excerpt":"在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \\(H_S\\)、环境(热浴)部分 \\(H_B\\), 以及相互作用项 \\(H_{SB}\\): \\(\\begin{equation} H(t) = H_S + H_B + \\alpha H_{SB} \\end{equation}\\) 整体(系统 + 环境)的动力学由密度矩阵 \\(\\rho_{SB}\\) 描述, 满足: \\(\\begin{equation} \\dv{}{t} \\rho_{SB} = -\\frac{i}{\\hbar} \\left[H_S + H_B + \\alpha H_{SB}, \\rho_{SB}\\right] \\end{equation}\\) 在相互作用绘景里, Hamiltonian 的演化是: \\(\\begin{equation} H(t) = \\exp\\left(\\frac{i}{\\hbar}(H_S + H_B)t\\right) H_{SB} \\exp\\left(-\\frac{i}{\\hbar}(H_S + H_B)t\\right) \\end{equation}\\)...","categories": ["QM2"],
+        "title": "QM2 Lindblad量子动力学方程",
+        "excerpt":"Lindblad方程是描述开放量子系统动力学的一个重要工具, 它扩展了闭合量子系统的薛定谔方程, 允许我们考虑系统与环境之间的相互作用. 这种相互作用通常会导致系统的非单位演化, 包括耗散, 跃迁, 退相干现象. Markov过程: 未来的状态只依赖于当前状态, 与过去的状态无关. 所以没有什么时间核, 记忆积分啥的. 耗散: 能量从系统流失到环境中. 退相干: 系统的量子相干性由于与环境的相互作用而减弱. 我们引入如下记号: \\(S\\): 系统, 我们感兴趣的量子系统. \\(E\\): 环境, 系统所处的外部环境. 系统和环境构成封闭系统, 它们的联合状态由密度矩阵 \\(\\rho_{SE}\\) 描述. 总体的Hamiltonian是: \\[\\begin{equation} H = H_S \\otimes I_E + I_S \\otimes H_E + \\alpha H_{\\text{SB}} \\end{equation}\\] 其中\\(\\alpha\\)描述了系统与环境之间的相互作用强度. 1. 闭合系统的动力学 大的密度矩阵自然是由von Neumann方程描述的: \\[\\begin{equation} \\dv{\\rho_{SE}}{t} =...","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-LindbladianEquation/",
         "teaser": null
