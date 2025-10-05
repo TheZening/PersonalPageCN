@@ -1,4 +1,277 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-05T18:35:53+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-05T20:44:50+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+
+<ol>
+  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
+  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
+  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
+</ol>
+
+<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
+这些问题仍然是开放性的, 没有一个准确的回答.</p>
+
+<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
+这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
+但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
+我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
+
+<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
+一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
+也就是说, 坍缩是在探测器读出结果时候发生的.
+在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
+
+<hr />
+<h2 id="预测量问题">预测量问题</h2>
+
+<p>我们现在考虑量子力学是适用于一切迟钝的理论.
+那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
+为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
+
+<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
+
+\[\begin{equation}
+\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
+\end{equation}\]
+
+<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
+
+\[\begin{equation}
+\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
+\end{equation}\]
+
+<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
+
+\[\begin{equation}
+\ket{s_i} \leftrightarrow \ket{a_i}
+\end{equation}\]
+
+<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
+所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
+
+<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
+\end{equation}\]
+
+<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
+
+\[\begin{equation}
+\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
+\end{equation}\]
+
+<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
+
+\[\begin{equation}
+[Q,P] = \mathrm{i}\hbar \quad
+\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
+\end{equation}\]
+
+<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
+
+\[\begin{equation}
+H_{int} = g(t) \mathcal{O}_S \otimes P_A
+\end{equation}\]
+
+<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
+
+\[\begin{equation}
+\int_0^\tau g(t) \, \mathrm{d}t = \kappa
+\end{equation}\]
+
+<p>从而我们可以写出时间演化算符:</p>
+
+\[\begin{equation}
+U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
+\end{equation}\]
+
+<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
+
+\[\begin{equation}
+U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
+\end{equation}\]
+
+<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
+
+<p>我们定义:</p>
+
+\[\begin{equation}
+\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
+\end{equation}\]
+
+<p>系统的状态现在是:</p>
+
+\[\begin{equation}
+\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
+但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
+这就是早期von Neumann测量理论:</p>
+
+<ol>
+  <li>测量装置本身就是一个量子系统.</li>
+  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
+  <li>测量结果是装置的指针态.</li>
+</ol>
+
+<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
+我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
+
+<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
+测量装置也是双能级态, 耦合Hamiltonian是:</p>
+
+\[\begin{equation}
+H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
+\end{equation}\]
+
+<p>假设系统的初始状态为:</p>
+
+\[\begin{equation}
+c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们做一点点代数变形:</p>
+
+\[\begin{equation}
+\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们的时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
+\end{equation}\]
+
+<p>注意到:</p>
+
+\[\begin{equation}
+U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
+\end{equation}\]
+
+<p>从而我们可以计算出:</p>
+
+\[\begin{equation}
+\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
+
+\[\begin{equation}
+\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>系统和装置的观测量正确地关联在一起了!</p>
+
+<hr />
+<h2 id="退相干">退相干</h2>
+
+<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
+但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
+退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
+
+<p>我们之前得到了预测量态:</p>
+
+\[\begin{equation}
+\sum_i c_i \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
+所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+
+\[\begin{equation}
+\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\end{equation}\]
+
+<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+\end{equation}\]
+
+<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
+
+\[\begin{equation}
+\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
+\end{equation}\]
+
+<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
+
+\[\begin{equation}
+\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
+\end{equation}\]
+
+<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
+
+\[\begin{equation}
+\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
+\end{equation}\]
+
+<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
+
+\[\begin{equation}
+\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
+\end{equation}\]
+
+<p>对环境取偏迹:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
+\end{equation}\]
+
+<p>退相干解释了为什么我们看不到大尺度量子叠加态.
+但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
+虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
+
+<hr />
+<h2 id="多世界说法">多世界说法</h2>
+
+<p>如果我们干脆直接放弃坍缩这个概念呢?
+我们就得到了多世界诠释(Many-World Interpretation, MWI).
+在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
+每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
+MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
+MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
+
+<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
+|c_+|^2 + |c_-|^2 = 1
+\end{equation}\]
+
+<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
+那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
+
+\[\begin{equation}
+\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
+\end{equation}\]
+
+<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
+
+\[\begin{equation}
+\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
+\end{equation}\]
+
+<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
+在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
+
+<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
+在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
+这两个分支互不干扰, 同样真实, 但是无法交流.
+随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
+因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
+
+<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
+既然每种可能都在某个世界实现了, 那么概率到底是什么?
+分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
+
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
 
 <ol>
   <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
@@ -2309,385 +2582,4 @@ a_{\boldsymbol{k}} = \frac{V}{2 \xi_{\boldsymbol{k}} - E} \sum_{|\boldsymbol{k}'
 <p>回到原绘景(略去细节), 就得到著名的 Lindblad 量子动力学方程:
 \(\begin{equation}
   \frac{d \rho_S}{d t} = -\frac{i}{\hbar} \left[H_S, \rho_S\right] + \gamma \left[S \rho_S S^\dagger - \frac{1}{2} \left\{S^\dagger S, \rho_S\right\}\right]
-\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry><entry><title type="html">QM1 绝热定理与Berry相位</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/" rel="alternate" type="text/html" title="QM1 绝热定理与Berry相位" /><published>2024-10-12T00:06:00+11:00</published><updated>2024-10-12T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/"><![CDATA[<p>在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位.
-Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性.
-这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.</p>
-
-<hr />
-
-<h2 id="绝热定理">绝热定理</h2>
-
-<p>首先要对于绝热这个词做出说明, 我们这里考虑的绝热过程不是热力学中系统与外界没有热量交换的意思.
-虽然都是Adiabatic这个词, 但是我们这里强调的是:</p>
-
-<blockquote>
-  <p><strong>(经典力学说法)</strong><br />
-当外界参数变化非常缓慢时, 系统慢到来不及激发出额外效应”, 存在绝热不变量保持不变.</p>
-</blockquote>
-
-<blockquote>
-  <p><strong>(量子力学说法, 非简并)</strong><br />
-当系统的 Hamiltonian 缓慢变化时, 若某个本征值 \(E_n(t)\) 与其他本征值 \(E_m(t)\) 之间有能隙, 且系统初始时刻处于本征态\(\ket{n(0)}\), 那么在任意时刻\(t\)系统仍然会在瞬时本征态\(\ket{n(t)}\)上, 只是会获得相位因子: 动力学相位 + Berry 相位.</p>
-</blockquote>
-
-<blockquote>
-  <p><strong>(量子力学说法, 简并版本)</strong><br />
-当系统的 Hamiltonian 缓慢变化时, 若某个简并子空间\(D_n(t)\)与其他简并子空间\(D_m(t)\)之间有能隙, 且系统初始时刻在\(D_n(0)\), 那么在任意时刻\(t\)系统仍然会在瞬时简并子空间\(D_n(t)\)中, 只是会获得一个Unitary矩阵的变换, 而不能保证保持在某个固定的本征态上.
-这对应于非阿贝尔Berry相位(Wilczek–Zee phase).</p>
-</blockquote>
-
-<p>举一个生活中的例子, 你坐在汽车上, 汽车缓慢加速, 你会感觉不到任何变化, 你仍然感觉自己静止在汽车上.
-但是如果汽车突然加速, 你会有推背感.</p>
-
-<p>再举一个例子, 你测量单摆的周期, 如果你考虑的是一个麻绳, 那么麻绳可能一年才会自动拉伸一点点, 你间隔1min测单摆周期是不会变化的.
-但是如果你的摆巨长无比, 一次振动就需要两年, 那么你每次测量的周期都会变化.</p>
-
-<p>换句话说, 但对于系统内部时间(你关心的时间尺度)\(\tau\), 如果一个参数\(\lambda\)的变化速率满足:
-\(\begin{equation}
-\tau \dv{\lambda}{t} \ll \lambda
-\end{equation}\)
-那就是这个参数变化非常缓慢, 系统可以被认为是绝热的.
-我们现在看看怎么在量子力学里说明白这个事情.</p>
-
-<hr />
-
-<h2 id="量子绝热定理的直观感受">量子绝热定理的直观感受</h2>
-
-<p>我们先看看如果一个势能\(V(x)\)是快速变化的, 我们的波函数会怎么反应.
-<img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/quickchange.gif" alt="Quick Change" />
-可以说是乱七八糟, 毫无规律.
-不过这也正常, 就想你突然被人推了一把, 你会乱跑.</p>
-
-<p>但是如果势能\(V(x)\)是缓慢变化的, 我们的波函数会怎么反应.
-<img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/slowchange.gif" alt="Slow Change" />
-可以看到波函数始终保持在它的瞬时本征态中, 只是随着势能的变化, 波函数也缓慢变化.
-这就像你坐在一辆缓慢加速的汽车上, 你感觉不到任何变化.</p>
-
-<hr />
-
-<h2 id="量子绝热定理的数学证明">量子绝热定理的数学证明</h2>
-
-<p>我们先考虑一个非简并的Hamiltonian\(H(\lambda)\), 其中\(\lambda\)是一个外界参数, 例如磁场强度, 势阱深度等, 而且\(\lambda\)是时间的函数\(\lambda(t)\).
-假设在任意时刻\(t\), \(H(\lambda(t))\)的本征值和本征态分别为\(E_n(t)\)和\(\ket{n(t)}\), 满足:</p>
-
-\[\begin{equation}
-H(\lambda(t))\ket{n(t)} = E_n(t)\ket{n(t)}
-\end{equation}\]
-
-<p>注意, 这只是在\(t\)时刻的瞬时本征值和本征态, 它们都是时间的函数.
-\(\ket{n(t)}\)并不是系统的真实态, 也不是Schrödinger方程的解, 他就是照相机在\(t\)时刻拍下的系统的本征态.</p>
-
-<blockquote>
-  <p>所以\(\ket{n;t}\)是一个瞬时的概念, 如果我们以他为初态, 我们在\(t+t_1\)时刻得到的态是\(U(t+t_1, t)\ket{n;t}\), 这一般不等于\(\ket{n;t+t_1}\).
-而\(\ket{n;t+t_1}\)是另一个时刻的瞬时本征态, 它与\(\ket{n;t}\)没有直接的关系.
-而绝热定理就告诉了我们什么情况下可能有关系.</p>
-</blockquote>
-
-<p>而且不同时刻的\(\ket{n(t)}\)之间没有任何关系, 你只能在一张照片内谈论正交:</p>
-
-\[\begin{equation}
-  \braket{n(t)}{m(t)} = \delta_{nm}, \quad \braket{n(t)}{n(t')} \neq 1, \quad t \neq t'
-\end{equation}\]
-
-<p>并且假设\(E_n(t)\)与其他本征值\(E_m(t)\)之间有能隙, 即\(E_n(t) \neq E_m(t)\), \(\forall m \neq n\), \(\forall t\).
-系统的状态\(\ket{\psi(t)}\)满足薛定谔方程:</p>
-
-\[\begin{equation}
-\mathrm{i}\,\hbar \pdv{}{t}\ket{\psi(t)} = H(\lambda(t))\ket{\psi(t)}
-\end{equation}\]
-
-<p>推导上的一个技巧来了, 我们对于满足Schrödinger方程的\(\ket{\psi(t)}\), 在任意时刻\(t\)都可以将其展开在瞬时本征态\(\ket{n(t)}\)上:</p>
-
-\[\begin{equation}
-\ket{\psi(t)} = \sum_n c_n(t) \mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\int_0^t E_n(t')\,\dd{t'}} \ket{n(t)}
-\end{equation}\]
-
-<p>这里额外加了一个相位:</p>
-
-\[\begin{equation}
-\theta_n(t) = -\frac{1}{\hbar}\int_0^t E_n(t')\,\dd{t'} \Rightarrow \mathrm{i}\,\dot{\theta_m}(t) = -\frac{\mathrm{i}}{\hbar}E_m(t)
-\end{equation}\]
-
-<p>我们当然可以把那个相位因子并到\(c_n(t)\)里, 但是这样会出现一个非常简单的化简, 等下就能看到.
-将上式代入Schrödinger方程, 左边:</p>
-
-\[\begin{align}
-\sum_n \quad &amp; \mathrm{i}\,\hbar \dot{c}_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)} + c_n(t) E_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)} + \\
-&amp; \mathrm{i}\,\hbar c_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \pdv{}{t}\ket{n(t)} 
-\end{align}\]
-
-<p>右边:
-\(\begin{equation}
-\sum_n c_n(t) E_n(t) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} \ket{n(t)}
-\end{equation}\)</p>
-
-<p>左右能消掉(因为我们之前定义的\(\theta_n(t)\)就是为了消掉这个项), 得到:</p>
-
-\[\begin{equation}
-\sum_n \left( \mathrm{i}\,\hbar \dot{c}_n(t) \ket{n(t)} + \mathrm{i}\,\hbar c_n(t) \pdv{}{t}\ket{n(t)} \right) \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
-\end{equation}\]
-
-<p>我们左乘\(\bra{m(t)}\), 得到:</p>
-
-\[\begin{equation}
-\sum_n \dot{c}_n(t) \braket{m(t)}{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} + c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
-\end{equation}\]
-
-<p>瞬时本征态确实是正交的, 所以我们左边有\(\braket{m(t)}{n(t)} = \delta_{mn}\), 得到:</p>
-
-\[\begin{equation}
-\dot{c}_m(t) \mathrm{e}^{\mathrm{i}\,\theta_m(t)} + \sum_n c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}\,\theta_n(t)} = 0
-\end{equation}\]
-
-<p>获得了一个关于\(c_n(t)\)的耦合微分方程组.</p>
-
-\[\begin{equation}
-\dot{c}_m(t) = -\sum_n c_n(t) \bra{m(t)}\pdv{}{t}\ket{n(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
-\end{equation}\]
-
-<p>关于时间求导的那个部分要展开一下, 从瞬时本征态方程出发: \(H(t)\ket{n(t)} = E_n(t)\ket{n(t)}\), 对时间求导:</p>
-
-\[\begin{equation}
-\dot{H}(t)\ket{n(t)} + H(t)\pdv{}{t}\ket{n(t)} = \dot{E}_n(t)\ket{n(t)} + E_n(t)\pdv{}{t}\ket{n(t)}
-\end{equation}\]
-
-<p>左乘\(\bra{m(t)}\), 得到:</p>
-
-\[\begin{equation}
-\bra{m(t)}\dot{H}(t)\ket{n(t)} + E_m(t)\bra{m(t)}\pdv{}{t}\ket{n(t)} = \dot{E}_n(t)\braket{m(t)}{n(t)} + E_n(t)\bra{m(t)}\pdv{}{t}\ket{n(t)}
-\end{equation}\]
-
-<p>注意\(\braket{m(t)}{n(t)} = \delta_{mn}\), 所以当\(m \neq n\)时, 上式化简为:</p>
-
-\[\begin{equation}
-\bra{m(t)}\pdv{}{t}\ket{n(t)} = \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)}, \quad m \neq n
-\end{equation}\]
-
-<p>带回原来的式子:</p>
-
-\[\begin{equation}
-\dot{c}_m(t) = - c_m(t) \bra{m(t)}\pdv{}{t}\ket{m(t)} - \sum_{n \neq m} c_n(t) \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
-\end{equation}\]
-
-<p>这时候一个重要的物理意义就来了:</p>
-
-\[\begin{equation}
-\pdv{H}{t} = \pdv{H}{\lambda} \dv{\lambda}{t}
-\end{equation}\]
-
-<p>如果是绝热, 那么参数不怎么变化, 从而我们可以直接忽略掉\(\pdv{H}{t}\), 也就是忽略掉上式的第二项!</p>
-
-\[\begin{equation}
-\dot{c}_m(t) = - c_m(t) \bra{m(t)}\pdv{}{t}\ket{m(t)}
-\end{equation}\]
-
-<p>现在我们可以很好的求解这个微分方程:</p>
-
-\[\begin{equation}
-c_m(t) = c_m(0) \exp\left(-\int_0^t \bra{m(t')}\pdv{}{t'}\ket{m(t')}\,\dd{t'}\right)
-\end{equation}\]
-
-<p>也就是说哈, 如果我们一开始就在\(\ket{n(0)}\)上, 那么\(c_n(0) = 1\), \(c_{m \neq n}(0) = 0\), 那么在任意时刻\(t\), 我们都有:</p>
-
-\[\begin{equation}
-\ket{\psi(t)} = \exp\left(-\frac{\mathrm{i}}{\hbar}\int_0^t E_n(t')\,\dd{t'}\right) \exp\left(-\int_0^t \bra{n(t')}\pdv{}{t'}\ket{n(t')}\,\dd{t'}\right) \ket{n(t)}
-\end{equation}\]
-
-<p>就是说, 系统始终保持在瞬时本征态\(\ket{n(t)}\)上, 只是获得了两个相位因子: 动力学相位 + Berry 相位</p>
-
-\[\begin{equation}
-\gamma_n(t) = \mathrm{i}\,\int_0^t \bra{n(t')}\pdv{}{t'}\ket{n(t')}\,\dd{t'} \quad \theta_n(t) = -\frac{1}{\hbar}\int_0^t E_n(t')\,\dd{t'}
-\end{equation}\]
-
-<p>现在我们来看看这个几何相位, 如果是相位, 要确保\(\gamma_n(t)\)是实数:</p>
-
-\[\begin{equation}
-\dv{}{t} \braket{n(t)}{n(t)} = 0 \Rightarrow \braket{n(t)}{\pdv{}{t}}{n(t)} + \bra{\pdv{}{t}n(t)}{n(t)} = 0
-\end{equation}\]
-
-<p>自己加自己的共轭是0, 说明\(\bra{n(t)}\pdv{}{t}\ket{n(t)}\)是纯虚数, 然后整体前面有个\(i\), 所以\(\gamma_n(t)\)是实数.
-没问题, 接下来我们稍微变个形式, 把参数空间的特性体现出来.</p>
-
-\[\begin{equation}
-\mel{n(t)}{\pdv{}{t}}{n(t)} = \mel{n(t)}{\pdv{}{\lambda}}{n(t)} \dv{\lambda}{t}
-\end{equation}\]
-
-<p>所以原来的式子可以写成:</p>
-
-\[\begin{align}
-\gamma_n(t) &amp;= \mathrm{i}\,\int_0^t \bra{n(t')}\pdv{}{\lambda}\ket{n(t')} \dv{\lambda}{t'}\,\dd{t'} \\
-&amp;= \mathrm{i}\,\int_{\lambda(0)}^{\lambda(t)} \mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}\,\dd{\lambda}
-\end{align}\]
-
-<p>开放路径一般很难做比较, 而且在参数空间走一圈才是回到了原点, 这时候我们就有闭合路径了, 这时候Berry相位就变成了:</p>
-
-\[\begin{equation}
-\gamma_n = \mathrm{i}\,\oint \mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}\,\dd{\lambda}
-\end{equation}\]
-
-<p>实际上, 我们可以定义如下的Berry connection:</p>
-
-\[\begin{equation}
-\mathcal{A}_n(\lambda) = \mathrm{i}\,\mel{n(\lambda)}{\pdv{}{\lambda}}{n(\lambda)}
-\end{equation}\]
-
-<p>从而把我们的积分写为:</p>
-
-\[\begin{equation}
-\gamma_n = \oint \mathcal{A}_n(\lambda)\,\dd{\lambda}
-\end{equation}\]
-
-<p>如果推广到多维参数空间 (我们参数使用了\(R\), 因为加粗字体的\(\lambda\)基本看不出来)那么我们有:</p>
-
-\[\begin{equation}
-\gamma_n = \oint \mathcal{A}_n(\boldsymbol{R}) \cdot \dd{\boldsymbol{R}}, \quad \mathcal{A}_n(\boldsymbol{R}) = \mathrm{i}\,\mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})}
-\end{equation}\]
-
-<p>同时, 我们可以定义Berry curvature:</p>
-
-\[\begin{equation}
-\Omega_{n,\mu\nu} = \pdv{}{R^\mu} \mathcal{A}_{n}^\nu - \pdv{}{R^\nu} \mathcal{A}_{n}^\mu
-\end{equation}\]
-
-<p>如果恰好是三维的, 我们还有:</p>
-
-\[\begin{equation}
-\boldsymbol{\Omega}_n = \nabla_{\boldsymbol{R}} \times \mathcal{\boldsymbol{A}}_n
-\end{equation}\]
-
-<hr />
-
-<h2 id="多慢算绝热">多慢算绝热?</h2>
-
-<p>我们之前扔掉的那个项是:</p>
-
-\[\begin{equation}
-\sum_{n \neq m} c_n(t) \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)} \mathrm{e}^{\mathrm{i}(\theta_n(t)-\theta_m(t))}
-\end{equation}\]
-
-<p>我们能注意到如下的量含有时间的单位, 若\(n\)不等于\(m\), 那这个量告诉了我们有多少的部分变化到了除了\(m\)以外的其他态上:</p>
-
-\[\begin{equation}
-\frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{E_n(t) - E_m(t)}
-\end{equation}\]
-
-<p>他应该小于系统内部时间, 由能级差给出:</p>
-
-\[\begin{equation}
-\tau_{mn} = \frac{\hbar}{|E_n(t) - E_m(t)|}
-\end{equation}\]
-
-<p>从而我们得到:</p>
-
-\[\begin{equation}
-\left| \frac{\bra{m(t)}\dot{H}(t)\ket{n(t)}}{(E_n(t) - E_m(t))^2} \right| \ll 1, \quad \forall m \neq n, \quad \forall t
-\end{equation}\]
-
-<hr />
-
-<h2 id="规范不变性问题">规范不变性问题</h2>
-
-<p>我们注意到, 我们的瞬时本征态\(\ket{n(t)}\)可以做如下的规范变换:</p>
-
-\[\begin{equation}
-\ket{n(t)} \to \mathrm{e}^{\mathrm{i}\,\chi(\boldsymbol{R})} \ket{n(t)}
-\end{equation}\]
-
-<p>我们先来检查Berry phase如何变化的:</p>
-
-\[\begin{align}
-\gamma_n &amp;= \mathrm{i}\,\oint \mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} \cdot \dd{\boldsymbol{R}} \\
-&amp;\to \mathrm{i}\,\oint \mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} \cdot \dd{\boldsymbol{R}} + \oint \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R}) \cdot \dd{\boldsymbol{R}} \\
-&amp;= \gamma_n + 2\pi m, \quad m \in \mathbb{Z}
-\end{align}\]
-
-<p>也就是说, Berry phase会变化一个\(2\pi\)的整数倍, 这并不影响物理, 因为相位本来就是模\(2\pi\)的!
-但是Berry connection会变化:</p>
-
-\[\begin{align}
-\mathcal{A}_n(\boldsymbol{R}) &amp;\to \mathrm{i}\,\mel{n(\boldsymbol{R})}{\nabla_{\boldsymbol{R}}}{n(\boldsymbol{R})} + \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R}) \\
-&amp;= \mathcal{A}_n(\boldsymbol{R}) + \nabla_{\boldsymbol{R}} \chi(\boldsymbol{R})
-\end{align}\]
-
-<p>所以他也不能是一个物理量, 就是说你实验上想测是不太行的.
-最后我们来看看Berry curvature:</p>
-
-\[\begin{align}
-\Omega_{n,\mu\nu} &amp;\to \pdv{}{R^\mu} \left( \mathcal{A}_{n}^\nu + \pdv{}{R^\nu} \chi(\boldsymbol{R}) \right) - \pdv{}{R^\nu} \left( \mathcal{A}_{n}^\mu + \pdv{}{R^\mu} \chi(\boldsymbol{R}) \right) \\
-&amp;= \pdv{}{R^\mu} \mathcal{A}_{n}^\nu - \pdv{}{R^\nu} \mathcal{A}_{n}^\mu \\
-&amp;= \Omega_{n,\mu\nu}
-\end{align}\]
-
-<p>嗯, 虽然他是不变的, 可是曲率曲率, 他到底是描述什么几何的弯曲的呢?</p>
-
-<hr />
-
-<h2 id="例子-自旋在磁场中">例子: 自旋在磁场中</h2>
-
-<p>我们考虑一个最经典的例子, 一个自旋\(1/2\)的粒子在一个磁场\(\boldsymbol{B}\)中, 一个平面磁场绕着z轴旋转:</p>
-
-\[\begin{equation}
-\boldsymbol{B}(t) = B(\cos\omega t, \sin\omega t, 0)
-\end{equation}\]
-
-<p>此时我们的Hamiltonian是:</p>
-
-\[\begin{equation}
-H(t) = g \mu_{B} \boldsymbol{B}(t) \cdot \boldsymbol{\sigma} = \mqty[0 &amp; g \mu_{B} B \mathrm{e}^{-\mathrm{i}\,\omega t} \\ g \mu_{B} B \mathrm{e}^{\mathrm{i}\,\omega t} &amp; 0]
-\end{equation}\]
-
-<p>我们不负责任的要求这个磁场旋转的非常非常慢, 也就是\(\omega\)非常非常小, 从而我们可以使用绝热定理.
-这个Hamiltonian的本征值和本征态分别为:</p>
-
-\[\begin{align}
-E_+ =&amp; g \mu_{B} B, \quad &amp;\ket{+} = \frac{1}{\sqrt{2}} [\mathrm{e}^{-\mathrm{i}\,\omega t}, 1]^\mathrm{T} \\
-E_- =&amp; -g \mu_{B} B, \quad &amp;\ket{-} = \frac{1}{\sqrt{2}} [-\mathrm{e}^{-\mathrm{i}\,\omega t}, 1]^\mathrm{T}
-\end{align}\]
-
-<p>用关于时间的积分来算:</p>
-
-\[\begin{equation}
-\gamma_+ = \mathrm{i}\,\int_0^T \mel{+}{\pdv{}{t}}{+}\,\dd{t} = \mathrm{i}\,\int_0^T \frac{1}{2}(-\mathrm{i}\,\omega)\,\dd{t} = \frac{\omega T}{2} = \pi
-\end{equation}\]
-
-<p>看起来好像是和几何有点关系?</p>
-
-<hr />
-
-<h2 id="aharonov-bohm效应">Aharonov-Bohm效应</h2>
-
-<p><img src="https://raw.githubusercontent.com/TheZening/PersonalPageCN/main/assets/ABeffect.png" alt="AB 效应示意图" title="Aharonov-Bohm 效应图示" /></p>
-
-<p>如上图所示, 我们有一个无限长的细线圈, 线圈内有一个均匀的磁场\(B\), 线圈外部磁场为零.
-外面没有磁场, 但是可能有向量势能\(\boldsymbol{A}\). 
-对于一个电子来说, 走上面和下面的路径, 经历的磁场是一样的, 但是由于有向量势能\(\boldsymbol{A}\), 电子会获得一个额外的相位差.</p>
-
-<p>我们之前那说过, 如果有一个向量势能\(\boldsymbol{A}\), 那么动量算符要替换为\(\boldsymbol{p} - q \boldsymbol{A}\), 从而波函数会获得一个额外的相位因子:</p>
-
-\[\begin{equation}
-\psi(\boldsymbol{x}) = \psi_0(\boldsymbol{x}) \exp\left(\frac{\mathrm{i}\,q}{\hbar} \chi(\boldsymbol{x}) \right)
-\end{equation}\]
-
-<p>其中\(\psi_0(\boldsymbol{x})\)是没有向量势能时的波函数, \(\chi(\boldsymbol{x})\)满足:</p>
-
-\[\begin{equation}
-\nabla \chi(\boldsymbol{x}) = \boldsymbol{A}(\boldsymbol{x}) \Rightarrow \chi(\boldsymbol{x}) = \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'}
-\end{equation}\]
-
-<p>此时, 我们的平移算符(把粒子挪动一点点)变成了:</p>
-
-\[\begin{equation}
-T(\dd{\boldsymbol{x}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \dd{\boldsymbol{x}} \cdot (\boldsymbol{p} - q \boldsymbol{A}) \right)
-\end{equation}\]
-
-<p>我们沿着某个路径, 每次挪一点点, 挪着挪着就到中点了, 求和变积分, 所以会累计出来一个几何相位:</p>
-
-\[\begin{equation}
-\psi(\boldsymbol{x}) = \exp\left(\frac{\mathrm{i}q}{\hbar} \int_{\boldsymbol{x}_0}^{\boldsymbol{x}} \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} \right) \psi_0(\boldsymbol{x})
-\end{equation}\]
-
-<p>上面走一条, 下面走一条, 这样就出现相位差了:</p>
-
-\[\begin{equation}
-\Delta \phi = \frac{q}{\hbar} \oint \boldsymbol{A}(\boldsymbol{x}') \cdot \dd[3]{x'} = \frac{q}{\hbar} \int \boldsymbol{B} \cdot \dd{\boldsymbol{S}} = \frac{q}{\hbar} \Phi_B
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[在1984年, Michael Berry介绍了一个关于波函数的一个新现象, 即除了常见的dynamical phase外, 根据Hamiltonian对于参数的依赖, 波函数会获得一个几何相位, 即Berry相位. Berry相位因子与系统的动力学演化无关, 仅取决于参数空间中的路径, 提现的是参数空间的特性. 这一发现在凝聚态物理, 光学和量子计算等领域产生了深远影响.]]></summary></entry></feed>
+\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论开放量子系统的一些特性. 系统包含系统部分 \(H_S\)、环境(热浴)部分 \(H_B\), 以及相互作用项 \(H_{SB}\): \(\begin{equation} H(t) = H_S + H_B + \alpha H_{SB} \end{equation}\)]]></summary></entry></feed>
