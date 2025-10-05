@@ -127,3 +127,80 @@ $$
 > 此时Alice手里的粒子, 是一个经典混合态.
 > 但是Bob手里的粒子, 仍然是原来的量子态.
 > 只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.
+
+
+---
+## 退相干的基础理论
+
+我们现在考虑一个孤立的量子系统, 他叫做$$AE$$, 其中$$A$$是我们感兴趣的系统, $$E$$是环境.
+一般来说, 比起$$A$$, $$E$$的自由度要大得多.
+对于$$A$$来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到$$E$$的影响, 或者说他与$$E$$纠缠, 耦合了.
+
+我们假设$$AE$$系统的密度矩阵是$$\rho_{AE}$$, 我们对$$E$$取迹, 得到$$A$$的约化密度矩阵:
+
+$$
+\begin{equation}
+\rho_A = \tr_E(\rho_{AE})
+\end{equation}
+$$
+
+我们的核心问题是:
+> $$\rho_A$$是如何时间演化的?
+
+我们现在明确知道的是, $$AE$$是一个孤立系统, 他满足Unitary演化, 但是$$A$$本身不是孤立系统, 他不满足Unitary演化, 也就是说:
+
+> $$A$$可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
+> 这个过程, 我们称之为退相干 (Decoherence).
+
+如果我们现在考虑如下的映射:
+
+$$
+\begin{equation}
+\tr_E: \rho_{AE} \to \rho_A
+\end{equation}
+$$
+
+那么我们就至少有一个思路了: 找到$$\rho_{AE}$$的时间演化, 然后通过对$$E$$取迹, 得到$$\rho_A$$的时间演化.
+首先我们假设$$AE$$的Hamiltonian是已知的, 从而我们可以写出$$\rho_{AE}$$的时间演化:
+
+$$
+\begin{equation}
+\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
+\end{equation}
+$$
+
+一旦我们能搞出来这个, 我们就能求:
+
+$$
+\begin{equation}
+\rho_A(t) = \tr_E(\rho_{AE}(t))
+\end{equation}
+$$
+
+此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
+但是我们现在可以做一个基础性检查:
+
+$$
+\begin{equation}
+\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
+\end{equation}
+$$
+
+我们现在再偷懒, 假设在$$t=0$$时, 环境是纯态, 记作$$\ket{\psi_E}$$.
+从而在$$t=0$$时, $$AE$$的密度矩阵是:
+
+$$
+\begin{equation}
+\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
+\end{equation}
+$$
+
+从而我们有:
+
+$$
+\begin{equation}
+\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
+\end{equation}
+$$
+
+举个例子: 比特的退相干问题.

@@ -95,12 +95,6 @@ var store = [{
         "url": "/PersonalPageCN/math0/MIM/",
         "teaser": null
       },{
-        "title": "新闻",
-        "excerpt":"这篇帖子会公布一些关于我们网站的重要更新, 还会提到接下来的工作计划, 包括假期和预定的拜访安排. 2020-Aug-25: 感谢才华横溢, 洞察力非凡的实验学者们的努力, 我们关于Dirac semimetal中二维Helical edge state的实验研究, 现在发表在 Nano Letter 上了. Helical Edge Transport in Millimeter-Scale Thin Films of Na3Bi 2021-March-15: 我们在应变Ge量子点中关于空穴自旋量子比特的理论研究, 现在发表在 Physics Review B上了. Theory of hole-spin qubits in strained germanium quantum dots 2021-Apr-01: 我们关于二维Ge空穴系统的理论研究, 现在发表在 Nature 合作期刊 npj Quantum Information上了. Optimal operation points for...","categories": ["Updates"],
-        "tags": [],
-        "url": "/PersonalPageCN/updates/RecentUpdate/",
-        "teaser": null
-      },{
         "title": "QM2 密度矩阵3",
         "excerpt":"现在我们回顾一下上一个帖子中的一个困惑. 已知每次测量, 考虑一个结果\\(i\\), 测量算子是投影: \\[\\begin{equation} M_i = \\ketbra{i}{i} \\end{equation}\\] 从而得到结果\\(i\\)的概率是: \\[\\begin{equation} p(i) = \\Tr(M_i \\rho M_i^\\dagger) = \\bra{i}\\rho\\ket{i} \\end{equation}\\] 如果知道结果是\\(i\\), 那么测量后系统的状态是: \\[\\begin{equation} \\rho_i = \\frac{M_i \\rho M_i^\\dagger}{\\Tr(M_i \\rho M_i^\\dagger)} = \\ketbra{i}{i} \\end{equation}\\] 如果不知道结果(但是仍然测量了), 那么测量后系统的状态是: \\[\\begin{equation} \\tilde{\\rho} = \\sum_i p(i) \\rho_i = \\sum_i \\bra{i}\\rho\\ket{i} \\ketbra{i}{i} \\end{equation}\\] 成为了经典混合. 我们这个帖子就对于这个问题做出一些讨论和理解. 双粒子系统 我们还是考虑Alice和Bob的双粒子系统. Alice现在准备沿着一个基向量\\(\\ket{i}_A\\)测量她的粒子,...","categories": ["QM2"],
         "tags": [],
