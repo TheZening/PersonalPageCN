@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-05T17:36:42+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-05T18:35:53+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
 
 <ol>
   <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
@@ -168,7 +168,208 @@ M_i^A = \ketbra{i}{i}_A \otimes I_B
 \rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
 \end{equation}\]
 
-<p>举个例子: 比特的退相干问题.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<hr />
+<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
+<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
+
+\[\begin{equation}
+\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
+\end{equation}\]
+
+<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
+\end{equation}\]
+
+<p>从而我们的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{A}(0) = \mqty[
+|\alpha|^2 &amp; \alpha \beta^* \\
+\alpha^* \beta &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
+\end{equation}\]
+
+<p>变成了:</p>
+
+\[\begin{equation}
+\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
+\end{equation}\]
+
+<p>此时\(A\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
+|\alpha|^2 &amp; 0 \\
+0 &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>如果我们计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
+
+<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
+
+\[\begin{equation}
+H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
+\end{equation}\]
+
+<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
+我们主要关心第一个粒子, 第二个粒子作为环境.
+假设在\(t=0\)时, 两个粒子是一个纯态:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
+\end{equation}\]
+
+<p>他们的归一化条件是:</p>
+
+\[\begin{equation}
+|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
+\end{equation}\]
+
+<p>从而我们可以写出密度矩阵:</p>
+
+\[\begin{equation}
+\rho(0) = \frac{1}{4} \mqty[
+|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
+a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
+b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
+b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
+]
+\end{equation}\]
+
+<p>时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
+\end{equation}\]
+
+<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_1(t) = \tr_2(\rho(t)) = \mqty[
+\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
+\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
+]
+\end{equation}\]
+
+<p>如果我们规定一开始的系数是:</p>
+
+\[\begin{equation}
+a_+ = a_- = b_+ = 1, \quad b_- = 0
+\end{equation}\]
+
+<p>我们的初始状态就是:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
+\end{equation}\]
+
+<p>两个粒子本来是没有纠缠的.
+但是带入上面的公式, 我们得到:</p>
+
+\[\begin{equation}
+\rho_1(t) = \mqty[
+\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
+\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
+] 
+\end{equation}\]
+
+<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
+\end{equation}\]
+
+<hr />
+<h2 id="热力学问题">热力学问题</h2>
+
+<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
+这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
+实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
+我们考虑投影算符:</p>
+
+\[\begin{equation}
+\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
+\end{equation}\]
+
+<p>就是把一个任意的态投影到\(U_E\)子空间上.
+他满足:</p>
+
+\[\begin{equation}
+\tr \Pi(E) = \Omega(E)
+\end{equation}\]
+
+<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
+从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
+
+\[\begin{equation}
+\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
+\end{equation}\]
+
+<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
+现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
+我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
+此时熵定义为:</p>
+
+\[\begin{equation}
+S^R(E) = k_B \ln \Omega^R(E)
+\end{equation}\]
+
+<p>考虑温度:</p>
+
+\[\begin{equation}
+\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
+\end{equation}\]
+
+<p>我们做积分得到:</p>
+
+\[\begin{equation}
+\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]
+
+<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
+但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
+
+\[\begin{equation}
+\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
+\end{equation}\]
+
+<p>整体的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
+\end{equation}\]
+
+<p>对\(R\)取迹, 我们得到:</p>
+
+\[\begin{align}
+\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
+&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
+&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
+\end{align}\]
+
+<p>从而可以写出正则系综的密度矩阵:</p>
+
+\[\begin{equation}
+\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 
 <p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
 这是最重要的, 不要忘掉…</p>
