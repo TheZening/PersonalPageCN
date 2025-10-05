@@ -100,4 +100,10 @@ var store = [{
         "tags": [],
         "url": "/PersonalPageCN/updates/RecentUpdate/",
         "teaser": null
+      },{
+        "title": "QM2 密度矩阵3",
+        "excerpt":" ","categories": ["QM2"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm2/QM2-DensityMatrix3/",
+        "teaser": null
       }]
