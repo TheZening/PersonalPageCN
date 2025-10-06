@@ -1,489 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-06T21:10:40+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量的理论</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量的理论" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量.
-我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变.
-这种对称性对应的守恒量就是角动量.
-无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数.
-我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:</p>
-
-\[\begin{equation}
-[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
-\end{equation}\]
-
-<p>这里 \(\epsilon_{ijk}\) 是完全反对称张量.
-这个对易关系告诉我们, 角动量的三个分量不能同时被测量.
-根据我们对于自旋和轨道角动量的理解, 我们知道我们可以找到一组共同本征态, 使得 \(J^2\) 和 \(J_z\) 有确定的值.
-我们定义:</p>
-
-\[\begin{equation}
-J^2 = J_x^2 + J_y^2 + J_z^2
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-J^2 \ket{j, m} = \hbar^2 j(j+1) \ket{j, m} \quad J_z \ket{j, m} = \hbar m \ket{j, m}
-\end{equation}\]
-
-<p>经验告诉我们, 角动量大多数是计算对易子的艺术, 所以我们现在把这些准备好.
-定义升降算符:</p>
-
-\[\begin{equation}
-J_+ = J_x + i J_y \quad J_- = J_x - i J_y
-\end{equation}\]
-
-<p>他满足:</p>
-
-\[\begin{equation}
-J_\pm \ket{j, m} = \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-[J_z, J_\pm] = \pm \hbar J_\pm \quad [J_+, J_-] = 2 \hbar J_z
-\end{equation}\]
-
-<p>以及:</p>
-
-\[\begin{equation}
-[J^2, J_i] = 0 \quad i = x, y, z
-\end{equation}\]
-
-<p>现在我们考虑两个角动量 \(\boldsymbol{J}_1\) 和 \(\boldsymbol{J}_2\), 他们分别作用在两个不同的Hilbert空间 \(\mathcal{H}_1\) 和 \(\mathcal{H}_2\) 上.
-可以两个都是轨道角动量, 也可以是自旋角动量, 也可以一个是轨道一个是自旋, 这都不重要.
-我们定义总角动量为:</p>
-
-\[\begin{equation}
-\boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2
-\end{equation}\]
-
-<p>如果写的严谨一些, 就是:</p>
-
-\[\begin{equation}
-\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I}_2 + \mathbb{I}_1 \otimes \boldsymbol{J}_2
-\end{equation}\]
-
-<p>这里 \(\mathbb{I}_1\) 和 \(\mathbb{I}_2\) 分别是两个Hilbert空间的单位算符.
-自然而然的, \(\boldsymbol{J}\) 是一个作用在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的角动量算符.
-我们可以验证 \(\boldsymbol{J}\) 也满足角动量的对易关系:</p>
-
-\[\begin{align}
-[J_i, J_j] &amp;= [J_{1i} + J_{2i}, J_{1j} + J_{2j}] \\
-&amp;= [J_{1i}, J_{1j}] + [J_{2i}, J_{2j}] \\
-&amp;= i \hbar \epsilon_{ijk} (J_{1k} + J_{2k}) \\
-&amp;= i \hbar \epsilon_{ijk} J_k
-\end{align}\]
-
-<p>因为我们知道 \(\boldsymbol{J}_1\) 作用在 \(\mathcal{H}_1\) 上, \(\boldsymbol{J}_2\) 作用在 \(\mathcal{H}_2\) 上, 所以 \([J_{1i}, J_{2j}] = 0\).</p>
-
-<blockquote>
-  <p>能不能是线性组合相加?
-这个我们可以试试, 如果你构造一个 \(\boldsymbol{J} = a \boldsymbol{J}_1 + b \boldsymbol{J}_2\), 你会发现:
-\(\begin{align}
-[J_i, J_j] &amp;= [a J_{1i} + b J_{2i}, a J_{1j} + b J_{2j}] \\
-&amp;= a^2 [J_{1i}, J_{1j}] + b^2 [J_{2i}, J_{2j}] \\
-&amp;= i \hbar (a^2 \epsilon_{ijk} J_{1k} + b^2 \epsilon_{ijk} J_{2k}) \\
-&amp;\neq i \hbar \epsilon_{ijk} (a J_{1k} + b J_{2k})
-\end{align}\)
-除非 \(a = b = 1\).
-所以只能是简单的相加.</p>
-</blockquote>
-
-<p>由于任意一个角动量算符作用的向量空间都可以分解为角动量的不可约表示的直和, 所以我们可以通过角动量的不可约表示来理解在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的Hamiltonian的谱.</p>
-
-<hr />
-<h2 id="两个自旋12的耦合">两个自旋1/2的耦合</h2>
-
-<p>我们先来看一个简单的例子, 两个自旋1/2的耦合.
-每个自旋1/2的Hilbert空间是二维的, 如果用之前的记号, 那这个空间的基就是:</p>
-
-\[\begin{equation}
-\ket{\frac{1}{2}, \frac{1}{2}} \quad \ket{\frac{1}{2}, -\frac{1}{2}}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\boldsymbol{S}^2 \ket{\frac{1}{2}, m} = \hbar^2 \frac{3}{4} \ket{\frac{1}{2}, m} \quad S_z \ket{\frac{1}{2}, m} = \hbar m \ket{\frac{1}{2}, m}
-\end{equation}\]
-
-<p>如果我们开始考虑两个自旋1/2的系统, 那么总的Hilbert空间就是四维的, 基底可以写成直积的形式:</p>
-
-\[\begin{equation}
-\ket{\uparrow_1, \uparrow_2}, \quad \ket{\uparrow_1, \downarrow_2}, \quad \ket{\downarrow_1, \uparrow_2}, \quad \ket{\downarrow_1, \downarrow_2}
-\end{equation}\]
-
-<p>也就是说新的Hilbert空间完全可以被他们张成.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
-
-<ol>
-  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
-</ol>
-
-\[\begin{equation}
-M_i = \ketbra{i}{i}
-\end{equation}\]
-
-<ol>
-  <li>从而得到结果\(i\)的概率是:</li>
-</ol>
-
-\[\begin{equation}
-p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
-\end{equation}\]
-
-<ol>
-  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
-</ol>
-
-\[\begin{equation}
-\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
-\end{equation}\]
-
-<ol>
-  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
-</ol>
-
-\[\begin{equation}
-\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
-\end{equation}\]
-
-<p>成为了经典混合.</p>
-
-<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
-
-<hr />
-<h2 id="双粒子系统">双粒子系统</h2>
-
-<p>我们还是考虑Alice和Bob的双粒子系统.
-Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
-
-\[\begin{equation}
-M_i^A = \ketbra{i}{i}_A \otimes I_B
-\end{equation}\]
-
-<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
-
-\[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
-\end{equation}\]
-
-<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
-\end{equation}\]
-
-<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
-
-\[\begin{equation}
-\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
-\end{equation}\]
-
-<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
-把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
-\end{equation}\]
-
-<p>如果我们对他取Alice的迹, 我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
-\end{equation}\]
-
-<p>计算这个迹, 我们得到:</p>
-
-\[\begin{align}
-\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
-\end{align}\]
-
-<p>我们把\(i\)的求和做掉:</p>
-
-\[\begin{equation}
-\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
-\end{equation}\]
-
-<p>从而我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
-\end{equation}\]
-
-<blockquote>
-  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
-而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
-这就是无信号定理, 纠缠不能被用来即时通信.
-此时Alice手里的粒子, 是一个经典混合态.
-但是Bob手里的粒子, 仍然是原来的量子态.
-只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
-</blockquote>
-
-<hr />
-<h2 id="退相干的基础理论">退相干的基础理论</h2>
-
-<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
-一般来说, 比起\(A\), \(E\)的自由度要大得多.
-对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
-
-<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_A = \tr_E(\rho_{AE})
-\end{equation}\]
-
-<p>我们的核心问题是:</p>
-<blockquote>
-  <p>\(\rho_A\)是如何时间演化的?</p>
-</blockquote>
-
-<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
-
-<blockquote>
-  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
-这个过程, 我们称之为退相干 (Decoherence).</p>
-</blockquote>
-
-<p>如果我们现在考虑如下的映射:</p>
-
-\[\begin{equation}
-\tr_E: \rho_{AE} \to \rho_A
-\end{equation}\]
-
-<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
-首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
-
-\[\begin{equation}
-\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
-\end{equation}\]
-
-<p>一旦我们能搞出来这个, 我们就能求:</p>
-
-\[\begin{equation}
-\rho_A(t) = \tr_E(\rho_{AE}(t))
-\end{equation}\]
-
-<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
-但是我们现在可以做一个基础性检查:</p>
-
-\[\begin{equation}
-\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
-\end{equation}\]
-
-<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
-从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
-<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
-
-\[\begin{equation}
-\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
-\end{equation}\]
-
-<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
-\end{equation}\]
-
-<p>从而我们的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{A}(0) = \mqty[
-|\alpha|^2 &amp; \alpha \beta^* \\
-\alpha^* \beta &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
-\end{equation}\]
-
-<p>变成了:</p>
-
-\[\begin{equation}
-\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
-\end{equation}\]
-
-<p>此时\(A\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
-|\alpha|^2 &amp; 0 \\
-0 &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>如果我们计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
-
-<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
-
-\[\begin{equation}
-H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
-\end{equation}\]
-
-<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
-我们主要关心第一个粒子, 第二个粒子作为环境.
-假设在\(t=0\)时, 两个粒子是一个纯态:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
-\end{equation}\]
-
-<p>他们的归一化条件是:</p>
-
-\[\begin{equation}
-|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
-\end{equation}\]
-
-<p>从而我们可以写出密度矩阵:</p>
-
-\[\begin{equation}
-\rho(0) = \frac{1}{4} \mqty[
-|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
-a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
-b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
-b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
-]
-\end{equation}\]
-
-<p>时间演化算符是:</p>
-
-\[\begin{equation}
-U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
-\end{equation}\]
-
-<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_1(t) = \tr_2(\rho(t)) = \mqty[
-\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
-\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
-]
-\end{equation}\]
-
-<p>如果我们规定一开始的系数是:</p>
-
-\[\begin{equation}
-a_+ = a_- = b_+ = 1, \quad b_- = 0
-\end{equation}\]
-
-<p>我们的初始状态就是:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
-\end{equation}\]
-
-<p>两个粒子本来是没有纠缠的.
-但是带入上面的公式, 我们得到:</p>
-
-\[\begin{equation}
-\rho_1(t) = \mqty[
-\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
-\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
-] 
-\end{equation}\]
-
-<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
-\end{equation}\]
-
-<hr />
-<h2 id="热力学问题">热力学问题</h2>
-
-<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
-这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
-实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
-我们考虑投影算符:</p>
-
-\[\begin{equation}
-\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
-\end{equation}\]
-
-<p>就是把一个任意的态投影到\(U_E\)子空间上.
-他满足:</p>
-
-\[\begin{equation}
-\tr \Pi(E) = \Omega(E)
-\end{equation}\]
-
-<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
-从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
-
-\[\begin{equation}
-\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
-\end{equation}\]
-
-<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
-现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
-我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
-此时熵定义为:</p>
-
-\[\begin{equation}
-S^R(E) = k_B \ln \Omega^R(E)
-\end{equation}\]
-
-<p>考虑温度:</p>
-
-\[\begin{equation}
-\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
-\end{equation}\]
-
-<p>我们做积分得到:</p>
-
-\[\begin{equation}
-\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]
-
-<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
-但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
-
-\[\begin{equation}
-\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
-\end{equation}\]
-
-<p>整体的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
-\end{equation}\]
-
-<p>对\(R\)取迹, 我们得到:</p>
-
-\[\begin{align}
-\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
-&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
-&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
-\end{align}\]
-
-<p>从而可以写出正则系综的密度矩阵:</p>
-
-\[\begin{equation}
-\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-06T23:24:52+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
 
 \[\begin{equation}
 \hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
@@ -914,7 +429,378 @@ U(\alpha; \mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right) = 
 
 \[\begin{equation}
 U(\alpha; \mathrm{z}) \psi(r, \theta, \phi) = \psi(r, \theta, \phi - \alpha)
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+
+<ol>
+  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
+</ol>
+
+\[\begin{equation}
+M_i = \ketbra{i}{i}
+\end{equation}\]
+
+<ol>
+  <li>从而得到结果\(i\)的概率是:</li>
+</ol>
+
+\[\begin{equation}
+p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
+\end{equation}\]
+
+<ol>
+  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
+</ol>
+
+\[\begin{equation}
+\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
+\end{equation}\]
+
+<ol>
+  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
+</ol>
+
+\[\begin{equation}
+\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
+\end{equation}\]
+
+<p>成为了经典混合.</p>
+
+<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
+
+<hr />
+<h2 id="双粒子系统">双粒子系统</h2>
+
+<p>我们还是考虑Alice和Bob的双粒子系统.
+Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
+
+\[\begin{equation}
+M_i^A = \ketbra{i}{i}_A \otimes I_B
+\end{equation}\]
+
+<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
+
+\[\begin{equation}
+\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
+\end{equation}\]
+
+<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
+
+\[\begin{equation}
+\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
+\end{equation}\]
+
+<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
+
+\[\begin{equation}
+\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
+\end{equation}\]
+
+<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
+把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
+
+\[\begin{equation}
+\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
+\end{equation}\]
+
+<p>如果我们对他取Alice的迹, 我们得到:</p>
+
+\[\begin{equation}
+\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
+\end{equation}\]
+
+<p>计算这个迹, 我们得到:</p>
+
+\[\begin{align}
+\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
+\end{align}\]
+
+<p>我们把\(i\)的求和做掉:</p>
+
+\[\begin{equation}
+\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
+\end{equation}\]
+
+<p>从而我们得到:</p>
+
+\[\begin{equation}
+\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
+\end{equation}\]
+
+<blockquote>
+  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
+而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
+这就是无信号定理, 纠缠不能被用来即时通信.
+此时Alice手里的粒子, 是一个经典混合态.
+但是Bob手里的粒子, 仍然是原来的量子态.
+只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
+</blockquote>
+
+<hr />
+<h2 id="退相干的基础理论">退相干的基础理论</h2>
+
+<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
+一般来说, 比起\(A\), \(E\)的自由度要大得多.
+对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
+
+<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_A = \tr_E(\rho_{AE})
+\end{equation}\]
+
+<p>我们的核心问题是:</p>
+<blockquote>
+  <p>\(\rho_A\)是如何时间演化的?</p>
+</blockquote>
+
+<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
+
+<blockquote>
+  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
+这个过程, 我们称之为退相干 (Decoherence).</p>
+</blockquote>
+
+<p>如果我们现在考虑如下的映射:</p>
+
+\[\begin{equation}
+\tr_E: \rho_{AE} \to \rho_A
+\end{equation}\]
+
+<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
+首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
+
+\[\begin{equation}
+\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
+\end{equation}\]
+
+<p>一旦我们能搞出来这个, 我们就能求:</p>
+
+\[\begin{equation}
+\rho_A(t) = \tr_E(\rho_{AE}(t))
+\end{equation}\]
+
+<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
+但是我们现在可以做一个基础性检查:</p>
+
+\[\begin{equation}
+\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
+\end{equation}\]
+
+<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
+从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
+<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
+
+\[\begin{equation}
+\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
+\end{equation}\]
+
+<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
+\end{equation}\]
+
+<p>从而我们的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{A}(0) = \mqty[
+|\alpha|^2 &amp; \alpha \beta^* \\
+\alpha^* \beta &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
+\end{equation}\]
+
+<p>变成了:</p>
+
+\[\begin{equation}
+\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
+\end{equation}\]
+
+<p>此时\(A\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
+|\alpha|^2 &amp; 0 \\
+0 &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>如果我们计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
+
+<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
+
+\[\begin{equation}
+H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
+\end{equation}\]
+
+<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
+我们主要关心第一个粒子, 第二个粒子作为环境.
+假设在\(t=0\)时, 两个粒子是一个纯态:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
+\end{equation}\]
+
+<p>他们的归一化条件是:</p>
+
+\[\begin{equation}
+|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
+\end{equation}\]
+
+<p>从而我们可以写出密度矩阵:</p>
+
+\[\begin{equation}
+\rho(0) = \frac{1}{4} \mqty[
+|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
+a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
+b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
+b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
+]
+\end{equation}\]
+
+<p>时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
+\end{equation}\]
+
+<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_1(t) = \tr_2(\rho(t)) = \mqty[
+\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
+\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
+]
+\end{equation}\]
+
+<p>如果我们规定一开始的系数是:</p>
+
+\[\begin{equation}
+a_+ = a_- = b_+ = 1, \quad b_- = 0
+\end{equation}\]
+
+<p>我们的初始状态就是:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
+\end{equation}\]
+
+<p>两个粒子本来是没有纠缠的.
+但是带入上面的公式, 我们得到:</p>
+
+\[\begin{equation}
+\rho_1(t) = \mqty[
+\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
+\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
+] 
+\end{equation}\]
+
+<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
+\end{equation}\]
+
+<hr />
+<h2 id="热力学问题">热力学问题</h2>
+
+<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
+这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
+实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
+我们考虑投影算符:</p>
+
+\[\begin{equation}
+\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
+\end{equation}\]
+
+<p>就是把一个任意的态投影到\(U_E\)子空间上.
+他满足:</p>
+
+\[\begin{equation}
+\tr \Pi(E) = \Omega(E)
+\end{equation}\]
+
+<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
+从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
+
+\[\begin{equation}
+\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
+\end{equation}\]
+
+<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
+现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
+我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
+此时熵定义为:</p>
+
+\[\begin{equation}
+S^R(E) = k_B \ln \Omega^R(E)
+\end{equation}\]
+
+<p>考虑温度:</p>
+
+\[\begin{equation}
+\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
+\end{equation}\]
+
+<p>我们做积分得到:</p>
+
+\[\begin{equation}
+\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]
+
+<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
+但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
+
+\[\begin{equation}
+\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
+\end{equation}\]
+
+<p>整体的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
+\end{equation}\]
+
+<p>对\(R\)取迹, 我们得到:</p>
+
+\[\begin{align}
+\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
+&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
+&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
+\end{align}\]
+
+<p>从而可以写出正则系综的密度矩阵:</p>
+
+\[\begin{equation}
+\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
 
 <ol>
   <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
@@ -1187,7 +1073,710 @@ MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙�
 既然每种可能都在某个世界实现了, 那么概率到底是什么?
 分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
 
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在考虑一个三维各项同性的谐振子:</p>
+
+\[\begin{equation}
+H = \frac{p_x^2 + p_y^2 + p_z^2}{2m} + \frac{1}{2} m \omega^2 (x^2 + y^2 + z^2)
+\end{equation}\]
+
+<p>这自然而然的可以拆成:</p>
+
+\[\begin{equation}
+H = H_x + H_y + H_z
+\end{equation}\]
+
+<p>其中:</p>
+
+\[\begin{equation}
+H_i = \frac{p_i^2}{2m} + \frac{1}{2} m \omega^2 x_i^2, \quad i = x, y, z
+\end{equation}\]
+
+<p>现在大的Hilbert空间是 \(\mathcal{H} = \mathcal{H}_x \otimes \mathcal{H}_y \otimes \mathcal{H}_z\), 每个 \(\mathcal{H}_i\) 都是一个一维谐振子的Hilbert空间.
+因此我们可以用一维谐振子的本征态来构造三维谐振子的本征态.
+他的基态是:</p>
+
+\[\begin{equation}
+\ket{0,0,0} = \ket{0}_x \otimes \ket{0}_y \otimes \ket{0}_z
+\end{equation}\]
+
+<p>从而最一般的态就是:</p>
+
+\[\begin{equation}
+\ket{n_x, n_y, n_z} = (a_x^\dagger)^{n_x} (a_y^\dagger)^{n_y} (a_z^\dagger)^{n_z} \ket{0,0,0}
+\end{equation}\]
+
+<p>这些态(对于不同的 \(n_x, n_y, n_z\))可以张成整个Hilbert空间.
+他的能量本征值是:</p>
+
+\[\begin{equation}
+E_{n_x, n_y, n_z} = \hbar \omega (n_x + n_y + n_z + \frac{3}{2})
+\end{equation}\]
+
+<hr />
+<h2 id="谐振子也有multiplet">谐振子也有Multiplet</h2>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在考虑一个三维各项同性的谐振子:]]></summary></entry><entry><title type="html">QM2 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:</p>
+
+\[\begin{equation}
+L^2 \ket{l,m} = \hbar^2 l(l+1) \ket{l,m}, \quad L_z \ket{l,m} = \hbar m \ket{l,m}
+\end{equation}\]
+
+<p>其中量子数 $l$ 和 $m$ 满足:</p>
+
+\[\begin{equation}
+l = 0, 1, 2, \ldots; \quad m = -l, -l+1, \ldots, l-1, l
+\end{equation}\]
+
+<hr />
+<h2 id="代数计算">代数计算</h2>
+
+<p>对于每一个 \(l\), 有 \(2l + 1\) 个可能的 \(m\) 值, 因此每个 \(l\) 对应一个包含 \(2l + 1\) 个状态的多重态.</p>
+
+<p>比如我们考虑一个自旋-1/2粒子, 它的角动量量子数 \(l = 1/2\), 那么它有两个可能的 \(m\) 值: \(m = -1/2\) 和 \(m = 1/2\). 这两个状态形成一个双重态 (doublet):</p>
+
+\[\begin{equation}
+\boldsymbol{S}^2 = \frac{\hbar^2}{4} (\sigma_x^2 + \sigma_y^2 + \sigma_z^2) = \frac{3\hbar^2}{4} \mathbb{I}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+S^2 \ket{1/2, m} = \frac{3\hbar^2}{4} \ket{1/2, m}, \quad S_z \ket{1/2, m} = \hbar m \ket{1/2, m}
+\end{equation}\]
+
+<p>我们现在拓展一下记号, 我们不再拘泥于自旋\(S\), 或者\(L\), 我们用 \(J\) 来表示总角动量, 其量子数为 \(j\) 和 \(m_j\), 自然而然的, 我们要求他满足角动量的对易关系:</p>
+
+\[\begin{equation}
+[J_i, J_j] = \mathrm{i}\, \hbar \epsilon_{ijk} J_k
+\end{equation}\]
+
+<p>从而我们也可以检查:</p>
+
+\[\begin{equation}
+[J^2, J_i] = 0
+\end{equation}\]
+
+<p>我们现在介绍一套新的描述方法:</p>
+
+\[\begin{equation}
+J_{\pm} = J_x \pm \mathrm{i}\, J_y \quad J_+^\dagger = J_-
+\end{equation}\]
+
+<p>开始进行一些简单计算:</p>
+
+\[\begin{equation}
+J_+ J_- = J_x^2 + J_y^2 - \mathrm{i}\,[J_x, J_y] = J_x^2 + J_y^2 + \hbar J_z = J^2 - J_z^2 + \hbar J_z
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+J_- J_+ = J^2 - J_z^2 - \hbar J_z = J_x^2 + J_y^2 - \hbar J_z
+\end{equation}\]
+
+<p>我们还可以计算:</p>
+
+\[\begin{equation}
+[J_z, J_{\pm}] = \pm \hbar J_{\pm} \quad [J_+, J_-] = 2 \hbar J_z
+\end{equation}\]
+
+<p>我们可以反着往回拆:</p>
+
+\[\begin{equation}
+J_x = \frac{J_+ + J_-}{2}, \quad J_y = \frac{J_+ - J_-}{2\mathrm{i}}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+J_x^2 + J_y^2 = J_+ J_- - \hbar J_z = J_- J_+ + \hbar J_z
+\end{equation}\]
+
+<p>还可以表示出来\(J^2\):</p>
+
+\[\begin{equation}
+J^2 = J_x^2 + J_y^2 + J_z^2 = J_+ J_- + J_z^2 - \hbar J_z = J_- J_+ + J_z^2 + \hbar J_z
+\end{equation}\]
+
+<hr />
+<h2 id="角动量的多重态">角动量的多重态</h2>
+
+<blockquote>
+  <p>多重态:
+量子力学中, 多重态(multiplet)指的是具有相同总角动量量子数\(j\), 但不同磁量子数\(m\)的多个量子态的集合.
+这些态在能量上通常是简并的, 但在空间取向上有所不同.</p>
+</blockquote>
+
+<blockquote>
+  <p>代数上说, 多重态是由一组线性无关的向量构成的特殊集合.
+这些向量在Hilbert空间中形成一个子空间, 而且这个子空间\(V\)在角动量算符的作用下是封闭的.
+\(\begin{equation}
+J_x: V \to V, \quad J_y: V \to V, \quad J_z: V \to V
+\end{equation}\)
+此外, 多重态是不可约的, 就是说不存在更小的子空间在角动量算符的作用下仍然是封闭的.
+这意味着多重态中的每个态都可以通过角动量算符的作用从其他态生成.
+如果存在一个更大的子空间\(W\), 角动量算符在其上作用时, 整个\(W\)可以拆成多个多重态的直和.
+这和群表示论里面的思想一致: 任何表示都可以拆成不可约表示的直和.</p>
+</blockquote>
+
+<p>我们现在考虑 \(J^2\) 和 \(J_z\) 的共同本征态 \(\ket{j, m}\):</p>
+
+\[\begin{align}
+J^2 \ket{j, m} &amp;= \hbar^2 j(j+1) \ket{j, m} \\
+J_z \ket{j, m} &amp;= \hbar m \ket{j, m}
+\end{align}\]
+
+<p>其中我们肯定有:</p>
+
+\[\begin{equation}
+\braket{j, m}{j,m'} = \delta_{m,m'}
+\end{equation}\]
+
+<p>就像我们之前说的, \(j(j+1)\)肯定是非负的:</p>
+
+\[\begin{align}
+hbar^2 j(j+1) =&amp; \mel{j,m}{J^2}{j,m} = \sum_i \mel{j,m}{J_i^2}{j,m} \\
+=&amp; \sum_i \norm{J_i \ket{j,m}}^2 \geq 0
+\end{align}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+j(j+1) \geq 0 \implies j \geq 0 \quad \text{or} \quad j \leq  -1
+\end{equation}\]
+
+<p>我们考虑 \(j \geq 0\) 的情况, 另外一种情况我们不考虑.
+让我们看看阶梯算符怎么回事:</p>
+
+\[\begin{equation}
+J^2 (J_{\pm} \ket{j,m}) = J_{\pm} (J^2 \ket{j,m}) = \hbar^2 j(j+1) (J_{\pm} \ket{j,m})
+\end{equation}\]
+
+\[\begin{equation}
+J_z (J_{\pm} \ket{j,m}) = (J_{\pm} J_z + [J_z, J_{\pm}]) \ket{j,m} = \hbar (m \pm 1) (J_{\pm} \ket{j,m})
+\end{equation}\]
+
+<p>我们注意到:</p>
+
+\[\begin{equation}
+J_{\pm} \ket{j,m} = C_{\pm} \ket{j, m \pm 1}
+\end{equation}\]
+
+<p>我们不如直接计算:</p>
+
+\[\begin{equation}
+\mel{j,m}{J_- J_+}{j,m} = C_+^2 \quad \mel{j,m}{J_+ J_-}{j,m} = C_-^2
+\end{equation}\]
+
+<p>我们利用:</p>
+
+\[\begin{equation}
+J_- J_+ = J^2 - J_z^2 - \hbar J_z \quad J_+ J_- = J^2 - J_z^2 + \hbar J_z
+\end{equation}\]
+
+<p>我们可以获得:</p>
+
+\[\begin{equation}
+C_+^2 = \hbar^2 [j(j+1) - m(m+1)], \quad C_-^2 = \hbar^2 [j(j+1) - m(m-1)]
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+C_+ = \hbar \sqrt{j(j+1) - m(m+1)}, \quad C_- = \hbar \sqrt{j(j+1) - m(m-1)}
+\end{equation}\]
+
+<p>一般的:</p>
+
+\[\begin{equation}
+J_{\pm} \ket{j,m} = \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
+\end{equation}\]
+
+<p>我们注意到:</p>
+
+\[\begin{equation}
+\norm{J_+ \ket{j,m}}^2 = \hbar^2 [j(j+1) - m(m+1)] \geq 0
+\end{equation}\]
+
+<p>解这个不等式, 我们有:</p>
+
+\[\begin{equation}
+-j - 1 \leq m \leq j
+\end{equation}\]
+
+<p>同理的, 我们有:</p>
+
+\[\begin{equation}
+-j \leq m \leq j + 1
+\end{equation}\]
+
+<p>取交集, 我们有:</p>
+
+\[\begin{equation}
+-j \leq m \leq j
+\end{equation}\]
+
+<p>所以我们一定有:</p>
+
+\[\begin{equation}
+J_+ \ket{j,j} = 0 \quad J_- \ket{j, -j} = 0
+\end{equation}\]
+
+<p>现在我们看看\(j\)都能是什么:</p>
+
+\[\begin{equation}
+2j \in \mathbb{Z} \implies j = 0, \frac{1}{2}, 1, \frac{3}{2}, 2, \ldots
+\end{equation}\]
+
+<p>这是个很重要的结论:</p>
+
+<blockquote>
+  <p>角动量量子数\(j\)可以是整数(0, 1, 2, …)或者半整数(1/2, 3/2, …).
+这意味着粒子的角动量可以有两种基本类型: 整数自旋和半整数自旋.
+例如, 电子具有自旋1/2, 而光子具有自旋1.
+这种区分在量子力学中非常重要, 因为它决定了粒子的统计性质和行为方式.</p>
+</blockquote>
+
+<p>从而对于一个给定的\(j\), 我们有\(2j + 1\)个可能的\(m\)值:</p>
+
+\[\begin{equation}
+\ket{j, j}, \ket{j, j-1}, \ldots, \ket{j, -j+1}, \ket{j, -j}
+\end{equation}\]
+
+<ol>
+  <li>如果\(j=0\), 那么只有一个状态\(\ket{0,0}\), 这个叫singlet, 这个singlet是一维的.</li>
+  <li>如果\(j=1/2\), 那么有两个状态\(\ket{1/2, 1/2}\)和\(\ket{1/2, -1/2}\), 这个叫doublet, 这个doublet是二维的.</li>
+  <li>如果\(j=1\), 那么有三个状态\(\ket{1,1}\), \(\ket{1,0}\)和\(\ket{1,-1}\), 这个叫triplet, 这个triplet是三维的.
+如果我们专注于轨道角动量, 那么这个就对应的是\(p\)轨道.
+如果我们专注于自旋1的粒子, 那么这三个态就对应的是\(m_s = 1, 0, -1\)的三个自旋态, 那么自旋矩阵就是\(3 \times 3\)的矩阵.</li>
+  <li>如果\(j=3/2\), 那么有四个状态\(\ket{3/2, 3/2}\), \(\ket{3/2, 1/2}\), \(\ket{3/2, -1/2}\)和\(\ket{3/2, -3/2}\), 这个叫quartet, 这个quartet是四维的.</li>
+</ol>
+
+<p>我们仔细看看\(j=1\)的情况, 我们有:</p>
+
+\[\begin{equation}
+\ket{1} \equiv \ket{1,1}, \quad \ket{0} \equiv \ket{1,0}, \quad \ket{3} \equiv \ket{1,-1}
+\end{equation}\]
+
+<p>先看\(J_z\):</p>
+
+\[\begin{equation}
+J_z \ket{1,1} = \hbar \ket{1,1}, \quad J_z \ket{1,0} = 0, \quad J_z \ket{1,-1} = -\hbar \ket{1,-1}
+\end{equation}\]
+
+<p>计算9个矩阵元, 我们自然有:</p>
+
+\[\begin{equation}
+J_z = \hbar \mqty[1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1]
+\end{equation}\]
+
+<p>同样的, 我们计算\(J_+\):</p>
+
+\[\begin{equation}
+J_+ \ket{1,1} = 0, \quad J_+ \ket{1,0} = \hbar \sqrt{2} \ket{1,1}, \quad J_+ \ket{1,-1} = \hbar \sqrt{2} \ket{1,0}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+J_+ = \hbar \sqrt{2} \mqty[0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0] \quad
+J_- = \hbar \sqrt{2} \mqty[0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0]
+\end{equation}\]
+
+<p>这样我们就能算\(J_x\)和\(J_y\):</p>
+
+<p>\(\begin{equation}
+J_x = \frac{J_+ + J_-}{2} = \frac{\hbar}{\sqrt{2}} \mqty[0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0]
+\end{equation}\)
+\(\begin{equation}
+J_y = \frac{J_+ - J_-}{2\mathrm{i}} = \frac{\hbar}{\sqrt{2}} \mqty[0 &amp; -\mathrm{i} &amp; 0 \\ \mathrm{i} &amp; 0 &amp; -\mathrm{i} \\ 0 &amp; \mathrm{i} &amp; 0]
+\end{equation}\)</p>
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+J^2 = J_x^2 + J_y^2 + J_z^2 = 2 \hbar^2 \mqty[1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1] = 2 \hbar^2 I
+\end{equation}\]
+
+<p>这和球谐函数\(Y_{1,m}\)的情况有什么关系呢?
+我们如果专注于轨道角动量\(L\), 那么\(l=1\)的情况对应的是\(p\)轨道:</p>
+
+<p>\(\begin{equation}
+L^2 \ket{l,m} = \hbar^2 l(l+1) \ket{l,m}
+\end{equation}\)
+\(\begin{equation}
+L_z \ket{l,m} = \hbar m \ket{l,m}
+\end{equation}\)</p>
+
+<p>翻译成球谐函数的形式:</p>
+
+<p>\(\begin{equation}
+L^2 Y_{l,m}(\theta, \phi) = \hbar^2 l(l+1) Y_{l,m}(\theta, \phi)
+\end{equation}\)
+\(\begin{equation}
+L_z Y_{l,m}(\theta, \phi) = \hbar m Y_{l,m}(\theta, \phi)
+\end{equation}\)</p>
+
+<p>当然这个时候我们就把抽象的角动量算符\(L\)表示成微分算符:</p>
+
+<p>\(\begin{equation}
+L_z = -\mathrm{i}\, \hbar \pdv{}{\phi}
+\end{equation}\)
+\(\begin{equation}
+L_{\pm} = \hbar e^{\pm \mathrm{i} \phi} \left( \pm \pdv{}{\theta} + \mathrm{i} \cot \theta \pdv{}{\phi} \right)
+\end{equation}\)
+\(\begin{equation}
+L^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
+\end{equation}\)</p>
+
+<p>我们先给出球坐标下的正交归一化:</p>
+
+\[\begin{equation}
+\braket{\theta, \phi}{\theta', \phi'} = \frac{1}{\sin \theta} \delta(\theta - \theta') \delta(\phi - \phi')
+\end{equation}\]
+
+<p>同时也有投影关系:</p>
+
+\[\begin{equation}
+\int_0^{2\pi} \int_0^{\pi} \sin \theta \dd{\theta} \dd{\phi} \ket{\theta, \phi} \bra{\theta, \phi} = \mathbb{I}
+\end{equation}\]
+
+<p>实际上, 球谐函数\(Y_{l,m}(\theta, \phi)\)就是\(\ket{l,m}\)在\(\ket{\theta, \phi}\)基底下的展开系数:</p>
+
+\[\begin{equation}
+Y_{l,m}(\theta, \phi) = \braket{\theta, \phi}{l,m}
+\end{equation}\]
+
+<p>我们从\(\ket{l,l}\)开始:</p>
+
+<p>\(\begin{equation}
+\sum_{l=0}^{\infty} \sum_{m=-l}^{l} \ketbra{l,m}{l,m} = \mathbb{I}
+\end{equation}\)
+\(\begin{equation}
+\braket{l',m'}{l,m} = \delta_{l,l'} \delta_{m,m'}
+\end{equation}\)</p>
+
+<p>插入完备性关系:</p>
+
+\[\begin{equation}
+\int_0^{2\pi} \int_0^{\pi} \sin \theta \braket{l',m'}{\theta, \phi} \braket{\theta, \phi}{l,m} \dd{\theta} \dd{\phi} = \delta_{l,l'} \delta_{m,m'}
+\end{equation}\]
+
+<p>这就是球谐函数的正交归一化条件:</p>
+
+\[\begin{equation}
+\int_0^{2\pi} \int_0^{\pi} Y_{l',m'}^*(\theta, \phi) Y_{l,m}(\theta, \phi) \sin \theta \dd{\theta} \dd{\phi} = \delta_{l,l'} \delta_{m,m'}
+\end{equation}\]
+
+<p>这就是个来回换基的问题, 没什么特别复杂的.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:]]></summary></entry><entry><title type="html">QM1 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/" rel="alternate" type="text/html" title="QM1 角动量与中心势3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/"><![CDATA[<p>我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题.
+我们的到了如下结果:</p>
+
+\[\begin{align}
+\hat{L}_z Y_{l,m}(\theta, \phi) &amp;= \hbar m Y_{l,m}(\theta, \phi) \\
+\hat{L}^2 Y_{l,m}(\theta, \phi) &amp;= \hbar^2 l(l+1) Y_{l,m}(\theta, \phi)
+\end{align}\]
+
+<p>其中\(l\)和\(m\)是量子数, 它们的取值范围是:</p>
+
+\[\begin{equation}
+l = 0, 1, 2, \ldots; \quad m = -l, -l+1, \ldots, l-1, l
+\end{equation}\]
+
+<p>我们还知道, \(Y_{l,m}(\theta, \phi)\)是球谐函数, 它们是角动量算符的本征函数.
+我们可以把\(Y_{l,m}(\theta, \phi)\)写成如下形式:</p>
+
+\[\begin{align}
+Y_{l,m}(\theta, \phi) &amp;= p_{l,m}(\theta) \mathrm{e}^{\mathrm{i} m \phi} \\
+\end{align}\]
+
+<hr />
+<h2 id="径向方程">径向方程</h2>
+
+<p>我们现在回过头来看Schrödinger方程在球坐标系下的形式:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \frac{1}{r} \pdv[2]{}{r} (r \psi) + \frac{\hat{L}^2}{2mr^2} \psi + V(r) \psi = E \psi
+\end{equation}\]
+
+<p>我们把波函数\(\psi\)写成径向和角向的乘积形式:</p>
+
+\[\begin{equation}
+\psi(r, \theta, \phi) = R(r) Y_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>代入Schrödinger方程, 并利用\(Y_{l,m}(\theta, \phi)\)的本征值方程, 我们得到径向方程:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \pdv[2]{}{r} (r R(r)) + \frac{\hbar^2 l(l+1)}{2mr^2} rR(r) + V(r) rR(r) = E rR(r)
+\end{equation}\]
+
+<p>我们再次把\(u(r) = r R(r)\), 得到:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \pdv[2]{u(r)}{r} + \left[ V(r) + \frac{\hbar^2 l(l+1)}{2mr^2} \right] u(r) = E u(r)
+\end{equation}\]
+
+<p>这就是径向方程, 它描述了粒子在有效势:</p>
+
+\[\begin{equation}
+V_{\text{eff}}(r) = V(r) + \frac{\hbar^2 l(l+1)}{2mr^2}
+\end{equation}\]
+
+<p>中的运动. 这里的第二项是角动量势垒, 它在\(r \to 0\)时趋于无穷大, 防止粒子落入势阱中心.
+我们也可以注意到, 我们的解\(u(r)\)依赖于\(E\)和\(l\), 但不依赖于\(m\), 这反映了能级的简并性.</p>
+
+\[\begin{equation}
+u(r) = u_{n,l}(r) \Rightarrow R_{n,l}(r) = \frac{u_{n,l}(r)}{r}
+\end{equation}\]
+
+<p>所以整体的波函数是:</p>
+
+\[\begin{equation}
+\psi_{n,l,m}(r, \theta, \phi) = R_{n,l}(r) Y_{l,m}(\theta, \phi) = \frac{u_{n,l}(r)}{r} Y_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>一般的策略还是先求方程的形式, 然后再根据具体的表达式归一化:</p>
+
+\[\begin{equation}
+\int_0^\infty |R_{n,l}(r)|^2 Y_{l,m}^*(\theta, \phi) Y_{l,m}(\theta, \phi) r^2 \sin \theta \, \dd{r} \, \dd{\theta} \, \dd{\phi} = 1
+\end{equation}\]
+
+<p>从而要求:</p>
+
+\[\begin{equation}
+\int_0^\infty |R_{n,l}(r)|^2 r^2 \, \dd{r} = 1, \quad \int_0^\infty |u_{n,l}(r)|^2 \, \dd{r} = 1
+\end{equation}\]
+
+<p>当然我们得有个边界条件:</p>
+
+\[\begin{equation}
+u_{n,l}(0) = 0, \quad u_{n,l}(\infty) = 0
+\end{equation}\]
+
+<p>第二个条件是波函数在无穷远处消失, 没什么好说的, 第一个条件比较复杂.
+我们知道\(R_{n,l}(r)\)是径向波函数, 它描述了粒子在距离原点\(r\)处的概率幅度.
+如果\(R_{n,l}(r)\)在\(r=0\)处是有限的, 那么\(u_{n,l}(r) = r R_{n,l}(r)\)在\(r=0\)处必须为零, 因为\(u_{n,l}(r)\)包含了一个额外的因子\(r\).
+这确保了波函数在原点处是正则的, 即没有奇异性.</p>]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题. 我们的到了如下结果:]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
+它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
+
+<ol>
+  <li><strong>基础步骤 (Base Case)</strong>: 验证命题对第一个自然数 (通常是1) 成立.</li>
+  <li><strong>归纳步骤 (Inductive Step)</strong>: 假设命题对某个自然数 \(k\) 成立 (归纳假设), 然后证明命题对 \(k+1\) 也成立.
+如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \(n \geq 1\) 成立.</li>
+  <li><strong>下结论</strong>: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立.</li>
+</ol>
+
+<p>实际上有两类数学归纳法:</p>
+<ul>
+  <li><strong>普通数学归纳法</strong>: 适用于证明命题对所有自然数成立.</li>
+  <li><strong>强归纳法 (Strong Induction)</strong>: 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \(k\) 的自然数成立, 然后证明对 \(k+1\) 也成立.</li>
+</ul>
+
+<p>大多数情况下我们关心第一类的.</p>
+
+<hr />
+<h2 id="上纲上线">上纲上线</h2>
+
+<p>数学归纳法是一类基于严格逻辑推理的证明方法, 不依赖于直觉或经验.
+于此相反的是经验归纳法(empirical induction), 这种方法基于观察和实验, 通过归纳总结出一般规律, 但不保证结论的绝对正确性, 是一种概率性的推理方法.</p>
+
+<p>实际上, 归纳法是处理无限全称命题(Universal Quantification Predicate)的有效工具.
+这样避免了穷举法(exhaustive proof)的繁琐和不可能性.</p>
+
+<hr />
+<h2 id="形式逻辑">形式逻辑</h2>
+
+<p>应用数学归纳法的形式逻辑可以表示为五个步骤</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 是关于自然数 \(n\) 的命题, 就是在什么条件下, 什么是正确的.</li>
+  <li><strong>基础步骤</strong>: 验证 \(P(1)\) 成立, 也就是验证命题对第一个自然数成立.</li>
+  <li><strong>归纳假设</strong>: 假设 \(P(k)\) 成立, 也就是假设命题对某个自然数 \(k\) 成立.</li>
+  <li><strong>逻辑推理</strong>: 在归纳假设的基础上, 通过逻辑推理证明 \(P(k+1)\) 成立, 也就是证明命题对 \(k+1\) 也成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
+
+<p>在我们刚接触数学归纳法时, 一定要严格按照这类方法来, 避免逻辑漏洞.</p>
+
+<hr />
+<h2 id="求和问题">求和问题</h2>
+
+<p>高斯(Gauß)提出了等差数列(arithmetic sequence)求和公式, 也就是从1加到n的和的方法为: 首项加末项乘以项数除以2, 也就是:
+对于满足:</p>
+
+\[\begin{equation}
+a_n = a_1 + (n-1)d 
+\end{equation}\]
+
+<p>其中 \(a_n\) 是第 \(n\) 项, \(a_1\) 是首项, \(d\) 是公差.
+那么等差数列的和为:</p>
+
+\[\begin{equation}
+S_n = \frac{n}{2}(a_1 + a_n)
+\end{equation}\]
+
+<p>其中 \(S_n\) 是前 \(n\) 项的和.
+说明这个公式很简单, 我们只需要讨论有奇数项和偶数项的情况, 然后首尾进行配对.
+但是严格证明这个公式, 我们可以使用数学归纳法.</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 等差数列前\(n\)项的和为 \(S_n = \frac{n}{2}(a_1 + a_n)\).</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(S_1 = a_1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(S_k = \frac{k}{2}(a_1 + a_k)\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+就是说我们要明确的推导出来:
+\(\begin{equation}
+S_{k+1} = \frac{(k+1)}{2}(a_1 + a_{k+1})
+\end{equation}\)
+数学归纳法的难点从来不在于写出公式, 而在于逻辑推理.
+\(\begin{equation}
+S_{k+1} = S_k + a_{k+1} = \frac{k}{2}(a_1 + a_k) + a_{k+1}
+\end{equation}\)
+根据等差数列的定义, 有 \(a_{k+1} = a_1 + kd\), 所以:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(a_1 + a_k) + a_1 + kd
+\end{equation}\)
+将 \(a_k\) 替换为 \(a_1 + (k-1)d\), 得到:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(a_1 + a_1 + (k-1)d) + a_1 + kd
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(2a_1 + (k-1)d) + a_1 + kd = \frac{(k+1)}{2}(a_1 + a_{k+1})
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 等差数列前\(n\)项的和公式对所有自然数\(n \geq 1\)成立.
+因此, 我们成功地使用数学归纳法证明了等差数列求和公式.</li>
+</ol>
+
+<hr />
+<h2 id="求和问题-2">求和问题-2</h2>
+
+<p>数学归纳法的第二个难点: 你真的能归纳出来吗?
+我们首先进行经验观察:
+\(\begin{align}
+1^2 &amp;= 1\\
+1^2 + 2^2 &amp;= 5\\
+1^2 + 2^2 + 3^2 &amp;= 14\\
+1^2 + 2^2 + 3^2 + 4^2 &amp;= 30\\
+1^2 + 2^2 + 3^2 + 4^2 + 5^2 &amp;= 55
+\end{align}\)
+这能看出来啥规律?
+我们进行一个猜测:
+\(\begin{equation}
+1^2 + 2^2 + 3^2 + ... + n^2 = \sum_{i=1}^{n} i^2 \sim \int_1^n x^2 dx = \frac{n^3}{3}
+\end{equation}\)
+但是这个不对, 因为当\(n=1\)时, 左边是1, 右边是1/3.
+可是我们至少能注意到一个问题: 这个求和的结果应该是一个三次函数, 所以我们从最一般的开始猜:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn + D
+\end{equation}\)
+看看能否通过已知的5个点来确定4个系数.
+\(\begin{align}
+1 &amp;= A + B + C + D\\
+5 &amp;= 8A + 4B + 2C + D\\
+14 &amp;= 27A + 9B + 3C + D\\
+30 &amp;= 64A + 16B + 4C + D\\
+55 &amp;= 125A + 25B + 5C + D
+\end{align}\)
+解这个方程组, 我们得到:
+\(\begin{equation}
+A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
+\end{equation}\)
+所以我们猜测:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{n(n+1)(2n+1)}{6}
+\end{equation}\)
+我们给出两个证明方法, 首先是做如下考虑:
+\(\begin{equation}
+(n+1)^3 - n^3 = 3n^2 + 3n + 1
+\end{equation}\)
+同时对两侧求和, 左边是telescope series:
+\(\begin{equation}
+\sum_{n=1}^{k} ((n+1)^3 - n^3) = 2^3 - 1^3 + 3^3 - 2^3 + ... + (k+1)^3 - k^3 = (k+1)^3 - 1
+\end{equation}\)
+右边呢:
+\(\begin{equation}
+\sum_{n=1}^{k} (3n^2 + 3n + 1) = 3\sum_{n=1}^{k} n^2 + 3\sum_{n=1}^{k} n + \sum_{n=1}^{k} 1 = 3\sum_{n=1}^{k} n^2 + \frac{3k(k+1)}{2} + k
+\end{equation}\)
+这样就能得到:
+\(\begin{equation}
+\sum_{n=1}^{k} n^2 = \frac{(k+1)^3 - 1 - \frac{3k(k+1)}{2} - k}{3} = \frac{k(k+1)(2k+1)}{6}
+\end{equation}\)
+这还是需要点观察力的, 现在我们考虑使用数学归纳法:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 \(\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}\), 这是我们想证明的.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(\sum_{i=1}^{1} i^2 = 1\), 右边也是 \(\frac{1(1+1)(2*1+1)}{6} = 1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(\sum_{i=1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+也就是说我们要明确的推导出来:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}
+\end{equation}\)
+根据归纳假设, 有:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \sum_{i=1}^{k} i^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
+\end{equation}\)
+将右边进行通分, 得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)(k(2k+1) + 6(k+1))}{6}
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.
+因此, 我们成功地使用数学归纳法证明了平方和公式.</li>
+</ol>
+
+<hr />
+<h2 id="论点也可以归纳">论点也可以归纳</h2>
+
+<p>数学归纳法不仅可以用来证明数列求和公式, 还可以用来证明其他类型的数学命题, 比如不等式, 组合问题, 图论等.
+每个大于 1 的自然数都能写成素数的乘积(素数分解定理), 这个也可以用数学归纳法来证明.
+素数(prime number)是指大于 1 的自然数, 只能被 1 和它本身整除的数.
+我们来证明这个命题:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “每个大于 1 的自然数 \(n\) 都能写成素数的乘积”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=2\) 时, 2 是素数, 所以命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即 \(k\) 能写成素数的乘积.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+如果 \(k+1\) 是素数, 那么命题成立.
+如果 \(k+1\) 不是素数, 那么 \(k+1\) 可以写成两个小于 \(k+1\) 的自然数的乘积, 设为 \(a\) 和 \(b\), 即 \(k+1 = a \times b\), 其中 \(1 &lt; a, b &lt; k+1\).
+根据归纳假设, \(a\) 和 \(b\) 都能写成素数的乘积, 所以 \(k+1\) 也能写成素数的乘积.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有大于 1 的自然数 \(n\) 成立.
+因此, 我们成功地使用数学归纳法证明了素数分解定理.</li>
+</ol>
+
+<hr />
+<h2 id="不能乱归纳">不能乱归纳…</h2>
+
+<p>数学归纳法虽然强大, 但是偶尔应用不当也会出错.
+比如我们来证明一个错误的命题: “所有的马都是同一种颜色”.</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “在任意 \(n\) 匹马中, 所有马都是同一种颜色”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, 只有一匹马, 命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即在任意 \(k\) 匹马中, 所有马都是同一种颜色.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+我们考虑任意 \(k+1\) 匹马, 设为 \(M_1, M_2, ..., M_{k+1}\).
+根据归纳假设, 在前 \(k\) 匹马 \(M_1, M_2, ..., M_k\) 中, 所有马都是同一种颜色, 设为颜色 \(C_1\).
+同样, 在后 \(k\) 匹马 \(M_2, M_3, ..., M_{k+1}\) 中, 所有马也是同一种颜色, 设为颜色 \(C_2\).
+由于 \(M_2, M_3, ..., M_k\) 是前后两组马的交集, 它们的颜色必须相同, 即 \(C_1 = C_2\).
+因此, 所有 \(k+1\) 匹马都是同一种颜色, 命题成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
+
+<p>❌️❌️❌️但是这个命题显然是错误的, 因为不同的马可以有不同的颜色.
+这个错误的归纳证明在逻辑推理步骤中存在漏洞.
+当 \(n=1\) 时, 基础步骤成立.
+但是当 \(n=2\) 时, 归纳假设无法应用, 因为前后两组马没有交集, 所以无法得出 \(C_1 = C_2\).
+因此, 这个错误的归纳证明无法成立!
+这个例子提醒我们在使用数学归纳法时, 必须明确推理的范围和条件, 实际上, 解决这个问题有两个方法:</p>
+<ol>
+  <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
+  <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
+这两个方法都能帮助我们避免错误的归纳证明.</li>
+</ol>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 
 <p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
 这是最重要的, 不要忘掉…</p>
@@ -1498,229 +2087,7 @@ MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙�
 \sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
-\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
-<p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
-它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
-
-<ol>
-  <li><strong>基础步骤 (Base Case)</strong>: 验证命题对第一个自然数 (通常是1) 成立.</li>
-  <li><strong>归纳步骤 (Inductive Step)</strong>: 假设命题对某个自然数 \(k\) 成立 (归纳假设), 然后证明命题对 \(k+1\) 也成立.
-如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \(n \geq 1\) 成立.</li>
-  <li><strong>下结论</strong>: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立.</li>
-</ol>
-
-<p>实际上有两类数学归纳法:</p>
-<ul>
-  <li><strong>普通数学归纳法</strong>: 适用于证明命题对所有自然数成立.</li>
-  <li><strong>强归纳法 (Strong Induction)</strong>: 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \(k\) 的自然数成立, 然后证明对 \(k+1\) 也成立.</li>
-</ul>
-
-<p>大多数情况下我们关心第一类的.</p>
-
-<hr />
-<h2 id="上纲上线">上纲上线</h2>
-
-<p>数学归纳法是一类基于严格逻辑推理的证明方法, 不依赖于直觉或经验.
-于此相反的是经验归纳法(empirical induction), 这种方法基于观察和实验, 通过归纳总结出一般规律, 但不保证结论的绝对正确性, 是一种概率性的推理方法.</p>
-
-<p>实际上, 归纳法是处理无限全称命题(Universal Quantification Predicate)的有效工具.
-这样避免了穷举法(exhaustive proof)的繁琐和不可能性.</p>
-
-<hr />
-<h2 id="形式逻辑">形式逻辑</h2>
-
-<p>应用数学归纳法的形式逻辑可以表示为五个步骤</p>
-
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 是关于自然数 \(n\) 的命题, 就是在什么条件下, 什么是正确的.</li>
-  <li><strong>基础步骤</strong>: 验证 \(P(1)\) 成立, 也就是验证命题对第一个自然数成立.</li>
-  <li><strong>归纳假设</strong>: 假设 \(P(k)\) 成立, 也就是假设命题对某个自然数 \(k\) 成立.</li>
-  <li><strong>逻辑推理</strong>: 在归纳假设的基础上, 通过逻辑推理证明 \(P(k+1)\) 成立, 也就是证明命题对 \(k+1\) 也成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
-</ol>
-
-<p>在我们刚接触数学归纳法时, 一定要严格按照这类方法来, 避免逻辑漏洞.</p>
-
-<hr />
-<h2 id="求和问题">求和问题</h2>
-
-<p>高斯(Gauß)提出了等差数列(arithmetic sequence)求和公式, 也就是从1加到n的和的方法为: 首项加末项乘以项数除以2, 也就是:
-对于满足:</p>
-
-\[\begin{equation}
-a_n = a_1 + (n-1)d 
-\end{equation}\]
-
-<p>其中 \(a_n\) 是第 \(n\) 项, \(a_1\) 是首项, \(d\) 是公差.
-那么等差数列的和为:</p>
-
-\[\begin{equation}
-S_n = \frac{n}{2}(a_1 + a_n)
-\end{equation}\]
-
-<p>其中 \(S_n\) 是前 \(n\) 项的和.
-说明这个公式很简单, 我们只需要讨论有奇数项和偶数项的情况, 然后首尾进行配对.
-但是严格证明这个公式, 我们可以使用数学归纳法.</p>
-
-<ol>
-  <li><strong>定义命题</strong>: 等差数列前\(n\)项的和为 \(S_n = \frac{n}{2}(a_1 + a_n)\).</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(S_1 = a_1\), 公式成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(S_k = \frac{k}{2}(a_1 + a_k)\).</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
-就是说我们要明确的推导出来:
-\(\begin{equation}
-S_{k+1} = \frac{(k+1)}{2}(a_1 + a_{k+1})
-\end{equation}\)
-数学归纳法的难点从来不在于写出公式, 而在于逻辑推理.
-\(\begin{equation}
-S_{k+1} = S_k + a_{k+1} = \frac{k}{2}(a_1 + a_k) + a_{k+1}
-\end{equation}\)
-根据等差数列的定义, 有 \(a_{k+1} = a_1 + kd\), 所以:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(a_1 + a_k) + a_1 + kd
-\end{equation}\)
-将 \(a_k\) 替换为 \(a_1 + (k-1)d\), 得到:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(a_1 + a_1 + (k-1)d) + a_1 + kd
-\end{equation}\)
-简化后得到:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(2a_1 + (k-1)d) + a_1 + kd = \frac{(k+1)}{2}(a_1 + a_{k+1})
-\end{equation}\)
-公式成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 等差数列前\(n\)项的和公式对所有自然数\(n \geq 1\)成立.
-因此, 我们成功地使用数学归纳法证明了等差数列求和公式.</li>
-</ol>
-
-<hr />
-<h2 id="求和问题-2">求和问题-2</h2>
-
-<p>数学归纳法的第二个难点: 你真的能归纳出来吗?
-我们首先进行经验观察:
-\(\begin{align}
-1^2 &amp;= 1\\
-1^2 + 2^2 &amp;= 5\\
-1^2 + 2^2 + 3^2 &amp;= 14\\
-1^2 + 2^2 + 3^2 + 4^2 &amp;= 30\\
-1^2 + 2^2 + 3^2 + 4^2 + 5^2 &amp;= 55
-\end{align}\)
-这能看出来啥规律?
-我们进行一个猜测:
-\(\begin{equation}
-1^2 + 2^2 + 3^2 + ... + n^2 = \sum_{i=1}^{n} i^2 \sim \int_1^n x^2 dx = \frac{n^3}{3}
-\end{equation}\)
-但是这个不对, 因为当\(n=1\)时, 左边是1, 右边是1/3.
-可是我们至少能注意到一个问题: 这个求和的结果应该是一个三次函数, 所以我们从最一般的开始猜:
-\(\begin{equation}
-\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn + D
-\end{equation}\)
-看看能否通过已知的5个点来确定4个系数.
-\(\begin{align}
-1 &amp;= A + B + C + D\\
-5 &amp;= 8A + 4B + 2C + D\\
-14 &amp;= 27A + 9B + 3C + D\\
-30 &amp;= 64A + 16B + 4C + D\\
-55 &amp;= 125A + 25B + 5C + D
-\end{align}\)
-解这个方程组, 我们得到:
-\(\begin{equation}
-A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
-\end{equation}\)
-所以我们猜测:
-\(\begin{equation}
-\sum_{i=1}^{n} i^2 = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{n(n+1)(2n+1)}{6}
-\end{equation}\)
-我们给出两个证明方法, 首先是做如下考虑:
-\(\begin{equation}
-(n+1)^3 - n^3 = 3n^2 + 3n + 1
-\end{equation}\)
-同时对两侧求和, 左边是telescope series:
-\(\begin{equation}
-\sum_{n=1}^{k} ((n+1)^3 - n^3) = 2^3 - 1^3 + 3^3 - 2^3 + ... + (k+1)^3 - k^3 = (k+1)^3 - 1
-\end{equation}\)
-右边呢:
-\(\begin{equation}
-\sum_{n=1}^{k} (3n^2 + 3n + 1) = 3\sum_{n=1}^{k} n^2 + 3\sum_{n=1}^{k} n + \sum_{n=1}^{k} 1 = 3\sum_{n=1}^{k} n^2 + \frac{3k(k+1)}{2} + k
-\end{equation}\)
-这样就能得到:
-\(\begin{equation}
-\sum_{n=1}^{k} n^2 = \frac{(k+1)^3 - 1 - \frac{3k(k+1)}{2} - k}{3} = \frac{k(k+1)(2k+1)}{6}
-\end{equation}\)
-这还是需要点观察力的, 现在我们考虑使用数学归纳法:</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 \(\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}\), 这是我们想证明的.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(\sum_{i=1}^{1} i^2 = 1\), 右边也是 \(\frac{1(1+1)(2*1+1)}{6} = 1\), 公式成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(\sum_{i=1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}\).</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
-也就是说我们要明确的推导出来:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}
-\end{equation}\)
-根据归纳假设, 有:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \sum_{i=1}^{k} i^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
-\end{equation}\)
-将右边进行通分, 得到:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)(k(2k+1) + 6(k+1))}{6}
-\end{equation}\)
-简化后得到:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
-\end{equation}\)
-公式成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.
-因此, 我们成功地使用数学归纳法证明了平方和公式.</li>
-</ol>
-
-<hr />
-<h2 id="论点也可以归纳">论点也可以归纳</h2>
-
-<p>数学归纳法不仅可以用来证明数列求和公式, 还可以用来证明其他类型的数学命题, 比如不等式, 组合问题, 图论等.
-每个大于 1 的自然数都能写成素数的乘积(素数分解定理), 这个也可以用数学归纳法来证明.
-素数(prime number)是指大于 1 的自然数, 只能被 1 和它本身整除的数.
-我们来证明这个命题:</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “每个大于 1 的自然数 \(n\) 都能写成素数的乘积”.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=2\) 时, 2 是素数, 所以命题成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即 \(k\) 能写成素数的乘积.</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
-如果 \(k+1\) 是素数, 那么命题成立.
-如果 \(k+1\) 不是素数, 那么 \(k+1\) 可以写成两个小于 \(k+1\) 的自然数的乘积, 设为 \(a\) 和 \(b\), 即 \(k+1 = a \times b\), 其中 \(1 &lt; a, b &lt; k+1\).
-根据归纳假设, \(a\) 和 \(b\) 都能写成素数的乘积, 所以 \(k+1\) 也能写成素数的乘积.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有大于 1 的自然数 \(n\) 成立.
-因此, 我们成功地使用数学归纳法证明了素数分解定理.</li>
-</ol>
-
-<hr />
-<h2 id="不能乱归纳">不能乱归纳…</h2>
-
-<p>数学归纳法虽然强大, 但是偶尔应用不当也会出错.
-比如我们来证明一个错误的命题: “所有的马都是同一种颜色”.</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “在任意 \(n\) 匹马中, 所有马都是同一种颜色”.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, 只有一匹马, 命题成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即在任意 \(k\) 匹马中, 所有马都是同一种颜色.</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
-我们考虑任意 \(k+1\) 匹马, 设为 \(M_1, M_2, ..., M_{k+1}\).
-根据归纳假设, 在前 \(k\) 匹马 \(M_1, M_2, ..., M_k\) 中, 所有马都是同一种颜色, 设为颜色 \(C_1\).
-同样, 在后 \(k\) 匹马 \(M_2, M_3, ..., M_{k+1}\) 中, 所有马也是同一种颜色, 设为颜色 \(C_2\).
-由于 \(M_2, M_3, ..., M_k\) 是前后两组马的交集, 它们的颜色必须相同, 即 \(C_1 = C_2\).
-因此, 所有 \(k+1\) 匹马都是同一种颜色, 命题成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
-</ol>
-
-<p>❌️❌️❌️但是这个命题显然是错误的, 因为不同的马可以有不同的颜色.
-这个错误的归纳证明在逻辑推理步骤中存在漏洞.
-当 \(n=1\) 时, 基础步骤成立.
-但是当 \(n=2\) 时, 归纳假设无法应用, 因为前后两组马没有交集, 所以无法得出 \(C_1 = C_2\).
-因此, 这个错误的归纳证明无法成立!
-这个例子提醒我们在使用数学归纳法时, 必须明确推理的范围和条件, 实际上, 解决这个问题有两个方法:</p>
-<ol>
-  <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
-  <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
-这两个方法都能帮助我们避免错误的归纳证明.</li>
-</ol>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry><entry><title type="html">QM2 密度矩阵2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="alternate" type="text/html" title="QM2 密度矩阵2" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/"><![CDATA[<h2 id="关于本征态的测量">关于本征态的测量</h2>
+\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">QM2 密度矩阵2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="alternate" type="text/html" title="QM2 密度矩阵2" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/"><![CDATA[<h2 id="关于本征态的测量">关于本征态的测量</h2>
 
 <p>我们考虑一个纯态 $\ket{\psi}$, 我们自然是可以用一组本征态( $\ket{i}$ )来测量他, 从而得到:</p>
 
@@ -2238,345 +2605,4 @@ p_1 = \frac{2+\sqrt{2}}{4}, \quad p_2 = \frac{2-\sqrt{2}}{4}
 \end{equation}\)
 \(\begin{equation}
 \ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
-\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry><entry><title type="html">QM2 密度矩阵1</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix1/" rel="alternate" type="text/html" title="QM2 密度矩阵1" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix1/"><![CDATA[<blockquote>
-  <p>量子力学的随机性:
-演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足.
-你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.</p>
-</blockquote>
-
-<blockquote>
-  <p>经典概率的随机性:
-经典随机性来自于复杂性和信息的不完全性, 原则上你扔一个骰子是完全可预测的, 但是由于你无法掌握所有的初始条件, 只能用概率来描述结果.</p>
-</blockquote>
-
-<p>在这个背景下, 针对系综(一模一样的系统的综合)的问题, 我们就考虑使用密度矩阵, density matrix来容纳这种经典的随机性.
-另外, 密度矩阵还能解决一类问题: 当一个子系统与整个系统的其余部分纠缠时, 对该子系统的描述中必然包含随机性, 这种随机性就由密度矩阵描述.</p>
-
-<blockquote>
-  <p>纯态:
-完整地包含了关于该量子系统的所有可知信息, 可以用态矢量 \(\ket{\psi}\) 来描述.</p>
-</blockquote>
-
-<blockquote>
-  <p>混合态:
-我们对系统没有完全的信息, 或者系统与外界发生了纠缠, 只能用密度矩阵 \(\rho\) 来描述.</p>
-</blockquote>
-
-<hr />
-<h2 id="经典随机性">经典随机性</h2>
-
-<p>回到我们的经典的Stern-Gerlach实验, 我们的炉子有50%的概率发射自旋向上电子, 50%的概率发射自旋向下电子.
-经典的随机性来自于我们对炉子发射电子的状态没有完全的信息, 只能说有50%的概率是向上, 50%的概率是向下.
-从而我们可以用一个系综描述这个系统:</p>
-
-\[\begin{equation}
-E_{\text{z}} = \left\{ \left( \frac{1}{2}, \ket{\uparrow} \right), \left( \frac{1}{2}, \ket{\downarrow} \right) \right\}
-\end{equation}\]
-
-<p>目前看来, 我们通过列举法描述了这个系综.
-如果系综更大, 我们也可以都列出来:</p>
-
-\[\begin{equation}
-E = \left\{ \left( p_1, \ket{\psi_1} \right), \left( p_2, \ket{\psi_2} \right), \ldots, \left( p_n, \ket{\psi_n} \right) \right\}
-\end{equation}\]
-
-<p>自然是要满足:</p>
-
-\[\begin{equation}
-\sum_{i=1}^{n} p_i = 1 \quad \braket{\psi_i}{\psi_i} = 1
-\end{equation}\]
-
-<p>但是我们不要求 \(\braket{\psi_i}{\psi_j} = 0 \quad (i \neq j)\).
-这是自然的, 系综只负责把大家聚在一起, 随便从大街上挑一个人不一定和你姓氏相同的.</p>
-
-<p>自然而然的, 我们要求一个算符的平均值, 不仅要考虑量子力学的平均, 还要考虑经典的平均:
-我们首先在一个系统内计算量子力学的平均值, 然后对系综内的所有系统进行经典的加权平均:</p>
-
-\[\begin{equation}
-\langle A \rangle = \sum_{i} p_i \mel{\psi_i}{A}{\psi_i}
-\end{equation}\]
-
-<hr />
-<h2 id="什么是对系统没有完全的信息">什么是对系统没有完全的信息?</h2>
-
-<p>我们来考虑一个纠缠态的问题, Alice和Bob每个人都拿着一个自己的比特, 他们的总态是</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow_A \downarrow_B} - \ket{\downarrow_A \uparrow_B} \right)
-\end{equation}\]
-
-<p>Alice开始测量她的比特, 如果她测量到 \(\ket{\uparrow_A}\), 她就知道Bob的比特是 \(\ket{\downarrow_B}\);
-如果她测量到 \(\ket{\downarrow_A}\), 她就知道Bob的比特是 \(\ket{\uparrow_B}\).
-但是在Alice测量之前, 她对Bob的比特一无所知, 她只能说Bob的比特有50%的概率是 \(\ket{\uparrow_B}\), 50%的概率是 \(\ket{\downarrow_B}\).
-所以Alice对Bob的比特没有完全的信息, 她只能用一个系综来描述Bob的比特:</p>
-
-\[\begin{equation}
-E_B = \left\{ \left( \frac{1}{2}, \ket{\uparrow} \right), \left( \frac{1}{2}, \ket{\downarrow} \right) \right\}
-\end{equation}\]
-
-<p>我们现在要提出一个问题:</p>
-
-<blockquote>
-  <p>存不存在一个态 \(\ket{\phi_A}\) (Alice的粒子) 使得我们能完全掌握这个粒子的信息?</p>
-</blockquote>
-
-<p>如果这种态存在, 那么我们必有:</p>
-
-\[\begin{equation}
-\mel{\psi_A}{Q}{\psi_A} = \mel{\psi_{AB}}{Q \otimes I_B}{\psi_{AB}}
-\end{equation}\]
-
-<blockquote>
-  <p>我们现在要证明, 不存在这样的纯态 \(\ket{\phi_A}\)!</p>
-</blockquote>
-
-<p>我们考虑\(\sigma_x, \sigma_y, \sigma_z\)的期望值:</p>
-
-\[\begin{align}
-\sigma_x \otimes \mathbb{1} \ket{\psi_{AB}} &amp;= \frac{1}{\sqrt{2}} \left( \ket{\downarrow_A \downarrow_B} - \ket{\uparrow_A \uparrow_B} \right) \\
-\sigma_y \otimes \mathbb{1} \ket{\psi_{AB}} &amp;= \frac{i}{\sqrt{2}} \left( \ket{\downarrow_A \downarrow_B} + \ket{\uparrow_A \uparrow_B} \right) \\
-\sigma_z \otimes \mathbb{1} \ket{\psi_{AB}} &amp;= \frac{1}{\sqrt{2}} \left( \ket{\uparrow_A \downarrow_B} + \ket{\downarrow_A \uparrow_B} \right)
-\end{align}\]
-
-<p>我们立刻可以发现:</p>
-
-\[\begin{equation}
-\mel{\psi_{AB}}{\sigma_x \otimes \mathbb{1}}{\psi_{AB}} = \mel{\psi_{AB}}{\sigma_y \otimes \mathbb{1}}{\psi_{AB}} = \mel{\psi_{AB}}{\sigma_z \otimes \mathbb{1}}{\psi_{AB}} = 0
-\end{equation}\]
-
-<p>那如果我们用信息等价的纯态 \(\ket{\phi_A}\) 来计算呢?
-我们必然期望的到:</p>
-
-\[\begin{equation}
-\mel{\phi_A}{\sigma_x}{\phi_A} = \mel{\phi_A}{\sigma_y}{\phi_A} = \mel{\phi_A}{\sigma_z}{\phi_A} = 0
-\end{equation}\]
-
-<p>这很明显是不可能的, 因为我们知道, 这就相当于一个态没有自旋偏振, 这是不可能的!
-自旋必须得有一个指向.</p>
-
-<p>所以我们证明了, 不存在一个纯态 \(\ket{\phi_A}\) 能够完全描述Alice的粒子.
-这就是一种对系统没有完全的信息描述的情况.</p>
-
-<p>可是应该怎么描述呢?</p>
-
-<hr />
-<h2 id="密度矩阵">密度矩阵</h2>
-
-<p>我们现在对于混合态有两个起点:</p>
-<ol>
-  <li>系综的描述 \(E = \left\{ \left( p_i, \ket{\psi_i} \right) \right\}\)</li>
-  <li>期望值的计算 \(\langle A \rangle = \sum_{i} p_i \mel{\psi_i}{A}{\psi_i}\)</li>
-</ol>
-
-<p>我们从算符的期望值出发:</p>
-
-\[\begin{align}
-\langle A \rangle &amp;= \sum_{i} p_i \mel{\psi_i}{A}{\psi_i} \\
-&amp;= \sum_{i} p_i \tr \left(  A \ket{\psi_i} \bra{\psi_i}\right) \\
-&amp;= \tr \left(  A \sum_{i} p_i \ket{\psi_i} \bra{\psi_i}\right) \\
-&amp;= \tr \left(  A \rho \right)
-\end{align}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i}
-\end{equation}\]
-
-<p>也就是说, 我们可以把系综 \(E = \left\{ \left( p_i, \ket{\psi_i} \right) \right\}\) 用一个算符 \(\rho\) 来描述.
-这个算符 \(\rho\) 就叫做密度矩阵, density matrix.
-举个最简单的例子, 我们的经典Stern-Gerlach实验的系综可以用密度矩阵:</p>
-
-\[\begin{equation}
-\rho = \frac{1}{2} \ket{\uparrow} \bra{\uparrow} + \frac{1}{2} \ket{\downarrow} \bra{\downarrow} = \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
-\end{equation}\]
-
-<p>来描述.</p>
-
-<hr />
-<h2 id="密度矩阵的性质">密度矩阵的性质</h2>
-
-<ol>
-  <li>\(\rho\) 是Hermitian的.</li>
-  <li>\(\rho\) 的本征值非负, 是半正定的.</li>
-  <li>\(\tr(\rho) = 1\).</li>
-  <li>\(\rho\) 不收到态的相位影响.</li>
-  <li>\(\tr{\rho^2} \leq 1\), 当且仅当 \(\rho\) 是纯态时取等号.</li>
-</ol>
-
-<p>我们来一个一个的说明, 考虑密度矩阵:</p>
-
-\[\begin{equation}
-\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \Rightarrow \rho^\dagger = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \rho
-\end{equation}\]
-
-<p>这个确实是很直白的, 没什么好说的.</p>
-
-<p>我们来证明第二个性质, \(\rho\) 的本征值非负, 是半正定的.</p>
-
-\[\begin{equation}
-\mel{\psi}{\rho}{\psi} = \sum_{i} p_i \braket{\psi}{\psi_i} \braket{\psi_i}{\psi} = \sum_{i} p_i |\braket{\psi}{\psi_i}|^2 \geq 0
-\end{equation}\]
-
-<p>自然而然的, 本征值是非负的.
-我们来证明第三个性质, \(\tr(\rho) = 1\).</p>
-
-\[\begin{align}
-\tr(\rho) &amp;= \sum_{i} p_i \tr(\ket{\psi_i} \bra{\psi_i}) \\
-&amp;= \sum_{i} p_i \braket{\psi_i}{\psi_i} \\
-&amp;= \sum_{i} p_i \cdot 1 \\
-&amp;= 1
-\end{align}\]
-
-<p>毕竟对于每个系统态是归一化的, 而且经典概率层面上也要求概率和为1.
-我们来证明第四个性质, \(\rho\) 不受到态的相位影响.</p>
-
-\[\begin{equation}
-\rho = \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} = \sum_{i} p_i e^{i\phi_i} \ket{\psi_i} e^{-i\phi_i} \bra{\psi_i} = \rho
-\end{equation}\]
-
-<p>一个是ket, 一个是bra, 自然是相消的, 所以密度矩阵不受相位影响.
-我们来证明第五个性质, \(\tr{\rho^2} \leq 1\), 当且仅当 \(\rho\) 是纯态时取等号.</p>
-
-\[\begin{align}
-\tr{\rho^2} &amp;= \tr{\left( \sum_{i} p_i \ket{\psi_i} \bra{\psi_i} \right)^2} \\
-&amp;= \tr{\sum_{i,j} p_i p_j \ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
-&amp;= \sum_{i,j} p_i p_j \tr{\ket{\psi_i} \bra{\psi_i} \ket{\psi_j} \bra{\psi_j}} \\
-&amp;= \sum_{i,j} p_i p_j \braket{\psi_i}{\psi_j} \braket{\psi_j}{\psi_i} \\
-&amp;= \sum_{i,j} p_i p_j |\braket{\psi_i}{\psi_j}|^2
-\end{align}\]
-
-<p>如果 \(\rho\) 是纯态, 那么 \(\rho = \ket{\psi} \bra{\psi}\), 这时候:</p>
-
-\[\begin{align}
-\tr{\rho^2} &amp;= \tr{\ket{\psi} \bra{\psi} \ket{\psi} \bra{\psi}} \\
-&amp;= \tr{\ket{\psi} \bra{\psi}} \\
-&amp;= \braket{\psi}{\psi} \\
-&amp;= 1
-\end{align}\]
-
-<hr />
-<h2 id="纯度">纯度</h2>
-
-<p>一旦我们注意到 \(\tr{\rho^2}\) 的性质, 我们就可以定义一个量来衡量混合态的纯度:</p>
-
-\[\begin{equation}
-P = \tr{\rho^2}
-\end{equation}\]
-
-<p>纯度的范围是 \(0 \leq P \leq 1\), 当且仅当 \(P = 1\) 时, \(\rho\) 是纯态.
-纯度越接近1, 混合态越接近纯态; 纯度越接近0, 混合态越接近完全混合态.
-我们现在尝试来说明这件事.
-如果密度矩阵是对角的, 我们有:</p>
-
-\[\begin{equation}
-\rho = \operatorname{diag}(p_1, p_2, \ldots, p_n) \Rightarrow \tr{\rho^2} = \sum_{i} p_i^2
-\end{equation}\]
-
-<p>我们想知道什么时候系统最接近混合态, 自然就是问什么时候 \(\sum_{i} p_i^2\) 最小.
-我们用拉格朗日乘数法来求解这个问题, 我们要求:</p>
-
-\[\begin{equation}
-\delta \left( \sum_{i} p_i^2 - \lambda \left( \sum_{i} p_i - 1 \right) \right) = 0
-\end{equation}\]
-
-<p>我们对 \(p_j\) 求导:</p>
-
-\[\begin{equation}
-\frac{\partial}{\partial p_j} \left( \sum_{i} p_i^2 - \lambda \left( \sum_{i} p_i - 1 \right) \right) = 2 p_j - \lambda = 0
-\end{equation}\]
-
-<p>所以我们有 \(p_j = \frac{\lambda}{2}\), 也就是说所有的 \(p_j\) 都相等.
-结合 \(\sum_{i} p_i = 1\), 我们有 \(p_j = \frac{1}{n}\).
-所以我们有:</p>
-
-\[\begin{equation}
-\tr{\rho^2} = \sum_{i} p_i^2 = n \left( \frac{1}{n} \right)^2 = \frac{1}{n}
-\end{equation}\]
-
-<p>这就是完全混合态的纯度.
-他的物理意义是, 系统在所有可能的态上均匀分布, 我们对系统一无所知.
-自然而然就是最混合的!</p>
-
-<hr />
-<h2 id="系综与密度矩阵">系综与密度矩阵</h2>
-
-<p>我们现在提出一个定理:</p>
-
-<blockquote>
-  <p>定理:
-如果一个矩阵是Hermitian的, 半正定的, 且迹为1, 那么它可以表示为一个系综的密度矩阵.</p>
-</blockquote>
-
-<p>我们来证明这个定理.
-我们考虑一个矩阵 \(\rho\), 它是Hermitian的, 半正定的, 且迹为1.
-由于 \(\rho\) 是Hermitian的, 它可以对角化:</p>
-
-\[\begin{equation}
-\rho = \sum_{i} \lambda_i \ket{i} \bra{i} \quad \lambda_i \geq 0 \quad \sum_{i} \lambda_i = 1
-\end{equation}\]
-
-<p>考虑一个系综:</p>
-
-\[\begin{equation}
-E = \left\{ \left( \lambda_i, \ket{i} \right) \right\}
-\end{equation}\]
-
-<p>我们立刻注意到:</p>
-
-<ol>
-  <li>\(\lambda_i\) 是非负的, \(\sum_{i} \lambda_i = 1\), 所以它们可以作为概率.</li>
-  <li>\(\ket{i}\) 是归一化的, \(\braket{i}{i} = 1\).</li>
-  <li>\(\rho\) 可以表示为这个系综的密度矩阵:</li>
-</ol>
-
-\[\begin{equation}
-\rho = \sum_{i} \lambda_i \ket{i} \bra{i}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[量子力学的随机性: 演化过程是完全严格的, 但是测量结果是随机的, 没有什么随机性来自于我们对知识掌握的不足. 你准备10个一模一样的瓶子, 粒子一开始都在瓶子中心, 完全按照Schrödinger方程演化, 然后观察粒子的位置, 你会发现10次实验的结果还是一个分布.]]></summary></entry><entry><title type="html">QM+ Floquet system入门</title><link href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" rel="alternate" type="text/html" title="QM+ Floquet system入门" /><published>2025-09-18T00:00:00+10:00</published><updated>2025-09-18T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/"><![CDATA[<blockquote>
-  <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
-</blockquote>
-
-<h2 id="什么是floquet-system">什么是Floquet system?</h2>
-
-<p>我们知道一个态 \(\ket{\psi(t)}\) 的时间演化是由Schrödinger方程决定的:</p>
-
-\[\begin{equation}
-\mathrm{i}\,\hbar \pdv{}{t} \ket{\psi; t} = H(t) \ket{\psi; t}
-\end{equation}\]
-
-<p>或者说我们想知道态的演化也可以考虑时间演化算符:</p>
-
-\[\begin{equation}
-\ket{\psi; t} = U(t, t_0) \ket{\psi; t_0}
-\end{equation}\]
-
-<p>但是这两种方法都绕不过去一个抽象的事儿, 那就是时间演化算符能写但是基本没有办法算:</p>
-
-\[\begin{align}
-U(t, t_0) =&amp; \mathcal{T} \exp\left[-\frac{\mathrm{i}}{\hbar} \int_{t_0}^{t} H(t') \dd{t'}\right] \\
-=&amp; \mathbb{1} + \left(-\frac{\mathrm{i}}{\hbar}\right) \int_{t_0}^{t} H(t_1) \dd{t_1} + \\
-&amp; \left(-\frac{\mathrm{i}}{\hbar}\right)^2 \int_{t_0}^{t} H(t_1) \int_{t_0}^{t_1} H(t_2) \dd{t_2} \dd{t_1} + \cdots
-\end{align}\]
-
-<p>这东西算起来有点麻烦.
-但是我们考虑的Floqeut system有一个特别的地方, 就是我们Hamiltonian的时间依赖性一般是人为调制的, 比如说周期性的控制电场, 广场, 声场.
-这样的话, 我们很简单的可以赋予他一个周期性:</p>
-
-\[\begin{equation}
-H(t + T) = H(t)
-\end{equation}\]
-
-<p>我们称这样的系统叫做Floquet system, 所以一般往往跟随着人工调控的周期性变化.
-如果这个Hamiltonian有周期性, 我们立刻可以借用Floquet theorem:</p>
-
-<blockquote>
-  <p><strong>Floquet theorem</strong>: 对于周期性Hamiltonian \(H(t + T) = H(t)\), 对应的Schrödinger方程的解可以写成:</p>
-
-\[\begin{equation}
-\ket{\psi_\alpha(t)} = \mathrm{e}^{-\frac{\mathrm{i}}{\hbar} \epsilon_\alpha t} \ket{u_\alpha(t)}
-\end{equation}\]
-
-  <p>其中 \(\ket{u_\alpha(t)}\) 是周期性的, 即 \(\ket{u_\alpha(t + T)} = \ket{u_\alpha(t)}\), \(\epsilon_\alpha\) 是一个实数, 称为Floquet quasi-energy, \(\alpha\) 是态的标号.</p>
-</blockquote>
-
-<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>]]></content><author><name>刘沛松</name></author><category term="QM+" /><summary type="html"><![CDATA[关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了]]></summary></entry></feed>
+\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry></feed>

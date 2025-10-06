@@ -107,6 +107,24 @@ var store = [{
         "url": "/PersonalPageCN/qm1/QM1-AngularMomentum2/",
         "teaser": null
       },{
+        "title": "QM1 角动量与中心势3",
+        "excerpt":"我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题. 我们的到了如下结果: \\[\\begin{align} \\hat{L}_z Y_{l,m}(\\theta, \\phi) &amp;= \\hbar m Y_{l,m}(\\theta, \\phi) \\\\ \\hat{L}^2 Y_{l,m}(\\theta, \\phi) &amp;= \\hbar^2 l(l+1) Y_{l,m}(\\theta, \\phi) \\end{align}\\] 其中\\(l\\)和\\(m\\)是量子数, 它们的取值范围是: \\[\\begin{equation} l = 0, 1, 2, \\ldots; \\quad m = -l, -l+1, \\ldots, l-1, l \\end{equation}\\] 我们还知道, \\(Y_{l,m}(\\theta, \\phi)\\)是球谐函数, 它们是角动量算符的本征函数. 我们可以把\\(Y_{l,m}(\\theta, \\phi)\\)写成如下形式: \\[\\begin{align} Y_{l,m}(\\theta, \\phi) &amp;=...","categories": ["QM1"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm1/QM1-AngularMomentum3/",
+        "teaser": null
+      },{
+        "title": "QM2 角动量与中心势",
+        "excerpt":"之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的: \\[\\begin{equation} L^2 \\ket{l,m} = \\hbar^2 l(l+1) \\ket{l,m}, \\quad L_z \\ket{l,m} = \\hbar m \\ket{l,m} \\end{equation}\\] 其中量子数 $l$ 和 $m$ 满足: \\[\\begin{equation} l = 0, 1, 2, \\ldots; \\quad m = -l, -l+1, \\ldots, l-1, l \\end{equation}\\] 代数计算 对于每一个 \\(l\\), 有 \\(2l + 1\\) 个可能的 \\(m\\) 值, 因此每个 \\(l\\)...","categories": ["QM2"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm2/QM2-AngularMomentum1/",
+        "teaser": null
+      },{
+        "title": "QM2 角动量与中心势2",
+        "excerpt":"我们现在考虑一个三维各项同性的谐振子: \\[\\begin{equation} H = \\frac{p_x^2 + p_y^2 + p_z^2}{2m} + \\frac{1}{2} m \\omega^2 (x^2 + y^2 + z^2) \\end{equation}\\] 这自然而然的可以拆成: \\[\\begin{equation} H = H_x + H_y + H_z \\end{equation}\\] 其中: \\[\\begin{equation} H_i = \\frac{p_i^2}{2m} + \\frac{1}{2} m \\omega^2 x_i^2, \\quad i = x, y, z \\end{equation}\\] 现在大的Hilbert空间是 \\(\\mathcal{H} = \\mathcal{H}_x...","categories": ["QM2"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm2/QM2-AngularMomentum2/",
+        "teaser": null
+      },{
         "title": "QM2 密度矩阵3",
         "excerpt":"现在我们回顾一下上一个帖子中的一个困惑. 已知每次测量, 考虑一个结果\\(i\\), 测量算子是投影: \\[\\begin{equation} M_i = \\ketbra{i}{i} \\end{equation}\\] 从而得到结果\\(i\\)的概率是: \\[\\begin{equation} p(i) = \\Tr(M_i \\rho M_i^\\dagger) = \\bra{i}\\rho\\ket{i} \\end{equation}\\] 如果知道结果是\\(i\\), 那么测量后系统的状态是: \\[\\begin{equation} \\rho_i = \\frac{M_i \\rho M_i^\\dagger}{\\Tr(M_i \\rho M_i^\\dagger)} = \\ketbra{i}{i} \\end{equation}\\] 如果不知道结果(但是仍然测量了), 那么测量后系统的状态是: \\[\\begin{equation} \\tilde{\\rho} = \\sum_i p(i) \\rho_i = \\sum_i \\bra{i}\\rho\\ket{i} \\ketbra{i}{i} \\end{equation}\\] 成为了经典混合. 我们这个帖子就对于这个问题做出一些讨论和理解. 双粒子系统 我们还是考虑Alice和Bob的双粒子系统. Alice现在准备沿着一个基向量\\(\\ket{i}_A\\)测量她的粒子,...","categories": ["QM2"],
         "tags": [],
@@ -117,11 +135,5 @@ var store = [{
         "excerpt":"在过往的学习中, 我们不加以怀疑的接受了如下概念: 每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示. 测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值. 测量力学量的时候吗量子态会瞬间坍缩到本征态上. 但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的. 这些问题仍然是开放性的, 没有一个准确的回答. 在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上. 这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut. 但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的. 我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似. 在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录. 一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来. 也就是说, 坍缩是在探测器读出结果时候发生的. 在探测之前, 系统还是处于叠加态, 满足Unitary evolution. 预测量问题 我们现在考虑量子力学是适用于一切迟钝的理论. 那么测量过程就是一个量子系统\\(S\\)与测量仪器\\(A\\)的相互作用. 为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\\(\\ket{a_i}\\), 这些指针态是正交归一的....","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix4/",
-        "teaser": null
-      },{
-        "title": "QM2 角动量的理论",
-        "excerpt":"我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \\(\\boldsymbol{J} = (J_x, J_y, J_z)\\), 他们满足以下对易关系: \\[\\begin{equation} [J_i, J_j] = i \\hbar \\epsilon_{ijk} J_k \\end{equation}\\] 这里 \\(\\epsilon_{ijk}\\) 是完全反对称张量. 这个对易关系告诉我们, 角动量的三个分量不能同时被测量. 根据我们对于自旋和轨道角动量的理解, 我们知道我们可以找到一组共同本征态, 使得 \\(J^2\\) 和 \\(J_z\\) 有确定的值. 我们定义: \\[\\begin{equation} J^2 = J_x^2 + J_y^2 + J_z^2 \\end{equation}\\] 从而我们有: \\[\\begin{equation} J^2 \\ket{j,...","categories": ["QM2"],
-        "tags": [],
-        "url": "/PersonalPageCN/qm2/QM2-AngularMomentum1/",
         "teaser": null
       }]

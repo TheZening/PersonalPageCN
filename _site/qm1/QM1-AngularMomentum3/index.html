@@ -1,0 +1,523 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>QM1 角动量与中心势3 - 刘沛松的赛道</title>
+<meta name="description" content="我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题. 我们的到了如下结果:">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="QM1 角动量与中心势3">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/">
+
+
+  <meta property="og:description" content="我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题. 我们的到了如下结果:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-05T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM1 角动量与中心势3">
+    <meta itemprop="description" content="我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题.我们的到了如下结果:">
+    <meta itemprop="datePublished" content="2025-10-05T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/" itemprop="url">QM1 角动量与中心势3
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题.
+我们的到了如下结果:</p>
+
+\[\begin{align}
+\hat{L}_z Y_{l,m}(\theta, \phi) &amp;= \hbar m Y_{l,m}(\theta, \phi) \\
+\hat{L}^2 Y_{l,m}(\theta, \phi) &amp;= \hbar^2 l(l+1) Y_{l,m}(\theta, \phi)
+\end{align}\]
+
+<p>其中\(l\)和\(m\)是量子数, 它们的取值范围是:</p>
+
+\[\begin{equation}
+l = 0, 1, 2, \ldots; \quad m = -l, -l+1, \ldots, l-1, l
+\end{equation}\]
+
+<p>我们还知道, \(Y_{l,m}(\theta, \phi)\)是球谐函数, 它们是角动量算符的本征函数.
+我们可以把\(Y_{l,m}(\theta, \phi)\)写成如下形式:</p>
+
+\[\begin{align}
+Y_{l,m}(\theta, \phi) &amp;= p_{l,m}(\theta) \mathrm{e}^{\mathrm{i} m \phi} \\
+\end{align}\]
+
+<hr />
+<h2 id="径向方程">径向方程</h2>
+
+<p>我们现在回过头来看Schrödinger方程在球坐标系下的形式:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \frac{1}{r} \pdv[2]{}{r} (r \psi) + \frac{\hat{L}^2}{2mr^2} \psi + V(r) \psi = E \psi
+\end{equation}\]
+
+<p>我们把波函数\(\psi\)写成径向和角向的乘积形式:</p>
+
+\[\begin{equation}
+\psi(r, \theta, \phi) = R(r) Y_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>代入Schrödinger方程, 并利用\(Y_{l,m}(\theta, \phi)\)的本征值方程, 我们得到径向方程:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \pdv[2]{}{r} (r R(r)) + \frac{\hbar^2 l(l+1)}{2mr^2} rR(r) + V(r) rR(r) = E rR(r)
+\end{equation}\]
+
+<p>我们再次把\(u(r) = r R(r)\), 得到:</p>
+
+\[\begin{equation}
+-\frac{\hbar^2}{2m} \pdv[2]{u(r)}{r} + \left[ V(r) + \frac{\hbar^2 l(l+1)}{2mr^2} \right] u(r) = E u(r)
+\end{equation}\]
+
+<p>这就是径向方程, 它描述了粒子在有效势:</p>
+
+\[\begin{equation}
+V_{\text{eff}}(r) = V(r) + \frac{\hbar^2 l(l+1)}{2mr^2}
+\end{equation}\]
+
+<p>中的运动. 这里的第二项是角动量势垒, 它在\(r \to 0\)时趋于无穷大, 防止粒子落入势阱中心.
+我们也可以注意到, 我们的解\(u(r)\)依赖于\(E\)和\(l\), 但不依赖于\(m\), 这反映了能级的简并性.</p>
+
+\[\begin{equation}
+u(r) = u_{n,l}(r) \Rightarrow R_{n,l}(r) = \frac{u_{n,l}(r)}{r}
+\end{equation}\]
+
+<p>所以整体的波函数是:</p>
+
+\[\begin{equation}
+\psi_{n,l,m}(r, \theta, \phi) = R_{n,l}(r) Y_{l,m}(\theta, \phi) = \frac{u_{n,l}(r)}{r} Y_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>一般的策略还是先求方程的形式, 然后再根据具体的表达式归一化:</p>
+
+\[\begin{equation}
+\int_0^\infty |R_{n,l}(r)|^2 Y_{l,m}^*(\theta, \phi) Y_{l,m}(\theta, \phi) r^2 \sin \theta \, \dd{r} \, \dd{\theta} \, \dd{\phi} = 1
+\end{equation}\]
+
+<p>从而要求:</p>
+
+\[\begin{equation}
+\int_0^\infty |R_{n,l}(r)|^2 r^2 \, \dd{r} = 1, \quad \int_0^\infty |u_{n,l}(r)|^2 \, \dd{r} = 1
+\end{equation}\]
+
+<p>当然我们得有个边界条件:</p>
+
+\[\begin{equation}
+u_{n,l}(0) = 0, \quad u_{n,l}(\infty) = 0
+\end{equation}\]
+
+<p>第二个条件是波函数在无穷远处消失, 没什么好说的, 第一个条件比较复杂.
+我们知道\(R_{n,l}(r)\)是径向波函数, 它描述了粒子在距离原点\(r\)处的概率幅度.
+如果\(R_{n,l}(r)\)在\(r=0\)处是有限的, 那么\(u_{n,l}(r) = r R_{n,l}(r)\)在\(r=0\)处必须为零, 因为\(u_{n,l}(r)\)包含了一个额外的因子\(r\).
+这确保了波函数在原点处是正则的, 即没有奇异性.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm1" class="page__taxonomy-item p-category" rel="tag">QM1</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-05T00:00:00+10:00">October 5, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM1+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF3%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum3%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum3%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum3/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM1+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF3%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum3%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm1/QM1-AngularMomentum2/" class="pagination--pager" title="QM1 角动量与中心势2">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/qm2/QM2-AngularMomentum1/" class="pagination--pager" title="QM2 角动量与中心势">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

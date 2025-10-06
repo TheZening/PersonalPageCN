@@ -10,25 +10,24 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>刘沛松的赛道 - Page 2</title>
-<meta name="description" content="欢迎来访, 祝你一切顺利!">
+<!-- begin _includes/seo.html --><title>QM2 角动量与中心势2 - 刘沛松的赛道</title>
+<meta name="description" content="我们现在考虑一个三维各项同性的谐振子:">
 
 
   <meta name="author" content="刘沛松">
   
+  <meta property="article:author" content="刘沛松">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="刘沛松的赛道">
-<meta property="og:title" content="刘沛松的赛道">
-<meta property="og:url" content="http://localhost:4000/PersonalPageCN/page2/">
+<meta property="og:title" content="QM2 角动量与中心势2">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/">
 
 
-  <meta property="og:description" content="欢迎来访, 祝你一切顺利!">
-
-
-
+  <meta property="og:description" content="我们现在考虑一个三维各项同性的谐振子:">
 
 
 
@@ -36,15 +35,16 @@
 
 
 
+  <meta property="article:published_time" content="2025-10-05T00:00:00+10:00">
 
 
-<link rel="canonical" href="http://localhost:4000/PersonalPageCN/page2/">
 
 
-  <link rel="prev" href="http://localhost:4000/PersonalPageCN/">
 
 
-  <link rel="next" href="http://localhost:4000/PersonalPageCN/page3/">
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/">
+
+
 
 
 
@@ -98,7 +98,7 @@
   <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
   </head>
 
-  <body class="layout--home" dir="ltr">
+  <body class="layout--single" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -162,6 +162,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -274,199 +276,138 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM2 角动量与中心势2">
+    <meta itemprop="description" content="我们现在考虑一个三维各项同性的谐振子:">
+    <meta itemprop="datePublished" content="2025-10-05T00:00:00+10:00">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
 
-<h3 class="archive__subtitle">Recent Posts</h3>
-
-
-
-
-<div class="entries-list">
-  
-
-
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="permalink">QM1 角动量与中心势2
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" itemprop="url">QM2 角动量与中心势2
 </a>
+          </h1>
+          
+
+
+        </header>
       
-    </h2>
-    
+
+      <section class="page__content" itemprop="text">
+        
+        <p>我们现在考虑一个三维各项同性的谐振子:</p>
+
+\[\begin{equation}
+H = \frac{p_x^2 + p_y^2 + p_z^2}{2m} + \frac{1}{2} m \omega^2 (x^2 + y^2 + z^2)
+\end{equation}\]
+
+<p>这自然而然的可以拆成:</p>
+
+\[\begin{equation}
+H = H_x + H_y + H_z
+\end{equation}\]
+
+<p>其中:</p>
+
+\[\begin{equation}
+H_i = \frac{p_i^2}{2m} + \frac{1}{2} m \omega^2 x_i^2, \quad i = x, y, z
+\end{equation}\]
+
+<p>现在大的Hilbert空间是 \(\mathcal{H} = \mathcal{H}_x \otimes \mathcal{H}_y \otimes \mathcal{H}_z\), 每个 \(\mathcal{H}_i\) 都是一个一维谐振子的Hilbert空间.
+因此我们可以用一维谐振子的本征态来构造三维谐振子的本征态.
+他的基态是:</p>
+
+\[\begin{equation}
+\ket{0,0,0} = \ket{0}_x \otimes \ket{0}_y \otimes \ket{0}_z
+\end{equation}\]
+
+<p>从而最一般的态就是:</p>
+
+\[\begin{equation}
+\ket{n_x, n_y, n_z} = (a_x^\dagger)^{n_x} (a_y^\dagger)^{n_y} (a_z^\dagger)^{n_z} \ket{0,0,0}
+\end{equation}\]
+
+<p>这些态(对于不同的 \(n_x, n_y, n_z\))可以张成整个Hilbert空间.
+他的能量本征值是:</p>
+
+\[\begin{equation}
+E_{n_x, n_y, n_z} = \hbar \omega (n_x + n_y + n_z + \frac{3}{2})
+\end{equation}\]
+
+<hr />
+<h2 id="谐振子也有multiplet">谐振子也有Multiplet</h2>
 
 
-    <p class="archive__item-excerpt" itemprop="description">经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:
+        
+      </section>
 
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/qm1/QM1-AngularMomentum1/" rel="permalink">QM1 角动量与中心势
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">量子力学自然是应该有经典力学推广来的角动量的.
-在经典力学中, 角动量定义为:
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/math0/MIM/" rel="permalink">Mathematical Induction Method
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">基本定义
-数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
-它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/math/TrigsTable/" rel="permalink">三角函数查询表格
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">基本定义
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="permalink">QM2 密度矩阵2
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">关于本征态的测量
-
-</p>
-  </article>
-</div>
-
-</div>
-
-
-  
-    
-<nav class="pagination">
-  
-  
-  <ul>
-    
-    
-      
-        <li><a href="/PersonalPageCN/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/PersonalPageCN/">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        <li><a href="/PersonalPageCN/page2/" class="disabled current">2</a></li>
-      
-    
-      
+      <footer class="page__meta">
         
         
-        
-        <li><a href="/PersonalPageCN/page3/">3</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/PersonalPageCN/page4/">4</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="/PersonalPageCN/page5/">5</a></li>
-    
-
-    
-    
-      <li><a href="/PersonalPageCN/page3/">Next</a></li>
-    
-  </ul>
-</nav>
 
 
   
 
 
+  
 
-  </div>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm2" class="page__taxonomy-item p-category" rel="tag">QM2</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-05T00:00:00+10:00">October 5, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM2+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM2+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-AngularMomentum1/" class="pagination--pager" title="QM2 角动量与中心势">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix3/" class="pagination--pager" title="QM2 密度矩阵3">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
 
       
