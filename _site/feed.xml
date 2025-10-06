@@ -1,277 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-06T17:45:58+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
-
-<ol>
-  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
-  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
-  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
-</ol>
-
-<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
-这些问题仍然是开放性的, 没有一个准确的回答.</p>
-
-<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
-这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
-但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
-我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
-
-<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
-一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
-也就是说, 坍缩是在探测器读出结果时候发生的.
-在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
-
-<hr />
-<h2 id="预测量问题">预测量问题</h2>
-
-<p>我们现在考虑量子力学是适用于一切迟钝的理论.
-那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
-为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
-
-<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-06T18:12:45+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量的理论</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量的理论" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量.
+我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变.
+这种对称性对应的守恒量就是角动量.
+无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数.
+我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:</p>
 
 \[\begin{equation}
-\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
+[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
 \end{equation}\]
 
-<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
+<p>这里 \(\epsilon_{ijk}\) 是完全反对称张量.
+这个对易关系告诉我们, 角动量的三个分量不能同时被测量.
+根据我们对于自旋和轨道角动量的理解, 我们知道我们可以找到一组共同本征态, 使得 \(J^2\) 和 \(J_z\) 有确定的值.
+我们定义:</p>
 
 \[\begin{equation}
-\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
+J^2 = J_x^2 + J_y^2 + J_z^2
 \end{equation}\]
 
-<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
+<p>从而我们有:</p>
 
 \[\begin{equation}
-\ket{s_i} \leftrightarrow \ket{a_i}
+J^2 \ket{j, m} = \hbar^2 j(j+1) \ket{j, m} \quad J_z \ket{j, m} = \hbar m \ket{j, m}
 \end{equation}\]
 
-<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
-所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
-
-<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
+<p>经验告诉我们, 角动量大多数是计算对易子的艺术, 所以我们现在把这些准备好.
+定义升降算符:</p>
 
 \[\begin{equation}
-\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
+J_+ = J_x + i J_y \quad J_- = J_x - i J_y
 \end{equation}\]
 
-<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
+<p>他满足:</p>
 
 \[\begin{equation}
-\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
+J_\pm \ket{j, m} = \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
 \end{equation}\]
 
-<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
+<p>从而我们有:</p>
 
 \[\begin{equation}
-[Q,P] = \mathrm{i}\hbar \quad
-\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
-\end{equation}\]
-
-<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
-
-\[\begin{equation}
-H_{int} = g(t) \mathcal{O}_S \otimes P_A
-\end{equation}\]
-
-<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
-
-\[\begin{equation}
-\int_0^\tau g(t) \, \mathrm{d}t = \kappa
-\end{equation}\]
-
-<p>从而我们可以写出时间演化算符:</p>
-
-\[\begin{equation}
-U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
-\end{equation}\]
-
-<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
-
-\[\begin{equation}
-U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
-\end{equation}\]
-
-<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
-
-<p>我们定义:</p>
-
-\[\begin{equation}
-\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
-\end{equation}\]
-
-<p>系统的状态现在是:</p>
-
-\[\begin{equation}
-\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
-\end{equation}\]
-
-<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
-但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
-这就是早期von Neumann测量理论:</p>
-
-<ol>
-  <li>测量装置本身就是一个量子系统.</li>
-  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
-  <li>测量结果是装置的指针态.</li>
-</ol>
-
-<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
-我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
-
-<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
-测量装置也是双能级态, 耦合Hamiltonian是:</p>
-
-\[\begin{equation}
-H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
-\end{equation}\]
-
-<p>假设系统的初始状态为:</p>
-
-\[\begin{equation}
-c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>我们做一点点代数变形:</p>
-
-\[\begin{equation}
-\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>我们的时间演化算符是:</p>
-
-\[\begin{equation}
-U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
-\end{equation}\]
-
-<p>注意到:</p>
-
-\[\begin{equation}
-U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
+[J_z, J_\pm] = \pm \hbar J_\pm \quad [J_+, J_-] = 2 \hbar J_z
 \end{equation}\]
 
 <p>以及:</p>
 
 \[\begin{equation}
-U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
+[J^2, J_i] = 0 \quad i = x, y, z
 \end{equation}\]
 
-<p>从而我们可以计算出:</p>
+<p>现在我们考虑两个角动量 \(\boldsymbol{J}_1\) 和 \(\boldsymbol{J}_2\), 他们分别作用在两个不同的Hilbert空间 \(\mathcal{H}_1\) 和 \(\mathcal{H}_2\) 上.
+可以两个都是轨道角动量, 也可以是自旋角动量, 也可以一个是轨道一个是自旋, 这都不重要.
+我们定义总角动量为:</p>
 
 \[\begin{equation}
-\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2
 \end{equation}\]
 
-<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
+<p>如果写的严谨一些, 就是:</p>
 
 \[\begin{equation}
-\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I}_2 + \mathbb{I}_1 \otimes \boldsymbol{J}_2
 \end{equation}\]
 
-<p>系统和装置的观测量正确地关联在一起了!</p>
+<p>这里 \(\mathbb{I}_1\) 和 \(\mathbb{I}_2\) 分别是两个Hilbert空间的单位算符.
+自然而然的, \(\boldsymbol{J}\) 是一个作用在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的角动量算符.
+我们可以验证 \(\boldsymbol{J}\) 也满足角动量的对易关系:</p>
+
+\[\begin{align}
+[J_i, J_j] &amp;= [J_{1i} + J_{2i}, J_{1j} + J_{2j}] \\
+&amp;= [J_{1i}, J_{1j}] + [J_{2i}, J_{2j}] \\
+&amp;= i \hbar \epsilon_{ijk} (J_{1k} + J_{2k}) \\
+&amp;= i \hbar \epsilon_{ijk} J_k
+\end{align}\]
+
+<p>因为我们知道 \(\boldsymbol{J}_1\) 作用在 \(\mathcal{H}_1\) 上, \(\boldsymbol{J}_2\) 作用在 \(\mathcal{H}_2\) 上, 所以 \([J_{1i}, J_{2j}] = 0\).</p>
+
+<blockquote>
+  <p>能不能是线性组合相加?
+这个我们可以试试, 如果你构造一个 \(\boldsymbol{J} = a \boldsymbol{J}_1 + b \boldsymbol{J}_2\), 你会发现:
+\(\begin{align}
+[J_i, J_j] &amp;= [a J_{1i} + b J_{2i}, a J_{1j} + b J_{2j}] \\
+&amp;= a^2 [J_{1i}, J_{1j}] + b^2 [J_{2i}, J_{2j}] \\
+&amp;= i \hbar (a^2 \epsilon_{ijk} J_{1k} + b^2 \epsilon_{ijk} J_{2k}) \\
+&amp;\neq i \hbar \epsilon_{ijk} (a J_{1k} + b J_{2k})
+\end{align}\)
+除非 \(a = b = 1\).
+所以只能是简单的相加.</p>
+</blockquote>
+
+<p>由于任意一个角动量算符作用的向量空间都可以分解为角动量的不可约表示的直和, 所以我们可以通过角动量的不可约表示来理解在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的Hamiltonian的谱.</p>
 
 <hr />
-<h2 id="退相干">退相干</h2>
+<h2 id="两个自旋12的耦合">两个自旋1/2的耦合</h2>
 
-<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
-但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
-退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
-
-<p>我们之前得到了预测量态:</p>
+<p>我们先来看一个简单的例子, 两个自旋1/2的耦合.
+每个自旋1/2的Hilbert空间是二维的, 如果用之前的记号, 那这个空间的基就是:</p>
 
 \[\begin{equation}
-\sum_i c_i \ket{s_i} \otimes \ket{a_i}
+\ket{\frac{1}{2}, \frac{1}{2}} \quad \ket{\frac{1}{2}, -\frac{1}{2}}
 \end{equation}\]
 
-<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
-所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+<p>从而我们有:</p>
 
 \[\begin{equation}
-\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\boldsymbol{S}^2 \ket{\frac{1}{2}, m} = \hbar^2 \frac{3}{4} \ket{\frac{1}{2}, m} \quad S_z \ket{\frac{1}{2}, m} = \hbar m \ket{\frac{1}{2}, m}
 \end{equation}\]
 
-<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+<p>如果我们开始考虑两个自旋1/2的系统, 那么总的Hilbert空间就是四维的, 基底可以写成直积的形式:</p>
 
 \[\begin{equation}
-\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+\ket{\uparrow_1, \uparrow_2}, \quad \ket{\uparrow_1, \downarrow_2}, \quad \ket{\downarrow_1, \uparrow_2}, \quad \ket{\downarrow_1, \downarrow_2}
 \end{equation}\]
 
-<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
-
-\[\begin{equation}
-\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
-\end{equation}\]
-
-<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
-
-\[\begin{equation}
-\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
-\end{equation}\]
-
-<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
-
-\[\begin{equation}
-\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
-\end{equation}\]
-
-<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
-
-\[\begin{equation}
-\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
-\end{equation}\]
-
-<p>对环境取偏迹:</p>
-
-\[\begin{equation}
-\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
-\end{equation}\]
-
-<p>退相干解释了为什么我们看不到大尺度量子叠加态.
-但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
-虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
-
-<hr />
-<h2 id="多世界说法">多世界说法</h2>
-
-<p>如果我们干脆直接放弃坍缩这个概念呢?
-我们就得到了多世界诠释(Many-World Interpretation, MWI).
-在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
-每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
-MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
-MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
-
-<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
-
-\[\begin{equation}
-\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
-|c_+|^2 + |c_-|^2 = 1
-\end{equation}\]
-
-<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
-那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
-
-\[\begin{equation}
-\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
-\end{equation}\]
-
-<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
-
-\[\begin{equation}
-\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
-\end{equation}\]
-
-<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
-在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
-
-<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
-在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
-这两个分支互不干扰, 同样真实, 但是无法交流.
-随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
-因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
-
-<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
-既然每种可能都在某个世界实现了, 那么概率到底是什么?
-分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
-
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+<p>也就是说新的Hilbert空间完全可以被他们张成.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
 
 <ol>
   <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
@@ -642,7 +483,280 @@ S^R(E) = k_B \ln \Omega^R(E)
 
 \[\begin{equation}
 \rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+
+<ol>
+  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
+  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
+  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
+</ol>
+
+<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
+这些问题仍然是开放性的, 没有一个准确的回答.</p>
+
+<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
+这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
+但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
+我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
+
+<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
+一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
+也就是说, 坍缩是在探测器读出结果时候发生的.
+在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
+
+<hr />
+<h2 id="预测量问题">预测量问题</h2>
+
+<p>我们现在考虑量子力学是适用于一切迟钝的理论.
+那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
+为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
+
+<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
+
+\[\begin{equation}
+\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
+\end{equation}\]
+
+<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
+
+\[\begin{equation}
+\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
+\end{equation}\]
+
+<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
+
+\[\begin{equation}
+\ket{s_i} \leftrightarrow \ket{a_i}
+\end{equation}\]
+
+<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
+所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
+
+<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
+\end{equation}\]
+
+<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
+
+\[\begin{equation}
+\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
+\end{equation}\]
+
+<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
+
+\[\begin{equation}
+[Q,P] = \mathrm{i}\hbar \quad
+\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
+\end{equation}\]
+
+<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
+
+\[\begin{equation}
+H_{int} = g(t) \mathcal{O}_S \otimes P_A
+\end{equation}\]
+
+<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
+
+\[\begin{equation}
+\int_0^\tau g(t) \, \mathrm{d}t = \kappa
+\end{equation}\]
+
+<p>从而我们可以写出时间演化算符:</p>
+
+\[\begin{equation}
+U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
+\end{equation}\]
+
+<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
+
+\[\begin{equation}
+U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
+\end{equation}\]
+
+<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
+
+<p>我们定义:</p>
+
+\[\begin{equation}
+\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
+\end{equation}\]
+
+<p>系统的状态现在是:</p>
+
+\[\begin{equation}
+\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
+但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
+这就是早期von Neumann测量理论:</p>
+
+<ol>
+  <li>测量装置本身就是一个量子系统.</li>
+  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
+  <li>测量结果是装置的指针态.</li>
+</ol>
+
+<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
+我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
+
+<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
+测量装置也是双能级态, 耦合Hamiltonian是:</p>
+
+\[\begin{equation}
+H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
+\end{equation}\]
+
+<p>假设系统的初始状态为:</p>
+
+\[\begin{equation}
+c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们做一点点代数变形:</p>
+
+\[\begin{equation}
+\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们的时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
+\end{equation}\]
+
+<p>注意到:</p>
+
+\[\begin{equation}
+U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
+\end{equation}\]
+
+<p>从而我们可以计算出:</p>
+
+\[\begin{equation}
+\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
+
+\[\begin{equation}
+\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>系统和装置的观测量正确地关联在一起了!</p>
+
+<hr />
+<h2 id="退相干">退相干</h2>
+
+<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
+但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
+退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
+
+<p>我们之前得到了预测量态:</p>
+
+\[\begin{equation}
+\sum_i c_i \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
+所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+
+\[\begin{equation}
+\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\end{equation}\]
+
+<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+\end{equation}\]
+
+<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
+
+\[\begin{equation}
+\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
+\end{equation}\]
+
+<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
+
+\[\begin{equation}
+\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
+\end{equation}\]
+
+<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
+
+\[\begin{equation}
+\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
+\end{equation}\]
+
+<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
+
+\[\begin{equation}
+\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
+\end{equation}\]
+
+<p>对环境取偏迹:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
+\end{equation}\]
+
+<p>退相干解释了为什么我们看不到大尺度量子叠加态.
+但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
+虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
+
+<hr />
+<h2 id="多世界说法">多世界说法</h2>
+
+<p>如果我们干脆直接放弃坍缩这个概念呢?
+我们就得到了多世界诠释(Many-World Interpretation, MWI).
+在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
+每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
+MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
+MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
+
+<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
+|c_+|^2 + |c_-|^2 = 1
+\end{equation}\]
+
+<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
+那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
+
+\[\begin{equation}
+\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
+\end{equation}\]
+
+<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
+
+\[\begin{equation}
+\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
+\end{equation}\]
+
+<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
+在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
+
+<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
+在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
+这两个分支互不干扰, 同样真实, 但是无法交流.
+随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
+因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
+
+<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
+既然每种可能都在某个世界实现了, 那么概率到底是什么?
+分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
+
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
 
 <p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
 这是最重要的, 不要忘掉…</p>
@@ -2299,392 +2413,4 @@ a_{\boldsymbol{k}} = \frac{V}{2 \xi_{\boldsymbol{k}} - E} \sum_{|\boldsymbol{k}'
 
 \[\begin{equation}
 1 = V \sum_{|\boldsymbol{k}| &gt; k_F} \frac{1}{2 \xi_{\boldsymbol{k}} - E}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="CMP2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等.]]></summary></entry><entry><title type="html">QM2 Lindblad量子动力学方程</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/" rel="alternate" type="text/html" title="QM2 Lindblad量子动力学方程" /><published>2024-10-13T00:06:00+11:00</published><updated>2024-10-13T00:06:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-LindbladianEquation/"><![CDATA[<p>Lindblad方程是描述开放量子系统动力学的一个重要工具, 它扩展了闭合量子系统的薛定谔方程, 允许我们考虑系统与环境之间的相互作用.
-这种相互作用通常会导致系统的非单位演化, 包括耗散, 跃迁, 退相干现象.</p>
-
-<blockquote>
-  <p>Markov过程: 未来的状态只依赖于当前状态, 与过去的状态无关.
- 所以没有什么时间核, 记忆积分啥的.</p>
-</blockquote>
-
-<blockquote>
-  <p>耗散: 能量从系统流失到环境中.
-退相干: 系统的量子相干性由于与环境的相互作用而减弱.</p>
-</blockquote>
-
-<p>我们引入如下记号:</p>
-
-<ol>
-  <li>\(S\): 系统, 我们感兴趣的量子系统.</li>
-  <li>\(E\): 环境, 系统所处的外部环境.</li>
-</ol>
-
-<p>系统和环境构成封闭系统, 它们的联合状态由密度矩阵 \(\rho_{SE}\) 描述.
-总体的Hamiltonian是:</p>
-
-\[\begin{equation}
-H = H_S \otimes I_E + I_S \otimes H_E + \alpha H_{\text{SB}}
-\end{equation}\]
-
-<p>其中\(\alpha\)描述了系统与环境之间的相互作用强度.</p>
-
-<hr />
-<h2 id="1-闭合系统的动力学">1. 闭合系统的动力学</h2>
-
-<p>大的密度矩阵自然是由von Neumann方程描述的:</p>
-
-\[\begin{equation}
-\dv{\rho_{SE}}{t} = -\frac{i}{\hbar} [H_S + H_E + \alpha H_{SE}, \rho_{SE}]
-\end{equation}\]
-
-<p>对付这种方程, 最省力的就是用interaction picture, 也就是把\(H_S + H_E\)的作用给去掉:</p>
-
-\[\begin{equation}
-H = \mathrm{e}^{\mathrm{i}\,(H_S + H_E)t/\hbar} \alpha H_{SE} \mathrm{e}^{-\mathrm{i}\,(H_S + H_E)t/\hbar}
-\end{equation}\]
-
-<p>自然而然的, 密度矩阵也要变:</p>
-
-\[\begin{equation}
-\rho = \mathrm{e}^{\mathrm{i}\,(H_S + H_E)t/\hbar} \rho_{SE} \mathrm{e}^{-\mathrm{i}\,(H_S + H_E)t/\hbar}
-\end{equation}\]
-
-<p>反过来的变换就是:</p>
-
-\[\begin{equation}
-\rho_{SE} = \mathrm{e}^{-\mathrm{i}\,(H_S + H_E)t/\hbar} \rho \mathrm{e}^{\mathrm{i}\,(H_S + H_E)t/\hbar}
-\end{equation}\]
-
-\[\begin{equation}
-H_{SE} = \mathrm{e}^{-\mathrm{i}\,(H_S + H_E)t/\hbar} \alpha H_{SE} \mathrm{e}^{\mathrm{i}\,(H_S + H_E)t/\hbar}
-\end{equation}\]
-
-<p>如果我们记:</p>
-
-\[\begin{equation}
-H_0 = H_S + H_E \quad U = \mathrm{e}^{-\mathrm{i} H_0 t/\hbar}
-\end{equation}\]
-
-<p>那么我们有:</p>
-
-\[\begin{align}
-\dv{\rho}{t} =&amp; \dv{(U^\dagger \rho_{SE} U)}{t} \\
-=&amp; \dv{U^\dagger}{t} \rho_{SE} U + U^\dagger \dv{\rho_{SE}}{t} U + U^\dagger \rho_{SE} \dv{U}{t} \\
-=&amp; \frac{\mathrm{i}}{\hbar} H_0 U^\dagger \rho_{SE} U + U^\dagger \left(-\frac{\mathrm{i}}{\hbar} [H_0+H_{SE}, \rho_{SE}]\right) U - U^\dagger \rho_{SE} \frac{\mathrm{i}}{\hbar} H_0 U \\
-=&amp; \frac{\mathrm{i}}{\hbar} [H_0, \rho] - \frac{\mathrm{i}}{\hbar} [H_{0}, \rho] - \frac{\mathrm{i}}{\hbar} [H, \rho] \\
-=&amp; - \frac{\mathrm{i}}{\hbar} [H, \rho]
-\end{align}\]
-
-<p>有了这个就好搞了, 直接积分:</p>
-
-\[\begin{equation}
-\rho(t) = \rho(0) - \alpha\frac{\mathrm{i}}{\hbar} \int_0^t [H(t'), \rho(t')] \dd{t'}
-\end{equation}\]
-
-<p>此时我们要小心了, 我们要把这个式子带原来的方程里面, 进行迭代展开:</p>
-
-\[\begin{equation}
-\dv{\rho}{t} = -\alpha\frac{\mathrm{i}}{\hbar} [H(t), \rho(0)] - \alpha^2 \frac{1}{\hbar^2} \int_0^t [H(t), [H(t'), \rho(t')]] \dd{t'}
-\end{equation}\]
-
-<p>如果我们就近似到这里, 我们就可以对\(\rho_S\)进行求迹, 得到:</p>
-
-\[\begin{equation}
-\dv{\rho_S}{t} = -\alpha\frac{\mathrm{i}}{\hbar} \tr_{E} [H(t), \rho(0)] - \alpha^2 \frac{1}{\hbar^2} \int_0^t \tr_E [H(t), [H(t'), \rho(t')]] \dd{t'}
-\end{equation}\]
-
-<p>为了进一步往下走, 我们必须引入初态因子化假设, 也就是:</p>
-
-\[\begin{equation}
-\rho(0) = \rho_S(0) \otimes \rho_E
-\end{equation}\]
-
-<p>这个假设意味着系统和环境在初始时刻是没有纠缠的, 这在很多实际情况下是合理的, 尤其是在系统和环境之间的相互作用较弱时.
-我们现在考虑一般的相互作用Hamiltonian:</p>
-
-\[\begin{equation}
-H_{SE} = \sum_i A_i \otimes B_i
-\end{equation}\]
-
-<p>我们可以先计算对易子:</p>
-
-\[\begin{equation}
-[H(t), \rho(0)] = \sum_i [A_i(t) \otimes B_i(t) \rho_E - \rho_S A_i(t) \otimes \rho_E B_i(t)]
-\end{equation}\]
-
-<p>我们对环境求迹:</p>
-
-\[\begin{equation}
-\tr_E [H(t), \rho(0)] = \sum_i [A_i(t) \tr_E (B_i(t) \rho_E) - \rho_S A_i(t) \tr_E (\rho_E B_i(t))]
-\end{equation}\]
-
-<p>我们定义:</p>
-
-\[\begin{equation}
-\langle B_i(t) \rangle_E = \tr_E (B_i(t) \rho_E)
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\tr_E [H(t), \rho(0)] = \sum_i [A_i(t), \rho_S] \langle B_i(t) \rangle_E
-\end{equation}\]
-
-<p>这实际上是一个平均值, 这样的话, 如果我们假设环境的平均值为零, 也就是\(\langle B_i(t) \rangle_E = 0\), 那么第一项就消失了.
-还有一个方法, 就是我最开始定义\(H_{E}\)的时候, 我就把这个平均值给吸收掉了, 也就是说, 我们可以重新定义环境的Hamiltonian, 使得\(\langle B_i(t) \rangle_E = 0\).
-无论如何, 第一项扔掉是合理的.</p>
-
-<p>于是现在我们的方程变成:</p>
-
-\[\begin{equation}
-\dv{\rho_S}{t} = - \alpha^2 \frac{1}{\hbar^2} \int_0^t \tr_E [H(t), [H(t'), \rho(t')]] \dd{t'}
-\end{equation}\]
-
-<p>现在我们应用Markov近似, 也就是假设系统的未来状态只依赖于当前状态, 与过去的状态无关.
-这允许我们将\(\rho(t')\)替换为\(\rho_S(t) \otimes \rho_E\), 并将积分上限扩展到无穷大:</p>
-
-\[\begin{equation}
-\dv{\rho_S}{t} = - \alpha^2 \frac{1}{\hbar^2} \int_0^\infty \tr_E [H(t), [H(t'), \rho_S(t) \otimes \rho_E]] \dd{t'}
-\end{equation}\]
-
-<p>我们现在必须得给\(H_{SE}\)一个具体的形式, 以便计算对易子, 我们考虑如下Jaynes-Cummings形式:</p>
-
-\[\begin{equation}
-H_{SE} = \hbar S B^\dagger + \hbar S^\dagger B
-\end{equation}\]
-
-<p>也就是说, 系统少一个激发态, 环境多一个激发态, 反之亦然.
-我们现在再假设, 关于系统的算符是和系统本身的Hamiltonian对易的:</p>
-
-\[\begin{equation}
-[S, H_S] = 0 \Rightarrow S(t) = S
-\end{equation}\]
-
-<p>就是说在Interaction picture下, 系统的算符不变.
-我们的环境的Hamiltonian就是简单的Bosonic reservoir:</p>
-
-\[\begin{equation}
-H_E = \sum_k \hbar \omega_k a_k^\dagger a_k
-\end{equation}\]
-
-<p>然后定义环境的算符是:</p>
-
-\[\begin{equation}
-B = \sum_k g_k^* a_k \quad B^\dagger = \sum_k g_k a_k^\dagger
-\end{equation}\]
-
-<p>在相互作用图景下, 环境的算符是:</p>
-
-\[\begin{equation}
-B(t) = \sum_k g_k^* \mathrm{e}^{\mathrm{i} H_E t/\hbar} a_k \mathrm{e}^{-\mathrm{i} H_E t/\hbar}
-\end{equation}\]
-
-<p>我们注意到:</p>
-
-\[\begin{equation}
-[H_E, a_k] = \hbar \omega_k [a_k^\dagger a_k, a_k] = -\hbar \omega_k a_k
-\end{equation}\]
-
-<p>类似的:</p>
-
-\[\begin{equation}
-[H_E, a_k^\dagger] = \hbar \omega_k a_k^\dagger
-\end{equation}\]
-
-<p>我们考虑一般公式:</p>
-
-\[\begin{equation}
-\mathrm{e}^{At} X \mathrm{e}^{-At} = \mathrm{e}^{\mathrm{ad}_A t} X
-\end{equation}\]
-
-<p>所以我们有:</p>
-
-\[\begin{equation}
-\dv{}{t} \mathrm{e}^{\mathrm{i}\, H_E t} a_k \mathrm{e}^{-\mathrm{i}\, H_E t} = \frac{\mathrm{i}}{\hbar} [H_E, a_k(t)]
-\end{equation}\]
-
-<p>求解这个方程, 我们得到:</p>
-
-\[\begin{equation}
-a_k(t) = a_k \mathrm{e}^{-\mathrm{i} \omega_k t} \quad a_k^\dagger(t) = a_k^\dagger \mathrm{e}^{\mathrm{i} \omega_k t}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-B(t) = \sum_k g_k^* a_k \mathrm{e}^{-\mathrm{i} \omega_k t} \quad B^\dagger(t) = \sum_k g_k a_k^\dagger \mathrm{e}^{\mathrm{i} \omega_k t}
-\end{equation}\]
-
-<p>现在我们来计算对易子, 先算里面的一层:</p>
-
-\[\begin{equation}
-[H(t'), \rho_S(t) \otimes \rho_E] = \hbar [S B^\dagger(t') + S^\dagger B(t'), \rho_S(t) \otimes \rho_E]
-\end{equation}\]
-
-<p>这好像没有什么简便方法:</p>
-
-\[\begin{align}
-=&amp; \hbar [S B^\dagger(t') + S^\dagger B(t')] \rho_S(t) \otimes \rho_E - \hbar\rho_S(t) \otimes \rho_E [S B^\dagger(t') + S^\dagger B(t')]
-\end{align}\]
-
-<p>所以我们有:</p>
-
-\[\begin{align}
-[H(t), [H(t'), \rho_S(t) \otimes \rho_E]] =&amp; \hbar [S B^\dagger(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-&amp; + \hbar [S^\dagger B(t), [H(t'), \rho_S(t) \otimes \rho_E]]
-\end{align}\]
-
-<p>只能一步步算下去了:</p>
-
-\[\begin{align}
-&amp;[S B^\dagger(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-=&amp; \hbar S B^\dagger(t) (S B^\dagger(t') + S^\dagger B(t')) \rho_S(t) \otimes \rho_E \\
-&amp; - \hbar S B^\dagger(t) \rho_S(t) \otimes \rho_E (S B^\dagger(t') + S^\dagger B(t')) \\
-&amp; - \hbar (S B^\dagger(t') + S^\dagger B(t')) \rho_S(t) \otimes \rho_E S B^\dagger(t) \\
-&amp; + \hbar \rho_S(t) \otimes \rho_E (S B^\dagger(t') + S^\dagger B(t')) S B^\dagger(t)
-\end{align}\]
-
-\[\begin{align}
-&amp;[S^\dagger B(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-=&amp; \hbar S^\dagger B(t) (S B^\dagger(t') + S^\dagger B(t')) \rho_S(t) \otimes \rho_E \\
-&amp; - \hbar S^\dagger B(t) \rho_S(t) \otimes \rho_E (S B^\dagger(t') + S^\dagger B(t')) \\
-&amp; - \hbar (S B^\dagger(t') + S^\dagger B(t')) \rho_S(t) \otimes \rho_E S^\dagger B(t) \\
-&amp; + \hbar \rho_S(t) \otimes \rho_E (S B^\dagger(t') + S^\dagger B(t')) S^\dagger B(t)
-\end{align}\]
-
-<p>剩下的一样展开吗, 一点技术含量都没有.
-我们现在对环境求迹, 这里面有很多项, 但是大部分项在求迹之后都会消失.
-我们来看看哪些项会留下来.
-我们注意到:</p>
-
-\[\begin{equation}
-\tr_E (B(t) B(t') \rho_E) = \tr_E (B^\dagger(t) B^\dagger(t') \rho_E) = 0
-\end{equation}\]
-
-<p>这是因为二阶的生产湮灭肯定就产生0粒子的问题了, 不用担心!
-所以我们有:</p>
-
-\[\begin{align}
-&amp;\tr_E [S B^\dagger(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-=&amp; \hbar S S^\dagger \rho_S(t) \tr_E (B^\dagger(t) B(t') \rho_E) \\
-&amp; - \hbar S \rho_S(t) S^\dagger \tr_E (B^\dagger(t) \rho_E B(t')) \\
-&amp; - \hbar S^\dagger \rho_S(t) S \tr_E (B(t') \rho_E B^\dagger(t)) \\
-&amp; + \hbar \rho_S(t) S^\dagger S \tr_E (\rho_E B(t') B^\dagger(t))
-\end{align}\]
-
-\[\begin{align}
-&amp;\tr_E [S^\dagger B(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-=&amp; \hbar S^\dagger S \rho_S(t) \tr_E (B(t) B^\dagger(t') \rho_E) \\
-&amp; - \hbar S^\dagger \rho_S(t) S \tr_E (B(t) \rho_E B^\dagger(t')) \\
-&amp; - \hbar S \rho_S(t) S^\dagger \tr_E (B^\dagger(t') \rho_E B(t)) \\  
-&amp; + \hbar \rho_S(t) S^\dagger S \tr_E (\rho_E B(t) B^\dagger(t'))
-\end{align}\]
-
-<p>还是加减乘除各种计算, 我们有:</p>
-
-\[\begin{align}
-&amp;\tr_E [H(t), [H(t'), \rho_S(t) \otimes \rho_E]] \\
-=&amp; \hbar^2 [S S^\dagger \rho_S(t) - S^\dagger \rho_S(t) S] \tr_E (B^\dagger(t) B(t') \rho_E) \\
-&amp; + \hbar^2 [\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger] \tr_E (B(t') B^\dagger(t) \rho_E) \\
-&amp; + \hbar^2 [S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger] \tr_E (B(t) B^\dagger(t') \rho_E) \\
-&amp; + \hbar^2 [\rho_S(t) S^\dagger S - S^\dagger \rho_S(t) S] \tr_E (B^\dagger(t) B(t)\rho_E)
-\end{align}\]
-
-<p>我们定义两个关键积分:</p>
-
-\[\begin{equation}
-F(t) = \int_0^t \tr_E (B(t) B^\dagger(t') \rho_E) \dd{t'}
-\end{equation}\]
-
-\[\begin{equation}
-G(t) = \int_0^t \tr_E (B^\dagger(t) B(t') \rho_E) \dd{t'}
-\end{equation}\]
-
-<p>从而我们最开始想要的方程变成:</p>
-
-\[\begin{align}
-\dv{\rho_S}{t} =&amp; - [S S^\dagger \rho_S(t) - S^\dagger \rho_S(t) S] G^*(t) \\
-&amp; - [\rho_S(t) S^\dagger S - S \rho_S(t) S^\dagger] F^*(t) \\
-&amp; - [S^\dagger S \rho_S(t) - S \rho_S(t) S^\dagger] F(t) \\
-&amp; - [\rho_S(t) S S^\dagger - S^\dagger \rho_S(t) S] G(t)
-\end{align}\]
-
-<p>如果我们环境的初始态是:</p>
-
-\[\begin{equation}
-\rho_E = |0,0,\cdots\rangle \langle 0,0,\cdots|
-\end{equation}\]
-
-<p>我们可以计算:</p>
-
-\[\begin{align}
-\tr_E (B(t) B^\dagger(t') \rho_E) =&amp; \sum_{k,k'} g_k^* g_{k'} \mathrm{e}^{-\mathrm{i} \omega_k t} \mathrm{e}^{\mathrm{i} \omega_{k'} t'} \tr_E (a_k a_{k'}^\dagger \rho_E) \\
-=&amp; \sum_k |g_k|^2 \mathrm{e}^{-\mathrm{i} \omega_k (t - t')}
-\end{align}\]
-
-<p>以及:</p>
-
-\[\begin{equation}
-\tr_E (B^\dagger(t) B(t') \rho_E) = 0
-\end{equation}\]
-
-<p>所以我们有: \(F(t)\)是非零的, \(G(t) = 0\).
-我们现在计算\(F(t)\):</p>
-
-\[\begin{equation}
-F(t) = \int_0^\infty \sum_k |g_k|^2 \delta(\omega - \omega_k) \int_0^t \mathrm{e}^{-\mathrm{i} \omega (t - t')} \dd{t'} \dd{\omega}
-\end{equation}\]
-
-<p>考虑如下换元方法:</p>
-
-\[\begin{equation}
-\tau = t - t' \Rightarrow \dd{\tau} = -\dd{t'} \quad t' = 0 \Rightarrow \tau = t \quad t' = t \Rightarrow \tau = 0
-\end{equation}\]
-
-<p>我们有:</p>
-
-\[\begin{equation}
-F(t) = \int_0^\infty \sum_k |g_k|^2 \delta(\omega - \omega_k) \int_0^t \mathrm{e}^{-\mathrm{i} \omega \tau} (\dd{\tau}) \dd{\omega}
-\end{equation}\]
-
-<p>这个可以使用Sokhotski-Plemelj公式:</p>
-
-\[\begin{equation}
-F(t) = \pi \\int_0^\infty \sum_k |g_k|^2 \delta(\omega - \omega_k) \delta(\omega) \dd{\omega} - \mathrm{i} \mathcal{P} \int_0^\infty \sum_k |g_k|^2 \delta(\omega - \omega_k) \frac{1}{\omega} \dd{\omega}
-\end{equation}\]
-
-<p>这无非就是:</p>
-
-\[\begin{equation}
-F(t) = \gamma/2 + \mathrm{i}\,\varepsilon/2
-\end{equation}\]
-
-<p>从而我们的方程写为:</p>
-
-\[\begin{align}
-\dv{\rho_S}{t} =&amp; -\frac{\gamma}{2} (\rho_S S^\dagger S - S \rho_S S^\dagger + S^\dagger S \rho_S - S \rho_S S^\dagger) \\
-&amp; + \mathrm{i}\,\frac{\varepsilon}{2} (\rho_S S^\dagger S - S \rho_S S^\dagger - S^\dagger S \rho_S - S \rho_S S^\dagger)
-\end{align}\]
-
-<p>如果我们把Density of state搞成Lorentzian那种的, 那么我们可以得到:</p>
-
-\[\begin{equation}
-\dv{\rho_S}{t} = \gamma (S \rho_S S^\dagger - \frac{1}{2} \{S^\dagger S, \rho_S\}))
-\end{equation}\]
-
-<p>现在我们回到Schrödinger picture, 我们有:</p>
-
-\[\begin{equation}
-\rho_S = \mathrm{e}^{-\mathrm{i} H_S t/\hbar} \rho_S^{(S)} \mathrm{e}^{\mathrm{i} H_S t/\hbar}
-\end{equation}\]
-
-<p>我们有:
-\(\begin{equation}
-\dv{\rho_S}{t} = \mathrm{e}^{\mathrm{i}\,H_S t/\hbar} \dv{\rho_S^{(S)}}{t} \mathrm{e}^{-\mathrm{i}\,H_S t/\hbar} + \frac{\mathrm{i}}{\hbar} \mathrm{e}^{\mathrm{i}\,H_S t/\hbar} [H_S, \rho_S]  \mathrm{e}^{-\mathrm{i}\,H_S t/\hbar}
-\end{equation}\)</p>
-
-<p>对等时右边也做这个变换, 我们有:</p>
-
-\[\begin{equation}
-\dv{\rho_S^{(S)}}{t} = -\frac{\mathrm{i}}{\hbar} [H_S, \rho_S^{(S)}] + \gamma (S \rho_S^{(S)} S^\dagger - \frac{1}{2} \{S^\dagger S, \rho_S^{(S)}\})
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[Lindblad方程是描述开放量子系统动力学的一个重要工具, 它扩展了闭合量子系统的薛定谔方程, 允许我们考虑系统与环境之间的相互作用. 这种相互作用通常会导致系统的非单位演化, 包括耗散, 跃迁, 退相干现象.]]></summary></entry></feed>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="CMP2" /><summary type="html"><![CDATA[在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \(T_c &lt; 30\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等.]]></summary></entry></feed>

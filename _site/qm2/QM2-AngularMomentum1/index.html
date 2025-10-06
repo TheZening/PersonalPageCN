@@ -1,0 +1,549 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>QM2 角动量的理论 - 刘沛松的赛道</title>
+<meta name="description" content="我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="QM2 角动量的理论">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/">
+
+
+  <meta property="og:description" content="我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-06T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM2 角动量的理论">
+    <meta itemprop="description" content="我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量.我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变.这种对称性对应的守恒量就是角动量.无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数.我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:">
+    <meta itemprop="datePublished" content="2025-10-06T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" itemprop="url">QM2 角动量的理论
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量.
+我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变.
+这种对称性对应的守恒量就是角动量.
+无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数.
+我们把角动量算符记为 \(\boldsymbol{J} = (J_x, J_y, J_z)\), 他们满足以下对易关系:</p>
+
+\[\begin{equation}
+[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
+\end{equation}\]
+
+<p>这里 \(\epsilon_{ijk}\) 是完全反对称张量.
+这个对易关系告诉我们, 角动量的三个分量不能同时被测量.
+根据我们对于自旋和轨道角动量的理解, 我们知道我们可以找到一组共同本征态, 使得 \(J^2\) 和 \(J_z\) 有确定的值.
+我们定义:</p>
+
+\[\begin{equation}
+J^2 = J_x^2 + J_y^2 + J_z^2
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+J^2 \ket{j, m} = \hbar^2 j(j+1) \ket{j, m} \quad J_z \ket{j, m} = \hbar m \ket{j, m}
+\end{equation}\]
+
+<p>经验告诉我们, 角动量大多数是计算对易子的艺术, 所以我们现在把这些准备好.
+定义升降算符:</p>
+
+\[\begin{equation}
+J_+ = J_x + i J_y \quad J_- = J_x - i J_y
+\end{equation}\]
+
+<p>他满足:</p>
+
+\[\begin{equation}
+J_\pm \ket{j, m} = \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+[J_z, J_\pm] = \pm \hbar J_\pm \quad [J_+, J_-] = 2 \hbar J_z
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+[J^2, J_i] = 0 \quad i = x, y, z
+\end{equation}\]
+
+<p>现在我们考虑两个角动量 \(\boldsymbol{J}_1\) 和 \(\boldsymbol{J}_2\), 他们分别作用在两个不同的Hilbert空间 \(\mathcal{H}_1\) 和 \(\mathcal{H}_2\) 上.
+可以两个都是轨道角动量, 也可以是自旋角动量, 也可以一个是轨道一个是自旋, 这都不重要.
+我们定义总角动量为:</p>
+
+\[\begin{equation}
+\boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2
+\end{equation}\]
+
+<p>如果写的严谨一些, 就是:</p>
+
+\[\begin{equation}
+\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I}_2 + \mathbb{I}_1 \otimes \boldsymbol{J}_2
+\end{equation}\]
+
+<p>这里 \(\mathbb{I}_1\) 和 \(\mathbb{I}_2\) 分别是两个Hilbert空间的单位算符.
+自然而然的, \(\boldsymbol{J}\) 是一个作用在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的角动量算符.
+我们可以验证 \(\boldsymbol{J}\) 也满足角动量的对易关系:</p>
+
+\[\begin{align}
+[J_i, J_j] &amp;= [J_{1i} + J_{2i}, J_{1j} + J_{2j}] \\
+&amp;= [J_{1i}, J_{1j}] + [J_{2i}, J_{2j}] \\
+&amp;= i \hbar \epsilon_{ijk} (J_{1k} + J_{2k}) \\
+&amp;= i \hbar \epsilon_{ijk} J_k
+\end{align}\]
+
+<p>因为我们知道 \(\boldsymbol{J}_1\) 作用在 \(\mathcal{H}_1\) 上, \(\boldsymbol{J}_2\) 作用在 \(\mathcal{H}_2\) 上, 所以 \([J_{1i}, J_{2j}] = 0\).</p>
+
+<blockquote>
+  <p>能不能是线性组合相加?
+这个我们可以试试, 如果你构造一个 \(\boldsymbol{J} = a \boldsymbol{J}_1 + b \boldsymbol{J}_2\), 你会发现:
+\(\begin{align}
+[J_i, J_j] &amp;= [a J_{1i} + b J_{2i}, a J_{1j} + b J_{2j}] \\
+&amp;= a^2 [J_{1i}, J_{1j}] + b^2 [J_{2i}, J_{2j}] \\
+&amp;= i \hbar (a^2 \epsilon_{ijk} J_{1k} + b^2 \epsilon_{ijk} J_{2k}) \\
+&amp;\neq i \hbar \epsilon_{ijk} (a J_{1k} + b J_{2k})
+\end{align}\)
+除非 \(a = b = 1\).
+所以只能是简单的相加.</p>
+</blockquote>
+
+<p>由于任意一个角动量算符作用的向量空间都可以分解为角动量的不可约表示的直和, 所以我们可以通过角动量的不可约表示来理解在 \(\mathcal{H}_1 \otimes \mathcal{H}_2\) 上的Hamiltonian的谱.</p>
+
+<hr />
+<h2 id="两个自旋12的耦合">两个自旋1/2的耦合</h2>
+
+<p>我们先来看一个简单的例子, 两个自旋1/2的耦合.
+每个自旋1/2的Hilbert空间是二维的, 如果用之前的记号, 那这个空间的基就是:</p>
+
+\[\begin{equation}
+\ket{\frac{1}{2}, \frac{1}{2}} \quad \ket{\frac{1}{2}, -\frac{1}{2}}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+\boldsymbol{S}^2 \ket{\frac{1}{2}, m} = \hbar^2 \frac{3}{4} \ket{\frac{1}{2}, m} \quad S_z \ket{\frac{1}{2}, m} = \hbar m \ket{\frac{1}{2}, m}
+\end{equation}\]
+
+<p>如果我们开始考虑两个自旋1/2的系统, 那么总的Hilbert空间就是四维的, 基底可以写成直积的形式:</p>
+
+\[\begin{equation}
+\ket{\uparrow_1, \uparrow_2}, \quad \ket{\uparrow_1, \downarrow_2}, \quad \ket{\downarrow_1, \uparrow_2}, \quad \ket{\downarrow_1, \downarrow_2}
+\end{equation}\]
+
+<p>也就是说新的Hilbert空间完全可以被他们张成.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm2" class="page__taxonomy-item p-category" rel="tag">QM2</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-06T00:00:00+11:00">October 6, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM2+%E8%A7%92%E5%8A%A8%E9%87%8F%E7%9A%84%E7%90%86%E8%AE%BA%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum1%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum1%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM2+%E8%A7%92%E5%8A%A8%E9%87%8F%E7%9A%84%E7%90%86%E8%AE%BA%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-AngularMomentum1%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix4/" class="pagination--pager" title="QM2 密度矩阵4">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

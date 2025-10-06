@@ -106,4 +106,10 @@ var store = [{
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix4/",
         "teaser": null
+      },{
+        "title": "QM2 角动量的理论",
+        "excerpt":"我们已经非常熟悉自旋和轨道的角动量理论了, 现在我们从更抽象的角度来重新审视一下角动量. 我们知道角动量的本质是旋转对称性, 也就是说如果一个系统在空间中旋转了, 那么它的物理性质不变. 这种对称性对应的守恒量就是角动量. 无论他是自旋的角动量还是轨道的角动量, 他们都遵循同样的角动量代数. 我们把角动量算符记为 \\(\\boldsymbol{J} = (J_x, J_y, J_z)\\), 他们满足以下对易关系: \\[\\begin{equation} [J_i, J_j] = i \\hbar \\epsilon_{ijk} J_k \\end{equation}\\] 这里 \\(\\epsilon_{ijk}\\) 是完全反对称张量. 这个对易关系告诉我们, 角动量的三个分量不能同时被测量. 根据我们对于自旋和轨道角动量的理解, 我们知道我们可以找到一组共同本征态, 使得 \\(J^2\\) 和 \\(J_z\\) 有确定的值. 我们定义: \\[\\begin{equation} J^2 = J_x^2 + J_y^2 + J_z^2 \\end{equation}\\] 从而我们有: \\[\\begin{equation} J^2 \\ket{j,...","categories": ["QM2"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm2/QM2-AngularMomentum1/",
+        "teaser": null
       }]
