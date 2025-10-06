@@ -95,6 +95,18 @@ var store = [{
         "url": "/PersonalPageCN/math0/MIM/",
         "teaser": null
       },{
+        "title": "QM1 角动量与中心势",
+        "excerpt":"量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为: \\[\\begin{equation} \\boldsymbol{L} = \\boldsymbol{r} \\times \\boldsymbol{p} \\end{equation}\\] 他的分量形式为: \\[\\begin{align} L_x = y p_z - z p_y \\\\ L_y = z p_x - x p_z \\\\ L_z = x p_y - y p_x \\end{align}\\] 每一个位置算符算符都没有和动量算符产生对易的问题, 所以, 直接把上面的式子量子化就可以了, 我们不特意加箭头区分了. 在量子力学里, 角动量肯定要继承经典力学的性质, 经典力学中, 角动量算符是体系旋转不变下的守恒量. 翻译到量子力学里, 角动量算符如何和哈密顿量对易, 也就是: \\[\\begin{equation} [L_i, H]...","categories": ["QM1"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm1/QM1-AngularMomentum1/",
+        "teaser": null
+      },{
+        "title": "QM1 角动量与中心势2",
+        "excerpt":"经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式: \\[\\begin{equation} \\hat{L}^2 = -\\hbar^2 \\left[ \\frac{1}{\\sin \\theta} \\pdv{}{\\theta} \\left( \\sin \\theta \\pdv{}{\\theta} \\right) + \\frac{1}{\\sin^2 \\theta} \\pdv[2]{}{\\phi} \\right] \\end{equation}\\] 现在问题来了, 我们挑哪两个算符来标记波函数呢? 我们已经知道, 角动量的三个分量 $\\hat{L}_x, \\hat{L}_y, \\hat{L}_z$ 之间不对易, 也就是说, 它们不能同时有一组共同的本征函数. 经过之前的计算, 我们发现, 考虑 $\\hat{L}^2$ 和 $\\hat{L}_z$ 这两个算符, 它们是对易的, 即 $[\\hat{L}^2, \\hat{L}_z] = 0$, 而且形式简单: \\[\\begin{equation} \\hat{L}_z = -i \\hbar \\frac{\\partial}{\\partial...","categories": ["QM1"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm1/QM1-AngularMomentum2/",
+        "teaser": null
+      },{
         "title": "QM2 密度矩阵3",
         "excerpt":"现在我们回顾一下上一个帖子中的一个困惑. 已知每次测量, 考虑一个结果\\(i\\), 测量算子是投影: \\[\\begin{equation} M_i = \\ketbra{i}{i} \\end{equation}\\] 从而得到结果\\(i\\)的概率是: \\[\\begin{equation} p(i) = \\Tr(M_i \\rho M_i^\\dagger) = \\bra{i}\\rho\\ket{i} \\end{equation}\\] 如果知道结果是\\(i\\), 那么测量后系统的状态是: \\[\\begin{equation} \\rho_i = \\frac{M_i \\rho M_i^\\dagger}{\\Tr(M_i \\rho M_i^\\dagger)} = \\ketbra{i}{i} \\end{equation}\\] 如果不知道结果(但是仍然测量了), 那么测量后系统的状态是: \\[\\begin{equation} \\tilde{\\rho} = \\sum_i p(i) \\rho_i = \\sum_i \\bra{i}\\rho\\ket{i} \\ketbra{i}{i} \\end{equation}\\] 成为了经典混合. 我们这个帖子就对于这个问题做出一些讨论和理解. 双粒子系统 我们还是考虑Alice和Bob的双粒子系统. Alice现在准备沿着一个基向量\\(\\ket{i}_A\\)测量她的粒子,...","categories": ["QM2"],
         "tags": [],

@@ -1,0 +1,682 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>QM1 角动量与中心势2 - 刘沛松的赛道</title>
+<meta name="description" content="经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="QM1 角动量与中心势2">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/">
+
+
+  <meta property="og:description" content="经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-05T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM1 角动量与中心势2">
+    <meta itemprop="description" content="经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:">
+    <meta itemprop="datePublished" content="2025-10-05T00:00:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" itemprop="url">QM1 角动量与中心势2
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
+
+\[\begin{equation}
+\hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
+\end{equation}\]
+
+<p>现在问题来了, 我们挑哪两个算符来标记波函数呢?
+我们已经知道, 角动量的三个分量 $\hat{L}_x, \hat{L}_y, \hat{L}_z$ 之间不对易, 也就是说, 它们不能同时有一组共同的本征函数.
+经过之前的计算, 我们发现, 考虑 $\hat{L}^2$ 和 $\hat{L}_z$ 这两个算符, 它们是对易的, 即 $[\hat{L}^2, \hat{L}_z] = 0$, 而且形式简单:</p>
+
+\[\begin{equation}
+\hat{L}_z = -i \hbar \frac{\partial}{\partial \phi}
+\end{equation}\]
+
+\[\begin{equation}
+\hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
+\end{equation}\]
+
+<p>我们现在的任务就是找到他们的本征值.</p>
+
+<hr />
+<h2 id="轨道角动量算符的本征值问题">轨道角动量算符的本征值问题</h2>
+
+<p>我们需要解下面的两个本征值方程:</p>
+
+\[\begin{equation}
+\hat{L}^2 \psi_{l,m}(\theta, \phi) = \hbar^2 l(l+1) \psi_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+\hat{L}_z \psi_{l,m}(\theta, \phi) = \hbar m \psi_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>注意此处的\(l(l+1)\), 我们只是故意选取成这样, 方便后续的计算, 等下看到你就知道了.
+先挑好算的算:</p>
+
+\[\begin{equation}
+\hat{L}_z \psi_{l,m}(\theta, \phi) = -\mathrm{i}\,\hbar \pdv{}{\phi} \psi_{l,m}(\theta, \phi) = \hbar m \psi_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>求解这个方程简单一些:</p>
+
+\[\begin{equation}
+\pdv{}{\phi} \psi_{l,m}(\theta, \phi) = \mathrm{i} m \psi_{l,m}(\theta, \phi)
+\end{equation}\]
+
+<p>这个方程的解是:</p>
+
+\[\begin{equation}
+\psi_{l,m}(\theta, \phi) = p_{l,m}(\theta) \mathrm{e}^{\mathrm{i} m \phi}
+\end{equation}\]
+
+<p>函数得是单值得:</p>
+
+\[\begin{equation}
+\psi_{l,m}(\theta, \phi) = \psi_{l,m}(\theta, \phi + 2\pi)
+\end{equation}\]
+
+<p>这自然推出来:</p>
+
+\[\begin{equation}
+\mathrm{e}^{2\pi \mathrm{i}\, m} = 1 \Rightarrow m = 0, \pm 1, \pm 2, \ldots
+\end{equation}\]
+
+<p>所以\(m\)必须是整数, 侧面的说明了\(\hat{L}_z\)的本征值是量子化的, 只能取离散值.
+现在我们还是求\(\hat{L}^2\)的本征值.
+把\(\psi_{l,m}(\theta, \phi) = p_{l,m}(\theta) \mathrm{e}^{\mathrm{i} m \phi}\)代入\(\hat{L}^2\)的本征值方程:</p>
+
+\[\begin{equation}
+-\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{p_{l,m}(\theta)}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{\mathrm{e}^{\mathrm{i} m \phi}}{\phi} p_{l,m}(\theta) \right] = \hbar^2 l(l+1) p_{l,m}(\theta) \mathrm{e}^{\mathrm{i} m \phi}
+\end{equation}\]
+
+<p>我们整理一下:</p>
+
+\[\begin{equation}
+\sin\theta \pdv{}{\theta} \left( \sin \theta \pdv{p_{l,m}(\theta)}{\theta} \right) + \left[ l(l+1) \sin^2 \theta - m^2 \right] p_{l,m}(\theta) = 0
+\end{equation}\]
+
+<p>这个方程看起来很复杂, 但是我们可以通过变量替换来简化它.
+令\(\lambda = \cos \theta\), 那么\(\sin \theta = \sqrt{1 - \lambda^2}\), 并且:</p>
+
+\[\begin{equation}
+\pdv{}{\theta} = \pdv{\lambda}{\theta} \pdv{}{\lambda} = -\sin \theta \pdv{}{\lambda}
+\end{equation}\]
+
+<p>所以第一项:</p>
+
+\[\begin{equation}
+\sin \theta \pdv{}{\theta} = -(1-\lambda^2) \pdv{}{\lambda}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+(1-\lambda^2) \pdv{}{\lambda} \left[ (1-\lambda^2) \pdv{p_{l,m}(\lambda)}{\lambda} \right] + \left[ l(l+1)(1-\lambda^2) - m^2 \right] p_{l,m}(\lambda) = 0
+\end{equation}\]
+
+<p>还是不行:</p>
+
+\[\begin{equation}
+\pdv{}{\lambda} \left[ (1-\lambda^2) \pdv{p_{l,m}(\lambda)}{\lambda} \right] + \left[ l(l+1) - \frac{m^2}{1-\lambda^2} \right] p_{l,m}(\lambda) = 0
+\end{equation}\]
+
+<p>这个就能查表了, 这是著名的<strong>连带勒让德方程</strong>(Associated Legendre Equation), 它的解是<strong>连带勒让德函数</strong>(Associated Legendre Function), 记作\(P_l^m(\lambda)\).
+如果我们考虑\(m=0\)的情况, 那么方程就简化成:</p>
+
+\[\begin{equation}
+\pdv{}{\lambda} \left[ (1-\lambda^2) \pdv{p_{l,0}(\lambda)}{\lambda} \right] + l(l+1) p_{l,0}(\lambda) = 0
+\end{equation}\]
+
+<p>考虑级数解:</p>
+
+\[\begin{equation}
+p_{l,0}(\lambda) = \sum_{n=0}^{\infty} a_n \lambda^n
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+\pdv{p_{l,0}(\lambda)}{\lambda} = \sum_{n=1}^{\infty} n a_n \lambda^{n-1}
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+\pdv[2]{p_{l,0}(\lambda)}{\lambda} = \sum_{n=2}^{\infty} n(n-1) a_n \lambda^{n-2}
+\end{equation}\]
+
+<p>带进去算, 比对系数:</p>
+
+\[\begin{equation}
+(1-\lambda^2) \sum_{n=2}^{\infty} n(n-1) a_n \lambda^{n-2} - 2\lambda \sum_{n=1}^{\infty} n a_n \lambda^{n-1} + l(l+1) \sum_{n=0}^{\infty} a_n \lambda^n = 0
+\end{equation}\]
+
+<p>我们有:</p>
+
+\[\begin{equation}
+\sum_{n=0}^{\infty} \left[ (n+2)(n+1) a_{n+2} - n(n-1) a_n - 2n a_n + l(l+1) a_n \right] \lambda^n = 0
+\end{equation}\]
+
+<p>我们有:</p>
+
+\[\begin{equation}
+(n+2)(n+1) a_{n+2} - n(n-1) a_n - 2n a_n + l(l+1) a_n = 0
+\end{equation}\]
+
+<p>等价于:</p>
+
+\[\begin{equation}
+\frac{a_{n+2}}{a_n} = \frac{n(n+1) - l(l+1)}{(n+1)(n+2)}
+\end{equation}\]
+
+<p>我们发现, 当\(n=l\)时, 分子为零, 级数终止, 于是我们得到了多项式解.
+这些多项式解就是<strong>勒让德多项式</strong>(Legendre Polynomial), 记作\(P_l(\lambda)\).
+前几个勒让德多项式是:</p>
+
+\[\begin{align}
+P_0(\lambda) &amp;= 1 \\
+P_1(\lambda) &amp;= \lambda \\
+P_2(\lambda) &amp;= \frac{1}{2} (3\lambda^2 - 1) \\
+P_3(\lambda) &amp;= \frac{1}{2} (5\lambda^3 - 3\lambda) \\
+P_4(\lambda) &amp;= \frac{1}{8} (35\lambda^4 - 30\lambda^2 + 3) \\
+P_5(\lambda) &amp;= \frac{1}{8} (63\lambda^5 - 70\lambda^3 + 15\lambda)
+\end{align}\]
+
+<p>有一个生成的方法:</p>
+
+\[\begin{equation}
+P_l(\lambda) = \frac{1}{2^l l!} \frac{\partial^l}{\partial \lambda^l} (\lambda^2 - 1)^l
+\end{equation}\]
+
+<p>以及生成函数:</p>
+
+\[\begin{equation}
+\frac{1}{\sqrt{1 - 2\lambda t + t^2}} = \sum_{l=0}^{\infty} P_l(\lambda) t^l
+\end{equation}\]
+
+<p>此时\(l\)必须是非负整数, 否则级数不收敛.
+现在我们需要讨论\(m \neq 0\)的情况:</p>
+
+\[\begin{equation}
+p_{l,m}(\lambda) = (1-\lambda^2)^{|m|/2} \frac{\partial^{|m|}}{\partial \lambda^{|m|}} P_l(\lambda)
+\end{equation}\]
+
+<p>自然而然的, 我们必须有\(|m| \leq l\), 否则导数会把多项式直接导成零.
+所以\(l\)也是非负整数.
+总结一下, 轨道角动量的量子数\(l\)是非负整数, \(m\)是整数, 且满足\(|m| \leq l\)
+所以我们的波函数是:</p>
+
+\[\begin{equation}
+\psi_{l,m}(\theta, \phi) = p_{l,m}(\cos \theta) \mathrm{e}^{\mathrm{i} m \phi}
+\end{equation}\]
+
+<p>一旦我们确定了\(l\), 那么\(m\)就有\(2l+1\)个取值:</p>
+
+\[\begin{equation}
+m = -l, -l+1, \ldots, 0, \ldots, l-1, l
+\end{equation}\]
+
+<p>对于一个给定的\(l\), \(m\)允许的取值个数是\(2l+1\), 形成了一个\(l\)-multiplet.</p>
+
+\[\begin{align}
+l=0 &amp;\Rightarrow m=0 \quad (1 \text{-plet}) \\
+l=1 &amp;\Rightarrow m=-1,0,1 \quad (3 \text{-plet}) \\
+l=2 &amp;\Rightarrow m=-2,-1,0,1,2 \quad (5 \text{-plet}) \\
+l=3 &amp;\Rightarrow m=-3,-2,-1,0,1,2,3 \quad (7 \text{-plet}) \\
+\ldots
+\end{align}\]
+
+<p>现在结合我们之前算出来的角项的结果:</p>
+
+\[\begin{equation}
+Y_{l,m}(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi} \frac{(l-m)!}{(l+m)!}} (-1)^{m} P_{l}^{m}(\lambda) \mathrm{e}^{\mathrm{i} m \phi}
+\end{equation}\]
+
+<p>这个叫做<strong>球谐函数</strong>(Spherical Harmonics), 它们是归一化的.
+如果我们需要\(m&lt;0\)的情况, 那么我们有关系:</p>
+
+\[\begin{equation}
+Y_{l,-m}(\theta, \phi) = (-1)^m Y_{l,m}^*(\theta, \phi)
+\end{equation}\]
+
+<p>这样我们就搞定了\(\hat{L}^2\)和\(\hat{L}_z\)的本征值问题.</p>
+
+\[\begin{align}
+\hat{L}^2 Y_{l,m}(\theta, \phi) &amp;= \hbar^2 l(l+1) Y_{l,m}(\theta, \phi) \\
+\hat{L}_z Y_{l,m}(\theta, \phi) &amp;= \hbar m Y_{l,m}(\theta, \phi)
+\end{align}\]
+
+<p>我们有前几个球谐函数:</p>
+
+\[\begin{align}
+Y_{0,0}(\theta, \phi) &amp;= \sqrt{\frac{1}{4\pi}} \\
+Y_{1,0}(\theta, \phi) &amp;= \sqrt{\frac{3}{4\pi}} \cos \theta = \sqrt{\frac{3}{4\pi}} \frac{z}{r} \\
+Y_{1,1}(\theta, \phi) &amp;= -\sqrt{\frac{3}{8\pi}} \sin \theta \mathrm{e}^{\mathrm{i} \phi} = -\sqrt{\frac{3}{8\pi}} \frac{x + \mathrm{i} y}{r} \\
+Y_{1,-1}(\theta, \phi) &amp;= \sqrt{\frac{3}{8\pi}} \sin \theta \mathrm{e}^{-\mathrm{i} \phi} = \sqrt{\frac{3}{8\pi}} \frac{x - \mathrm{i} y}{r} \\
+Y_{2,0}(\theta, \phi) &amp;= \sqrt{\frac{5}{16\pi}} (3\cos^2 \theta - 1) = \sqrt{\frac{5}{16\pi}} \frac{3z^2 - r^2}{r^2} \\
+Y_{2,1}(\theta, \phi) &amp;= -\sqrt{\frac{15}{8\pi}} \sin \theta \cos \theta \mathrm{e}^{\mathrm{i} \phi} = -\sqrt{\frac{15}{8\pi}} \frac{(x + \mathrm{i} y) z}{r^2} \\
+Y_{2,-1}(\theta, \phi) &amp;= \sqrt{\frac{15}{8\pi}} \sin \theta \cos \theta \mathrm{e}^{-\mathrm{i} \phi} = \sqrt{\frac{15}{8\pi}} \frac{(x - \mathrm{i} y) z}{r^2} \\
+Y_{2,2}(\theta, \phi) &amp;= \sqrt{\frac{15}{32\pi}} \sin^2 \theta \mathrm{e}^{2\mathrm{i} \phi} = \sqrt{\frac{15}{32\pi}} \frac{(x + \mathrm{i} y)^2}{r^2} \\
+Y_{2,-2}(\theta, \phi) &amp;= \sqrt{\frac{15}{32\pi}} \sin^2 \theta \mathrm{e}^{-2\mathrm{i} \phi} = \sqrt{\frac{15}{32\pi}} \frac{(x - \mathrm{i} y)^2}{r^2}
+\end{align}\]
+
+<p>系数不好搞啊, 一般都是写出来关于\(\theta\)和\(\phi\)的形式, 然后再用归一化条件算系数.</p>
+
+<p>现在我们搞定了角度相关的, 还没有说任何关于径向的解, 这个更加复杂一点.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm1" class="page__taxonomy-item p-category" rel="tag">QM1</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-05T00:00:00+10:00">October 5, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM1+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM1+%E8%A7%92%E5%8A%A8%E9%87%8F%E4%B8%8E%E4%B8%AD%E5%BF%83%E5%8A%BF2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm1%2FQM1-AngularMomentum2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm1/QM1-AngularMomentum1/" class="pagination--pager" title="QM1 角动量与中心势">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix3/" class="pagination--pager" title="QM2 密度矩阵3">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
