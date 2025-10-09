@@ -1,4 +1,260 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-06T23:24:52+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-09T14:05:20+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/" rel="alternate" type="text/html" title="QM2 角动量与中心势3" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/"><![CDATA[<p>现在我们来聊聊我们上一个内容里发现的神秘的数学结构.
+仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元.
+我们先站的远一点, 回想一些线性代数的知识.</p>
+
+<hr />
+<h2 id="线性空间与张量积">线性空间与张量积</h2>
+
+<p>我们专注于一个有限维的线性空间\(V_1\), 其维数为\(n_1\).
+他有一个基底\(\{\ket{a_i}\}, i=1,2,\cdots,n_1\).
+我们可以把\(V_1\)中的任意向量\(\ket{v}\)表示为</p>
+
+\[\begin{equation}
+\ket{v} = \sum_{i=1}^{n_1} v_i \ket{a_i}
+\end{equation}\]
+
+<p>现在我们再考虑另一个有限维线性空间\(V_2\), 其维数为\(n_2\).
+他有一个基底\(\{\ket{b_j}\}, j=1,2,\cdots,n_2\).
+我们可以把\(V_2\)中的任意向量\(\ket{w}\)表示为</p>
+
+\[\begin{equation}
+\ket{w} = \sum_{j=1}^{n_2} w_j \ket{b_j}
+\end{equation}\]
+
+<p>我们现在想构造一个新的线性空间\(V_3\), 我们QM1研究过, 张量积是更恰当的构造方法, 维度相乘扩展, 而不是相加.</p>
+
+\[\begin{equation}
+\dim(V_3) = \dim(V_1) \times \dim(V_2) = n_1 n_2
+\end{equation}\]
+
+<p>这样可以容纳\(V_1\)和\(V_2\)的所有信息.
+\(V_3\)的基底可以写成\(\{\ket{a_i}\otimes\ket{b_j}\}, i=1,2,\cdots,n_1, j=1,2,\cdots,n_2\).
+我们可以把\(V_3\)中的任意向量\(\ket{u}\)表示为</p>
+
+\[\begin{equation}
+\ket{u} = \sum_{i=1}^{n_1} \sum_{j=1}^{n_2} u_{ij} \ket{a_i}\otimes\ket{b_j}
+\end{equation}\]
+
+<p>目前看来, 这是最一般的套路, 没什么问题.
+这也是我们观察到的: 角动量的耦合空间, 是两个角动量空间的张量积空间.
+但是, 我们发现了一个奇怪的现象: 角动量的耦合空间, 似乎有另外一套基底.
+这套基底不是\(\{\ket{j_1, m_1}\otimes\ket{j_2, m_2}\}\), 而是\(\{\ket{J, M}\}\).
+尤其是两个例子中遇到到\(3+1\)和\(4+2\)的情况.
+仿佛是维度相加?</p>
+
+<hr />
+<h2 id="直和分解">直和分解</h2>
+
+<p>我们先复习一下直和这个概念.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(W_1\)和\(W_2\)是\(V\)的两个子空间.
+首先, 如果\(W_1 + W_2 = V\):
+\(\begin{equation}
+\forall \ket{v} \in V, \exists \ket{w_1} \in W_1, \exists \ket{w_2} \in W_2, \ket{v} = \ket{w_1} + \ket{w_2}
+\end{equation}\)
+那么\(V\)是\(W_1\)和\(W_2\)的和空间, 记为\(V = W_1 + W_2\).
+其次, 如果\(W_1 \cap W_2 = \{\ket{0}\}\):
+\(\begin{equation}
+\ket{w} \in W_1, \ket{w} \in W_2 \Rightarrow \ket{w} = \ket{0}
+\end{equation}\)
+那么\(W_1\)和\(W_2\)只有零向量一个公共元素.
+如果\(V = W_1 + W_2\)且\(W_1 \cap W_2 = \{\ket{0}\}\), 那么\(V\)是\(W_1\)和\(W_2\)的直和, 记为\(V = W_1 \oplus W_2\).</p>
+</blockquote>
+
+<p>我们首先说明一下, 直和的维数是相加的.</p>
+
+\[\begin{equation}
+\dim(V) = \dim(W_1) + \dim(W_2)
+\end{equation}\]
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W_1 = \{(x,0)|x\in\mathbb{R}\}\), \(W_2 = \{(0,y)|y\in\mathbb{R}\}\).
+那么\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
+我们从几何上也能看到, 此处\(W_1\)和\(W_2\)是\(V\)的两个正交子空间(两条过原点的直线), 任何\(V\)中的向量都能唯一分解为\(W_1\)和\(W_2\)中的向量之和.</p>
+
+<p>但是我们也强调一个问题, 直和的分解并不是唯一的.
+比如\(V = \mathbb{R}^2\), \(W_1 = \{(x,x)|x\in\mathbb{R}\}\), \(W_2 = \{(y,-y)|y\in\mathbb{R}\}\).
+同样\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
+但是\(W_1\)和\(W_2\)不是正交的(两条过原点的直线, 夹角45度), 但是任何\(V\)中的向量仍然能唯一分解为\(W_1\)和\(W_2\)中的向量之和.
+所以, 直和的分解不是唯一的, 但是维数是唯一的.</p>
+
+<blockquote>
+  <p>能拆, 但是不唯一.</p>
+</blockquote>
+
+<p>与直和分解非常相关的一个概念是商空间.
+我们需要先看看陪集的概念, 一个陪集就是商空间中的一个元素.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(W\)是\(V\)的一个子空间.
+考虑\(\forall \ket{v} \in V\), 我们可以定义\(\ket{v}\)关于\(W\)的陪集:
+\(\begin{equation}
+\ket{v} + W = \{\ket{v} + \ket{w} | \ket{w} \in W\}
+\end{equation}\)
+这个陪集是\(V\)的一个子集, 记为\([\ket{v}]\).
+这实际上是一个等价类.</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
+此时\(W\)就是x轴.
+取\(\ket{v} = (0,1)\), 那么\([\ket{v}] = \{(x,1)|x\in\mathbb{R}\}\).
+就是平行于x轴的一条直线, $y=1$.
+取\(\ket{u} = (2,1)\), 那么\([\ket{u}] = \{(x+2,1)|x\in\mathbb{R}\}\).
+也是平行于x轴的一条直线, $y=1$.
+所以\([\ket{v}] = [\ket{u}]\).
+取\(\ket{v} = (0,3)\), 那么\([\ket{v}] = \{(x,3)|x\in\mathbb{R}\}\).
+就是平行于x轴的一条直线, $y=3$.
+很明显后面这个陪集和前面两个陪集不相等.
+进行推广, 我们发现所有的陪集\([\ket{v}]\), \(\ket{v} \in V\), 就是所有平行于x轴的直线.</p>
+
+<p>现在我们可以定义商空间了.</p>
+
+<blockquote>
+  <p>设 \(V\) 是一个线性空间, \(W\) 是 \(V\) 的一个子空间.
+我们定义 \(V\) 关于 \(W\) 的商空间 \(V/W\) 为
+\(\begin{equation}
+V/W = \{[\ket{v}] | \ket{v} \in V\}
+\end{equation}\)
+也就是说, 商空间 \(V/W\) 的元素是 \(V\) 中所有向量 \(\ket{v}\) 关于 \(W\) 的陪集 \([\ket{v}]\).
+商空间 \(V/W\) 是一个线性空间, 其加法和数乘定义如下:
+\(\begin{equation}
+[\ket{v}] + [\ket{u}] = [\ket{v} + \ket{u}]
+\end{equation}\)
+\(\begin{equation}
+c[\ket{v}] = [c\ket{v}]
+\end{equation}\)</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
+此时\(W\)就是x轴.
+那么\(V/W\)就是所有平行于x轴的直线的集合.
+我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,y) + W\), 其中\(y\)是一个实数.
+所以\(V/W\)中的元素可以用一个实数来表示.
+所以\(V/W\)是一个一维线性空间.
+我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
+因为\(\dim(V) = 2\), \(\dim(W) = 1\), 所以\(\dim(V/W) = 1\).’</p>
+
+<p>我们看个三维的例子.
+设\(V = \mathbb{R}^3\), \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\).
+此时\(W\)就是xy平面.
+那么\(V/W\)就是所有平行于xy平面的平面的集合.
+我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,0,z) + W\), 其中\(z\)是一个实数.
+所以\(V/W\)中的元素可以用一个实数来表示.
+所以\(V/W\)是一个一维线性空间.
+我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
+因为\(\dim(V) = 3\), \(\dim(W) = 2\), 所以\(\dim(V/W) = 1\).</p>
+
+<p>这个其实有一个非常直观的理解.
+我们把\(V\)想象成一个三维空间, \(W\)是一个二维平面.
+那么\(V/W\)就是所有平行于\(W\)的平面的集合.
+每个这样的平面可以用一个实数来表示, 这个实数就是这个平面到\(W\)的距离(带符号).
+所以\(V/W\)是一个一维线性空间.
+在很多力学问题里, 我们在重力势能的时候, 我们只在意高度, 而不在意水平位置.
+这就是一个商空间的例子.
+我们虽然是一个三维向量空间, 但是我们的物理定律告诉我们, 我们可以把这个三维空间”压缩”成一个一维空间, 就是商掉那个二维平面.</p>
+
+<hr />
+<h2 id="张量积拆成直和">张量积拆成直和</h2>
+
+<p>我们举个具体例子, 设\(V = \mathbb{R}^2\), \(W = \mathbb{R}^2\).
+\(V\)有一个标准正交基底\(\{\ket{a_1} = (1,0), \ket{a_2} = (0,1)\}\).
+\(W\)有一个标准正交基底\(\{\ket{b_1} = (1,0), \ket{b_2} = (0,1)\}\).
+那么\(V \otimes W\)有一个标准正交基底:</p>
+
+\[\begin{equation}
+\{\ket{a_1}\otimes\ket{b_1}, \ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
+\end{equation}\]
+
+<p>自然的, 我们可以把他们写成矩阵的形式:</p>
+
+<p>\(\begin{equation}
+\ket{a_1}\otimes\ket{b_1} = \mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
+\ket{a_1}\otimes\ket{b_2} = \mqty[0 &amp; 1 \\ 0 &amp; 0]
+\end{equation}\)
+\(\begin{equation}
+\ket{a_2}\otimes\ket{b_1} = \mqty[0 &amp; 0 \\ 1 &amp; 0], \quad
+\ket{a_2}\otimes\ket{b_2} = \mqty[0 &amp; 0 \\ 0 &amp; 1]
+\end{equation}\)</p>
+
+<p>所以一个\(V \otimes W\)中的任意向量\(\ket{u}\)可以表示为:</p>
+
+\[\begin{align}
+\ket{u} &amp;= u_{11} \ket{a_1}\otimes\ket{b_1} + u_{12} \ket{a_1}\otimes\ket{b_2} + u_{21} \ket{a_2}\otimes\ket{b_1} + u_{22} \ket{a_2}\otimes\ket{b_2} \\
+&amp;= \mqty[u_{11} &amp; u_{12} \\ u_{21} &amp; u_{22}]
+\end{align}\]
+
+<p>这个时候我们可以注意到一个事实, 任何一个矩阵都可以做如下分解:</p>
+
+\[\begin{equation}
+\mqty[a &amp; b \\ c &amp; d] = \mqty[a &amp; (b+c)/2 \\ (b+c)/2 &amp; d] + \mqty[0 &amp; (b-c)/2 \\ (c-b)/2 &amp; 0]
+\end{equation}\]
+
+<p>现在我们就能意识到了, 我们不一定非得用标准基底.
+我们可以试试用如下基底:</p>
+
+\[\begin{equation}
+\ket{c_1} = \ket{a_1}\otimes\ket{b_1}, \quad
+\ket{c_2} = \ket{a_2}\otimes\ket{b_2}, \quad
+\ket{c_3} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} + \ket{a_2}\otimes\ket{b_1})
+\end{equation}\]
+
+<p>这三个对应的矩阵是:</p>
+
+\[\begin{equation}
+\mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
+\mqty[0 &amp; 0 \\ 0 &amp; 1], \quad
+\mqty[0 &amp; 1 \\ 1 &amp; 0]
+\end{equation}\]
+
+<p>这三个矩阵是线性无关的, 但是不能张成\(V \otimes W\).
+但是确实张成了\(V \otimes W\)的一个三维子空间\(U_1\).
+还有最后一个基底, 我们取:</p>
+
+\[\begin{equation}
+\ket{c_4} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} - \ket{a_2}\otimes\ket{b_1})
+\end{equation}\]
+
+<p>矩阵就是:</p>
+
+\[\begin{equation}
+\mqty[0 &amp; 1 \\ -1 &amp; 0]
+\end{equation}\]
+
+<p>这个自己构成了\(V \otimes W\)的一个一维子空间\(U_2\).
+所以我们发现了一个新的分解:</p>
+
+\[\begin{equation}
+V \otimes W = U_1 \oplus U_2
+\end{equation}\]
+
+<blockquote>
+  <p>这仿佛就是我们之前发现的现象: 两个角动量的耦合空间, 可以拆成两个子空间的直和.</p>
+</blockquote>
+
+<p>但是问题又来了, 这个分解是唯一的吗?
+答案是否定的.
+我们可以做如下拆分:</p>
+
+\[\begin{equation}
+\mqty[a &amp; b \\ c &amp; d] = \mqty[ a &amp; 0 \\ 0 &amp; d] + \mqty[0 &amp; b \\ c &amp; 0]
+\end{equation}\]
+
+<p>也没毛病.
+这个时候我们就能选择如下的拆分:
+\(\begin{equation}
+D = \text{span}\{\ket{a_1}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
+\end{equation}\)
+\(\begin{equation}
+O = \text{span}\{\ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}\}
+\end{equation}\)</p>
+
+<p>从而我们可以做如下的拆分:</p>
+
+\[\begin{equation}
+V \otimes W = D \oplus O
+\end{equation}\]
+
+<p>也没问题!</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
 
 \[\begin{equation}
 \hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
@@ -429,7 +685,280 @@ U(\alpha; \mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right) = 
 
 \[\begin{equation}
 U(\alpha; \mathrm{z}) \psi(r, \theta, \phi) = \psi(r, \theta, \phi - \alpha)
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+
+<ol>
+  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
+  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
+  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
+</ol>
+
+<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
+这些问题仍然是开放性的, 没有一个准确的回答.</p>
+
+<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
+这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
+但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
+我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
+
+<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
+一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
+也就是说, 坍缩是在探测器读出结果时候发生的.
+在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
+
+<hr />
+<h2 id="预测量问题">预测量问题</h2>
+
+<p>我们现在考虑量子力学是适用于一切迟钝的理论.
+那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
+为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
+
+<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
+
+\[\begin{equation}
+\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
+\end{equation}\]
+
+<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
+
+\[\begin{equation}
+\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
+\end{equation}\]
+
+<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
+
+\[\begin{equation}
+\ket{s_i} \leftrightarrow \ket{a_i}
+\end{equation}\]
+
+<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
+所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
+
+<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
+\end{equation}\]
+
+<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
+
+\[\begin{equation}
+\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
+\end{equation}\]
+
+<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
+
+\[\begin{equation}
+[Q,P] = \mathrm{i}\hbar \quad
+\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
+\end{equation}\]
+
+<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
+
+\[\begin{equation}
+H_{int} = g(t) \mathcal{O}_S \otimes P_A
+\end{equation}\]
+
+<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
+
+\[\begin{equation}
+\int_0^\tau g(t) \, \mathrm{d}t = \kappa
+\end{equation}\]
+
+<p>从而我们可以写出时间演化算符:</p>
+
+\[\begin{equation}
+U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
+\end{equation}\]
+
+<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
+
+\[\begin{equation}
+U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
+\end{equation}\]
+
+<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
+
+<p>我们定义:</p>
+
+\[\begin{equation}
+\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
+\end{equation}\]
+
+<p>系统的状态现在是:</p>
+
+\[\begin{equation}
+\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
+但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
+这就是早期von Neumann测量理论:</p>
+
+<ol>
+  <li>测量装置本身就是一个量子系统.</li>
+  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
+  <li>测量结果是装置的指针态.</li>
+</ol>
+
+<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
+我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
+
+<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
+测量装置也是双能级态, 耦合Hamiltonian是:</p>
+
+\[\begin{equation}
+H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
+\end{equation}\]
+
+<p>假设系统的初始状态为:</p>
+
+\[\begin{equation}
+c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们做一点点代数变形:</p>
+
+\[\begin{equation}
+\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们的时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
+\end{equation}\]
+
+<p>注意到:</p>
+
+\[\begin{equation}
+U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
+\end{equation}\]
+
+<p>从而我们可以计算出:</p>
+
+\[\begin{equation}
+\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
+
+\[\begin{equation}
+\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>系统和装置的观测量正确地关联在一起了!</p>
+
+<hr />
+<h2 id="退相干">退相干</h2>
+
+<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
+但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
+退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
+
+<p>我们之前得到了预测量态:</p>
+
+\[\begin{equation}
+\sum_i c_i \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
+所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+
+\[\begin{equation}
+\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\end{equation}\]
+
+<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+\end{equation}\]
+
+<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
+
+\[\begin{equation}
+\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
+\end{equation}\]
+
+<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
+
+\[\begin{equation}
+\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
+\end{equation}\]
+
+<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
+
+\[\begin{equation}
+\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
+\end{equation}\]
+
+<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
+
+\[\begin{equation}
+\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
+\end{equation}\]
+
+<p>对环境取偏迹:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
+\end{equation}\]
+
+<p>退相干解释了为什么我们看不到大尺度量子叠加态.
+但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
+虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
+
+<hr />
+<h2 id="多世界说法">多世界说法</h2>
+
+<p>如果我们干脆直接放弃坍缩这个概念呢?
+我们就得到了多世界诠释(Many-World Interpretation, MWI).
+在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
+每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
+MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
+MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
+
+<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
+|c_+|^2 + |c_-|^2 = 1
+\end{equation}\]
+
+<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
+那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
+
+\[\begin{equation}
+\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
+\end{equation}\]
+
+<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
+
+\[\begin{equation}
+\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
+\end{equation}\]
+
+<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
+在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
+
+<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
+在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
+这两个分支互不干扰, 同样真实, 但是无法交流.
+随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
+因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
+
+<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
+既然每种可能都在某个世界实现了, 那么概率到底是什么?
+分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
+
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
 
 <ol>
   <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
@@ -800,320 +1329,336 @@ S^R(E) = k_B \ln \Omega^R(E)
 
 \[\begin{equation}
 \rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
+设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢?
+以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?</p>
 
-<ol>
-  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
-  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
-  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
-</ol>
+<p>不管是什么耦合, 角动量算符都必须满足如下的对易关系:
+\(\begin{equation}
+[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
+\end{equation}\)
+总角动量也不能违反这个对易关系.</p>
 
-<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
-这些问题仍然是开放性的, 没有一个准确的回答.</p>
+<p>如果我们按照之前扩张算符的做法, 考虑Hilbert空间\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 那么我们可以定义:
+\(\begin{equation}
+\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{J}_2
+\end{equation}\)
+其中\(\mathbb{I}\)是单位算符.
+这个定义是合理的, 因为\(\boldsymbol{J}_1\)和\(\boldsymbol{J}_2\)作用在不同的Hilbert空间上, 它们之间对易.
+并且这个定义也满足角动量的对易关系.
+我们可以验证:</p>
 
-<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
-这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
-但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
-我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
+\[\begin{align}
+[J_i, J_j] &amp;= [J_{1i} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2i}, J_{1j} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2j}] \\
+&amp;= [J_{1i}, J_{1j}] \otimes \mathbb{I} + \mathbb{I} \otimes [J_{2i}, J_{2j}] \\
+&amp;= i \hbar \epsilon_{ijk} (J_{1k} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2k}) \\
+&amp;= i \hbar \epsilon_{ijk} J_k
+\end{align}\]
 
-<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
-一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
-也就是说, 坍缩是在探测器读出结果时候发生的.
-在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
+<p>我们可以看到, 这个定义满足角动量的对易关系!
+再进行下一步讨论之前, 我们先回顾一下单个粒子的角动量算符.</p>
 
-<hr />
-<h2 id="预测量问题">预测量问题</h2>
+\[\begin{align}
+J^2 \ket{j,m} &amp;= \hbar^2 j(j+1) \ket{j,m} \\
+J_z \ket{j,m} &amp;= \hbar m \ket{j,m} \\
+J_{\pm} \ket{j,m} &amp;= \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
+\end{align}\]
 
-<p>我们现在考虑量子力学是适用于一切迟钝的理论.
-那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
-为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
+<p>其中\(j = 0, 1/2, 1, 3/2, \ldots\), \(m = -j, -j+1, \ldots, j-1, j\).
+我们可以看到, \(j\)决定了角动量的大小, \(m\)决定了角动量在\(z\)方向的分量.
+\(J_+\)和\(J_-\)分别是升降算符, 它们可以改变\(m\)的值.</p>
 
-<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
-
-\[\begin{equation}
-\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
-\end{equation}\]
-
-<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
-
-\[\begin{equation}
-\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
-\end{equation}\]
-
-<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
-
-\[\begin{equation}
-\ket{s_i} \leftrightarrow \ket{a_i}
-\end{equation}\]
-
-<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
-所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
-
-<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
-
-\[\begin{equation}
-\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
-\end{equation}\]
-
-<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
-
-\[\begin{equation}
-\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
-\end{equation}\]
-
-<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
-
-\[\begin{equation}
-[Q,P] = \mathrm{i}\hbar \quad
-\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
-\end{equation}\]
-
-<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
-
-\[\begin{equation}
-H_{int} = g(t) \mathcal{O}_S \otimes P_A
-\end{equation}\]
-
-<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
-
-\[\begin{equation}
-\int_0^\tau g(t) \, \mathrm{d}t = \kappa
-\end{equation}\]
-
-<p>从而我们可以写出时间演化算符:</p>
-
-\[\begin{equation}
-U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
-\end{equation}\]
-
-<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
-
-\[\begin{equation}
-U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
-\end{equation}\]
-
-<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
-
-<p>我们定义:</p>
-
-\[\begin{equation}
-\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
-\end{equation}\]
-
-<p>系统的状态现在是:</p>
-
-\[\begin{equation}
-\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
-\end{equation}\]
-
-<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
-但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
-这就是早期von Neumann测量理论:</p>
-
-<ol>
-  <li>测量装置本身就是一个量子系统.</li>
-  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
-  <li>测量结果是装置的指针态.</li>
-</ol>
-
-<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
-我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
-
-<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
-测量装置也是双能级态, 耦合Hamiltonian是:</p>
-
-\[\begin{equation}
-H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
-\end{equation}\]
-
-<p>假设系统的初始状态为:</p>
-
-\[\begin{equation}
-c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>我们做一点点代数变形:</p>
-
-\[\begin{equation}
-\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>我们的时间演化算符是:</p>
-
-\[\begin{equation}
-U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
-\end{equation}\]
-
-<p>注意到:</p>
-
-\[\begin{equation}
-U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>以及:</p>
-
-\[\begin{equation}
-U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
-\end{equation}\]
-
-<p>从而我们可以计算出:</p>
-
-\[\begin{equation}
-\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
-
-\[\begin{equation}
-\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>系统和装置的观测量正确地关联在一起了!</p>
+<p>我们从最简单的例子一点一点的看.</p>
 
 <hr />
-<h2 id="退相干">退相干</h2>
+<h2 id="两个自旋12粒子的耦合">两个自旋1/2粒子的耦合</h2>
 
-<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
-但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
-退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
-
-<p>我们之前得到了预测量态:</p>
-
-\[\begin{equation}
-\sum_i c_i \ket{s_i} \otimes \ket{a_i}
-\end{equation}\]
-
-<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
-所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+<p>设有两个自旋1/2的粒子, 它们的角动量算符分别为\(\boldsymbol{S}_1\)和\(\boldsymbol{S}_2\).
+单个自旋1/2粒子的本征态可以表示为\(\ket{\uparrow}\)和\(\ket{\downarrow}\), 分别对应\(m = 1/2\)和\(m = -1/2\).
+因此, 两个自旋1/2粒子的总Hilbert空间是\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 维数为4.
+我们可以选择如下的直积获得的基:</p>
 
 \[\begin{equation}
-\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\ket{\uparrow_1\, \uparrow_2}, \ket{\uparrow_1\, \downarrow_2}, \ket{\downarrow_2\, \uparrow_1}, \ket{\downarrow_2\, \downarrow_2}
 \end{equation}\]
 
-<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+<p>其中\(\ket{\uparrow_1\, \uparrow_2} = \ket{\uparrow_1} \otimes \ket{\uparrow_2}\), 其他类似.
+标号\(1, 2\)表示粒子1和粒子2.
+但这里有个问题: 我们这样构造的基不是总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的本征态, 没什么一眼能看出来的证据.
+在这个基下, 我们可以计算总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的矩阵表示:</p>
 
 \[\begin{equation}
-\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+S_z = S_{1z} + S_{2z} = \frac{\hbar}{2} \mqty[
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -1
+]
 \end{equation}\]
 
-<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
+<p>是对角的, 没啥毛病啊.
+接下来我们可以看看\(S^2 = (\boldsymbol{S}_1 + \boldsymbol{S}_2)^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)这个算符的矩阵表示.
+前两项\(S_1^2\)和\(S_2^2\)都是常数, 它们的矩阵表示分别为\(\frac{3}{4} \hbar^2 \mathbb{I}\).
+关键是第三项\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\).
+我们可以写成\(2 (S_{1x} S_{2x} + S_{1y} S_{2y} + S_{1z} S_{2z})\).
+从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
+
+<p>\(\begin{equation}
+S_{1x} S_{2x} = \frac{\hbar^2}{4} \mqty[
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0
+]
+\end{equation}\)
+\(\begin{equation}
+S_{1y} S_{2y} = \frac{\hbar^2}{4} \mqty[
+0 &amp; 0 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+-1 &amp; 0 &amp; 0 &amp; 0
+]
+\end{equation}\)
+\(\begin{equation}
+S_{1z} S_{2z} = \frac{\hbar^2}{4} \mqty[
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+]
+\end{equation}\)</p>
+
+<p>这样我们就能得到\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)的矩阵表示:</p>
 
 \[\begin{equation}
-\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
+2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \frac{\hbar^2}{2} \mqty[
+-1 &amp; 0 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 2 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; -1
+]
 \end{equation}\]
 
-<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
+<p>因此, 总角动量算符\(S^2\)的矩阵表示为:</p>
 
 \[\begin{equation}
-\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
+S^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \hbar^2 \mqty[
+1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 1
+]
 \end{equation}\]
 
-<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
+<p>哎! 问题发现了, 这个矩阵不是对角的!
+这说明我们选择的基不是\(S^2\)的本征态.
+我们需要找到\(S^2\)的本征值和本征态.
+对角化这个思维矩阵, 我们可以得到它的本征值和本征态.
+计算结果如下:</p>
+
+\[\begin{align}
+\lambda_1 = 0, &amp;\quad \ket{S} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} - \ket{\downarrow_1\, \uparrow_2}) \\
+\lambda_2 = 2 \hbar^2, &amp;\quad \ket{T_+} = \ket{\uparrow_1\, \uparrow_2} \\
+\lambda_3 = 2 \hbar^2, &amp;\quad \ket{T_0} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} + \ket{\downarrow_1\, \uparrow_2}) \\
+\lambda_4 = 2 \hbar^2, &amp;\quad \ket{T_-} = \ket{\downarrow_1\, \downarrow_2}
+\end{align}\]
+
+<p>但是现在还得回过头去看, 这些本征态是不是\(S_z\)的本征态.
+这很简单, 因为这些态是\(S_z\)的本征态的线性组合, 所以我们只需要计算一下:</p>
+
+\[\begin{align}
+S_z \ket{S} &amp;= 0 \\
+S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
+S_z \ket{T_0} &amp;= 0 \\
+S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
+\end{align}\]
+
+<p>这样的话, 我们就得到了\(S^2\)和\(S_z\)的共同本征态.</p>
+
+\[\begin{align}
+S^2 \ket{S} &amp;= 0 \ket{S}, &amp; S_z \ket{S} &amp;= 0 \ket{S} \\
+S^2 \ket{T_+} &amp;= 2 \hbar^2 \ket{T_+}, &amp; S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
+S^2 \ket{T_0} &amp;= 2 \hbar^2 \ket{T_0}, &amp; S_z \ket{T_0} &amp;= 0 \ket{T_0} \\
+S^2 \ket{T_-} &amp;= 2 \hbar^2 \ket{T_-}, &amp; S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
+\end{align}\]
+
+<p>现在我们知道了一点, 张量积空间的维数是4, 但是总角动量的本征值只有两个: \(0\)和\(2 \hbar^2\).
+这说明我们可以把4维空间分成两个子空间, 一个是1维的, 另一个是3维的.
+1维的子空间由\(\ket{S}\)张成, 3维的子空间由\(\ket{T_+}, \ket{T_0}, \ket{T_-}\)张成.
+这两个子空间分别对应总角动量\(s = 0\)和\(s = 1\).
+我们可以把这些态重新命名为\(\ket{s, m}\)的形式:</p>
 
 \[\begin{equation}
-\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
+\ket{0, 0} = \ket{S}, \quad \ket{1, 1} = \ket{T_+}, \quad \ket{1, 0} = \ket{T_0}, \quad \ket{1, -1} = \ket{T_-}
 \end{equation}\]
 
-<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
-
-\[\begin{equation}
-\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
-\end{equation}\]
-
-<p>对环境取偏迹:</p>
-
-\[\begin{equation}
-\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
-\end{equation}\]
-
-<p>退相干解释了为什么我们看不到大尺度量子叠加态.
-但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
-虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
+<p>我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.
+目前来说, 至少我们知道张量积不一定好用, 找到本征态可能更方便沟通, 当然本征态需要花点时间去算.</p>
 
 <hr />
-<h2 id="多世界说法">多世界说法</h2>
+<h2 id="轨道角动量-自旋耦合">轨道角动量-自旋耦合.</h2>
 
-<p>如果我们干脆直接放弃坍缩这个概念呢?
-我们就得到了多世界诠释(Many-World Interpretation, MWI).
-在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
-每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
-MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
-MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
+<blockquote>
+  <p>一个粒子也会遇到这个问题吗?</p>
+</blockquote>
 
-<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
-
-\[\begin{equation}
-\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
-|c_+|^2 + |c_-|^2 = 1
-\end{equation}\]
-
-<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
-那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
+<p>设有一个粒子, 它有轨道角动量\(\boldsymbol{L}\)和自旋角动量\(\boldsymbol{S}\).
+他的轨道角动量算符\(\boldsymbol{L}\)自然是来自于空间坐标的, 是三维空间的.
+自旋角动量\(\boldsymbol{S}\)是内禀的, 自然和空间坐标无关.
+所以我们这个时候, 虽然只有一个粒子, 但是它的Hilbert空间也是张量积的形式\(\mathcal{H} = \mathcal{H}_{\text{orb}} \otimes \mathcal{H}_{\text{spin}}\).
+轨道角动量\(\boldsymbol{L}\)作用在\(\mathcal{H}_{\text{orb}}\)上, 自旋角动量\(\boldsymbol{S}\)作用在\(\mathcal{H}_{\text{spin}}\)上.
+总角动量算符可以定义为:</p>
 
 \[\begin{equation}
-\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
+\boldsymbol{J} = \boldsymbol{L} \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{S}
 \end{equation}\]
 
-<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
+<p>我们现在来看看这个算符的本征值和本征态.
+设轨道角动量\(\boldsymbol{L}\)的量子数为\(l=1\), 否则太难算了.
+那么\(\mathcal{H}_{\text{orb}}\)的维数是\(2l+1=3\), 本征态为\(\ket{l,m_l}\), 其中\(m_l = -1, 0, 1\).
+自旋角动量\(\boldsymbol{S}\)的量子数为\(s=1/2\), 维数为2, 本征态为\(\ket{s,m_s}\), 其中\(m_s = -1/2, 1/2\).
+因此, 总Hilbert空间\(\mathcal{H}\)的维数是\(3 \times 2 = 6\).
+我们可以选择如下的直积基:</p>
+
+\[\begin{align}
+\ket{1,1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{1,0} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,0} \otimes \ket{1/2,-1/2}, \\
+\ket{1,-1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,-1} \otimes \ket{1/2,-1/2}
+\end{align}\]
+
+<p>开始计算总角动量算符\(\boldsymbol{J} = \boldsymbol{L} + \boldsymbol{S}\)的矩阵表示.
+首先计算\(J_z = L_z + S_z\)的矩阵表示:</p>
 
 \[\begin{equation}
-\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
+J_z = L_z + S_z = \hbar \mqty[
+\frac{3}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{3}{2}
+]
 \end{equation}\]
 
-<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
-在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
+<p>这个好算, 毕竟还是对角的.
+接下来计算\(J^2 = (L + S)^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S}\)的矩阵表示.
+前两项\(L^2\)和\(S^2\)都是常数, 它们的矩阵表示分别为\(2 \hbar^2 \mathbb{I}_3\)和\(\frac{3}{4} \hbar^2 \mathbb{I}_2\).
+关键是第三项\(2 \boldsymbol{L} \cdot \boldsymbol{S}\).
+我们可以写成\(2 (L_x S_x + L_y S_y + L_z S_z)\).
+从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
 
-<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
-在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
-这两个分支互不干扰, 同样真实, 但是无法交流.
-随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
-因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
+\[\begin{align}
+L_x S_x &amp;= \frac{\hbar^2}{2} \mqty[
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
+] \\
+L_y S_y &amp;= \frac{\hbar^2}{2} \mqty[
+0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+-\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
+] \\
+L_z S_z &amp;= \frac{\hbar^2}{2} \mqty[
+\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{2}
+]
+\end{align}\]
 
-<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
-既然每种可能都在某个世界实现了, 那么概率到底是什么?
-分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
-
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在考虑一个三维各项同性的谐振子:</p>
+<p>加到一起, 进行化简:</p>
 
 \[\begin{equation}
-H = \frac{p_x^2 + p_y^2 + p_z^2}{2m} + \frac{1}{2} m \omega^2 (x^2 + y^2 + z^2)
+2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1
+]
 \end{equation}\]
 
-<p>这自然而然的可以拆成:</p>
+<p>所以我们的总角动量算符\(J^2\)的矩阵表示为:</p>
 
 \[\begin{equation}
-H = H_x + H_y + H_z
+J^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
+\frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4}
+]
 \end{equation}\]
 
-<p>其中:</p>
+<p>目前看来啊, 这个矩阵也不是对角的.
+我们需要对角化这个矩阵, 找到它的本征值和本征态.
+这对于算力超群的天才来说, 不太难, 但是我们已经注意到一个问题了, 这矩阵随着\(l\)和\(s\)的增大, 维数会迅速增大, 计算量也会迅速增大.
+所以我们需要找点捷径, 不能每次都这么算下去.
+我们先把结果写出来, 然后再讨论.
+对角化这个矩阵, 我们可以得到它的本征值和本征态.
+计算结果如下:</p>
 
-\[\begin{equation}
-H_i = \frac{p_i^2}{2m} + \frac{1}{2} m \omega^2 x_i^2, \quad i = x, y, z
-\end{equation}\]
+\[\begin{align}
+\lambda_1 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 3/2} = \ket{1,1} \otimes \ket{1/2,1/2} \\
+\lambda_2 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 1/2} = \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
+\lambda_3 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -1/2} = \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2} \\
+\lambda_4 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -3/2} = \ket{1,-1} \otimes \ket{1/2,-1/2} \\
+\lambda_5 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, 1/2} = -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
+\lambda_6 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, -1/2} = \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
+\end{align}\]
 
-<p>现在大的Hilbert空间是 \(\mathcal{H} = \mathcal{H}_x \otimes \mathcal{H}_y \otimes \mathcal{H}_z\), 每个 \(\mathcal{H}_i\) 都是一个一维谐振子的Hilbert空间.
-因此我们可以用一维谐振子的本征态来构造三维谐振子的本征态.
-他的基态是:</p>
+<p>哎, 我们现在又发现了, 这个矩阵的本征值只有两个: \(\frac{15}{4} \hbar^2\)和\(\frac{3}{4} \hbar^2\).
+这说明我们可以把6维空间分成两个子空间, 一个是4维的, 另一个是2维的.
+4维的子空间由\(\ket{3/2, 3/2}, \ket{3/2, 1/2}, \ket{3/2, -1/2}, \ket{3/2, -3/2}\)张成, 2维的子空间由\(\ket{1/2, 1/2}, \ket{1/2, -1/2}\)张成.
+这两个子空间分别对应总角动量\(j = 3/2\)和\(j = 1/2\).
+我们可以把这些态重新命名为\(\ket{j, m_j}\)的形式:</p>
 
-\[\begin{equation}
-\ket{0,0,0} = \ket{0}_x \otimes \ket{0}_y \otimes \ket{0}_z
-\end{equation}\]
+\[\begin{align}
+\ket{3/2, 3/2} &amp;= \ket{1,1} \otimes \ket{1/2,1/2}, \\
+\ket{3/2, 1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{3/2, -1/2} &amp;= \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}, \\
+\ket{3/2, -3/2} &amp;= \ket{1,-1} \otimes \ket{1/2,-1/2}, \\
+\ket{1/2, 1/2} &amp;= -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{1/2, -1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
+\end{align}\]
 
-<p>从而最一般的态就是:</p>
-
-\[\begin{equation}
-\ket{n_x, n_y, n_z} = (a_x^\dagger)^{n_x} (a_y^\dagger)^{n_y} (a_z^\dagger)^{n_z} \ket{0,0,0}
-\end{equation}\]
-
-<p>这些态(对于不同的 \(n_x, n_y, n_z\))可以张成整个Hilbert空间.
-他的能量本征值是:</p>
-
-\[\begin{equation}
-E_{n_x, n_y, n_z} = \hbar \omega (n_x + n_y + n_z + \frac{3}{2})
-\end{equation}\]
+<p>仿佛是四个\(j=3/2\)态和两个\(j=1/2\)态?
+我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.</p>
 
 <hr />
-<h2 id="谐振子也有multiplet">谐振子也有Multiplet</h2>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在考虑一个三维各项同性的谐振子:]]></summary></entry><entry><title type="html">QM2 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:</p>
+<h2 id="价带模型">价带模型</h2>
+
+<p>在半导体物理中, 价带模型是一个重要的概念.
+价带的一个重要特性是, 他的顶点态是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
+为什么轨道角动量是\(l=1\)呢?
+这是因为价带顶点态主要由原子的\(p\)轨道组成, \(p\)轨道对应的轨道角动量量子数就是\(l=1\).
+自旋\(s=1/2\)是因为电子的自旋就是\(1/2\).
+因此, 价带顶点态的总角动量是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
+我们已经计算过, 这种耦合会产生两个总角动量态: \(j=3/2\)和\(j=1/2\).
+价带顶点态的能级结构就是由这两个总角动量态决定的.</p>
+
+<p>价带顶点态的能级结构衍生了一类巨大的基础问题, 就是自旋轨道耦合.
+自旋轨道耦合是指电子的自旋和轨道运动之间的相互作用, 当然不仅仅是价带, 很多体系都存在这种相互作用.
+这种相互作用会导致能级的分裂, 形成不同的能级.
+对于价带顶点态, 自旋轨道耦合会导致\(j=3/2\)态和\(j=1/2\)态的能级分裂.
+通常情况下, \(j=3/2\)态的能级会高于\(j=1/2\)态的能级.
+这种能级分裂对于理解半导体的光学和电子性质是非常重要的.</p>
+
+<p>因为我们知道, \(j=3/2\)态有4个简并态, \(j=1/2\)态有2个简并态.
+所以价带顶点的四个态通常被称为重空穴态和轻空穴态, 分别对应\(j=3/2\)的不同\(m_j\)值.
+重空穴态对应\(m_j = \pm 3/2\), 轻空穴态对应\(m_j = \pm 1/2\).
+而\(j=1/2\)态则对应于分裂的自旋轨道态.
+这种能级结构对于理解半导体的光学吸收和发射过程是非常重要的.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合. 设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢? 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?]]></summary></entry><entry><title type="html">QM2 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:</p>
 
 \[\begin{equation}
 L^2 \ket{l,m} = \hbar^2 l(l+1) \ket{l,m}, \quad L_z \ket{l,m} = \hbar m \ket{l,m}
@@ -2087,522 +2632,4 @@ A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
 \sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
 \tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
-\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry><entry><title type="html">QM2 密度矩阵2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/" rel="alternate" type="text/html" title="QM2 密度矩阵2" /><published>2025-10-02T00:00:00+10:00</published><updated>2025-10-02T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix2/"><![CDATA[<h2 id="关于本征态的测量">关于本征态的测量</h2>
-
-<p>我们考虑一个纯态 $\ket{\psi}$, 我们自然是可以用一组本征态( $\ket{i}$ )来测量他, 从而得到:</p>
-
-\[\begin{equation}
-P(\text{态在}i\text{上}) = |\braket{i|\psi}|^2
-\end{equation}\]
-
-<p>测量之后, 系统会坍缩到 $\ket{i}$ 上.
-我们现在可以把这一套语言完全的搬到密度矩阵上.
-此时, 我们发现系统在 $\ket{i}$ 上的概率会有一个经典的统计权重:</p>
-
-\[\begin{equation}
-P(\text{态在}i\text{上}) = \sum_{\alpha=1}^N p_\alpha |\braket{i|\psi_\alpha}|^2 = \mel{i}{\rho}{i}
-\end{equation}\]
-
-<p>这说明, 概率分布由密度矩阵本身给出, 而不是某个具体的系综表示.
-我们这么说, 是因为不同的系综分解可能会给出同样的密度矩阵.</p>
-
-<p>一旦我们完成了测量, 系统会坍缩到 $\ket{i}$ 上.
-此时, 系统的密度矩阵会变成:</p>
-
-\[\begin{equation}
-\rho \to \frac{\ket{i}\bra{i} \rho \ket{i}\bra{i}}{\mel{i}{\rho}{i}} = \ketbra{i}{i}
-\end{equation}\]
-
-<p>也就是说, 测量之后, 系统会变成一个纯态, 这个纯态就是测量的本征态.
-此时此刻我们可以定义projective measurement的测量算符, 是因为量子测量不仅给你一个随机结果, 还会改变系统的状态!</p>
-
-\[\begin{equation}
-M_i = \ketbra{i}{i}
-\end{equation}\]
-
-<ol>
-  <li>自伴随, \(M_i^\dagger = M_i\)</li>
-  <li>幂等, \(M_i^2 = M_i\)</li>
-  <li>完备, \(\sum_i M_i = I\)</li>
-</ol>
-
-<p>这正是我们在QM1中学到的投影测量.
-集合所有的测量算符, 我们发现:</p>
-
-<ol>
-  <li>两两正交, \(M_i M_j = \delta_{ij} M_i\)</li>
-  <li>覆盖所有可能的测量结果, \(\sum_i M_i = I\)</li>
-</ol>
-
-<p>他们组成一套完备的正交归一化投影测量 (complete set of orthogonal projectors).</p>
-
-<blockquote>
-  <p>想象一个袋子里有黑球和白球. 比例不一定是 50-50.
-你没摸之前, 这是个混合分布, 概率性描述.
-你伸手摸出一个球, 并且看见它是白球, 现在你对结果有了确定知识, 所以状态是白球, 纯态.
-但如果你摸完又把结果藏起来不给任何人看, 外部观察者只能说嗯, 它还是按一定概率是黑球/白球, 这就回到混合分布.</p>
-</blockquote>
-
-<p>举个例子, 我们考虑一个混合态:</p>
-
-\[\begin{equation}
-\rho = \frac{1}{2} \ketbra{0}{0} + \frac{1}{2} \ketbra{+}{+}
-\end{equation}\]
-
-\[\begin{equation}
-\ket{+} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
-\end{equation}\]
-
-<p>也就是说, 系统有一半概率在 $\ket{0}$ 上, 另一半概率在 $\ket{+}$ 上.
-我们把 $\rho$ 写成矩阵形式:</p>
-
-\[\begin{equation}
-\rho = \frac{1}{2} \mqty[ 1 &amp; 0 \\ 0 &amp; 0 ] + \frac{1}{2} \mqty[ 1/2 &amp; 1/2 \\ 1/2 &amp; 1/2 ] = \mqty[ 3/4 &amp; 1/4 \\ 1/4 &amp; 1/4 ]  
-\end{equation}\]
-
-<p>我们在 ${ \ket{0}, \ket{1} }$ 基底上测量, 也就是测量算符:</p>
-
-\[\begin{equation}
-M_0 = \ketbra{0}{0}, \quad M_1 = \ketbra{1}{1}
-\end{equation}\]
-
-\[\begin{equation}
-P(0) = \mel{0}{\rho}{0} = 3/4, \quad P(1) = \mel{1}{\rho}{1} = 1/4
-\end{equation}\]
-
-<p>如果测到了 \(0\), 系统坍缩到 \(\ket{0}\) 上, 密度矩阵变成 \(\rho \to \ketbra{0}{0}\).
-如果测到了 \(1\), 系统坍缩到 \(\ket{1}\) 上, 密度矩阵变成 \(\rho \to \ketbra{1}{1}\).
-此时我们要注意到:</p>
-
-<blockquote>
-  <p>看了结果 \(\Leftrightarrow\) 系统变成纯态.</p>
-</blockquote>
-
-<p>如果我们没看结果呢?
-我们只能说系统有 $3/4$ 概率在 $\ket{0}$ 上, $1/4$ 概率在 $\ket{1}$ 上.
-也就是说, 系统的密度矩阵变成:</p>
-
-\[\begin{equation}
-\rho \to \frac{3}{4} \ketbra{0}{0} + \frac{1}{4} \ketbra{1}{1} = \mqty[ 3/4 &amp; 0 \\ 0 &amp; 1/4 ]
-\end{equation}\]
-
-<p>也就是说虽然我们测量了, 换句话说, 系统和我们的测量装置发生了相互作用, 但是我们只关心了系统, 没去看那个测量装置的结果.
-我们如何系统性的取描述这件事呢?
-我们一步一步的来.</p>
-
-<hr />
-<h2 id="密度矩阵的演化">密度矩阵的演化</h2>
-
-<p>我们从Schrödinger方程出发, 讨论密度矩阵的演化.
-Schrödinger方程告诉我们, 如果系统在时间 $t=0$ 时刻处于纯态 $\ket{\psi(0)}$, 那么在时间 $t$ 时刻, 系统会演化到:</p>
-
-\[\begin{equation}
-\ket{\psi(t)} = U(t) \ket{\psi(0)}, \quad U(t) = \mathrm{e}^{-\mathrm{i}Ht/\hbar}
-\end{equation}\]
-
-<p>等价的说就是Schrödinger方程:</p>
-
-\[\begin{equation}
-\pdv{}{t} \ket{\psi(t)} = -\frac{\mathrm{i}}{\hbar} H \ket{\psi(t)}
-\end{equation}\]
-
-<p>从而我们可以计算:</p>
-
-\[\begin{equation}
-\pdv{}{t} \ketbra{\psi}{\psi} = -\frac{\mathrm{i}}{\hbar} H \ketbra{\psi}{\psi} + \ketbra{\psi}{\psi} \frac{\mathrm{i}}{\hbar} H = -\frac{\mathrm{i}}{\hbar} [H, \ketbra{\psi}{\psi}]
-\end{equation}\]
-
-<p>立刻升级到密度矩阵版本:</p>
-
-\[\begin{equation}
-\pdv{\rho}{t} = -\frac{\mathrm{i}}{\hbar} [H, \rho]
-\end{equation}\]
-
-<p>这就是密度矩阵的Liouville-von Neumann方程.
-我们立刻可以注意到一个小细节: 左侧是Hermitian的, 右侧\([H, \rho]\)是anti-Hermitian的, 乘以\(-\mathrm{i}\)之后是Hermitian的, 所以方程是自洽的.
-现在看看密度矩阵的时间演化:</p>
-
-\[\begin{equation}
-\rho(t) = U(t) \rho(0) U^\dagger(t)
-\end{equation}\]
-
-<p>我们也可以检查, unitary演化不会改变密度矩阵的纯度:</p>
-
-\[\begin{align}
-\dv{}{t} \tr(\rho^2) &amp;= \tr\left( \pdv{\rho}{t} \rho + \rho \pdv{\rho}{t} \right) \\
-&amp;= \frac{2}{\mathrm{i}\,\hbar} \tr( \rho [H, \rho] ) \\
-&amp;= \frac{2}{\mathrm{i}\,\hbar} \left( \tr(\rho H \rho) - \tr(H \rho^2) \right) \\
-&amp;= 0
-\end{align}\]
-
-<p>光有演化还不够, 我们还得考虑子系统的问题: 之前的讨论中, 研究的系统和仪器很明显是一个整体, 属于一个大系统的一部分.</p>
-
-<hr />
-<h2 id="子系统的密度矩阵">子系统的密度矩阵</h2>
-
-<p>我们考虑一个大系统, 他的Hilbert空间是 \(\mathcal{H} = \mathcal{H}_A \otimes \mathcal{H}_B\).
-我们之前在Alice和Bob的论证中已经见过这种情况, 我们当时说, 必须得考虑密度矩阵才能完全的描述整体.
-现在规定: 系统 \(A\) 的维度是 \(d_A\), 系统 \(B\) 的维度是 \(d_B\).
-他们的正交归一基如下:</p>
-
-\[\begin{align}
-\dim \mathcal{H}_A &amp;= d_A, \quad \{ e_1^A, e_2^A, \cdots, e_{d_A}^A \} \\
-\dim \mathcal{H}_B &amp;= d_B, \quad \{ e_1^B, e_2^B, \cdots, e_{d_B}^B \}
-\end{align}\]
-
-<p>整体的密度矩阵必然是 \(d_A d_B \times d_A d_B\) 的矩阵, \(\rho_{AB}\).
-我们现在问个问题: 如果我们只关心 \(A\) 系统, 那么 \(A\) 系统的密度矩阵 \(\rho_A\) 是什么?
-这就是约化密度矩阵 (reduced density matrix) 的概念:</p>
-
-\[\begin{equation}
-\rho_A = \tr_B(\rho_{AB}) = \sum_{k=1}^{d_B} \mel{e_k^B}{\rho_{AB}}{e_k^B}
-\end{equation}\]
-
-<p>也就是说, 我们把 \(B\) 系统的自由度给tr掉, 只留下 \(A\) 系统的密度矩阵.
-我们可以验证, \(\rho_A\) 仍然是一个合法的密度矩阵:</p>
-
-\[\begin{equation}
-\tr_A(\rho_A) = \tr_A(\rho_A) = \tr_A(\tr_B(\rho_{AB})) = \tr(\rho_{AB}) = 1
-\end{equation}\]
-
-<p>他是半正定的, Hermitian的.
-但最一锤定音还是如下的检查:</p>
-
-\[\begin{equation}
-\tr_A(\rho_A \mathcal{O}) = \tr(\rho_{AB} (\mathcal{O} \otimes I_B))
-\end{equation}\]
-
-<p>考虑到:</p>
-
-\[\begin{equation}
-\rho_{AB} = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{e_i^A e_j^A}{e_k^B e_l^B}
-\end{equation}\]
-
-<p>从而我们得到:</p>
-
-\[\begin{equation}
-\rho_A = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{e_i^A}{e_j^A} \braket{e_l^B}{e_k^B} = \sum_{i,j,k} \rho_{ij,kk} \ketbra{e_i^A}{e_j^A}
-\end{equation}\]
-
-<p>我们可以验证:</p>
-
-\[\begin{align}
-\tr_A(\rho_A \mathcal{O}) = &amp; \sum_{i,j,k} \rho_{ij,kk} \mel{e_j^A}{\mathcal{O}}{e_i^A} \\
-=&amp; \sum_{i,j,k,l,m} \rho_{ij,kl} \mel{e_j^A e_l^B}{\mathcal{O} \otimes I_B}{e_i^A e_k^B} \\
-=&amp; \tr(\rho_{AB} (\mathcal{O} \otimes I_B))
-\end{align}\]
-
-<p>自始至终我们都没用到任何关于\(\rho_B\)的信息, 这说明 \(\rho_A\) 的定义是完备的, 只要知道 \(\rho_{AB}\) 就能算出来.
-换句话说, 想找到描述 \(A\) 系统的密度矩阵是行的, 但是一个态描述 \(A\) 系统的态是不行的.</p>
-
-<p>还是看原来的例子, Alice和Bob共享一个纠缠态:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \frac{1}{\sqrt{2}} (\ket{+_A -_B} - \ket{-_A +_B})
-\end{equation}\]
-
-<p>我们立刻可以写出大系统的密度矩阵:</p>
-
-\[\begin{align}
-\rho_{AB} &amp;= \ketbra{\psi_{AB}}{\psi_{AB}} \\
-&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \otimes \ketbra{-_B}{-_B} \\
-&amp; - \frac{1}{2} \ketbra{+_A}{-_A} \otimes \ketbra{-_B}{+_B} \\
-&amp; - \frac{1}{2} \ketbra{-_A}{+_A} \otimes \ketbra{+_B}{-_B} \\
-&amp; + \frac{1}{2} \ketbra{-_A}{-_A} \otimes \ketbra{+_B}{+_B}
-\end{align}\]
-
-<p>我们现在计算 \(A\) 系统的约化密度矩阵:</p>
-
-\[\begin{align}
-\rho_A &amp;= \tr_B(\rho_{AB}) \\
-&amp;= \frac{1}{2} \ketbra{+_A}{+_A} \tr(\ketbra{-_B}{-_B}) \\
-&amp; - \frac{1}{2} \ketbra{+_A}{-_A} \tr(\ketbra{-_B}{+_B}) \\
-&amp; - \frac{1}{2} \ketbra{-_A}{+_A} \tr(\ketbra{+_B}{-_B}) \\
-&amp; + \frac{1}{2} \ketbra{-_A}{-_A} \tr(\ketbra{+_B}{+_B}) \\
-&amp;= \frac{1}{2} \ketbra{+_A}{+_A} + \frac{1}{2} \ketbra{-_A}{-_A}
-\end{align}\]
-
-<p>我们也可以计算 \(B\) 系统的约化密度矩阵:</p>
-
-<p>\(\begin{align}
-\rho_B &amp;= \tr_A(\rho_{AB}) \\
-&amp;= \frac{1}{2} \ketbra{-_B}{-_B} \tr(\ketbra{+_A}{+_A}) \\
-&amp; - \frac{1}{2} \ketbra{-_B}{+_B} \tr(\ketbra{+_A}{-_A}) \\
-&amp; - \frac{1}{2} \ketbra{+_B}{-_B} \tr(\ketbra{-_A}{+_A}) \\
-&amp; + \frac{1}{2} \ketbra{+_B}{+_B} \tr(\ketbra{-_A}{-_A}) \\
-&amp;= \frac{1}{2} \ketbra{-_B}{-_B} + \frac{1}{2} \ketbra{+_B}{+_B}
-\end{align}\)
-也就是说, Alice和Bob各自的系统都是一个完全混合态.
-这就是纠缠态的魔力: 整体是纯态, 局部是混合态.
-就是说原来的综合起来的纯态, 是非常纠缠的.</p>
-
-<hr />
-<h2 id="schmidt分解">Schmidt分解</h2>
-
-<p>我们发现, 我们刚才把一个纠缠态的整体密度矩阵约化到局部, 我们可以拓宽一下这个过程.</p>
-
-<blockquote>
-  <p>如果我们有一个复合系统, 由A,B两个子系统组成, 那么任何一个纯态, 我们总能找到一对正交归一基, 使得这个纯态可以写成如下形式:
-\(\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{r} \lambda_i \ket{u_i^A} \otimes \ket{v_i^B}
-\end{equation}\)
-其中 \(\{ \ket{u_i^A} \}\) 和 \(\{ \ket{v_i^B} \}\) 分别是 \(\mathcal{H}_A\) 和 \(\mathcal{H}_B\) 的正交归一基, \(\lambda_i &gt; 0\), \(r \leq \min(d_A, d_B)\).
-这个分解叫做Schmidt分解, \(\lambda_i\) 叫做Schmidt系数, \(r\) 叫做Schmidt秩.
-如果只有一个非零的Schmidt系数, 那么这个态是可分的, 否则是纠缠的.</p>
-</blockquote>
-
-<p>我们还是从最基础的出发:</p>
-
-\[\begin{equation}
-\rho_{AB} = \ketbra{\psi_{AB}}{\psi_{AB}}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\rho_A = \tr_B(\rho_{AB})
-\end{equation}\]
-
-<p>我们还是在 \(\mathcal{H}_A\) 上找一组正交归一基 \(\{ \ket{u_i^A} \}\), \(i=1,2,\cdots,d_A\), 把 \(\rho_A\) 对角化, 从而我们得到eigen-system:</p>
-
-\[\begin{equation}
-\{ p_k, \ket{u_k^A} \}, \quad k=1,2,\cdots,d_A
-\end{equation}\]
-
-<p>也就是说:</p>
-
-\[\begin{equation}
-\rho_A = \sum_{k=1}^{d_A} p_k \ketbra{u_k^A}{u_k^A}, \quad p_k \geq 0, \quad \sum_{k=1}^{d_A} p_k = 1
-\end{equation}\]
-
-<p>如果\(\rho_A\)是纯态, 这个分解可能一项就结束了, 所以我们会发现能求和的项数一般小于\(d_A\).
-我们把\(p_k\)非零的项数叫做\(r\), 也就是Schmidt秩.
-我们于是重新排序一下, 让没有投影在本征态上的部分放在后面:</p>
-
-\[\begin{equation}
-\rho_A = \sum_{k=1}^{r} p_k \ketbra{u_k^A}{u_k^A}, r \leq d_A
-\end{equation}\]
-
-<p>其中, \(p_{k&gt;r} = 0\).
-我们回头看原来大系统的纯态, \(\ket{u_i^A}\) 是 \(\mathcal{H}_A\) 的一组完备基, 所以我们可以把 \(\ket{\psi_{AB}}\) 展开成:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B}
-\end{equation}\]
-
-<p>注意啊, 这时候有趣的来了:</p>
-
-<blockquote>
-  <p>\(\ket{\phi_i^B}\) 不一定是归一化的, 也不一定是正交的, 我们不太清楚他到底是个啥.
-但是, 对于每一个\(\ket{u_i^A}\), \(\ket{\phi_i^B}\)是唯一确定的.
-由于\(\ket{u_i^A}\)只有\(d_A\)个, 所以我们只需要考虑\(\ket{\phi_i^B}\), \(i=1,2,\cdots,d_A\)就够了.
-这就是Schmidt分解的关键点, 此时我们展开式只有\(d_A\)项, 而不是\(d_A d_B\)项.</p>
-</blockquote>
-
-<p>补充一下, 如果我们暴力张量积分解的话:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \sum_{j=1}^{d_B} c_{ij} \ket{e_i^A} \otimes \ket{e_j^B}
-\end{equation}\]
-
-<p>很明显, 这个展开式有 \(d_A d_B\) 项, 远远大于 \(d_A\).
-现在我们再写出来密度矩阵:</p>
-
-\[\begin{equation}
-\rho_{AB} = \sum_{i,j=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B} \bra{u_j^A} \otimes \bra{\phi_j^B}
-\end{equation}\]
-
-<p>对\(B\) 系统做trace:</p>
-
-\[\begin{equation}
-\rho_A = \tr_B(\rho_{AB}) = \sum_{i,j=1}^{d_A} \ketbra{u_i^A}{u_j^A} \braket{\phi_j^B}{\phi_i^B}
-\end{equation}\]
-
-<p>我们怎么把他联系到之前对角化基写下的那个\(\rho_A\)上呢?
-我们现在要复习一个rank的概念:</p>
-<blockquote>
-  <p>对于一个 \(m \times n\) 的矩阵 \(M\), 一个rank就是他的列向量中线性无关的个数.
-也就是说你的矩阵能照顾到的向量的一种描述.
-物理背景下就是, 目前的系统到底混合了多少个纯态.</p>
-</blockquote>
-
-<p>我们注意到\(A\)的系数部分, 构成了一个矩阵, 叫做Gram矩阵:</p>
-
-\[\begin{equation}
-G_{ij} = \braket{\phi_j^B}{\phi_i^B}
-\end{equation}\]
-
-<p>就是内积的各种组合的排列, 这个维度是\(d_A \times d_A\)的矩阵.
-如果我们计算\(\rho_A\)的矩阵元:</p>
-
-\[\begin{equation}
-\mel{u_k^A}{\rho_A}{u_l^A} = \sum_{i,j=1}^{d_A} \braket{u_k^A}{u_i^A} \braket{\phi_j^B}{\phi_i^B} \braket{u_j^A}{u_l^A} = G_{kl}
-\end{equation}\]
-
-<p>所以这就是说, \(G\)和\(\rho_A\)是相似矩阵, 他们有一样的rank.
-所以\(\ket{\phi_i^B}\)的线性无关个数, 也就是\(G\)的rank, 也就是\(\rho_A\)的rank, 也就是Schmidt秩\(r\).
-这个rank必须满足如下的不等式:</p>
-
-\[\begin{equation}
-r \leq \min(d_A, d_B)
-\end{equation}\]
-
-<p>小于等于\(d_A\)是显然的, 小于等于\(d_B\)是因为, \(\ket{\phi_i^B}\)的线性无关个数不会超过\(d_B\).</p>
-
-<p>于是我们可以缩小求和范围, 因为\(\rho_A\)只有\(r\)个非零的本征值:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{r} \ket{u_i^A} \otimes \ket{\phi_i^B}
-\end{equation}\]
-
-<p>从而我们的\(\rho_{AB}\)变成:</p>
-
-\[\begin{equation}
-\rho_{AB} = \sum_{i,j=1}^{r} \ket{u_i^A} \otimes \ket{\phi_i^B} \bra{u_j^A} \otimes \bra{\phi_j^B}
-\end{equation}\]
-
-<p>再做约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_A = \tr_B(\rho_{AB}) = \sum_{i,j=1}^{r} \ketbra{u_i^A}{u_j^A} \braket{\phi_j^B}{\phi_i^B}
-\end{equation}\]
-
-<p>再和\(\rho_A\)的本征分解对比, 我们发现:</p>
-
-\[\begin{equation}
-\braket{\phi_j^B}{\phi_i^B} = p_i \delta_{ij}
-\end{equation}\]
-
-<p>换句话说, \(\{ \ket{\phi_i^B} \}\)是正交的, 并且\(\braket{\phi_i^B}{\phi_i^B} = p_i\).
-从而, 我们可以定义归一化的\(\ket{v_i^B}\):</p>
-
-\[\begin{equation}
-\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \ket{\phi_i^B}
-\end{equation}\]
-
-<p>从而我们证明了:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{r} \sqrt{p_i} \ket{u_i^A} \otimes \ket{v_i^B}
-\end{equation}\]
-
-<p>其中 \(\{ \ket{u_i^A} \}\) 和 \(\{ \ket{v_i^B} \}\) 分别是 \(\mathcal{H}_A\) 和 \(\mathcal{H}_B\) 的正交归一基, \(p_i &gt; 0\), \(r \leq \min(d_A, d_B)\).
-这就是Schmidt分解.
-但我们要注意, \(\{ \ket{v_i^B} \}\) 和 \(\{ \ket{u_i^A} \}\) 没什么直接关系, 他们甚至来自于不同空间.
-从而我们总能写为:</p>
-
-\[\begin{equation}
-\rho_A = \sum_{i=1}^{r} p_i \ketbra{u_i^A}{u_i^A}, \quad \rho_B = \sum_{i=1}^{r} p_i \ketbra{v_i^B}{v_i^B}
-\end{equation}\]
-
-<p>总结一下Schimit分解的步骤:</p>
-
-<ol>
-  <li>给出一个复合系统的纯态 \(\ket{\psi_{AB}}\).</li>
-  <li>写成
-\(\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{d_A} \ket{u_i^A} \otimes \ket{\phi_i^B}
-\end{equation}\)</li>
-  <li>对\(B\)系统做约化密度矩阵\(\rho_A = \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}})\).</li>
-  <li>对\(\rho_A\)做本征分解, 得到\(\{ p_i, \ket{u_i^A} \}\):
-\(\begin{equation}
-\rho_A = \sum_{i=1}^{r} p_i \ketbra{u_i^A}{u_i^A}
-\end{equation}\)</li>
-  <li>定义\(\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}\), 得到Schmidt分解:
-\(\begin{equation}
-\ket{\psi_{AB}} = \sum_{i=1}^{r} \sqrt{p_i} \ket{u_i^A} \otimes \ket{v_i^B}
-\end{equation}\)</li>
-</ol>
-
-<blockquote>
-  <p>如果此时计算纠缠熵:
-\(\begin{equation}
-S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
-\end{equation}\)
-这就是\(A\)系统的纠缠熵, 也是\(B\)系统的纠缠熵.
-纠缠熵是衡量两个子系统纠缠程度的一个重要指标.
-如果\(r=1\), 也就是只有一个非零的Schmidt系数, 那么\(S(\rho_A) = 0\), 说明\(A\)和\(B\)没有纠缠.</p>
-</blockquote>
-
-<p>我们考虑一个例子:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \frac{1}{\sqrt{2}} \ket{+_A +_B} + \frac{1}{2} \ket{-_A +_B} + \frac{1}{2} \ket{-_A -_B}
-\end{equation}\]
-
-<p>首先检查一下归一化:</p>
-
-\[\begin{equation}
-\braket{\psi_{AB}}{\psi_{AB}} = \frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1
-\end{equation}\]
-
-<p>接着, 我们按照如下的基底来检查系数矩阵:</p>
-
-\[\begin{equation}
-\ket{+_A +_B}, \ket{+_A -_B}, \ket{-_A +_B}, \ket{-_A -_B}
-\end{equation}\]
-
-<p>我们发现系数矩阵是:</p>
-
-\[\begin{equation}
-C = \mqty[ 1/\sqrt{2} &amp; 0 \\ 1/2 &amp; 1/2 ]
-\end{equation}\]
-
-<p>实际上这就是\(\ket{\psi_{AB}} = \sum_{i,j} C_{ij} \ket{i_A j_B}\)的系数矩阵.</p>
-
-<p>接下来我们计算\(\rho_A\):</p>
-
-\[\begin{align}
-\rho_A &amp;= \tr_B(\ketbra{\psi_{AB}}{\psi_{AB}}) \\
-&amp;= \mqty[ 1/2 &amp; 1/(2\sqrt{2}) \\ 1/(2\sqrt{2}) &amp; 1/2 ]
-\end{align}\]
-
-<p>我们对\(\rho_A\)做本征分解, 计算特征值:</p>
-
-\[\begin{equation}
-p_1 = \frac{2+\sqrt{2}}{4}, \quad p_2 = \frac{2-\sqrt{2}}{4}
-\end{equation}\]
-
-<p>本征值为:</p>
-
-\[\begin{equation}
-\ket{u_1^A} = (\ket{+}+\ket{-})/\sqrt{2}, \quad \ket{u_2^A} = (\ket{+}-\ket{-})/\sqrt{2}
-\end{equation}\]
-
-<p>我们现在构造\(B\)系统的向量:</p>
-
-\[\begin{equation}
-\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}
-\end{equation}\]
-
-<p>考虑\(i=1\):</p>
-
-\[\begin{align}
-\ket{v_1^B} &amp;= \frac{1}{\sqrt{p_1}} \braket{u_1^A}{\psi_{AB}} \\
-&amp;= \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
-\end{align}\]
-
-<p>考虑\(i=2\):</p>
-
-\[\begin{equation}
-\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
-\end{equation}\]
-
-<p>从而我们得到了Schmidt分解:</p>
-
-\[\begin{equation}
-\ket{\psi_{AB}} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{u_1^A} \otimes \ket{v_1^B} + \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{u_2^A} \otimes \ket{v_2^B}
-\end{equation}\]
-
-<p>其中:</p>
-
-\[\begin{equation}
-\ket{u_1^A} = \frac{1}{\sqrt{2}} (\ket{+}+\ket{-}), \quad \ket{u_2^A} = \frac{1}{\sqrt{2}} (\ket{+}-\ket{-})
-\end{equation}\]
-
-<p>\(\begin{equation}
-\ket{v_1^B} = \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{+_B} - \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{-_B}
-\end{equation}\)
-\(\begin{equation}
-\ket{v_2^B} = \sqrt{\frac{1}{2} - \frac{1}{2\sqrt{2}}} \ket{+_B} + \sqrt{\frac{1}{2} + \frac{1}{2\sqrt{2}}} \ket{-_B}
-\end{equation}\)</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[关于本征态的测量]]></summary></entry></feed>
+\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry></feed>

@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "QM2 角动量与中心势2",
-        "excerpt":"我们现在考虑一个三维各项同性的谐振子: \\[\\begin{equation} H = \\frac{p_x^2 + p_y^2 + p_z^2}{2m} + \\frac{1}{2} m \\omega^2 (x^2 + y^2 + z^2) \\end{equation}\\] 这自然而然的可以拆成: \\[\\begin{equation} H = H_x + H_y + H_z \\end{equation}\\] 其中: \\[\\begin{equation} H_i = \\frac{p_i^2}{2m} + \\frac{1}{2} m \\omega^2 x_i^2, \\quad i = x, y, z \\end{equation}\\] 现在大的Hilbert空间是 \\(\\mathcal{H} = \\mathcal{H}_x...","categories": ["QM2"],
+        "excerpt":"我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合. 设有两个粒子, 其角动量算符分别为\\(\\boldsymbol{J}_1, \\boldsymbol{J}_2\\), 那么我们怎么怎么定义总角动量算符呢? 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢? 不管是什么耦合, 角动量算符都必须满足如下的对易关系: \\(\\begin{equation} [J_i, J_j] = i \\hbar \\epsilon_{ijk} J_k \\end{equation}\\) 总角动量也不能违反这个对易关系. 如果我们按照之前扩张算符的做法, 考虑Hilbert空间\\(\\mathcal{H} = \\mathcal{H}_1 \\otimes \\mathcal{H}_2\\), 那么我们可以定义: \\(\\begin{equation} \\boldsymbol{J} = \\boldsymbol{J}_1 \\otimes \\mathbb{I} + \\mathbb{I} \\otimes \\boldsymbol{J}_2 \\end{equation}\\) 其中\\(\\mathbb{I}\\)是单位算符. 这个定义是合理的, 因为\\(\\boldsymbol{J}_1\\)和\\(\\boldsymbol{J}_2\\)作用在不同的Hilbert空间上, 它们之间对易. 并且这个定义也满足角动量的对易关系. 我们可以验证: \\[\\begin{align} [J_i, J_j] &amp;= [J_{1i} \\otimes \\mathbb{I}...","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-AngularMomentum2/",
         "teaser": null
@@ -135,5 +135,11 @@ var store = [{
         "excerpt":"在过往的学习中, 我们不加以怀疑的接受了如下概念: 每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示. 测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值. 测量力学量的时候吗量子态会瞬间坍缩到本征态上. 但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的. 这些问题仍然是开放性的, 没有一个准确的回答. 在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上. 这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut. 但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的. 我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似. 在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录. 一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来. 也就是说, 坍缩是在探测器读出结果时候发生的. 在探测之前, 系统还是处于叠加态, 满足Unitary evolution. 预测量问题 我们现在考虑量子力学是适用于一切迟钝的理论. 那么测量过程就是一个量子系统\\(S\\)与测量仪器\\(A\\)的相互作用. 为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\\(\\ket{a_i}\\), 这些指针态是正交归一的....","categories": ["QM2"],
         "tags": [],
         "url": "/PersonalPageCN/qm2/QM2-DensityMatrix4/",
+        "teaser": null
+      },{
+        "title": "QM2 角动量与中心势3",
+        "excerpt":"现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识. 线性空间与张量积 我们专注于一个有限维的线性空间\\(V_1\\), 其维数为\\(n_1\\). 他有一个基底\\(\\{\\ket{a_i}\\}, i=1,2,\\cdots,n_1\\). 我们可以把\\(V_1\\)中的任意向量\\(\\ket{v}\\)表示为 \\[\\begin{equation} \\ket{v} = \\sum_{i=1}^{n_1} v_i \\ket{a_i} \\end{equation}\\] 现在我们再考虑另一个有限维线性空间\\(V_2\\), 其维数为\\(n_2\\). 他有一个基底\\(\\{\\ket{b_j}\\}, j=1,2,\\cdots,n_2\\). 我们可以把\\(V_2\\)中的任意向量\\(\\ket{w}\\)表示为 \\[\\begin{equation} \\ket{w} = \\sum_{j=1}^{n_2} w_j \\ket{b_j} \\end{equation}\\] 我们现在想构造一个新的线性空间\\(V_3\\), 我们QM1研究过, 张量积是更恰当的构造方法, 维度相乘扩展, 而不是相加. \\[\\begin{equation} \\dim(V_3) = \\dim(V_1) \\times \\dim(V_2) = n_1 n_2 \\end{equation}\\] 这样可以容纳\\(V_1\\)和\\(V_2\\)的所有信息. \\(V_3\\)的基底可以写成\\(\\{\\ket{a_i}\\otimes\\ket{b_j}\\}, i=1,2,\\cdots,n_1, j=1,2,\\cdots,n_2\\). 我们可以把\\(V_3\\)中的任意向量\\(\\ket{u}\\)表示为...","categories": ["QM2"],
+        "tags": [],
+        "url": "/PersonalPageCN/qm2/QM2-AngularMomentum3/",
         "teaser": null
       }]
