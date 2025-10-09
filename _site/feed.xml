@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-09T14:05:20+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/" rel="alternate" type="text/html" title="QM2 角动量与中心势3" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/"><![CDATA[<p>现在我们来聊聊我们上一个内容里发现的神秘的数学结构.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-09T14:24:59+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/" rel="alternate" type="text/html" title="QM2 角动量与中心势3" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/"><![CDATA[<p>现在我们来聊聊我们上一个内容里发现的神秘的数学结构.
 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元.
 我们先站的远一点, 回想一些线性代数的知识.</p>
 
@@ -254,7 +254,76 @@ O = \text{span}\{\ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}\}
 V \otimes W = D \oplus O
 \end{equation}\]
 
-<p>也没问题!</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
+<p>也没问题!</p>
+
+<hr />
+<h2 id="不变子空间">不变子空间</h2>
+
+<p>我们现在来聊聊, 为什么我们之前的分解\(U_1 \oplus U_2\), 是物理上更有意义的分解.
+这就绕不开一个概念, 不变子空间.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(T: V \to V\)是\(V\)上的一个线性变换.
+如果\(W\)是\(V\)的一个子空间, 且\(\forall \ket{w} \in W, T\ket{w} \in W\),
+那么\(W\)是\(T\)的不变子空间.</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(T: V \to V\)是一个旋转变换, 旋转角度为\(\theta\).</p>
+
+\[\begin{equation}
+T = \mqty[\cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta]
+\end{equation}\]
+
+<p>那么, \(W = \{(x,0)|x\in\mathbb{R}\}\)不是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (x,0)\), 那么\(T\ket{w} = (\cos\theta x, \sin\theta x)\), 不在\(W\)中.
+\(W = \{(0,y)|y\in\mathbb{R}\}\)也不是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (0,y)\), 那么\(T\ket{w} = (-\sin\theta y, \cos\theta y)\), 不在\(W\)中.
+但是\(V\)本身是\(T\)的不变子空间.
+因为\(\forall \ket{v} \in V, T\ket{v} \in V\).
+\(\{\ket{0}\}\)也是\(T\)的不变子空间.
+因为\(\forall \ket{0} \in \{\ket{0}\}, T\ket{0} = \ket{0} \in \{\ket{0}\}\).</p>
+
+<blockquote>
+  <p>这样我们就感受到两一个事实: 任何线性空间\(V\)和线性变换\(T: V \to V\), \(V\)本身和\(\{\ket{0}\}\)都是\(T\)的不变子空间.
+这两个子空间是平凡的, 因为大家谁都有.</p>
+</blockquote>
+
+<p>如果我们把视角上升到三维, 设\(V = \mathbb{R}^3\), \(T: V \to V\)是一个绕z轴旋转的变换, 旋转角度为\(\theta\).</p>
+
+\[\begin{equation}
+T = \mqty[\cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &amp; 0 \\ 0 &amp; 0 &amp; 1]
+\end{equation}\]
+
+<p>那么, \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\)是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (x,y,0)\), 那么\(T\ket{w} = (\cos\theta x - \sin\theta y, \sin\theta x + \cos\theta y, 0)\), 仍然在\(W\)中.
+\(U = \{(0,0,z)|z\in\mathbb{R}\}\)也是\(T\)的不变子空间.
+因为\(\forall \ket{u} \in U, \ket{u} = (0,0,z)\), 那么\(T\ket{u} = (0,0,z)\), 仍然在\(U\)中.
+这两, 除了两个平凡子空间, 这是我们能找到的唯一两个不变子空间, 而且我们也心安理得地把\(V\)拆成了\(W \oplus U\).</p>
+
+<blockquote>
+  <p>这就是我们想要的分解, 因为\(W\)和\(U\)都是\(T\)的不变子空间!
+于是, 我们发现, 能否把一个线性空间\(V\)拆成若干个不变子空间的直和, 主要取决于针对什么算符\(T\).</p>
+</blockquote>
+
+<blockquote>
+  <p>我们为什么选择用不变子空间拆角动量算符?</p>
+  <ol>
+    <li>我们要知道, 我们的本征态必须同时是\(J^2\)和\(J_z\)的本征态.</li>
+    <li>我们也知道 \(J_\pm\) 是 \(J_z\) 的升降算符, 不影响 \(J^2\) 的本征值.</li>
+    <li>这就意味着, 如果我们找到一个\(J^2\)和\(J_z\)的共同不变子空间, 那么我们就能在这个子空间里找到一组\(J^2\)和\(J_z\)的共同本征态.</li>
+    <li>自然而然的, 我们就想把整个空间拆成若干个\(J^2\)和\(J_z\)的共同不变子空间的直和.</li>
+  </ol>
+
+  <p>如果我们用\(D\)和\(O\)拆分, 那么\(D\)和\(O\)都可能被\(J_z\)和\(J^2\)作用后, 跑到对方的空间里去.</p>
+</blockquote>
+
+<p>所以我们现在可以明确的写出来类似于:</p>
+
+\[\begin{equation}
+\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
+\end{equation}\]
+
+<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM1 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/" rel="alternate" type="text/html" title="QM1 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum2/"><![CDATA[<p>经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:</p>
 
 \[\begin{equation}
 \hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \pdv{}{\theta} \left( \sin \theta \pdv{}{\theta} \right) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi} \right]
