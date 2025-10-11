@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>QM+ Floquet system入门 - 刘沛松的赛道</title>
+<!-- begin _includes/seo.html --><title>QM+ Berry Phase和几何相位2 - 刘沛松的赛道</title>
 <meta name="description" content="关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了">
 
 
@@ -23,8 +23,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="刘沛松的赛道">
-<meta property="og:title" content="QM+ Floquet system入门">
-<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/">
+<meta property="og:title" content="QM+ Berry Phase和几何相位2">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm+/QM+-BerryPhase2/">
 
 
   <meta property="og:description" content="关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了">
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/">
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm+/QM+-BerryPhase2/">
 
 
 
@@ -277,7 +277,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="QM+ Floquet system入门">
+    <meta itemprop="headline" content="QM+ Berry Phase和几何相位2">
     <meta itemprop="description" content="  关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 绝热定理和Berry phase中讨论过了">
     <meta itemprop="datePublished" content="2025-09-18T00:00:00+10:00">
     
@@ -286,7 +286,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" itemprop="url">QM+ Floquet system入门
+            <a href="http://localhost:4000/PersonalPageCN/qm+/QM+-BerryPhase2/" itemprop="url">QM+ Berry Phase和几何相位2
 </a>
           </h1>
           
@@ -301,50 +301,97 @@
   <p>关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 <a href="https://thezening.github.io/PersonalPageCN/qm1/QM1-AdiabaticTheoremAndBerryPhase/">绝热定理和Berry phase中讨论过了</a></p>
 </blockquote>
 
-<h2 id="什么是floquet-system">什么是Floquet system?</h2>
+<p>在绝热定理中, 我们说当系统的 Hamiltonian 缓慢变化时, 若某个本征值 \(E_n(t)\) 与其他本征值 \(E_m(t)\) 之间有能隙, 且系统初始时刻处于本征态 \(\ket{n;t=0}\) , 那么在任意时刻系统仍然会在瞬时本征态 \(\ket{n;t}\) 上, 只是会获得相位因子.</p>
 
-<p>我们知道一个态 \(\ket{\psi(t)}\) 的时间演化是由Schrödinger方程决定的:</p>
-
-\[\begin{equation}
-\mathrm{i}\,\hbar \pdv{}{t} \ket{\psi; t} = H(t) \ket{\psi; t}
-\end{equation}\]
-
-<p>或者说我们想知道态的演化也可以考虑时间演化算符:</p>
+<p>在这个基础之上, 如果我们的Hamiltonian依赖一组参数 \(\boldsymbol{R}=(R_1,R_2,\cdots)\) , 那么当这些参数沿着某条闭合路径 \(\mathcal{C}\) 变化一圈后, 系统的态会获得一个额外的相位因子, 这个相位因子就是 Berry phase:</p>
 
 \[\begin{equation}
-\ket{\psi; t} = U(t, t_0) \ket{\psi; t_0}
+\gamma_n(\mathcal{C}) = \mathrm{i}\,\oint_{\mathcal{C}} \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}} \cdot \mathrm{d}\boldsymbol{R}
 \end{equation}\]
 
-<p>但是这两种方法都绕不过去一个抽象的事儿, 那就是时间演化算符能写但是基本没有办法算:</p>
+<p>此处做两个之前没有提到过的评价:</p>
 
-\[\begin{align}
-U(t, t_0) =&amp; \mathcal{T} \exp\left[-\frac{\mathrm{i}}{\hbar} \int_{t_0}^{t} H(t') \dd{t'}\right] \\
-=&amp; \mathbb{1} + \left(-\frac{\mathrm{i}}{\hbar}\right) \int_{t_0}^{t} H(t_1) \dd{t_1} + \\
-&amp; \left(-\frac{\mathrm{i}}{\hbar}\right)^2 \int_{t_0}^{t} H(t_1) \int_{t_0}^{t_1} H(t_2) \dd{t_2} \dd{t_1} + \cdots
-\end{align}\]
+<ol>
+  <li>我们为什么强调闭合路径? 这是因为初态和末态落在同一个参数点, 此时Hamiltonian一样, 这时态函数的物理可比性才成立, 于是额外的 Berry 相位才是一个真正物理可观测量 (当然, 是通过干涉实验等间接手段观测到的).</li>
+  <li>还有一个原因, 波函数本身是有规范自由度的, 乘一个位置依赖的相位都没什么问题. 对于开路径, Berry 相位依赖于这个规范选择. 但对于闭合路径, 这个相位是规范不变的 (当然, 差个\(2\pi\)是没问题的)</li>
+  <li>开放的路径也有办法定义, 叫做 Pancharatnam phase.</li>
+</ol>
 
-<p>这东西算起来有点麻烦.
-但是我们考虑的Floqeut system有一个特别的地方, 就是我们Hamiltonian的时间依赖性一般是人为调制的, 比如说周期性的控制电场, 广场, 声场.
-这样的话, 我们很简单的可以赋予他一个周期性:</p>
+<p>几何几何, 难道在参数空间走一圈就是几何了? 到底几何在哪里呢? 我们来仔细考虑考虑这个事情.</p>
+
+<hr />
+<h2 id="green公式-gauss定理-stokes定理">Green公式, Gauss定理, Stokes定理</h2>
+
+<p>我们先退几步, 看看最简单的向量分析.
+我们考虑一个\(\mathbb{R}^3\)空间, 里面有一个向量场 \(\boldsymbol{A}(\boldsymbol{R})\) , 其中 \(\boldsymbol{R}=(x,y,z)\) 就是三个坐标, 不一定非得是物理位置空间, 就是抽象的空间.</p>
+
+<ol>
+  <li>对于\(\mathbb{R}^3\)中选定的一个闭合曲线 \(\mathcal{C}\) , 规定逆时针为正方向.</li>
+  <li>对于 \(\mathcal{C}\) 所围成的一个曲面 \(\mathcal{S}\) , 规定法向 \(\hat{\boldsymbol{n}}\) 用右手定则确定, 就是, 如果你用右手的四指沿着 \(\mathcal{C}\) 的方向弯曲, 那么大拇指指向的方向就是 \(\hat{\boldsymbol{n}}\) 的方向.</li>
+  <li>规定 \(\mathrm{d}\boldsymbol{R}\) 是沿着 \(\mathcal{C}\) 的切向微元, 规定 \(\mathrm{d}\boldsymbol{S} = \hat{\boldsymbol{n}}\,\mathrm{d}S\) 是曲面的面积元.</li>
+</ol>
+
+<p>如果从二维空间开始, 我们会发现一个非常有趣的公式, 叫做 Green 公式:</p>
 
 \[\begin{equation}
-H(t + T) = H(t)
+\oint_{\partial S} P\,\dd{x} + Q\,\dd{y} = \iint_{S} \left(\pdv{Q}{x} - \pdv{P}{y}\right)\,\dd{x}\dd{y}
 \end{equation}\]
-
-<p>我们称这样的系统叫做Floquet system, 所以一般往往跟随着人工调控的周期性变化.
-如果这个Hamiltonian有周期性, 我们立刻可以借用Floquet theorem:</p>
 
 <blockquote>
-  <p><strong>Floquet theorem</strong>: 对于周期性Hamiltonian \(H(t + T) = H(t)\), 对应的Schrödinger方程的解可以写成:</p>
+  <p>这实际上告诉我们, 边界上的流动 = 区域内的旋转总量.
+如果区域里面的水流整体在打旋, 那么边界上就会有流动.
+区域内的旋度多少, 就决定了边界上流动的多少.</p>
 
-\[\begin{equation}
-\ket{\psi_\alpha(t)} = \mathrm{e}^{-\frac{\mathrm{i}}{\hbar} \epsilon_\alpha t} \ket{u_\alpha(t)}
-\end{equation}\]
-
-  <p>其中 \(\ket{u_\alpha(t)}\) 是周期性的, 即 \(\ket{u_\alpha(t + T)} = \ket{u_\alpha(t)}\), \(\epsilon_\alpha\) 是一个实数, 称为Floquet quasi-energy, \(\alpha\) 是态的标号.</p>
+  <p>你站在水边看, 发现池塘边上的树叶在迅速流动, 你要小心了, 不要下水, 说明池塘里面的水流在打旋, 你下去就危险了.</p>
 </blockquote>
 
-<p>我们的任务就是尝试理解这个定义, 并且尝试计算出Floquet quasi-energy和周期函数 \(\ket{u_\alpha(t)}\).</p>
+<p>我们学的第二个公式, 叫做 Gauss 定理 (散度定理):</p>
+
+\[\begin{equation}
+\iint_{\partial V} \boldsymbol{A} \cdot \dd{\boldsymbol{S}} = \iiint_{V} (\nabla_{\boldsymbol{R}} \cdot \boldsymbol{A})\,\dd{V}
+\end{equation}\]
+
+<blockquote>
+  <p>这个公式告诉我们, 一个闭合曲面上的通量 = 曲面所围成的体积内的散度总量.
+如果一个区域内的水在外流, 那么这个区域的边界上就会有流出.
+区域内的散度多少, 就决定了边界上流出的多少.</p>
+</blockquote>
+
+<p>我们学的第三个公式, 叫做 Stokes 定理:</p>
+
+\[\begin{equation}
+\oint_{\mathcal{C}} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{R} = \iint_{\mathcal{S}} (\nabla_{\boldsymbol{R}} \times \boldsymbol{A}) \cdot \mathrm{d}\boldsymbol{S}
+\end{equation}\]
+
+<blockquote>
+  <p>这个公式告诉我们, 一个闭合曲线上的环流 = 曲线所围成的曲面内的旋度总量.
+这实际上是 Green 公式的三维推广, 甚至用 Stokes 定理推广到 Green 公式更合理, 更有说服力.</p>
+</blockquote>
+
+<p>我们在真正做这个线积分的时候, 首先要选定一个参数化的路径 \(\boldsymbol{R}(t)\) , 然后计算 \(\mathrm{d}\boldsymbol{R} = \dot{\boldsymbol{R}}(t)\,\mathrm{d}t\) , 然后参数化向量场 \(\boldsymbol{A}(\boldsymbol{R})\) 成 \(\boldsymbol{A}(\boldsymbol{R}(t))\) , 最后计算积分.</p>
+
+<blockquote>
+  <p>这一类的积分定理, 其实告诉了我们一件事: 一个系统的内部活动必然在边界上留下痕迹.</p>
+</blockquote>
+
+<p>如果就在这个层面对着 Berry 相位的定义式子看一眼, 你会发现, 它其实就是 Stokes 定理的左边:</p>
+
+\[\begin{equation}
+\gamma_n(\mathcal{C}) = \mathrm{i}\,\oint_{\mathcal{C}} \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}} \cdot \dd{\boldsymbol{S}}
+\end{equation}\]
+
+<p>也就是 \(\boldsymbol{A}(\boldsymbol{R}) = \mathrm{i}\,\mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}}\) 这个向量场沿着边界走了一圈.
+利用 Stokes 定理, 我们可以把它写成曲面积分:</p>
+
+\[\begin{equation}
+\gamma_n(\mathcal{C}) = \mathrm{i}\,\iint_{\mathcal{S}} \left[\nabla_{\boldsymbol{R}} \times \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}}\right] \cdot \dd{\boldsymbol{S}}
+\end{equation}\]
+
+<p>可是这到底是什么意思呢? 这到底是个什么向量场呢? 这个向量场的旋度又是什么意思呢?</p>
+
+<hr />
+<h2 id="微分形式">微分形式</h2>
+
 
         
       </section>
@@ -378,19 +425,19 @@ H(t + T) = H(t)
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=QM%2B+Floquet+system%E5%85%A5%E9%97%A8%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-FloquetSystem%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=QM%2B+Berry+Phase%E5%92%8C%E5%87%A0%E4%BD%95%E7%9B%B8%E4%BD%8D2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-BerryPhase2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-FloquetSystem%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-BerryPhase2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm+/QM+-FloquetSystem/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm+/QM+-BerryPhase2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=QM%2B+Floquet+system%E5%85%A5%E9%97%A8%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-FloquetSystem%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=QM%2B+Berry+Phase%E5%92%8C%E5%87%A0%E4%BD%95%E7%9B%B8%E4%BD%8D2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm%2B%2FQM%2B-BerryPhase2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -399,10 +446,10 @@ H(t + T) = H(t)
       
   <nav class="pagination">
     
-      <a href="/PersonalPageCN/qm1/QM1-TwoLevelSystem/" class="pagination--pager" title="QM1 双能级系统">Previous</a>
+      <a href="/PersonalPageCN/qm+/QM+-FloquetSystem/" class="pagination--pager" title="QM+ Floquet system入门">Previous</a>
     
     
-      <a href="/PersonalPageCN/qm+/QM+-BerryPhase2/" class="pagination--pager" title="QM+ Berry Phase和几何相位2">Next</a>
+      <a href="/PersonalPageCN/qm2/QM2-DensityMatrix1/" class="pagination--pager" title="QM2 密度矩阵1">Next</a>
     
   </nav>
 
