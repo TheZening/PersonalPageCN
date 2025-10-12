@@ -95,6 +95,24 @@ var store = [{
         "url": "/PersonalPageCN/math/TrigsTable/",
         "teaser": null
       },{
+        "title": "Linear Algebra 0",
+        "excerpt":"我们复习一下关于线性方程和矩阵运算的基本知识: 线性方程组 线性方程组 (system of linear equations) 是由多个线性方程组成的集合. 一个线性方程是形如: \\[\\begin{equation} a_1 x_1 + a_2 x_2 + \\ldots + a_n x_n = b \\end{equation}\\] 其中 \\(a_1, a_2, \\ldots, a_n\\) 是已知系数, \\(x_1, x_2, \\ldots, x_n\\) 是未知变量, \\(b\\) 是常数项. 一个线性方程组是由多个这样的方程组成, 例如: \\[\\begin{equation} \\begin{cases} a_{11} x_1 + a_{12} x_2 + \\ldots + a_{1n} x_n...","categories": ["Math0"],
+        "tags": [],
+        "url": "/PersonalPageCN/math0/LA0/",
+        "teaser": null
+      },{
+        "title": "Linear Algebra 1",
+        "excerpt":"我们现在复习一下线性代数的基础知识, 我们主要关注有限维线性代数问题. 线性代数是研究向量空间及其线性映射的数学分支. 向量空间 向量空间 (vector space) 是由向量 (vector) 组成的集合. 正确的说法是在一个域 (field, 记作 \\(\\mathbb{F}\\), 例如实数域 \\(\\mathbb{R}\\) 或复数域 \\(\\mathbb{C}\\)) 上定义的一个集合 \\(V\\), 该集合配备了两个运算: 向量加法 (vector addition) 和标量乘法 (scalar multiplication), 并满足以下公理: 封闭 (closure): \\(\\forall u, v \\in V, u + v \\in V\\) 交换律 (commutativity): \\(\\forall u, v \\in V, u + v...","categories": ["Math0"],
+        "tags": [],
+        "url": "/PersonalPageCN/math0/LA1/",
+        "teaser": null
+      },{
+        "title": "Linear Algebra 2",
+        "excerpt":"现在我们把两个向量空间的概念联系起来, 也就是线性映射. 线性映射 线性映射 (linear map) 是保持向量加法和标量乘法的函数. 设 \\(V\\) 和 \\(W\\) 是定义在同一域 \\(\\mathbb{F}\\) 上的向量空间. 一个函数 \\(T: V \\to W\\) 称为线性映射, 如果满足 \\(\\forall u, v \\in V\\) 和 \\(\\forall a, b \\in \\mathbb{F}\\), 有: \\[\\begin{equation} T(au + bv) = aT(u) + bT(v) \\end{equation}\\] 其中 \\(u\\) 和 \\(v\\) 是 \\(V\\) 中的向量, \\(a\\)...","categories": ["Math0"],
+        "tags": [],
+        "url": "/PersonalPageCN/math0/LA2/",
+        "teaser": null
+      },{
         "title": "Mathematical Induction Method",
         "excerpt":"基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立: 基础步骤 (Base Case): 验证命题对第一个自然数 (通常是1) 成立. 归纳步骤 (Inductive Step): 假设命题对某个自然数 \\(k\\) 成立 (归纳假设), 然后证明命题对 \\(k+1\\) 也成立. 如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \\(n \\geq 1\\) 成立. 下结论: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立. 实际上有两类数学归纳法: 普通数学归纳法: 适用于证明命题对所有自然数成立. 强归纳法 (Strong Induction): 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \\(k\\) 的自然数成立, 然后证明对 \\(k+1\\) 也成立. 大多数情况下我们关心第一类的. 上纲上线 数学归纳法是一类基于严格逻辑推理的证明方法,...","categories": ["Math0"],
         "tags": [],

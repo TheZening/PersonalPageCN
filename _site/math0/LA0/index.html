@@ -1,0 +1,644 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Linear Algebra 0 - 刘沛松的赛道</title>
+<meta name="description" content="我们复习一下关于线性方程和矩阵运算的基本知识:">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="Linear Algebra 0">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/math0/LA0/">
+
+
+  <meta property="og:description" content="我们复习一下关于线性方程和矩阵运算的基本知识:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-10-02T00:05:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/math0/LA0/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Linear Algebra 0">
+    <meta itemprop="description" content="我们复习一下关于线性方程和矩阵运算的基本知识:">
+    <meta itemprop="datePublished" content="2025-10-02T00:05:00+10:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/math0/LA0/" itemprop="url">Linear Algebra 0
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>我们复习一下关于线性方程和矩阵运算的基本知识:</p>
+
+<hr />
+<h2 id="线性方程组">线性方程组</h2>
+
+<blockquote>
+  <p>线性方程组 (system of linear equations) 是由多个线性方程组成的集合.</p>
+</blockquote>
+
+<p>一个线性方程是形如:</p>
+
+\[\begin{equation}
+a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b
+\end{equation}\]
+
+<p>其中 \(a_1, a_2, \ldots, a_n\) 是已知系数, \(x_1, x_2, \ldots, x_n\) 是未知变量, \(b\) 是常数项.
+一个线性方程组是由多个这样的方程组成, 例如:</p>
+
+\[\begin{equation}
+\begin{cases}
+a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n = b_1 \\
+a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n = b_2 \\
+\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n = b_m
+\end{cases}
+\end{equation}\]
+
+<p>线性方程组可以用矩阵形式表示为:</p>
+
+\[\begin{equation}
+\mqty[ a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn} ] \mqty[ x_1 \\ x_2 \\ \vdots \\ x_n ] = \mqty[ b_1 \\ b_2 \\ \vdots \\ b_m ]
+\end{equation}\]
+
+<p>线性方程组的解可以通过多种方法求得, 包括高斯消元法 (Gaussian elimination), 克拉默法则 (Cramer’s rule), 以及矩阵的逆 (matrix inverse) 等.</p>
+
+<hr />
+<h2 id="初等变换">初等变换</h2>
+
+<blockquote>
+  <p>初等变换 (elementary row operations) 是对矩阵进行的基本操作, 用于简化矩阵或求解线性方程组.</p>
+</blockquote>
+
+<p>初等变换包括以下三种类型:</p>
+
+<ol>
+  <li><strong>交换两行 (Row swapping)</strong>: 交换矩阵的两行.</li>
+  <li><strong>乘以非零常数 (Row scaling)</strong>: 将矩阵的一行乘以一个非零常数.</li>
+  <li><strong>行加法 (Row addition)</strong>: 将矩阵的一行加上另一行的倍数.</li>
+</ol>
+
+<p>这些初等变换可以用来将矩阵化简为行简化阶梯形矩阵 (reduced row echelon form, RREF), 这对于求解线性方程组非常有用.</p>
+
+<hr />
+<h2 id="系数矩阵-增广矩阵-矩阵的秩-rank">系数矩阵, 增广矩阵, 矩阵的秩 (Rank)</h2>
+
+<blockquote>
+  <p>系数矩阵 (coefficient matrix) 是线性方程组中所有未知变量的系数组成的矩阵.</p>
+</blockquote>
+
+<p>上面那个线性方程组的系数矩阵为:</p>
+
+\[\begin{equation}
+A = \mqty[ a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn} ]
+\end{equation}\]
+
+<blockquote>
+  <p>增广矩阵 (augmented matrix) 是将系数矩阵与常数项列向量合并形成的矩阵.</p>
+</blockquote>
+
+<p>增广矩阵为:</p>
+
+\[[A|b] =
+\left[\begin{array}{ccc|c}
+a_{11} &amp; a_{12} &amp; \cdots &amp; b_1 \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; b_2 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; b_m
+\end{array}\right]\]
+
+<blockquote>
+  <p>矩阵的秩 (rank) 是指矩阵中线性无关行或列的最大数量.
+矩阵的秩可以通过行简化阶梯形矩阵 (row echelon form) 或简化行阶梯形矩阵 (reduced row echelon form) 来计算.</p>
+</blockquote>
+
+<ol>
+  <li>简化阶梯形矩阵 (row echelon form): 通过初等行变换将矩阵转换为上三角形形式, 即每一行的首个非零元素 (leading entry) 位于其前一行的右侧.</li>
+  <li>简化行阶梯形矩阵 (reduced row echelon form): 在简化阶梯形矩阵的基础上, 进一步将每个首个非零元素变为 1, 并确保该列的其他元素均为零.</li>
+  <li>主列 (leading column): 包含每行首个非零元素的列.</li>
+</ol>
+
+<p>举个例子, 设有矩阵:</p>
+
+\[\begin{equation}
+A = \mqty[ 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 ]
+\end{equation}\]
+
+<p>第一次初等行变换, 用第一行消去第二行和第三行的首个元素:</p>
+
+\[\begin{equation}
+\text{REF}(A) = \mqty[ 1 &amp; 2 &amp; 3 \\ 0 &amp; -3 &amp; -6 \\ 0 &amp; -6 &amp; -12 ]
+\end{equation}\]
+
+<p>第二次初等行变换, 用第二行消去第三行的首个元素:</p>
+
+\[\begin{equation}
+\text{RREF}(A) = \mqty[ 1 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 2 \\ 0 &amp; 0 &amp; 0 ]
+\end{equation}\]
+
+<ol>
+  <li>这就是Reduced Row Echelon Form (RREF).</li>
+  <li>他的Leading entry 是第1行第1列的1, 第2行第2列的1, 第3行没有Leading entry, 因为全是0.</li>
+  <li>他的 Leading Columns 是第 1 列和第 2 列, 第三列不是, 因为第三列没有 Leading 1.</li>
+</ol>
+
+<blockquote>
+  <p>矩阵的秩就是他的 Leading Columns 的数量, 也就是2.</p>
+</blockquote>
+
+<p>矩阵的秩可以帮助我们判断线性方程组的解的情况:</p>
+
+<ol>
+  <li>如果系数矩阵的秩等于增广矩阵的秩, 且等于未知变量的数量, 则线性方程组有唯一解.</li>
+  <li>如果系数矩阵的秩等于增广矩阵的秩, 但小于未知变量的数量, 则线性方程组有无穷多解.</li>
+  <li>如果系数矩阵的秩小于增广矩阵的秩, 则线性方程组无解.</li>
+</ol>
+
+<blockquote>
+  <p>❗❗❗特殊情况: 如果系数矩阵是方阵, 且其行列式 (determinant) 非零, 则线性方程组有唯一解.</p>
+
+  <p>❗❗❗ 反之, 如果行列式为零, 则线性方程组无唯一解 (可能无解或有无穷多解).</p>
+</blockquote>
+
+<hr />
+<h2 id="为什么">为什么?</h2>
+
+<p>我们现在考虑系数矩阵的维度, 设系数矩阵 \(A\) 的维度为 \(m \times n\), 其中 \(m\) 行, 是方程的数量, \(n\) 列, 是未知变量的数量.</p>
+
+<ol>
+  <li>如果 \(m &lt; n\), 即方程数量少于未知变量数量, 则通常会有无穷多解, 因为有更多的自由度.</li>
+  <li>如果 \(m = n\), 即方程数量等于未知变量数量, 则可能有唯一解, 也可能无解或有无穷多解,取决于方程是否独立.</li>
+  <li>如果 \(m &gt; n\), 即方程数量多于未知变量数量, 则通常无解, 因为方程可能相互矛盾.</li>
+</ol>
+
+<blockquote>
+  <p>注意, 是通常, 不一定, 具体的分析还是要看秩.</p>
+</blockquote>
+
+<p>现在我们专注方阵的情况, 也就是 \(m = n\).
+如果我们把他高斯消元法化简成行阶梯形矩阵:</p>
+
+\[\begin{equation}
+\text{REF}(A) = \mqty[ a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n} \\
+0 &amp; a_{22} &amp; \ldots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \ldots &amp; a_{nn} ]
+\end{equation}\]
+
+<ol>
+  <li>如果 \(a_{11}, a_{22}, \ldots, a_{nn}\) 都不为零, 那么他的秩就是 \(n\), 也就是未知变量的数量, 这时候线性方程组有唯一解.</li>
+  <li>如果其中有一个为零, 比如 \(a_{kk} = 0\), 那么他的秩就是 \(n-1\), 也就是小于未知变量的数量, 这时候线性方程组要么无解, 要么有无穷多解.</li>
+  <li>这时候我们需要看增广矩阵的秩, 如果增广矩阵的秩也是 \(n-1\), 那么线性方程组有无穷多解; 如果增广矩阵的秩是 \(n\), 那么线性方程组无解.</li>
+</ol>
+
+<hr />
+<h2 id="行列式的求法">行列式的求法</h2>
+
+<p>行列式 (determinant) 是一个标量值.
+最简单的情况是 \(2 \times 2\) 矩阵:</p>
+
+\[\begin{equation}
+\text{det}\mqty[ a &amp; b \\ c &amp; d ] = ad - bc
+\end{equation}\]
+
+<p>三阶矩阵的行列式可以通过展开法 (expansion method) 计算:</p>
+
+\[\begin{equation}
+\text{det}\mqty[ a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i ] = a \text{det}\mqty[ e &amp; f \\ h &amp; i ] - b \text{det}\mqty[ d &amp; f \\ g &amp; i ] + c \text{det}\mqty[ d &amp; e \\ g &amp; h ]
+\end{equation}\]
+
+<p>对于更高阶的矩阵, 行列式的计算可以通过递归地应用展开法, 或者使用更高效的算法如LU分解 (LU decomposition) 或行简化 (row reduction) 来实现.</p>
+
+<p>如果恰好是阶梯形式, 那么行列式就是对角线元素的乘积.</p>
+
+\[\begin{equation}
+\text{det}(A) = a_{11} \times a_{22} \times \ldots \times a_{nn}
+\end{equation}\]
+
+<p>行列式的性质:</p>
+
+<ol>
+  <li>交换两行 (或两列) 会改变行列式的符号.</li>
+  <li>将一行 (或一列) 乘以一个标量 \(k\) 会使行列式乘以 \(k\).</li>
+  <li>将一行 (或一列) 加上另一行 (或另一列) 的倍数不会改变行列式的值.</li>
+  <li>如果矩阵有一行 (或一列) 全为零, 则行列式为零.</li>
+  <li>如果矩阵的两行 (或两列) 相等, 则行列式为零.</li>
+  <li>行列式的值等于其转置矩阵的行列式值.</li>
+</ol>
+
+<hr />
+<h2 id="特殊公式-二维矩阵求逆">特殊公式, 二维矩阵求逆:</h2>
+
+\[\begin{equation}
+\mqty[ a &amp; b \\ c &amp; d ]^{-1} = \frac{1}{ad - bc} \mqty[ d &amp; -b \\ -c &amp; a ]
+\end{equation}\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#math0" class="page__taxonomy-item p-category" rel="tag">Math0</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-10-02T00:05:00+10:00">October 2, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=Linear+Algebra+0%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA0%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA0%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/math0/LA0/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=Linear+Algebra+0%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA0%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/math/TrigsTable/" class="pagination--pager" title="三角函数查询表格">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/math0/LA1/" class="pagination--pager" title="Linear Algebra 1">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
