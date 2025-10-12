@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-12T16:19:30+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-12T16:29:04+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
 
 <ol>
   <li>我们知道一个向量空间可以被直和分解为若干个不可约表示的直和.</li>
@@ -743,7 +743,336 @@ T = \mqty[\cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &a
 \frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
 \end{equation}\]
 
-<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:</p>
+<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
+设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢?
+以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?</p>
+
+<p>不管是什么耦合, 角动量算符都必须满足如下的对易关系:
+\(\begin{equation}
+[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
+\end{equation}\)
+总角动量也不能违反这个对易关系.</p>
+
+<p>如果我们按照之前扩张算符的做法, 考虑Hilbert空间\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 那么我们可以定义:
+\(\begin{equation}
+\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{J}_2
+\end{equation}\)
+其中\(\mathbb{I}\)是单位算符.
+这个定义是合理的, 因为\(\boldsymbol{J}_1\)和\(\boldsymbol{J}_2\)作用在不同的Hilbert空间上, 它们之间对易.
+并且这个定义也满足角动量的对易关系.
+我们可以验证:</p>
+
+\[\begin{align}
+[J_i, J_j] &amp;= [J_{1i} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2i}, J_{1j} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2j}] \\
+&amp;= [J_{1i}, J_{1j}] \otimes \mathbb{I} + \mathbb{I} \otimes [J_{2i}, J_{2j}] \\
+&amp;= i \hbar \epsilon_{ijk} (J_{1k} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2k}) \\
+&amp;= i \hbar \epsilon_{ijk} J_k
+\end{align}\]
+
+<p>我们可以看到, 这个定义满足角动量的对易关系!
+再进行下一步讨论之前, 我们先回顾一下单个粒子的角动量算符.</p>
+
+\[\begin{align}
+J^2 \ket{j,m} &amp;= \hbar^2 j(j+1) \ket{j,m} \\
+J_z \ket{j,m} &amp;= \hbar m \ket{j,m} \\
+J_{\pm} \ket{j,m} &amp;= \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
+\end{align}\]
+
+<p>其中\(j = 0, 1/2, 1, 3/2, \ldots\), \(m = -j, -j+1, \ldots, j-1, j\).
+我们可以看到, \(j\)决定了角动量的大小, \(m\)决定了角动量在\(z\)方向的分量.
+\(J_+\)和\(J_-\)分别是升降算符, 它们可以改变\(m\)的值.</p>
+
+<p>我们从最简单的例子一点一点的看.</p>
+
+<hr />
+<h2 id="两个自旋12粒子的耦合">两个自旋1/2粒子的耦合</h2>
+
+<p>设有两个自旋1/2的粒子, 它们的角动量算符分别为\(\boldsymbol{S}_1\)和\(\boldsymbol{S}_2\).
+单个自旋1/2粒子的本征态可以表示为\(\ket{\uparrow}\)和\(\ket{\downarrow}\), 分别对应\(m = 1/2\)和\(m = -1/2\).
+因此, 两个自旋1/2粒子的总Hilbert空间是\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 维数为4.
+我们可以选择如下的直积获得的基:</p>
+
+\[\begin{equation}
+\ket{\uparrow_1\, \uparrow_2}, \ket{\uparrow_1\, \downarrow_2}, \ket{\downarrow_2\, \uparrow_1}, \ket{\downarrow_2\, \downarrow_2}
+\end{equation}\]
+
+<p>其中\(\ket{\uparrow_1\, \uparrow_2} = \ket{\uparrow_1} \otimes \ket{\uparrow_2}\), 其他类似.
+标号\(1, 2\)表示粒子1和粒子2.
+但这里有个问题: 我们这样构造的基不是总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的本征态, 没什么一眼能看出来的证据.
+在这个基下, 我们可以计算总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的矩阵表示:</p>
+
+\[\begin{equation}
+S_z = S_{1z} + S_{2z} = \frac{\hbar}{2} \mqty[
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -1
+]
+\end{equation}\]
+
+<p>是对角的, 没啥毛病啊.
+接下来我们可以看看\(S^2 = (\boldsymbol{S}_1 + \boldsymbol{S}_2)^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)这个算符的矩阵表示.
+前两项\(S_1^2\)和\(S_2^2\)都是常数, 它们的矩阵表示分别为\(\frac{3}{4} \hbar^2 \mathbb{I}\).
+关键是第三项\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\).
+我们可以写成\(2 (S_{1x} S_{2x} + S_{1y} S_{2y} + S_{1z} S_{2z})\).
+从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
+
+<p>\(\begin{equation}
+S_{1x} S_{2x} = \frac{\hbar^2}{4} \mqty[
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0
+]
+\end{equation}\)
+\(\begin{equation}
+S_{1y} S_{2y} = \frac{\hbar^2}{4} \mqty[
+0 &amp; 0 &amp; 0 &amp; -1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+-1 &amp; 0 &amp; 0 &amp; 0
+]
+\end{equation}\)
+\(\begin{equation}
+S_{1z} S_{2z} = \frac{\hbar^2}{4} \mqty[
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+]
+\end{equation}\)</p>
+
+<p>这样我们就能得到\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)的矩阵表示:</p>
+
+\[\begin{equation}
+2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \frac{\hbar^2}{2} \mqty[
+-1 &amp; 0 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 2 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; -1
+]
+\end{equation}\]
+
+<p>因此, 总角动量算符\(S^2\)的矩阵表示为:</p>
+
+\[\begin{equation}
+S^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \hbar^2 \mqty[
+1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 1
+]
+\end{equation}\]
+
+<p>哎! 问题发现了, 这个矩阵不是对角的!
+这说明我们选择的基不是\(S^2\)的本征态.
+我们需要找到\(S^2\)的本征值和本征态.
+对角化这个思维矩阵, 我们可以得到它的本征值和本征态.
+计算结果如下:</p>
+
+\[\begin{align}
+\lambda_1 = 0, &amp;\quad \ket{S} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} - \ket{\downarrow_1\, \uparrow_2}) \\
+\lambda_2 = 2 \hbar^2, &amp;\quad \ket{T_+} = \ket{\uparrow_1\, \uparrow_2} \\
+\lambda_3 = 2 \hbar^2, &amp;\quad \ket{T_0} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} + \ket{\downarrow_1\, \uparrow_2}) \\
+\lambda_4 = 2 \hbar^2, &amp;\quad \ket{T_-} = \ket{\downarrow_1\, \downarrow_2}
+\end{align}\]
+
+<p>但是现在还得回过头去看, 这些本征态是不是\(S_z\)的本征态.
+这很简单, 因为这些态是\(S_z\)的本征态的线性组合, 所以我们只需要计算一下:</p>
+
+\[\begin{align}
+S_z \ket{S} &amp;= 0 \\
+S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
+S_z \ket{T_0} &amp;= 0 \\
+S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
+\end{align}\]
+
+<p>这样的话, 我们就得到了\(S^2\)和\(S_z\)的共同本征态.</p>
+
+\[\begin{align}
+S^2 \ket{S} &amp;= 0 \ket{S}, &amp; S_z \ket{S} &amp;= 0 \ket{S} \\
+S^2 \ket{T_+} &amp;= 2 \hbar^2 \ket{T_+}, &amp; S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
+S^2 \ket{T_0} &amp;= 2 \hbar^2 \ket{T_0}, &amp; S_z \ket{T_0} &amp;= 0 \ket{T_0} \\
+S^2 \ket{T_-} &amp;= 2 \hbar^2 \ket{T_-}, &amp; S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
+\end{align}\]
+
+<p>现在我们知道了一点, 张量积空间的维数是4, 但是总角动量的本征值只有两个: \(0\)和\(2 \hbar^2\).
+这说明我们可以把4维空间分成两个子空间, 一个是1维的, 另一个是3维的.
+1维的子空间由\(\ket{S}\)张成, 3维的子空间由\(\ket{T_+}, \ket{T_0}, \ket{T_-}\)张成.
+这两个子空间分别对应总角动量\(s = 0\)和\(s = 1\).
+我们可以把这些态重新命名为\(\ket{s, m}\)的形式:</p>
+
+\[\begin{equation}
+\ket{0, 0} = \ket{S}, \quad \ket{1, 1} = \ket{T_+}, \quad \ket{1, 0} = \ket{T_0}, \quad \ket{1, -1} = \ket{T_-}
+\end{equation}\]
+
+<p>我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.
+目前来说, 至少我们知道张量积不一定好用, 找到本征态可能更方便沟通, 当然本征态需要花点时间去算.</p>
+
+<hr />
+<h2 id="轨道角动量-自旋耦合">轨道角动量-自旋耦合.</h2>
+
+<blockquote>
+  <p>一个粒子也会遇到这个问题吗?</p>
+</blockquote>
+
+<p>设有一个粒子, 它有轨道角动量\(\boldsymbol{L}\)和自旋角动量\(\boldsymbol{S}\).
+他的轨道角动量算符\(\boldsymbol{L}\)自然是来自于空间坐标的, 是三维空间的.
+自旋角动量\(\boldsymbol{S}\)是内禀的, 自然和空间坐标无关.
+所以我们这个时候, 虽然只有一个粒子, 但是它的Hilbert空间也是张量积的形式\(\mathcal{H} = \mathcal{H}_{\text{orb}} \otimes \mathcal{H}_{\text{spin}}\).
+轨道角动量\(\boldsymbol{L}\)作用在\(\mathcal{H}_{\text{orb}}\)上, 自旋角动量\(\boldsymbol{S}\)作用在\(\mathcal{H}_{\text{spin}}\)上.
+总角动量算符可以定义为:</p>
+
+\[\begin{equation}
+\boldsymbol{J} = \boldsymbol{L} \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{S}
+\end{equation}\]
+
+<p>我们现在来看看这个算符的本征值和本征态.
+设轨道角动量\(\boldsymbol{L}\)的量子数为\(l=1\), 否则太难算了.
+那么\(\mathcal{H}_{\text{orb}}\)的维数是\(2l+1=3\), 本征态为\(\ket{l,m_l}\), 其中\(m_l = -1, 0, 1\).
+自旋角动量\(\boldsymbol{S}\)的量子数为\(s=1/2\), 维数为2, 本征态为\(\ket{s,m_s}\), 其中\(m_s = -1/2, 1/2\).
+因此, 总Hilbert空间\(\mathcal{H}\)的维数是\(3 \times 2 = 6\).
+我们可以选择如下的直积基:</p>
+
+\[\begin{align}
+\ket{1,1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{1,0} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,0} \otimes \ket{1/2,-1/2}, \\
+\ket{1,-1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,-1} \otimes \ket{1/2,-1/2}
+\end{align}\]
+
+<p>开始计算总角动量算符\(\boldsymbol{J} = \boldsymbol{L} + \boldsymbol{S}\)的矩阵表示.
+首先计算\(J_z = L_z + S_z\)的矩阵表示:</p>
+
+\[\begin{equation}
+J_z = L_z + S_z = \hbar \mqty[
+\frac{3}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{3}{2}
+]
+\end{equation}\]
+
+<p>这个好算, 毕竟还是对角的.
+接下来计算\(J^2 = (L + S)^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S}\)的矩阵表示.
+前两项\(L^2\)和\(S^2\)都是常数, 它们的矩阵表示分别为\(2 \hbar^2 \mathbb{I}_3\)和\(\frac{3}{4} \hbar^2 \mathbb{I}_2\).
+关键是第三项\(2 \boldsymbol{L} \cdot \boldsymbol{S}\).
+我们可以写成\(2 (L_x S_x + L_y S_y + L_z S_z)\).
+从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
+
+\[\begin{align}
+L_x S_x &amp;= \frac{\hbar^2}{2} \mqty[
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
+] \\
+L_y S_y &amp;= \frac{\hbar^2}{2} \mqty[
+0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+-\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
+] \\
+L_z S_z &amp;= \frac{\hbar^2}{2} \mqty[
+\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{2}
+]
+\end{align}\]
+
+<p>加到一起, 进行化简:</p>
+
+\[\begin{equation}
+2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1
+]
+\end{equation}\]
+
+<p>所以我们的总角动量算符\(J^2\)的矩阵表示为:</p>
+
+\[\begin{equation}
+J^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
+\frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4}
+]
+\end{equation}\]
+
+<p>目前看来啊, 这个矩阵也不是对角的.
+我们需要对角化这个矩阵, 找到它的本征值和本征态.
+这对于算力超群的天才来说, 不太难, 但是我们已经注意到一个问题了, 这矩阵随着\(l\)和\(s\)的增大, 维数会迅速增大, 计算量也会迅速增大.
+所以我们需要找点捷径, 不能每次都这么算下去.
+我们先把结果写出来, 然后再讨论.
+对角化这个矩阵, 我们可以得到它的本征值和本征态.
+计算结果如下:</p>
+
+\[\begin{align}
+\lambda_1 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 3/2} = \ket{1,1} \otimes \ket{1/2,1/2} \\
+\lambda_2 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 1/2} = \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
+\lambda_3 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -1/2} = \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2} \\
+\lambda_4 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -3/2} = \ket{1,-1} \otimes \ket{1/2,-1/2} \\
+\lambda_5 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, 1/2} = -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
+\lambda_6 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, -1/2} = \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
+\end{align}\]
+
+<p>哎, 我们现在又发现了, 这个矩阵的本征值只有两个: \(\frac{15}{4} \hbar^2\)和\(\frac{3}{4} \hbar^2\).
+这说明我们可以把6维空间分成两个子空间, 一个是4维的, 另一个是2维的.
+4维的子空间由\(\ket{3/2, 3/2}, \ket{3/2, 1/2}, \ket{3/2, -1/2}, \ket{3/2, -3/2}\)张成, 2维的子空间由\(\ket{1/2, 1/2}, \ket{1/2, -1/2}\)张成.
+这两个子空间分别对应总角动量\(j = 3/2\)和\(j = 1/2\).
+我们可以把这些态重新命名为\(\ket{j, m_j}\)的形式:</p>
+
+\[\begin{align}
+\ket{3/2, 3/2} &amp;= \ket{1,1} \otimes \ket{1/2,1/2}, \\
+\ket{3/2, 1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{3/2, -1/2} &amp;= \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}, \\
+\ket{3/2, -3/2} &amp;= \ket{1,-1} \otimes \ket{1/2,-1/2}, \\
+\ket{1/2, 1/2} &amp;= -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
+\ket{1/2, -1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
+\end{align}\]
+
+<p>仿佛是四个\(j=3/2\)态和两个\(j=1/2\)态?
+我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.</p>
+
+<hr />
+<h2 id="价带模型">价带模型</h2>
+
+<p>在半导体物理中, 价带模型是一个重要的概念.
+价带的一个重要特性是, 他的顶点态是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
+为什么轨道角动量是\(l=1\)呢?
+这是因为价带顶点态主要由原子的\(p\)轨道组成, \(p\)轨道对应的轨道角动量量子数就是\(l=1\).
+自旋\(s=1/2\)是因为电子的自旋就是\(1/2\).
+因此, 价带顶点态的总角动量是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
+我们已经计算过, 这种耦合会产生两个总角动量态: \(j=3/2\)和\(j=1/2\).
+价带顶点态的能级结构就是由这两个总角动量态决定的.</p>
+
+<p>价带顶点态的能级结构衍生了一类巨大的基础问题, 就是自旋轨道耦合.
+自旋轨道耦合是指电子的自旋和轨道运动之间的相互作用, 当然不仅仅是价带, 很多体系都存在这种相互作用.
+这种相互作用会导致能级的分裂, 形成不同的能级.
+对于价带顶点态, 自旋轨道耦合会导致\(j=3/2\)态和\(j=1/2\)态的能级分裂.
+通常情况下, \(j=3/2\)态的能级会高于\(j=1/2\)态的能级.
+这种能级分裂对于理解半导体的光学和电子性质是非常重要的.</p>
+
+<p>因为我们知道, \(j=3/2\)态有4个简并态, \(j=1/2\)态有2个简并态.
+所以价带顶点的四个态通常被称为重空穴态和轻空穴态, 分别对应\(j=3/2\)的不同\(m_j\)值.
+重空穴态对应\(m_j = \pm 3/2\), 轻空穴态对应\(m_j = \pm 1/2\).
+而\(j=1/2\)态则对应于分裂的自旋轨道态.
+这种能级结构对于理解半导体的光学吸收和发射过程是非常重要的.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合. 设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢? 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?]]></summary></entry><entry><title type="html">QM2 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/" rel="alternate" type="text/html" title="QM2 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum1/"><![CDATA[<p>之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:</p>
 
 \[\begin{equation}
 L^2 \ket{l,m} = \hbar^2 l(l+1) \ket{l,m}, \quad L_z \ket{l,m} = \hbar m \ket{l,m}
@@ -2259,644 +2588,226 @@ MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙�
 既然每种可能都在某个世界实现了, 那么概率到底是什么?
 分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
 
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
-设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢?
-以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?</p>
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
+<p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
+它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
 
-<p>不管是什么耦合, 角动量算符都必须满足如下的对易关系:
+<ol>
+  <li><strong>基础步骤 (Base Case)</strong>: 验证命题对第一个自然数 (通常是1) 成立.</li>
+  <li><strong>归纳步骤 (Inductive Step)</strong>: 假设命题对某个自然数 \(k\) 成立 (归纳假设), 然后证明命题对 \(k+1\) 也成立.
+如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \(n \geq 1\) 成立.</li>
+  <li><strong>下结论</strong>: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立.</li>
+</ol>
+
+<p>实际上有两类数学归纳法:</p>
+<ul>
+  <li><strong>普通数学归纳法</strong>: 适用于证明命题对所有自然数成立.</li>
+  <li><strong>强归纳法 (Strong Induction)</strong>: 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \(k\) 的自然数成立, 然后证明对 \(k+1\) 也成立.</li>
+</ul>
+
+<p>大多数情况下我们关心第一类的.</p>
+
+<hr />
+<h2 id="上纲上线">上纲上线</h2>
+
+<p>数学归纳法是一类基于严格逻辑推理的证明方法, 不依赖于直觉或经验.
+于此相反的是经验归纳法(empirical induction), 这种方法基于观察和实验, 通过归纳总结出一般规律, 但不保证结论的绝对正确性, 是一种概率性的推理方法.</p>
+
+<p>实际上, 归纳法是处理无限全称命题(Universal Quantification Predicate)的有效工具.
+这样避免了穷举法(exhaustive proof)的繁琐和不可能性.</p>
+
+<hr />
+<h2 id="形式逻辑">形式逻辑</h2>
+
+<p>应用数学归纳法的形式逻辑可以表示为五个步骤</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 是关于自然数 \(n\) 的命题, 就是在什么条件下, 什么是正确的.</li>
+  <li><strong>基础步骤</strong>: 验证 \(P(1)\) 成立, 也就是验证命题对第一个自然数成立.</li>
+  <li><strong>归纳假设</strong>: 假设 \(P(k)\) 成立, 也就是假设命题对某个自然数 \(k\) 成立.</li>
+  <li><strong>逻辑推理</strong>: 在归纳假设的基础上, 通过逻辑推理证明 \(P(k+1)\) 成立, 也就是证明命题对 \(k+1\) 也成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
+
+<p>在我们刚接触数学归纳法时, 一定要严格按照这类方法来, 避免逻辑漏洞.</p>
+
+<hr />
+<h2 id="求和问题">求和问题</h2>
+
+<p>高斯(Gauß)提出了等差数列(arithmetic sequence)求和公式, 也就是从1加到n的和的方法为: 首项加末项乘以项数除以2, 也就是:
+对于满足:</p>
+
+\[\begin{equation}
+a_n = a_1 + (n-1)d 
+\end{equation}\]
+
+<p>其中 \(a_n\) 是第 \(n\) 项, \(a_1\) 是首项, \(d\) 是公差.
+那么等差数列的和为:</p>
+
+\[\begin{equation}
+S_n = \frac{n}{2}(a_1 + a_n)
+\end{equation}\]
+
+<p>其中 \(S_n\) 是前 \(n\) 项的和.
+说明这个公式很简单, 我们只需要讨论有奇数项和偶数项的情况, 然后首尾进行配对.
+但是严格证明这个公式, 我们可以使用数学归纳法.</p>
+
+<ol>
+  <li><strong>定义命题</strong>: 等差数列前\(n\)项的和为 \(S_n = \frac{n}{2}(a_1 + a_n)\).</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(S_1 = a_1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(S_k = \frac{k}{2}(a_1 + a_k)\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+就是说我们要明确的推导出来:
 \(\begin{equation}
-[J_i, J_j] = i \hbar \epsilon_{ijk} J_k
+S_{k+1} = \frac{(k+1)}{2}(a_1 + a_{k+1})
 \end{equation}\)
-总角动量也不能违反这个对易关系.</p>
-
-<p>如果我们按照之前扩张算符的做法, 考虑Hilbert空间\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 那么我们可以定义:
+数学归纳法的难点从来不在于写出公式, 而在于逻辑推理.
 \(\begin{equation}
-\boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{J}_2
+S_{k+1} = S_k + a_{k+1} = \frac{k}{2}(a_1 + a_k) + a_{k+1}
 \end{equation}\)
-其中\(\mathbb{I}\)是单位算符.
-这个定义是合理的, 因为\(\boldsymbol{J}_1\)和\(\boldsymbol{J}_2\)作用在不同的Hilbert空间上, 它们之间对易.
-并且这个定义也满足角动量的对易关系.
-我们可以验证:</p>
-
-\[\begin{align}
-[J_i, J_j] &amp;= [J_{1i} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2i}, J_{1j} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2j}] \\
-&amp;= [J_{1i}, J_{1j}] \otimes \mathbb{I} + \mathbb{I} \otimes [J_{2i}, J_{2j}] \\
-&amp;= i \hbar \epsilon_{ijk} (J_{1k} \otimes \mathbb{I} + \mathbb{I} \otimes J_{2k}) \\
-&amp;= i \hbar \epsilon_{ijk} J_k
-\end{align}\]
-
-<p>我们可以看到, 这个定义满足角动量的对易关系!
-再进行下一步讨论之前, 我们先回顾一下单个粒子的角动量算符.</p>
-
-\[\begin{align}
-J^2 \ket{j,m} &amp;= \hbar^2 j(j+1) \ket{j,m} \\
-J_z \ket{j,m} &amp;= \hbar m \ket{j,m} \\
-J_{\pm} \ket{j,m} &amp;= \hbar \sqrt{j(j+1) - m(m \pm 1)} \ket{j, m \pm 1}
-\end{align}\]
-
-<p>其中\(j = 0, 1/2, 1, 3/2, \ldots\), \(m = -j, -j+1, \ldots, j-1, j\).
-我们可以看到, \(j\)决定了角动量的大小, \(m\)决定了角动量在\(z\)方向的分量.
-\(J_+\)和\(J_-\)分别是升降算符, 它们可以改变\(m\)的值.</p>
-
-<p>我们从最简单的例子一点一点的看.</p>
-
-<hr />
-<h2 id="两个自旋12粒子的耦合">两个自旋1/2粒子的耦合</h2>
-
-<p>设有两个自旋1/2的粒子, 它们的角动量算符分别为\(\boldsymbol{S}_1\)和\(\boldsymbol{S}_2\).
-单个自旋1/2粒子的本征态可以表示为\(\ket{\uparrow}\)和\(\ket{\downarrow}\), 分别对应\(m = 1/2\)和\(m = -1/2\).
-因此, 两个自旋1/2粒子的总Hilbert空间是\(\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2\), 维数为4.
-我们可以选择如下的直积获得的基:</p>
-
-\[\begin{equation}
-\ket{\uparrow_1\, \uparrow_2}, \ket{\uparrow_1\, \downarrow_2}, \ket{\downarrow_2\, \uparrow_1}, \ket{\downarrow_2\, \downarrow_2}
-\end{equation}\]
-
-<p>其中\(\ket{\uparrow_1\, \uparrow_2} = \ket{\uparrow_1} \otimes \ket{\uparrow_2}\), 其他类似.
-标号\(1, 2\)表示粒子1和粒子2.
-但这里有个问题: 我们这样构造的基不是总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的本征态, 没什么一眼能看出来的证据.
-在这个基下, 我们可以计算总角动量算符\(\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2\)的矩阵表示:</p>
-
-\[\begin{equation}
-S_z = S_{1z} + S_{2z} = \frac{\hbar}{2} \mqty[
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; -1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; -1
-]
-\end{equation}\]
-
-<p>是对角的, 没啥毛病啊.
-接下来我们可以看看\(S^2 = (\boldsymbol{S}_1 + \boldsymbol{S}_2)^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)这个算符的矩阵表示.
-前两项\(S_1^2\)和\(S_2^2\)都是常数, 它们的矩阵表示分别为\(\frac{3}{4} \hbar^2 \mathbb{I}\).
-关键是第三项\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\).
-我们可以写成\(2 (S_{1x} S_{2x} + S_{1y} S_{2y} + S_{1z} S_{2z})\).
-从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
-
-<p>\(\begin{equation}
-S_{1x} S_{2x} = \frac{\hbar^2}{4} \mqty[
-0 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 0 &amp; 0
-]
-\end{equation}\)
+根据等差数列的定义, 有 \(a_{k+1} = a_1 + kd\), 所以:
 \(\begin{equation}
-S_{1y} S_{2y} = \frac{\hbar^2}{4} \mqty[
-0 &amp; 0 &amp; 0 &amp; -1 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
--1 &amp; 0 &amp; 0 &amp; 0
-]
+S_{k+1} = \frac{k}{2}(a_1 + a_k) + a_1 + kd
 \end{equation}\)
+将 \(a_k\) 替换为 \(a_1 + (k-1)d\), 得到:
 \(\begin{equation}
-S_{1z} S_{2z} = \frac{\hbar^2}{4} \mqty[
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; -1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; -1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1
-]
-\end{equation}\)</p>
-
-<p>这样我们就能得到\(2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2\)的矩阵表示:</p>
-
-\[\begin{equation}
-2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \frac{\hbar^2}{2} \mqty[
--1 &amp; 0 &amp; 0 &amp; 2 \\
-0 &amp; 1 &amp; 2 &amp; 0 \\
-0 &amp; 2 &amp; 1 &amp; 0 \\
-2 &amp; 0 &amp; 0 &amp; -1
-]
-\end{equation}\]
-
-<p>因此, 总角动量算符\(S^2\)的矩阵表示为:</p>
-
-\[\begin{equation}
-S^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \hbar^2 \mqty[
-1 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0 &amp; 1
-]
-\end{equation}\]
-
-<p>哎! 问题发现了, 这个矩阵不是对角的!
-这说明我们选择的基不是\(S^2\)的本征态.
-我们需要找到\(S^2\)的本征值和本征态.
-对角化这个思维矩阵, 我们可以得到它的本征值和本征态.
-计算结果如下:</p>
-
-\[\begin{align}
-\lambda_1 = 0, &amp;\quad \ket{S} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} - \ket{\downarrow_1\, \uparrow_2}) \\
-\lambda_2 = 2 \hbar^2, &amp;\quad \ket{T_+} = \ket{\uparrow_1\, \uparrow_2} \\
-\lambda_3 = 2 \hbar^2, &amp;\quad \ket{T_0} = \frac{1}{\sqrt{2}} (\ket{\uparrow_1\, \downarrow_2} + \ket{\downarrow_1\, \uparrow_2}) \\
-\lambda_4 = 2 \hbar^2, &amp;\quad \ket{T_-} = \ket{\downarrow_1\, \downarrow_2}
-\end{align}\]
-
-<p>但是现在还得回过头去看, 这些本征态是不是\(S_z\)的本征态.
-这很简单, 因为这些态是\(S_z\)的本征态的线性组合, 所以我们只需要计算一下:</p>
-
-\[\begin{align}
-S_z \ket{S} &amp;= 0 \\
-S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
-S_z \ket{T_0} &amp;= 0 \\
-S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
-\end{align}\]
-
-<p>这样的话, 我们就得到了\(S^2\)和\(S_z\)的共同本征态.</p>
-
-\[\begin{align}
-S^2 \ket{S} &amp;= 0 \ket{S}, &amp; S_z \ket{S} &amp;= 0 \ket{S} \\
-S^2 \ket{T_+} &amp;= 2 \hbar^2 \ket{T_+}, &amp; S_z \ket{T_+} &amp;= \hbar \ket{T_+} \\
-S^2 \ket{T_0} &amp;= 2 \hbar^2 \ket{T_0}, &amp; S_z \ket{T_0} &amp;= 0 \ket{T_0} \\
-S^2 \ket{T_-} &amp;= 2 \hbar^2 \ket{T_-}, &amp; S_z \ket{T_-} &amp;= -\hbar \ket{T_-}
-\end{align}\]
-
-<p>现在我们知道了一点, 张量积空间的维数是4, 但是总角动量的本征值只有两个: \(0\)和\(2 \hbar^2\).
-这说明我们可以把4维空间分成两个子空间, 一个是1维的, 另一个是3维的.
-1维的子空间由\(\ket{S}\)张成, 3维的子空间由\(\ket{T_+}, \ket{T_0}, \ket{T_-}\)张成.
-这两个子空间分别对应总角动量\(s = 0\)和\(s = 1\).
-我们可以把这些态重新命名为\(\ket{s, m}\)的形式:</p>
-
-\[\begin{equation}
-\ket{0, 0} = \ket{S}, \quad \ket{1, 1} = \ket{T_+}, \quad \ket{1, 0} = \ket{T_0}, \quad \ket{1, -1} = \ket{T_-}
-\end{equation}\]
-
-<p>我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.
-目前来说, 至少我们知道张量积不一定好用, 找到本征态可能更方便沟通, 当然本征态需要花点时间去算.</p>
+S_{k+1} = \frac{k}{2}(a_1 + a_1 + (k-1)d) + a_1 + kd
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+S_{k+1} = \frac{k}{2}(2a_1 + (k-1)d) + a_1 + kd = \frac{(k+1)}{2}(a_1 + a_{k+1})
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 等差数列前\(n\)项的和公式对所有自然数\(n \geq 1\)成立.
+因此, 我们成功地使用数学归纳法证明了等差数列求和公式.</li>
+</ol>
 
 <hr />
-<h2 id="轨道角动量-自旋耦合">轨道角动量-自旋耦合.</h2>
+<h2 id="求和问题-2">求和问题-2</h2>
 
-<blockquote>
-  <p>一个粒子也会遇到这个问题吗?</p>
-</blockquote>
-
-<p>设有一个粒子, 它有轨道角动量\(\boldsymbol{L}\)和自旋角动量\(\boldsymbol{S}\).
-他的轨道角动量算符\(\boldsymbol{L}\)自然是来自于空间坐标的, 是三维空间的.
-自旋角动量\(\boldsymbol{S}\)是内禀的, 自然和空间坐标无关.
-所以我们这个时候, 虽然只有一个粒子, 但是它的Hilbert空间也是张量积的形式\(\mathcal{H} = \mathcal{H}_{\text{orb}} \otimes \mathcal{H}_{\text{spin}}\).
-轨道角动量\(\boldsymbol{L}\)作用在\(\mathcal{H}_{\text{orb}}\)上, 自旋角动量\(\boldsymbol{S}\)作用在\(\mathcal{H}_{\text{spin}}\)上.
-总角动量算符可以定义为:</p>
-
-\[\begin{equation}
-\boldsymbol{J} = \boldsymbol{L} \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{S}
-\end{equation}\]
-
-<p>我们现在来看看这个算符的本征值和本征态.
-设轨道角动量\(\boldsymbol{L}\)的量子数为\(l=1\), 否则太难算了.
-那么\(\mathcal{H}_{\text{orb}}\)的维数是\(2l+1=3\), 本征态为\(\ket{l,m_l}\), 其中\(m_l = -1, 0, 1\).
-自旋角动量\(\boldsymbol{S}\)的量子数为\(s=1/2\), 维数为2, 本征态为\(\ket{s,m_s}\), 其中\(m_s = -1/2, 1/2\).
-因此, 总Hilbert空间\(\mathcal{H}\)的维数是\(3 \times 2 = 6\).
-我们可以选择如下的直积基:</p>
-
-\[\begin{align}
-\ket{1,1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,1} \otimes \ket{1/2,-1/2}, \\
-\ket{1,0} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,0} \otimes \ket{1/2,-1/2}, \\
-\ket{1,-1} \otimes \ket{1/2,1/2}, &amp;\quad \ket{1,-1} \otimes \ket{1/2,-1/2}
-\end{align}\]
-
-<p>开始计算总角动量算符\(\boldsymbol{J} = \boldsymbol{L} + \boldsymbol{S}\)的矩阵表示.
-首先计算\(J_z = L_z + S_z\)的矩阵表示:</p>
-
-\[\begin{equation}
-J_z = L_z + S_z = \hbar \mqty[
-\frac{3}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{3}{2}
-]
-\end{equation}\]
-
-<p>这个好算, 毕竟还是对角的.
-接下来计算\(J^2 = (L + S)^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S}\)的矩阵表示.
-前两项\(L^2\)和\(S^2\)都是常数, 它们的矩阵表示分别为\(2 \hbar^2 \mathbb{I}_3\)和\(\frac{3}{4} \hbar^2 \mathbb{I}_2\).
-关键是第三项\(2 \boldsymbol{L} \cdot \boldsymbol{S}\).
-我们可以写成\(2 (L_x S_x + L_y S_y + L_z S_z)\).
-从而可以开始根据单粒子态的来计算所有的矩阵表示:</p>
-
-\[\begin{align}
-L_x S_x &amp;= \frac{\hbar^2}{2} \mqty[
-0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
-] \\
-L_y S_y &amp;= \frac{\hbar^2}{2} \mqty[
-0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
--\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{1}{\sqrt{2}} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; -\frac{1}{\sqrt{2}} &amp; 0 &amp; \frac{1}{\sqrt{2}} \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{\sqrt{2}} &amp; 0
-] \\
-L_z S_z &amp;= \frac{\hbar^2}{2} \mqty[
-\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; \frac{1}{2} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{1}{2} &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \frac{1}{2}
-]
-\end{align}\]
-
-<p>加到一起, 进行化简:</p>
-
-\[\begin{equation}
-2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; -1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1
-]
-\end{equation}\]
-
-<p>所以我们的总角动量算符\(J^2\)的矩阵表示为:</p>
-
-\[\begin{equation}
-J^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
-\frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4} &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \frac{7}{4}
-]
-\end{equation}\]
-
-<p>目前看来啊, 这个矩阵也不是对角的.
-我们需要对角化这个矩阵, 找到它的本征值和本征态.
-这对于算力超群的天才来说, 不太难, 但是我们已经注意到一个问题了, 这矩阵随着\(l\)和\(s\)的增大, 维数会迅速增大, 计算量也会迅速增大.
-所以我们需要找点捷径, 不能每次都这么算下去.
-我们先把结果写出来, 然后再讨论.
-对角化这个矩阵, 我们可以得到它的本征值和本征态.
-计算结果如下:</p>
-
-\[\begin{align}
-\lambda_1 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 3/2} = \ket{1,1} \otimes \ket{1/2,1/2} \\
-\lambda_2 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, 1/2} = \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
-\lambda_3 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -1/2} = \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2} \\
-\lambda_4 = \frac{15}{4} \hbar^2, &amp;\quad \ket{3/2, -3/2} = \ket{1,-1} \otimes \ket{1/2,-1/2} \\
-\lambda_5 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, 1/2} = -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2} \\
-\lambda_6 = \frac{3}{4} \hbar^2, &amp;\quad \ket{1/2, -1/2} = \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
-\end{align}\]
-
-<p>哎, 我们现在又发现了, 这个矩阵的本征值只有两个: \(\frac{15}{4} \hbar^2\)和\(\frac{3}{4} \hbar^2\).
-这说明我们可以把6维空间分成两个子空间, 一个是4维的, 另一个是2维的.
-4维的子空间由\(\ket{3/2, 3/2}, \ket{3/2, 1/2}, \ket{3/2, -1/2}, \ket{3/2, -3/2}\)张成, 2维的子空间由\(\ket{1/2, 1/2}, \ket{1/2, -1/2}\)张成.
-这两个子空间分别对应总角动量\(j = 3/2\)和\(j = 1/2\).
-我们可以把这些态重新命名为\(\ket{j, m_j}\)的形式:</p>
-
-\[\begin{align}
-\ket{3/2, 3/2} &amp;= \ket{1,1} \otimes \ket{1/2,1/2}, \\
-\ket{3/2, 1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{1}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
-\ket{3/2, -1/2} &amp;= \sqrt{\frac{1}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}, \\
-\ket{3/2, -3/2} &amp;= \ket{1,-1} \otimes \ket{1/2,-1/2}, \\
-\ket{1/2, 1/2} &amp;= -\sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,1/2} + \sqrt{\frac{2}{3}} \ket{1,1} \otimes \ket{1/2,-1/2}, \\
-\ket{1/2, -1/2} &amp;= \sqrt{\frac{2}{3}} \ket{1,-1} \otimes \ket{1/2,1/2} - \sqrt{\frac{1}{3}} \ket{1,0} \otimes \ket{1/2,-1/2}
-\end{align}\]
-
-<p>仿佛是四个\(j=3/2\)态和两个\(j=1/2\)态?
-我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.</p>
+<p>数学归纳法的第二个难点: 你真的能归纳出来吗?
+我们首先进行经验观察:
+\(\begin{align}
+1^2 &amp;= 1\\
+1^2 + 2^2 &amp;= 5\\
+1^2 + 2^2 + 3^2 &amp;= 14\\
+1^2 + 2^2 + 3^2 + 4^2 &amp;= 30\\
+1^2 + 2^2 + 3^2 + 4^2 + 5^2 &amp;= 55
+\end{align}\)
+这能看出来啥规律?
+我们进行一个猜测:
+\(\begin{equation}
+1^2 + 2^2 + 3^2 + ... + n^2 = \sum_{i=1}^{n} i^2 \sim \int_1^n x^2 dx = \frac{n^3}{3}
+\end{equation}\)
+但是这个不对, 因为当\(n=1\)时, 左边是1, 右边是1/3.
+可是我们至少能注意到一个问题: 这个求和的结果应该是一个三次函数, 所以我们从最一般的开始猜:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn + D
+\end{equation}\)
+看看能否通过已知的5个点来确定4个系数.
+\(\begin{align}
+1 &amp;= A + B + C + D\\
+5 &amp;= 8A + 4B + 2C + D\\
+14 &amp;= 27A + 9B + 3C + D\\
+30 &amp;= 64A + 16B + 4C + D\\
+55 &amp;= 125A + 25B + 5C + D
+\end{align}\)
+解这个方程组, 我们得到:
+\(\begin{equation}
+A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
+\end{equation}\)
+所以我们猜测:
+\(\begin{equation}
+\sum_{i=1}^{n} i^2 = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{n(n+1)(2n+1)}{6}
+\end{equation}\)
+我们给出两个证明方法, 首先是做如下考虑:
+\(\begin{equation}
+(n+1)^3 - n^3 = 3n^2 + 3n + 1
+\end{equation}\)
+同时对两侧求和, 左边是telescope series:
+\(\begin{equation}
+\sum_{n=1}^{k} ((n+1)^3 - n^3) = 2^3 - 1^3 + 3^3 - 2^3 + ... + (k+1)^3 - k^3 = (k+1)^3 - 1
+\end{equation}\)
+右边呢:
+\(\begin{equation}
+\sum_{n=1}^{k} (3n^2 + 3n + 1) = 3\sum_{n=1}^{k} n^2 + 3\sum_{n=1}^{k} n + \sum_{n=1}^{k} 1 = 3\sum_{n=1}^{k} n^2 + \frac{3k(k+1)}{2} + k
+\end{equation}\)
+这样就能得到:
+\(\begin{equation}
+\sum_{n=1}^{k} n^2 = \frac{(k+1)^3 - 1 - \frac{3k(k+1)}{2} - k}{3} = \frac{k(k+1)(2k+1)}{6}
+\end{equation}\)
+这还是需要点观察力的, 现在我们考虑使用数学归纳法:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 \(\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}\), 这是我们想证明的.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(\sum_{i=1}^{1} i^2 = 1\), 右边也是 \(\frac{1(1+1)(2*1+1)}{6} = 1\), 公式成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(\sum_{i=1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}\).</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
+也就是说我们要明确的推导出来:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}
+\end{equation}\)
+根据归纳假设, 有:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \sum_{i=1}^{k} i^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
+\end{equation}\)
+将右边进行通分, 得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)(k(2k+1) + 6(k+1))}{6}
+\end{equation}\)
+简化后得到:
+\(\begin{equation}
+\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
+\end{equation}\)
+公式成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.
+因此, 我们成功地使用数学归纳法证明了平方和公式.</li>
+</ol>
 
 <hr />
-<h2 id="价带模型">价带模型</h2>
+<h2 id="论点也可以归纳">论点也可以归纳</h2>
 
-<p>在半导体物理中, 价带模型是一个重要的概念.
-价带的一个重要特性是, 他的顶点态是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
-为什么轨道角动量是\(l=1\)呢?
-这是因为价带顶点态主要由原子的\(p\)轨道组成, \(p\)轨道对应的轨道角动量量子数就是\(l=1\).
-自旋\(s=1/2\)是因为电子的自旋就是\(1/2\).
-因此, 价带顶点态的总角动量是由轨道角动量\(l=1\)和自旋\(s=1/2\)耦合形成的.
-我们已经计算过, 这种耦合会产生两个总角动量态: \(j=3/2\)和\(j=1/2\).
-价带顶点态的能级结构就是由这两个总角动量态决定的.</p>
-
-<p>价带顶点态的能级结构衍生了一类巨大的基础问题, 就是自旋轨道耦合.
-自旋轨道耦合是指电子的自旋和轨道运动之间的相互作用, 当然不仅仅是价带, 很多体系都存在这种相互作用.
-这种相互作用会导致能级的分裂, 形成不同的能级.
-对于价带顶点态, 自旋轨道耦合会导致\(j=3/2\)态和\(j=1/2\)态的能级分裂.
-通常情况下, \(j=3/2\)态的能级会高于\(j=1/2\)态的能级.
-这种能级分裂对于理解半导体的光学和电子性质是非常重要的.</p>
-
-<p>因为我们知道, \(j=3/2\)态有4个简并态, \(j=1/2\)态有2个简并态.
-所以价带顶点的四个态通常被称为重空穴态和轻空穴态, 分别对应\(j=3/2\)的不同\(m_j\)值.
-重空穴态对应\(m_j = \pm 3/2\), 轻空穴态对应\(m_j = \pm 1/2\).
-而\(j=1/2\)态则对应于分裂的自旋轨道态.
-这种能级结构对于理解半导体的光学吸收和发射过程是非常重要的.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合. 设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢? 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?]]></summary></entry><entry><title type="html">三角函数查询表格</title><link href="http://localhost:4000/PersonalPageCN/math/TrigsTable/" rel="alternate" type="text/html" title="三角函数查询表格" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math/TrigsTable</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math/TrigsTable/"><![CDATA[<h2 id="基本定义">基本定义</h2>
-
-<p>基础的三角函数定义一定是在直角三角形上的, 记住对边, 邻边, 斜边的概念.
-这是最重要的, 不要忘掉…</p>
-
-\[\begin{align}
-\sin \theta &amp;= \frac{\text{opposite}}{\text{hypotenuse}}\\
-\cos \theta &amp;= \frac{\text{adjacent}}{\text{hypotenuse}}\\
-\tan \theta &amp;= \frac{\text{opposite}}{\text{adjacent}} = \frac{\sin \theta}{\cos \theta}
-\end{align}\]
-
-<p>还有三个倒数函数</p>
-
-\[\begin{align}
-\csc \theta &amp;= \frac{1}{\sin \theta} = \frac{\text{hypotenuse}}{\text{opposite}}\\
-\sec \theta &amp;= \frac{1}{\cos \theta} = \frac{\text{hypotenuse}}{\text{adjacent}}\\
-\cot \theta &amp;= \frac{1}{\tan \theta} = \frac{\text{adjacent}}{\text{opposite}} = \frac{\cos \theta}{\sin \theta}
-\end{align}\]
+<p>数学归纳法不仅可以用来证明数列求和公式, 还可以用来证明其他类型的数学命题, 比如不等式, 组合问题, 图论等.
+每个大于 1 的自然数都能写成素数的乘积(素数分解定理), 这个也可以用数学归纳法来证明.
+素数(prime number)是指大于 1 的自然数, 只能被 1 和它本身整除的数.
+我们来证明这个命题:</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “每个大于 1 的自然数 \(n\) 都能写成素数的乘积”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=2\) 时, 2 是素数, 所以命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即 \(k\) 能写成素数的乘积.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+如果 \(k+1\) 是素数, 那么命题成立.
+如果 \(k+1\) 不是素数, 那么 \(k+1\) 可以写成两个小于 \(k+1\) 的自然数的乘积, 设为 \(a\) 和 \(b\), 即 \(k+1 = a \times b\), 其中 \(1 &lt; a, b &lt; k+1\).
+根据归纳假设, \(a\) 和 \(b\) 都能写成素数的乘积, 所以 \(k+1\) 也能写成素数的乘积.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有大于 1 的自然数 \(n\) 成立.
+因此, 我们成功地使用数学归纳法证明了素数分解定理.</li>
+</ol>
 
 <hr />
-<h2 id="一般情况下怎么用边求值">一般情况下怎么用边求值?</h2>
+<h2 id="不能乱归纳">不能乱归纳…</h2>
 
-<p>如果不是直角三角形, 也可以用正弦定理和余弦定理来求值.</p>
+<p>数学归纳法虽然强大, 但是偶尔应用不当也会出错.
+比如我们来证明一个错误的命题: “所有的马都是同一种颜色”.</p>
+<ol>
+  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “在任意 \(n\) 匹马中, 所有马都是同一种颜色”.</li>
+  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, 只有一匹马, 命题成立.</li>
+  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即在任意 \(k\) 匹马中, 所有马都是同一种颜色.</li>
+  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
+我们考虑任意 \(k+1\) 匹马, 设为 \(M_1, M_2, ..., M_{k+1}\).
+根据归纳假设, 在前 \(k\) 匹马 \(M_1, M_2, ..., M_k\) 中, 所有马都是同一种颜色, 设为颜色 \(C_1\).
+同样, 在后 \(k\) 匹马 \(M_2, M_3, ..., M_{k+1}\) 中, 所有马也是同一种颜色, 设为颜色 \(C_2\).
+由于 \(M_2, M_3, ..., M_k\) 是前后两组马的交集, 它们的颜色必须相同, 即 \(C_1 = C_2\).
+因此, 所有 \(k+1\) 匹马都是同一种颜色, 命题成立.</li>
+  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
+</ol>
 
-<p>角\(A, B, C\) 对应的边分别是 \(a, b, c\), 就是对边.
-\(R\)是外接圆半径.</p>
-
-<p>从而我们有正弦定理:</p>
-
-\[\begin{equation}
-\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
-\end{equation}\]
-
-<p>三角形面积公式:</p>
-
-\[\begin{equation}
-\text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{abc}{4R}
-\end{equation}\]
-
-<p>当然还有余弦定理:</p>
-
-\[\begin{align}
-\cos A &amp;= \frac{b^2 + c^2 - a^2}{2bc}\\
-\cos B &amp;= \frac{a^2 + c^2 - b^2}{2ac}\\
-\cos C &amp;= \frac{a^2 + b^2 - c^2}{2ab}
-\end{align}\]
-
-<p>当角是钝角时, 余弦为负数, 可以用余弦定理判断三角形的形状!</p>
-
-<hr />
-<h2 id="求值问题">求值问题</h2>
-<p>一些常见的三角函数值, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: right">角度 (°)</th>
-      <th style="text-align: center">0</th>
-      <th style="text-align: center">30</th>
-      <th style="text-align: center">45</th>
-      <th style="text-align: center">60</th>
-      <th style="text-align: center">90</th>
-      <th style="text-align: center">120</th>
-      <th style="text-align: center">135</th>
-      <th style="text-align: center">150</th>
-      <th style="text-align: center">180</th>
-      <th style="text-align: center">210</th>
-      <th style="text-align: center">225</th>
-      <th style="text-align: center">240</th>
-      <th style="text-align: center">270</th>
-      <th style="text-align: center">300</th>
-      <th style="text-align: center">315</th>
-      <th style="text-align: center">330</th>
-      <th style="text-align: center">360</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: right">弧度 (π)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(\tfrac{\pi}{6}\)</td>
-      <td style="text-align: center">\(\tfrac{\pi}{4}\)</td>
-      <td style="text-align: center">\(\tfrac{\pi}{3}\)</td>
-      <td style="text-align: center">\(\tfrac{\pi}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{2\pi}{3}\)</td>
-      <td style="text-align: center">\(\tfrac{3\pi}{4}\)</td>
-      <td style="text-align: center">\(\tfrac{5\pi}{6}\)</td>
-      <td style="text-align: center">\(\pi\)</td>
-      <td style="text-align: center">\(\tfrac{7\pi}{6}\)</td>
-      <td style="text-align: center">\(\tfrac{5\pi}{4}\)</td>
-      <td style="text-align: center">\(\tfrac{4\pi}{3}\)</td>
-      <td style="text-align: center">\(\tfrac{3\pi}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{5\pi}{3}\)</td>
-      <td style="text-align: center">\(\tfrac{7\pi}{4}\)</td>
-      <td style="text-align: center">\(\tfrac{11\pi}{6}\)</td>
-      <td style="text-align: center">\(2\pi\)</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">\(\sin x\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(1\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(-1\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(0\)</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">\(\cos x\)</td>
-      <td style="text-align: center">\(1\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(-1\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(-\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(\tfrac{1}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{2}}{2}\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{2}\)</td>
-      <td style="text-align: center">\(1\)</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">\(\tan x\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
-      <td style="text-align: center">\(1\)</td>
-      <td style="text-align: center">\(\sqrt{3}\)</td>
-      <td style="text-align: center">不定义</td>
-      <td style="text-align: center">\(-\sqrt{3}\)</td>
-      <td style="text-align: center">\(-1\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
-      <td style="text-align: center">\(0\)</td>
-      <td style="text-align: center">\(\tfrac{\sqrt{3}}{3}\)</td>
-      <td style="text-align: center">\(1\)</td>
-      <td style="text-align: center">\(\sqrt{3}\)</td>
-      <td style="text-align: center">不定义</td>
-      <td style="text-align: center">\(-\sqrt{3}\)</td>
-      <td style="text-align: center">\(-1\)</td>
-      <td style="text-align: center">\(-\tfrac{\sqrt{3}}{3}\)</td>
-      <td style="text-align: center">\(0\)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>因为周期性是\(2\pi\), 所以这种加减乘除是最简单的, 如果是\(k\)为整数, 则有:</p>
-
-\[\begin{align}
-\sin(\theta + 2k\pi) &amp;= \sin \theta\\
-\cos(\theta + 2k\pi) &amp;= \cos \theta\\
-\tan(\theta + 2k\pi) &amp;= \tan \theta
-\end{align}\]
-
-<p>平移\(\pi\), 也不太复杂:</p>
-
-\[\begin{align}
-\sin(\theta + k\pi) &amp;= (-1)^k \sin \theta\\
-\cos(\theta + k\pi) &amp;= (-1)^k \cos \theta\\
-\tan(\theta + k\pi) &amp;= \tan \theta
-\end{align}\]
-
-<p>⚠️唯一需要小心的就是平移\(\pi/2\), 这个时候需要注意正负号:</p>
-
-\[\begin{align}
-\sin(\theta \pm \pi/2) &amp;= \cos \theta\\
-\cos(\theta \pm \pi/2) &amp;= \pm\sin \theta\\
-\tan(\theta \pm \pi/2) &amp;= \pm\cot \theta\\
-\end{align}\]
-
-<p>也能统一起来:</p>
-
-\[\begin{equation}
-\sin(\theta + k\pi/2) =
-\begin{cases}
-\sin \theta &amp; k \equiv 0 \pmod{4}\\
-\cos \theta &amp; k \equiv 1 \pmod{4}\\
--\sin \theta &amp; k \equiv 2 \pmod{4}\\
--\cos \theta &amp; k \equiv 3 \pmod{4}
-\end{cases}
-\end{equation}\]
-
-\[\begin{equation}
-\cos(\theta + k\pi/2) =
-\begin{cases}
-\cos \theta &amp; k \equiv 0 \pmod{4}\\
--\sin \theta &amp; k \equiv 1 \pmod{4}\\
--\cos \theta &amp; k \equiv 2 \pmod{4}\\
-\sin \theta &amp; k \equiv 3 \pmod{4}
-\end{cases}
-\end{equation}\]
-
-\[\begin{equation}
-\tan(\theta + k\pi/2) =
-\begin{cases}
-\tan \theta &amp; k \equiv 0 \pmod{4}\\
-\cot \theta &amp; k \equiv 1 \pmod{4}\\
-\tan \theta &amp; k \equiv 2 \pmod{4}\\
-\cot \theta &amp; k \equiv 3 \pmod{4}
-\end{cases}
-\end{equation}\]
-
-<hr />
-<h2 id="角度加减法公式">角度加减法公式</h2>
-
-<p>角度的加减法是最一般的关系.</p>
-
-\[\begin{align}
-\sin(\alpha \pm \beta) &amp;= \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\\
-\cos(\alpha \pm \beta) &amp;= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta\\
-\tan(\alpha \pm \beta) &amp;= \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
-\end{align}\]
-
-<hr />
-<h2 id="倍角公式">倍角公式</h2>
-
-<p>就是怎么把\(2\)倍, \(4\)倍, 偶数倍这些东西变的简单一点.
-⚠️对于奇数倍的角, 实际上是De Moivre公式的应用.</p>
-
-\[\begin{align}
-\sin(2\theta) &amp;= 2\sin\theta\cos\theta\\
-\cos(2\theta) &amp;= \cos^2\theta - \sin^2\theta \\
-&amp;= 2\cos^2\theta - 1 = 1 - 2\sin^2\theta\\
-\tan(2\theta) &amp;= \frac{2\tan\theta}{1 - \tan^2\theta}
-\end{align}\]
-
-<p>也许万一能用得上:</p>
-
-\[\begin{align}
-\sin(3\theta) &amp;= 3\sin\theta - 4\sin^3\theta\\
-\cos(3\theta) &amp;= 4\cos^3\theta - 3\cos\theta\\
-\tan(3\theta) &amp;= \frac{3\tan\theta - \tan^3\theta}{1 - 3\tan^2\theta}
-\end{align}\]
-
-<hr />
-<h2 id="半角公式">半角公式</h2>
-
-<p>有一倍就有半倍, 也就是\(\theta/2\)</p>
-
-\[\begin{align}
-\sin(\theta/2) &amp;= \pm\sqrt{\frac{1 - \cos\theta}{2}}\\
-\cos(\theta/2) &amp;= \pm\sqrt{\frac{1 + \cos\theta}{2}}\\
-\tan(\theta/2) &amp;= \frac{\sin\theta}{1 + \cos\theta} = \frac{1 - \cos\theta}{\sin\theta}
-\end{align}\]
-
-<p>这里为什么有\(\pm\)号呢? 因为\(\theta/2\)的范围不确定, 需要根据具体情况来定.</p>
-
-<hr />
-<h2 id="积化和差公式">积化和差公式</h2>
-
-<p>这就是一些代数计算.</p>
-
-\[\begin{align}
-\sin\alpha\sin\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) - \cos(\alpha + \beta)]\\
-\cos\alpha\cos\beta &amp;= \frac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]\\
-\sin\alpha\cos\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)]\\
-\cos\alpha\sin\beta &amp;= \frac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)]
-\end{align}\]
-
-<hr />
-<h2 id="和差化积公式">和差化积公式</h2>
-
-<p>反过来算呗.</p>
-
-\[\begin{align}
-\sin\alpha \pm \sin\beta &amp;= 2\sin\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
-\cos\alpha \pm \cos\beta &amp;= 2\cos\frac{\alpha \pm \beta}{2}\cos\frac{\alpha \mp \beta}{2}\\
-\end{align}\]
-
-<hr />
-<h2 id="降幂公式---微积分方法常用">降幂公式 - 微积分方法常用</h2>
-
-<p>有的时候我们会遇到换元方法, 他的起点就是:</p>
-
-\[\begin{equation}
-\sin^2 \theta + \cos^2 \theta = 1
-\end{equation}\]
-
-<p>这是最基本的, 其他的都是从这里推出来的.</p>
-
-\[\begin{equation}
-\tan^2 \theta + 1 = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta
-\end{equation}\]
-
-<p>配合二倍角, 半角公式, 也能得到:</p>
-
-\[\begin{equation}
-\sin^2 \theta = \frac{1 - \cos(2\theta)}{2}, \quad \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}
-\end{equation}\]
-
-<p>这样就能把平方降成一次了, 这样积分简单很多.
-还可以联系到\(\tan(\theta/2)\), 这样就能把三角函数都变成有理函数了.</p>
-
-\[\begin{align}
-\sin \theta &amp;= \frac{2\tan(\theta/2)}{1 + \tan^2(\theta/2)}\\
-\cos \theta &amp;= \frac{1 - \tan^2(\theta/2)}{1 + \tan^2(\theta/2)}\\
-\tan \theta &amp;= \frac{2\tan(\theta/2)}{1 - \tan^2(\theta/2)}
-\end{align}\]]]></content><author><name>刘沛松</name></author><category term="Math" /><category term="Trigs Table" /><summary type="html"><![CDATA[基本定义]]></summary></entry></feed>
+<p>❌️❌️❌️但是这个命题显然是错误的, 因为不同的马可以有不同的颜色.
+这个错误的归纳证明在逻辑推理步骤中存在漏洞.
+当 \(n=1\) 时, 基础步骤成立.
+但是当 \(n=2\) 时, 归纳假设无法应用, 因为前后两组马没有交集, 所以无法得出 \(C_1 = C_2\).
+因此, 这个错误的归纳证明无法成立!
+这个例子提醒我们在使用数学归纳法时, 必须明确推理的范围和条件, 实际上, 解决这个问题有两个方法:</p>
+<ol>
+  <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
+  <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
+这两个方法都能帮助我们避免错误的归纳证明.</li>
+</ol>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry></feed>

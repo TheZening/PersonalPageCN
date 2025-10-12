@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Linear Algebra 2 - 刘沛松的赛道</title>
-<meta name="description" content="现在我们把两个向量空间的概念联系起来, 也就是线性映射.">
+<!-- begin _includes/seo.html --><title>Linear Algebra 例题 - 刘沛松的赛道</title>
+<meta name="description" content="求解方程组">
 
 
   <meta name="author" content="刘沛松">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="刘沛松的赛道">
-<meta property="og:title" content="Linear Algebra 2">
-<meta property="og:url" content="http://localhost:4000/PersonalPageCN/math0/LA2/">
+<meta property="og:title" content="Linear Algebra 例题">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/math0/LAExample/">
 
 
-  <meta property="og:description" content="现在我们把两个向量空间的概念联系起来, 也就是线性映射.">
+  <meta property="og:description" content="求解方程组">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/PersonalPageCN/math0/LA2/">
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/math0/LAExample/">
 
 
 
@@ -277,8 +277,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Linear Algebra 2">
-    <meta itemprop="description" content="现在我们把两个向量空间的概念联系起来, 也就是线性映射.">
+    <meta itemprop="headline" content="Linear Algebra 例题">
+    <meta itemprop="description" content="求解方程组">
     <meta itemprop="datePublished" content="2025-10-02T00:05:00+10:00">
     
 
@@ -286,7 +286,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/PersonalPageCN/math0/LA2/" itemprop="url">Linear Algebra 2
+            <a href="http://localhost:4000/PersonalPageCN/math0/LAExample/" itemprop="url">Linear Algebra 例题
 </a>
           </h1>
           
@@ -297,139 +297,57 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>现在我们把两个向量空间的概念联系起来, 也就是线性映射.</p>
+        <hr />
+<h2 id="求解方程组">求解方程组</h2>
 
-<hr />
-<h2 id="线性映射">线性映射</h2>
+<h3 id="例题-1-有解的方程组">例题 1: 有解的方程组</h3>
 
-<blockquote>
-  <p>线性映射 (linear map) 是保持向量加法和标量乘法的函数.</p>
-</blockquote>
-
-<p>设 \(V\) 和 \(W\) 是定义在同一域 \(\mathbb{F}\) 上的向量空间.
-一个函数 \(T: V \to W\) 称为线性映射, 如果满足 \(\forall u, v \in V\) 和 \(\forall a, b \in \mathbb{F}\), 有:</p>
+<p>求解以下线性三元方程组:</p>
 
 \[\begin{equation}
-T(au + bv) = aT(u) + bT(v)
+\begin{cases}
+2x + 3y + z = 1 \\
+4x + y - z = 2 \\
+-2x + 5y + 2z = 3
+\end{cases}
 \end{equation}\]
 
-<p>其中 \(u\) 和 \(v\) 是 \(V\) 中的向量, \(a\) 和 \(b\) 是 \(\mathbb{F}\) 中的标量.
-\(aT(u) + bT(v)\) 是 \(W\) 中的向量.
-线性映射也称为线性变换 (linear transformation).</p>
-
-<p>检查一个映射是否线性, 只需要验证它是否保持向量加法和标量乘法.
-线性映射有很多重要的性质, 例如:</p>
-
-<ol>
-  <li>零映射 (zero map): \(T(0) = 0\), 其中 \(0\) 是 \(V\) 和 \(W\) 中的零向量.</li>
-  <li>负映射 (negative map): \(T(-v) = -T(v)\), 其中 \(v \in V\).</li>
-  <li>保持线性组合 (preservation of linear combinations):
-\(\begin{equation}
-T(a_1 v_1 + a_2 v_2 + \ldots + a_n v_n) = a_1 T(v_1) + a_2 T(v_2) + \ldots + a_n T(v_n)
-\end{equation}\)</li>
-  <li>复合映射 (composition of maps): 如果 \(S: W \to U\) 也是一个线性映射, 那么复合映射 \(S \circ T: V \to U\) 也是一个线性映射.</li>
-</ol>
-
-<p>一般来说, 搞清楚基怎么被线性变换就搞清楚了线性变换.
-如果 \(V\) 的基是:</p>
+<p>写出增广矩阵:</p>
 
 \[\begin{equation}
-\{v_1, v_2, \ldots, v_n\}
+\left[\begin{array}{ccc|c}
+2 &amp; 3 &amp; 1 &amp; 1 \\
+4 &amp; 1 &amp; -1 &amp; 2 \\
+-2 &amp; 5 &amp; 2 &amp; 3
+\end{array}\right]
 \end{equation}\]
 
-<p>那么 \(T\) 由 \(T(v_1), T(v_2), \ldots, T(v_n)\) 唯一确定:</p>
+<p>使用初等行变换将增广矩阵化为行阶梯形矩阵:</p>
 
 \[\begin{equation}
-T(a_1 v_1 + a_2 v_2 + \ldots + a_n v_n) = a_1 T(v_1) + a_2 T(v_2) + \ldots + a_n T(v_n)
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1
+\end{array}\right]
 \end{equation}\]
 
-<hr />
-<h2 id="线性变换的矩阵表示">线性变换的矩阵表示</h2>
-
-<blockquote>
-  <p>线性变换可以用矩阵表示, 这使得计算更加方便.</p>
-</blockquote>
-
-<p>设 \(V\) 和 \(W\) 分别是 \(\mathbb{F}\) 上的 \(n\) 维和 \(m\) 维向量空间, 它们的基分别为:</p>
+<p>检查行列式:</p>
 
 \[\begin{equation}
-\{v_1, v_2, \ldots, v_n\} \quad \text{和} \quad \{w_1, w_2, \ldots, w_m\}
+\text{det} = 2 \cdot (1 \cdot 2 - (-1) \cdot 5) - 3 \cdot (4 \cdot 2 - (-1) \cdot (-2)) + 1 \cdot (4 \cdot 5 - 1 \cdot (-2)) = 2 \cdot (2 + 5) - 3 \cdot (8 - 2) + 1 \cdot (20 + 2) = 14 - 18 + 22 = 18 \neq 0
 \end{equation}\]
 
-<p>对于线性映射 \(T: V \to W\), 我们可以构造一个 \(m \times n\) 的矩阵 \(A\), 使得:</p>
+<p>因此, 方程组有唯一解.
+从行阶梯形矩阵中读出解:</p>
 
 \[\begin{equation}
-T(v_j) = \sum_{i=1}^{m} A_{ij} w_i \quad \text{对于 } j = 1, 2, \ldots, n
+\begin{cases}
+x = 1 \\
+y = 0 \\
+z = -1
+\end{cases}
 \end{equation}\]
-
-\[\begin{equation}
-A = \begin{bmatrix}
-A_{11} &amp; A_{12} &amp; \ldots &amp; A_{1n} \\
-A_{21} &amp; A_{22} &amp; \ldots &amp; A_{2n} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-A_{m1} &amp; A_{m2} &amp; \ldots &amp; A_{mn}
-\end{bmatrix}
-\end{equation}\]
-
-<p>其中, \(A_{ij}\) 是 \(T(v_j)\) 在 \(W\) 的基 \(\{w_1, w_2, \ldots, w_m\}\) 上的第 \(i\) 个分量.
-对于 \(V\) 中的任意向量 \(v = \sum_{j=1}^{n} a_j v_j\), 其在基 \(\{v_1, v_2, \ldots, v_n\}\) 上的坐标向量为:</p>
-
-\[\begin{equation}
-\begin{bmatrix}
-a_1 \\
-a_2 \\
-\vdots \\
-a_n
-\end{bmatrix}
-\end{equation}\]
-
-<p>大多数问题都能看出来.</p>
-
-<hr />
-<h2 id="核与像">核与像</h2>
-
-<blockquote>
-  <p>核 (kernel) : \(V\) 中所有被映射到 \(W\) 中零向量的向量的集合, 记作 \(\text{ker}(T)\).</p>
-</blockquote>
-
-\[\begin{equation}
-\text{ker}(T) = \{v \in V \mid T(v) = 0\}
-\end{equation}\]
-
-<p>求一个线性映射的核, 一般通过解线性方程组来实现.</p>
-
-<ol>
-  <li>写出线性映射的矩阵表示 \(A\).</li>
-  <li>解齐次线性方程组 \(A \boldsymbol{x} = 0\), 其中 \(\boldsymbol{x}\) 是 \(V\) 中向量的坐标向量.</li>
-  <li>解的集合就是核 \(\text{ker}(T)\).</li>
-</ol>
-
-<p>核的维数称为映射的零空间维数 (nullity).</p>
-
-<blockquote>
-  <p>像 (image) : \(W\) 中所有可以表示为 \(T(v)\) 的向量的集合, 记作 \(\text{im}(T)\).</p>
-</blockquote>
-
-\[\begin{equation}
-\text{im}(T) = \{w \in W \mid w = T(v) \text{ 对某些 } v \in V\}
-\end{equation}\]
-
-<p>求一个线性映射的像, 一般通过计算矩阵的列空间来实现.</p>
-
-<ol>
-  <li>写出线性映射的矩阵表示 \(A\).</li>
-  <li>计算矩阵 \(A\) 的列空间, 这可以通过行简化 (row reduction) 来实现.</li>
-  <li>列空间的维数称为映射的秩 (rank).</li>
-</ol>
-
-<p>核和像的维数满足秩-零化定理 (rank-nullity theorem):</p>
-
-\[\begin{equation}
-\text{dim}(V) = \text{rank}(T) + \text{nullity}(T)
-\end{equation}\]
-
-<p>其中, \(\text{dim}(V)\) 是 \(V\) 的维数, \(\text{rank}(T)\) 是映射 \(T\) 的秩, \(\text{nullity}(T)\) 是映射 \(T\) 的零空间维数.</p>
-
 
         
       </section>
@@ -463,19 +381,19 @@ a_n
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=Linear+Algebra+2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=Linear+Algebra+%E4%BE%8B%E9%A2%98%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLAExample%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLAExample%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/math0/LA2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/math0/LAExample/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=Linear+Algebra+2%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLA2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=Linear+Algebra+%E4%BE%8B%E9%A2%98%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fmath0%2FLAExample%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -484,10 +402,10 @@ a_n
       
   <nav class="pagination">
     
-      <a href="/PersonalPageCN/math0/LA1/" class="pagination--pager" title="Linear Algebra 1">Previous</a>
+      <a href="/PersonalPageCN/math0/LA2/" class="pagination--pager" title="Linear Algebra 2">Previous</a>
     
     
-      <a href="/PersonalPageCN/math0/LAExample/" class="pagination--pager" title="Linear Algebra 例题">Next</a>
+      <a href="/PersonalPageCN/math0/MIM/" class="pagination--pager" title="Mathematical Induction Method">Next</a>
     
   </nav>
 
