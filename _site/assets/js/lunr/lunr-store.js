@@ -53,10 +53,10 @@ var store = [{
         "url": "/PersonalPageCN/qm2/QM2-LindbladianEquation/",
         "teaser": null
       },{
-        "title": "SSP1 自由电子理论",
-        "excerpt":" ","categories": ["QM2"],
+        "title": "FGT1: 群的基础理论",
+        "excerpt":"群就是一个集合, 配备了一个满足特定性质的二元运算. 群的定义 对于一个非空集合 \\(G\\), 如果在 \\(G\\) 上定义了一个二元运算 \\(*\\). \\(\\forall a, b \\in G, a * b \\in G\\) (封闭性) \\(\\forall a, b, c \\in G, (a * b) * c = a * (b * c)\\) (结合性) \\(\\exists e \\in G, \\forall a \\in G, e * a =...","categories": ["FGT"],
         "tags": [],
-        "url": "/PersonalPageCN/qm2/CMP0-FreeElectronTheory/",
+        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup1/",
         "teaser": null
       },{
         "title": "CMP2 BCS超导理论1",

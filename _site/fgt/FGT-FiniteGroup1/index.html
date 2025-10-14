@@ -1,0 +1,997 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FGT1: 群的基础理论 - 刘沛松的赛道</title>
+<meta name="description" content="群就是一个集合, 配备了一个满足特定性质的二元运算.">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="FGT1: 群的基础理论">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup1/">
+
+
+  <meta property="og:description" content="群就是一个集合, 配备了一个满足特定性质的二元运算.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-01-01T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup1/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FGT1: 群的基础理论">
+    <meta itemprop="description" content="  群就是一个集合, 配备了一个满足特定性质的二元运算.">
+    <meta itemprop="datePublished" content="2025-01-01T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup1/" itemprop="url">FGT1: 群的基础理论
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <blockquote>
+  <p>群就是一个集合, 配备了一个满足特定性质的二元运算.</p>
+</blockquote>
+
+<hr />
+<h2 id="群的定义">群的定义</h2>
+
+<blockquote>
+  <p>对于一个非空集合 \(G\), 如果在 \(G\) 上定义了一个二元运算 \(*\).</p>
+  <ol>
+    <li>\(\forall a, b \in G, a * b \in G\) (封闭性)</li>
+    <li>\(\forall a, b, c \in G, (a * b) * c = a * (b * c)\) (结合性)</li>
+    <li>\(\exists e \in G, \forall a \in G, e * a = a * e = a\) (单位元)</li>
+    <li>\(\forall a \in G, \exists b \in G, a * b = b * a = e\) (逆元, 记作 \(a^{-1}\) )
+则称 \((G, *)\) 为一个群</li>
+  </ol>
+</blockquote>
+
+<p>立刻有几点需要单独说明</p>
+
+<ul>
+  <li>我们谈到群的时候, 一定要说明运算 \(*\) 是什么, 因为同一个集合可以配备不同的运算, 从而形成不同的群.</li>
+  <li>群乘法的解释需要你单独说明, 但不一定是算数乘法, 也可以是矩阵乘法, 置换的复合运算等.</li>
+  <li>和常见的向量空间对比起来, 不要求群的运算满足交换律, 满足交换律的群称为交换群或阿贝尔群.</li>
+  <li>群的单位元和逆元是唯一的.</li>
+</ul>
+
+<p>我们可以迅速的进行一些简单的小学生元算:</p>
+
+<ol>
+  <li>\(e * e = e\), 因为 \(e\) 是单位元.</li>
+  <li>\((a^{-1})^{-1} = a\), 因为 \(a^{-1} * a = e\), 所以 \(a^{-1}\) 的逆元是 \(a\)</li>
+  <li>\((a * b)^{-1} = b^{-1} * a^{-1}\).</li>
+  <li>\(a^n = a * a * ... * a\) (\(n\) 个 \(a\) 连乘).</li>
+  <li>\(a^0 = e\), \(a^{-n} = (a^{-1})^n\).</li>
+  <li>\(a^m * a^n = a^{m+n}\).</li>
+</ol>
+
+<p>我们这个系列中, 主要讨论有限群, 即 \(G\) 是有限集的群.
+这样我们就跟方便定义群的阶, 和群元的阶.</p>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>群的阶 $$</td>
+        <td>G</td>
+        <td>$$ 是群中元素的个数.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>元素 \(a \in G\) 的阶 $$</td>
+        <td>a</td>
+        <td>\(是满足\)a^n = e\(的最小正整数\)n\(, 如果不存在这样的\)n\(, 则\)</td>
+        <td>a</td>
+        <td>= \infty$$.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+<h2 id="二元运算">二元运算</h2>
+
+<blockquote>
+  <p>二元运算 \(*\) 是一个映射, 他把 \(G\) 中的两个元素映射到 \(G\) 中的一个元素.
+这个 \(G\) 可以任何集合, 很宽泛的.</p>
+
+\[\begin{equation}
+*: G \times G \to G
+\end{equation}\]
+</blockquote>
+
+<p>所以实际上, 二元运算的正确写法是 \(*(a, b)\), 但我们习惯写成 \(a * b\).
+在向量空间中, 向量的加法就是一个二元运算.
+但是, 向量的数乘不是二元运算, 因为数乘的第一个元素不是向量空间中的元素.</p>
+
+<hr />
+<h2 id="最简单的例子-mathbbr-">最简单的例子: \((\mathbb{R}, +)\)</h2>
+
+<p>我们现在讨论最显而易见的一种群, 即实数集 \(\mathbb{R}\) 配备代数加法 \(+\).</p>
+
+<ol>
+  <li>封闭性: \(\forall a, b \in \mathbb{R}, a + b \in \mathbb{R}\), 这是实数的定义决定的.</li>
+  <li>结合性: \(\forall a, b, c \in \mathbb{R}, (a + b) + c = a + (b + c)\), 这是小学数学的加法定义决定的.</li>
+  <li>单位元: \(\exists e \in \mathbb{R}, \forall a \in \mathbb{R}, e + a = a + e = a\), 这里 \(e = 0\).</li>
+  <li>逆元: \(\forall a \in \mathbb{R}, \exists b \in \mathbb{R}, a + b = b + a = e\), 这里 \(b = -a\).</li>
+</ol>
+
+<p>所以 \((\mathbb{R}, +)\) 是一个群.
+而且, 由于 \(a + b = b + a\), 所以 \((\mathbb{R}, +)\) 是一个交换群.
+这个群的阶是无限的, 因为 \(\mathbb{R}\) 是无限集.
+每个元素 \(a \in \mathbb{R}\) 的阶也是无限的, 因为 \(na = a+a+...+a\) (\(n\) 个 \(a\) 连加) 永远不可能等于 \(0\), 除非 \(a = 0\).</p>
+
+<p>但是知道 \(\mathbb{R}\) 是一个群, 并没有什么用, 这对于做口算题卡没有任何帮助.</p>
+
+<hr />
+<h2 id="有限群的例子-模-n-加法群-mathbbz_n-">有限群的例子: 模 \(n\) 加法群 \((\mathbb{Z}_n, +)\)</h2>
+
+<p>这种群还有一种记法, 就是 \(\mathbb{Z}/n\mathbb{Z}\), 读作 \(\mathbb{Z}\) 模 \(n\).</p>
+
+<blockquote>
+  <p>模 \(n\) 加法: \(a + b \mod n\), 其结果是 \(a + b\) 除以 \(n\) 的余数.</p>
+</blockquote>
+
+<p>这种模 \(n\) 的运算, 迅速把一个无穷多的整数, 做了一个有限的分类.
+我们首先验证 \((\mathbb{Z}_n, +)\) 是一个群.
+群元是 \(\mathbb{Z}_n = \{0, 1, 2, ..., n-1\}\), 一共有 \(n\) 个元素.
+运算是模 \(n\) 加法 \(+\).</p>
+
+<p>举个具体的例子, 设 \(n = 5\), 那么 \(\mathbb{Z}_5 = \{0, 1, 2, 3, 4\}\).
+初期学习, 我们需要对每一个元素都进行验证, 穷举掉确实所有的元素都满足如下性质:</p>
+
+<ol>
+  <li>封闭性: \(\forall a, b \in \mathbb{Z}_5, a + b \mod 5 \in \mathbb{Z}_5\).</li>
+  <li>结合性: \(\forall a, b, c \in \mathbb{Z}_5, (a + b) + c \mod 5 = a + (b + c) \mod 5\).</li>
+  <li>单位元: 这个里面自然是 \(e = 0\), 因为 \(0 + a \mod 5 = a + 0 \mod 5 = a\).</li>
+  <li>逆元: 这个需要我们一个个验证.</li>
+  <li>交换性: \(a + b \mod 5 = b + a \mod 5\).</li>
+</ol>
+
+<p>这个时候我们就发现了, 我们总而言之需要检查左右元素, 所以干脆把所有的群乘法表都列出来, 这样就一目了然了.
+这就自然而然的引出了群乘法表的概念.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">+</th>
+      <th style="text-align: center">0</th>
+      <th style="text-align: center">1</th>
+      <th style="text-align: center">2</th>
+      <th style="text-align: center">3</th>
+      <th style="text-align: center">4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>对于群元素不多的有限群, 有了群乘法表, 就基本上有了一切.</p>
+
+<blockquote>
+  <p>群乘法表有一个名字, 叫 Cayley table.
+用这个表的时候, 需要注意的是, 行和列的顺序是不能随便换的.
+我们的读法应该是: 第m行元素 * 第n列元素 = 第 m 行第 n 列的元素.</p>
+</blockquote>
+
+<hr />
+<h2 id="置换群">置换群</h2>
+
+<blockquote>
+  <p>置换群 \(S_n\) 是所有 \(n\) 个元素的排列组成的群, 元素是对所有 \(n\) 个元素的排列, 运算是排列的复合.
+也就是把一个排列的结果, 作为另一个排列的输入.</p>
+</blockquote>
+
+<p>置换群 \(S_n\) 的群元是 \(n!\) 个, 所以 \(|S_n| = n!\).
+因为你有一串数字 \(1, 2, 3, ..., n\), 你可以把它们任意排列组合.
+他们可能的排列组合一共有 \(n!\) 种, 这就是群的阶.</p>
+
+<p>我们来举个例子, 设 \(n = 3\), 那么 \(S_3\) 的阶是 \(3! = 6\).
+\(S_3\) 的群元是:</p>
+
+<ol>
+  <li>\(f_0\): 恒等映射, \(1 \to 1, 2 \to 2, 3 \to 3\)</li>
+  <li>\(f_1\): 对换, \(\{1, 2, 3\} \to \{2, 1, 3\}\)</li>
+  <li>\(f_2\): 对换, \(\{1, 2, 3\} \to \{3, 2, 1\}\)</li>
+  <li>\(f_3\): 对换, \(\{1, 2, 3\} \to \{1, 3, 2\}\)</li>
+  <li>\(f_4\): 轮换, \(\{1, 2, 3\} \to \{2, 3, 1\}\)</li>
+  <li>\(f_5\): 轮换, \(\{1, 2, 3\} \to \{3, 1, 2\}\)</li>
+</ol>
+
+<p>我们想要验证 \(S_3\) 是一个群, 那么我们需要验证群的四条性质.
+还是直接验证群乘法表, 这样最直观.
+群元素是这些排列, 运算是排列的复合, 比如 \(f_1 * f_2\) 的意思是先用 \(f_2\) 作用, 然后用 \(f_1\) 作用.</p>
+
+\[\begin{align}
+f_1: &amp; \{1, 2, 3\} \to \{2, 1, 3\} \\
+f_2: &amp; \{2, 1, 3\} \to \{2, 3, 1\} \\
+\end{align}\]
+
+<p>两次映射之后, 我们得到 \(\{1, 2, 3\} \to \{2, 3, 1\}\), 也就是 \(f_4\).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">*</th>
+      <th style="text-align: center">\(f_0\)</th>
+      <th style="text-align: center">\(f_1\)</th>
+      <th style="text-align: center">\(f_2\)</th>
+      <th style="text-align: center">\(f_3\)</th>
+      <th style="text-align: center">\(f_4\)</th>
+      <th style="text-align: center">\(f_5\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_5\)</td>
+      <td style="text-align: center">\(f_3\)</td>
+      <td style="text-align: center">\(f_1\)</td>
+      <td style="text-align: center">\(f_2\)</td>
+      <td style="text-align: center">\(f_0\)</td>
+      <td style="text-align: center">\(f_4\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>有了这个我们说什么都行了.</p>
+
+<ol>
+  <li>封闭性: 显然成立, 因为复合运算的结果还是一个排列.</li>
+  <li>结合性: 由于复合运算本身满足结合性, 所以成立.</li>
+  <li>单位元: \(f_0\) 是单位元, 显然成立.</li>
+  <li>逆元: 每个元素都有逆元, 只要去看 \(f_0\) 出现在哪一行, 那么该行的行首元素就是该元素的逆元.</li>
+  <li>交换性: 不成立, 例如 \(f_1 * f_2 \neq f_2 * f_1\).</li>
+</ol>
+
+<p>我们现在立刻可以对这个群品头论足.</p>
+
+<ul>
+  <li>这个群的元素主要可以分为两类, 对换和轮换.</li>
+  <li>对换元素包括 \(f_1, f_2, f_3\), 轮换元素包括 \(f_4, f_5\), 恒等映射 \(f_0\) 既不是对换也不是轮换.</li>
+  <li>对换的阶是 \(2\), 轮换的阶是 \(3\), 恒等映射的阶是 \(1\).</li>
+  <li>对换的逆元是它自己, 轮换的逆元是另一个轮换, 你顺着转走了, 逆着转回来.</li>
+</ul>
+
+<hr />
+<h2 id="几何变换群">几何变换群</h2>
+
+<blockquote>
+  <p>几何变换群是对几何图形进行变换的群, 例如平移, 旋转, 反射等.</p>
+</blockquote>
+
+<p>我们来考虑一个几何图形, 例如一个等边三角形.
+这个等边三角形有 3 个顶点, 他们在一个单位圆上, 顶点的角度是 \(0\), \(2\pi/3\), \(4\pi/3\).
+我们可以对这个等边三角形进行一些变换, 例如旋转 \(2\pi/3\), 旋转 \(4\pi/3\), 反射等.
+这些变换可以把等边三角形映射到它自己, 也就是把顶点映射到顶点.</p>
+
+<p>我们现在定义 \(D_3\) 群, 集合所有的几何变换保持等边三角形不变.
+群的加法是变换的复合, 也就是先做一个变换, 然后做另一个变换.
+这个群的群元包括:</p>
+
+<ol>
+  <li>\(R_0\): 恒等映射, 也就是不变.</li>
+  <li>\(R_1\): 顺时针旋转 \(2\pi/3\).</li>
+  <li>\(R_2\): 顺时针旋转 \(4\pi/3\).</li>
+  <li>\(S_1\): 关于顶点 1 的垂直平分线反射.</li>
+  <li>\(S_2\): 关于顶点 2 的垂直平分线反射.</li>
+  <li>\(S_3\): 关于顶点 3 的垂直平分线反射.</li>
+</ol>
+
+<p>我们来验证 \(D_3\) 是一个群.
+我们还是直接写出群乘法表.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">*</th>
+      <th style="text-align: center">\(R_0\)</th>
+      <th style="text-align: center">\(R_1\)</th>
+      <th style="text-align: center">\(R_2\)</th>
+      <th style="text-align: center">\(S_1\)</th>
+      <th style="text-align: center">\(S_2\)</th>
+      <th style="text-align: center">\(S_3\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>我们自然是可以用矩阵来表示所有的旋转和反射, 从而进行数学验证.
+但是我们也要保持对于晶体和分子结构的敏锐几何直觉, 所以我们还是用这种直观观察图形的方法来验证群的四条性质.</p>
+
+<ul>
+  <li>这不是一个交换群, 例如 \(R_1 * S_1 \neq S_1 * R_1\), 平白的想, 你先旋转再反射, 和先反射再旋转, 结果是不一样的.</li>
+  <li>这个群的单位元是 \(R_0\), 显然成立.</li>
+  <li>逆元: 我们以 \(R_1\) 为例, 我们把三角形顺时针旋转 \(2\pi/3\), 虽然最自然的想法是逆时针旋转 \(2\pi/3\), 但是这个实际上等价于顺时针旋转 \(4\pi/3\), 也就是 \(R_2\), 所以 \(R_1\) 的逆元是 \(R_2\).</li>
+  <li>我们还有很多几何操作都能让三角形不变, 但是这些集合操作肯定都是和群内元素等价的, 所以我们已经穷举完了所有的群元.</li>
+  <li>这个群的阶数就是 \(6\), 因为我们一共找到了 \(6\) 个群元.</li>
+</ul>
+
+<hr />
+<h2 id="正方形">正方形</h2>
+
+<blockquote>
+  <p>正方形的对称群 \(D_4\) 包含了所有保持正方形不变的几何变换, 包括旋转和反射.
+这个群的阶是 \(8\), 因为正方形有 \(8\) 个对称变换.</p>
+</blockquote>
+
+<p>我们还是把正方形放到一个单位圆上, 我们来列出 \(D_4\) 的群元:</p>
+
+<ol>
+  <li>\(R_0\): 恒等映射, 也就是不变.</li>
+  <li>\(R_1\): 顺时针旋转 \(\pi/2\).</li>
+  <li>\(R_2\): 顺时针旋转 \(\pi\).</li>
+  <li>\(R_3\): 顺时针旋转 \(3\pi/2\).</li>
+  <li>\(S_1\): 关于水平中线反射.</li>
+  <li>\(S_2\): 关于垂直中线反射.</li>
+  <li>\(S_3\): 关于左上-右下对角线反射.</li>
+  <li>\(S_4\): 关于右上-左下对角线反射.</li>
+</ol>
+
+<p>我们来验证 \(D_4\) 是一个群.
+我们还是直接写出群乘法表.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">*</th>
+      <th style="text-align: center">\(R_0\)</th>
+      <th style="text-align: center">\(R_1\)</th>
+      <th style="text-align: center">\(R_2\)</th>
+      <th style="text-align: center">\(R_3\)</th>
+      <th style="text-align: center">\(S_1\)</th>
+      <th style="text-align: center">\(S_2\)</th>
+      <th style="text-align: center">\(S_3\)</th>
+      <th style="text-align: center">\(S_4\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_4\)</td>
+      <td style="text-align: center">\(S_3\)</td>
+      <td style="text-align: center">\(S_2\)</td>
+      <td style="text-align: center">\(S_1\)</td>
+      <td style="text-align: center">\(R_3\)</td>
+      <td style="text-align: center">\(R_2\)</td>
+      <td style="text-align: center">\(R_1\)</td>
+      <td style="text-align: center">\(R_0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>这不是一个交换群, 例如 \(R_1 * S_1 \neq S_1 * R_1\).</li>
+  <li>这个群的单位元是 \(R_0\), 显然成立.</li>
+  <li>逆元: 我们以 \(R_1\) 为例, 我们把正方形顺时针旋转 \(\pi/2\), 逆时针旋转 \(\pi/2\) 等价于顺时针旋转 \(3\pi/2\), 也就是 \(R_3\), 所以 \(R_1\) 的逆元是 \(R_3\).</li>
+  <li>这个群的阶数就是 \(8\).</li>
+  <li>这个群里面有 \(4\) 个旋转元素, \(4\) 个反射元素.</li>
+  <li>旋转元素的阶分别是 \(1, 4, 2, 4\), 这个可以看什么时候转 \(2\pi\) 的整数倍.</li>
+  <li>反射元素的阶都是 \(2\).</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#fgt" class="page__taxonomy-item p-category" rel="tag">FGT</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-01-01T00:00:00+11:00">January 1, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=FGT1%3A+%E7%BE%A4%E7%9A%84%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup1%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup1%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup1/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=FGT1%3A+%E7%BE%A4%E7%9A%84%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup1%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-LindbladianEquation/" class="pagination--pager" title="QM2 Lindblad量子动力学方程">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/cmp2/CMP2-BCS1/" class="pagination--pager" title="CMP2 BCS超导理论1">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
