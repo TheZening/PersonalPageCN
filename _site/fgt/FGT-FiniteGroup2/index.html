@@ -1,0 +1,918 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FGT: 2. 群的拆分 - 刘沛松的赛道</title>
+<meta name="description" content="群太大了, 我们需要把它拆分成更小的部分来研究.">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="FGT: 2. 群的拆分">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup2/">
+
+
+  <meta property="og:description" content="群太大了, 我们需要把它拆分成更小的部分来研究.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-01-01T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup2/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FGT: 2. 群的拆分">
+    <meta itemprop="description" content="群太大了, 我们需要把它拆分成更小的部分来研究.">
+    <meta itemprop="datePublished" content="2025-01-01T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup2/" itemprop="url">FGT: 2. 群的拆分
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>群太大了, 我们需要把它拆分成更小的部分来研究.</p>
+
+<blockquote>
+  <p>怎么拆?</p>
+</blockquote>
+
+<hr />
+<h2 id="子群">子群</h2>
+
+<blockquote>
+  <p>大群 \(G\) 拆一些元素出来, 如果这些元素本身也构成一个群 \(H\), 那么这个小群就叫做子群, 记作 \(H \subseteq G\).</p>
+</blockquote>
+
+<p>检查 \(H\) 是否是 \(G\) 的子群, 可以使用如下的定理:</p>
+
+<blockquote>
+\[H \subseteq G  \Leftrightarrow \forall a, b \in H, a * b^{-1} \in H\]
+</blockquote>
+
+<p>当然, 很多情况下都能一眼看出来某些元素的逆根本不在 \(H\) 里, 那么就直接否定了 \(H\) 是 \(G\) 的子群.</p>
+
+<p>举个例子, 我们考虑大群 \((\mathbb{Z}_5, +)\), 以及它的子集 \(H = \{0, 2, 4\}\). 我们来检查 \(H\) 是否是 \(G\) 的子群.
+我们注意到:</p>
+
+\[\begin{equation}
+4^{-1} = 1 \notin H
+\end{equation}\]
+
+<p>所以 \(H\) 不是 \(G\) 的子群.</p>
+
+<hr />
+<h2 id="陪集">陪集</h2>
+
+<p>我们每次说陪集, 说的都是一个子群 \(H\) 关于某一个元素 \(g_0 \in G\) 的陪集.</p>
+
+<blockquote>
+  <p>考虑 \(H \subseteq G\), 以及 \(g_0 \in G\), 那么 \(H\) 关于 \(g_0\) 的左陪集定义为:
+$$
+\begin{equation}
+g_0 H = { g_0 * h | h \in H }
+\end{equation}</p>
+
+  <p>\(H\) 关于 \(g_0\) 的 右陪集定义为:
+\(\begin{equation}
+H g_0 = \{ h * g_0 | h \in H \}
+\end{equation}\)</p>
+</blockquote>
+
+<p>是就是挑个 \(g_0\), 把一个子群里的每个元素都和 \(g_0\) 做一次群运算, 就得到了陪集.</p>
+
+<ul>
+  <li>左陪集是 \(g_0\) 在前面, 右陪集是 \(g_0\) 在后面.</li>
+  <li>如果 \(G\) 是交换群, 那么左陪集和右陪集是一样的.</li>
+  <li>陪集的大小和 \(H\) 一样大, 但元素可能不一样.</li>
+  <li>不同的 \(g_0\) 可能会得到相同的陪集.</li>
+  <li>陪集可以用来把 \(G\) 拆分成不相交的几部分.</li>
+  <li>但是! 陪集不一定是群, 因为它不一定包含单位元和逆元.</li>
+</ul>
+
+<p>举个例子, 我们考虑置换群 \(S_3\).
+我们先列出他的子群:</p>
+
+<ol>
+  <li>\(H_1 = \{f_0, f_1\}\).</li>
+  <li>\(H_2 = \{f_0, f_2\}\).</li>
+  <li>\(H_3 = \{f_0, f_3\}\).</li>
+  <li>\(H_4 = \{f_0, f_4, f_5\}\).</li>
+</ol>
+
+<ul>
+  <li>我们此时发现, 每个对换都是一个子群, 以及所有的三循环也构成一个子群.</li>
+</ul>
+
+<p>我们来计算关于 \(H_4\) 的所有左陪集:</p>
+
+<ol>
+  <li>\(f_0 H_4 = \{f_0, f_4, f_5\}\).</li>
+  <li>\(f_1 H_4 = \{f_1, f_3, f_2\}\).</li>
+  <li>\(f_2 H_4 = \{f_2, f_1, f_3\}\).</li>
+  <li>\(f_3 H_4 = \{f_3, f_2, f_1\}\).</li>
+  <li>\(f_4 H_4 = \{f_4, f_5, f_0\}\).</li>
+  <li>\(f_5 H_4 = \{f_5, f_0, f_4\}\).</li>
+</ol>
+
+<p>以及关于 \(H_4\) 的所有右陪集:</p>
+
+<ol>
+  <li>\(H_4 f_0 = \{f_0, f_4, f_5\}\).</li>
+  <li>\(H_4 f_1 = \{f_1, f_2, f_3\}\).</li>
+  <li>\(H_4 f_2 = \{f_2, f_3, f_1\}\).</li>
+  <li>\(H_4 f_3 = \{f_3, f_1, f_2\}\).</li>
+  <li>\(H_4 f_4 = \{f_4, f_5, f_0\}\).</li>
+  <li>\(H_4 f_5 = \{f_5, f_0, f_4\}\).</li>
+</ol>
+
+<ul>
+  <li>陪集就像是用一个元素把子群 \(H_4\) 整体地“搬”到群 \(S_3\) 的不同位置上.</li>
+  <li>当然, 陪集不一定是群, 因为它不一定包含单位元和逆元.</li>
+  <li>但是, 陪集可以用来把 \(G\) 拆分成不相交的几部分.</li>
+  <li>我们发现, 不同的 \(g_0\) 可能会得到相同的陪集.</li>
+  <li>对于这个例子, 左陪集和右陪集是一样的!</li>
+</ul>
+
+<blockquote>
+  <p>我们称 \(H_4\) 是 \(S_3\) 的正规子群.</p>
+</blockquote>
+
+<blockquote>
+  <p>(陪集分解定理): 对于有限群 \(G\) 和它的子群 \(H\), 所有不同的左陪集(或右陪集)的个数是有限的, 并且 \(|G| = |H| \cdot m\), 其中 \(m\) 是不同的左陪集(或右陪集)的个数.</p>
+  <ol>
+    <li>两个不同的左陪集(或右陪集)要么完全相同, 要么没有交集.</li>
+    <li>陪集的并集是整个群 \(G\).</li>
+    <li>不同的陪集的个数 \(m\) 称为 \(H\) 在 \(G\) 中的指数, 记作 \([G : H]\).</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>利用这个定理, 我们可以把一个大群 \(G\) 拆成 \(m\) 个大小相同的部分, 每个部分的大小是 $$</td>
+        <td>H</td>
+        <td>$$.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+<h2 id="等价类">等价类</h2>
+
+<p>现在复习一下等价类的概念.
+我们可以基于集合来定义关系和函数.</p>
+
+<blockquote>
+  <p>(二元关系): 考虑两个集合 \(A\) 和 \(B\), 从 \(A\) 到 \(B\) 的一个二元关系是Cartesian product \(A \times B\) 的一个子集:
+\(\begin{equation}
+R \subseteq A \times B := \{(a, b) \mid a \in A, b \in B\}
+\end{equation}\)</p>
+</blockquote>
+
+<p>更准确地说, 二元关系是由有序对组成的集合, 其中第一个元素来自 \(A\), 第二个元素来自 \(B\).
+它列出了所有符合你期望的可能结果.
+例如:</p>
+
+\[\begin{equation}
+R = \{(1, 2), (2, 3), (3, 4)\} \subseteq \{1, 2, 3\} \times \{2, 3, 4\}
+\end{equation}\]
+
+<p>是一个从 \(\{1, 2, 3\}\) 到 \(\{2, 3, 4\}\) 的关系.
+另一个例子:</p>
+
+\[\begin{equation}
+R = \{(1, 7), (1, 8), (1, 9), (3, 7)\}
+\end{equation}\]
+
+<p>是一个从 \(\{1, 3\}\) 到 \(\{7, 8, 9\}\) 的关系.
+它不一定必须是数字, 它可以是任何对象.
+比如集合:</p>
+
+\[\begin{equation}
+S = \{(x,y) \in \mathbb{N}^2 \mid y = x +1 \}
+\end{equation}\]
+
+<p>是一个从 \(\mathbb{N}\) 到 \(\mathbb{N}\) 的关系.</p>
+
+<p>现在我们来定义一个关系的定义域和值域.</p>
+
+<blockquote>
+  <p>(定义域与值域):
+关系 \(R\) 的定义域是 \(R\) 中所有有序对的第一个元素所组成的集合, 记作 \(\text{Dom}(R)\).<br />
+关系 \(R\) 的值域是 \(R\) 中所有有序对的第二个元素所组成的集合, 记作 \(\text{Range}(R)\).<br />
+形式化地表示为: 
+\(\begin{align}
+\text{Dom}(R) &amp;= \{a \in A \mid \exists b \in B, (a, b) \in R\} \\
+\text{Range}(R) &amp;= \{b \in B \mid \exists a \in A, (a, b) \in R\}
+\end{align}\)</p>
+</blockquote>
+
+<p>例如, 对于关系 \(R = \{(1, 2), (2, 3), (3, 4)\}\):</p>
+
+\[\begin{align}
+\text{Dom}(R) &amp;= \{1, 2, 3\} \\
+\text{Range}(R) &amp;= \{2, 3, 4\}
+\end{align}\]
+
+<p>现在我们关注从一个集合到它自身的关系, 这种关系称为集合上的关系.</p>
+
+<blockquote>
+  <p>(集合上的关系):
+集合 \(A\) 上的一个关系是从 \(A\) 到 \(A\) 的二元关系, 即 \(A \times A\) 的一个子集.<br />
+形式化地定义为: 
+\(\begin{equation}
+R \subseteq A \times A := \{(a, b) \mid a \in A, b \in A\}
+\end{equation}\)</p>
+</blockquote>
+
+<p>我们可以立即定义集合上关系的一些重要性质.</p>
+
+<blockquote>
+  <p>(自反关系):
+如果集合 \(A\) 上的一个关系 \(R\) 满足每个元素都与自身相关, 即对于所有 \(a \in A\), 
+\(\begin{equation}
+(a, a) \in R
+\end{equation}\)
+则称 \(R\) 为自反关系.</p>
+</blockquote>
+
+<blockquote>
+  <p>(对称关系):
+如果集合 \(A\) 上的一个关系 \(R\) 满足: \(\forall a, b \in A\), 
+\(\begin{equation}
+(a, b) \in R \Rightarrow (b, a) \in R
+\end{equation}\)
+则称 \(R\) 为对称关系.</p>
+</blockquote>
+
+<blockquote>
+  <p>(传递关系):
+如果集合 \(A\) 上的一个关系 \(R\) 满足: \(\forall a, b, c \in A\), 
+\(\begin{equation}
+(a, b) \in R \land (b, c) \in R \Rightarrow (a, c) \in R
+\end{equation}\)
+则称 \(R\) 为传递关系.</p>
+</blockquote>
+
+<blockquote>
+  <p>(反对称关系)
+如果集合 \(A\) 上的一个关系 \(R\) 满足: \(\forall a, b \in A\), 
+\(\begin{equation}
+(a, b) \in R \land (b, a) \in R \Rightarrow a = b
+\end{equation}\)
+则称 \(R\) 为反对称关系.</p>
+</blockquote>
+
+<p>主要有三种重要的关系类型:</p>
+<ol>
+  <li>等价关系 (Equivalence Relation) : 一个同时具备自反性、对称性和传递性的关系.</li>
+  <li>偏序关系 (Partial Order) : 一个同时具备自反性、反对称性和传递性的关系.</li>
+  <li>全序关系 (Total Order) : 一个具备反对称性、传递性和连通性的关系, 其中“连通性”指 \(\forall a, b \in A\), 要么 \((a, b) \in R\), 要么 \((b, a) \in R\).</li>
+</ol>
+
+<p>现在我们给出这些关系的一些例子.
+在任意集合上, 相等关系 (=) 是一个等价关系.<br />
+它的形式化定义为:</p>
+
+\[\begin{equation}
+R_{=} = \{(a, b) \in A \times A \mid a = b\}
+\end{equation}\]
+
+<ul>
+  <li>它是自反的, 因为对于任意 \(a \in A\), 有 \((a, a) \in R_{=}\).</li>
+  <li>它是对称的, 因为若 \((a, b) \in R_{=}\), 则 \(a = b\), 因此 \(b = a\), 即 \((b, a) \in R_{=}\).</li>
+  <li>它是传递的, 因为若 \((a, b) \in R_{=}\) 且 \((b, c) \in R_{=}\), 则 \(a = b\) 且 \(b = c\), 从而 \(a = c\), 即 \((a, c) \in R_{=}\).</li>
+  <li>因此, 相等关系是一个等价关系.</li>
+</ul>
+
+<p>接下来, 我们给出一个偏序关系的例子.<br />
+实数集 \(\mathbb{R}\) 上的“\(\leq\)”关系是一个偏序关系.<br />
+其形式化定义为:</p>
+
+\[\begin{equation}
+R_{\leq} = \{(a, b) \in \mathbb{R} \times \mathbb{R} \mid a \leq b\}
+\end{equation}\]
+
+<ul>
+  <li>它是自反的, 因为对于任意 \(a \in \mathbb{R}\), 有 \((a, a) \in R_{\leq}\).</li>
+  <li>它是反对称的, 因为如果 \((a, b) \in R_{\leq}\) 且 \((b, a) \in R_{\leq}\), 则 \(a \leq b\) 且 \(b \leq a\), 这意味着 \(a = b\), 因此 \((a, b) \in R_{\leq}\) 且 \((b, a) \in R_{\leq}\).</li>
+  <li>它是传递的, 因为如果 \((a, b) \in R_{\leq}\) 且 \((b, c) \in R_{\leq}\), 则 \(a \leq b\) 且 \(b \leq c\), 这意味着 \(a \leq c\), 所以 \((a, c) \in R_{\leq}\).</li>
+  <li>因此, \(\leq\) 关系是一个偏序关系.</li>
+</ul>
+
+<p>在我们的讨论中, 我们主要关注等价关系.<br />
+集合论中一个非常重要的概念是等价类 (Equivalence Class) .</p>
+
+<blockquote>
+  <p>(等价类): 给定集合 \(A\) 上的一个等价关系 \(R\), 元素 \(a \in A\) 的等价类是与 \(a\) 通过 \(R\) 相关的所有元素所组成的集合, 记作 \([a]\).<br />
+形式化地定义为: 
+\(\begin{equation}
+[a] = \{b \in A \mid (a, b) \in R\}
+\end{equation}\)</p>
+</blockquote>
+
+<p>你所需要做的只是指定你想使用哪种关系.
+例如, 如果我们使用相等关系 \(R_{=}\), 那么元素 \(a\) 的等价类就是仅包含 \(a\) 本身的集合:</p>
+
+\[\begin{equation}
+[a] = \{a\}
+\end{equation}\]
+
+<p>如果我们使用“模 \(n\) 同余”关系, 那么元素 \(a\) 的等价类是所有与 \(a\) 模 \(n\) 同余的整数所组成的集合:</p>
+
+\[\begin{equation}
+[a] = \{b \in \mathbb{Z} \mid b \equiv a \mod n\}
+\end{equation}\]
+
+<p>这意味着在 \(a\) 的等价类中的所有整数在被 \(n\) 除时余数相同.</p>
+
+<p>一个具体的例子: 若 \(n = 3\) 且 \(a = 1\), 则 \(1\) 模 \(3\) 的等价类为:</p>
+
+\[\begin{equation}
+[1] = \{1, 4, 7, 10, \ldots, -2, -5, -8, \ldots\}
+\end{equation}\]
+
+<p>这个集合包含了所有被 \(3\) 除后余数为 \(1\) 的整数.</p>
+
+<p>到目前为止, 我们主要强调了在特定等价关系下某个元素的等价类 (即 \(a\) 的等价类) 的概念. 
+如果我们收集集合 \(A\) 中所有可能的等价类, 就可以定义关系 \(R\) 的等价类集合.</p>
+
+<p>例如, 考虑整数集 \(\mathbb{Z}\) 和“模 \(3\) 同余”这一等价关系, 我们可以写出以下等价类:</p>
+
+\[\begin{align}
+  [0] &amp;= \{0, 3, 6, 9, \ldots, -3, -6, -9, \ldots\} \\
+  [1] &amp;= \{1, 4, 7, 10, \ldots, -2, -5, -8, \ldots\} \\
+  [2] &amp;= \{2, 5, 8, 11, \ldots, -1, -4, -7, \ldots\}
+\end{align}\]
+
+<p>在 \([2]\) 之后, 我们不会得到新的等价类, 因为任何整数都属于其中的某一个.
+因此, 模 \(3\) 同余关系在 \(\mathbb{Z}\) 上的等价类为:</p>
+
+\[\begin{equation}
+\{[0], [1], [2]\}
+\end{equation}\]
+
+<p>另一个很好的例子来自一些离散的数字.<br />
+考虑集合 \(A = \{1, 2, 3\}\), 定义一个等价关系 \(R\) 为:</p>
+
+\[\begin{equation}
+R = \{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)\}
+\end{equation}\]
+
+<p>这个关系是自反的、对称的、传递的, 因此它是一个等价关系.</p>
+
+<p>它的等价类为: 
+\(\begin{align}
+[1] &amp;= \{1, 2\} \\
+[2] &amp;= \{1, 2\} \\
+[3] &amp;= \{3\}
+\end{align}\)</p>
+
+<p>因此, \(R\) 在 \(A\) 上的等价类为: 
+\(\begin{equation}
+\{[1], [2], [3]\} = \{\{1, 2\}, \{3\}\}
+\end{equation}\)</p>
+
+<p>在这里我们注意到等价类 \([1]\) 和 \([2]\) 是相同的, 因此我们可以将它们合并为一个类.<br />
+事实上, 我们有一个非常重要的定理:</p>
+
+<blockquote>
+  <p>(划分定理): 集合 \(A\) 上的一个等价关系会将 \(A\) 划分为互不相交的等价类.
+也就是说, 这些等价类两两不相交, 它们的并集等于整个集合 \(A\).</p>
+</blockquote>
+
+<p>这意味着集合 \(A\) 中的每个元素恰好属于一个等价类, 且不同等价类之间没有重叠.</p>
+
+<p>在我们的例子中, 等价类 \(\{[1], [2]\}\) 合并为一个类 \(\{1, 2\}\), 而等价类 \(\{3\}\) 独立存在.
+因此, 集合 \(A\) 被划分为两个互不相交的子集: \(\{1, 2\}\) 和 \(\{3\}\).
+等价类将原集合 \(A\) 压缩成一个由不同类组成的较小集合.</p>
+
+<p>一个与之密切相关的概念是商集 (Quotient Set) .</p>
+
+<blockquote>
+  <p>(商集) 集合 \(A\) 关于等价关系 \(R\) 的商集是 \(A\) 在关系 \(R\) 下所有等价类的集合, 记作 \(A/R\) 或 \(A/\sim\).<br />
+形式化地定义为: 
+\(\begin{equation}
+A/R = \{[a] \mid a \in A\}
+\end{equation}\)</p>
+</blockquote>
+
+<p>商集是集合 \(A\) 在等价关系 \(R\) 下所有不同等价类所组成的集合.<br />
+在我们的例子中, 集合 \(A\) 关于等价关系 \(R\) 的商集为:</p>
+
+\[\begin{equation}
+A/R = \{\{1, 2\}, \{3\}\}
+\end{equation}\]
+
+<hr />
+<h2 id="正规子群与商群">正规子群与商群</h2>
+
+<p>经过这些介绍, 我们注意到: 陪集可能就是一种等价类.</p>
+
+<blockquote>
+  <p>(陪集与等价类): 给定群 \(G\) 及其子群 \(H\), 定义在 \(G\) 上的关系 \(R\) 如下:
+\(\begin{equation}
+(g_1, g_2) \in R \Leftrightarrow g_1^{-1} * g_2 \in H
+\end{equation}\)
+则 \(R\) 是 \(G\) 上的一个等价关系, 如果我们把所有等价于 \(g_1\) 的元素 \(g_2\) 都找出来, 那么得到的集合就是 \(g_1\) 关于 \(H\) 的左陪集 \(g_1 H\).</p>
+</blockquote>
+
+<p>我们先看看这个关系 \(R\) 是否是等价关系.</p>
+
+<ol>
+  <li>自反性: 对于任意 \(g \in G\), 有 \((g, g) \in R\), 因为 \(g^{-1} * g = e \in H\) (其中 \(e\) 是 \(H\) 的单位元).</li>
+  <li>对称性: 如果 \((g_1, g_2) \in R\), 则 \(g_1^{-1} * g_2 \in H\). 因为 \(H\) 是子群, 所以 \((g_1^{-1} * g_2)^{-1} = g_2^{-1} * g_1 \in H\), 因此 \((g_2, g_1) \in R\).</li>
+  <li>传递性: 如果 \((g_1, g_2) \in R\) 且 \((g_2, g_3) \in R\), 则 \(g_1^{-1} * g_2 \in H\) 且 \(g_2^{-1} * g_3 \in H\). 因为 \(H\) 是子群, 所以 \((g_1^{-1} * g_2) * (g_2^{-1} * g_3) = g_1^{-1} * g_3 \in H\), 因此 \((g_1, g_3) \in R\).</li>
+</ol>
+
+<p>因此, \(R\) 是 \(G\) 上的一个等价关系.
+现在我们来看看 \(g_1\) 的等价类 \([g_1]\) 是什么:</p>
+
+\[\begin{equation}
+[g_1] = \{g_2 \in G \mid (g_1, g_2) \in R\} = \{g_1 * h \mid h \in H\} = g_1 H
+\end{equation}\]
+
+<p>确实是个等价类.
+我们之前说了, 我们可以把 \(G\) 拆成不相交的几部分, 每一部分就是一个陪集.
+现在看来, 更准确的说是, 我们把 \(G\) 拆成不相交的等价类, 每一个等价类就是一个陪集.</p>
+
+<ul>
+  <li>当然了, 这些等价类的集合, 也就是陪集的集合, 叫做商集.</li>
+  <li>但是, 陪集不一定是群</li>
+  <li>一种特殊情况是: \(H\) 是 \(G\) 的正规子群 (Normal Subgroup), 也就是说, 对于所有 \(g \in G\), 都有 \(g H = H g\), 那么关于 \(H\) 的所有陪集就构成一个群, 叫做商群 (Quotient Group), 记作 \(G/H\).</li>
+</ul>
+
+<blockquote>
+  <p>(商群): 给定群 \(G\) 及其正规子群 \(H\), 定义商群 \(G/H\) 为所有 \(H\) 的左陪集的集合, 即:
+\(\begin{equation}
+G/H = \{g H \mid g \in G\}
+\end{equation}\)
+商群 \(G/H\) 上的群运算定义为:
+\(\begin{equation}
+(g_1 H) * (g_2 H) = (g_1 * g_2) H
+\end{equation}\)</p>
+</blockquote>
+
+<p>我们之前的例子里, \(H_4 = \{f_0, f_4, f_5\}\) 是 \(S_3\) 的正规子群.
+我们计算关于 \(H_4\) 的所有左陪集 (就是等价类):</p>
+
+<ol>
+  <li>\([f_0] = f_0 H_4 = \{f_0, f_4, f_5\}\).</li>
+  <li>\([f_1] = f_1 H_4 = \{f_1, f_3, f_2\}\).</li>
+</ol>
+
+<p>只有这两种, 其余的陪集都和这两个相同.
+所以商集为:</p>
+
+\[\begin{equation}
+S_3 / H_4 = \{ [f_0], [f_1] \}
+\end{equation}\]
+
+<p>我们来验证一下商群的运算:</p>
+
+\[\begin{equation}
+[f_0] * [f_0] = [f_0], \quad [f_0] * [f_1] = [f_1], \quad [f_1] * [f_0] = [f_1], \quad [f_1] * [f_1] = [f_0]
+\end{equation}\]
+
+<p>总结一下我们有的信息:</p>
+
+<ol>
+  <li>任意两个陪集要么完全相同, 要么没有交集.</li>
+  <li>陪集的并集是整个群 \(G\).</li>
+  <li>每一个陪集都可以看作 \(G\) 上的一个等价类, 等价关系是\(g_1^{-1} * g_2 \in H\).</li>
+</ol>
+
+<hr />
+
+<h2 id="lagrange-定理">Lagrange 定理</h2>
+
+<blockquote>
+  <p>(Lagrange 定理): 给定有限群 \(G\) 及其子群 \(H\), 则 \(\|G\| = \|H\| \cdot [G : H]\), 其中 \([G : H]\) 是 \(H\) 在 \(G\) 中的指数, 即不同陪集的个数.</p>
+</blockquote>
+
+<blockquote>
+  <p>反过来说, 如果我们知道了一个子群 \(H\) 可以诱导出 \(m\) 个不同的陪集 (等价类), 那么我们立刻可以计算出 \(H\) 的阶数: \(\|H\| = \frac{\|G\|}{m}\).</p>
+</blockquote>
+
+<p>其实这没有什么令人意外的, 还是看之前的例子:</p>
+
+<ol>
+  <li>\(S_3\) 的阶数是 \(6\).</li>
+  <li>\(H_4 = \{f_0, f_4, f_5\}\) 的阶数是 \(3\).</li>
+  <li>关于 \(H_4\) 的陪集 (等价类) 有 \(2\) 个: \([f_0]\) 和 \([f_1]\).</li>
+  <li>符合 Lagrange 定理: \(\|S_3\| = \|H_4\| \cdot 2 = 3 \cdot 2 = 6\).</li>
+</ol>
+
+<p>这完全就是显而易见的直觉!</p>
+
+<ol>
+  <li>在 \(H_4\) 里已经有三个元素了, 还剩下三个.</li>
+  <li>无论如何我们得想办法把剩下的元素都能把 \(H_4\) 元素运算一下覆盖到剩下三个元素.</li>
+  <li>我们如果想要覆盖到 \(f_1\), 最简单的就是用 \(f_1\) 自己乘 \(H_4\), 这样先不用算其他的, 我们至少覆盖到了 \(f_1\).</li>
+  <li>既然两个陪集要么完全相同, 要么没有交集, 个数还得一样, 那么说明 \(f_1 H_4\) 里面必须得有 \(f_2\) 和 \(f_3\).</li>
+  <li>这样我们就把 \(S_3\) 的所有元素都覆盖到了, 而且每个陪集的大小都是 \(3\).</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#fgt" class="page__taxonomy-item p-category" rel="tag">FGT</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-01-01T00:00:00+11:00">January 1, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=FGT%3A+2.+%E7%BE%A4%E7%9A%84%E6%8B%86%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup2%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup2%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup2/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=FGT%3A+2.+%E7%BE%A4%E7%9A%84%E6%8B%86%E5%88%86%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup2%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/fgt/FGT-FiniteGroup1-copy/" class="pagination--pager" title="FGT: 1. 群的基础理论">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/cmp2/CMP2-BCS1/" class="pagination--pager" title="CMP2 BCS超导理论1">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

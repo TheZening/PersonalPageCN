@@ -1,4 +1,329 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-15T00:26:08+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-15T01:53:49+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/" rel="alternate" type="text/html" title="QM2 角动量与中心势3" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/"><![CDATA[<p>现在我们来聊聊我们上一个内容里发现的神秘的数学结构.
+仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元.
+我们先站的远一点, 回想一些线性代数的知识.</p>
+
+<hr />
+<h2 id="线性空间与张量积">线性空间与张量积</h2>
+
+<p>我们专注于一个有限维的线性空间\(V_1\), 其维数为\(n_1\).
+他有一个基底\(\{\ket{a_i}\}, i=1,2,\cdots,n_1\).
+我们可以把\(V_1\)中的任意向量\(\ket{v}\)表示为</p>
+
+\[\begin{equation}
+\ket{v} = \sum_{i=1}^{n_1} v_i \ket{a_i}
+\end{equation}\]
+
+<p>现在我们再考虑另一个有限维线性空间\(V_2\), 其维数为\(n_2\).
+他有一个基底\(\{\ket{b_j}\}, j=1,2,\cdots,n_2\).
+我们可以把\(V_2\)中的任意向量\(\ket{w}\)表示为</p>
+
+\[\begin{equation}
+\ket{w} = \sum_{j=1}^{n_2} w_j \ket{b_j}
+\end{equation}\]
+
+<p>我们现在想构造一个新的线性空间\(V_3\), 我们QM1研究过, 张量积是更恰当的构造方法, 维度相乘扩展, 而不是相加.</p>
+
+\[\begin{equation}
+\dim(V_3) = \dim(V_1) \times \dim(V_2) = n_1 n_2
+\end{equation}\]
+
+<p>这样可以容纳\(V_1\)和\(V_2\)的所有信息.
+\(V_3\)的基底可以写成\(\{\ket{a_i}\otimes\ket{b_j}\}, i=1,2,\cdots,n_1, j=1,2,\cdots,n_2\).
+我们可以把\(V_3\)中的任意向量\(\ket{u}\)表示为</p>
+
+\[\begin{equation}
+\ket{u} = \sum_{i=1}^{n_1} \sum_{j=1}^{n_2} u_{ij} \ket{a_i}\otimes\ket{b_j}
+\end{equation}\]
+
+<p>目前看来, 这是最一般的套路, 没什么问题.
+这也是我们观察到的: 角动量的耦合空间, 是两个角动量空间的张量积空间.
+但是, 我们发现了一个奇怪的现象: 角动量的耦合空间, 似乎有另外一套基底.
+这套基底不是\(\{\ket{j_1, m_1}\otimes\ket{j_2, m_2}\}\), 而是\(\{\ket{J, M}\}\).
+尤其是两个例子中遇到到\(3+1\)和\(4+2\)的情况.
+仿佛是维度相加?</p>
+
+<hr />
+<h2 id="直和分解">直和分解</h2>
+
+<p>我们先复习一下直和这个概念.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(W_1\)和\(W_2\)是\(V\)的两个子空间.
+首先, 如果\(W_1 + W_2 = V\):
+\(\begin{equation}
+\forall \ket{v} \in V, \exists \ket{w_1} \in W_1, \exists \ket{w_2} \in W_2, \ket{v} = \ket{w_1} + \ket{w_2}
+\end{equation}\)
+那么\(V\)是\(W_1\)和\(W_2\)的和空间, 记为\(V = W_1 + W_2\).
+其次, 如果\(W_1 \cap W_2 = \{\ket{0}\}\):
+\(\begin{equation}
+\ket{w} \in W_1, \ket{w} \in W_2 \Rightarrow \ket{w} = \ket{0}
+\end{equation}\)
+那么\(W_1\)和\(W_2\)只有零向量一个公共元素.
+如果\(V = W_1 + W_2\)且\(W_1 \cap W_2 = \{\ket{0}\}\), 那么\(V\)是\(W_1\)和\(W_2\)的直和, 记为\(V = W_1 \oplus W_2\).</p>
+</blockquote>
+
+<p>我们首先说明一下, 直和的维数是相加的.</p>
+
+\[\begin{equation}
+\dim(V) = \dim(W_1) + \dim(W_2)
+\end{equation}\]
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W_1 = \{(x,0)|x\in\mathbb{R}\}\), \(W_2 = \{(0,y)|y\in\mathbb{R}\}\).
+那么\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
+我们从几何上也能看到, 此处\(W_1\)和\(W_2\)是\(V\)的两个正交子空间(两条过原点的直线), 任何\(V\)中的向量都能唯一分解为\(W_1\)和\(W_2\)中的向量之和.</p>
+
+<p>但是我们也强调一个问题, 直和的分解并不是唯一的.
+比如\(V = \mathbb{R}^2\), \(W_1 = \{(x,x)|x\in\mathbb{R}\}\), \(W_2 = \{(y,-y)|y\in\mathbb{R}\}\).
+同样\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
+但是\(W_1\)和\(W_2\)不是正交的(两条过原点的直线, 夹角45度), 但是任何\(V\)中的向量仍然能唯一分解为\(W_1\)和\(W_2\)中的向量之和.
+所以, 直和的分解不是唯一的, 但是维数是唯一的.</p>
+
+<blockquote>
+  <p>能拆, 但是不唯一.</p>
+</blockquote>
+
+<p>与直和分解非常相关的一个概念是商空间.
+我们需要先看看陪集的概念, 一个陪集就是商空间中的一个元素.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(W\)是\(V\)的一个子空间.
+考虑\(\forall \ket{v} \in V\), 我们可以定义\(\ket{v}\)关于\(W\)的陪集:
+\(\begin{equation}
+\ket{v} + W = \{\ket{v} + \ket{w} | \ket{w} \in W\}
+\end{equation}\)
+这个陪集是\(V\)的一个子集, 记为\([\ket{v}]\).
+这实际上是一个等价类.</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
+此时\(W\)就是x轴.
+取\(\ket{v} = (0,1)\), 那么\([\ket{v}] = \{(x,1)|x\in\mathbb{R}\}\).
+就是平行于x轴的一条直线, $y=1$.
+取\(\ket{u} = (2,1)\), 那么\([\ket{u}] = \{(x+2,1)|x\in\mathbb{R}\}\).
+也是平行于x轴的一条直线, $y=1$.
+所以\([\ket{v}] = [\ket{u}]\).
+取\(\ket{v} = (0,3)\), 那么\([\ket{v}] = \{(x,3)|x\in\mathbb{R}\}\).
+就是平行于x轴的一条直线, $y=3$.
+很明显后面这个陪集和前面两个陪集不相等.
+进行推广, 我们发现所有的陪集\([\ket{v}]\), \(\ket{v} \in V\), 就是所有平行于x轴的直线.</p>
+
+<p>现在我们可以定义商空间了.</p>
+
+<blockquote>
+  <p>设 \(V\) 是一个线性空间, \(W\) 是 \(V\) 的一个子空间.
+我们定义 \(V\) 关于 \(W\) 的商空间 \(V/W\) 为
+\(\begin{equation}
+V/W = \{[\ket{v}] | \ket{v} \in V\}
+\end{equation}\)
+也就是说, 商空间 \(V/W\) 的元素是 \(V\) 中所有向量 \(\ket{v}\) 关于 \(W\) 的陪集 \([\ket{v}]\).
+商空间 \(V/W\) 是一个线性空间, 其加法和数乘定义如下:
+\(\begin{equation}
+[\ket{v}] + [\ket{u}] = [\ket{v} + \ket{u}]
+\end{equation}\)
+\(\begin{equation}
+c[\ket{v}] = [c\ket{v}]
+\end{equation}\)</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
+此时\(W\)就是x轴.
+那么\(V/W\)就是所有平行于x轴的直线的集合.
+我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,y) + W\), 其中\(y\)是一个实数.
+所以\(V/W\)中的元素可以用一个实数来表示.
+所以\(V/W\)是一个一维线性空间.
+我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
+因为\(\dim(V) = 2\), \(\dim(W) = 1\), 所以\(\dim(V/W) = 1\).’</p>
+
+<p>我们看个三维的例子.
+设\(V = \mathbb{R}^3\), \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\).
+此时\(W\)就是xy平面.
+那么\(V/W\)就是所有平行于xy平面的平面的集合.
+我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,0,z) + W\), 其中\(z\)是一个实数.
+所以\(V/W\)中的元素可以用一个实数来表示.
+所以\(V/W\)是一个一维线性空间.
+我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
+因为\(\dim(V) = 3\), \(\dim(W) = 2\), 所以\(\dim(V/W) = 1\).</p>
+
+<p>这个其实有一个非常直观的理解.
+我们把\(V\)想象成一个三维空间, \(W\)是一个二维平面.
+那么\(V/W\)就是所有平行于\(W\)的平面的集合.
+每个这样的平面可以用一个实数来表示, 这个实数就是这个平面到\(W\)的距离(带符号).
+所以\(V/W\)是一个一维线性空间.
+在很多力学问题里, 我们在重力势能的时候, 我们只在意高度, 而不在意水平位置.
+这就是一个商空间的例子.
+我们虽然是一个三维向量空间, 但是我们的物理定律告诉我们, 我们可以把这个三维空间”压缩”成一个一维空间, 就是商掉那个二维平面.</p>
+
+<hr />
+<h2 id="张量积拆成直和">张量积拆成直和</h2>
+
+<p>我们举个具体例子, 设\(V = \mathbb{R}^2\), \(W = \mathbb{R}^2\).
+\(V\)有一个标准正交基底\(\{\ket{a_1} = (1,0), \ket{a_2} = (0,1)\}\).
+\(W\)有一个标准正交基底\(\{\ket{b_1} = (1,0), \ket{b_2} = (0,1)\}\).
+那么\(V \otimes W\)有一个标准正交基底:</p>
+
+\[\begin{equation}
+\{\ket{a_1}\otimes\ket{b_1}, \ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
+\end{equation}\]
+
+<p>自然的, 我们可以把他们写成矩阵的形式:</p>
+
+<p>\(\begin{equation}
+\ket{a_1}\otimes\ket{b_1} = \mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
+\ket{a_1}\otimes\ket{b_2} = \mqty[0 &amp; 1 \\ 0 &amp; 0]
+\end{equation}\)
+\(\begin{equation}
+\ket{a_2}\otimes\ket{b_1} = \mqty[0 &amp; 0 \\ 1 &amp; 0], \quad
+\ket{a_2}\otimes\ket{b_2} = \mqty[0 &amp; 0 \\ 0 &amp; 1]
+\end{equation}\)</p>
+
+<p>所以一个\(V \otimes W\)中的任意向量\(\ket{u}\)可以表示为:</p>
+
+\[\begin{align}
+\ket{u} &amp;= u_{11} \ket{a_1}\otimes\ket{b_1} + u_{12} \ket{a_1}\otimes\ket{b_2} + u_{21} \ket{a_2}\otimes\ket{b_1} + u_{22} \ket{a_2}\otimes\ket{b_2} \\
+&amp;= \mqty[u_{11} &amp; u_{12} \\ u_{21} &amp; u_{22}]
+\end{align}\]
+
+<p>这个时候我们可以注意到一个事实, 任何一个矩阵都可以做如下分解:</p>
+
+\[\begin{equation}
+\mqty[a &amp; b \\ c &amp; d] = \mqty[a &amp; (b+c)/2 \\ (b+c)/2 &amp; d] + \mqty[0 &amp; (b-c)/2 \\ (c-b)/2 &amp; 0]
+\end{equation}\]
+
+<p>现在我们就能意识到了, 我们不一定非得用标准基底.
+我们可以试试用如下基底:</p>
+
+\[\begin{equation}
+\ket{c_1} = \ket{a_1}\otimes\ket{b_1}, \quad
+\ket{c_2} = \ket{a_2}\otimes\ket{b_2}, \quad
+\ket{c_3} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} + \ket{a_2}\otimes\ket{b_1})
+\end{equation}\]
+
+<p>这三个对应的矩阵是:</p>
+
+\[\begin{equation}
+\mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
+\mqty[0 &amp; 0 \\ 0 &amp; 1], \quad
+\mqty[0 &amp; 1 \\ 1 &amp; 0]
+\end{equation}\]
+
+<p>这三个矩阵是线性无关的, 但是不能张成\(V \otimes W\).
+但是确实张成了\(V \otimes W\)的一个三维子空间\(U_1\).
+还有最后一个基底, 我们取:</p>
+
+\[\begin{equation}
+\ket{c_4} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} - \ket{a_2}\otimes\ket{b_1})
+\end{equation}\]
+
+<p>矩阵就是:</p>
+
+\[\begin{equation}
+\mqty[0 &amp; 1 \\ -1 &amp; 0]
+\end{equation}\]
+
+<p>这个自己构成了\(V \otimes W\)的一个一维子空间\(U_2\).
+所以我们发现了一个新的分解:</p>
+
+\[\begin{equation}
+V \otimes W = U_1 \oplus U_2
+\end{equation}\]
+
+<blockquote>
+  <p>这仿佛就是我们之前发现的现象: 两个角动量的耦合空间, 可以拆成两个子空间的直和.</p>
+</blockquote>
+
+<p>但是问题又来了, 这个分解是唯一的吗?
+答案是否定的.
+我们可以做如下拆分:</p>
+
+\[\begin{equation}
+\mqty[a &amp; b \\ c &amp; d] = \mqty[ a &amp; 0 \\ 0 &amp; d] + \mqty[0 &amp; b \\ c &amp; 0]
+\end{equation}\]
+
+<p>也没毛病.
+这个时候我们就能选择如下的拆分:
+\(\begin{equation}
+D = \text{span}\{\ket{a_1}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
+\end{equation}\)
+\(\begin{equation}
+O = \text{span}\{\ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}\}
+\end{equation}\)</p>
+
+<p>从而我们可以做如下的拆分:</p>
+
+\[\begin{equation}
+V \otimes W = D \oplus O
+\end{equation}\]
+
+<p>也没问题!</p>
+
+<hr />
+<h2 id="不变子空间">不变子空间</h2>
+
+<p>我们现在来聊聊, 为什么我们之前的分解\(U_1 \oplus U_2\), 是物理上更有意义的分解.
+这就绕不开一个概念, 不变子空间.</p>
+
+<blockquote>
+  <p>设\(V\)是一个线性空间, \(T: V \to V\)是\(V\)上的一个线性变换.
+如果\(W\)是\(V\)的一个子空间, 且\(\forall \ket{w} \in W, T\ket{w} \in W\),
+那么\(W\)是\(T\)的不变子空间.</p>
+</blockquote>
+
+<p>举个例子, 设\(V = \mathbb{R}^2\), \(T: V \to V\)是一个旋转变换, 旋转角度为\(\theta\).</p>
+
+\[\begin{equation}
+T = \mqty[\cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta]
+\end{equation}\]
+
+<p>那么, \(W = \{(x,0)|x\in\mathbb{R}\}\)不是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (x,0)\), 那么\(T\ket{w} = (\cos\theta x, \sin\theta x)\), 不在\(W\)中.
+\(W = \{(0,y)|y\in\mathbb{R}\}\)也不是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (0,y)\), 那么\(T\ket{w} = (-\sin\theta y, \cos\theta y)\), 不在\(W\)中.
+但是\(V\)本身是\(T\)的不变子空间.
+因为\(\forall \ket{v} \in V, T\ket{v} \in V\).
+\(\{\ket{0}\}\)也是\(T\)的不变子空间.
+因为\(\forall \ket{0} \in \{\ket{0}\}, T\ket{0} = \ket{0} \in \{\ket{0}\}\).</p>
+
+<blockquote>
+  <p>这样我们就感受到两一个事实: 任何线性空间\(V\)和线性变换\(T: V \to V\), \(V\)本身和\(\{\ket{0}\}\)都是\(T\)的不变子空间.
+这两个子空间是平凡的, 因为大家谁都有.</p>
+</blockquote>
+
+<p>如果我们把视角上升到三维, 设\(V = \mathbb{R}^3\), \(T: V \to V\)是一个绕z轴旋转的变换, 旋转角度为\(\theta\).</p>
+
+\[\begin{equation}
+T = \mqty[\cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &amp; 0 \\ 0 &amp; 0 &amp; 1]
+\end{equation}\]
+
+<p>那么, \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\)是\(T\)的不变子空间.
+因为\(\forall \ket{w} \in W, \ket{w} = (x,y,0)\), 那么\(T\ket{w} = (\cos\theta x - \sin\theta y, \sin\theta x + \cos\theta y, 0)\), 仍然在\(W\)中.
+\(U = \{(0,0,z)|z\in\mathbb{R}\}\)也是\(T\)的不变子空间.
+因为\(\forall \ket{u} \in U, \ket{u} = (0,0,z)\), 那么\(T\ket{u} = (0,0,z)\), 仍然在\(U\)中.
+这两, 除了两个平凡子空间, 这是我们能找到的唯一两个不变子空间, 而且我们也心安理得地把\(V\)拆成了\(W \oplus U\).</p>
+
+<blockquote>
+  <p>这就是我们想要的分解, 因为\(W\)和\(U\)都是\(T\)的不变子空间!
+于是, 我们发现, 能否把一个线性空间\(V\)拆成若干个不变子空间的直和, 主要取决于针对什么算符\(T\).</p>
+</blockquote>
+
+<blockquote>
+  <p>我们为什么选择用不变子空间拆角动量算符?</p>
+  <ol>
+    <li>我们要知道, 我们的本征态必须同时是\(J^2\)和\(J_z\)的本征态.</li>
+    <li>我们也知道 \(J_\pm\) 是 \(J_z\) 的升降算符, 不影响 \(J^2\) 的本征值.</li>
+    <li>这就意味着, 如果我们找到一个\(J^2\)和\(J_z\)的共同不变子空间, 那么我们就能在这个子空间里找到一组\(J^2\)和\(J_z\)的共同本征态.</li>
+    <li>自然而然的, 我们就想把整个空间拆成若干个\(J^2\)和\(J_z\)的共同不变子空间的直和.</li>
+  </ol>
+
+  <p>如果我们用\(D\)和\(O\)拆分, 那么\(D\)和\(O\)都可能被\(J_z\)和\(J^2\)作用后, 跑到对方的空间里去.</p>
+</blockquote>
+
+<p>所以我们现在可以明确的写出来类似于:</p>
+
+\[\begin{equation}
+\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
+\end{equation}\]
+
+<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
 
 <ol>
   <li>我们知道一个向量空间可以被直和分解为若干个不可约表示的直和.</li>
@@ -418,332 +743,378 @@ J^2 = \hbar^2 \mqty[ 6 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &
   <li>自旋-2的五维空间\(W_2 = \mathrm{span}\{\ket{2,2}, \ket{2,1}, \ket{2,0}, \ket{2,-1}, \ket{2,-2}\}\).</li>
   <li>自旋-1的三维空间\(W_1 = \mathrm{span}\{\ket{1,1}, \ket{1,0}, \ket{1,-1}\}\).</li>
   <li>自旋-0的单维空间\(W_0 = \mathrm{span}\{\ket{0,0}\}\).</li>
-</ol>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在已经有了一个含糊的概念上的认知:]]></summary></entry><entry><title type="html">QM2 角动量与中心势3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/" rel="alternate" type="text/html" title="QM2 角动量与中心势3" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum3/"><![CDATA[<p>现在我们来聊聊我们上一个内容里发现的神秘的数学结构.
-仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元.
-我们先站的远一点, 回想一些线性代数的知识.</p>
+</ol>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[我们现在已经有了一个含糊的概念上的认知:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+
+<ol>
+  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
+</ol>
+
+\[\begin{equation}
+M_i = \ketbra{i}{i}
+\end{equation}\]
+
+<ol>
+  <li>从而得到结果\(i\)的概率是:</li>
+</ol>
+
+\[\begin{equation}
+p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
+\end{equation}\]
+
+<ol>
+  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
+</ol>
+
+\[\begin{equation}
+\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
+\end{equation}\]
+
+<ol>
+  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
+</ol>
+
+\[\begin{equation}
+\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
+\end{equation}\]
+
+<p>成为了经典混合.</p>
+
+<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
 
 <hr />
-<h2 id="线性空间与张量积">线性空间与张量积</h2>
+<h2 id="双粒子系统">双粒子系统</h2>
 
-<p>我们专注于一个有限维的线性空间\(V_1\), 其维数为\(n_1\).
-他有一个基底\(\{\ket{a_i}\}, i=1,2,\cdots,n_1\).
-我们可以把\(V_1\)中的任意向量\(\ket{v}\)表示为</p>
-
-\[\begin{equation}
-\ket{v} = \sum_{i=1}^{n_1} v_i \ket{a_i}
-\end{equation}\]
-
-<p>现在我们再考虑另一个有限维线性空间\(V_2\), 其维数为\(n_2\).
-他有一个基底\(\{\ket{b_j}\}, j=1,2,\cdots,n_2\).
-我们可以把\(V_2\)中的任意向量\(\ket{w}\)表示为</p>
+<p>我们还是考虑Alice和Bob的双粒子系统.
+Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
 
 \[\begin{equation}
-\ket{w} = \sum_{j=1}^{n_2} w_j \ket{b_j}
+M_i^A = \ketbra{i}{i}_A \otimes I_B
 \end{equation}\]
 
-<p>我们现在想构造一个新的线性空间\(V_3\), 我们QM1研究过, 张量积是更恰当的构造方法, 维度相乘扩展, 而不是相加.</p>
+<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
 
 \[\begin{equation}
-\dim(V_3) = \dim(V_1) \times \dim(V_2) = n_1 n_2
+\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
 \end{equation}\]
 
-<p>这样可以容纳\(V_1\)和\(V_2\)的所有信息.
-\(V_3\)的基底可以写成\(\{\ket{a_i}\otimes\ket{b_j}\}, i=1,2,\cdots,n_1, j=1,2,\cdots,n_2\).
-我们可以把\(V_3\)中的任意向量\(\ket{u}\)表示为</p>
+<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
 
 \[\begin{equation}
-\ket{u} = \sum_{i=1}^{n_1} \sum_{j=1}^{n_2} u_{ij} \ket{a_i}\otimes\ket{b_j}
+\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
 \end{equation}\]
 
-<p>目前看来, 这是最一般的套路, 没什么问题.
-这也是我们观察到的: 角动量的耦合空间, 是两个角动量空间的张量积空间.
-但是, 我们发现了一个奇怪的现象: 角动量的耦合空间, 似乎有另外一套基底.
-这套基底不是\(\{\ket{j_1, m_1}\otimes\ket{j_2, m_2}\}\), 而是\(\{\ket{J, M}\}\).
-尤其是两个例子中遇到到\(3+1\)和\(4+2\)的情况.
-仿佛是维度相加?</p>
-
-<hr />
-<h2 id="直和分解">直和分解</h2>
-
-<p>我们先复习一下直和这个概念.</p>
-
-<blockquote>
-  <p>设\(V\)是一个线性空间, \(W_1\)和\(W_2\)是\(V\)的两个子空间.
-首先, 如果\(W_1 + W_2 = V\):
-\(\begin{equation}
-\forall \ket{v} \in V, \exists \ket{w_1} \in W_1, \exists \ket{w_2} \in W_2, \ket{v} = \ket{w_1} + \ket{w_2}
-\end{equation}\)
-那么\(V\)是\(W_1\)和\(W_2\)的和空间, 记为\(V = W_1 + W_2\).
-其次, 如果\(W_1 \cap W_2 = \{\ket{0}\}\):
-\(\begin{equation}
-\ket{w} \in W_1, \ket{w} \in W_2 \Rightarrow \ket{w} = \ket{0}
-\end{equation}\)
-那么\(W_1\)和\(W_2\)只有零向量一个公共元素.
-如果\(V = W_1 + W_2\)且\(W_1 \cap W_2 = \{\ket{0}\}\), 那么\(V\)是\(W_1\)和\(W_2\)的直和, 记为\(V = W_1 \oplus W_2\).</p>
-</blockquote>
-
-<p>我们首先说明一下, 直和的维数是相加的.</p>
+<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
 
 \[\begin{equation}
-\dim(V) = \dim(W_1) + \dim(W_2)
+\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
 \end{equation}\]
 
-<p>举个例子, 设\(V = \mathbb{R}^2\), \(W_1 = \{(x,0)|x\in\mathbb{R}\}\), \(W_2 = \{(0,y)|y\in\mathbb{R}\}\).
-那么\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
-我们从几何上也能看到, 此处\(W_1\)和\(W_2\)是\(V\)的两个正交子空间(两条过原点的直线), 任何\(V\)中的向量都能唯一分解为\(W_1\)和\(W_2\)中的向量之和.</p>
-
-<p>但是我们也强调一个问题, 直和的分解并不是唯一的.
-比如\(V = \mathbb{R}^2\), \(W_1 = \{(x,x)|x\in\mathbb{R}\}\), \(W_2 = \{(y,-y)|y\in\mathbb{R}\}\).
-同样\(V = W_1 \oplus W_2\), \(\dim(V) = 2\), \(\dim(W_1) = 1\), \(\dim(W_2) = 1\).
-但是\(W_1\)和\(W_2\)不是正交的(两条过原点的直线, 夹角45度), 但是任何\(V\)中的向量仍然能唯一分解为\(W_1\)和\(W_2\)中的向量之和.
-所以, 直和的分解不是唯一的, 但是维数是唯一的.</p>
-
-<blockquote>
-  <p>能拆, 但是不唯一.</p>
-</blockquote>
-
-<p>与直和分解非常相关的一个概念是商空间.
-我们需要先看看陪集的概念, 一个陪集就是商空间中的一个元素.</p>
-
-<blockquote>
-  <p>设\(V\)是一个线性空间, \(W\)是\(V\)的一个子空间.
-考虑\(\forall \ket{v} \in V\), 我们可以定义\(\ket{v}\)关于\(W\)的陪集:
-\(\begin{equation}
-\ket{v} + W = \{\ket{v} + \ket{w} | \ket{w} \in W\}
-\end{equation}\)
-这个陪集是\(V\)的一个子集, 记为\([\ket{v}]\).
-这实际上是一个等价类.</p>
-</blockquote>
-
-<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
-此时\(W\)就是x轴.
-取\(\ket{v} = (0,1)\), 那么\([\ket{v}] = \{(x,1)|x\in\mathbb{R}\}\).
-就是平行于x轴的一条直线, $y=1$.
-取\(\ket{u} = (2,1)\), 那么\([\ket{u}] = \{(x+2,1)|x\in\mathbb{R}\}\).
-也是平行于x轴的一条直线, $y=1$.
-所以\([\ket{v}] = [\ket{u}]\).
-取\(\ket{v} = (0,3)\), 那么\([\ket{v}] = \{(x,3)|x\in\mathbb{R}\}\).
-就是平行于x轴的一条直线, $y=3$.
-很明显后面这个陪集和前面两个陪集不相等.
-进行推广, 我们发现所有的陪集\([\ket{v}]\), \(\ket{v} \in V\), 就是所有平行于x轴的直线.</p>
-
-<p>现在我们可以定义商空间了.</p>
-
-<blockquote>
-  <p>设 \(V\) 是一个线性空间, \(W\) 是 \(V\) 的一个子空间.
-我们定义 \(V\) 关于 \(W\) 的商空间 \(V/W\) 为
-\(\begin{equation}
-V/W = \{[\ket{v}] | \ket{v} \in V\}
-\end{equation}\)
-也就是说, 商空间 \(V/W\) 的元素是 \(V\) 中所有向量 \(\ket{v}\) 关于 \(W\) 的陪集 \([\ket{v}]\).
-商空间 \(V/W\) 是一个线性空间, 其加法和数乘定义如下:
-\(\begin{equation}
-[\ket{v}] + [\ket{u}] = [\ket{v} + \ket{u}]
-\end{equation}\)
-\(\begin{equation}
-c[\ket{v}] = [c\ket{v}]
-\end{equation}\)</p>
-</blockquote>
-
-<p>举个例子, 设\(V = \mathbb{R}^2\), \(W = \{(x,0)|x\in\mathbb{R}\}\).
-此时\(W\)就是x轴.
-那么\(V/W\)就是所有平行于x轴的直线的集合.
-我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,y) + W\), 其中\(y\)是一个实数.
-所以\(V/W\)中的元素可以用一个实数来表示.
-所以\(V/W\)是一个一维线性空间.
-我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
-因为\(\dim(V) = 2\), \(\dim(W) = 1\), 所以\(\dim(V/W) = 1\).’</p>
-
-<p>我们看个三维的例子.
-设\(V = \mathbb{R}^3\), \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\).
-此时\(W\)就是xy平面.
-那么\(V/W\)就是所有平行于xy平面的平面的集合.
-我们可以把\(V/W\)中的元素\([\ket{v}]\)表示为\((0,0,z) + W\), 其中\(z\)是一个实数.
-所以\(V/W\)中的元素可以用一个实数来表示.
-所以\(V/W\)是一个一维线性空间.
-我们可以验证\(\dim(V/W) = \dim(V) - \dim(W)\).
-因为\(\dim(V) = 3\), \(\dim(W) = 2\), 所以\(\dim(V/W) = 1\).</p>
-
-<p>这个其实有一个非常直观的理解.
-我们把\(V\)想象成一个三维空间, \(W\)是一个二维平面.
-那么\(V/W\)就是所有平行于\(W\)的平面的集合.
-每个这样的平面可以用一个实数来表示, 这个实数就是这个平面到\(W\)的距离(带符号).
-所以\(V/W\)是一个一维线性空间.
-在很多力学问题里, 我们在重力势能的时候, 我们只在意高度, 而不在意水平位置.
-这就是一个商空间的例子.
-我们虽然是一个三维向量空间, 但是我们的物理定律告诉我们, 我们可以把这个三维空间”压缩”成一个一维空间, 就是商掉那个二维平面.</p>
-
-<hr />
-<h2 id="张量积拆成直和">张量积拆成直和</h2>
-
-<p>我们举个具体例子, 设\(V = \mathbb{R}^2\), \(W = \mathbb{R}^2\).
-\(V\)有一个标准正交基底\(\{\ket{a_1} = (1,0), \ket{a_2} = (0,1)\}\).
-\(W\)有一个标准正交基底\(\{\ket{b_1} = (1,0), \ket{b_2} = (0,1)\}\).
-那么\(V \otimes W\)有一个标准正交基底:</p>
+<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
+把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
 
 \[\begin{equation}
-\{\ket{a_1}\otimes\ket{b_1}, \ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
+\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
 \end{equation}\]
 
-<p>自然的, 我们可以把他们写成矩阵的形式:</p>
+<p>如果我们对他取Alice的迹, 我们得到:</p>
 
-<p>\(\begin{equation}
-\ket{a_1}\otimes\ket{b_1} = \mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
-\ket{a_1}\otimes\ket{b_2} = \mqty[0 &amp; 1 \\ 0 &amp; 0]
-\end{equation}\)
-\(\begin{equation}
-\ket{a_2}\otimes\ket{b_1} = \mqty[0 &amp; 0 \\ 1 &amp; 0], \quad
-\ket{a_2}\otimes\ket{b_2} = \mqty[0 &amp; 0 \\ 0 &amp; 1]
-\end{equation}\)</p>
+\[\begin{equation}
+\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
+\end{equation}\]
 
-<p>所以一个\(V \otimes W\)中的任意向量\(\ket{u}\)可以表示为:</p>
+<p>计算这个迹, 我们得到:</p>
 
 \[\begin{align}
-\ket{u} &amp;= u_{11} \ket{a_1}\otimes\ket{b_1} + u_{12} \ket{a_1}\otimes\ket{b_2} + u_{21} \ket{a_2}\otimes\ket{b_1} + u_{22} \ket{a_2}\otimes\ket{b_2} \\
-&amp;= \mqty[u_{11} &amp; u_{12} \\ u_{21} &amp; u_{22}]
+\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
 \end{align}\]
 
-<p>这个时候我们可以注意到一个事实, 任何一个矩阵都可以做如下分解:</p>
+<p>我们把\(i\)的求和做掉:</p>
 
 \[\begin{equation}
-\mqty[a &amp; b \\ c &amp; d] = \mqty[a &amp; (b+c)/2 \\ (b+c)/2 &amp; d] + \mqty[0 &amp; (b-c)/2 \\ (c-b)/2 &amp; 0]
+\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
 \end{equation}\]
 
-<p>现在我们就能意识到了, 我们不一定非得用标准基底.
-我们可以试试用如下基底:</p>
+<p>从而我们得到:</p>
 
 \[\begin{equation}
-\ket{c_1} = \ket{a_1}\otimes\ket{b_1}, \quad
-\ket{c_2} = \ket{a_2}\otimes\ket{b_2}, \quad
-\ket{c_3} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} + \ket{a_2}\otimes\ket{b_1})
-\end{equation}\]
-
-<p>这三个对应的矩阵是:</p>
-
-\[\begin{equation}
-\mqty[1 &amp; 0 \\ 0 &amp; 0], \quad
-\mqty[0 &amp; 0 \\ 0 &amp; 1], \quad
-\mqty[0 &amp; 1 \\ 1 &amp; 0]
-\end{equation}\]
-
-<p>这三个矩阵是线性无关的, 但是不能张成\(V \otimes W\).
-但是确实张成了\(V \otimes W\)的一个三维子空间\(U_1\).
-还有最后一个基底, 我们取:</p>
-
-\[\begin{equation}
-\ket{c_4} = \frac{1}{\sqrt{2}}(\ket{a_1}\otimes\ket{b_2} - \ket{a_2}\otimes\ket{b_1})
-\end{equation}\]
-
-<p>矩阵就是:</p>
-
-\[\begin{equation}
-\mqty[0 &amp; 1 \\ -1 &amp; 0]
-\end{equation}\]
-
-<p>这个自己构成了\(V \otimes W\)的一个一维子空间\(U_2\).
-所以我们发现了一个新的分解:</p>
-
-\[\begin{equation}
-V \otimes W = U_1 \oplus U_2
+\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
 \end{equation}\]
 
 <blockquote>
-  <p>这仿佛就是我们之前发现的现象: 两个角动量的耦合空间, 可以拆成两个子空间的直和.</p>
+  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
+而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
+这就是无信号定理, 纠缠不能被用来即时通信.
+此时Alice手里的粒子, 是一个经典混合态.
+但是Bob手里的粒子, 仍然是原来的量子态.
+只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
 </blockquote>
-
-<p>但是问题又来了, 这个分解是唯一的吗?
-答案是否定的.
-我们可以做如下拆分:</p>
-
-\[\begin{equation}
-\mqty[a &amp; b \\ c &amp; d] = \mqty[ a &amp; 0 \\ 0 &amp; d] + \mqty[0 &amp; b \\ c &amp; 0]
-\end{equation}\]
-
-<p>也没毛病.
-这个时候我们就能选择如下的拆分:
-\(\begin{equation}
-D = \text{span}\{\ket{a_1}\otimes\ket{b_1}, \ket{a_2}\otimes\ket{b_2}\}
-\end{equation}\)
-\(\begin{equation}
-O = \text{span}\{\ket{a_1}\otimes\ket{b_2}, \ket{a_2}\otimes\ket{b_1}\}
-\end{equation}\)</p>
-
-<p>从而我们可以做如下的拆分:</p>
-
-\[\begin{equation}
-V \otimes W = D \oplus O
-\end{equation}\]
-
-<p>也没问题!</p>
 
 <hr />
-<h2 id="不变子空间">不变子空间</h2>
+<h2 id="退相干的基础理论">退相干的基础理论</h2>
 
-<p>我们现在来聊聊, 为什么我们之前的分解\(U_1 \oplus U_2\), 是物理上更有意义的分解.
-这就绕不开一个概念, 不变子空间.</p>
+<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
+一般来说, 比起\(A\), \(E\)的自由度要大得多.
+对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
 
-<blockquote>
-  <p>设\(V\)是一个线性空间, \(T: V \to V\)是\(V\)上的一个线性变换.
-如果\(W\)是\(V\)的一个子空间, 且\(\forall \ket{w} \in W, T\ket{w} \in W\),
-那么\(W\)是\(T\)的不变子空间.</p>
-</blockquote>
-
-<p>举个例子, 设\(V = \mathbb{R}^2\), \(T: V \to V\)是一个旋转变换, 旋转角度为\(\theta\).</p>
+<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
 
 \[\begin{equation}
-T = \mqty[\cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta]
+\rho_A = \tr_E(\rho_{AE})
 \end{equation}\]
 
-<p>那么, \(W = \{(x,0)|x\in\mathbb{R}\}\)不是\(T\)的不变子空间.
-因为\(\forall \ket{w} \in W, \ket{w} = (x,0)\), 那么\(T\ket{w} = (\cos\theta x, \sin\theta x)\), 不在\(W\)中.
-\(W = \{(0,y)|y\in\mathbb{R}\}\)也不是\(T\)的不变子空间.
-因为\(\forall \ket{w} \in W, \ket{w} = (0,y)\), 那么\(T\ket{w} = (-\sin\theta y, \cos\theta y)\), 不在\(W\)中.
-但是\(V\)本身是\(T\)的不变子空间.
-因为\(\forall \ket{v} \in V, T\ket{v} \in V\).
-\(\{\ket{0}\}\)也是\(T\)的不变子空间.
-因为\(\forall \ket{0} \in \{\ket{0}\}, T\ket{0} = \ket{0} \in \{\ket{0}\}\).</p>
-
+<p>我们的核心问题是:</p>
 <blockquote>
-  <p>这样我们就感受到两一个事实: 任何线性空间\(V\)和线性变换\(T: V \to V\), \(V\)本身和\(\{\ket{0}\}\)都是\(T\)的不变子空间.
-这两个子空间是平凡的, 因为大家谁都有.</p>
+  <p>\(\rho_A\)是如何时间演化的?</p>
 </blockquote>
 
-<p>如果我们把视角上升到三维, 设\(V = \mathbb{R}^3\), \(T: V \to V\)是一个绕z轴旋转的变换, 旋转角度为\(\theta\).</p>
+<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
+
+<blockquote>
+  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
+这个过程, 我们称之为退相干 (Decoherence).</p>
+</blockquote>
+
+<p>如果我们现在考虑如下的映射:</p>
 
 \[\begin{equation}
-T = \mqty[\cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &amp; 0 \\ 0 &amp; 0 &amp; 1]
+\tr_E: \rho_{AE} \to \rho_A
 \end{equation}\]
 
-<p>那么, \(W = \{(x,y,0)|x,y\in\mathbb{R}\}\)是\(T\)的不变子空间.
-因为\(\forall \ket{w} \in W, \ket{w} = (x,y,0)\), 那么\(T\ket{w} = (\cos\theta x - \sin\theta y, \sin\theta x + \cos\theta y, 0)\), 仍然在\(W\)中.
-\(U = \{(0,0,z)|z\in\mathbb{R}\}\)也是\(T\)的不变子空间.
-因为\(\forall \ket{u} \in U, \ket{u} = (0,0,z)\), 那么\(T\ket{u} = (0,0,z)\), 仍然在\(U\)中.
-这两, 除了两个平凡子空间, 这是我们能找到的唯一两个不变子空间, 而且我们也心安理得地把\(V\)拆成了\(W \oplus U\).</p>
-
-<blockquote>
-  <p>这就是我们想要的分解, 因为\(W\)和\(U\)都是\(T\)的不变子空间!
-于是, 我们发现, 能否把一个线性空间\(V\)拆成若干个不变子空间的直和, 主要取决于针对什么算符\(T\).</p>
-</blockquote>
-
-<blockquote>
-  <p>我们为什么选择用不变子空间拆角动量算符?</p>
-  <ol>
-    <li>我们要知道, 我们的本征态必须同时是\(J^2\)和\(J_z\)的本征态.</li>
-    <li>我们也知道 \(J_\pm\) 是 \(J_z\) 的升降算符, 不影响 \(J^2\) 的本征值.</li>
-    <li>这就意味着, 如果我们找到一个\(J^2\)和\(J_z\)的共同不变子空间, 那么我们就能在这个子空间里找到一组\(J^2\)和\(J_z\)的共同本征态.</li>
-    <li>自然而然的, 我们就想把整个空间拆成若干个\(J^2\)和\(J_z\)的共同不变子空间的直和.</li>
-  </ol>
-
-  <p>如果我们用\(D\)和\(O\)拆分, 那么\(D\)和\(O\)都可能被\(J_z\)和\(J^2\)作用后, 跑到对方的空间里去.</p>
-</blockquote>
-
-<p>所以我们现在可以明确的写出来类似于:</p>
+<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
+首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
 
 \[\begin{equation}
-\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
+\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
 \end{equation}\]
 
-<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
+<p>一旦我们能搞出来这个, 我们就能求:</p>
+
+\[\begin{equation}
+\rho_A(t) = \tr_E(\rho_{AE}(t))
+\end{equation}\]
+
+<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
+但是我们现在可以做一个基础性检查:</p>
+
+\[\begin{equation}
+\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
+\end{equation}\]
+
+<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
+从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
+\end{equation}\]
+
+<p>从而我们有:</p>
+
+\[\begin{equation}
+\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
+<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
+
+\[\begin{equation}
+\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
+\end{equation}\]
+
+<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
+\end{equation}\]
+
+<p>从而我们的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{A}(0) = \mqty[
+|\alpha|^2 &amp; \alpha \beta^* \\
+\alpha^* \beta &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
+\end{equation}\]
+
+<p>变成了:</p>
+
+\[\begin{equation}
+\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
+\end{equation}\]
+
+<p>此时\(A\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
+|\alpha|^2 &amp; 0 \\
+0 &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>如果我们计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
+
+<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
+
+\[\begin{equation}
+H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
+\end{equation}\]
+
+<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
+我们主要关心第一个粒子, 第二个粒子作为环境.
+假设在\(t=0\)时, 两个粒子是一个纯态:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
+\end{equation}\]
+
+<p>他们的归一化条件是:</p>
+
+\[\begin{equation}
+|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
+\end{equation}\]
+
+<p>从而我们可以写出密度矩阵:</p>
+
+\[\begin{equation}
+\rho(0) = \frac{1}{4} \mqty[
+|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
+a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
+b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
+b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
+]
+\end{equation}\]
+
+<p>时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
+\end{equation}\]
+
+<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_1(t) = \tr_2(\rho(t)) = \mqty[
+\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
+\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
+]
+\end{equation}\]
+
+<p>如果我们规定一开始的系数是:</p>
+
+\[\begin{equation}
+a_+ = a_- = b_+ = 1, \quad b_- = 0
+\end{equation}\]
+
+<p>我们的初始状态就是:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
+\end{equation}\]
+
+<p>两个粒子本来是没有纠缠的.
+但是带入上面的公式, 我们得到:</p>
+
+\[\begin{equation}
+\rho_1(t) = \mqty[
+\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
+\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
+] 
+\end{equation}\]
+
+<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
+\end{equation}\]
+
+<hr />
+<h2 id="热力学问题">热力学问题</h2>
+
+<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
+这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
+实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
+我们考虑投影算符:</p>
+
+\[\begin{equation}
+\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
+\end{equation}\]
+
+<p>就是把一个任意的态投影到\(U_E\)子空间上.
+他满足:</p>
+
+\[\begin{equation}
+\tr \Pi(E) = \Omega(E)
+\end{equation}\]
+
+<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
+从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
+
+\[\begin{equation}
+\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
+\end{equation}\]
+
+<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
+现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
+我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
+此时熵定义为:</p>
+
+\[\begin{equation}
+S^R(E) = k_B \ln \Omega^R(E)
+\end{equation}\]
+
+<p>考虑温度:</p>
+
+\[\begin{equation}
+\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
+\end{equation}\]
+
+<p>我们做积分得到:</p>
+
+\[\begin{equation}
+\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]
+
+<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
+但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
+
+\[\begin{equation}
+\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
+\end{equation}\]
+
+<p>整体的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
+\end{equation}\]
+
+<p>对\(R\)取迹, 我们得到:</p>
+
+\[\begin{align}
+\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
+&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
+&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
+\end{align}\]
+
+<p>从而可以写出正则系综的密度矩阵:</p>
+
+\[\begin{equation}
+\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
 设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢?
 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?</p>
 
@@ -1760,562 +2131,7 @@ Y_{2,-2}(\theta, \phi) &amp;= \sqrt{\frac{15}{32\pi}} \sin^2 \theta \mathrm{e}^{
 
 <p>系数不好搞啊, 一般都是写出来关于\(\theta\)和\(\phi\)的形式, 然后再用归一化条件算系数.</p>
 
-<p>现在我们搞定了角度相关的, 还没有说任何关于径向的解, 这个更加复杂一点.</p>]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:]]></summary></entry><entry><title type="html">QM1 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1/" rel="alternate" type="text/html" title="QM1 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1/"><![CDATA[<p>量子力学自然是应该有经典力学推广来的角动量的.
-在经典力学中, 角动量定义为:</p>
-
-\[\begin{equation}
-\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}
-\end{equation}\]
-
-<p>他的分量形式为:</p>
-
-\[\begin{align}
-L_x = y p_z - z p_y \\
-L_y = z p_x - x p_z \\
-L_z = x p_y - y p_x
-\end{align}\]
-
-<p>每一个位置算符算符都没有和动量算符产生对易的问题, 所以, 直接把上面的式子量子化就可以了, 我们不特意加箭头区分了.
-在量子力学里, 角动量肯定要继承经典力学的性质, 经典力学中, 角动量算符是体系旋转不变下的守恒量.
-翻译到量子力学里, 角动量算符如何和哈密顿量对易, 也就是:</p>
-
-\[\begin{equation}
-[L_i, H] = 0
-\end{equation}\]
-
-<p>我们就知道目前的哈密顿量是旋转不变的.</p>
-
-<p>另外, 就想动量是波函数平移的生成元一样, 角动量是波函数旋转的生成元, 我们就挑选沿着z轴旋转, 那么我们的波函数\(\phi\)应该会增长一个相位:</p>
-
-\[\begin{equation}
-U(\alpha;\mathrm{z}) \psi(\boldsymbol{r}, \theta, \phi) = \psi(\boldsymbol{r}, \theta, \phi + \boldsymbol{\alpha})
-\end{equation}\]
-
-<p>仿照动量的写法, 我们立刻获得:</p>
-
-\[\begin{equation}
-U(\alpha;\mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right)
-\end{equation}\]
-
-<p>我们来检查一下他们的对易关系:</p>
-
-\[\begin{align}
-[L_x, L_y] =&amp; [y p_z - z p_y, z p_x - x p_z] \\
-=&amp; y p_z z p_x - y p_z x p_z - z p_y z p_x + z p_y x p_z \\
-&amp; - z p_x y p_z + x p_z y p_z + z p_x z p_y - x p_z z p_y \\
-=&amp; y [p_z, z] p_x - z [p_y, x] p_z \\
-=&amp; i \hbar (y p_x - x p_y) \\
-=&amp; i \hbar L_z
-\end{align}\]
-
-<p>检查其他的, 结果也类似:</p>
-
-\[\begin{equation}
-[L_y, L_z] = i \hbar L_x, \quad [L_z, L_x] = i \hbar L_y
-\end{equation}\]
-
-<p>从而总结出来:</p>
-
-\[\begin{equation}
-[L_i, L_j] = i \hbar \epsilon_{ijk} L_k
-\end{equation}\]
-
-<p>我们还可以考虑角动量的平方:</p>
-
-\[\begin{equation}
-L^2 = L_x^2 + L_y^2 + L_z^2
-\end{equation}\]
-
-<p>可以试试如下的计算:</p>
-
-\[\begin{equation}
-[L^2, L_i] = 0 
-\end{equation}\]
-
-<p>这有什么深刻含义吗?</p>
-
-<hr />
-<h2 id="中心势场">中心势场</h2>
-
-<p>我们从定态Schrödinger方程出发:</p>
-
-\[\begin{equation}
-H = -\frac{\hbar^2}{2m} \nabla^2 + V(r)
-\end{equation}\]
-
-<p>由于势能只和距离有关, 所以, 哈密顿量是旋转不变的.
-三维的Laplace算符是:</p>
-
-\[\begin{equation}
-\nabla^2 = \frac{1}{r^2} \pdv{}{r}\left(r^2 \pdv{r}\right) + \frac{1}{r^2 \sin\theta} \pdv{}{\theta}\left(\sin\theta \pdv{}{\theta}\right) + \frac{1}{r^2 \sin^2\theta} \pdv[2]{}{\phi}
-\end{equation}\]
-
-<p>从而我们要解决的本征值问题是:</p>
-
-\[\begin{equation}
-\left[-\frac{\hbar^2}{2m} \left( \frac{1}{r^2} \pdv{}{r}\left(r^2 \pdv{r}\right) + \frac{1}{r^2 \sin\theta} \pdv{}{\theta}\left(\sin\theta \pdv{}{\theta}\right) + \frac{1}{r^2 \sin^2\theta} \pdv[2]{}{\phi} \right) + V(r) \right] \psi = E \psi
-\end{equation}\]
-
-<p>我们还是得熟悉一下角动量算符在球坐标下的形式:</p>
-
-\[\begin{equation}
-r = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \arccos\frac{z}{r}, \quad \phi = \arctan\frac{y}{x}
-\end{equation}\]
-
-<p>所以我们有:</p>
-
-\[\begin{equation}
-x = r \sin\theta \cos\phi, \quad y = r \sin\theta \sin\phi, \quad z = r \cos\theta
-\end{equation}\]
-
-<p>然后就是各种求导:</p>
-
-\[\begin{align}
-\pdv{}{x} =&amp; \pdv{r}{x} \pdv{}{r} + \pdv{\theta}{x} \pdv{}{\theta} + \pdv{\phi}{x} \pdv{}{\phi} \\
-=&amp; \sin\theta \cos\phi \pdv{}{r} + \frac{\cos\theta \cos\phi}{r} \pdv{}{\theta} - \frac{\sin\phi}{r \sin\theta} \pdv{}{\phi}
-\end{align}\]
-
-\[\begin{align}
-\pdv{}{y} =&amp; \pdv{r}{y} \pdv{}{r} + \pdv{\theta}{y} \pdv{}{\theta} + \pdv{\phi}{y} \pdv{}{\phi} \\
-=&amp; \sin\theta \sin\phi \pdv{}{r} + \frac{\cos\theta \sin\phi}{r} \pdv{}{\theta} + \frac{\cos\phi}{r \sin\theta} \pdv{}{\phi}
-\end{align}\]
-
-\[\begin{align}
-\pdv{}{z} =&amp; \pdv{r}{z} \pdv{}{r} + \pdv{\theta}{z} \pdv{}{\theta} + \pdv{\phi}{z} \pdv{}{\phi} \\
-=&amp; \cos\theta \pdv{}{r} - \frac{\sin\theta}{r} \pdv{}{\theta}
-\end{align}\]
-
-<p>从而我们可以做如下计算:</p>
-
-\[\begin{equation}
-L_z = \frac{\hbar}{\mathrm{i}} \left( x \pdv{}{y} - y \pdv{}{x} \right)
-\end{equation}\]
-
-<p>从而有:</p>
-
-\[\begin{align}
-x \pdv{}{y} =&amp; r \sin\theta \cos\phi \left( \sin\theta \sin\phi \pdv{}{r} + \frac{\cos\theta \sin\phi}{r} \pdv{}{\theta} + \frac{\cos\phi}{r \sin\theta} \pdv{}{\phi} \right) \\
-=&amp; r \sin^2\theta \cos\phi \sin\phi \pdv{}{r} + \sin\theta \cos\phi \cos\theta \sin\phi \pdv{}{\theta} + \cos^2\phi \pdv{}{\phi}
-\end{align}\]
-
-<p>以及:</p>
-
-\[\begin{align}
-y \pdv{}{x} =&amp; r \sin\theta \sin\phi \left( \sin\theta \cos\phi \pdv{}{r} + \frac{\cos\theta \cos\phi}{r} \pdv{}{\theta} - \frac{\sin\phi}{r \sin\theta} \pdv{}{\phi} \right) \\
-=&amp; r \sin^2\theta \sin\phi \cos\phi \pdv{}{r} + \sin\theta \sin\phi \cos\theta \cos\phi \pdv{}{\theta} - \sin^2\phi \pdv{}{\phi}
-\end{align}\]
-
-<p>所以我们有:</p>
-
-\[\begin{equation}
-x \pdv{}{y} - y \pdv{}{x} = (\cos^2\phi + \sin^2\phi) \pdv{}{\phi} = \pdv{}{\phi}
-\end{equation}\]
-
-<p>这样就简单了!
-从而我们的\(L_z\)有:</p>
-
-\[\begin{equation}
-L_z = \frac{\hbar}{\mathrm{i}} \pdv{}{\phi}
-\end{equation}\]
-
-<p>用类似的方法, 我们有:</p>
-
-\[\begin{equation}
-L_+ = \hbar \mathrm{e}^{\mathrm{i}\phi} \left( \pdv{}{\theta} + \mathrm{i} \cot\theta \pdv{}{\phi} \right)
-\end{equation}\]
-
-\[\begin{equation}
-L_- = -\hbar \mathrm{e}^{-\mathrm{i}\phi} \left( \pdv{}{\theta} - \mathrm{i} \cot\theta \pdv{}{\phi} \right)
-\end{equation}\]
-
-<p>从而我们可以考虑如下的计算:</p>
-
-\[\begin{equation}
-L^2 = L_- L_+ + L_z + L_z^2 = -\hbar^2 \left[ \frac{1}{\sin\theta} \pdv{}{\theta} \left( \sin\theta \pdv{}{\theta} \right) + \frac{1}{\sin^2\theta} \pdv[2]{}{\phi} \right]
-\end{equation}\]
-
-<p>这样我们就能做一个简单验算:</p>
-
-\[\begin{equation}
-U(\alpha; \mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right) = \exp\left(-\alpha \pdv{}{\phi}\right)
-\end{equation}\]
-
-<p>我们有:</p>
-
-\[\begin{equation}
-U(\alpha; \mathrm{z}) \psi(r, \theta, \phi) = \psi(r, \theta, \phi - \alpha)
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
-
-<ol>
-  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
-</ol>
-
-\[\begin{equation}
-M_i = \ketbra{i}{i}
-\end{equation}\]
-
-<ol>
-  <li>从而得到结果\(i\)的概率是:</li>
-</ol>
-
-\[\begin{equation}
-p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
-\end{equation}\]
-
-<ol>
-  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
-</ol>
-
-\[\begin{equation}
-\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
-\end{equation}\]
-
-<ol>
-  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
-</ol>
-
-\[\begin{equation}
-\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
-\end{equation}\]
-
-<p>成为了经典混合.</p>
-
-<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
-
-<hr />
-<h2 id="双粒子系统">双粒子系统</h2>
-
-<p>我们还是考虑Alice和Bob的双粒子系统.
-Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
-
-\[\begin{equation}
-M_i^A = \ketbra{i}{i}_A \otimes I_B
-\end{equation}\]
-
-<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
-
-\[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
-\end{equation}\]
-
-<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
-\end{equation}\]
-
-<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
-
-\[\begin{equation}
-\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
-\end{equation}\]
-
-<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
-把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
-\end{equation}\]
-
-<p>如果我们对他取Alice的迹, 我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
-\end{equation}\]
-
-<p>计算这个迹, 我们得到:</p>
-
-\[\begin{align}
-\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
-\end{align}\]
-
-<p>我们把\(i\)的求和做掉:</p>
-
-\[\begin{equation}
-\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
-\end{equation}\]
-
-<p>从而我们得到:</p>
-
-\[\begin{equation}
-\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
-\end{equation}\]
-
-<blockquote>
-  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
-而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
-这就是无信号定理, 纠缠不能被用来即时通信.
-此时Alice手里的粒子, 是一个经典混合态.
-但是Bob手里的粒子, 仍然是原来的量子态.
-只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
-</blockquote>
-
-<hr />
-<h2 id="退相干的基础理论">退相干的基础理论</h2>
-
-<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
-一般来说, 比起\(A\), \(E\)的自由度要大得多.
-对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
-
-<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_A = \tr_E(\rho_{AE})
-\end{equation}\]
-
-<p>我们的核心问题是:</p>
-<blockquote>
-  <p>\(\rho_A\)是如何时间演化的?</p>
-</blockquote>
-
-<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
-
-<blockquote>
-  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
-这个过程, 我们称之为退相干 (Decoherence).</p>
-</blockquote>
-
-<p>如果我们现在考虑如下的映射:</p>
-
-\[\begin{equation}
-\tr_E: \rho_{AE} \to \rho_A
-\end{equation}\]
-
-<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
-首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
-
-\[\begin{equation}
-\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
-\end{equation}\]
-
-<p>一旦我们能搞出来这个, 我们就能求:</p>
-
-\[\begin{equation}
-\rho_A(t) = \tr_E(\rho_{AE}(t))
-\end{equation}\]
-
-<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
-但是我们现在可以做一个基础性检查:</p>
-
-\[\begin{equation}
-\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
-\end{equation}\]
-
-<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
-从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
-<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
-
-\[\begin{equation}
-\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
-\end{equation}\]
-
-<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
-\end{equation}\]
-
-<p>从而我们的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{A}(0) = \mqty[
-|\alpha|^2 &amp; \alpha \beta^* \\
-\alpha^* \beta &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
-\end{equation}\]
-
-<p>变成了:</p>
-
-\[\begin{equation}
-\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
-\end{equation}\]
-
-<p>此时\(A\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
-|\alpha|^2 &amp; 0 \\
-0 &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>如果我们计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
-
-<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
-
-\[\begin{equation}
-H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
-\end{equation}\]
-
-<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
-我们主要关心第一个粒子, 第二个粒子作为环境.
-假设在\(t=0\)时, 两个粒子是一个纯态:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
-\end{equation}\]
-
-<p>他们的归一化条件是:</p>
-
-\[\begin{equation}
-|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
-\end{equation}\]
-
-<p>从而我们可以写出密度矩阵:</p>
-
-\[\begin{equation}
-\rho(0) = \frac{1}{4} \mqty[
-|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
-a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
-b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
-b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
-]
-\end{equation}\]
-
-<p>时间演化算符是:</p>
-
-\[\begin{equation}
-U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
-\end{equation}\]
-
-<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_1(t) = \tr_2(\rho(t)) = \mqty[
-\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
-\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
-]
-\end{equation}\]
-
-<p>如果我们规定一开始的系数是:</p>
-
-\[\begin{equation}
-a_+ = a_- = b_+ = 1, \quad b_- = 0
-\end{equation}\]
-
-<p>我们的初始状态就是:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
-\end{equation}\]
-
-<p>两个粒子本来是没有纠缠的.
-但是带入上面的公式, 我们得到:</p>
-
-\[\begin{equation}
-\rho_1(t) = \mqty[
-\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
-\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
-] 
-\end{equation}\]
-
-<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
-\end{equation}\]
-
-<hr />
-<h2 id="热力学问题">热力学问题</h2>
-
-<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
-这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
-实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
-我们考虑投影算符:</p>
-
-\[\begin{equation}
-\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
-\end{equation}\]
-
-<p>就是把一个任意的态投影到\(U_E\)子空间上.
-他满足:</p>
-
-\[\begin{equation}
-\tr \Pi(E) = \Omega(E)
-\end{equation}\]
-
-<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
-从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
-
-\[\begin{equation}
-\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
-\end{equation}\]
-
-<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
-现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
-我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
-此时熵定义为:</p>
-
-\[\begin{equation}
-S^R(E) = k_B \ln \Omega^R(E)
-\end{equation}\]
-
-<p>考虑温度:</p>
-
-\[\begin{equation}
-\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
-\end{equation}\]
-
-<p>我们做积分得到:</p>
-
-\[\begin{equation}
-\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]
-
-<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
-但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
-
-\[\begin{equation}
-\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
-\end{equation}\]
-
-<p>整体的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
-\end{equation}\]
-
-<p>对\(R\)取迹, 我们得到:</p>
-
-\[\begin{align}
-\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
-&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
-&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
-\end{align}\]
-
-<p>从而可以写出正则系综的密度矩阵:</p>
-
-\[\begin{equation}
-\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+<p>现在我们搞定了角度相关的, 还没有说任何关于径向的解, 这个更加复杂一点.</p>]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
 
 <ol>
   <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
@@ -2588,226 +2404,238 @@ MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙�
 既然每种可能都在某个世界实现了, 那么概率到底是什么?
 分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
 
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">Mathematical Induction Method</title><link href="http://localhost:4000/PersonalPageCN/math0/MIM/" rel="alternate" type="text/html" title="Mathematical Induction Method" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/MIM</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/MIM/"><![CDATA[<h2 id="基本定义">基本定义</h2>
-<p>数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效.
-它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:</p>
-
-<ol>
-  <li><strong>基础步骤 (Base Case)</strong>: 验证命题对第一个自然数 (通常是1) 成立.</li>
-  <li><strong>归纳步骤 (Inductive Step)</strong>: 假设命题对某个自然数 \(k\) 成立 (归纳假设), 然后证明命题对 \(k+1\) 也成立.
-如果这两个步骤都成功完成, 那么根据数学归纳法, 命题对所有自然数 \(n \geq 1\) 成立.</li>
-  <li><strong>下结论</strong>: 通过基础步骤和归纳步骤, 我们可以得出结论, 命题对所有自然数成立.</li>
-</ol>
-
-<p>实际上有两类数学归纳法:</p>
-<ul>
-  <li><strong>普通数学归纳法</strong>: 适用于证明命题对所有自然数成立.</li>
-  <li><strong>强归纳法 (Strong Induction)</strong>: 适用于证明命题对所有自然数成立, 但在归纳步骤中, 假设命题对所有小于等于 \(k\) 的自然数成立, 然后证明对 \(k+1\) 也成立.</li>
-</ul>
-
-<p>大多数情况下我们关心第一类的.</p>
-
-<hr />
-<h2 id="上纲上线">上纲上线</h2>
-
-<p>数学归纳法是一类基于严格逻辑推理的证明方法, 不依赖于直觉或经验.
-于此相反的是经验归纳法(empirical induction), 这种方法基于观察和实验, 通过归纳总结出一般规律, 但不保证结论的绝对正确性, 是一种概率性的推理方法.</p>
-
-<p>实际上, 归纳法是处理无限全称命题(Universal Quantification Predicate)的有效工具.
-这样避免了穷举法(exhaustive proof)的繁琐和不可能性.</p>
-
-<hr />
-<h2 id="形式逻辑">形式逻辑</h2>
-
-<p>应用数学归纳法的形式逻辑可以表示为五个步骤</p>
-
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 是关于自然数 \(n\) 的命题, 就是在什么条件下, 什么是正确的.</li>
-  <li><strong>基础步骤</strong>: 验证 \(P(1)\) 成立, 也就是验证命题对第一个自然数成立.</li>
-  <li><strong>归纳假设</strong>: 假设 \(P(k)\) 成立, 也就是假设命题对某个自然数 \(k\) 成立.</li>
-  <li><strong>逻辑推理</strong>: 在归纳假设的基础上, 通过逻辑推理证明 \(P(k+1)\) 成立, 也就是证明命题对 \(k+1\) 也成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
-</ol>
-
-<p>在我们刚接触数学归纳法时, 一定要严格按照这类方法来, 避免逻辑漏洞.</p>
-
-<hr />
-<h2 id="求和问题">求和问题</h2>
-
-<p>高斯(Gauß)提出了等差数列(arithmetic sequence)求和公式, 也就是从1加到n的和的方法为: 首项加末项乘以项数除以2, 也就是:
-对于满足:</p>
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM1 角动量与中心势</title><link href="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1/" rel="alternate" type="text/html" title="QM1 角动量与中心势" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm1/QM1-AngularMomentum1/"><![CDATA[<p>量子力学自然是应该有经典力学推广来的角动量的.
+在经典力学中, 角动量定义为:</p>
 
 \[\begin{equation}
-a_n = a_1 + (n-1)d 
+\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}
 \end{equation}\]
 
-<p>其中 \(a_n\) 是第 \(n\) 项, \(a_1\) 是首项, \(d\) 是公差.
-那么等差数列的和为:</p>
+<p>他的分量形式为:</p>
+
+\[\begin{align}
+L_x = y p_z - z p_y \\
+L_y = z p_x - x p_z \\
+L_z = x p_y - y p_x
+\end{align}\]
+
+<p>每一个位置算符算符都没有和动量算符产生对易的问题, 所以, 直接把上面的式子量子化就可以了, 我们不特意加箭头区分了.
+在量子力学里, 角动量肯定要继承经典力学的性质, 经典力学中, 角动量算符是体系旋转不变下的守恒量.
+翻译到量子力学里, 角动量算符如何和哈密顿量对易, 也就是:</p>
 
 \[\begin{equation}
-S_n = \frac{n}{2}(a_1 + a_n)
+[L_i, H] = 0
 \end{equation}\]
 
-<p>其中 \(S_n\) 是前 \(n\) 项的和.
-说明这个公式很简单, 我们只需要讨论有奇数项和偶数项的情况, 然后首尾进行配对.
-但是严格证明这个公式, 我们可以使用数学归纳法.</p>
+<p>我们就知道目前的哈密顿量是旋转不变的.</p>
 
-<ol>
-  <li><strong>定义命题</strong>: 等差数列前\(n\)项的和为 \(S_n = \frac{n}{2}(a_1 + a_n)\).</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(S_1 = a_1\), 公式成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(S_k = \frac{k}{2}(a_1 + a_k)\).</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
-就是说我们要明确的推导出来:
-\(\begin{equation}
-S_{k+1} = \frac{(k+1)}{2}(a_1 + a_{k+1})
-\end{equation}\)
-数学归纳法的难点从来不在于写出公式, 而在于逻辑推理.
-\(\begin{equation}
-S_{k+1} = S_k + a_{k+1} = \frac{k}{2}(a_1 + a_k) + a_{k+1}
-\end{equation}\)
-根据等差数列的定义, 有 \(a_{k+1} = a_1 + kd\), 所以:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(a_1 + a_k) + a_1 + kd
-\end{equation}\)
-将 \(a_k\) 替换为 \(a_1 + (k-1)d\), 得到:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(a_1 + a_1 + (k-1)d) + a_1 + kd
-\end{equation}\)
-简化后得到:
-\(\begin{equation}
-S_{k+1} = \frac{k}{2}(2a_1 + (k-1)d) + a_1 + kd = \frac{(k+1)}{2}(a_1 + a_{k+1})
-\end{equation}\)
-公式成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 等差数列前\(n\)项的和公式对所有自然数\(n \geq 1\)成立.
-因此, 我们成功地使用数学归纳法证明了等差数列求和公式.</li>
-</ol>
+<p>另外, 就想动量是波函数平移的生成元一样, 角动量是波函数旋转的生成元, 我们就挑选沿着z轴旋转, 那么我们的波函数\(\phi\)应该会增长一个相位:</p>
 
-<hr />
-<h2 id="求和问题-2">求和问题-2</h2>
+\[\begin{equation}
+U(\alpha;\mathrm{z}) \psi(\boldsymbol{r}, \theta, \phi) = \psi(\boldsymbol{r}, \theta, \phi + \boldsymbol{\alpha})
+\end{equation}\]
 
-<p>数学归纳法的第二个难点: 你真的能归纳出来吗?
-我们首先进行经验观察:
-\(\begin{align}
-1^2 &amp;= 1\\
-1^2 + 2^2 &amp;= 5\\
-1^2 + 2^2 + 3^2 &amp;= 14\\
-1^2 + 2^2 + 3^2 + 4^2 &amp;= 30\\
-1^2 + 2^2 + 3^2 + 4^2 + 5^2 &amp;= 55
-\end{align}\)
-这能看出来啥规律?
-我们进行一个猜测:
-\(\begin{equation}
-1^2 + 2^2 + 3^2 + ... + n^2 = \sum_{i=1}^{n} i^2 \sim \int_1^n x^2 dx = \frac{n^3}{3}
-\end{equation}\)
-但是这个不对, 因为当\(n=1\)时, 左边是1, 右边是1/3.
-可是我们至少能注意到一个问题: 这个求和的结果应该是一个三次函数, 所以我们从最一般的开始猜:
-\(\begin{equation}
-\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn + D
-\end{equation}\)
-看看能否通过已知的5个点来确定4个系数.
-\(\begin{align}
-1 &amp;= A + B + C + D\\
-5 &amp;= 8A + 4B + 2C + D\\
-14 &amp;= 27A + 9B + 3C + D\\
-30 &amp;= 64A + 16B + 4C + D\\
-55 &amp;= 125A + 25B + 5C + D
-\end{align}\)
-解这个方程组, 我们得到:
-\(\begin{equation}
-A = \frac{1}{3}, B = \frac{1}{2}, C = \frac{1}{6}, D = 0
-\end{equation}\)
-所以我们猜测:
-\(\begin{equation}
-\sum_{i=1}^{n} i^2 = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{n(n+1)(2n+1)}{6}
-\end{equation}\)
-我们给出两个证明方法, 首先是做如下考虑:
-\(\begin{equation}
-(n+1)^3 - n^3 = 3n^2 + 3n + 1
-\end{equation}\)
-同时对两侧求和, 左边是telescope series:
-\(\begin{equation}
-\sum_{n=1}^{k} ((n+1)^3 - n^3) = 2^3 - 1^3 + 3^3 - 2^3 + ... + (k+1)^3 - k^3 = (k+1)^3 - 1
-\end{equation}\)
-右边呢:
-\(\begin{equation}
-\sum_{n=1}^{k} (3n^2 + 3n + 1) = 3\sum_{n=1}^{k} n^2 + 3\sum_{n=1}^{k} n + \sum_{n=1}^{k} 1 = 3\sum_{n=1}^{k} n^2 + \frac{3k(k+1)}{2} + k
-\end{equation}\)
-这样就能得到:
-\(\begin{equation}
-\sum_{n=1}^{k} n^2 = \frac{(k+1)^3 - 1 - \frac{3k(k+1)}{2} - k}{3} = \frac{k(k+1)(2k+1)}{6}
-\end{equation}\)
-这还是需要点观察力的, 现在我们考虑使用数学归纳法:</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 \(\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}\), 这是我们想证明的.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, \(\sum_{i=1}^{1} i^2 = 1\), 右边也是 \(\frac{1(1+1)(2*1+1)}{6} = 1\), 公式成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 公式成立, 即 \(\sum_{i=1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}\).</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 公式也成立.
-也就是说我们要明确的推导出来:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}
-\end{equation}\)
-根据归纳假设, 有:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \sum_{i=1}^{k} i^2 + (k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
-\end{equation}\)
-将右边进行通分, 得到:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} = \frac{(k+1)(k(2k+1) + 6(k+1))}{6}
-\end{equation}\)
-简化后得到:
-\(\begin{equation}
-\sum_{i=1}^{k+1} i^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
-\end{equation}\)
-公式成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.
-因此, 我们成功地使用数学归纳法证明了平方和公式.</li>
-</ol>
+<p>仿照动量的写法, 我们立刻获得:</p>
+
+\[\begin{equation}
+U(\alpha;\mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right)
+\end{equation}\]
+
+<p>我们来检查一下他们的对易关系:</p>
+
+\[\begin{align}
+[L_x, L_y] =&amp; [y p_z - z p_y, z p_x - x p_z] \\
+=&amp; y p_z z p_x - y p_z x p_z - z p_y z p_x + z p_y x p_z \\
+&amp; - z p_x y p_z + x p_z y p_z + z p_x z p_y - x p_z z p_y \\
+=&amp; y [p_z, z] p_x - z [p_y, x] p_z \\
+=&amp; i \hbar (y p_x - x p_y) \\
+=&amp; i \hbar L_z
+\end{align}\]
+
+<p>检查其他的, 结果也类似:</p>
+
+\[\begin{equation}
+[L_y, L_z] = i \hbar L_x, \quad [L_z, L_x] = i \hbar L_y
+\end{equation}\]
+
+<p>从而总结出来:</p>
+
+\[\begin{equation}
+[L_i, L_j] = i \hbar \epsilon_{ijk} L_k
+\end{equation}\]
+
+<p>我们还可以考虑角动量的平方:</p>
+
+\[\begin{equation}
+L^2 = L_x^2 + L_y^2 + L_z^2
+\end{equation}\]
+
+<p>可以试试如下的计算:</p>
+
+\[\begin{equation}
+[L^2, L_i] = 0 
+\end{equation}\]
+
+<p>这有什么深刻含义吗?</p>
 
 <hr />
-<h2 id="论点也可以归纳">论点也可以归纳</h2>
+<h2 id="中心势场">中心势场</h2>
 
-<p>数学归纳法不仅可以用来证明数列求和公式, 还可以用来证明其他类型的数学命题, 比如不等式, 组合问题, 图论等.
-每个大于 1 的自然数都能写成素数的乘积(素数分解定理), 这个也可以用数学归纳法来证明.
-素数(prime number)是指大于 1 的自然数, 只能被 1 和它本身整除的数.
-我们来证明这个命题:</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “每个大于 1 的自然数 \(n\) 都能写成素数的乘积”.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=2\) 时, 2 是素数, 所以命题成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即 \(k\) 能写成素数的乘积.</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
-如果 \(k+1\) 是素数, 那么命题成立.
-如果 \(k+1\) 不是素数, 那么 \(k+1\) 可以写成两个小于 \(k+1\) 的自然数的乘积, 设为 \(a\) 和 \(b\), 即 \(k+1 = a \times b\), 其中 \(1 &lt; a, b &lt; k+1\).
-根据归纳假设, \(a\) 和 \(b\) 都能写成素数的乘积, 所以 \(k+1\) 也能写成素数的乘积.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有大于 1 的自然数 \(n\) 成立.
-因此, 我们成功地使用数学归纳法证明了素数分解定理.</li>
-</ol>
+<p>我们从定态Schrödinger方程出发:</p>
 
-<hr />
-<h2 id="不能乱归纳">不能乱归纳…</h2>
+\[\begin{equation}
+H = -\frac{\hbar^2}{2m} \nabla^2 + V(r)
+\end{equation}\]
 
-<p>数学归纳法虽然强大, 但是偶尔应用不当也会出错.
-比如我们来证明一个错误的命题: “所有的马都是同一种颜色”.</p>
-<ol>
-  <li><strong>定义命题</strong>: 设 \(P(n)\) 为 “在任意 \(n\) 匹马中, 所有马都是同一种颜色”.</li>
-  <li><strong>基础步骤</strong>: 当 \(n=1\) 时, 只有一匹马, 命题成立.</li>
-  <li><strong>归纳假设</strong>: 假设当 \(n=k\) 时, 命题成立, 即在任意 \(k\) 匹马中, 所有马都是同一种颜色.</li>
-  <li><strong>逻辑推理</strong>: 需要证明当 \(n=k+1\) 时, 命题也成立.
-我们考虑任意 \(k+1\) 匹马, 设为 \(M_1, M_2, ..., M_{k+1}\).
-根据归纳假设, 在前 \(k\) 匹马 \(M_1, M_2, ..., M_k\) 中, 所有马都是同一种颜色, 设为颜色 \(C_1\).
-同样, 在后 \(k\) 匹马 \(M_2, M_3, ..., M_{k+1}\) 中, 所有马也是同一种颜色, 设为颜色 \(C_2\).
-由于 \(M_2, M_3, ..., M_k\) 是前后两组马的交集, 它们的颜色必须相同, 即 \(C_1 = C_2\).
-因此, 所有 \(k+1\) 匹马都是同一种颜色, 命题成立.</li>
-  <li><strong>结论</strong>: 通过基础步骤和归纳步骤, 得出结论, 命题 \(P(n)\) 对所有自然数 \(n \geq 1\) 成立.</li>
-</ol>
+<p>由于势能只和距离有关, 所以, 哈密顿量是旋转不变的.
+三维的Laplace算符是:</p>
 
-<p>❌️❌️❌️但是这个命题显然是错误的, 因为不同的马可以有不同的颜色.
-这个错误的归纳证明在逻辑推理步骤中存在漏洞.
-当 \(n=1\) 时, 基础步骤成立.
-但是当 \(n=2\) 时, 归纳假设无法应用, 因为前后两组马没有交集, 所以无法得出 \(C_1 = C_2\).
-因此, 这个错误的归纳证明无法成立!
-这个例子提醒我们在使用数学归纳法时, 必须明确推理的范围和条件, 实际上, 解决这个问题有两个方法:</p>
-<ol>
-  <li><strong>检查随机的n</strong>: 通过检查多个不同的 \(n\) 值, 来验证命题的正确性.</li>
-  <li><strong>寻找反面例子</strong>: 通过寻找一个反面例子, 来证明命题的错误性.
-这两个方法都能帮助我们避免错误的归纳证明.</li>
-</ol>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[基本定义 数学归纳法是一种证明数学命题对所有自然数成立的有效方法, 针对关于数列, 极限, 组合等问题非常有效. 它的基本思想是通过两个步骤来证明一个命题对所有自然数成立:]]></summary></entry></feed>
+\[\begin{equation}
+\nabla^2 = \frac{1}{r^2} \pdv{}{r}\left(r^2 \pdv{r}\right) + \frac{1}{r^2 \sin\theta} \pdv{}{\theta}\left(\sin\theta \pdv{}{\theta}\right) + \frac{1}{r^2 \sin^2\theta} \pdv[2]{}{\phi}
+\end{equation}\]
+
+<p>从而我们要解决的本征值问题是:</p>
+
+\[\begin{equation}
+\left[-\frac{\hbar^2}{2m} \left( \frac{1}{r^2} \pdv{}{r}\left(r^2 \pdv{r}\right) + \frac{1}{r^2 \sin\theta} \pdv{}{\theta}\left(\sin\theta \pdv{}{\theta}\right) + \frac{1}{r^2 \sin^2\theta} \pdv[2]{}{\phi} \right) + V(r) \right] \psi = E \psi
+\end{equation}\]
+
+<p>我们还是得熟悉一下角动量算符在球坐标下的形式:</p>
+
+\[\begin{equation}
+r = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \arccos\frac{z}{r}, \quad \phi = \arctan\frac{y}{x}
+\end{equation}\]
+
+<p>所以我们有:</p>
+
+\[\begin{equation}
+x = r \sin\theta \cos\phi, \quad y = r \sin\theta \sin\phi, \quad z = r \cos\theta
+\end{equation}\]
+
+<p>然后就是各种求导:</p>
+
+\[\begin{align}
+\pdv{}{x} =&amp; \pdv{r}{x} \pdv{}{r} + \pdv{\theta}{x} \pdv{}{\theta} + \pdv{\phi}{x} \pdv{}{\phi} \\
+=&amp; \sin\theta \cos\phi \pdv{}{r} + \frac{\cos\theta \cos\phi}{r} \pdv{}{\theta} - \frac{\sin\phi}{r \sin\theta} \pdv{}{\phi}
+\end{align}\]
+
+\[\begin{align}
+\pdv{}{y} =&amp; \pdv{r}{y} \pdv{}{r} + \pdv{\theta}{y} \pdv{}{\theta} + \pdv{\phi}{y} \pdv{}{\phi} \\
+=&amp; \sin\theta \sin\phi \pdv{}{r} + \frac{\cos\theta \sin\phi}{r} \pdv{}{\theta} + \frac{\cos\phi}{r \sin\theta} \pdv{}{\phi}
+\end{align}\]
+
+\[\begin{align}
+\pdv{}{z} =&amp; \pdv{r}{z} \pdv{}{r} + \pdv{\theta}{z} \pdv{}{\theta} + \pdv{\phi}{z} \pdv{}{\phi} \\
+=&amp; \cos\theta \pdv{}{r} - \frac{\sin\theta}{r} \pdv{}{\theta}
+\end{align}\]
+
+<p>从而我们可以做如下计算:</p>
+
+\[\begin{equation}
+L_z = \frac{\hbar}{\mathrm{i}} \left( x \pdv{}{y} - y \pdv{}{x} \right)
+\end{equation}\]
+
+<p>从而有:</p>
+
+\[\begin{align}
+x \pdv{}{y} =&amp; r \sin\theta \cos\phi \left( \sin\theta \sin\phi \pdv{}{r} + \frac{\cos\theta \sin\phi}{r} \pdv{}{\theta} + \frac{\cos\phi}{r \sin\theta} \pdv{}{\phi} \right) \\
+=&amp; r \sin^2\theta \cos\phi \sin\phi \pdv{}{r} + \sin\theta \cos\phi \cos\theta \sin\phi \pdv{}{\theta} + \cos^2\phi \pdv{}{\phi}
+\end{align}\]
+
+<p>以及:</p>
+
+\[\begin{align}
+y \pdv{}{x} =&amp; r \sin\theta \sin\phi \left( \sin\theta \cos\phi \pdv{}{r} + \frac{\cos\theta \cos\phi}{r} \pdv{}{\theta} - \frac{\sin\phi}{r \sin\theta} \pdv{}{\phi} \right) \\
+=&amp; r \sin^2\theta \sin\phi \cos\phi \pdv{}{r} + \sin\theta \sin\phi \cos\theta \cos\phi \pdv{}{\theta} - \sin^2\phi \pdv{}{\phi}
+\end{align}\]
+
+<p>所以我们有:</p>
+
+\[\begin{equation}
+x \pdv{}{y} - y \pdv{}{x} = (\cos^2\phi + \sin^2\phi) \pdv{}{\phi} = \pdv{}{\phi}
+\end{equation}\]
+
+<p>这样就简单了!
+从而我们的\(L_z\)有:</p>
+
+\[\begin{equation}
+L_z = \frac{\hbar}{\mathrm{i}} \pdv{}{\phi}
+\end{equation}\]
+
+<p>用类似的方法, 我们有:</p>
+
+\[\begin{equation}
+L_+ = \hbar \mathrm{e}^{\mathrm{i}\phi} \left( \pdv{}{\theta} + \mathrm{i} \cot\theta \pdv{}{\phi} \right)
+\end{equation}\]
+
+\[\begin{equation}
+L_- = -\hbar \mathrm{e}^{-\mathrm{i}\phi} \left( \pdv{}{\theta} - \mathrm{i} \cot\theta \pdv{}{\phi} \right)
+\end{equation}\]
+
+<p>从而我们可以考虑如下的计算:</p>
+
+\[\begin{equation}
+L^2 = L_- L_+ + L_z + L_z^2 = -\hbar^2 \left[ \frac{1}{\sin\theta} \pdv{}{\theta} \left( \sin\theta \pdv{}{\theta} \right) + \frac{1}{\sin^2\theta} \pdv[2]{}{\phi} \right]
+\end{equation}\]
+
+<p>这样我们就能做一个简单验算:</p>
+
+\[\begin{equation}
+U(\alpha; \mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right) = \exp\left(-\alpha \pdv{}{\phi}\right)
+\end{equation}\]
+
+<p>我们有:</p>
+
+\[\begin{equation}
+U(\alpha; \mathrm{z}) \psi(r, \theta, \phi) = \psi(r, \theta, \phi - \alpha)
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">Linear Algebra 例题</title><link href="http://localhost:4000/PersonalPageCN/math0/LAExample/" rel="alternate" type="text/html" title="Linear Algebra 例题" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/LAExample</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/LAExample/"><![CDATA[<hr />
+<h2 id="求解方程组">求解方程组</h2>
+
+<h3 id="例题-1-有解的方程组">例题 1: 有解的方程组</h3>
+
+<p>求解以下线性三元方程组:</p>
+
+\[\begin{equation}
+\begin{cases}
+2x + 3y + z = 1 \\
+4x + y - z = 2 \\
+-2x + 5y + 2z = 3
+\end{cases}
+\end{equation}\]
+
+<p>写出增广矩阵:</p>
+
+\[\begin{equation}
+\left[\begin{array}{ccc|c}
+2 &amp; 3 &amp; 1 &amp; 1 \\
+4 &amp; 1 &amp; -1 &amp; 2 \\
+-2 &amp; 5 &amp; 2 &amp; 3
+\end{array}\right]
+\end{equation}\]
+
+<p>使用初等行变换将增广矩阵化为行阶梯形矩阵:</p>
+
+\[\begin{equation}
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; -1
+\end{array}\right]
+\end{equation}\]
+
+<p>检查行列式:</p>
+
+\[\begin{equation}
+\text{det} = 2 \cdot (1 \cdot 2 - (-1) \cdot 5) - 3 \cdot (4 \cdot 2 - (-1) \cdot (-2)) + 1 \cdot (4 \cdot 5 - 1 \cdot (-2)) = 2 \cdot (2 + 5) - 3 \cdot (8 - 2) + 1 \cdot (20 + 2) = 14 - 18 + 22 = 18 \neq 0
+\end{equation}\]
+
+<p>因此, 方程组有唯一解.
+从行阶梯形矩阵中读出解:</p>
+
+\[\begin{equation}
+\begin{cases}
+x = 1 \\
+y = 0 \\
+z = -1
+\end{cases}
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[求解方程组]]></summary></entry></feed>

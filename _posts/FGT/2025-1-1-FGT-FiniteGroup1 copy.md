@@ -1,5 +1,5 @@
 ---
-title: "FGT1: 群的基础理论"
+title: "FGT: 1. 群的基础理论"
 date: 2025-1-1
 categories:
   - FGT
