@@ -56,13 +56,19 @@ var store = [{
         "title": "FGT: 1. 群的基础理论",
         "excerpt":"群就是一个集合, 配备了一个满足特定性质的二元运算. 群的定义 对于一个非空集合 \\(G\\), 如果在 \\(G\\) 上定义了一个二元运算 \\(*\\). \\(\\forall a, b \\in G, a * b \\in G\\) (封闭性) \\(\\forall a, b, c \\in G, (a * b) * c = a * (b * c)\\) (结合性) \\(\\exists e \\in G, \\forall a \\in G, e * a =...","categories": ["FGT"],
         "tags": [],
-        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup1-copy/",
+        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup1/",
         "teaser": null
       },{
         "title": "FGT: 2. 群的拆分",
         "excerpt":"群太大了, 我们需要把它拆分成更小的部分来研究. 怎么拆? 子群 大群 \\(G\\) 拆一些元素出来, 如果这些元素本身也构成一个群 \\(H\\), 那么这个小群就叫做子群, 记作 \\(H \\subseteq G\\). 检查 \\(H\\) 是否是 \\(G\\) 的子群, 可以使用如下的定理: \\[H \\subseteq G \\Leftrightarrow \\forall a, b \\in H, a * b^{-1} \\in H\\] 当然, 很多情况下都能一眼看出来某些元素的逆根本不在 \\(H\\) 里, 那么就直接否定了 \\(H\\) 是 \\(G\\) 的子群. 举个例子, 我们考虑大群 \\((\\mathbb{Z}_5, +)\\), 以及它的子集 \\(H =...","categories": ["FGT"],
         "tags": [],
-        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup2/",
+        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup2-copy/",
+        "teaser": null
+      },{
+        "title": "FGT: 3. 共轭类",
+        "excerpt":"陪集是一种等价类, 他的等价关系在于”属于同一个陪集”: \\[\\begin{equation} [a] = \\{b \\in G | a^{-1}*b \\in H\\} \\end{equation}\\] 共轭类 而共轭类也是一种等价类, 他的等价关系在于”属于同一个共轭类”. (共轭类): 设$G$是一个群, $g \\in G$, 则$a$的共轭类是 \\(\\begin{equation} \\text{Conj}(g) = \\{ h^{-1}*g*h | h \\in G\\} \\end{equation}\\) 即 \\(g\\) 在所有群元”装扮”下的不同”面孔”. 这样定义的关系到底是不是等价关系? 自反性: \\(g \\in \\text{Conj}(g)\\), 因为取\\(h = e\\), 则\\(h^{-1}*g*h = g\\). 对称性: 若 \\(g_1 \\in...","categories": ["FGT"],
+        "tags": [],
+        "url": "/PersonalPageCN/fgt/FGT-FiniteGroup3/",
         "teaser": null
       },{
         "title": "CMP2 BCS超导理论1",

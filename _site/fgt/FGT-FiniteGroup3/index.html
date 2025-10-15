@@ -10,25 +10,24 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>刘沛松的赛道 - Page 7</title>
-<meta name="description" content="欢迎来访, 祝你一切顺利!">
+<!-- begin _includes/seo.html --><title>FGT: 3. 共轭类 - 刘沛松的赛道</title>
+<meta name="description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
 
 
   <meta name="author" content="刘沛松">
   
+  <meta property="article:author" content="刘沛松">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="刘沛松的赛道">
-<meta property="og:title" content="刘沛松的赛道">
-<meta property="og:url" content="http://localhost:4000/PersonalPageCN/page7/">
+<meta property="og:title" content="FGT: 3. 共轭类">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/">
 
 
-  <meta property="og:description" content="欢迎来访, 祝你一切顺利!">
-
-
-
+  <meta property="og:description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
 
 
 
@@ -36,12 +35,15 @@
 
 
 
+  <meta property="article:published_time" content="2025-01-01T00:00:00+11:00">
 
 
-<link rel="canonical" href="http://localhost:4000/PersonalPageCN/page7/">
 
 
-  <link rel="prev" href="http://localhost:4000/PersonalPageCN/page6/">
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/">
+
 
 
 
@@ -96,7 +98,7 @@
   <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
   </head>
 
-  <body class="layout--home" dir="ltr">
+  <body class="layout--single" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -160,6 +162,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -272,154 +276,155 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FGT: 3. 共轭类">
+    <meta itemprop="description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
+    <meta itemprop="datePublished" content="2025-01-01T00:00:00+11:00">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
 
-<h3 class="archive__subtitle">Recent Posts</h3>
-
-
-
-
-<div class="entries-list">
-  
-
-
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/PersonalPageCN/qm1/QM1-Commutation-Relations/" rel="permalink">QM1 常见对易关系的推导和结果
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/" itemprop="url">FGT: 3. 共轭类
 </a>
+          </h1>
+          
+
+
+        </header>
       
-    </h2>
+
+      <section class="page__content" itemprop="text">
+        
+        <p>陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:</p>
+
+\[\begin{equation}
+[a] = \{b \in G | a^{-1}*b \in H\}
+\end{equation}\]
+
+<hr />
+<h2 id="共轭类">共轭类</h2>
+
+<p>而共轭类也是一种等价类, 他的等价关系在于”属于同一个共轭类”.</p>
+
+<blockquote>
+  <p>(共轭类): 设$G$是一个群, $g \in G$, 则$a$的共轭类是
+\(\begin{equation}
+\text{Conj}(g) = \{ h^{-1}*g*h | h \in G\}
+\end{equation}\)
+即 \(g\) 在所有群元”装扮”下的不同”面孔”.</p>
+</blockquote>
+
+<p>这样定义的关系到底是不是等价关系?</p>
+
+<ul>
+  <li>自反性: \(g \in \text{Conj}(g)\), 因为取\(h = e\), 则\(h^{-1}*g*h = g\).</li>
+  <li>对称性: 若 \(g_1 \in \text{Conj}(g_2)\), 则存在\(h \in G\), 使得 \(g_1 = h^{-1}*g_2*h\), 则 \(g_2 = h*g_1*h^{-1}\), 也就是说 \(g_2 \in \text{Conj}(g_1)\).</li>
+  <li>传递性: 若 \(g_1 \in \text{Conj}(g_2)\), \(g_2 \in \text{Conj}(g_3)\), 则存在\(h_1, h_2 \in G\), 使得 \(g_1 = h_1^{-1}*g_2*h_1\), \(g_2 = h_2^{-1}*g_3*h_2\), 则 \(g_1 = (h_1*h_2)^{-1}*g_3*(h_1*h_2)\), 也就是说 \(g_1 \in \text{Conj}(g_3)\).</li>
+</ul>
+
+<p>所以, 共轭类确实是一种等价类.</p>
+
+<p>我们现在看一个例子, 群\(S_3\).
+我们一个一个看他的共轭类是什么.
+这个完全可以通过穷举法来做, 看着乘法表写就行了.</p>
+
+<ol>
+  <li>\(e\)的共轭类是\(\{e\}\), 因为\(h^{-1}*e*h = e\), 对任意\(h \in S_3\)都成立.</li>
+  <li>\(f_1\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
+  <li>\(f_2\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
+  <li>\(f_3\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
+  <li>\(f_4\)的共轭类是\(\{f_4, f_5\}\).</li>
+  <li>\(f_5\)的共轭类是\(\{f_4, f_5\}\).</li>
+</ol>
+
+<p>也就是说, 我们现在把\(S_3\)划分成了3个共轭类:</p>
+
+\[\begin{equation}
+S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
+\end{equation}\]
+
+<blockquote>
+  <p>(共轭类划分定理): 设\(G\)是一个群, 则\(G\)的共轭类划分了\(G\).</p>
+  <ol>
+    <li>任意\(g \in G\), \(g\)属于某个共轭类.</li>
+    <li>两个共轭类要么相等, 要么没有交集.</li>
+    <li>共轭类的并集是\(G\).</li>
+  </ol>
+</blockquote>
+
+<p>这样我们又得到了一个拆分大群的方法, 但是很遗憾的, 共轭类拆分出来的子集, 一定不是子群.
+这是因为 \(e\) 自己单独成一个共轭类, 根据共轭类划分定理, 你又不能把\(e\)和其他元素放在一起, 所以其他共轭类必然不能包括\(e\), 也就是说, 其他共轭类不可能是子群.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
     
+      <a href="/PersonalPageCN/categories/#fgt" class="page__taxonomy-item p-category" rel="tag">FGT</a>
+    
+    </span>
+  </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:
+        
 
-</p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-01-01T00:00:00+11:00">January 1, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=FGT%3A+3.+%E5%85%B1%E8%BD%AD%E7%B1%BB%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=FGT%3A+3.+%E5%85%B1%E8%BD%AD%E7%B1%BB%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/fgt/FGT-FiniteGroup2-copy/" class="pagination--pager" title="FGT: 2. 群的拆分">Previous</a>
+    
+    
+      <a href="/PersonalPageCN/cmp2/CMP2-BCS1/" class="pagination--pager" title="CMP2 BCS超导理论1">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
   </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/math/Important-Integrals-2-copy/" rel="permalink">积分表 - Gauss积分
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">有一些常见的积分结果, 知道总比不知道要好, 一方面省得去网上搜了, 另一方面也不用打开Mathematica了…
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/PersonalPageCN/math/Important-Integrals/" rel="permalink">积分表 - 三角函数积分
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">Here we summarize some useful intergation results in assignments.
-
-</p>
-  </article>
-</div>
-
-</div>
-
 
   
-    
-<nav class="pagination">
   
-  
-  <ul>
-    
-    
-      
-        <li><a href="/PersonalPageCN/page6/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/PersonalPageCN/">1</a></li>
-    
-
-    
-    
-      
-      
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/PersonalPageCN/page5/">5</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/PersonalPageCN/page6/">6</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="#" class="disabled current">7</a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled"><span aria-hidden="true">Next</span></a></li>
-    
-  </ul>
-</nav>
-
-
-  
-
-
-
-  </div>
 </div>
 
       
