@@ -477,7 +477,7 @@ $$
 $$
 
 现在我们如何把Fock态提升到Fock空间呢?
-我们还是可以像以前一样把各个粒子数的态并起来, 比如我们考虑 $$\mathcal{F} = \mathcal{H}_0 \oplus \cdots \oplus \mathcal{H}_N$$, 我们局限于双粒子系统, 那么一个Fock态可以写成:
+我们还是可以像以前一样把各个粒子数的态并起来, 比如我们考虑 $$\mathcal{F} = \mathcal{H}_0 \oplus \cdots \oplus \mathcal{H}_N$$, 我们局限于双能级系统, 那么一个Fock态可以写成:
 
 $$
 \begin{equation}
@@ -485,12 +485,12 @@ $$
 \end{equation}
 $$
 
-从而Fock态中的任意一个态是:
+从而Fock空间中的任意一个态是:
 
 $$
 \begin{equation}
-\ket{\Psi} = \alpha \ket{0,0} + \beta \ket{n_1, n_2} + \gamma \ket{n_3, n_4} + \cdots
+\ket{\Psi} = \alpha_1 \ket{0} + \alpha_2 \ket{A} + \alpha_3 \ket{B} + \beta_1 \ket{n_1, n_2} + \beta_2 \ket{n_3, n_4} + \cdots
 \end{equation}
 $$
 
-其中$$\alpha, \beta, \gamma, \ldots \in \mathbb{C}$$.
+其中$$\alpha, \beta \in \mathbb{C}$$.
