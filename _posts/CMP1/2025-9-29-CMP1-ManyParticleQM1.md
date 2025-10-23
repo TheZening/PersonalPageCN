@@ -489,7 +489,7 @@ $$
 
 $$
 \begin{equation}
-\ket{\Psi} = \alpha_1 \ket{0} + \alpha_2 \ket{A} + \alpha_3 \ket{B} + \beta_1 \ket{n_1, n_2} + \beta_2 \ket{n_3, n_4} + \cdots
+\ket{\Psi} = \alpha_1 \ket{0,0} + \alpha_2 \ket{1,0} + \alpha_3 \ket{0,1} + \beta_1 \ket{n_1, n_2} + \beta_2 \ket{n_3, n_4} + \cdots
 \end{equation}
 $$
 
