@@ -57,6 +57,15 @@ $$
 ---
 ## Fock 空间
 
+我们现在没有什么牌可以打, 又想描述粒子数可以变化的系统.
+暂且不谈系统的动力学, 仅仅是描述系统, 就需要仔细思考一番:
+
+1. 目前我们知道, 一旦体系确定了(玻色子/费米子), 我们就立刻把大张量积空间缩小到对称化/反对称化子空间.
+2. 即是粒子数可变, $$n$$粒子态空间和$$(n+1)$$粒子态空间也必须是性质相同.
+3. 这样的话, 与其讨论大的张量积空间, 不如从粒子数下手.
+
+那么这样的话, 我们的空间应该是不同粒子数的直和.
+
 > (Fock空间) Fock空间是描述可变粒子数体系的Hilbert空间.
 > 它是所有可能粒子数的Hilbert空间的直和:
 > $$
@@ -270,3 +279,199 @@ $$
 对于费米子, 我们也是类似的思路, 只是每一层的基矢量要用反对称化的张量积来表示.
 
 > 目前看来, 这个记号系统大不利于我们实际计算, 太复杂了, 我们必须得谋求新出路.
+
+但无论如何, 我们目前确定了物理的Fock空间为:
+
+$$
+\begin{equation}
+\mathcal{F} = \bigoplus_{N=0}^{\infty} \mathcal{H}_S
+\end{equation}
+$$
+
+或者
+
+$$
+\begin{equation}
+\mathcal{F} = \bigoplus_{N=0}^{\infty} \mathcal{H}_A
+\end{equation}
+$$
+---
+## Fock态
+
+经过仔细观察, 对称化/反对称化的多粒子态其实是团结了所有的"单粒子态占据情况"相同的态.
+举个例子, 对于玻色子, 我们考虑三个粒子两个态的情况, 比如:
+
+$$
+\begin{equation}
+\ket{A, A, B}_s = \frac{1}{\sqrt{3}} ( \ket{A, A, B} + \ket{A, B, A} + \ket{B, A, A} )
+\end{equation}
+$$
+
+也就是说对称化的基团结了$$\ket{A, A, B}, \ket{A, B, A}, \ket{B, A, A}$$这三种占据情况, 而这三种占据情况的共同点是: 有2个粒子在态$$A$$, 1个粒子在态$$B$$.
+所以我们可以用"态$$A$$有2个粒子, 态$$B$$有1个粒子"来表示这个态.
+这就是所谓的 Fock 态:
+
+> (Fock态) Fock态是指用单粒子态的占据数来表示的多粒子态.
+> 对于玻色子, Fock态可以表示为:
+> $$
+> \begin{equation}
+> \ket{n_1, n_2, \ldots, n_k} = \text{$n_i$个粒子在单粒子态$i$上}
+> \end{equation}
+> $$
+> 对于费米子, Fock态可以表示为:
+> $$
+> \begin{equation}
+> \ket{n_1, n_2, \ldots, n_k} = \text{$n_i$为0或1, 表示单粒子态$i$是否被占据}
+> \end{equation}
+> $$
+
+这样的话, 我们之前的玻色子例子中的态$$\ket{A, A, B}_s$$就可以表示为$$\ket{n_A = 2, n_B = 1}$$.
+同理, 费米子的态$$\frac{1}{\sqrt{2}} ( \ket{A, B} - \ket{B, A} )$$可以表示为$$\ket{n_A = 1, n_B = 1}$$.
+这样, 我们就成功的把多粒子态表示成了占据数的形式.
+
+但是现在我们必须直面几个问题
+
+1. Fock态, 一定要能与原来的对称基/反对称基通过Unitary变换联系起来.
+2. Fock态的正交归一的具体做法要清楚.
+3. 把Fock态从$$N$$粒子空间提升到Fock空间的做法要清楚.
+
+
+我们一个一个来解决, 我们考虑单粒子 Hilbert 空间$$\mathcal{H}_1$$有一组正交归一基$$\{ \ket{\phi_i} \}$$, 那么对于物理空间是 $$H^A_N$$ 的玻色子体系.
+先不构造对称基, 我们就随便挑一个态出来:
+
+$$
+\begin{equation}
+\ket{\phi_1, \phi_1, \phi_2, \ldots, \phi_M}
+\end{equation}
+$$
+
+这个太复杂了, 我们现在挑其中一个对称好的态出来, 那么我们可以数一数每个单粒子态$$i$$被占据了多少次, 记为$$n_i$$, 必然有:
+
+$$
+\begin{equation}
+\sum_i n_i = N
+\end{equation}
+$$
+
+我们就对这一个态进行对称化, 然后归一化:
+
+$$
+\begin{equation}
+\ket{\Psi} = \frac{1}{\sqrt{N! \prod_i n_i!}} \sum_{\alpha} P_{\alpha} \ket{\phi_1}^{\otimes n_1} \otimes \ket{\phi_2}^{\otimes n_2} \otimes \cdots \otimes \ket{\phi_M}^{\otimes n_M} 
+\end{equation}
+$$
+
+我们看看这个归一化因子为什么是这样的:
+
+$$
+\begin{equation}
+\mel{\Psi}{S}{\Psi} = \frac{1}{N! \prod_i n_i!} \sum_{\alpha, \beta} \mel{\phi_1^{\otimes n_1} \otimes \cdots}{P_{\alpha}^\dagger P_{\beta}}{\phi_1^{\otimes n_1} \otimes \cdots}
+\end{equation}
+$$
+
+我们可以在挑一个态, 重复以上的过程:
+
+$$
+\begin{equation}
+\ket{\Psi'} = \frac{1}{\sqrt{N! \prod_i m_i!}} \sum_{\alpha} P_{\alpha} \ket{\phi_1}^{\otimes m_1} \otimes \ket{\phi_2}^{\otimes m_2} \otimes \cdots \otimes \ket{\phi_M}^{\otimes m_M}
+\end{equation}
+$$
+
+我们可以计算内积:
+
+$$
+\begin{equation}
+\braket{\Psi}{\Psi'} = \frac{1}{\sqrt{N! \prod_i n_i!}} \frac{1}{\sqrt{N! \prod_i m_i!}} \sum_{\alpha, \beta} \mel{\phi_1^{\otimes n_1} \otimes \cdots}{P_{\alpha}^\dagger P_{\beta}}{\phi_1^{\otimes m_1} \otimes \cdots}
+\end{equation}
+$$
+
+如果是一个态, 那么我们有$$P_{\alpha}^\dagger P_{\beta} = \mathbb{1}$$, 否则的话, 因为占据数不同, 内积为0.
+现在我们构造了一组: 完全对称, 正交归一的基, 而且每一个基都可以被对称化的态唯一标记过来.
+而且, 每一个态都由如下的数组唯一表示:
+
+$$
+\begin{equation}
+(n_1, n_2, \ldots, n_M) \quad \text{with } \sum_i n_i = N
+\end{equation}
+$$
+
+这其实就是 Fock 态.
+而且, 在这个过程中, 我们可以验证(需要一点组合数学), 原来的大空间维度是$$M^N$$, 现在对称化之后的空间维度是$$\binom{N+M-1}{N}$$.
+同理, 费米子的情况也是类似的, 只是每一个$$n_i$$只能是0或者1.
+这样, 我们就成功的把多粒子态表示成了占据数的形式.
+
+
+举个例子, 我们考虑一个3能级体系, 6个玻色子, 张量积态是, 我们挑选如下的配置进行对称化:
+
+$$
+\begin{equation}
+\ket{AABBCC}_s = c_0 (\ket{AABBCC} + \ket{AABCCB} + \ket{AACBBC} + \cdots )
+\end{equation}
+$$
+
+我们看看$$c_0$$为什么是$$\frac{1}{\sqrt{6!/(2!2!2!)}}$$:
+
+1. 总共有$$6!$$种排列.
+2. 但是由于$$A$$有2个, 交换这2个$$A$$不变, 有$$2!$$种排列.
+3. 同理, $$B$$有$$2!$$种排列不变, $$C$$也有$$2!$$种排列不变.
+4. 所以总的不同排列数是$$\frac{6!}{2!2!2!}$$.
+5. 所以归一化因子就是$$\frac{1}{\sqrt{6!/(2!2!2!)}}$$.
+
+这个态的记录方法就是$$\ket{n_A = 2, n_B = 2, n_C = 2} = \ket{2, 2, 2}$$.
+类似的, 我们考虑如下的态:
+
+$$
+\begin{equation}
+\ket{AAABBC}_s = c_1 (\ket{AAABBC} + \ket{AAABCB} + \ket{AABABC} + \cdots )
+\end{equation}
+$$
+
+其中$$c_1 = \frac{1}{\sqrt{6!/(3!2!1!)}}$$.
+这个态的记录方法就是$$\ket{n_A = 3, n_B = 2, n_C = 1} = \ket{3, 2, 1}$$.
+我们试试他们是不是正交的:
+
+$$
+\begin{equation}
+(\text{系数}) \left( \braket{AABBCC}{AAABBC} + \braket{AABCCB}{AAABBC} + \cdots \right) = 0
+\end{equation}
+$$
+
+因为每一项内积要么是0, 要么是1, 但是由于占据数不同, 所以每一项内积都是0.
+这样, 我们就成功的把多粒子态表示成了占据数的形式:
+
+
+$$
+\begin{equation}
+\ket{n_i, n_2, \ldots, n_M} = \frac{1}{\sqrt{N! \prod_i n_i!}} \sum_{\alpha} P_{\alpha} \ket{\phi_1}^{\otimes n_1} \otimes \ket{\phi_2}^{\otimes n_2} \otimes \cdots \otimes \ket{\phi_M}^{\otimes n_M}
+\end{equation}
+$$
+
+费米子的情况更简单一些, 因为Pauli不相容原理, 每一个$$n_i$$只能是0或者1.
+我们也是考虑5能级系统, 3个费米子, 那么我们挑选如下的配置进行反对称化:
+
+$$
+\begin{equation}
+\ket{AAC}_a = c_0 (\ket{AAC} - \ket{ACA} + \ket{ACA} - \ket{CAA} + \ket{CAA} - \ket{AAC} ) = 0
+\end{equation}
+$$
+
+如我们所见, 由于有两个$$A$$, 反对称化之后直接为0.
+所以我们在费米子系统不允许有$$n_i > 1$$的情况.
+我们在挑选如下的配置进行反对称化:
+
+$$
+\begin{equation}
+\ket{ABC}_a = c_1 (\ket{ABC} - \ket{ACB} + \ket{BAC} - \ket{BCA} + \ket{CAB} - \ket{CBA} )
+\end{equation}
+$$
+
+其中$$c_1 = \frac{1}{\sqrt{3!}}$$.
+这个态的记录方法就是$$\ket{n_A = 1, n_B = 1, n_C = 1, n_D = 0, n_E = 0} = \ket{1, 1, 1, 0, 0}$$.
+他们的正交性更好检查: 我们不能再往任何有1的地方加1了, 但是一旦把别的地方的0改成1, 那么就说明一个态没了, 那内积自然是0.
+这样, 我们就成功的把费米子多粒子态表示成了占据数的形式:
+
+$$
+\begin{equation}
+\ket{n_i, n_2, \ldots, n_M} = \frac{1}{\sqrt{N!}} \sum_{\alpha} \text{sgn}(P_{\alpha}) P_{\alpha} \ket{\phi_1}^{\otimes n_1} \otimes \ket{\phi_2}^{\otimes n_2} \otimes \cdots \otimes \ket{\phi_M}^{\otimes n_M}
+\end{equation}
+$$
