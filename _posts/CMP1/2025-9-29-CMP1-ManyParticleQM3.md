@@ -220,3 +220,80 @@ $$
 \hat{F} = \sum_{k,l} f_{kl} \hat{a}_k^\dagger \hat{a}_l = \sum_{k,l} \mel{u_k}{\hat{f}}{u_l} \hat{a}_k^\dagger \hat{a}_l
 \end{equation}
 $$
+
+这个结果非常重要, 它告诉我们, 任何单粒子算符在多粒子空间中的表示都可以通过产生湮灭算符来实现.
+而且他还有一个特别简单的例子, 如果我们注意到, 我们现在单粒子算符基底$$\{\ket{u_i}\}$$是$$\hat{f}$$的本征态, 也就是说:
+
+$$
+\begin{equation}
+\mel{u_k}{\hat{f}}{u_l} = f_k \delta_{kl}
+\end{equation}
+$$
+
+这样我们就能获得:
+
+$$
+\begin{equation}
+\hat{F} = \sum_{k} f_k \hat{a}_k^\dagger \hat{a}_k = \sum_k f_k \hat{n}_k
+\end{equation}
+$$
+
+他的物理意义非常明确, 每个在$$k$$状态上的粒子都贡献一份$$f_k$$的量, 然后我们把所有粒子的贡献加起来就行了.
+
+举个例子, 计数算符很明显就是这种算符:
+
+$$
+\begin{equation}
+\hat{N} = \sum_k 1 \cdot \hat{a}_k^\dagger \hat{a}_k = \sum_k \hat{n}_k
+\end{equation}
+$$
+
+系统的粒子数量就是所有单粒子态上粒子数的总和.
+而且这个粒子数量不随着基底变换而变换, 这是显然的事儿, 我们联系一下数学推导:
+
+$$
+\begin{equation}
+\sum_i \hat{a}_{u_i}^\dagger \hat{a}_{u_i} = \sum_{i} \left( \sum_{j} \braket{u_i}{v_j} \hat{a}_{v_j}^\dagger \right) \left( \sum_{k} \braket{v_k}{u_i} \hat{a}_{v_k} \right)
+\end{equation}
+$$
+
+组合一下后面的东西:
+
+$$
+\begin{equation}
+\sum_{j,k} \left( \sum_i \braket{u_i}{v_j} \braket{v_k}{u_i} \right) \hat{a}_{v_j}^\dagger \hat{a}_{v_k} = \sum_{j,k} \braket{v_k}{v_j} \hat{a}_{v_j}^\dagger \hat{a}_{v_k} = \sum_j \hat{a}_{v_j}^\dagger \hat{a}_{v_j}
+\end{equation}
+$$
+
+没问题.
+接下来我们还可以考虑Particle local density算符, 他的单粒子算符就是考虑在空间位置$$\ket{\boldsymbol{x}_0}$$处的投影算符:
+
+$$
+\begin{equation}
+\hat{f} = \ketbra{\boldsymbol{x}_0}{\boldsymbol{x}_0}
+\end{equation}
+$$
+
+从而他在多粒子空间中的对应的密度算符就是:
+
+$$
+\begin{equation}
+\hat{D} = \sum_{k,l} \braket{u_k}{\boldsymbol{x}_0}\braket{\boldsymbol{x}_0}{u_l} \hat{a}_k^\dagger \hat{a}_l = \sum_{k,l} u_k^*(\boldsymbol{x}_0) u_l(\boldsymbol{x}_0) \hat{a}_k^\dagger \hat{a}_l
+\end{equation}
+$$
+
+还可以考虑动量算符, 如果就是用动量态, 我们有:
+
+$$
+\begin{equation}
+\hat{\boldsymbol{P}} = \sum_{\boldsymbol{k}_i} \hbar \boldsymbol{k}_i \hat{a}_{\boldsymbol{k}_i}^\dagger \hat{a}_{\boldsymbol{k}_i} = \sum_{\boldsymbol{k}_i} \hbar \boldsymbol{k}_i \hat{n}_{\boldsymbol{k}_i}
+\end{equation}
+$$
+
+从而我们写出一般的自由Hamiltonian:
+
+$$
+\begin{equation}
+\hat{H}_0 = \sum_{\boldsymbol{k}_i} \frac{\hbar^2 \boldsymbol{k}_i^2}{2m} \hat{a}_{\boldsymbol{k}_i}^\dagger \hat{a}_{\boldsymbol{k}_i} = \sum_{\boldsymbol{k}_i} \frac{\hbar^2 \boldsymbol{k}_i^2}{2m} \hat{n}_{\boldsymbol{k}_i}
+\end{equation}
+$$
