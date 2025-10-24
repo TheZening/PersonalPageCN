@@ -297,3 +297,155 @@ $$
 \hat{H}_0 = \sum_{\boldsymbol{k}_i} \frac{\hbar^2 \boldsymbol{k}_i^2}{2m} \hat{a}_{\boldsymbol{k}_i}^\dagger \hat{a}_{\boldsymbol{k}_i} = \sum_{\boldsymbol{k}_i} \frac{\hbar^2 \boldsymbol{k}_i^2}{2m} \hat{n}_{\boldsymbol{k}_i}
 \end{equation}
 $$
+
+---
+## 双粒子算符
+
+> (双粒子算符) 我们现在考虑双粒子算符$$\hat{g}$$, 它最小的作用空间是$$\mathcal{H} \otimes \mathcal{H}$$.
+> 他就是作用在两个粒子上的算符, 记作$$\hat{g}(q, q')$$, 其中$$q$$和$$q'$$表示两个粒子, $$q \neq q'$$.
+
+如果我们想把他提升到$$N$$粒子空间$$\mathcal{H}_N^{(A/S)}$$中, 我们可以定义:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{q, q' = 1, q \neq q'}^N \hat{g}(q, q')
+\end{equation}
+$$
+
+换句话说, 我们让这个双粒子算符作用在每一对粒子上, 然后把结果加起来, 最后除以2以避免重复计算.
+同样地, 由于全同粒子的对称性或者反对称性, 这个定义是良定的, 不依赖于粒子标号的选择.
+接下来我们可以把这个算符用产生湮灭算符来表示.
+
+我们首先需要讨论可拆开成单粒子算符乘积的双粒子算符, 也就是说:
+
+$$
+\begin{equation}
+\hat{g}(q, q') = \hat{f}(q) \hat{h}(q')
+\end{equation}
+$$
+
+那么我们的大算符就是:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{q, q' = 1, q \neq q'}^N \hat{f}(q) \hat{h}(q') = \frac{1}{2} \left( \sum_{q, q' = 1}^N \hat{f}(q) \hat{h}(q') - \sum_{q=1}^N \hat{f}(q) \hat{h}(q) \right)
+\end{equation}
+$$
+
+我们已经知道了单粒子算符的表示:
+
+$$
+\begin{equation}
+\sum_{q=1}^N \hat{f}(q) = \sum_{i,j} \mel{u_i}{\hat{f}}{u_j} \hat{a}_i^\dagger \hat{a}_j
+\end{equation}
+$$
+$$
+\begin{equation}
+\sum_{q'=1}^N \hat{h}(q') = \sum_{j, l} \mel{u_j}{\hat{h}}{u_l} \hat{a}_j^\dagger \hat{a}_l
+\end{equation}
+$$
+
+后面的那个算符就是单体算符, 不做用在$$q'$$上:
+
+$$
+\begin{equation}
+\sum_{q=1}^N \hat{f}(q) \hat{h}(q) = \sum_{i, l} \mel{u_i}{\hat{f} \hat{h}}{u_l} \hat{a}_i^\dagger \hat{a}_l
+\end{equation}
+$$
+
+从而我们有:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \left( \sum_{i, j, k, l} \mel{u_i}{\hat{f}}{u_k} \mel{u_j}{\hat{h}}{u_l} (\hat{a}_i^\dagger \hat{a}_k) (\hat{a}_j^\dagger \hat{a}_l) - \sum_{i, l} \mel{u_i}{\hat{f} \hat{h}}{u_l} \hat{a}_i^\dagger \hat{a}_l \right)
+\end{equation}
+$$
+
+我们稍微调整一下顺序:
+
+$$
+\begin{equation}
+(\hat{a}_i^\dagger \hat{a}_k) (\hat{a}_j^\dagger \hat{a}_l) = \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k + \delta_{j k} \hat{a}_i^\dagger \hat{a}_l
+\end{equation}
+$$
+
+最后一个项为:
+
+$$
+\begin{equation}
+\sum_{i,j,k,l} \mel{u_i}{\hat{f}}{u_k} \mel{u_j}{\hat{h}}{u_l} \delta_{j k} \hat{a}_i^\dagger \hat{a}_l = \sum_{i,l} \mel{u_i}{\hat{f} \hat{h}}{u_l} \hat{a}_i^\dagger \hat{a}_l
+\end{equation}
+$$
+
+非常好! 我们就有了可以消除最后一个项的方法, 所以我们有:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{i, j, k, l} \mel{u_i}{\hat{f}}{u_k} \mel{u_j}{\hat{h}}{u_l} \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k
+\end{equation}
+$$
+
+这个结果非常重要, 它告诉我们, 任何可拆开的双粒子算符在多粒子空间中的表示都可以通过产生湮灭算符来实现.
+但是真实世界是残酷的, 很多双粒子算符是不可拆开的, 例如Coulomb相互作用:
+
+$$
+\begin{equation}
+\hat{g}(q, q') = \frac{e^2}{4 \pi \epsilon_0} \frac{1}{|\hat{\boldsymbol{x}}_q - \hat{\boldsymbol{x}}_{q'}|}
+\end{equation}
+$$
+
+这是完全不可拆的, 我们只能尝试如下的展开:
+
+$$
+\begin{equation}
+\hat{g}(q, q') = \sum_{\alpha, \beta} \hat{f}_\alpha(q) \hat{h}_\beta(q')
+\end{equation}
+$$
+
+然后我们就能得到多粒子空间中的提升:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{\alpha, \beta} \sum_{q=1, q' = 1, q \neq q'}^N c_{\alpha, \beta} \hat{f}_\alpha(q) \hat{h}_\beta(q')
+\end{equation}
+$$
+
+我们现在可以把$$\hat{f}_\alpha$$和$$\hat{h}_\beta$$分别用产生湮灭算符来表示, 然后把结果加起来就行了:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{\alpha, \beta} c_{\alpha, \beta} \sum_{i, j, k, l} \mel{u_i}{\hat{f}_\alpha}{u_k} \mel{u_j}{\hat{h}_\beta}{u_l} \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k
+\end{equation}
+$$
+
+这个结果虽然不如前一个结果简洁, 但是他是通用的, 适用于任何双粒子算符, 而且我们可以进行记号上的化简, 仔细看:
+
+$$
+\begin{equation}
+\sum_{\alpha, \beta} c_{\alpha, \beta} \mel{u_i}{\hat{f}_\alpha}{u_k} \mel{u_j}{\hat{h}_\beta}{u_l}
+\end{equation}
+$$
+
+这就是$$\mel{u_i, u_j}{\hat{g}}{u_k, u_l}$$, 回想起来:
+
+$$
+\begin{equation}
+\hat{g}(q, q') = \sum_{\alpha, \beta} c_{\alpha, \beta} \hat{f}_\alpha(q) \hat{h}_\beta(q')
+\end{equation}
+$$
+
+我们可以有:
+
+$$
+\begin{equation}
+g_{i,j,k,l} = \braket{1=u_i, 2=u_j}{\hat{g}(1,2)}{1=u_k, 2=u_l} = \sum_{\alpha, \beta} c_{\alpha, \beta} \mel{u_i}{\hat{f}_\alpha}{u_k} \mel{u_j}{\hat{h}_\beta}{u_l}
+\end{equation}
+$$
+
+从而我们有:
+
+$$
+\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{i, j, k, l} g_{i,j,k,l} \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k
+\end{equation}
+$$
