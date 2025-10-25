@@ -265,3 +265,234 @@ G_2(\boldsymbol{x}_1, \boldsymbol{x}_2) = \sum_{i,j} \left[ \|u_i(\boldsymbol{x}
 $$
 
 就是直接项+交换项的写法.
+
+---
+## 场算符
+
+我们之前说, 只要找到一组完备正交的本征基就可以用来展开算符.
+如果我们选择位置表象下的完备正交基 $$\{ \ket{\boldsymbol{x}} \}$$, 那么我们就可以定义场算符.
+在这种情况下, 一个任意态的波函数可以写成:
+
+$$
+\begin{equation}
+u_i(\boldsymbol{x}) = \braket{\boldsymbol{x}}{u_i}
+\end{equation}
+$$
+
+考虑我们之前换基公式:
+
+$$
+\begin{equation}
+\hat{a}_{v_j} = \sum_i \braket{v_j}{u_i} \hat{a}_{u_i}
+\end{equation}
+$$
+
+我们先不考虑自旋算符, 那么我们可以把 $$\ket{v_j}$$ 取成位置表象下的态 $$\ket{\boldsymbol{x}}$$, 那么我们有:
+
+$$
+\begin{equation}
+\hat{\Psi}(\boldsymbol{x}) = \sum_i \braket{\boldsymbol{x}}{u_i} \hat{a}_{u_i} = \sum_i u_i(\boldsymbol{x}) \hat{a}_{u_i}
+\end{equation}
+$$
+
+这个场算符的意义就是在$$\boldsymbol{x}$$位置湮灭一个粒子.
+我们可以立刻检查这个场算符不依赖于基的选择:
+
+$$
+\begin{equation}
+\hat{\Psi}(\boldsymbol{x}) = \sum_i \sum_j \braket{\boldsymbol{x}}{v_j} \braket{v_j}{u_i} \hat{a}_{u_i} = \sum_j \braket{\boldsymbol{x}}{v_j} \hat{a}_{v_j}
+\end{equation}
+$$
+
+这就是:
+
+$$
+\begin{equation}
+\hat{\Psi}(\boldsymbol{x}) = \sum_j v_j(\boldsymbol{x}) \hat{a}_{v_j}
+\end{equation}
+$$
+
+没什么差别.
+类似的, 我们也可以定义产生场算符:
+
+$$
+\begin{equation}
+\hat{\Psi}^\dagger(\boldsymbol{x}) = \sum_i u_i^*(\boldsymbol{x}) \hat{a}_{u_i}^\dagger
+\end{equation}
+$$
+
+我们可以试试:
+
+$$
+\begin{equation}
+\hat{\Psi}^\dagger(\boldsymbol{x}) \ket{0} = \sum_i u_i^*(\boldsymbol{x}) \hat{a}_{u_i}^\dagger \ket{0} = \sum_i u_i^*(\boldsymbol{x}) \ket{u_i}
+\end{equation}
+$$
+
+还得再变一下形:
+
+$$
+\begin{equation}
+\hat{\Psi}^\dagger(\boldsymbol{x}) \ket{0} = \sum_i \braket{u_i}{\boldsymbol{x}} \ket{u_i} = \ket{\boldsymbol{x}}
+\end{equation}
+$$
+
+反着来也可以!
+
+$$
+\begin{equation}
+\int u_i^*(\boldsymbol{x}) \hat{\Psi}(\boldsymbol{x}) \dd[3]x = \sum_j \int u_i^*(\boldsymbol{x}) u_j(\boldsymbol{x}) \hat{a}_{u_j} \dd[3]x = \sum_j \delta_{ij} \hat{a}_{u_j} = \hat{a}_{u_i}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\int u_i(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{x}) \dd[3]x = \sum_j \int u_i(\boldsymbol{x}) u_j^*(\boldsymbol{x}) \hat{a}_{u_j} \dd[3]x = \sum_j \delta_{ij} \hat{a}_{u_j} = \hat{a}_{u_i}^\dagger
+\end{equation}
+$$
+
+现在我们可以带上spin了, 没有什么特别复杂的, 最多就是带上自旋指标, 所以基就是:
+
+$$
+\begin{equation}
+\ket{\boldsymbol{x}, \nu}
+\end{equation}
+$$
+
+如果$$\nu$$表示自旋分量, 那么$$$\nu = -s, -s+1, \cdots, s$$, 一共有 $$2s+1$$ 个取值, 所以我们求和就得多带一个自旋指标:
+
+$$
+\begin{equation}
+\ket{u_i} = \sum_{\nu=-S}^{S} \int u_i(\boldsymbol{x}, \nu) \ket{\boldsymbol{x}, \nu} \dd[3]x
+\end{equation}
+$$
+
+其中:
+
+$$
+\begin{equation}
+u_i(\boldsymbol{x}, \nu) = \braket{\boldsymbol{x}, \nu}{u_i}
+\end{equation}
+$$
+
+在波函数表示上, 我们的自旋指标就是波函数的一个离散指标:
+
+$$
+\begin{equation}
+u_{i,\nu}(\boldsymbol{x}) = \braket{\boldsymbol{x}, \nu}{u_i}
+\end{equation}
+$$
+
+所以我们的场算符要改一下:
+
+$$
+\begin{equation}
+\hat{\Psi}_{\nu}(\boldsymbol{x}) = \sum_i u_{i,\nu}(\boldsymbol{x}) \hat{a}_{u_i}
+\end{equation}
+$$
+$$
+\begin{equation}
+\hat{\Psi}_{\nu}^\dagger(\boldsymbol{x}) = \sum_i u_{i,\nu}^*(\boldsymbol{x}) \hat{a}_{u_i}^\dagger
+\end{equation}
+$$
+
+试一下:
+
+$$
+\begin{equation}
+\hat{\Psi}_{\nu}^\dagger(\boldsymbol{x}) \ket{0} = \sum_i \braket{u_i}{\boldsymbol{x}, \nu} \ket{u_i} = \ket{\boldsymbol{x}, \nu}
+\end{equation}
+$$
+
+没问题!
+这个还是可以反过来:
+
+$$
+\begin{equation}
+\hat{a}_{u_i}^\dagger = \sum_{\nu=-S}^{S} \int u_{i,\nu}(\boldsymbol{x}) \hat{\Psi}_{\nu}^\dagger(\boldsymbol{x}) \dd[3]x
+\end{equation}
+$$
+
+---
+## 对易关系:
+
+我们现在来计算场算符的对易关系, 肯定还是要满足玻色子和费米子的对易关系的.
+但是我们要主要到, 我们现在是对两点的位置进行对易了:
+
+$$
+\begin{equation}
+\hat{\Psi}(\boldsymbol{x}) = \sum_i u_i(\boldsymbol{x}) \hat{a}_{u_i} \quad
+\hat{\Psi}^\dagger(\boldsymbol{x}') = \sum_j u_j^*(\boldsymbol{x}') \hat{a}_{u_j}^\dagger
+\end{equation}
+$$
+
+所以我们有:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}(\boldsymbol{x}), \hat{\Psi}^\dagger(\boldsymbol{x}') \right]_{\pm} = \sum_{i,j} u_i(\boldsymbol{x}) u_j^*(\boldsymbol{x}') \left[ \hat{a}_{u_i}, \hat{a}_{u_j}^\dagger \right]_{\pm}
+\end{equation}
+$$
+
+根据产生湮灭算符的对易关系, 我们有:
+
+$$
+\begin{equation}
+\left[ \hat{a}_{u_i}, \hat{a}_{u_j}^\dagger \right]_{\pm} = 0
+\end{equation}
+$$
+
+所以我们有:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}(\boldsymbol{x}), \hat{\Psi}^\dagger(\boldsymbol{x}') \right]_{\pm} = 0
+\end{equation}
+$$
+
+我们可以计算:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}(\boldsymbol{x}), \hat{\Psi}(\boldsymbol{x}') \right]_{\pm} = \sum_{i,j} u_i(\boldsymbol{x}) u_j(\boldsymbol{x}') \left[ \hat{a}_{u_i}, \hat{a}_{u_j} \right]_{\pm} = 0
+\end{equation}
+$$
+
+现在试试:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}^\dagger(\boldsymbol{x}), \hat{\Psi}^\dagger(\boldsymbol{x}') \right]_{\pm} = \sum_{i,j} u_i^*(\boldsymbol{x}) u_j^*(\boldsymbol{x}') \left[ \hat{a}_{u_i}^\dagger, \hat{a}_{u_j}^\dagger \right]_{\pm}
+\end{equation}
+$$
+
+我们有:
+
+$$
+\begin{equation}
+\left[ \hat{a}_{u_i}^\dagger, \hat{a}_{u_j}^\dagger \right]_{\pm} = \delta_{i,j}
+\end{equation}
+$$
+
+从而:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}^\dagger(\boldsymbol{x}), \hat{\Psi}^\dagger(\boldsymbol{x}') \right]_{\pm} = \sum_{i} u_i(\boldsymbol{x}) u_i^*(\boldsymbol{x}') = \delta(\boldsymbol{x} - \boldsymbol{x}')
+\end{equation}
+$$
+
+符合我们的直觉!
+我们当然也可以带上自旋指标:
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}_{\nu}(\boldsymbol{x}), \hat{\Psi}_{\nu'}^\dagger(\boldsymbol{x}') \right]_{\pm} = \delta(\boldsymbol{x} - \boldsymbol{x}') \delta_{\nu, \nu'}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\left[ \hat{\Psi}_{\nu}(\boldsymbol{x}), \hat{\Psi}_{\nu'}(\boldsymbol{x}') \right]_{\pm} = 0
+\end{equation}
+$$
