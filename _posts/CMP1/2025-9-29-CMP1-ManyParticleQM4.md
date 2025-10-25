@@ -127,4 +127,141 @@ $$
 3. 产生湮灭算符的作用, 会带来布居数的因子, 玻色子是平方根形式, 有一个增强, 费米子是 $$1$$, 有一个Pauli阻塞现象.
 
 ---
-## 一个真正的讨论: 多粒子体系
+## 例子二: 位置表象下的相互作用
+
+我们现在考虑$$N$$个粒子的体系, 粒子之间有相互作用, 相互作用是通过位置表象下的势能 $$W(\boldsymbol{x}_q, \boldsymbol{x}_{q'})$$ 来描述的.
+所以整体的势能是:
+
+$$
+\begin{equation}
+W_{\text{int}} = \sum_{q < q'} W_2(\boldsymbol{x}_q, \boldsymbol{x}_{q'})
+\end{equation}
+$$
+
+从而我们可以求单粒子算符 $$\hat{W}$$ 在位置表象下的矩阵元:
+
+$$
+\begin{equation}
+\mel{1=u_i, 2=u_j}{\hat{W}_2}{1=u_k, 2=u_l} = \iint W_2(\boldsymbol{x}_1, \boldsymbol{x}_2) u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_k(\boldsymbol{x}_1) u_l(\boldsymbol{x}_2) \dd{\boldsymbol{x}_1} \dd{\boldsymbol{x}_2}
+\end{equation}
+$$
+
+从而我们有:
+
+$$
+\begin{equation}
+\hat{W} = \frac{1}{2} \sum_{i,j,k,l} \int W_2(\boldsymbol{x}_1, \boldsymbol{x}_2) u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_k(\boldsymbol{x}_1) u_l(\boldsymbol{x}_2) \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k \dd{\boldsymbol{x}_1} \dd{\boldsymbol{x}_2}
+\end{equation}
+$$
+
+如果对于一个布居数态求这个算符的平均, 我们有:
+
+$$
+\begin{equation}
+\mel{n_1, n_2, \cdots}{\hat{W}}{n_1, n_2, \cdots} = \frac{1}{2} \int W_2(\boldsymbol{x}_1, \boldsymbol{x}_2) G_2(\boldsymbol{x}_1, \boldsymbol{x}_2) \dd{\boldsymbol{x}_1} \dd{\boldsymbol{x}_2}
+\end{equation}
+$$
+
+其中:
+
+$$
+\begin{equation}
+G_2(\boldsymbol{x}_1, \boldsymbol{x}_2) = \sum_{i,j,k,l} u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_k(\boldsymbol{x}_1) u_l(\boldsymbol{x}_2) \mel{n_1, n_2, \cdots}{\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k}{n_1, n_2, \cdots}
+\end{equation}
+$$
+
+从而计算这个期望值就变成了计算 $$G_2(\boldsymbol{x}_1, \boldsymbol{x}_2)$$的问题.
+如果要想让 $$G_2(\boldsymbol{x}_1, \boldsymbol{x}_2)$$ 有意义, 我们只能有两种情况:
+
+第一种情况: $$i=k, j=l$$, 这对应与湮灭 $$i$$ 和 $$j$$ 态的粒子, 然后再产生 $$i$$ 和 $$j$$ 态的粒子:
+
+$$
+\begin{equation}
+\sum_{i,j} \|u_i(\boldsymbol{x}_1)\|^2 \|u_j(\boldsymbol{x}_2)\|^2 \mel{n_1, n_2, \cdots}{\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_j \hat{a}_i}{n_1, n_2, \cdots}
+\end{equation}
+$$
+
+对于Boson:
+
+$$
+\begin{equation}
+\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_j \hat{a}_i = \hat{a}_i^\dagger \hat{a}_i \hat{a}_j^\dagger \hat{a}_j = \hat{n}_i \hat{n}_j
+\end{equation}
+$$
+
+对于Fermion, 换两次, 负号抵消了:
+
+$$
+\begin{equation}
+\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_j \hat{a}_i = \hat{a}_i^\dagger \hat{a}_i \hat{a}_j^\dagger \hat{a}_j = \hat{n}_i \hat{n}_j
+\end{equation}
+$$
+
+所以我们的结果是:
+
+$$
+\begin{equation}
+\sum_{i,j} \|u_i(\boldsymbol{x}_1)\|^2 \|u_j(\boldsymbol{x}_2)\|^2 n_i n_j
+\end{equation}
+$$
+
+这一项叫做Direct term, 直接项.
+我们还有一种特殊情况没有考虑, 那就是 $$i=j=k=l$$, 也就是湮灭和产生的是同一个态的粒子:
+
+$$
+\begin{equation}
+\sum_{i} \|u_i(\boldsymbol{x}_1)\|^2 \|u_i(\boldsymbol{x}_2)\|^2 \mel{n_1, n_2, \cdots}{\hat{a}_i^\dagger \hat{a}_i^\dagger \hat{a}_i \hat{a}_i}{n_1, n_2, \cdots}
+\end{equation}
+$$
+
+结果是:
+
+$$
+\begin{equation}
+\sum_{i} \|u_i(\boldsymbol{x}_1)\|^2 \|u_i(\boldsymbol{x}_2)\|^2 n_i (n_i - 1)
+\end{equation}
+$$
+
+从而整体结果是:
+
+$$
+\begin{equation}
+G_2(\boldsymbol{x}_1, \boldsymbol{x}_2) = \sum_{i,j} \|u_i(\boldsymbol{x}_1)\|^2 \|u_j(\boldsymbol{x}_2)\|^2 n_i n_j + \eta \sum_{i} \|u_i(\boldsymbol{x}_1)\|^2 \|u_i(\boldsymbol{x}_2)\|^2 n_i (n_i - 1)
+\end{equation}
+$$
+
+第二种情况: $$i=l, j=k$$, 这对应与湮灭 $$i$$ 粒子, 产生了 $$j$$ 态的粒子, 然后湮灭 $$j$$ 态的粒子, 产生了 $$i$$ 态的粒子.
+很明显, 这是一种交换.
+
+$$
+\begin{equation}
+\sum_{i,j} u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_i(\boldsymbol{x}_2) u_j(\boldsymbol{x}_1) \mel{n_1, n_2, \cdots}{\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_i \hat{a}_j}{n_1, n_2, \cdots}
+\end{equation}
+$$
+
+波函数部分是基本上没什么办法了, 但是产生湮灭算符部分我们可以进行变换:
+
+$$
+\begin{equation}
+\hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_i \hat{a}_j = \eta \hat{a}_i^\dagger \hat{a}_i \hat{a}_j^\dagger \hat{a}_j = \eta \hat{n}_i \hat{n}_j
+\end{equation}
+$$
+
+因为交换一次了, 所以Boson和Fermion要区别对待, 对于Fermion的情况, 我们的$$\eta=-1$$.
+所以我们的结果是:
+
+$$
+\begin{equation}
+\eta \sum_{i,j} u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_i(\boldsymbol{x}_2) u_j(\boldsymbol{x}_1) n_i n_j
+\end{equation}
+$$
+
+结合这两种情况, 最一般的 $$G_2(\boldsymbol{x}_1, \boldsymbol{x}_2)$$ 写成:
+
+$$
+\begin{equation}
+G_2(\boldsymbol{x}_1, \boldsymbol{x}_2) = \sum_{i,j} \left[ \|u_i(\boldsymbol{x}_1)\|^2 \|u_j(\boldsymbol{x}_2)\|^2 + \eta u_i^*(\boldsymbol{x}_1) u_j^*(\boldsymbol{x}_2) u_i(\boldsymbol{x}_2) u_j(\boldsymbol{x}_1) \right] n_i n_j + \eta \sum_{i} \|u_i(\boldsymbol{x}_1)\|^2 \|u_i(\boldsymbol{x}_2)\|^2 n_i (n_i - 1) 
+\end{equation}
+$$
+
+就是直接项+交换项的写法.
