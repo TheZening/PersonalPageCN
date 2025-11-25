@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>FGT: 3. 共轭类 - 刘沛松的赛道</title>
-<meta name="description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
+<!-- begin _includes/seo.html --><title>CMP1 全同粒子的再表述5 - 刘沛松的赛道</title>
+<meta name="description" content="我们上一小节讨论了场粒子的再表述, 我们考虑了一组普通的本征态:">
 
 
   <meta name="author" content="刘沛松">
@@ -23,26 +23,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="刘沛松的赛道">
-<meta property="og:title" content="FGT: 3. 共轭类">
-<meta property="og:url" content="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/">
+<meta property="og:title" content="CMP1 全同粒子的再表述5">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/cmp1/CMP1-ManyParticleQM5/">
 
 
-  <meta property="og:description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2025-01-01T00:00:00+11:00">
+  <meta property="og:description" content="我们上一小节讨论了场粒子的再表述, 我们考虑了一组普通的本征态:">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/">
+
+  <meta property="article:published_time" content="2025-09-12T00:00:00+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/cmp1/CMP1-ManyParticleQM5/">
 
 
 
@@ -277,16 +277,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="FGT: 3. 共轭类">
-    <meta itemprop="description" content="陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:">
-    <meta itemprop="datePublished" content="2025-01-01T00:00:00+11:00">
+    <meta itemprop="headline" content="CMP1 全同粒子的再表述5">
+    <meta itemprop="description" content="我们上一小节讨论了场粒子的再表述, 我们考虑了一组普通的本征态:">
+    <meta itemprop="datePublished" content="2025-09-12T00:00:00+10:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/" itemprop="url">FGT: 3. 共轭类
+            <a href="http://localhost:4000/PersonalPageCN/cmp1/CMP1-ManyParticleQM5/" itemprop="url">CMP1 全同粒子的再表述5
 </a>
           </h1>
           
@@ -297,65 +297,85 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>陪集是一种等价类, 他的等价关系在于”属于同一个陪集”:</p>
+        <p>我们上一小节讨论了场粒子的再表述, 我们考虑了一组普通的本征态:</p>
 
 \[\begin{equation}
-[a] = \{b \in G | a^{-1}*b \in H\}
+\{ \ket{u_1}, \ket{u_2}, \ket{u_3}, \cdots \}
 \end{equation}\]
+
+<p>然后考虑了使用位置空间的完备表象:</p>
+
+<p>\(\begin{equation}
+\hat{\Psi}(\boldsymbol{x}) = \sum_i \braket{\boldsymbol{x}}{u_j} \hat{a}_j = \sum_i u_j(\boldsymbol{x}) \hat{a}_j
+\end{equation}\)
+\(\begin{equation}
+\hat{\Psi}^\dagger(\boldsymbol{x}) = \sum_i \braket{u_j}{\boldsymbol{x}} \hat{a}_j^\dagger = \sum_i u_j^*(\boldsymbol{x}) \hat{a}_j^\dagger
+\end{equation}\)</p>
+
+<p>如果我们带上自旋指标\(\nu\), 那么上面的式子变成:</p>
+
+<p>\(\begin{equation}
+\hat{\Psi}_\nu(\boldsymbol{x}) = \sum_j \braket{\boldsymbol{x}, \nu}{u_j} \hat{a}_j = \sum_j u_{j,\nu}(\boldsymbol{x}) \hat{a}_j
+\end{equation}\)
+\(\begin{equation}
+\hat{\Psi}_\nu^\dagger(\boldsymbol{x}) = \sum_j \braket{u_j}{\boldsymbol{x}, \nu} \hat{a}_j^\dagger = \sum_j u_{j,\nu}^*(\boldsymbol{x}) \hat{a}_j^\dagger
+\end{equation}\)</p>
+
+<p>反过来也行:</p>
+
+<p>\(\begin{equation}
+\hat{a}_i^\dagger = \sum_\nu \int \braket{\boldsymbol{x}, \nu}{u_i} \hat{\Psi}_\nu^\dagger(\boldsymbol{x}) \dd[3]x = \sum_\nu \int u_{i,\nu}(\boldsymbol{x}) \hat{\Psi}_\nu^\dagger(\boldsymbol{x}) \dd[3]x
+\end{equation}\)
+\(\begin{equation}
+\hat{a}_i = \sum_\nu \int \braket{u_i}{\boldsymbol{x}, \nu} \hat{\Psi}_\nu(\boldsymbol{x}) \dd[3]x = \sum_\nu \int u^*_{i,\nu}(\boldsymbol{x}) \hat{\Psi}_\nu(\boldsymbol{x}) \dd[3]x
+\end{equation}\)</p>
+
+<p>现在我们在算符层面讨论这个问题.</p>
 
 <hr />
-<h2 id="共轭类">共轭类</h2>
+<h2 id="算符的场算符表示">算符的场算符表示</h2>
 
-<p>而共轭类也是一种等价类, 他的等价关系在于”属于同一个共轭类”.</p>
-
-<blockquote>
-  <p>(共轭类): 设$G$是一个群, $g \in G$, 则$a$的共轭类是
-\(\begin{equation}
-\text{Conj}(g) = \{ h^{-1}*g*h | h \in G\}
-\end{equation}\)
-即 \(g\) 在所有群元”装扮”下的不同”面孔”.</p>
-</blockquote>
-
-<p>这样定义的关系到底是不是等价关系?</p>
-
-<ul>
-  <li>自反性: \(g \in \text{Conj}(g)\), 因为取\(h = e\), 则\(h^{-1}*g*h = g\).</li>
-  <li>对称性: 若 \(g_1 \in \text{Conj}(g_2)\), 则存在\(h \in G\), 使得 \(g_1 = h^{-1}*g_2*h\), 则 \(g_2 = h*g_1*h^{-1}\), 也就是说 \(g_2 \in \text{Conj}(g_1)\).</li>
-  <li>传递性: 若 \(g_1 \in \text{Conj}(g_2)\), \(g_2 \in \text{Conj}(g_3)\), 则存在\(h_1, h_2 \in G\), 使得 \(g_1 = h_1^{-1}*g_2*h_1\), \(g_2 = h_2^{-1}*g_3*h_2\), 则 \(g_1 = (h_1*h_2)^{-1}*g_3*(h_1*h_2)\), 也就是说 \(g_1 \in \text{Conj}(g_3)\).</li>
-</ul>
-
-<p>所以, 共轭类确实是一种等价类.</p>
-
-<p>我们现在看一个例子, 群\(S_3\).
-我们一个一个看他的共轭类是什么.
-这个完全可以通过穷举法来做, 看着乘法表写就行了.</p>
-
-<ol>
-  <li>\(e\)的共轭类是\(\{e\}\), 因为\(h^{-1}*e*h = e\), 对任意\(h \in S_3\)都成立.</li>
-  <li>\(f_1\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
-  <li>\(f_2\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
-  <li>\(f_3\)的共轭类是\(\{f_1, f_2, f_3\}\).</li>
-  <li>\(f_4\)的共轭类是\(\{f_4, f_5\}\).</li>
-  <li>\(f_5\)的共轭类是\(\{f_4, f_5\}\).</li>
-</ol>
-
-<p>也就是说, 我们现在把\(S_3\)划分成了3个共轭类:</p>
+<p>我们之前到, 作用在第\(q\)个粒子上的, 单粒子算符\(\hat{f}\), 在多粒子空间中的升级为:</p>
 
 \[\begin{equation}
-S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
+\hat{F} = \sum_{i,j} f_{ij} \hat{a}_i^\dagger \hat{a}_j
 \end{equation}\]
 
-<blockquote>
-  <p>(共轭类划分定理): 设\(G\)是一个群, 则\(G\)的共轭类划分了\(G\).</p>
-  <ol>
-    <li>任意\(g \in G\), \(g\)属于某个共轭类.</li>
-    <li>两个共轭类要么相等, 要么没有交集.</li>
-    <li>共轭类的并集是\(G\).</li>
-  </ol>
-</blockquote>
+<p>代入\(\hat{a}_i^\dagger\)和\(\hat{a}_j\)的场算符表示, 我们得到:</p>
 
-<p>这样我们又得到了一个拆分大群的方法, 但是很遗憾的, 共轭类拆分出来的子集, 一定不是子群.
-这是因为 \(e\) 自己单独成一个共轭类, 根据共轭类划分定理, 你又不能把\(e\)和其他元素放在一起, 所以其他共轭类必然不能包括\(e\), 也就是说, 其他共轭类不可能是子群.</p>
+\[\begin{align}
+\hat{F} &amp;= \sum_{i,j} f_{ij} \int u_i(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{x}) \dd[3]x \int u_j^*(\boldsymbol{y}) \hat{\Psi}(\boldsymbol{y}) \dd[3]y \\
+&amp;= \sum_{i,j} \int \ketbra{u_i} \mel{\boldsymbol{x}}{\hat{f}}{\boldsymbol{y}} \ketbra{u_j} \hat{\Psi}^\dagger(\boldsymbol{x}) \hat{\Psi}(\boldsymbol{y}) \dd[3]x \dd[3]y \\
+&amp;= \int \mel{x}{\hat{f}}{y} \hat{\Psi}^\dagger(\boldsymbol{x}) \hat{\Psi}(\boldsymbol{y}) \dd[3]x \dd[3]y 
+\end{align}\]
+
+<p>然后我们考虑双粒子算符\(\hat{g}\), 它作用在第\(q\)和第\(q'\)个粒子上, 它在多粒子空间中的升级为:</p>
+
+\[\begin{equation}
+\hat{G} = \frac{1}{2} \sum_{i,j,k,l} g_{ijkl} \hat{a}_i^\dagger \hat{a}_j^\dagger \hat{a}_l \hat{a}_k
+\end{equation}\]
+
+<p>其中:</p>
+
+\[\begin{equation}
+g_{ijkl} = \mel{1=u_i, 2=u_j}{\hat{g}}{1=u_k, 2=u_l}
+\end{equation}\]
+
+<p>代入\(\hat{a}_i^\dagger\), \(\hat{a}_j^\dagger\), \(\hat{a}_l\)和\(\hat{a}_k\)的场算符表示, 我们得到:</p>
+
+\[\begin{align}
+\hat{G} &amp;= \frac{1}{2} \sum_{i,j,k,l} g_{ijkl} \int u_i(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{x}) \dd[3]x \int u_j(\boldsymbol{y}) \hat{\Psi}^\dagger(\boldsymbol{y}) \dd[3]y \int u_k^*(\boldsymbol{x}') \hat{\Psi}(\boldsymbol{x}') \dd[3]x' \int u_l^*(\boldsymbol{y}') \hat{\Psi}(\boldsymbol{y}') \dd[3]y' \\
+&amp;= \frac{1}{2} \int \mel{1=\boldsymbol{x}, 2=\boldsymbol{y}}{\hat{g}}{1=\boldsymbol{x}', 2=\boldsymbol{y}'} \hat{\Psi}^\dagger(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{y}) \hat{\Psi}(\boldsymbol{y}') \hat{\Psi}(\boldsymbol{x}') \dd[3]x \dd[3]y \dd[3]x' \dd[3]y' \\
+&amp;= \frac{1}{2} \int \mel{\boldsymbol{x}, \boldsymbol{y}}{\hat{g}}{\boldsymbol{x}', \boldsymbol{y}'} \hat{\Psi}^\dagger(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{y}) \hat{\Psi}(\boldsymbol{y}') \hat{\Psi}(\boldsymbol{x}') \dd[3]x \dd[3]y \dd[3]x' \dd[3]y'
+\end{align}\]
+
+<p>我们先不加自旋指标了.
+现在我们可以考虑写出Hamiltonian的场算符形式了:</p>
+
+\[\begin{align}
+\hat{H} =&amp; \int \frac{\hbar^2}{2m} \nabla \hat{\Psi}^\dagger(\boldsymbol{x}) \cdot \nabla \hat{\Psi}(\boldsymbol{x}) \dd[3]x + \int V(\boldsymbol{x}) \hat{\Psi}^\dagger(\boldsymbol{x}) \hat{\Psi}(\boldsymbol{x}) \dd[3]x \\
+&amp; + \frac{1}{2} \int W_2(\boldsymbol{x}'-\boldsymbol{x}'') \hat{\Psi}^\dagger(\boldsymbol{x}') \hat{\Psi}^\dagger(\boldsymbol{x}'') \hat{\Psi}(\boldsymbol{x}'') \hat{\Psi}(\boldsymbol{x}') \dd[3]x' \dd[3]x''
+\end{align}\]
 
         
       </section>
@@ -374,7 +394,7 @@ S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/PersonalPageCN/categories/#fgt" class="page__taxonomy-item p-category" rel="tag">FGT</a>
+      <a href="/PersonalPageCN/categories/#cmp1" class="page__taxonomy-item p-category" rel="tag">CMP1</a>
     
     </span>
   </p>
@@ -382,26 +402,26 @@ S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-01-01T00:00:00+11:00">January 1, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-09-12T00:00:00+10:00">September 12, 2025</time></p>
 
       </footer>
 
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=FGT%3A+3.+%E5%85%B1%E8%BD%AD%E7%B1%BB%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=CMP1+%E5%85%A8%E5%90%8C%E7%B2%92%E5%AD%90%E7%9A%84%E5%86%8D%E8%A1%A8%E8%BF%B05%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp1%2FCMP1-ManyParticleQM5%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp1%2FCMP1-ManyParticleQM5%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/fgt/FGT-FiniteGroup3/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/cmp1/CMP1-ManyParticleQM5/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=FGT%3A+3.+%E5%85%B1%E8%BD%AD%E7%B1%BB%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Ffgt%2FFGT-FiniteGroup3%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=CMP1+%E5%85%A8%E5%90%8C%E7%B2%92%E5%AD%90%E7%9A%84%E5%86%8D%E8%A1%A8%E8%BF%B05%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fcmp1%2FCMP1-ManyParticleQM5%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -410,10 +430,10 @@ S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
       
   <nav class="pagination">
     
-      <a href="/PersonalPageCN/fgt/FGT-FiniteGroup2-copy/" class="pagination--pager" title="FGT: 2. 群的拆分">Previous</a>
+      <a href="/PersonalPageCN/cmp1/CMP1-ManyParticleQM4/" class="pagination--pager" title="CMP1 全同粒子的再表述4">Previous</a>
     
     
-      <a href="/PersonalPageCN/cmp1/CMP1-ManyParticleQM1/" class="pagination--pager" title="CMP1 全同粒子的再表述">Next</a>
+      <a href="/PersonalPageCN/cmp2/CMP2-BCS1/" class="pagination--pager" title="CMP2 BCS超导理论1">Next</a>
     
   </nav>
 

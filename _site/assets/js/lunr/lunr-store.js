@@ -71,6 +71,36 @@ var store = [{
         "url": "/PersonalPageCN/fgt/FGT-FiniteGroup3/",
         "teaser": null
       },{
+        "title": "CMP1 全同粒子的再表述",
+        "excerpt":"之前的讨论里, 我们大部分研究的体系都是单粒子体系. 现在我们来试试讨论多粒子体系. 如果单粒子的 Hilbert space 是\\(\\mathcal{H}\\), 那么我们第一步的想法就是认为, 多粒子体系的 Hilbert space 就是: \\[\\begin{equation} \\mathcal{H} = \\mathcal{H}_1 \\otimes \\mathcal{H}_2 \\otimes \\cdots \\otimes \\mathcal{H}_N \\end{equation}\\] 其中\\(\\mathcal{H}_i\\)是第\\(i\\)个粒子的 Hilbert space. 但是这样做有一个问题, 那就是如果粒子是全同粒子, 那么我们无法区分第\\(i\\)个粒子和第\\(j\\)个粒子. 所以我们需要对上面的 Hilbert space 做一个对称化(玻色子)或者反对称化(费米子). 换句话说, 全同粒子系统的真实 Hilbert space 不是简单的张量积空间, 而是对称化或者反对称化之后的子空间. 简单复习一下全同粒子假设: 全同粒子是指所有粒子在内在性质上完全相同, 比如质量, 电荷, 自旋等. 由于全同粒子无法区分, 交换任意两个粒子后, 物理状态不变. 玻色子波函数在交换两个粒子后不变, 费米子波函数在交换两个粒子后变号. 玻色子可以多粒子占据同一单粒子态,...","categories": ["CMP1"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp1/CMP1-ManyParticleQM1/",
+        "teaser": null
+      },{
+        "title": "CMP1 全同粒子的再表述2",
+        "excerpt":"之前我们明确了两个个描述多粒子系统(粒子数可以变化的系统)的基本观点: Fock空间: \\[\\begin{equation} \\mathcal{F} = \\bigoplus_{N=0}^{\\infty} \\mathcal{H}^A_N \\quad \\text{或} \\quad \\mathcal{F} = \\bigoplus_{N=0}^{\\infty} \\mathcal{H}^S_N \\end{equation}\\] 对称基和布居数转换: 对于玻色子系统，任意态可以表示为布居数基的线性组合: \\[\\begin{equation} \\ket{n_1, n_2, \\ldots, n_i, \\ldots } = \\frac{1}{\\sqrt{N! \\prod_i n_i!}} \\sum_P \\ket{k_{P_1}, k_{P_2}, \\ldots, k_{P_N} } \\end{equation}\\] 对于费米子系统，任意态可以表示为反对称基的线性组合: \\(\\begin{equation} \\ket{n_1, n_2, \\ldots, n_i, \\ldots } = \\frac{1}{\\sqrt{N!}} \\sum_P \\text{sgn}(P) \\ket{k_{P_1}, k_{P_2}, \\ldots,...","categories": ["CMP1"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp1/CMP1-ManyParticleQM2/",
+        "teaser": null
+      },{
+        "title": "CMP1 全同粒子的再表述3",
+        "excerpt":"我们现在有了丰富的工具来处理全同粒子系统中的量子力学问题. 我们知道真实对于\\(N\\)个全同粒子的系统, 他么的空间是所有可能的单粒子空间的直和: \\[\\begin{equation} \\mathcal{F} = \\bigoplus_{N=0}^{\\infty} \\mathcal{H}^{(A/S)}_N \\end{equation}\\] 其中\\(\\mathcal{H}^{(A/S)}_N\\)表示\\(N\\)个反对称/对称的单粒子空间的张量积空间. 然后我们强调了, 用对称基或者反对称基不如用布居数表象来得方便, 在Bosonic空间中: \\[\\begin{equation} \\ket{n_1, n_2, \\cdots} = \\frac{1}{\\sqrt{N! \\prod_i n_i!}} \\sum_{P} \\ket{i_1, i_2, \\cdots, i_N} \\end{equation}\\] 在Fermionic空间中: \\[\\begin{equation} \\ket{n_1, n_2, \\cdots} = \\frac{1}{\\sqrt{n_1! n_2! \\cdots}} \\sum_{P} \\text{sgn}(P) \\ket{i_1, i_2, \\cdots, i_N} \\end{equation}\\] 布居数\\(n_i\\)表示第\\(i\\)个单粒子态被占据的粒子数, 对于Fermion来说只能是0或者1. 接下来我们引入了产生湮灭算符, 对于Bosonic系统: \\(\\begin{equation} \\hat{a}_i^\\dagger \\ket{n_1,...","categories": ["CMP1"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp1/CMP1-ManyParticleQM3/",
+        "teaser": null
+      },{
+        "title": "CMP1 全同粒子的再表述4",
+        "excerpt":"上一小节我们讨论了单粒子算符在多粒子系统的中的对应, 如果我们考虑任意的一组基: \\[\\begin{equation} \\{ \\ket{u_1}, \\ket{u_2}, \\ket{u_3}, \\cdots \\} \\end{equation}\\] 我们可以将单粒子算符 $\\hat{f}$ 在该基下展开: \\[\\begin{equation} \\hat{F} = \\sum_{i,j} \\mel{u_i}{\\hat{f}}{u_j} \\hat{a}_i^\\dagger \\hat{a}_j \\end{equation}\\] 对应的, 我们也可以考虑二粒子算符在多粒子系统中的对应: \\[\\begin{equation} \\hat{G} = \\frac{1}{2} \\sum_{i,j,k,l} \\mel{1=u_i, 2=u_j}{\\hat{g}}{1=u_k, 2=u_l} \\hat{a}_i^\\dagger \\hat{a}_j^\\dagger \\hat{a}_l \\hat{a}_k \\end{equation}\\] 如果恰好单粒子算符层面上是可以拆的 \\(\\hat{g}(q,q') = \\hat{f}{q} \\hat{h}{q'}\\), 那么二粒子算符在多粒子系统中的对应就可以写成单粒子算符的形式: \\[\\begin{equation} \\hat{G} = \\sum_{i,j,k,l} \\mel{u_i}{\\hat{f}}{u_k} \\mel{u_j}{\\hat{h}}{u_l} \\hat{a}_i^\\dagger \\hat{a}_j^\\dagger...","categories": ["CMP1"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp1/CMP1-ManyParticleQM4/",
+        "teaser": null
+      },{
+        "title": "CMP1 全同粒子的再表述5",
+        "excerpt":"我们上一小节讨论了场粒子的再表述, 我们考虑了一组普通的本征态: \\[\\begin{equation} \\{ \\ket{u_1}, \\ket{u_2}, \\ket{u_3}, \\cdots \\} \\end{equation}\\] 然后考虑了使用位置空间的完备表象: \\(\\begin{equation} \\hat{\\Psi}(\\boldsymbol{x}) = \\sum_i \\braket{\\boldsymbol{x}}{u_j} \\hat{a}_j = \\sum_i u_j(\\boldsymbol{x}) \\hat{a}_j \\end{equation}\\) \\(\\begin{equation} \\hat{\\Psi}^\\dagger(\\boldsymbol{x}) = \\sum_i \\braket{u_j}{\\boldsymbol{x}} \\hat{a}_j^\\dagger = \\sum_i u_j^*(\\boldsymbol{x}) \\hat{a}_j^\\dagger \\end{equation}\\) 如果我们带上自旋指标\\(\\nu\\), 那么上面的式子变成: \\(\\begin{equation} \\hat{\\Psi}_\\nu(\\boldsymbol{x}) = \\sum_j \\braket{\\boldsymbol{x}, \\nu}{u_j} \\hat{a}_j = \\sum_j u_{j,\\nu}(\\boldsymbol{x}) \\hat{a}_j \\end{equation}\\) \\(\\begin{equation} \\hat{\\Psi}_\\nu^\\dagger(\\boldsymbol{x}) =...","categories": ["CMP1"],
+        "tags": [],
+        "url": "/PersonalPageCN/cmp1/CMP1-ManyParticleQM5/",
+        "teaser": null
+      },{
         "title": "CMP2 BCS超导理论1",
         "excerpt":"在这篇文章里, 我们来讨论BCS超导理论的基本内容. BCS理论于Bardeen, Cooper, Schrieffer在1957年提出. 我们首先要明确BCS理论的适用范围, 他描述的是传统的低温超导现象, 不能描述高温铜氧化物超导, 不能描述铁基超导, 和转角系统也没关系. 他主要关注 低温超导, \\(T_c &lt; 30\\)K, 就是说超导现象超过这个温度就消失了. 低温金属, 主要是简单金属, 比如铝, 铅, 汞等. 某些合金, 比如NbTi, Nb3Sn等. 超导不仅仅是要满足电阻为0, 还要满足如下条件, 否则无法区分超导这种新的物质状态, 和完美的一根导线: 完全抗磁性(迈斯纳效应): 进入超导态后, 会把体内的磁场完全排斥出去(除表面一层渗透深度). 但是存在一个临界磁场, 能完全破坏超导态的最小磁场强度\\(H_c\\). 存在一个能维持超导态的最大电流(临界电流\\(I_c\\)), 超过这个电流超导态就会被破坏. 我们经常会在文献上看到I型超导, II型超导的说法, 这是超导体宏观电磁性质的分类, 和什么理论没关系. I型超导是指那些在临界磁场\\(H_c\\)以下完全抗磁的超导体, 典型的I型超导体是铝,铅等. II型超导是指那些在临界磁场\\(H_{c1}\\)以下完全抗磁, 在\\(H_{c1} &lt; H &lt; H_{c2}\\)之间部分抗磁 (磁场以量子化磁通涡旋的形式进入), 在\\(H &gt;...","categories": ["CMP2"],
         "tags": [],

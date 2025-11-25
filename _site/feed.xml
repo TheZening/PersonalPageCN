@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-10-15T11:42:54+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/PersonalPageCN/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/PersonalPageCN/" rel="alternate" type="text/html" /><updated>2025-11-25T23:16:29+11:00</updated><id>http://localhost:4000/PersonalPageCN/feed.xml</id><title type="html">刘沛松的赛道</title><subtitle>欢迎来访, 祝你一切顺利!</subtitle><author><name>刘沛松</name></author><entry><title type="html">QM2 角动量与中心势4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/" rel="alternate" type="text/html" title="QM2 角动量与中心势4" /><published>2025-10-06T00:00:00+11:00</published><updated>2025-10-06T00:00:00+11:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum4/"><![CDATA[<p>我们现在已经有了一个含糊的概念上的认知:</p>
 
 <ol>
   <li>我们知道一个向量空间可以被直和分解为若干个不可约表示的直和.</li>
@@ -743,378 +743,280 @@ T = \mqty[\cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &a
 \frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
 \end{equation}\]
 
-<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
+<p>这样的表达了.</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们来聊聊我们上一个内容里发现的神秘的数学结构. 仿佛是有一套方法, 能避免我们愚蠢的计算张量积下的矩阵元. 我们先站的远一点, 回想一些线性代数的知识.]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
 
 <ol>
-  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
+  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
+  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
+  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
 </ol>
 
+<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
+这些问题仍然是开放性的, 没有一个准确的回答.</p>
+
+<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
+这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
+但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
+我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
+
+<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
+一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
+也就是说, 坍缩是在探测器读出结果时候发生的.
+在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
+
+<hr />
+<h2 id="预测量问题">预测量问题</h2>
+
+<p>我们现在考虑量子力学是适用于一切迟钝的理论.
+那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
+为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
+
+<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
+
 \[\begin{equation}
-M_i = \ketbra{i}{i}
+\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
 \end{equation}\]
+
+<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
+
+\[\begin{equation}
+\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
+\end{equation}\]
+
+<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
+
+\[\begin{equation}
+\ket{s_i} \leftrightarrow \ket{a_i}
+\end{equation}\]
+
+<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
+所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
+
+<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
+
+\[\begin{equation}
+\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
+\end{equation}\]
+
+<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
+
+\[\begin{equation}
+\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
+\end{equation}\]
+
+<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
+
+\[\begin{equation}
+[Q,P] = \mathrm{i}\hbar \quad
+\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
+\end{equation}\]
+
+<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
+
+\[\begin{equation}
+H_{int} = g(t) \mathcal{O}_S \otimes P_A
+\end{equation}\]
+
+<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
+
+\[\begin{equation}
+\int_0^\tau g(t) \, \mathrm{d}t = \kappa
+\end{equation}\]
+
+<p>从而我们可以写出时间演化算符:</p>
+
+\[\begin{equation}
+U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
+\end{equation}\]
+
+<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
+
+\[\begin{equation}
+U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
+\end{equation}\]
+
+<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
+
+<p>我们定义:</p>
+
+\[\begin{equation}
+\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
+\end{equation}\]
+
+<p>系统的状态现在是:</p>
+
+\[\begin{equation}
+\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
+\end{equation}\]
+
+<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
+但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
+这就是早期von Neumann测量理论:</p>
 
 <ol>
-  <li>从而得到结果\(i\)的概率是:</li>
+  <li>测量装置本身就是一个量子系统.</li>
+  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
+  <li>测量结果是装置的指针态.</li>
 </ol>
 
-\[\begin{equation}
-p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
-\end{equation}\]
+<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
+我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
 
-<ol>
-  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
-</ol>
+<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
+测量装置也是双能级态, 耦合Hamiltonian是:</p>
 
 \[\begin{equation}
-\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
+H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
 \end{equation}\]
 
-<ol>
-  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
-</ol>
+<p>假设系统的初始状态为:</p>
 
 \[\begin{equation}
-\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
+c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
 \end{equation}\]
 
-<p>成为了经典混合.</p>
+<p>我们做一点点代数变形:</p>
 
-<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
+\[\begin{equation}
+\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>我们的时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
+\end{equation}\]
+
+<p>注意到:</p>
+
+\[\begin{equation}
+U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>以及:</p>
+
+\[\begin{equation}
+U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
+\end{equation}\]
+
+<p>从而我们可以计算出:</p>
+
+\[\begin{equation}
+\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
+
+\[\begin{equation}
+\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\end{equation}\]
+
+<p>系统和装置的观测量正确地关联在一起了!</p>
 
 <hr />
-<h2 id="双粒子系统">双粒子系统</h2>
+<h2 id="退相干">退相干</h2>
 
-<p>我们还是考虑Alice和Bob的双粒子系统.
-Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
+<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
+但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
+退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
 
-\[\begin{equation}
-M_i^A = \ketbra{i}{i}_A \otimes I_B
-\end{equation}\]
-
-<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
+<p>我们之前得到了预测量态:</p>
 
 \[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
+\sum_i c_i \ket{s_i} \otimes \ket{a_i}
 \end{equation}\]
 
-<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
+<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
+所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
 
 \[\begin{equation}
-\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
+\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
 \end{equation}\]
 
-<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
+<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
 
 \[\begin{equation}
-\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
+\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
 \end{equation}\]
 
-<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
-把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
+<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
 
 \[\begin{equation}
-\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
+\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
 \end{equation}\]
 
-<p>如果我们对他取Alice的迹, 我们得到:</p>
+<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
 
 \[\begin{equation}
-\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
+\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
 \end{equation}\]
 
-<p>计算这个迹, 我们得到:</p>
-
-\[\begin{align}
-\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
-\end{align}\]
-
-<p>我们把\(i\)的求和做掉:</p>
+<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
 
 \[\begin{equation}
-\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
+\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
 \end{equation}\]
 
-<p>从而我们得到:</p>
+<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
 
 \[\begin{equation}
-\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
+\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
 \end{equation}\]
 
-<blockquote>
-  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
-而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
-这就是无信号定理, 纠缠不能被用来即时通信.
-此时Alice手里的粒子, 是一个经典混合态.
-但是Bob手里的粒子, 仍然是原来的量子态.
-只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
-</blockquote>
+<p>对环境取偏迹:</p>
+
+\[\begin{equation}
+\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
+\end{equation}\]
+
+<p>退相干解释了为什么我们看不到大尺度量子叠加态.
+但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
+虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
 
 <hr />
-<h2 id="退相干的基础理论">退相干的基础理论</h2>
+<h2 id="多世界说法">多世界说法</h2>
 
-<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
-一般来说, 比起\(A\), \(E\)的自由度要大得多.
-对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
+<p>如果我们干脆直接放弃坍缩这个概念呢?
+我们就得到了多世界诠释(Many-World Interpretation, MWI).
+在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
+每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
+MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
+MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
 
-<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
+<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
 
 \[\begin{equation}
-\rho_A = \tr_E(\rho_{AE})
+\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
+|c_+|^2 + |c_-|^2 = 1
 \end{equation}\]
 
-<p>我们的核心问题是:</p>
-<blockquote>
-  <p>\(\rho_A\)是如何时间演化的?</p>
-</blockquote>
-
-<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
-
-<blockquote>
-  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
-这个过程, 我们称之为退相干 (Decoherence).</p>
-</blockquote>
-
-<p>如果我们现在考虑如下的映射:</p>
+<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
+那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
 
 \[\begin{equation}
-\tr_E: \rho_{AE} \to \rho_A
+\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
 \end{equation}\]
 
-<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
-首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
+<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
 
 \[\begin{equation}
-\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
+\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
 \end{equation}\]
 
-<p>一旦我们能搞出来这个, 我们就能求:</p>
+<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
+在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
 
-\[\begin{equation}
-\rho_A(t) = \tr_E(\rho_{AE}(t))
-\end{equation}\]
+<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
+在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
+这两个分支互不干扰, 同样真实, 但是无法交流.
+随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
+因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
 
-<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
-但是我们现在可以做一个基础性检查:</p>
+<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
+既然每种可能都在某个世界实现了, 那么概率到底是什么?
+分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
 
-\[\begin{equation}
-\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
-\end{equation}\]
-
-<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
-从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
-\end{equation}\]
-
-<p>从而我们有:</p>
-
-\[\begin{equation}
-\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
-<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
-
-\[\begin{equation}
-\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
-\end{equation}\]
-
-<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
-\end{equation}\]
-
-<p>从而我们的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_{A}(0) = \mqty[
-|\alpha|^2 &amp; \alpha \beta^* \\
-\alpha^* \beta &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
-
-\[\begin{equation}
-\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
-\end{equation}\]
-
-<p>变成了:</p>
-
-\[\begin{equation}
-\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
-\end{equation}\]
-
-<p>此时\(A\)的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
-|\alpha|^2 &amp; 0 \\
-0 &amp; |\beta|^2
-]
-\end{equation}\]
-
-<p>如果我们计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
-\end{equation}\]
-
-<hr />
-<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
-
-<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
-
-\[\begin{equation}
-H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
-\end{equation}\]
-
-<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
-我们主要关心第一个粒子, 第二个粒子作为环境.
-假设在\(t=0\)时, 两个粒子是一个纯态:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
-\end{equation}\]
-
-<p>他们的归一化条件是:</p>
-
-\[\begin{equation}
-|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
-\end{equation}\]
-
-<p>从而我们可以写出密度矩阵:</p>
-
-\[\begin{equation}
-\rho(0) = \frac{1}{4} \mqty[
-|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
-a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
-b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
-b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
-]
-\end{equation}\]
-
-<p>时间演化算符是:</p>
-
-\[\begin{equation}
-U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
-\end{equation}\]
-
-<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
-
-\[\begin{equation}
-\rho_1(t) = \tr_2(\rho(t)) = \mqty[
-\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
-\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
-]
-\end{equation}\]
-
-<p>如果我们规定一开始的系数是:</p>
-
-\[\begin{equation}
-a_+ = a_- = b_+ = 1, \quad b_- = 0
-\end{equation}\]
-
-<p>我们的初始状态就是:</p>
-
-\[\begin{equation}
-\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
-\end{equation}\]
-
-<p>两个粒子本来是没有纠缠的.
-但是带入上面的公式, 我们得到:</p>
-
-\[\begin{equation}
-\rho_1(t) = \mqty[
-\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
-\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
-] 
-\end{equation}\]
-
-<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
-
-\[\begin{equation}
-\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
-\end{equation}\]
-
-<hr />
-<h2 id="热力学问题">热力学问题</h2>
-
-<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
-这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
-实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
-我们考虑投影算符:</p>
-
-\[\begin{equation}
-\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
-\end{equation}\]
-
-<p>就是把一个任意的态投影到\(U_E\)子空间上.
-他满足:</p>
-
-\[\begin{equation}
-\tr \Pi(E) = \Omega(E)
-\end{equation}\]
-
-<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
-从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
-
-\[\begin{equation}
-\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
-\end{equation}\]
-
-<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
-现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
-我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
-此时熵定义为:</p>
-
-\[\begin{equation}
-S^R(E) = k_B \ln \Omega^R(E)
-\end{equation}\]
-
-<p>考虑温度:</p>
-
-\[\begin{equation}
-\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
-\end{equation}\]
-
-<p>我们做积分得到:</p>
-
-\[\begin{equation}
-\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]
-
-<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
-但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
-
-\[\begin{equation}
-\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
-\end{equation}\]
-
-<p>整体的密度矩阵是:</p>
-
-\[\begin{equation}
-\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
-\end{equation}\]
-
-<p>对\(R\)取迹, 我们得到:</p>
-
-\[\begin{align}
-\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
-&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
-&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
-&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
-\end{align}\]
-
-<p>从而可以写出正则系综的密度矩阵:</p>
-
-\[\begin{equation}
-\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
+<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">QM2 角动量与中心势2</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/" rel="alternate" type="text/html" title="QM2 角动量与中心势2" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-AngularMomentum2/"><![CDATA[<p>我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.
 设有两个粒子, 其角动量算符分别为\(\boldsymbol{J}_1, \boldsymbol{J}_2\), 那么我们怎么怎么定义总角动量算符呢?
 以及有没有什么捷径可以直接写出总角动量的本征值和本征态呢?</p>
 
@@ -2315,327 +2217,527 @@ U(\alpha; \mathrm{z}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha L_z\right) = 
 
 \[\begin{equation}
 U(\alpha; \mathrm{z}) \psi(r, \theta, \phi) = \psi(r, \theta, \phi - \alpha)
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵4</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/" rel="alternate" type="text/html" title="QM2 密度矩阵4" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix4/"><![CDATA[<p>在过往的学习中, 我们不加以怀疑的接受了如下概念:</p>
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM1" /><summary type="html"><![CDATA[量子力学自然是应该有经典力学推广来的角动量的. 在经典力学中, 角动量定义为:]]></summary></entry><entry><title type="html">QM2 密度矩阵3</title><link href="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/" rel="alternate" type="text/html" title="QM2 密度矩阵3" /><published>2025-10-05T00:00:00+10:00</published><updated>2025-10-05T00:00:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/qm2/QM2-DensityMatrix3/"><![CDATA[<p>现在我们回顾一下上一个帖子中的一个困惑.</p>
 
 <ol>
-  <li>每一次测量, 都得到了力学算符的一个数值, 力学算符本身由一个Hemritian算符表示.</li>
-  <li>测量后系统的状态坍缩到力学算符的一个本征态上, 测量结果就是这个本征态对应的本征值.</li>
-  <li>测量力学量的时候吗量子态会瞬间坍缩到本征态上.</li>
+  <li>已知每次测量, 考虑一个结果\(i\), 测量算子是投影:</li>
 </ol>
 
-<p>但是, 我们对于理解测量仪器本身的工作原理, 以及测量过程中的量子力学描述, 仍然是模糊的.
-这些问题仍然是开放性的, 没有一个准确的回答.</p>
-
-<p>在Copenhagen诠释中, 测量过程是经典的, 经典测量仪器与量子系统相互作用, 使得量子系统坍缩到某个本征态上.
-这就是说, 测量仪器本身是经典的, 历史上称之为Heisenberg cut.
-但是, 量子力学应该是普适的, 是可以在所有尺度上都能应用的, 因此这种切口是不应该存在的.
-我们应该很确信的就是, 经典物理是量子物理的极限情况, 经典物理是量子物理在大尺度下的近似.</p>
-
-<p>在Copenhagen诠释中, 测量实际上是对于信号的方法, 以及不可逆的记录.
-一开始, 量子态本身可以是分布在空间上的波函数, 而一旦测量了, 这个波函数就坍缩到某个位置上, 并且被不可逆的记录下来.
-也就是说, 坍缩是在探测器读出结果时候发生的.
-在探测之前, 系统还是处于叠加态, 满足Unitary evolution.</p>
-
-<hr />
-<h2 id="预测量问题">预测量问题</h2>
-
-<p>我们现在考虑量子力学是适用于一切迟钝的理论.
-那么测量过程就是一个量子系统\(S\)与测量仪器\(A\)的相互作用.
-为了表示一个完全量子化的测量过程, 我们考虑仪器具有指针态(pointer state)\(\ket{a_i}\), 这些指针态是正交归一的.</p>
-
-<p>假设系统\(S\)有一个待测算符\(\mathcal{O}_S\), 其本征态为\(\ket{s_i}\), 本征值为\(s_i\):</p>
-
 \[\begin{equation}
-\mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
+M_i = \ketbra{i}{i}
 \end{equation}\]
-
-<p>测量装置\(A\)也有一个待测算符\(\mathcal{O}_A\), 其本征态为\(\ket{a_j}\), 本征值为\(a_j\):</p>
-
-\[\begin{equation}
-\mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
-\end{equation}\]
-
-<p>这些\(\ket{a_j}\)是测量仪器的指针态, 我们希望建立一个对应关系:</p>
-
-\[\begin{equation}
-\ket{s_i} \leftrightarrow \ket{a_i}
-\end{equation}\]
-
-<p>也就是说, 如果系统\(S\)处于本征态\(\ket{s_i}\), 那么测量仪器\(A\)的指针态应该是\(\ket{a_i}\).
-所以装置\(A\)的指针态\(\ket{a_i}\)要至少比系统\(S\)的本征态\(\ket{s_i}\)多.</p>
-
-<p>假设在\(t=0\)时刻, 系统\(S\)处于叠加态:</p>
-
-\[\begin{equation}
-\ket{\psi;0}_S = \sum_i c_i \ket{s_i}
-\end{equation}\]
-
-<p>装置处于一个确定的初始状态\(\ket{\varphi;0}_A\), 那么整个系统的初始态是:</p>
-
-\[\begin{equation}
-\ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
-\end{equation}\]
-
-<p>我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符\(Q\), 自然而然的, 你想生成平移, 就得考虑一个平移\(Q\)的共轭动量\(P\):</p>
-
-\[\begin{equation}
-[Q,P] = \mathrm{i}\hbar \quad
-\mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
-\end{equation}\]
-
-<p>从我们的系统-装置耦合Hamiltonian可以写成:</p>
-
-\[\begin{equation}
-H_{int} = g(t) \mathcal{O}_S \otimes P_A
-\end{equation}\]
-
-<p>其中\(g(t)\)是一个在测量时间\(\tau\)内非零的函数, 满足:</p>
-
-\[\begin{equation}
-\int_0^\tau g(t) \, \mathrm{d}t = \kappa
-\end{equation}\]
-
-<p>从而我们可以写出时间演化算符:</p>
-
-\[\begin{equation}
-U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
-\end{equation}\]
-
-<p>如果系统处于本征态\(\ket{s_i}\), 那么经过时间\(\tau\)的演化, 我们有:</p>
-
-\[\begin{equation}
-U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
-\end{equation}\]
-
-<p>也就是说, 本征值\(s_i\)决定了指针态的平移距离\(\kappa s_i\).</p>
-
-<p>我们定义:</p>
-
-\[\begin{equation}
-\exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
-\end{equation}\]
-
-<p>系统的状态现在是:</p>
-
-\[\begin{equation}
-\ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
-\end{equation}\]
-
-<p>系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
-但是, 这个时候我们并没有得到一个测量结果, 因为系统和装置仍然是纠缠态.
-这就是早期von Neumann测量理论:</p>
 
 <ol>
-  <li>测量装置本身就是一个量子系统.</li>
-  <li>测量过程是系统与测量装置的相互作用, 使得系统与装置建立纠缠.</li>
-  <li>测量结果是装置的指针态.</li>
+  <li>从而得到结果\(i\)的概率是:</li>
 </ol>
 
-<p>但是, 总态仍是一个量子叠加态, 并没有解释为什么会塌缩到某个确定结果.
-我们可以理解预测量的机制, 却依然没有解决塌缩之谜.</p>
-
-<p>例子: 假设系统\(S\)是一个自旋1/2粒子, 测量\(\sigma_z\).
-测量装置也是双能级态, 耦合Hamiltonian是:</p>
-
 \[\begin{equation}
-H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
+p(i) = \Tr(M_i \rho M_i^\dagger) = \bra{i}\rho\ket{i}
 \end{equation}\]
 
-<p>假设系统的初始状态为:</p>
+<ol>
+  <li>如果知道结果是\(i\), 那么测量后系统的状态是:</li>
+</ol>
 
 \[\begin{equation}
-c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
+\rho_i = \frac{M_i \rho M_i^\dagger}{\Tr(M_i \rho M_i^\dagger)} = \ketbra{i}{i}
 \end{equation}\]
 
-<p>我们做一点点代数变形:</p>
+<ol>
+  <li>如果不知道结果(但是仍然测量了), 那么测量后系统的状态是:</li>
+</ol>
 
 \[\begin{equation}
-\frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
+\tilde{\rho} = \sum_i p(i) \rho_i = \sum_i \bra{i}\rho\ket{i} \ketbra{i}{i}
 \end{equation}\]
 
-<p>我们的时间演化算符是:</p>
+<p>成为了经典混合.</p>
 
-\[\begin{equation}
-U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
-\end{equation}\]
-
-<p>注意到:</p>
-
-\[\begin{equation}
-U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>以及:</p>
-
-\[\begin{equation}
-U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
-\end{equation}\]
-
-<p>从而我们可以计算出:</p>
-
-\[\begin{equation}
-\ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>如果我们规定\(\omega t = \pi/2\), 那么我们有:</p>
-
-\[\begin{equation}
-\ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}\]
-
-<p>系统和装置的观测量正确地关联在一起了!</p>
+<p>我们这个帖子就对于这个问题做出一些讨论和理解.</p>
 
 <hr />
-<h2 id="退相干">退相干</h2>
+<h2 id="双粒子系统">双粒子系统</h2>
 
-<p>如果严格坚持量子力学的幺正演化, 态向量永远是叠加态, 不可能自己坍缩.
-但是实验上我们只看到确定结果, 没有实验上测量到的半死不活的猫.
-退相干的理论提出: 坍缩不是基本假设, 而是由于系统与环境的相互作用, 使得系统的相干性丧失, 从而表现出经典行为.</p>
-
-<p>我们之前得到了预测量态:</p>
+<p>我们还是考虑Alice和Bob的双粒子系统.
+Alice现在准备沿着一个基向量\(\ket{i}_A\)测量她的粒子, 他的测量算符写为:</p>
 
 \[\begin{equation}
-\sum_i c_i \ket{s_i} \otimes \ket{a_i}
+M_i^A = \ketbra{i}{i}_A \otimes I_B
 \end{equation}\]
 
-<p>但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
-所以我们应该把环境\(E\)也考虑进来, 于是总态是:</p>
+<p>我们从最一般的密度矩阵\(\rho_{AB}\)开始, 假设我们不知道Alice的测量结果, 那么测量后系统的状态是:</p>
 
 \[\begin{equation}
-\ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
+\tilde{\rho}_{AB} = \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B) 
 \end{equation}\]
 
-<p>我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:</p>
+<p>我们现在来计算Bob的约化密度矩阵, 目的是看看Bob能否判断Alice是否测量了她的粒子.</p>
 
 \[\begin{equation}
-\rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
+\tilde{\rho}_B = \tr_A(\tilde{\rho}_{AB}) =  \tr \sum_i (M_i^A\otimes \mathbb{1}_B) \rho_{AB} (M_i^A\otimes \mathbb{1}_B)
 \end{equation}\]
 
-<p>如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):</p>
+<p>此时我们注意到, 密度矩阵\(\rho_{AB}\)可以写成:</p>
 
 \[\begin{equation}
-\braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
+\rho_{AB} = \sum_{k} \mathcal{O}_k^A \otimes \mathcal{O}_k^B
 \end{equation}\]
 
-<p>那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:</p>
+<p>其中\(\mathcal{O}_k^A\)和\(\mathcal{O}_k^B\)分别是Alice和Bob粒子的算符, 这个最一般的标识来源于最粗暴的张量积展开.
+把这个分解带入\(\tilde{\rho}_{AB}\)中, 我们得到:</p>
 
 \[\begin{equation}
-\rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
+\tilde{\rho}_{AB} = \sum_i \sum_k (M_i^A \mathcal{O}_k^A M_i^A) \otimes \mathcal{O}_k^B
 \end{equation}\]
 
-<p>比如Schrodinger猫的例子, 理想的情况下, 确实是:</p>
+<p>如果我们对他取Alice的迹, 我们得到:</p>
 
 \[\begin{equation}
-\ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
+\tilde{\rho}_B = \sum_i \sum_k \tr(M_i^A \mathcal{O}_k^A M_i^A) \mathcal{O}_k^B
 \end{equation}\]
 
-<p>但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:</p>
+<p>计算这个迹, 我们得到:</p>
+
+\[\begin{align}
+\tr_A(M_i^A \mathcal{O}_k^A M_i^A) = \tr_A(M_i^A \mathcal{O}_k^A)
+\end{align}\]
+
+<p>我们把\(i\)的求和做掉:</p>
 
 \[\begin{equation}
-\ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}}) 
+\sum_i \tr_A(M_i^A \mathcal{O}_k^A) = \tr_A(\mathcal{O}_k^A)
 \end{equation}\]
 
-<p>对环境取偏迹:</p>
+<p>从而我们得到:</p>
 
 \[\begin{equation}
-\rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
+\tilde{\rho}_B = \sum_k \tr_A(\mathcal{O}_k^A) \mathcal{O}_k^B = \tr_A(\rho_{AB}) = \rho_B
 \end{equation}\]
 
-<p>退相干解释了为什么我们看不到大尺度量子叠加态.
-但是它没有从根本上推出单次实验为什么会得到某个确定结果, 测量问题并没有被完全解决, 就是被打太极了.
-虽然这并不完全解决塌缩问题, 但给出了为什么我们从不看到猫既死又活的机制.</p>
+<blockquote>
+  <p>也就是说, Alice测量了她的粒子, 但是Alice没有看结果.
+而Bob的约化密度矩阵没有变化, 他无法判断Alice是否测量了她的粒子.
+这就是无信号定理, 纠缠不能被用来即时通信.
+此时Alice手里的粒子, 是一个经典混合态.
+但是Bob手里的粒子, 仍然是原来的量子态.
+只有Alice测量, 并且把结果告诉Bob了, Bob才能知道Alice测量了她的粒子.</p>
+</blockquote>
 
 <hr />
-<h2 id="多世界说法">多世界说法</h2>
+<h2 id="退相干的基础理论">退相干的基础理论</h2>
 
-<p>如果我们干脆直接放弃坍缩这个概念呢?
-我们就得到了多世界诠释(Many-World Interpretation, MWI).
-在MWI中, 测量过程仍然是幺正的, 只是我们把测量结果看作是不同的分支.
-每一个分支对应一个测量结果, 我们所处的世界只是其中的一个分支.
-MWI认为所有的分支都是同等真实存在的, 只是我们只能感知到其中的一个.
-MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙之间没有相互作用, 也无法观测到彼此.</p>
+<p>我们现在考虑一个孤立的量子系统, 他叫做\(AE\), 其中\(A\)是我们感兴趣的系统, \(E\)是环境.
+一般来说, 比起\(A\), \(E\)的自由度要大得多.
+对于\(A\)来说, 他自然是一个开放系统 (Open Quantum System), 他自己的演化受到\(E\)的影响, 或者说他与\(E\)纠缠, 耦合了.</p>
 
-<p>假设Alice有一个自旋1/2粒子, 处于叠加态:</p>
+<p>我们假设\(AE\)系统的密度矩阵是\(\rho_{AE}\), 我们对\(E\)取迹, 得到\(A\)的约化密度矩阵:</p>
 
 \[\begin{equation}
-\ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
-|c_+|^2 + |c_-|^2 = 1
+\rho_A = \tr_E(\rho_{AE})
 \end{equation}\]
 
-<p>Alice现在沿着\(z\)方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到\(\ket{+}\)或者\(\ket{-}\), 概率分别是\(|c_+|^2\)和\(|c_-|^2\).
-那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:</p>
+<p>我们的核心问题是:</p>
+<blockquote>
+  <p>\(\rho_A\)是如何时间演化的?</p>
+</blockquote>
+
+<p>我们现在明确知道的是, \(AE\)是一个孤立系统, 他满足Unitary演化, 但是\(A\)本身不是孤立系统, 他不满足Unitary演化, 也就是说:</p>
+
+<blockquote>
+  <p>\(A\)可能一开始是一个纯态, 但是随着时间演化, 他可能变成一个混合态.
+这个过程, 我们称之为退相干 (Decoherence).</p>
+</blockquote>
+
+<p>如果我们现在考虑如下的映射:</p>
 
 \[\begin{equation}
-\ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
+\tr_E: \rho_{AE} \to \rho_A
 \end{equation}\]
 
-<p>测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:</p>
+<p>那么我们就至少有一个思路了: 找到\(\rho_{AE}\)的时间演化, 然后通过对\(E\)取迹, 得到\(\rho_A\)的时间演化.
+首先我们假设\(AE\)的Hamiltonian是已知的, 从而我们可以写出\(\rho_{AE}\)的时间演化:</p>
 
 \[\begin{equation}
-\ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
+\rho_{AE}(t) = U(t) \rho_{AE}(0) U^\dagger(t), \quad U(t) = \mathrm{e}^{-\mathrm{i}\, H_{AE}t/\hbar}
 \end{equation}\]
 
-<p>这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
-在这个宇宙里, 包括Alice在内的所有东西都处于叠加态, 分成了两个分支(或者世界).</p>
-
-<p>在其中一个分支里, Alice 看到自旋向上, 她会说: “我看到自旋向上了!”
-在另一个分支里, Alice 看到自旋向下, 她会说: “我看到自旋向下了!”
-这两个分支互不干扰, 同样真实, 但是无法交流.
-随着每个Alice不断做测量, 宇宙会不断分裂成更多的分支, 产生越来越多的Alice.
-因为经历不同, 这些Alice会有不同的记忆, 但每个Alice都觉得自己是唯一的, 这是MWI的核心思想.</p>
-
-<p>但是这个问题又来了, 在多世界诠释中, 概率是啥意思呢?
-既然每种可能都在某个世界实现了, 那么概率到底是什么?
-分支到底有多真实? 是否本体过多?谁是真实的世界?</p>
-
-<p>有待考察…</p>]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[在过往的学习中, 我们不加以怀疑的接受了如下概念:]]></summary></entry><entry><title type="html">Linear Algebra 例题</title><link href="http://localhost:4000/PersonalPageCN/math0/LAExample/" rel="alternate" type="text/html" title="Linear Algebra 例题" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/LAExample</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/LAExample/"><![CDATA[<hr />
-<h2 id="求解方程组">求解方程组</h2>
-
-<h3 id="例题-1-有解的方程组">例题 1: 有解的方程组</h3>
-
-<p>求解以下线性三元方程组:</p>
+<p>一旦我们能搞出来这个, 我们就能求:</p>
 
 \[\begin{equation}
-\begin{cases}
-2x + 3y + z = 1 \\
-4x + y - z = 2 \\
--2x + 5y + 2z = 3
-\end{cases}
+\rho_A(t) = \tr_E(\rho_{AE}(t))
 \end{equation}\]
 
-<p>写出增广矩阵:</p>
+<p>此时我们要注意, 这个时候的trace不再是有限维度的trace, 而是无限维度的trace, 不可以再使用Cyclic Property.
+但是我们现在可以做一个基础性检查:</p>
 
 \[\begin{equation}
-\left[\begin{array}{ccc|c}
-2 &amp; 3 &amp; 1 &amp; 1 \\
-4 &amp; 1 &amp; -1 &amp; 2 \\
--2 &amp; 5 &amp; 2 &amp; 3
-\end{array}\right]
+\tr_A(\rho_A(t)) = \tr_A(\tr_E(\rho_{AE}(t))) = \tr(\rho_{AE}(0)) = 1
 \end{equation}\]
 
-<p>使用初等行变换将增广矩阵化为行阶梯形矩阵:</p>
+<p>我们现在再偷懒, 假设在\(t=0\)时, 环境是纯态, 记作\(\ket{\psi_E}\).
+从而在\(t=0\)时, \(AE\)的密度矩阵是:</p>
 
 \[\begin{equation}
-\left[\begin{array}{ccc|c}
-1 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; -1
-\end{array}\right]
+\rho_{AE}(0) = \rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}
 \end{equation}\]
 
-<p>检查行列式:</p>
+<p>从而我们有:</p>
 
 \[\begin{equation}
-\text{det} = 2 \cdot (1 \cdot 2 - (-1) \cdot 5) - 3 \cdot (4 \cdot 2 - (-1) \cdot (-2)) + 1 \cdot (4 \cdot 5 - 1 \cdot (-2)) = 2 \cdot (2 + 5) - 3 \cdot (8 - 2) + 1 \cdot (20 + 2) = 14 - 18 + 22 = 18 \neq 0
+\rho_A(t) = \tr_E(U(t) (\rho_A(0) \otimes \ketbra{\psi_E}{\psi_E}) U^\dagger(t))
 \end{equation}\]
 
-<p>因此, 方程组有唯一解.
-从行阶梯形矩阵中读出解:</p>
+<hr />
+<h2 id="举个人工例子-比特的退相干问题">举个人工例子: 比特的退相干问题.</h2>
+<p>假设\(A\)是一个比特, 他在一个任意的纯态上:</p>
 
 \[\begin{equation}
-\begin{cases}
-x = 1 \\
-y = 0 \\
-z = -1
-\end{cases}
-\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[求解方程组]]></summary></entry></feed>
+\ket{\psi_A} = \alpha \ket{0} + \beta \ket{1}, \quad |\alpha|^2 + |\beta|^2 = 1
+\end{equation}\]
+
+<p>假设\(E\)是一个大环境, 他在一个纯态\(\ket{0_E}\)上:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}} = (\alpha \ket{0} + \beta \ket{1}) \otimes \ket{0_E}
+\end{equation}\]
+
+<p>从而我们的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_{A}(0) = \mqty[
+|\alpha|^2 &amp; \alpha \beta^* \\
+\alpha^* \beta &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>我们人为的添加一点耦合, 让环境和在比特为\(\ket{\downarrow}\)的时候发生跃迁:</p>
+
+\[\begin{equation}
+\ket{\psi_{AE}(t)} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{0_E}
+\end{equation}\]
+
+<p>变成了:</p>
+
+\[\begin{equation}
+\ket{\psi'_{AE}} = \alpha \ket{0} \otimes \ket{0_E} + \beta \ket{\downarrow} \otimes \ket{1_E}
+\end{equation}\]
+
+<p>此时\(A\)的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho_A' = \tr_E(\ketbra{\psi'_{AE}}{\psi'_{AE}}) = \mqty[
+|\alpha|^2 &amp; 0 \\
+0 &amp; |\beta|^2
+]
+\end{equation}\]
+
+<p>如果我们计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_A'^2) = |\alpha|^4 + |\beta|^4 &lt; 1
+\end{equation}\]
+
+<hr />
+<h2 id="举个人工例子2-两个耦合的自旋为12的粒子">举个人工例子2: 两个耦合的自旋为1/2的粒子</h2>
+
+<p>我们现在考虑两个耦合的自旋为1/2的粒子, 他们的Hamiltonian是:</p>
+
+\[\begin{equation}
+H = -\hbar \omega \sigma_z^{(1)} \sigma_z^{(2)}
+\end{equation}\]
+
+<p>这是一类Ising模型, 当两个自旋平行的时候, 能量是最低的.
+我们主要关心第一个粒子, 第二个粒子作为环境.
+假设在\(t=0\)时, 两个粒子是一个纯态:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{2} (a_+ \ket{\uparrow \uparrow} + a_- \ket{\uparrow \downarrow} + b_+ \ket{\downarrow \uparrow} + b_- \ket{\downarrow \downarrow})
+\end{equation}\]
+
+<p>他们的归一化条件是:</p>
+
+\[\begin{equation}
+|a_+|^2 + |a_-|^2 + |b_+|^2 + |b_-|^2 = 4
+\end{equation}\]
+
+<p>从而我们可以写出密度矩阵:</p>
+
+\[\begin{equation}
+\rho(0) = \frac{1}{4} \mqty[
+|a_+|^2 &amp; a_+ a_-^* &amp; a_+ b_+^* &amp; a_+ b_-^* \\
+a_- a_+^* &amp; |a_-|^2 &amp; a_- b_+^* &amp; a_- b_-^* \\
+b_+ a_+^* &amp; b_+ a_-^* &amp; |b_+|^2 &amp; b_+ b_-^* \\
+b_- a_+^* &amp; b_- a_-^* &amp; b_- b_+^* &amp; |b_-|^2
+]
+\end{equation}\]
+
+<p>时间演化算符是:</p>
+
+\[\begin{equation}
+U(t) = \mathrm{e}^{-\mathrm{i} H t/\hbar} = \mathrm{e}^{\mathrm{i} \omega t \sigma_z^{(1)} \sigma_z^{(2)}}
+\end{equation}\]
+
+<p>考虑密度矩阵的时间演化, (太长不写了), 我们可以得到\(\rho_1(t)\), 也就是第一个粒子的约化密度矩阵:</p>
+
+\[\begin{equation}
+\rho_1(t) = \tr_2(\rho(t)) = \mqty[
+\frac{|a_+|^2 + |a_-|^2}{4} &amp; \frac{a_+ b_+^* \mathrm{e}^{2 \mathrm{i} \omega t} + a_- b_-^* \mathrm{e}^{-2 \mathrm{i} \omega t}}{4} \\
+\frac{b_+ a_+^* \mathrm{e}^{-2 \mathrm{i} \omega t} + b_- a_-^* \mathrm{e}^{2 \mathrm{i} \omega t}}{4} &amp; \frac{|b_+|^2 + |b_-|^2}{4}
+]
+\end{equation}\]
+
+<p>如果我们规定一开始的系数是:</p>
+
+\[\begin{equation}
+a_+ = a_- = b_+ = 1, \quad b_- = 0
+\end{equation}\]
+
+<p>我们的初始状态就是:</p>
+
+\[\begin{equation}
+\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow}) \otimes \frac{1}{\sqrt{2}} (\ket{\uparrow} + \ket{\downarrow})
+\end{equation}\]
+
+<p>两个粒子本来是没有纠缠的.
+但是带入上面的公式, 我们得到:</p>
+
+\[\begin{equation}
+\rho_1(t) = \mqty[
+\frac{1}{2} &amp; \frac{\mathrm{e}^{2 \mathrm{i} \omega t}}{4} \\
+\frac{\mathrm{e}^{-2 \mathrm{i} \omega t}}{4} &amp; \frac{1}{2}
+] 
+\end{equation}\]
+
+<p>随时时间的变化, 态开始纠缠起来了, 而且我们可以计算纯度:</p>
+
+\[\begin{equation}
+\tr(\rho_1(t)^2) = 1 - \frac{1}{2} \sin^2(2 \omega t) \leq 1
+\end{equation}\]
+
+<hr />
+<h2 id="热力学问题">热力学问题</h2>
+
+<p>对于一个Microcanonical Ensemble, 我们考虑系统\(A\)在总能量\(E\)上所有的状态.
+这些态形成了\(A\)的一个子空间, 记作\(U_E\), 他的维度是\(\Omega(E)\).
+实际上, \(\Omega(E)\)是一个巨大的数, 记录了系统\(A\)在能量\(E\)上所有可能的量子态(简并度).
+我们考虑投影算符:</p>
+
+\[\begin{equation}
+\Pi(E) = \sum_{n=1}^{\Omega(E)} \ketbra{E_n}{E_n}
+\end{equation}\]
+
+<p>就是把一个任意的态投影到\(U_E\)子空间上.
+他满足:</p>
+
+\[\begin{equation}
+\tr \Pi(E) = \Omega(E)
+\end{equation}\]
+
+<p>考虑Microcanonical Ensemble, 他的核心在于, 在没有更多的信息下, 我们假设系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是相等的.
+从而我们可以写出Microcanonical Ensemble的密度矩阵:</p>
+
+\[\begin{equation}
+\rho(E) = \frac{1}{\Omega(E)} \Pi(E) 
+\end{equation}\]
+
+<p>换句话说就是, 系统\(A\)在\(U_E\)子空间内的每一个态出现的概率是\(1/\Omega(E)\).
+现在我们来看正则系综: 系统可以和一个大热库交换能量, 但是不能交换粒子, 热库的温度是\(T\), 但是总体的能量是守恒的.
+我们记\(\Omega^R(E)\)是热库在能量\(E\)上得微观态数目(简并度).
+此时熵定义为:</p>
+
+\[\begin{equation}
+S^R(E) = k_B \ln \Omega^R(E)
+\end{equation}\]
+
+<p>考虑温度:</p>
+
+\[\begin{equation}
+\frac{1}{T} = \pdv{S^R(E)}{E} = k_B \pdv{\ln \Omega^R(E)}{E}
+\end{equation}\]
+
+<p>我们做积分得到:</p>
+
+\[\begin{equation}
+\Omega^R(E-E_n) = \Omega^R(E) \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]
+
+<p>当系统取到能量\(E_n\)时, 热库的能量变成了\(E-E_n\), 他的微观态数目变成了\(\Omega^R(E-E_n)\), 比起原来的\(\Omega^R(E)\), 少了一个指数因子.
+但是整个体系的能量是守恒的, 也是孤立的, 所以我们的投影算子是:</p>
+
+\[\begin{equation}
+\Pi^{AR}(E) = \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \otimes \ketbra{E^R_\gamma}{E^R_\gamma}
+\end{equation}\]
+
+<p>整体的密度矩阵是:</p>
+
+\[\begin{equation}
+\rho^{AR}(E) = \frac{1}{\Omega^{AR}(E)} \Pi^{AR}(E)
+\end{equation}\]
+
+<p>对\(R\)取迹, 我们得到:</p>
+
+\[\begin{align}
+\rho^A &amp;= \tr_R(\rho^{AR}(E)) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \sum_{\gamma=1}^{\Omega^R(E-E_n)} \ketbra{E_n} \tr(\ketbra{E^R_\gamma}{E^R_\gamma}) \\
+&amp;= \frac{1}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \Omega^R(E-E_n) \ketbra{E_n} \\
+&amp;= \frac{\Omega^R(E)}{\Omega^{AR}(E)} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n} \\
+&amp;= \frac{1}{Z} \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}} \ketbra{E_n}
+\end{align}\]
+
+<p>从而可以写出正则系综的密度矩阵:</p>
+
+\[\begin{equation}
+\rho^A = \frac{1}{Z} \mathrm{e}^{-\frac{H_A}{k_B T}}, \quad Z = \sum_{n=1}^{\Omega(E)} \mathrm{e}^{-\frac{E_n}{k_B T}}
+\end{equation}\]]]></content><author><name>刘沛松</name></author><category term="QM2" /><summary type="html"><![CDATA[现在我们回顾一下上一个帖子中的一个困惑.]]></summary></entry><entry><title type="html">Linear Algebra 1</title><link href="http://localhost:4000/PersonalPageCN/math0/LA1/" rel="alternate" type="text/html" title="Linear Algebra 1" /><published>2025-10-02T00:05:00+10:00</published><updated>2025-10-02T00:05:00+10:00</updated><id>http://localhost:4000/PersonalPageCN/math0/LA1</id><content type="html" xml:base="http://localhost:4000/PersonalPageCN/math0/LA1/"><![CDATA[<p>我们现在复习一下线性代数的基础知识, 我们主要关注有限维线性代数问题.
+线性代数是研究向量空间及其线性映射的数学分支.</p>
+
+<hr />
+<h2 id="向量空间">向量空间</h2>
+
+<blockquote>
+  <p>向量空间 (vector space) 是由向量 (vector) 组成的集合.</p>
+</blockquote>
+
+<p>正确的说法是在一个域 (field, 记作 \(\mathbb{F}\), 例如实数域 \(\mathbb{R}\) 或复数域 \(\mathbb{C}\)) 上定义的一个集合 \(V\), 该集合配备了两个运算: 向量加法 (vector addition) 和标量乘法 (scalar multiplication), 并满足以下公理:</p>
+
+<ol>
+  <li>封闭 (closure): \(\forall u, v \in V, u + v \in V\)</li>
+  <li>交换律 (commutativity): \(\forall u, v \in V, u + v = v + u\)</li>
+  <li>结合律 (associativity): \(\forall u, v, w \in V, (u + v) + w = u + (v + w)\)</li>
+  <li>存在零向量 (existence of zero vector): 存在一个零向量 \(0 \in V\), 使得 \(\forall v \in V, v + 0 = v\)</li>
+  <li>存在负向量 (existence of additive inverse): \(\forall v \in V, \exists -v \in V\), 使得 \(v + (-v) = 0\)</li>
+  <li>标量乘法封闭 (closure under scalar multiplication): \(\forall a \in \mathbb{F}, v \in V, a \cdot v \in V\)</li>
+  <li>分配律1 (distributive property 1): \(\forall a, b \in \mathbb{F}, v \in V, (a + b) \cdot v = a \cdot v + b \cdot v\)</li>
+  <li>分配律2 (distributive property 2): \(\forall a \in \mathbb{F}, u, v \in V, a \cdot (u + v) = a \cdot u + a \cdot v\)</li>
+  <li>结合律 (associativity): \(\forall a, b \in \mathbb{F}, v \in V, (ab) \cdot v = a \cdot (b \cdot v)\)</li>
+  <li>单位元 (multiplicative identity): \(\forall v \in V, 1 \cdot v = v\), 其中 \(1\) 是域 \(\mathbb{F}\) 的乘法单位元</li>
+</ol>
+
+<p>只要满足这些规律, 就是向量空间.
+他可以是常见的物理空间, 元素是物理箭头式的向量, 也可以是函数空间, 元素是函数, 还可以是多项式空间, 元素是多项式, 可以是矩阵空间, 元素是矩阵, 还可以是序列空间, 元素是数列.</p>
+
+<p>加法和数乘要在各自背景下定义.</p>
+
+<hr />
+<h2 id="子空间">子空间</h2>
+
+<blockquote>
+  <p>子空间 (subspace) 是向量空间的一个子集, 它本身也是一个向量空间.</p>
+</blockquote>
+
+<p>设 \(V\) 是一个向量空间, \(W\) 是 \(V\) 的一个子集.
+如果 \(W\) 本身也是一个向量空间, 那么 \(W\) 就是 \(V\) 的一个子空间.</p>
+
+<p>要验证 \(W\) 是 \(V\) 的子空间, 需要检查以下条件:</p>
+
+<ol>
+  <li>\(W\) 非空: \(W\) 至少包含零向量 \(0\).</li>
+  <li>封闭性 (closure under vector addition): 对于 \(\forall u, v \in W\), 有 \(u + v \in W\).</li>
+  <li>封闭性 (closure under scalar multiplication): 对于 \(\forall a \in \mathbb{F}, v \in W\), 有 \(a \cdot v \in W\).</li>
+</ol>
+
+<p>如果就是三维空间的几何图像上来说, 那么子空间可以是通过原点的平面, 也可以是通过原点的直线, 还可以是原点本身.
+但总而言之一定要过原点.</p>
+
+<hr />
+<h2 id="线性组合">线性组合</h2>
+
+<blockquote>
+  <p>线性组合 (linear combination) 是通过向量的加法和标量乘法构造新向量的方法.</p>
+</blockquote>
+
+<p>给定向量 \(v_1, v_2, \ldots, v_n \in V\) 和标量 \(a_1, a_2, \ldots, a_n \in \mathbb{F}\), 向量 \(v\) 的线性组合定义为:</p>
+
+\[\begin{equation}
+v = a_1 v_1 + a_2 v_2 + \ldots + a_n v_n
+\end{equation}\]
+
+<p>一个常见的问题是, 给定一组向量, 能否通过线性组合得到另一个向量.
+这个问题一般转化成线性方程组来解决:</p>
+
+\[\begin{equation}
+a_1 \mqty[v_{11} \\ v_{21} \\ \vdots \\ v_{m1}] + a_2 \mqty[v_{12} \\ v_{22} \\ \vdots \\ v_{m2}] + \ldots + a_n \mqty[v_{1n} \\ v_{2n} \\ \vdots \\ v_{mn}] = \mqty[b_1 \\ b_2 \\ \vdots \\ b_m]
+\end{equation}\]
+
+<p>如果这个线性方程组有解, 那么就说明目标向量 \(b\) 可以由给定的向量组通过线性组合得到.</p>
+
+<hr />
+<h2 id="线性相关与线性无关">线性相关与线性无关</h2>
+
+<p>我们现在有一组向量:</p>
+
+\[\begin{equation}
+v_1, v_2, \ldots, v_n \in V
+\end{equation}\]
+
+<blockquote>
+  <p>线性相关 (linearly dependent) 是指存在一组不全为零的标量 \(a_1, a_2, \ldots, a_n \in \mathbb{F}\), 使得:
+\(\begin{equation}
+a_1 v_1 + a_2 v_2 + \ldots + a_n v_n = 0
+\end{equation}\)</p>
+</blockquote>
+
+<blockquote>
+  <p>线性无关 (linearly independent) 是指只有当所有标量 \(a_1, a_2, \ldots, a_n\) 都为零时, 上述等式才成立.</p>
+</blockquote>
+
+<p>线性无关等价于, 不能通过其他向量的线性组合来表示某个向量.
+线性相关等价于, 可以通过其他向量的线性组合来表示某个向量.</p>
+
+<p>判断一组向量是否线性相关, 一般通过构造矩阵并计算其行列式 (determinant) 或秩 (rank) 来实现.
+如果行列式为零, 或者秩小于向量的个数, 那么这组向量线性相关; 否则线性无关.</p>
+
+<hr />
+<h2 id="span">Span</h2>
+
+<p>我们有一个向量集合:</p>
+
+\[\begin{equation}
+S = \{v_1, v_2, \ldots, v_n\} \subseteq V
+\end{equation}\]
+
+<blockquote>
+  <p>生成子空间 (span) 是由集合 \(S\) 中的向量通过所有可能的线性组合构成的子空间, 记作 \(\text{span}(S)\).
+\(\begin{equation}
+\text{span}(S) = \{a_1 v_1 + a_2 v_2 + \ldots + a_n v_n \mid a_i \in \mathbb{F}\}
+\end{equation}\)</p>
+</blockquote>
+
+<p>如果\(\text{span}(S) = V\), 那么我们说集合 \(S\) 生成了整个向量空间 \(V\).
+称\(S\)为向量空间 \(V\) 的生成集 (spanning set).
+生成集不一定是唯一的, 也不一定是最小的.</p>
+
+<hr />
+<h2 id="基底">基底</h2>
+
+<blockquote>
+  <p>基底 (basis) 是向量空间 \(V\) 的一个线性无关的生成集.
+既要生成, 又要线性无关.</p>
+</blockquote>
+
+<p>如果 \(B = \{v_1, v_2, \ldots, v_n\}\) 是 \(V\) 的一个基底, 那么 \(B\) 满足:</p>
+
+<ol>
+  <li>生成性 (spanning): \(\text{span}(B) = V\)</li>
+  <li>线性无关性 (linear independence): \(B\) 中的向量线性无关.</li>
+</ol>
+
+<p>基底的一个重要性质是, 向量空间 \(V\) 中的每个向量都可以唯一地表示为基底向量的线性组合.
+也就是说, 对于 \(\forall v \in V\), 存在唯一的一组标量 \(a_1, a_2, \ldots, a_n \in \mathbb{F}\), 使得:</p>
+
+\[\begin{equation}
+v = a_1 v_1 + a_2 v_2 + \ldots + a_n v_n
+\end{equation}\]
+
+<blockquote>
+  <p>维数 (dimension) 是向量空间 \(V\) 的基底中向量的数量, 记作 \(\dim(V)\).
+所有基底的向量数量相同, 因此维数是良定义的.</p>
+</blockquote>
+
+<p>例如, \(\mathbb{R}^3\) 的标准基底是:</p>
+
+\[\begin{equation}
+e_1 = \mqty[1 \\ 0 \\ 0], \quad e_2 = \mqty[0 \\ 1 \\ 0], \quad e_3 = \mqty[0 \\ 0 \\ 1]
+\end{equation}\]
+
+<p>因此 \(\dim(\mathbb{R}^3) = 3\).</p>]]></content><author><name>刘沛松</name></author><category term="Math0" /><summary type="html"><![CDATA[我们现在复习一下线性代数的基础知识, 我们主要关注有限维线性代数问题. 线性代数是研究向量空间及其线性映射的数学分支.]]></summary></entry></feed>
