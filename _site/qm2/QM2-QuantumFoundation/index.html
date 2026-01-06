@@ -1,0 +1,519 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>QM2 量子信息基础1 - 刘沛松的赛道</title>
+<meta name="description" content="量子信息科学: 研究如何利用量子力学的基本原理来处理和传输信息的学科. 量子计算, 量子通信和量子密码学等领域都是量子信息科学的重要应用.">
+
+
+  <meta name="author" content="刘沛松">
+  
+  <meta property="article:author" content="刘沛松">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="刘沛松的赛道">
+<meta property="og:title" content="QM2 量子信息基础1">
+<meta property="og:url" content="http://localhost:4000/PersonalPageCN/qm2/QM2-QuantumFoundation/">
+
+
+  <meta property="og:description" content="量子信息科学: 研究如何利用量子力学的基本原理来处理和传输信息的学科. 量子计算, 量子通信和量子密码学等领域都是量子信息科学的重要应用.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-11-01T00:00:00+11:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/PersonalPageCN/qm2/QM2-QuantumFoundation/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/PersonalPageCN/feed.xml" type="application/atom+xml" rel="alternate" title="刘沛松的赛道 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/PersonalPageCN/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script type="text/javascript">
+  MathJax = {
+    loader: {load: ['[tex]/physics']},
+    tex: {
+      packages: ['base', 'ams', 'newcommand', 'autoload', 'require', 'color', 'noerrors', 'noundefined', 'mathtools', 'braket', 'unicode', 'physics'],
+      tags: 'ams',
+      macros: {
+        RR: '{\\mathbb{R}}',
+      }
+    }
+  };
+    </script>
+  <link rel="icon" href="/PersonalPageCN/favicon.ico" sizes="any">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/PersonalPageCN/">
+          刘沛松的赛道
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/tags/"
+                
+                
+              >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/PersonalPageCN/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/PersonalPageCN/">
+        <img src="/PersonalPageCN/assets/images/bio-photo2.jpg" alt="刘沛松" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/PersonalPageCN/" itemprop="url">刘沛松</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>项庄舞剑, 意在沛公</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://marco-yuze-zheng.blogspot.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Marco's Math Blog</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="QM2 量子信息基础1">
+    <meta itemprop="description" content="  量子信息科学:研究如何利用量子力学的基本原理来处理和传输信息的学科.量子计算, 量子通信和量子密码学等领域都是量子信息科学的重要应用.">
+    <meta itemprop="datePublished" content="2025-11-01T00:00:00+11:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/PersonalPageCN/qm2/QM2-QuantumFoundation/" itemprop="url">QM2 量子信息基础1
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <blockquote>
+  <p>量子信息科学:
+研究如何利用量子力学的基本原理来处理和传输信息的学科.
+量子计算, 量子通信和量子密码学等领域都是量子信息科学的重要应用.</p>
+</blockquote>
+
+<blockquote>
+  <p>量子信息学的底层逻辑是: 当我们试图在一个允许干扰的物理世界中描述信息的时候, 传统的概率论失效了, 我们需要一套基于 \(L^2\) 范数的广义概率理论.</p>
+</blockquote>
+
+<h2 id="经典概率论的失效">经典概率论的失效</h2>
+
+<p>在经典概率论中, 我们可以通过概率分布来描述一个系统的状态.
+例如, 一个经典比特可以处于状态 0 或 1, 并且我们可以用概率分布 \(P_0\) 和 \(P_1\) 来描述它处于这两种状态的概率:</p>
+
+\[\begin{equation}
+\bm{P} = (P_0, P_1), \quad P_0 + P_1 = 1, \quad P_0, P_1 \geq 0
+\end{equation}\]
+
+<p>这就是 \(L^1\) 范数的概率分布.</p>
+
+<blockquote>
+  <p>(\(L^1\) 范数):
+这是指向量中各元素绝对值之和的范数, 在概率论中用来表示概率分布的规范化条件.</p>
+</blockquote>
+
+<p>然而, 在量子力学中, 系统的状态不能简单地用经典概率分布来描述.
+我们都知道了, 电子衍射实验告诉了我们, 电子从狭缝通过后, 会在屏幕上形成干涉条纹.
+这表明电子具有波动性, 并且其行为不能仅仅用经典概率论来解释.
+而波动就存在干涉现象, 干涉现象意味着概率的叠加不再是简单的加法.
+例如, 如果我们有两个路径 \(A\) 和 \(B\), 电子通过路径 \(A\) 的概率是 \(P_A\), 通过路径 \(B\) 的概率是 \(P_B\), 那么电子最终到达某个位置的概率 \(P\) 并不是简单地 \(P = P_A + P_B\).</p>
+
+<p>相反, 我们需要引入概率幅 (probability amplitude) 的概念. 概率幅是一个复数, 其模的平方给出了概率.
+因此,我们可以表示电子通过路径 \(A\) 和 \(B\) 的概率幅分别为 \(\psi_A\) 和 \(\psi_B\), 那么电子最终到达某个位置的概率 \(P\) 可以表示为:</p>
+
+\[\begin{equation}
+P = |\psi_A + \psi_B|^2
+\end{equation}\]
+
+<p>这就是量子力学中的概率叠加原理, 它表明概率幅的叠加是通过复数的加法来实现的, 而不是简单的概率加法.
+所以我们必须调整我们的概率理论基础, 从 \(L^1\) 范数转向 \(L^2\) 范数: 我们需要一种能够相互抵消的概率表示方法:</p>
+
+\[\begin{equation}
+\sum_i \|\alpha_i\|^2 = 1, \quad \alpha_i \in \mathbb{C}
+\end{equation}\]
+
+<p>我们现在集中回答两个问题:</p>
+
+<ol>
+  <li>为什么量子力学中的概率幅是复数?</li>
+  <li>到底什么是叠加态, 叠加了什么?</li>
+</ol>
+
+<p>我们首先回答第一个问题, 为什么概率幅是复数?
+第一个视角, 如果我们要旋转一个向量, 我们用旋转矩阵当然没问题:</p>
+
+\[\begin{equation}
+R(\theta) = \mqty[\cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta]
+\end{equation}\]
+
+<p>如果我们回溯态的酉变换:</p>
+
+\[\begin{equation}
+\ket{\psi'} = U\ket{\psi}, \quad U^\dagger U = I
+\end{equation}\]
+
+<p>那么我们就知道, 这个矩阵实际上是如下算符的对应:</p>
+
+\[\begin{equation}
+U(\theta) = e^{-\mathrm{i}\theta \sigma_y} = \cos\theta I - \mathrm{i}\sin\theta \sigma_y
+\end{equation}\]
+
+<p>这里 \(\sigma_y\) 是泡利矩阵之一:</p>
+
+\[\begin{equation}
+\sigma_y = \mqty[0 &amp; -\mathrm{i} \\ \mathrm{i} &amp; 0]
+\end{equation}\]
+
+<p>第二个视角, 复数的引入使得我们能够更自然地描述量子态的相位关系, 而且也确保我们寻找本征值和本征态时的数学一致性.</p>
+
+<p>视角三, 如果我们要求演化是线性的, 而且保持概率守恒:</p>
+
+\[\begin{equation}
+\dv{\psi}{t} = -\mathrm{i}H\psi
+\end{equation}\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/PersonalPageCN/categories/#qm2" class="page__taxonomy-item p-category" rel="tag">QM2</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-11-01T00:00:00+11:00">November 1, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://x.com/intent/tweet?text=QM2+%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF%E5%9F%BA%E7%A1%801%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-QuantumFoundation%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-QuantumFoundation%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/PersonalPageCN/qm2/QM2-QuantumFoundation/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=QM2+%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF%E5%9F%BA%E7%A1%801%20http%3A%2F%2Flocalhost%3A4000%2FPersonalPageCN%2Fqm2%2FQM2-QuantumFoundation%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/PersonalPageCN/qm2/QM2-AngularMomentum4/" class="pagination--pager" title="QM2 角动量与中心势4">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/PersonalPageCN/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">刘沛松的赛道</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/PersonalPageCN/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/PersonalPageCN/assets/js/lunr/lunr.min.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-store.js"></script>
+<script src="/PersonalPageCN/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
