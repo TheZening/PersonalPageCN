@@ -1,0 +1,208 @@
+:root {
+  --primary-hue: 216deg;
+  --primary-saturation: 88%;
+  --primary-lightness: 58%;
+  --hextra-max-page-width: 88rem;
+  --hextra-max-navbar-width: 88rem;
+  --hextra-max-footer-width: 88rem;
+  --notes-surface: rgba(255, 255, 255, 0.72);
+  --notes-border: rgba(15, 23, 42, 0.1);
+}
+
+@layer theme {
+  :root {
+    --hx-default-font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+      "Microsoft YaHei", sans-serif;
+    --hx-default-mono-font-family: "SFMono-Regular", Consolas,
+      "Liberation Mono", Menlo, monospace;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 16% 2%, rgba(37, 99, 235, 0.07), transparent 29rem),
+    radial-gradient(circle at 88% 18%, rgba(14, 165, 233, 0.055), transparent 24rem),
+    #f8fafc;
+  color: #172033;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+html.dark body {
+  --notes-surface: rgba(15, 23, 42, 0.58);
+  --notes-border: rgba(148, 163, 184, 0.14);
+  background:
+    radial-gradient(circle at 16% 1%, rgba(37, 99, 235, 0.16), transparent 31rem),
+    radial-gradient(circle at 90% 20%, rgba(8, 145, 178, 0.09), transparent 27rem),
+    #080d18;
+  color: #dce6f4;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+.hextra-nav-container {
+  border-bottom: 1px solid var(--notes-border);
+}
+
+html.dark .hextra-nav-container-blur {
+  background: rgba(8, 13, 24, 0.82) !important;
+}
+
+.notes-kicker {
+  border-color: rgba(59, 130, 246, 0.24);
+  background: rgba(37, 99, 235, 0.07);
+  color: #315783;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+}
+
+html.dark .notes-kicker {
+  border-color: rgba(96, 165, 250, 0.24);
+  background: rgba(37, 99, 235, 0.12);
+  color: #a8cfff;
+}
+
+.notes-topic-card {
+  --notes-accent: 96, 165, 250;
+  min-height: 11.5rem;
+  border-color: var(--notes-border);
+  background:
+    linear-gradient(145deg, rgba(var(--notes-accent), 0.075), transparent 48%),
+    var(--notes-surface);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.045);
+  isolation: isolate;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.notes-topic-card::after {
+  position: absolute;
+  inset: auto 1.5rem 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(var(--notes-accent), 0.82), transparent);
+  content: "";
+}
+
+.notes-topic-card:hover {
+  border-color: rgba(var(--notes-accent), 0.42) !important;
+  box-shadow: 0 22px 65px rgba(var(--notes-accent), 0.11);
+  transform: translateY(-3px);
+}
+
+.notes-topic-card:focus-visible {
+  outline: 3px solid rgba(var(--notes-accent), 0.5);
+  outline-offset: 3px;
+}
+
+.notes-topic-card h3 {
+  letter-spacing: -0.025em;
+}
+
+.notes-topic-card .hextra-card-icon svg,
+.notes-topic-card h3 svg {
+  color: rgb(var(--notes-accent));
+}
+
+.notes-topic-quantum {
+  --notes-accent: 96, 165, 250;
+}
+
+.notes-topic-condensed {
+  --notes-accent: 45, 212, 191;
+}
+
+.notes-topic-math {
+  --notes-accent: 167, 139, 250;
+}
+
+.notes-topic-reference {
+  --notes-accent: 251, 191, 36;
+}
+
+.content {
+  font-size: 1.02rem;
+  line-height: 1.86;
+}
+
+.content p,
+.content li {
+  text-wrap: pretty;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.content h2 {
+  border-bottom-color: var(--notes-border);
+}
+
+.content blockquote {
+  border-left-color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  background: rgba(59, 130, 246, 0.055);
+  border-radius: 0 0.65rem 0.65rem 0;
+  padding: 0.8rem 1.1rem;
+}
+
+.content code:not(.code-block code) {
+  color: #2563eb;
+}
+
+html.dark .content code:not(.code-block code) {
+  color: #93c5fd;
+}
+
+mjx-container[display="true"],
+.MathJax_Display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.5rem;
+}
+
+.hextra-search-input {
+  border-color: var(--notes-border);
+  background: rgba(148, 163, 184, 0.06);
+}
+
+.hextra-sidebar-active-item {
+  font-weight: 650;
+}
+
+@media (max-width: 640px) {
+  .notes-topic-card {
+    min-height: 9.5rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .notes-topic-card {
+    transition: none;
+  }
+
+  .notes-topic-card:hover {
+    transform: none;
+  }
+}

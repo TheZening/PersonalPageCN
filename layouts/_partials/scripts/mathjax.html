@@ -1,0 +1,31 @@
+{{/* MathJax 3 with the physics extension used throughout the migrated notes. */}}
+<script>
+  window.MathJax = {
+    loader: {
+      load: ["ui/safe", "[tex]/physics"]
+    },
+    tex: {
+      packages: {
+        "[+]": ["physics"]
+      },
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"]
+      ],
+      inlineMath: [
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      macros: {
+        bm: ["\\boldsymbol{#1}", 1]
+      }
+    }
+  };
+</script>
+<script
+  defer
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  crossorigin="anonymous">
+</script>

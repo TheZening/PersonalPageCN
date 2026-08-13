@@ -1,0 +1,16 @@
+# Hugo output and generated resources
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Legacy Jekyll output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Operating system and editor files
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/

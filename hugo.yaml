@@ -1,0 +1,95 @@
+# Site
+baseURL: "https://thezening.github.io/PersonalPageCN/"
+title: "Zhanning 的物理笔记"
+theme: hextra
+
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+# Keep this single-language site at /PersonalPageCN/ rather than /zh-cn/.
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false
+languages:
+  zh-cn:
+    languageName: 简体中文
+    languageCode: zh-CN
+    weight: 1
+    title: "Zhanning 的物理笔记"
+
+# Markdown and mathematics
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+
+# Top navigation
+menu:
+  main:
+    - identifier: notes
+      name: 笔记
+      pageRef: /notes
+      weight: 1
+    - identifier: about
+      name: 关于
+      pageRef: /about
+      weight: 2
+    - identifier: homepage
+      name: 个人主页 ↗
+      url: "https://thezening.github.io/"
+      weight: 3
+    - identifier: search
+      name: 搜索
+      weight: 90
+      params:
+        type: search
+    - identifier: theme
+      name: 主题
+      weight: 100
+      params:
+        type: theme-toggle
+        label: false
+
+params:
+  description: "Zhanning Wang 的物理与数学笔记"
+  externalLinkDecoration: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+
+  theme:
+    default: dark
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  page:
+    width: normal
+
+  # Offline full-text search. Hextra's encoder handles CJK text.
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  # MathJax is extended in layouts/_partials/scripts/mathjax.html.
+  math:
+    engine: mathjax
+
+  editURL:
+    enable: false
