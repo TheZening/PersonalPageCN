@@ -113,22 +113,6 @@ html.dark .notes-kicker {
   color: rgb(var(--notes-accent));
 }
 
-.notes-topic-quantum {
-  --notes-accent: 96, 165, 250;
-}
-
-.notes-topic-condensed {
-  --notes-accent: 45, 212, 191;
-}
-
-.notes-topic-math {
-  --notes-accent: 167, 139, 250;
-}
-
-.notes-topic-reference {
-  --notes-accent: 251, 191, 36;
-}
-
 .content {
   font-size: 1.02rem;
   line-height: 1.86;

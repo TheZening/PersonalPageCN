@@ -2,6 +2,10 @@
 title: "量子力学"
 weight: 1
 description: "从基础量子力学到量子信息, 开放系统与进阶专题."
+params:
+  home: true
+  icon: beaker
+  accent: "96, 165, 250"
 ---
 
 从基础量子力学到量子信息, 开放系统与进阶专题.

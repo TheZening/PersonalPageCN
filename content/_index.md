@@ -26,33 +26,4 @@ layout: hextra-home
 {{< hextra/hero-button text="开始阅读" link="notes/" style="box-shadow: 0 14px 38px rgba(37, 99, 235, 0.28);" >}}
 </div>
 
-{{< hextra/feature-grid cols="2" style="margin-top: 0.5rem;" >}}
-  {{< hextra/feature-card
-    title="量子力学"
-    subtitle="从双能级系统, 角动量与密度矩阵, 到开放系统, Berry 相位和 Floquet 理论."
-    icon="beaker"
-    link="notes/quantum_mechanics/"
-    class="notes-topic-card notes-topic-quantum"
-  >}}
-  {{< hextra/feature-card
-    title="凝聚态物理"
-    subtitle="多体量子力学, Fock 空间, 二次量子化, 场算符与 BCS 超导理论."
-    icon="cube-transparent"
-    link="notes/condensed_matter/"
-    class="notes-topic-card notes-topic-condensed"
-  >}}
-  {{< hextra/feature-card
-    title="Mathematical Method for Physics"
-    subtitle="线性代数, 有限群论与支撑理论物理计算的基础数学方法."
-    icon="academic-cap"
-    link="notes/mathematical_method_for_physics/"
-    class="notes-topic-card notes-topic-math"
-  >}}
-  {{< hextra/feature-card
-    title="公式手册"
-    subtitle="常用积分, Gaussian 积分和三角函数公式, 适合快速查询."
-    icon="calculator"
-    link="notes/reference/"
-    class="notes-topic-card notes-topic-reference"
-  >}}
-{{< /hextra/feature-grid >}}
+{{< notes-sections >}}

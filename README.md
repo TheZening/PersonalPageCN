@@ -26,9 +26,13 @@ hugo server
 ```text
 content/notes/
 ├── Quantum_Mechanics/                 # 量子力学
+├── Statistical_Mechanics/             # 统计力学
+├── Classical_Mechanics/               # 经典力学
+├── Quantum_Field_Theory/              # 量子场论
 ├── Condensed_Matter/                  # 凝聚态物理
-├── Mathematical_Method_for_Physics/  # 物理学中的数学方法
+├── Mathematical_Method_for_Physics/  # 数学物理
+├── Mathematical_Supplement/           # 数学补充
 └── Reference/                         # 公式手册
 ```
 
-笔记目录统一使用 `Group_Theory` 这样的大写单词与下划线命名. 各级 `_index.md` 定义导航标题和顺序; 文章通过 `weight` 排序, 并通过 `aliases` 保留旧网站链接.
+笔记目录统一使用 `Group_Theory` 这样的大写单词与下划线命名. 首页会自动读取一级栏目 `_index.md` 中的 `title`, `description`, `weight` 和 `params`; 修改栏目时无需再编辑首页. 文章通过 `weight` 排序, 并通过 `aliases` 保留旧网站链接.
