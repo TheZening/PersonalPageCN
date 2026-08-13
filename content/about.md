@@ -1,6 +1,6 @@
 ---
 title: "关于"
-description: "关于 Zhanning 的物理笔记。"
+description: "关于物理杂谈。"
 toc: false
 ---
 

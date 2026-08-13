@@ -1,6 +1,6 @@
 # Site
 baseURL: "https://thezening.github.io/PersonalPageCN/"
-title: "Zhanning 的物理笔记"
+title: "物理杂谈"
 theme: hextra
 
 enableRobotsTXT: true
@@ -14,7 +14,7 @@ languages:
     languageName: 简体中文
     languageCode: zh-CN
     weight: 1
-    title: "Zhanning 的物理笔记"
+    title: "物理杂谈"
 
 # Markdown and mathematics
 markup:
@@ -58,7 +58,7 @@ menu:
         label: false
 
 params:
-  description: "Zhanning Wang 的物理与数学笔记"
+  description: "物理杂谈：量子力学、凝聚态物理与数学物理笔记"
   externalLinkDecoration: true
 
   navbar:

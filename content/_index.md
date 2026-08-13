@@ -1,5 +1,5 @@
 ---
-title: "Zhanning 的物理笔记"
+title: "物理杂谈"
 description: "量子力学、凝聚态物理与数学物理的学习和研究笔记。"
 layout: hextra-home
 ---
@@ -12,7 +12,7 @@ layout: hextra-home
 
 <div class="hx:mt-7 hx:mb-6">
 {{< hextra/hero-headline style="font-size: clamp(2.8rem, 8vw, 5.4rem); max-width: 12ch; line-height: 0.98; letter-spacing: -0.055em;" >}}
-  Zhanning 的物理笔记
+  物理杂谈
 {{< /hextra/hero-headline >}}
 </div>
 
