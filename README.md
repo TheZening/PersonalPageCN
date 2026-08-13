@@ -1,6 +1,6 @@
 # Gibberish
 
-Zhanning Wang 的中文物理笔记库, 内容涵盖量子力学, 凝聚态物理, 物理学中的数学方法与常用公式手册.
+Zhanning Wang 的中文物理笔记库, 按量子力学, 凝聚态物理, 物理学中的数学方法与常用公式手册等栏目持续整理.
 
 - 网站: <https://thezening.github.io/PersonalPageCN/>
 - 个人主页: <https://thezening.github.io/>
@@ -35,4 +35,4 @@ content/notes/
 └── Reference/                         # 公式手册
 ```
 
-笔记目录统一使用 `Group_Theory` 这样的大写单词与下划线命名. 首页会自动读取一级栏目 `_index.md` 中的 `title`, `description`, `weight` 和 `params`; 修改栏目时无需再编辑首页. 文章通过 `weight` 排序, 并通过 `aliases` 保留旧网站链接.
+笔记目录统一使用 `Fundamental_Concepts_1` 这样的大写单词, 下划线与序号命名. 首页会自动读取一级栏目 `_index.md` 中的 `title`, `description`, `weight` 和 `params`; 修改栏目时无需再编辑首页. 文章通过 `weight` 排序; 移动页面时通过 `aliases` 保留旧网站链接.
