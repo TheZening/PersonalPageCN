@@ -1,12 +1,12 @@
 ---
-title: "角动量与中心势（二）"
+title: "角动量与中心势(二)"
 date: 2025-10-05
 weight: 2
 legacySeries: "QM1"
 aliases:
   - "/qm1/QM1-AngularMomentum2/"
 ---
-经过繁复的计算，我们终于得到了角动量算符在球坐标系下的表达式:
+经过繁复的计算, 我们终于得到了角动量算符在球坐标系下的表达式:
 
 $$
 \begin{equation}

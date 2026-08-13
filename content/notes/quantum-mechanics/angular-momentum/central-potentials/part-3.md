@@ -1,5 +1,5 @@
 ---
-title: "角动量与中心势（三）"
+title: "角动量与中心势(三)"
 date: 2025-10-05
 weight: 3
 legacySeries: "QM1"

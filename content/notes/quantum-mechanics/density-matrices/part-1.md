@@ -1,5 +1,5 @@
 ---
-title: "密度矩阵（一）"
+title: "密度矩阵(一)"
 date: 2025-09-18
 weight: 1
 legacySeries: "QM2"

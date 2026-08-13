@@ -1,6 +1,6 @@
 # Site
 baseURL: "https://thezening.github.io/PersonalPageCN/"
-title: "物理杂谈"
+title: "Gibberish"
 theme: hextra
 
 enableRobotsTXT: true
@@ -14,7 +14,7 @@ languages:
     languageName: 简体中文
     languageCode: zh-CN
     weight: 1
-    title: "物理杂谈"
+    title: "Gibberish"
 
 # Markdown and mathematics
 markup:
@@ -58,7 +58,7 @@ menu:
         label: false
 
 params:
-  description: "物理杂谈：量子力学、凝聚态物理与数学物理笔记"
+  description: "此地无银三百两."
   externalLinkDecoration: true
 
   navbar:

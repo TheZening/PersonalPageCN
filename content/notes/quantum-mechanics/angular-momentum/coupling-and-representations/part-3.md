@@ -1,5 +1,5 @@
 ---
-title: "角动量耦合与表示（三）"
+title: "角动量耦合与表示(三)"
 date: 2025-10-06
 weight: 3
 legacySeries: "QM2"
