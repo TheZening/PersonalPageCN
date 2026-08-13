@@ -6,7 +6,7 @@ legacySeries: "QM+"
 aliases:
   - "/qm+/QM+-FloquetSystem/"
 ---
-> 关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 [绝热定理和Berry phase中讨论过了]({{< ref "/notes/quantum-mechanics/advanced-topics/adiabatic-and-berry-phase" >}})
+> 关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 [绝热定理和Berry phase中讨论过了]({{< ref "/notes/Quantum_Mechanics/Advanced_Topics/Adiabatic_and_Berry_Phase" >}})
 
 
 ## 什么是Floquet system?

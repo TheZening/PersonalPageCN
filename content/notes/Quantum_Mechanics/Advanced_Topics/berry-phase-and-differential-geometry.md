@@ -6,7 +6,7 @@ legacySeries: "QM+"
 aliases:
   - "/qm+/QM+-BerryPhase2/"
 ---
-> 关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 [绝热定理和Berry phase中讨论过了]({{< ref "/notes/quantum-mechanics/advanced-topics/adiabatic-and-berry-phase" >}})
+> 关于态有可能跟不上Hamiltonian变化这件事, 我们已经在 [绝热定理和Berry phase中讨论过了]({{< ref "/notes/Quantum_Mechanics/Advanced_Topics/Adiabatic_and_Berry_Phase" >}})
 
 在绝热定理中, 我们说当系统的 Hamiltonian 缓慢变化时, 若某个本征值 \(E_n(t)\) 与其他本征值 \(E_m(t)\) 之间有能隙, 且系统初始时刻处于本征态 \(\ket{n;t=0}\) , 那么在任意时刻系统仍然会在瞬时本征态 \(\ket{n;t}\) 上, 只是会获得相位因子.
 

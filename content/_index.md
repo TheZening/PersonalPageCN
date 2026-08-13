@@ -31,21 +31,21 @@ layout: hextra-home
     title="量子力学"
     subtitle="从双能级系统, 角动量与密度矩阵, 到开放系统, Berry 相位和 Floquet 理论."
     icon="beaker"
-    link="notes/quantum-mechanics/"
+    link="notes/quantum_mechanics/"
     class="notes-topic-card notes-topic-quantum"
   >}}
   {{< hextra/feature-card
     title="凝聚态物理"
     subtitle="多体量子力学, Fock 空间, 二次量子化, 场算符与 BCS 超导理论."
     icon="cube-transparent"
-    link="notes/condensed-matter/"
+    link="notes/condensed_matter/"
     class="notes-topic-card notes-topic-condensed"
   >}}
   {{< hextra/feature-card
-    title="数学物理"
+    title="Mathematical Method for Physics"
     subtitle="线性代数, 有限群论与支撑理论物理计算的基础数学方法."
     icon="academic-cap"
-    link="notes/mathematical-physics/"
+    link="notes/mathematical_method_for_physics/"
     class="notes-topic-card notes-topic-math"
   >}}
   {{< hextra/feature-card
