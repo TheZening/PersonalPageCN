@@ -28,7 +28,7 @@ markup:
         enable: true
         delimiters:
           block: [['\[', '\]'], ['$$', '$$']]
-          inline: [['\(', '\)']]
+          inline: [['\(', '\)'], ['$', '$']]
 
 # Top navigation
 menu:
