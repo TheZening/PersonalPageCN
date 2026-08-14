@@ -11,7 +11,7 @@ while IFS= read -r -d '' directory; do
 
   printf 'Missing _index.md or index.md: %s\n' "$directory" >&2
   missing=1
-done < <(find "$content_root" -type d -print0 | sort -z)
+done < <(find "$content_root" -type d -name '.*' -prune -o -type d -print0 | sort -z)
 
 if [[ $missing -ne 0 ]]; then
   exit 1

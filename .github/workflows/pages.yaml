@@ -44,6 +44,9 @@ jobs:
       - name: Check content structure
         run: ./scripts/check-content-structure.sh
 
+      - name: Check math delimiters
+        run: ./scripts/check-math-delimiters.sh
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

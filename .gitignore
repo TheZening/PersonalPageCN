@@ -14,3 +14,6 @@ _site/
 **/.DS_Store
 .vscode/
 .idea/
+
+# Local note-taking workspace
+**/.obsidian/
