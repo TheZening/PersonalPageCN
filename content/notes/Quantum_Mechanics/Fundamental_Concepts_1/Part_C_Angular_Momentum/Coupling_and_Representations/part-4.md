@@ -142,9 +142,11 @@ $$
 
 > 设$V$是一个线性空间, $\rho: \mathfrak{su}(2) \to \mathrm{End}(V)$是$\mathfrak{su}(2)$在$V$上的一个表示.
 > 如果$V$有一个非平凡子空间$W$, 使得:
-> $$\begin{equation}
+> $$
+> \begin{equation}
 > \rho(A) \ket{w} \subset W, \forall A \in \mathfrak{su}(2), \ket{w} \in W
-> \end{equation}$$
+> \end{equation}
+> $$
 > 那么我们说$W$是$V$的一个$\mathfrak{su}(2)$不变子空间, 也就是说$W$在$\rho(A)$的作用下不变.
 >
 > 如果$V$有一个非平凡不变子空间$W$, 那么我们说$\rho$是一个可约表示.
@@ -227,9 +229,11 @@ $$
 我们采取Casimir方法, 首先我们介绍Carsimir算符:
 
 > 设$\rho: \mathfrak{su}(2) \to \mathrm{End}(V)$是$\mathfrak{su}(2)$在$V$上的一个表示, 那么我们定义Casimir算符:
-> $$\begin{equation}
+> $$
+> \begin{equation}
 > J^2 = J_x^2 + J_y^2 + J_z^2
-> \end{equation}$$
+> \end{equation}
+> $$
 > 那么$J^2$和任意的算符对易, $\forall A \in \mathfrak{su}(2)$.
 > 这就是说明, 这个元素不在乎你怎么旋转.
 > 这说明$J^2$可以同时对角化.
@@ -237,12 +241,14 @@ $$
 与其漫无目的地找不变子空间, 我们应该重点关注$J^2$这个算符, 因为他的本征子空间一定是不变的!
 
 > 假设$W_\lambda \subset V$是$J^2$的一个本征子空间, 对应本征值$\lambda$:
-> $$\begin{equation}
+> $$
+> \begin{equation}
 > J^2 \ket{w} = \lambda \ket{w}, \forall \ket{w} \in W_\lambda
 > \end{equation}
 >$$
 > 现在, $\forall \ket{w_2} \in W_\lambda, A \in \mathfrak{su}(2)$, 那么:
-> $$\begin{equation}
+> $$
+> \begin{equation}
 > J^2 (A \ket{w}) = A (J^2 \ket{w}) = \lambda (A \ket{w})
 > \end{equation}
 > $$

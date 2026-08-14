@@ -7,7 +7,7 @@ Zhanning Wang 的中文物理笔记库, 按量子力学, 凝聚态物理, 物理
 
 ## 技术栈
 
-本站使用 [Hugo](https://gohugo.io/) 和 [Hextra](https://github.com/imfing/hextra) 构建, 并通过 GitHub Pages 发布. 数学公式由 MathJax 渲染. 行内公式统一使用 `$...$`, 块级公式使用 `$$...$$`.
+本站使用 [Hugo](https://gohugo.io/) 和 [Hextra](https://github.com/imfing/hextra) 构建, 并通过 GitHub Pages 发布. 数学公式由 MathJax 渲染. 行内公式统一使用 `$...$`, 块级公式的开闭 `$$` 必须各自独占一行.
 
 ## 本地预览
 

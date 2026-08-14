@@ -18,7 +18,9 @@ aliases:
 
 检查 $H$ 是否是 $G$ 的子群, 可以使用如下的定理:
 
-> $$ H \subseteq G  \Leftrightarrow \forall a, b \in H, a * b^{-1} \in H $$
+> $$
+> H \subseteq G  \Leftrightarrow \forall a, b \in H, a * b^{-1} \in H
+> $$
 
 当然, 很多情况下都能一眼看出来某些元素的逆根本不在 $H$ 里, 那么就直接否定了 $H$ 是 $G$ 的子群.
 

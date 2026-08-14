@@ -245,12 +245,14 @@ $$
 
 如果 $\rho$ 是纯态, 那么 $\rho = \ket{\psi} \bra{\psi}$, 这时候:
 
-$$\begin{align}
+$$
+\begin{align}
 \tr{\rho^2} &= \tr{\ket{\psi} \bra{\psi} \ket{\psi} \bra{\psi}} \\
 &= \tr{\ket{\psi} \bra{\psi}} \\
 &= \braket{\psi}{\psi} \\
 &= 1
-\end{align}$$
+\end{align}
+$$
 
 
 ---

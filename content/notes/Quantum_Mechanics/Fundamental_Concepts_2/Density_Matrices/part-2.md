@@ -517,14 +517,18 @@ $$
 \end{equation}
 $$
 4. 定义$\ket{v_i^B} = \frac{1}{\sqrt{p_i}} \braket{u_i^A}{\psi_{AB}}$, 得到Schmidt分解:
-$$\begin{equation}
+$$
+\begin{equation}
 \ket{\psi_{AB}} = \sum_{i=1}^{r} \sqrt{p_i} \ket{u_i^A} \otimes \ket{v_i^B}
-\end{equation}$$
+\end{equation}
+$$
 
 > 如果此时计算纠缠熵:
-> $$\begin{equation}
+> $$
+> \begin{equation}
 > S(\rho_A) = - \tr(\rho_A \log \rho_A) = - \sum_{i=1}^{r} p_i \log p_i
-> \end{equation}$$
+> \end{equation}
+> $$
 > 这就是$A$系统的纠缠熵, 也是$B$系统的纠缠熵.
 > 纠缠熵是衡量两个子系统纠缠程度的一个重要指标.
 > 如果$r=1$, 也就是只有一个非零的Schmidt系数, 那么$S(\rho_A) = 0$, 说明$A$和$B$没有纠缠.
