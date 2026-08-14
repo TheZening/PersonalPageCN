@@ -10,9 +10,7 @@ aliases:
 陪集是一种等价类, 他的等价关系在于"属于同一个陪集":
 
 $$
-\begin{equation}
 [a] = \{b \in G | a^{-1}*b \in H\}
-\end{equation}
 $$
 
 
@@ -23,9 +21,7 @@ $$
 
 > (共轭类): 设$G$是一个群, $g \in G$, 则$a$的共轭类是
 > $$
-> \begin{equation}
 > \text{Conj}(g) = \{ h^{-1}*g*h | h \in G\}
-> \end{equation}
 > $$
 > 即 $g$ 在所有群元"装扮"下的不同"面孔".
 
@@ -51,9 +47,7 @@ $$
 也就是说, 我们现在把$S_3$划分成了3个共轭类:
 
 $$
-\begin{equation}
 S_3 = \{e\} \cup \{f_1, f_2, f_3\} \cup \{f_4, f_5\}
-\end{equation}
 $$
 
 > (共轭类划分定理): 设$G$是一个群, 则$G$的共轭类划分了$G$.

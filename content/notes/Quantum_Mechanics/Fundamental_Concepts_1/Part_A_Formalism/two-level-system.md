@@ -12,9 +12,7 @@ aliases:
 在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:
 
 $$
-\begin{equation}
 H = \mqty[ E_1 & V \\ V^* & E_2 ]
-\end{equation}
 $$
 
 其中, $E_1$和$E_2$是两个能级的能量, $V$是两个能级之间的耦合强度.
@@ -31,17 +29,13 @@ $$
 我们做如下的符号约定:
 
 $$
-\begin{equation}
   \tilde{E} = \frac{E_1 + E_2}{2}, \quad \delta = \frac{E_1 - E_2}{2}, \quad \Delta = \sqrt{\delta^2 + |V|^2}
-\end{equation}
 $$
 
 所以:
 
 $$
-\begin{equation}
 E_+ = \tilde{E} + \Delta, \quad E_- = \tilde{E} - \Delta
-\end{equation}
 $$
 
 ---
@@ -51,33 +45,25 @@ $$
 现在我们来尝试求本征态
 
 $$
-\begin{equation}
 \mqty[ E_1 - E_+ & V \\ V^* & E_2 - E_+ ] \mqty[ a \\ b ] = 0
-\end{equation}
 $$
 
 我们解出来$b$:
 
 $$
-\begin{equation}
 b = -\frac{E_1 - E_+}{V} a = \frac{E_+ - E_1}{V} a
-\end{equation}
 $$
 
 归一化:
 
 $$
-\begin{equation}
 |a|^2 + |b|^2 = |a|^2 + \left|\frac{E_+ - E_1}{V} a\right|^2 = 1
-\end{equation}
 $$
 
 能解出来$a$:
 
 $$
-\begin{equation}
 |a| = \frac{1}{\sqrt{1 + \left|\frac{E_+ - E_1}{V}\right|^2}} = \frac{|V|}{\sqrt{|V|^2 + |E_+ - E_1|^2}}
-\end{equation}
 $$
 
 从而我们有本征态:
@@ -98,26 +84,20 @@ $$
 我们可以把哈密顿量写成如下形式:
 
 $$
-\begin{equation}
 H = \mqty[ E_1 & |V| \mathrm{e}^{\mathrm{i}\phi} \\ |V| \mathrm{e}^{-\mathrm{i}\phi} & E_2 ]
-\end{equation}
 $$
 
 其中$\phi$的角度没要求.
 我们定义一个混合角, 描述了耦合强度和能级差的关系:
 
 $$
-\begin{equation}
 \tan 2\theta = \frac{|V|}{E_1 - E_2} = \frac{|V|}{\delta}
-\end{equation}
 $$
 
 一下子就能看出来:
 
 $$
-\begin{equation}
 \sin 2\theta = \frac{|V|}{\Delta}, \quad \cos 2\theta = \frac{\delta}{\Delta}
-\end{equation}
 $$
 
 利用三角恒等式:
@@ -166,17 +146,13 @@ $$
 我们做一个口算检查, 如果考虑如下的Hamiltonin:
 
 $$
-\begin{equation}
 H = g \mu_{\text{B}} \boldsymbol{B} \cdot \boldsymbol{\sigma} = g \mu_{\text{B}} (B_x \sigma_x + B_y \sigma_y + B_z \sigma_z)
-\end{equation}
 $$
 
 写成矩阵形式:
 
 $$
-\begin{equation}
 H = g \mu_{\text{B}} \mqty[ B_z & B_x - \mathrm{i} B_y \\ B_x + \mathrm{i} B_y & -B_z ]
-\end{equation}
 $$
 
 立刻写出能级:

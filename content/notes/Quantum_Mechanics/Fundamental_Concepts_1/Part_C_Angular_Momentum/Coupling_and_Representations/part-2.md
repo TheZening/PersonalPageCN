@@ -14,17 +14,13 @@ aliases:
 
 不管是什么耦合, 角动量算符都必须满足如下的对易关系:
 $$
-\begin{equation}
 [J_i, J_j] = i \hbar \epsilon_{ijk} J_k
-\end{equation}
 $$
 总角动量也不能违反这个对易关系.
 
 如果我们按照之前扩张算符的做法, 考虑Hilbert空间$\mathcal{H} = \mathcal{H}_1 \otimes \mathcal{H}_2$, 那么我们可以定义:
 $$
-\begin{equation}
 \boldsymbol{J} = \boldsymbol{J}_1 \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{J}_2
-\end{equation}
 $$
 其中$\mathbb{I}$是单位算符.
 这个定义是合理的, 因为$\boldsymbol{J}_1$和$\boldsymbol{J}_2$作用在不同的Hilbert空间上, 它们之间对易.
@@ -66,9 +62,7 @@ $J_+$和$J_-$分别是升降算符, 它们可以改变$m$的值.
 我们可以选择如下的直积获得的基:
 
 $$
-\begin{equation}
 \ket{\uparrow_1\, \uparrow_2}, \ket{\uparrow_1\, \downarrow_2}, \ket{\downarrow_2\, \uparrow_1}, \ket{\downarrow_2\, \downarrow_2}
-\end{equation}
 $$
 
 其中$\ket{\uparrow_1\, \uparrow_2} = \ket{\uparrow_1} \otimes \ket{\uparrow_2}$, 其他类似.
@@ -77,14 +71,12 @@ $$
 在这个基下, 我们可以计算总角动量算符$\boldsymbol{S} = \boldsymbol{S}_1 + \boldsymbol{S}_2$的矩阵表示:
 
 $$
-\begin{equation}
 S_z = S_{1z} + S_{2z} = \frac{\hbar}{2} \mqty[
 1 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & -1 & 0 \\
 0 & 0 & 0 & -1
 ]
-\end{equation}
 $$
 
 是对角的, 没啥毛病啊.
@@ -95,60 +87,50 @@ $$
 从而可以开始根据单粒子态的来计算所有的矩阵表示:
 
 $$
-\begin{equation}
 S_{1x} S_{2x} = \frac{\hbar^2}{4} \mqty[
 0 & 0 & 0 & 1 \\
 0 & 0 & 1 & 0 \\
 0 & 1 & 0 & 0 \\
 1 & 0 & 0 & 0
 ]
-\end{equation}
 $$
 $$
-\begin{equation}
 S_{1y} S_{2y} = \frac{\hbar^2}{4} \mqty[
 0 & 0 & 0 & -1 \\
 0 & 0 & 1 & 0 \\
 0 & 1 & 0 & 0 \\
 -1 & 0 & 0 & 0
 ]
-\end{equation}
 $$
 $$
-\begin{equation}
 S_{1z} S_{2z} = \frac{\hbar^2}{4} \mqty[
 1 & 0 & 0 & 0 \\
 0 & -1 & 0 & 0 \\
 0 & 0 & -1 & 0 \\
 0 & 0 & 0 & 1
 ]
-\end{equation}
 $$
 
 这样我们就能得到$2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2$的矩阵表示:
 
 $$
-\begin{equation}
 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \frac{\hbar^2}{2} \mqty[
 -1 & 0 & 0 & 2 \\
 0 & 1 & 2 & 0 \\
 0 & 2 & 1 & 0 \\
 2 & 0 & 0 & -1
 ]
-\end{equation}
 $$
 
 因此, 总角动量算符$S^2$的矩阵表示为:
 
 $$
-\begin{equation}
 S^2 = S_1^2 + S_2^2 + 2 \boldsymbol{S}_1 \cdot \boldsymbol{S}_2 = \hbar^2 \mqty[
 1 & 0 & 0 & 1 \\
 0 & 1 & 1 & 0 \\
 0 & 1 & 1 & 0 \\
 1 & 0 & 0 & 1
 ]
-\end{equation}
 $$
 
 哎! 问题发现了, 这个矩阵不是对角的!
@@ -196,9 +178,7 @@ $$
 我们可以把这些态重新命名为$\ket{s, m}$的形式:
 
 $$
-\begin{equation}
 \ket{0, 0} = \ket{S}, \quad \ket{1, 1} = \ket{T_+}, \quad \ket{1, 0} = \ket{T_0}, \quad \ket{1, -1} = \ket{T_-}
-\end{equation}
 $$
 
 我们先把数学内容交代一下在这里, 等下回来再看看有什么玄机.
@@ -217,9 +197,7 @@ $$
 总角动量算符可以定义为:
 
 $$
-\begin{equation}
 \boldsymbol{J} = \boldsymbol{L} \otimes \mathbb{I} + \mathbb{I} \otimes \boldsymbol{S}
-\end{equation}
 $$
 
 我们现在来看看这个算符的本征值和本征态.
@@ -241,7 +219,6 @@ $$
 首先计算$J_z = L_z + S_z$的矩阵表示:
 
 $$
-\begin{equation}
 J_z = L_z + S_z = \hbar \mqty[
 \frac{3}{2} & 0 & 0 & 0 & 0 & 0 \\
 0 & \frac{1}{2} & 0 & 0 & 0 & 0 \\
@@ -250,7 +227,6 @@ J_z = L_z + S_z = \hbar \mqty[
 0 & 0 & 0 & 0 & -\frac{1}{2} & 0 \\
 0 & 0 & 0 & 0 & 0 & -\frac{3}{2}
 ]
-\end{equation}
 $$
 
 这个好算, 毕竟还是对角的.
@@ -292,7 +268,6 @@ $$
 加到一起, 进行化简:
 
 $$
-\begin{equation}
 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
 1 & 0 & 1 & 0 & 0 & 0 \\
 0 & -1 & 0 & 1 & 0 & 0 \\
@@ -301,13 +276,11 @@ $$
 0 & 0 & 1 & 0 & -1 & 0 \\
 0 & 0 & 0 & 1 & 0 & 1
 ]
-\end{equation}
 $$
 
 所以我们的总角动量算符$J^2$的矩阵表示为:
 
 $$
-\begin{equation}
 J^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
 \frac{7}{4} & 0 & 1 & 0 & 0 & 0 \\
 0 & \frac{7}{4} & 0 & 1 & 0 & 0 \\
@@ -316,7 +289,6 @@ J^2 = L^2 + S^2 + 2 \boldsymbol{L} \cdot \boldsymbol{S} = \hbar^2 \mqty[
 0 & 0 & 1 & 0 & \frac{7}{4} & 0 \\
 0 & 0 & 0 & 1 & 0 & \frac{7}{4}
 ]
-\end{equation}
 $$
 
 目前看来啊, 这个矩阵也不是对角的.

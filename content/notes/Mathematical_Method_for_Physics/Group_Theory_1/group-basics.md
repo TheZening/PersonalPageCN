@@ -49,9 +49,7 @@ aliases:
 > 这个 $G$ 可以任何集合, 很宽泛的.
 >
 > $$
-> \begin{equation}
 > *: G \times G \to G
-> \end{equation}
 > $$
 
 所以实际上, 二元运算的正确写法是 $*(a, b)$, 但我们习惯写成 $a * b$.

@@ -13,6 +13,11 @@ if rg -n '\\\[|\\\]' "$content_root" -g '*.md'; then
   exit 1
 fi
 
+if rg -n '\\(begin|end)\{equation\*?\}' "$content_root" -g '*.md'; then
+  printf 'Redundant equation environments found. Put display math directly between standalone $$ lines.\n' >&2
+  exit 1
+fi
+
 display_errors=0
 while IFS=: read -r file line text; do
   normalized=$(printf '%s' "$text" | sed -E 's/^[[:space:]]*//; s/^(>[[:space:]]*)+//; s/^[[:space:]]*//')

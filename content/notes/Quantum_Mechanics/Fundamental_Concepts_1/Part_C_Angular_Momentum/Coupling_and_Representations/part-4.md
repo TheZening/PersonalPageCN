@@ -24,9 +24,7 @@ aliases:
 我们之前说过, 如果我们想旋转一个量子态, 我们可以用角动量算符来生成这个旋转:
 
 $$
-\begin{equation}
 U(\alpha; \hat{\mathrm{n}}) = \exp\left(-\frac{\mathrm{i}}{\hbar} \alpha \boldsymbol{J}\cdot \hat{\mathrm{n}}\right)
-\end{equation}
 $$
 
 这个时候我们得做几个区分:
@@ -50,9 +48,7 @@ $$
 2. 基就是$\{J_x, J_y, J_z\}$, 一般的元素就是$A = a_x J_x + a_y J_y + a_z J_z$.
 3. 运算就是$[A, B] = AB - BA$, 我们已经知道了:
     $$
-    \begin{equation}
     [J_i, J_j] = \mathrm{i} \hbar \epsilon_{ijk} J_k
-    \end{equation}
     $$
 4. 反对称性和Jacobi恒等式都满足.
 
@@ -69,9 +65,7 @@ $$
 所以, 我们就是要把$\mathfrak{su}(2)$这个代数, 都通过指数映射, 生成有限旋转的操作, 这个有限操作的集合, 我们记作$SU(2)$.
 
 $$
-\begin{equation}
 SU(2) = \{\exp(- \frac{\mathrm{i}}{\hbar} \theta \hat{\mathrm{n}} \cdot \boldsymbol{J}) | \theta \in \mathbb{R}, \hat{\mathrm{n}} \in \mathbb{R}^3, \hat{\mathrm{n}}^2 = 1\}
-\end{equation}
 $$
 
 我们注意到, 这个集合$SU(2)$, 里面的元素满足结合律, 有单位元$I$, 每个元素都有逆元$U^{-1}$, 但是不满足交换律.
@@ -93,17 +87,13 @@ $$
 > 我们考虑到$\mathfrak{su}(2)$这个Lie代数, 他自然是一个向量空间, 里面的元素是$a_x J_x + a_y J_y + a_z J_z$.
 > 我们可以定义一个映射:
 $$
-\begin{equation}
 \rho: \mathfrak{su}(2) \to \mathrm{End}(V)
-\end{equation}
 $$
 > 其中$V$是一个向量空间, $\mathrm{End}(V)$是$V$上的线性变换的集合, endomorphism.
 > 如果我们给$V$固定了一个基, 那么$\mathrm{End}(V)$就可以看成是$\dim(V) \times \dim(V)$的矩阵集合.
 > 这个映射$\rho$, 满足:
 > $$
-> \begin{equation}
 > \rho([A, B]) = [\rho(A), \rho(B)], \forall A, B \in \mathfrak{su}(2)
-> \end{equation}
 > $$
 > 那么我们说$\rho$是$\mathfrak{su}(2)$在$V$上的一个表示.
 > 如果$\rho$是单射, 那么我们说$\rho$是$\mathfrak{su}(2)$的一个忠实表示.
@@ -119,9 +109,7 @@ $$
 举个例子, 我们构造如下的表示:
 
 $$
-\begin{equation}
 \rho(A) = 0, \forall A \in \mathfrak{su}(2)
-\end{equation}
 $$
 
 这也没什么毛病, 要求都符合, 这样的表示就叫做平凡表示.
@@ -143,9 +131,7 @@ $$
 > 设$V$是一个线性空间, $\rho: \mathfrak{su}(2) \to \mathrm{End}(V)$是$\mathfrak{su}(2)$在$V$上的一个表示.
 > 如果$V$有一个非平凡子空间$W$, 使得:
 > $$
-> \begin{equation}
 > \rho(A) \ket{w} \subset W, \forall A \in \mathfrak{su}(2), \ket{w} \in W
-> \end{equation}
 > $$
 > 那么我们说$W$是$V$的一个$\mathfrak{su}(2)$不变子空间, 也就是说$W$在$\rho(A)$的作用下不变.
 >
@@ -164,17 +150,13 @@ $$
 现在回到我们之前的例子, 考虑两个自旋$\frac{1}{2}$的粒子, 他们形成的张量积空间
 
 $$
-\begin{equation}
 V = V_{\frac{1}{2}} \otimes V_{\frac{1}{2}}
-\end{equation}
 $$
 
 我们定义总角动量算符:
 
 $$
-\begin{equation}
 \boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2
-\end{equation}
 $$
 
 1. 我们已经检查过了, $\boldsymbol{J}$也满足$\mathfrak{su}(2)$的对易关系.
@@ -190,18 +172,14 @@ $$
 现在好了, 表示是可约的, 我们也找到了不变子空间, 那么我们就可以把大空间$V$, 直和分解成不变子空间的直和:
 
 $$
-\begin{equation}
 V = W_1 \oplus W_2
-\end{equation}
 $$
 
 现在我们找到了不变子空间, 现在我们看看每个算符在每个子空间上的表示, 这个就叫做限制(restriction):
 
 > 如果$W \subset V$是$V$的一个不变子空间, 那么我们可以定义$\rho$在$W$上的限制:
 > $$
-> \begin{equation}
 > \rho_{W}: \mathfrak{su}(2) \to \mathrm{End}(W)
-> \end{equation}
 > $$
 
 也就是说, 现在不需要思维矩阵了, 只看算符$J_i$在$W$里面的作用.
@@ -212,9 +190,7 @@ $$
 从而原来的大矩阵, 一定能在不变子空间的联合基底下, 可以写成分块对角矩阵:
 
 $$
-\begin{equation}
 \rho(A) = \mqty[\rho_{W_1}(A) & 0 \\ 0 & \rho_{W_2}(A)], \forall A \in \mathfrak{su}(2)
-\end{equation}
 $$
 
 这里是就是矩阵的直和 $\rho(A) = \rho_{W_1}(A) \oplus \rho_{W_2}(A)$, 不是空间的直和了.
@@ -230,9 +206,7 @@ $$
 
 > 设$\rho: \mathfrak{su}(2) \to \mathrm{End}(V)$是$\mathfrak{su}(2)$在$V$上的一个表示, 那么我们定义Casimir算符:
 > $$
-> \begin{equation}
 > J^2 = J_x^2 + J_y^2 + J_z^2
-> \end{equation}
 > $$
 > 那么$J^2$和任意的算符对易, $\forall A \in \mathfrak{su}(2)$.
 > 这就是说明, 这个元素不在乎你怎么旋转.
@@ -242,15 +216,11 @@ $$
 
 > 假设$W_\lambda \subset V$是$J^2$的一个本征子空间, 对应本征值$\lambda$:
 > $$
-> \begin{equation}
 > J^2 \ket{w} = \lambda \ket{w}, \forall \ket{w} \in W_\lambda
-> \end{equation}
 >$$
 > 现在, $\forall \ket{w_2} \in W_\lambda, A \in \mathfrak{su}(2)$, 那么:
 > $$
-> \begin{equation}
 > J^2 (A \ket{w}) = A (J^2 \ket{w}) = \lambda (A \ket{w})
-> \end{equation}
 > $$
 > 那么$W_\lambda$是$\mathfrak{su}(2)$的不变子空间.
 
@@ -260,9 +230,7 @@ $$
 所以现在我们可以说说之前遇到的:
 
 $$
-\begin{equation}
 \frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0
-\end{equation}
 $$
 
 到底是什么意思了:
@@ -281,102 +249,77 @@ $$
 我们从他的本征值, 本征态开始:
 
 $$
-\begin{equation}
 J^2 \ket{1, m} = 1(1+1)\hbar^2 \ket{1, m}, m = 1, 0, -1
-\end{equation}
 $$
 $$
-\begin{equation}
 J_z \ket{1, m} = m\hbar \ket{1, m}
-\end{equation}
 $$
 
 从而我们可以得到$J_\pm$的作用:
 
 $$
-\begin{equation}
 J_+ \ket{1,1} = 0, J_+ \ket{1,0} = \sqrt{2}\hbar \ket{1,1}, J_+ \ket{1,-1} = \sqrt{2}\hbar \ket{1,0}
-\end{equation}
 $$
 
 以及:
 
 $$
-\begin{equation}
 J_- \ket{1,1} = \sqrt{2}\hbar \ket{1,0}, J_- \ket{1,0} = \sqrt{2}\hbar \ket{1,-1}, J_- \ket{1,-1} = 0
-\end{equation}
 $$
 
 从而可以写出$J_z$的矩阵表示:
 
 $$
-\begin{equation}
 J_z = \hbar \mqty[1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1]
-\end{equation}
 $$
 
 以及$J_x$和$J_y$的矩阵表示:
 
 $$
-\begin{equation}
 J_x = \frac{\hbar}{\sqrt{2}} \mqty[0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0], \quad
 J_y = \frac{\hbar}{\sqrt{2}} \mqty[0 & -\mathrm{i} & 0 \\ \mathrm{i} & 0 & -\mathrm{i} \\ 0 & \mathrm{i} & 0]
-\end{equation}
 $$
 
 还能写出来$J^2$的矩阵表示:
 
 $$
-\begin{equation}
 J^2 = 2\hbar^2 \mqty[1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1]
-\end{equation}
 $$
 
 现在我们考虑两个自旋为1的粒子, 他们的总自旋空间是:
 
 $$
-\begin{equation}
 V = V_1 \otimes V_1
-\end{equation}
 $$
 
 维度是9维的.
 我们定义总角动量算符:
 
 $$
-\begin{equation}
 \boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2
-\end{equation}
 $$
 
 不需要验证了, 肯定有:
 
 $$
-\begin{equation}
 [J_i, J_j] = \mathrm{i} \hbar \epsilon_{ijk} J_k
-\end{equation}
 $$
 
 我们现在构造$J^2$, 我们还是用Casimir方法:
 
 $$
-\begin{equation}
 J^2 = J_x^2 + J_y^2 + J_z^2 = J_1^2 + J_2^2 + 2 \boldsymbol{J}_1 \cdot \boldsymbol{J}_2
-\end{equation}
 $$
 
 我们还是要计算:
 
 $$
-\begin{equation}
 \boldsymbol{J}_1 \cdot \boldsymbol{J}_2 = J_{1x} J_{2x} + J_{1y} J_{2y} + J_{1z} J_{2z}
-\end{equation}
 $$
 
 得到:
 
 $$
-\begin{equation}
 2 J_{1x} J_{2x} = \hbar^2 \mqty[ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
@@ -386,11 +329,9 @@ $$
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 ]
-\end{equation}
 $$
 
 $$
-\begin{equation}
 2 J_{1y} J_{2y} = \hbar^2 \mqty[ 0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
@@ -400,11 +341,9 @@ $$
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 ]
-\end{equation}
 $$
 
 $$
-\begin{equation}
 J_{1z} J_{2z} = \hbar^2 \mqty[ 2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & -2 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -414,13 +353,11 @@ J_{1z} J_{2z} = \hbar^2 \mqty[ 2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & -2 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 ]
-\end{equation}
 $$
 
 所以我们有:
 
 $$
-\begin{equation}
 J^2 = \hbar^2 \mqty[ 6 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 4 & 0 & 2 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 2 & 0 & 2 & 0 & 0 & 0 & 0 \\
@@ -430,7 +367,6 @@ J^2 = \hbar^2 \mqty[ 6 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 2 & 0 & 2 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 2 & 0 & 4 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 6 ]
-\end{equation}
 $$
 
 我们可以计算出$J^2$的本征值和本征向量:
@@ -452,9 +388,7 @@ $$
 我们现在就能看出来了, 9维空间可以直和分解成三个不变子空间:
 
 $$
-\begin{equation}
 1 \otimes 1 = 2 \oplus 1 \oplus 0
-\end{equation}
 $$
 
 两个自旋-1的不可约表示, 可以被分解成自旋-2, 自旋-1和自旋-0的不可约表示的直和.

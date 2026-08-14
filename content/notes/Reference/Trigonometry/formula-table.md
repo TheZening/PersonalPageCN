@@ -41,17 +41,13 @@ $R$是外接圆半径.
 从而我们有正弦定理:
 
 $$
-\begin{equation}
 \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
-\end{equation}
 $$
 
 三角形面积公式:
 
 $$
-\begin{equation}
 \text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{abc}{4R}
-\end{equation}
 $$
 
 当然还有余弦定理:
@@ -111,7 +107,6 @@ $$
 也能统一起来:
 
 $$
-\begin{equation}
 \sin(\theta + k\pi/2) =
 \begin{cases}
 \sin \theta & k \equiv 0 \pmod{4}\\
@@ -119,11 +114,9 @@ $$
 -\sin \theta & k \equiv 2 \pmod{4}\\
 -\cos \theta & k \equiv 3 \pmod{4}
 \end{cases}
-\end{equation}
 $$
 
 $$
-\begin{equation}
 \cos(\theta + k\pi/2) =
 \begin{cases}
 \cos \theta & k \equiv 0 \pmod{4}\\
@@ -131,11 +124,9 @@ $$
 -\cos \theta & k \equiv 2 \pmod{4}\\
 \sin \theta & k \equiv 3 \pmod{4}
 \end{cases}
-\end{equation}
 $$
 
 $$
-\begin{equation}
 \tan(\theta + k\pi/2) =
 \begin{cases}
 \tan \theta & k \equiv 0 \pmod{4}\\
@@ -143,7 +134,6 @@ $$
 \tan \theta & k \equiv 2 \pmod{4}\\
 \cot \theta & k \equiv 3 \pmod{4}
 \end{cases}
-\end{equation}
 $$
 
 ---
@@ -231,25 +221,19 @@ $$
 有的时候我们会遇到换元方法, 他的起点就是:
 
 $$
-\begin{equation}
 \sin^2 \theta + \cos^2 \theta = 1
-\end{equation}
 $$
 
 这是最基本的, 其他的都是从这里推出来的.
 
 $$
-\begin{equation}
 \tan^2 \theta + 1 = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta
-\end{equation}
 $$
 
 配合二倍角, 半角公式, 也能得到:
 
 $$
-\begin{equation}
 \sin^2 \theta = \frac{1 - \cos(2\theta)}{2}, \quad \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}
-\end{equation}
 $$
 
 这样就能把平方降成一次了, 这样积分简单很多.

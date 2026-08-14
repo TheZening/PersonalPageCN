@@ -14,9 +14,7 @@ aliases:
 在这个基础之上, 如果我们的Hamiltonian依赖一组参数 $\boldsymbol{R}=(R_1,R_2,\cdots)$ , 那么当这些参数沿着某条闭合路径 $\mathcal{C}$ 变化一圈后, 系统的态会获得一个额外的相位因子, 这个相位因子就是 Berry phase:
 
 $$
-\begin{equation}
 \gamma_n(\mathcal{C}) = \mathrm{i}\,\oint_{\mathcal{C}} \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}} \cdot \mathrm{d}\boldsymbol{R}
-\end{equation}
 $$
 
 此处做两个之前没有提到过的评价:
@@ -41,9 +39,7 @@ $$
 如果从二维空间开始, 我们会发现一个非常有趣的公式, 叫做 Green 公式:
 
 $$
-\begin{equation}
 \oint_{\partial S} P\,\dd{x} + Q\,\dd{y} = \iint_{S} \left(\pdv{Q}{x} - \pdv{P}{y}\right)\,\dd{x}\dd{y}
-\end{equation}
 $$
 
 > 这实际上告诉我们, 边界上的流动 = 区域内的旋转总量.
@@ -55,9 +51,7 @@ $$
 我们学的第二个公式, 叫做 Gauss 定理 (散度定理):
 
 $$
-\begin{equation}
 \iint_{\partial V} \boldsymbol{A} \cdot \dd{\boldsymbol{S}} = \iiint_{V} (\nabla_{\boldsymbol{R}} \cdot \boldsymbol{A})\,\dd{V}
-\end{equation}
 $$
 
 > 这个公式告诉我们, 一个闭合曲面上的通量 = 曲面所围成的体积内的散度总量.
@@ -67,9 +61,7 @@ $$
 我们学的第三个公式, 叫做 Stokes 定理:
 
 $$
-\begin{equation}
 \oint_{\mathcal{C}} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{R} = \iint_{\mathcal{S}} (\nabla_{\boldsymbol{R}} \times \boldsymbol{A}) \cdot \mathrm{d}\boldsymbol{S}
-\end{equation}
 $$
 
 > 这个公式告诉我们, 一个闭合曲线上的环流 = 曲线所围成的曲面内的旋度总量.
@@ -83,18 +75,14 @@ $$
 如果就在这个层面对着 Berry 相位的定义式子看一眼, 你会发现, 它其实就是 Stokes 定理的左边:
 
 $$
-\begin{equation}
 \gamma_n(\mathcal{C}) = \mathrm{i}\,\oint_{\mathcal{C}} \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}} \cdot \dd{\boldsymbol{S}}
-\end{equation}
 $$
 
 也就是 $\boldsymbol{A}(\boldsymbol{R}) = \mathrm{i}\,\mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}}$ 这个向量场沿着边界走了一圈.
 利用 Stokes 定理, 我们可以把它写成曲面积分:
 
 $$
-\begin{equation}
 \gamma_n(\mathcal{C}) = \mathrm{i}\,\iint_{\mathcal{S}} \left[\nabla_{\boldsymbol{R}} \times \mel{n;\boldsymbol{R}}{\nabla_{\boldsymbol{R}}}{n;\boldsymbol{R}}\right] \cdot \dd{\boldsymbol{S}}
-\end{equation}
 $$
 
 可是这到底是什么意思呢? 这到底是个什么向量场呢? 这个向量场的旋度又是什么意思呢?

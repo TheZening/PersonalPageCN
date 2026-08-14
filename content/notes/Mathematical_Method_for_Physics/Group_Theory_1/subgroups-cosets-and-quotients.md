@@ -28,9 +28,7 @@ aliases:
 我们注意到:
 
 $$
-\begin{equation}
 4^{-1} = 1 \notin H
-\end{equation}
 $$
 
 所以 $H$ 不是 $G$ 的子群.
@@ -42,15 +40,11 @@ $$
 
 > 考虑 $H \subseteq G$, 以及 $g_0 \in G$, 那么 $H$ 关于 $g_0$ 的左陪集定义为:
 > $$
-> \begin{equation}
 > g_0 H = \{ g_0 * h | h \in H \}
-> \end{equation}
 > $$
 > $H$ 关于 $g_0$ 的 右陪集定义为:
 > $$
-> \begin{equation}
 > H g_0 = \{ h * g_0 | h \in H \}
-> \end{equation}
 > $$
 
 是就是挑个 $g_0$, 把一个子群里的每个元素都和 $g_0$ 做一次群运算, 就得到了陪集.
@@ -113,9 +107,7 @@ $$
 
 >(二元关系): 考虑两个集合 $A$ 和 $B$, 从 $A$ 到 $B$ 的一个二元关系是Cartesian product $A \times B$ 的一个子集:
 > $$
-> \begin{equation}
 > R \subseteq A \times B := \{(a, b) \mid a \in A, b \in B\}
-> \end{equation}
 > $$
 
 更准确地说, 二元关系是由有序对组成的集合, 其中第一个元素来自 $A$, 第二个元素来自 $B$.
@@ -123,18 +115,14 @@ $$
 例如:
 
 $$
-\begin{equation}
 R = \{(1, 2), (2, 3), (3, 4)\} \subseteq \{1, 2, 3\} \times \{2, 3, 4\}
-\end{equation}
 $$
 
 是一个从 $\{1, 2, 3\}$ 到 $\{2, 3, 4\}$ 的关系.
 另一个例子:
 
 $$
-\begin{equation}
 R = \{(1, 7), (1, 8), (1, 9), (3, 7)\}
-\end{equation}
 $$
 
 是一个从 $\{1, 3\}$ 到 $\{7, 8, 9\}$ 的关系.
@@ -142,9 +130,7 @@ $$
 比如集合:
 
 $$
-\begin{equation}
 S = \{(x,y) \in \mathbb{N}^2 \mid y = x +1 \}
-\end{equation}
 $$
 
 是一个从 $\mathbb{N}$ 到 $\mathbb{N}$ 的关系.
@@ -177,9 +163,7 @@ $$
 > 集合 $A$ 上的一个关系是从 $A$ 到 $A$ 的二元关系, 即 $A \times A$ 的一个子集.
 > 形式化地定义为:
 > $$
-> \begin{equation}
 > R \subseteq A \times A := \{(a, b) \mid a \in A, b \in A\}
-> \end{equation}
 > $$
 
 我们可以立即定义集合上关系的一些重要性质.
@@ -187,36 +171,28 @@ $$
 > (自反关系):
 > 如果集合 $A$ 上的一个关系 $R$ 满足每个元素都与自身相关, 即对于所有 $a \in A$,
 > $$
-> \begin{equation}
 > (a, a) \in R
-> \end{equation}
 > $$
 > 则称 $R$ 为自反关系.
 
 > (对称关系):
 > 如果集合 $A$ 上的一个关系 $R$ 满足: $\forall a, b \in A$,
 > $$
-> \begin{equation}
 > (a, b) \in R \Rightarrow (b, a) \in R
-> \end{equation}
 > $$
 > 则称 $R$ 为对称关系.
 
 > (传递关系):
 > 如果集合 $A$ 上的一个关系 $R$ 满足: $\forall a, b, c \in A$,
 > $$
-> \begin{equation}
 > (a, b) \in R \land (b, c) \in R \Rightarrow (a, c) \in R
-> \end{equation}
 > $$
 > 则称 $R$ 为传递关系.
 
 > (反对称关系)
 > 如果集合 $A$ 上的一个关系 $R$ 满足: $\forall a, b \in A$,
 > $$
-> \begin{equation}
 > (a, b) \in R \land (b, a) \in R \Rightarrow a = b
-> \end{equation}
 > $$
 > 则称 $R$ 为反对称关系.
 
@@ -230,9 +206,7 @@ $$
 它的形式化定义为:
 
 $$
-\begin{equation}
 R_{=} = \{(a, b) \in A \times A \mid a = b\}
-\end{equation}
 $$
 
 - 它是自反的, 因为对于任意 $a \in A$, 有 $(a, a) \in R_{=}$.
@@ -245,9 +219,7 @@ $$
 其形式化定义为:
 
 $$
-\begin{equation}
 R_{\leq} = \{(a, b) \in \mathbb{R} \times \mathbb{R} \mid a \leq b\}
-\end{equation}
 $$
 
 - 它是自反的, 因为对于任意 $a \in \mathbb{R}$, 有 $(a, a) \in R_{\leq}$.
@@ -261,26 +233,20 @@ $$
 > (等价类): 给定集合 $A$ 上的一个等价关系 $R$, 元素 $a \in A$ 的等价类是与 $a$ 通过 $R$ 相关的所有元素所组成的集合, 记作 $[a]$.
 > 形式化地定义为:
 > $$
-> \begin{equation}
 > [a] = \{b \in A \mid (a, b) \in R\}
-> \end{equation}
 > $$
 
 你所需要做的只是指定你想使用哪种关系.
 例如, 如果我们使用相等关系 $R_{=}$, 那么元素 $a$ 的等价类就是仅包含 $a$ 本身的集合:
 
 $$
-\begin{equation}
 [a] = \{a\}
-\end{equation}
 $$
 
 如果我们使用"模 $n$ 同余"关系, 那么元素 $a$ 的等价类是所有与 $a$ 模 $n$ 同余的整数所组成的集合:
 
 $$
-\begin{equation}
 [a] = \{b \in \mathbb{Z} \mid b \equiv a \mod n\}
-\end{equation}
 $$
 
 这意味着在 $a$ 的等价类中的所有整数在被 $n$ 除时余数相同.
@@ -288,9 +254,7 @@ $$
 一个具体的例子: 若 $n = 3$ 且 $a = 1$, 则 $1$ 模 $3$ 的等价类为:
 
 $$
-\begin{equation}
 [1] = \{1, 4, 7, 10, \ldots, -2, -5, -8, \ldots\}
-\end{equation}
 $$
 
 这个集合包含了所有被 $3$ 除后余数为 $1$ 的整数.
@@ -312,18 +276,14 @@ $$
 因此, 模 $3$ 同余关系在 $\mathbb{Z}$ 上的等价类为:
 
 $$
-\begin{equation}
 \{[0], [1], [2]\}
-\end{equation}
 $$
 
 另一个很好的例子来自一些离散的数字.
 考虑集合 $A = \{1, 2, 3\}$, 定义一个等价关系 $R$ 为:
 
 $$
-\begin{equation}
 R = \{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)\}
-\end{equation}
 $$
 
 这个关系是自反的, 对称的, 传递的, 因此它是一个等价关系.
@@ -339,9 +299,7 @@ $$
 
 因此, $R$ 在 $A$ 上的等价类为:
 $$
-\begin{equation}
 \{[1], [2], [3]\} = \{\{1, 2\}, \{3\}\}
-\end{equation}
 $$
 
 在这里我们注意到等价类 $[1]$ 和 $[2]$ 是相同的, 因此我们可以将它们合并为一个类.
@@ -361,18 +319,14 @@ $$
 > (商集) 集合 $A$ 关于等价关系 $R$ 的商集是 $A$ 在关系 $R$ 下所有等价类的集合, 记作 $A/R$ 或 $A/\sim$.
 > 形式化地定义为:
 > $$
-> \begin{equation}
 > A/R = \{[a] \mid a \in A\}
-> \end{equation}
 > $$
 
 商集是集合 $A$ 在等价关系 $R$ 下所有不同等价类所组成的集合.
 在我们的例子中, 集合 $A$ 关于等价关系 $R$ 的商集为:
 
 $$
-\begin{equation}
 A/R = \{\{1, 2\}, \{3\}\}
-\end{equation}
 $$
 
 ---
@@ -382,9 +336,7 @@ $$
 
 > (陪集与等价类): 给定群 $G$ 及其子群 $H$, 定义在 $G$ 上的关系 $R$ 如下:
 > $$
-> \begin{equation}
 > (g_1, g_2) \in R \Leftrightarrow g_1^{-1} * g_2 \in H
-> \end{equation}
 > $$
 > 则 $R$ 是 $G$ 上的一个等价关系, 如果我们把所有等价于 $g_1$ 的元素 $g_2$ 都找出来, 那么得到的集合就是 $g_1$ 关于 $H$ 的左陪集 $g_1 H$.
 
@@ -398,9 +350,7 @@ $$
 现在我们来看看 $g_1$ 的等价类 $[g_1]$ 是什么:
 
 $$
-\begin{equation}
 [g_1] = \{g_2 \in G \mid (g_1, g_2) \in R\} = \{g_1 * h \mid h \in H\} = g_1 H
-\end{equation}
 $$
 
 确实是个等价类.
@@ -413,15 +363,11 @@ $$
 
 > (商群): 给定群 $G$ 及其正规子群 $H$, 定义商群 $G/H$ 为所有 $H$ 的左陪集的集合, 即:
 > $$
-> \begin{equation}
 > G/H = \{g H \mid g \in G\}
-> \end{equation}
 > $$
 > 商群 $G/H$ 上的群运算定义为:
 > $$
-> \begin{equation}
 > (g_1 H) * (g_2 H) = (g_1 * g_2) H
-> \end{equation}
 > $$
 
 我们之前的例子里, $H_4 = \{f_0, f_4, f_5\}$ 是 $S_3$ 的正规子群.
@@ -434,17 +380,13 @@ $$
 所以商集为:
 
 $$
-\begin{equation}
 S_3 / H_4 = \{ [f_0], [f_1] \}
-\end{equation}
 $$
 
 我们来验证一下商群的运算:
 
 $$
-\begin{equation}
 [f_0] * [f_0] = [f_0], \quad [f_0] * [f_1] = [f_1], \quad [f_1] * [f_0] = [f_1], \quad [f_1] * [f_1] = [f_0]
-\end{equation}
 $$
 
 总结一下我们有的信息:

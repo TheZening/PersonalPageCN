@@ -36,25 +36,19 @@ aliases:
 假设系统$S$有一个待测算符$\mathcal{O}_S$, 其本征态为$\ket{s_i}$, 本征值为$s_i$:
 
 $$
-\begin{equation}
 \mathcal{O}_S \ket{s_i} = s_i \ket{s_i}
-\end{equation}
 $$
 
 测量装置$A$也有一个待测算符$\mathcal{O}_A$, 其本征态为$\ket{a_j}$, 本征值为$a_j$:
 
 $$
-\begin{equation}
 \mathcal{O}_A \ket{a_j} = a_j \ket{a_j}
-\end{equation}
 $$
 
 这些$\ket{a_j}$是测量仪器的指针态, 我们希望建立一个对应关系:
 
 $$
-\begin{equation}
 \ket{s_i} \leftrightarrow \ket{a_i}
-\end{equation}
 $$
 
 也就是说, 如果系统$S$处于本征态$\ket{s_i}$, 那么测量仪器$A$的指针态应该是$\ket{a_i}$.
@@ -63,59 +57,45 @@ $$
 假设在$t=0$时刻, 系统$S$处于叠加态:
 
 $$
-\begin{equation}
 \ket{\psi;0}_S = \sum_i c_i \ket{s_i}
-\end{equation}
 $$
 
 装置处于一个确定的初始状态$\ket{\varphi;0}_A$, 那么整个系统的初始态是:
 
 $$
-\begin{equation}
 \ket{\Psi;0}_{SA} = \ket{\psi;0}_S \otimes \ket{\varphi;0}_A = \sum_i c_i \ket{s_i} \otimes \ket{\varphi;0}_A
-\end{equation}
 $$
 
 我们此时把指针想象成一个抽象的位移(不是真实位置上的移动), 所以提取指针的位置就是一个抽象的位置算符$Q$, 自然而然的, 你想生成平移, 就得考虑一个平移$Q$的共轭动量$P$:
 
 $$
-\begin{equation}
 [Q,P] = \mathrm{i}\hbar \quad
 \mathrm{e}^{-\mathrm{i} \alpha P/\hbar} \ket{a_0} = \ket{a_0 + \alpha}
-\end{equation}
 $$
 
 从我们的系统-装置耦合Hamiltonian可以写成:
 
 $$
-\begin{equation}
 H_{int} = g(t) \mathcal{O}_S \otimes P_A
-\end{equation}
 $$
 
 
 其中$g(t)$是一个在测量时间$\tau$内非零的函数, 满足:
 
 $$
-\begin{equation}
 \int_0^\tau g(t) \, \mathrm{d}t = \kappa
-\end{equation}
 $$
 
 从而我们可以写出时间演化算符:
 
 $$
-\begin{equation}
 U(\tau) = \exp\left(-\frac{\mathrm{i}}{\hbar} \int_0^\tau H_{int}(t) \, \mathrm{d}t\right) = \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa \mathcal{O}_S \otimes P_A\right)
-\end{equation}
 $$
 
 如果系统处于本征态$\ket{s_i}$, 那么经过时间$\tau$的演化, 我们有:
 
 $$
-\begin{equation}
 U(\tau) \ket{s_i} \otimes \ket{a_0} = \ket{s_i} \otimes \mathrm{e}^{-\mathrm{i} \kappa s_i P_A/\hbar} \ket{a_0} = \ket{s_i} \otimes \ket{a_0 + \kappa s_i}
-\end{equation}
 $$
 
 也就是说, 本征值$s_i$决定了指针态的平移距离$\kappa s_i$.
@@ -123,17 +103,13 @@ $$
 我们定义:
 
 $$
-\begin{equation}
 \exp\left(-\frac{\mathrm{i}}{\hbar} \kappa s_i P_A\right) \ket{a_0} = \mathrm{e}^{-\mathrm{i} \phi_i} \ket{a_i}
-\end{equation}
 $$
 
 系统的状态现在是:
 
 $$
-\begin{equation}
 \ket{\Psi;\tau}_{SA} = \sum_i c_i \mathrm{e}^{-\mathrm{i} \phi_i} \ket{s_i} \otimes \ket{a_i}
-\end{equation}
 $$
 
 系统和装置就建立了所需的纠缠: 每个系统本征态对应一个装置的指针态.
@@ -151,65 +127,49 @@ $$
 测量装置也是双能级态, 耦合Hamiltonian是:
 
 $$
-\begin{equation}
 H_{SA} = \frac{1}{2} \hbar \omega (1 + \sigma_z^S) \otimes \sigma_x^A
-\end{equation}
 $$
 
 假设系统的初始状态为:
 
 $$
-\begin{equation}
 c_+ \ket{+}_S \otimes \ket{-}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}
 $$
 
 我们做一点点代数变形:
 
 $$
-\begin{equation}
 \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\ket{x;+}_A - \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}
 $$
 
 我们的时间演化算符是:
 
 $$
-\begin{equation}
 U(t) = \exp\left(-\frac{\mathrm{i}}{\hbar} H_{SA} t\right) = \exp\left(-\frac{\mathrm{i}}{2} \omega t (1 + \sigma_z^S) \otimes \sigma_x^A\right)
-\end{equation}
 $$
 
 注意到:
 
 $$
-\begin{equation}
 U(t) \ket{-}_S \otimes \ket{-}_A = \ket{-}_S \otimes \ket{-}_A
-\end{equation}
 $$
 
 以及:
 
 $$
-\begin{equation}
 U(t) \ket{+}_S \otimes \ket{x;\pm}_A = \mathrm{e}^{\mp \mathrm{i} \omega t} \ket{+}_S \otimes \ket{x;\pm}_A
-\end{equation}
 $$
 
 从而我们可以计算出:
 
 $$
-\begin{equation}
 \ket{\Psi(t)} = \frac{c_+}{\sqrt{2}} \ket{+}_S \otimes (\mathrm{e}^{-\mathrm{i} \omega t} \ket{x;+}_A - \mathrm{e}^{\mathrm{i} \omega t} \ket{x;-}_A) + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}
 $$
 
 如果我们规定$\omega t = \pi/2$, 那么我们有:
 
 $$
-\begin{equation}
 \ket{\Psi(\pi/2\omega)} = -\mathrm{i}\,c_+ \ket{+}_S \otimes \ket{+}_A + c_- \ket{-}_S \otimes \ket{-}_A
-\end{equation}
 $$
 
 系统和装置的观测量正确地关联在一起了!
@@ -225,66 +185,50 @@ $$
 我们之前得到了预测量态:
 
 $$
-\begin{equation}
 \sum_i c_i \ket{s_i} \otimes \ket{a_i}
-\end{equation}
 $$
 
 但是在现实中, 测量装置不可能是孤立的, 它总是与环境相互作用!
 所以我们应该把环境$E$也考虑进来, 于是总态是:
 
 $$
-\begin{equation}
 \ket{\Psi}_{SAE} = \sum_i c_i \ket{s_i} \otimes \ket{a_i} \otimes \ket{\mathcal{E}_i}
-\end{equation}
 $$
 
 我们要想扔掉环境, 就得计算系统-装置的约化密度矩阵:
 
 $$
-\begin{equation}
 \rho_{SA} = \tr_E \ketbra{\Psi}{\Psi}_{SAE} = \sum_{ij} c_i c_j^* \ketbra{s_i}{s_j} \otimes \ketbra{a_i}{a_j} \braket{\mathcal{E}_j | \mathcal{E}_i}
-\end{equation}
 $$
 
 如果环境状态对不同结果几乎正交(但是这个真的能行吗? 也不好说):
 
 $$
-\begin{equation}
 \braket{\mathcal{E}_j}{\mathcal{E}_i} \approx \delta_{ij}
-\end{equation}
 $$
 
 那么交叉项, 非对角元就会消失, 剩下的就是一个经典混合:
 
 $$
-\begin{equation}
 \rho_{SA} \approx \sum_i |c_i|^2 \ketbra{s_i}{s_i} \otimes \ketbra{a_i}{a_i}
-\end{equation}
 $$
 
 比如Schrodinger猫的例子, 理想的情况下, 确实是:
 
 $$
-\begin{equation}
 \ket{\psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} + \ket{\mathrm{dead}})
-\end{equation}
 $$
 
 但是猫必然和环境纠缠, 活的猫在呼吸, 死的猫在散射:
 
 $$
-\begin{equation}
 \ket{\Psi} = \frac{1}{\sqrt{2}} (\ket{\mathrm{alive}} \otimes \ket{\mathcal{E}_{\mathrm{alive}}} + \ket{\mathrm{dead}} \otimes \ket{\mathcal{E}_{\mathrm{dead}}})
-\end{equation}
 $$
 
 对环境取偏迹:
 
 $$
-\begin{equation}
 \rho = \frac{1}{2} (\ketbra{\mathrm{alive}}{\mathrm{alive}} + \ketbra{\mathrm{dead}}{\mathrm{dead}})
-\end{equation}
 $$
 
 退相干解释了为什么我们看不到大尺度量子叠加态.
@@ -304,27 +248,21 @@ MWI避免了坍缩的悖论, 但是引入了无数的平行宇宙, 这些宇宙�
 假设Alice有一个自旋1/2粒子, 处于叠加态:
 
 $$
-\begin{equation}
 \ket{\psi} = c_+ \ket{+} + c_- \ket{-} \quad
 |c_+|^2 + |c_-|^2 = 1
-\end{equation}
 $$
 
 Alice现在沿着$z$方向测量自旋, 按照传统的Copenhagen诠释, 态会坍缩到$\ket{+}$或者$\ket{-}$, 概率分别是$|c_+|^2$和$|c_-|^2$.
 那在多世界诠释中, 我们必须要把Alice也量子化, 纳入到波函数之中:
 
 $$
-\begin{equation}
 \ket{\Psi} = (c_+ \ket{+} + c_- \ket{-}) \otimes \ket{\mathrm{Alice;ready}}
-\end{equation}
 $$
 
 测量之后, 我们没有什么坍缩, 而是得到了一个纠缠态:
 
 $$
-\begin{equation}
 \ket{\Psi} = c_+ \ket{+} \otimes \ket{\mathrm{Alice;up}} + c_- \ket{-} \otimes \ket{\mathrm{Alice;down}}
-\end{equation}
 $$
 
 这正是我们在测量分析里见到的那种纠缠, 只是此处 Alice 的状态扮演了仪器的角色.
