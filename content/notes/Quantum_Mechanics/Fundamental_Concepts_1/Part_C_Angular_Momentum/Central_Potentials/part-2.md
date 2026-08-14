@@ -5,6 +5,7 @@ weight: 2
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Central_Potentials/part-2/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Central_Potentials/part-2/"
   - "/qm1/QM1-AngularMomentum2/"
 ---
 经过繁复的计算, 我们终于得到了角动量算符在球坐标系下的表达式:

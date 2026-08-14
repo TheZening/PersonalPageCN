@@ -5,6 +5,8 @@ weight: 3
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Foundations/larmor-precession/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/larmor-precession/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Part_A_Formulism/larmor-precession/"
   - "/qm1/QM1-LarmourProblem/"
 ---
 在这篇文章中, 我们讨论Larmour问题.

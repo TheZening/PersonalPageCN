@@ -5,6 +5,8 @@ weight: 1
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Foundations/two-level-system/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/two-level-system/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Part_A_Formulism/two-level-system/"
   - "/qm1/QM1-TwoLevelSystem/"
 ---
 在量子力学中, 双能级系统是指只有两个量子态的系统. 这种系统在量子计算, 核磁共振(NMR), 量子光学等领域有广泛应用. 双能级系统的哈密顿量通常可以表示为2x2矩阵, 其形式为:

@@ -5,6 +5,8 @@ weight: 4
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Foundations/rabi-oscillations/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/rabi-oscillations/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Part_A_Formulism/rabi-oscillations/"
   - "/qm1/QM1-RabiProblem/"
 ---
 在这篇文章里, 我们要讨论 **Rabi 振荡**, 先从一个最简单的二能级系统开始, 这个系统的 Hamiltonian 是这样的:

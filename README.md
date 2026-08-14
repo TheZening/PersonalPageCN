@@ -36,3 +36,5 @@ content/notes/
 ```
 
 笔记目录统一使用 `Fundamental_Concepts_1` 这样的大写单词, 下划线与序号命名. 首页会自动读取一级栏目 `_index.md` 中的 `title`, `description`, `weight` 和 `params`; 修改栏目时无需再编辑首页. 文章通过 `weight` 排序; 移动页面时通过 `aliases` 保留旧网站链接.
+
+每个导航目录必须包含 `_index.md`; 使用 `index.md` 的目录视为页面 Bundle. 空目录不会被 Git 记录, 因此规划中的栏目也应先创建 `_index.md`.

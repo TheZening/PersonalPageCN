@@ -5,6 +5,8 @@ weight: 2
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Foundations/commutation-relations/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/commutation-relations/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Part_A_Formulism/commutation-relations/"
   - "/qm1/QM1-Commutation-Relations/"
 ---
 这里我们将讨论一些在作业中有用的基本对易关系, 我们从基础开始:

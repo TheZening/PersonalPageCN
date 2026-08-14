@@ -5,6 +5,7 @@ weight: 2
 legacySeries: "QM2"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Coupling_and_Representations/part-2/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Coupling_and_Representations/part-2/"
   - "/qm2/QM2-AngularMomentum2/"
 ---
 我们现在从单个粒子的角动量算符出发, 讨论多粒子系统的角动量耦合.

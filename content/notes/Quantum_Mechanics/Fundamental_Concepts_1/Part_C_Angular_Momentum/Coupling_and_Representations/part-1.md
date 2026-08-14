@@ -5,6 +5,7 @@ weight: 1
 legacySeries: "QM2"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Coupling_and_Representations/part-1/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Coupling_and_Representations/part-1/"
   - "/qm2/QM2-AngularMomentum1/"
 ---
 之前我们学习过角动量的量子化, 并且知道角动量的本征值是量子化的:

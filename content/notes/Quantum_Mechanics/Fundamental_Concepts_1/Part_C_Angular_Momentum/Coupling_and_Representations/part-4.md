@@ -5,6 +5,7 @@ weight: 4
 legacySeries: "QM2"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Coupling_and_Representations/part-4/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Coupling_and_Representations/part-4/"
   - "/qm2/QM2-AngularMomentum4/"
 ---
 我们现在已经有了一个含糊的概念上的认知:

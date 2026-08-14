@@ -5,6 +5,7 @@ weight: 3
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Central_Potentials/part-3/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Central_Potentials/part-3/"
   - "/qm1/QM1-AngularMomentum3/"
 ---
 我们之前已经讨论了角动量算符在球坐标系下的表达式, 以及它们的本征值问题.

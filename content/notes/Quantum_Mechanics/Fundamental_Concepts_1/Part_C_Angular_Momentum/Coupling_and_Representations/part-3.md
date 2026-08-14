@@ -5,6 +5,7 @@ weight: 3
 legacySeries: "QM2"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Coupling_and_Representations/part-3/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Coupling_and_Representations/part-3/"
   - "/qm2/QM2-AngularMomentum3/"
 ---
 现在我们来聊聊我们上一个内容里发现的神秘的数学结构.

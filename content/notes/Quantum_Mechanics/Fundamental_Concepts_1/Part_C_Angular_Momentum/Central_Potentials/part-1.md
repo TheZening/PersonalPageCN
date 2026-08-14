@@ -5,6 +5,7 @@ weight: 1
 legacySeries: "QM1"
 aliases:
   - "/notes/Quantum_Mechanics/Angular_Momentum/Central_Potentials/part-1/"
+  - "/notes/Quantum_Mechanics/Fundamental_Concepts_1/Angular_Momentum/Central_Potentials/part-1/"
   - "/qm1/QM1-AngularMomentum1/"
 ---
 量子力学自然是应该有经典力学推广来的角动量的.
