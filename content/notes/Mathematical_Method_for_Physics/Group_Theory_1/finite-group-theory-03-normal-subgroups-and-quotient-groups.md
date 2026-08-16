@@ -4,6 +4,7 @@ date: 2026-08-14
 weight: 3
 ---
 
+
 一个子群若由完整的共轭类组成, 它就在共轭作用下保持不变.
 这种不变性就是正规性.
 正规子群的重要性不仅在于它与共轭类有关, 更在于只有正规子群才能被完整地压缩成单位元, 从而产生一个新的群.
@@ -13,7 +14,6 @@ weight: 3
 商群把原群中只相差一个正规子群元素的对象视为同一个对象.
 这篇文章先从共轭不变性定义正规子群, 再说明正规性为什么恰好保证陪集乘法良定义.
 然后构造商群, 研究自然投影的核, 最后回到第一同构定理.
-
 ---
 ## 为什么普通子群还不够
 
@@ -32,7 +32,6 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 若 $gH=g'H$ 与 $kH=k'H$, 必须保证 $gkH=g'k'H$, 否则陪集乘法依赖代表元的选择, 不是一个良定义的运算.
 普通子群不能保证这一点.
 恰好需要的额外条件就是正规性.
-
 ---
 ## 正规子群来自共轭不变性
 
@@ -51,7 +50,6 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 它说明正规子群的左陪集与右陪集一致.
 最后一个条件说明, 验证正规性时只需检查 $N$ 中每个元素经过任意共轭后仍在 $N$ 中.
 不必逐个证明两个集合完全相等.
-
 ---
 ## 常见的正规子群
 
@@ -74,7 +72,6 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 唯一性迫使 $gHg^{-1}=H$.
 这些判据从不同方向识别正规性.
 交换性让所有共轭都变得平凡, 核由同态产生, 指数 $2$ 来自陪集计数, 唯一性则排除了共轭后得到其他子群的可能.
-
 ---
 ## 正规性为什么保证陪集乘法良定义
 
@@ -95,7 +92,6 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 利用 $Nh=hN$, 有 $(gN)(hN)=g(Nh)N=g(hN)N=ghN$.
 如果 $N$ 不正规, 中间的 $Nh=hN$ 不成立.
 这正是普通子群的陪集通常不能形成群的原因.
-
 ---
 ## 商群的构造
 
@@ -116,13 +112,12 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 商群的一个元素是一个完整陪集.
 在加法群中, 商群元素通常写成 $g+N$.
 商群运算写成 $(g+N)+(h+N)=(g+h)+N$.
-
 ---
 ## 商群是在压缩什么
 
 
-在 $G$ 上定义关系 $g\sim h\Longleftrightarrow g^{-1}h\in N$.
-等价地, $g\sim h\Longleftrightarrow gN=hN$.
+在 $G$ 上定义关系 $g\sim h\Leftrightarrow g^{-1}h\in N$.
+等价地, $g\sim h\Leftrightarrow gN=hN$.
 所以一个陪集正是一个等价类.
 商群把同一个陪集中的元素视为同一个新元素.
 特别地, $N$ 中的所有元素都被压缩成商群的单位元 $N$.
@@ -130,7 +125,6 @@ Lagrange 定理只需要陪集将 $G$ 划分成等大的块.
 它是把 $N$ 方向上的差异全部忽略, 只保留陪集之间的结构.
 正规性保证这种压缩与群乘法相容.
 若不正规, 同一个等价类选择不同代表元可能得到不同乘积, 压缩后的运算就无法定义.
-
 ---
 ## 自然投影把正规子群变成核
 
@@ -146,20 +140,19 @@ $\pi$ 还是满射, 因为 $G/N$ 中的每个陪集都可以写成 $\pi(g)$.
 因此得到一个重要刻画: $N\trianglelefteq G$ 当且仅当 $\exists$ 群同态 $\varphi: G\to H$ 使 $N=\ker\varphi$.
 这说明正规子群不是人为添加的特殊子群.
 它们恰好记录群同态可能丢失的信息.
-
 ---
 ## 第一同构定理
 
 
 设 $\varphi: G\to H$ 是群同态.
 核 $K=\ker\varphi$ 是正规子群, 因而可以构造商群 $G/K$.
-定义映射 $\overline{\varphi}: G/K\to\operatorname{im}\varphi$, $\overline{\varphi}(gK)=\varphi(g)$.
+定义映射 $\bar{\varphi}: G/K\to\operatorname{im}\varphi$, $\bar{\varphi}(gK)=\varphi(g)$.
 这个定义是良定义的.
 若 $gK=hK$, 则 $g^{-1}h\in K$, 所以 $\varphi(g)^{-1}\varphi(h)=e_H$, 从而 $\varphi(g)=\varphi(h)$.
-$\overline{\varphi}$ 是同态, 因为 $\overline{\varphi}((gK)(hK))=\varphi(gh)=\varphi(g)\varphi(h)$.
-$\overline{\varphi}$ 是满射, 因为陪域就是 $\operatorname{im}\varphi$.
-$\overline{\varphi}$ 也是单射, 因为 $\overline{\varphi}(gK)=e_H$ 当且仅当 $g\in K$, 也就是 $gK=K$.
-因此 $\overline{\varphi}$ 是同构, 得到**第一同构定理** $G/\ker\varphi\cong\operatorname{im}\varphi$.
+$\bar{\varphi}$ 是同态, 因为 $\bar{\varphi}((gK)(hK))=\varphi(gh)=\varphi(g)\varphi(h)$.
+$\bar{\varphi}$ 是满射, 因为陪域就是 $\operatorname{im}\varphi$.
+$\bar{\varphi}$ 也是单射, 因为 $\bar{\varphi}(gK)=e_H$ 当且仅当 $g\in K$, 也就是 $gK=K$.
+因此 $\bar{\varphi}$ 是同构, 得到**第一同构定理** $G/\ker\varphi\cong\operatorname{im}\varphi$.
 这个定理的含义是: 同态把核中的差异全部压缩掉以后, 原群剩下的结构与同态的像完全相同.
 
 
