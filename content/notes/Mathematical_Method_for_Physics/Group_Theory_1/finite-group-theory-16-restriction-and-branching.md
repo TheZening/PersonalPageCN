@@ -16,7 +16,7 @@ weight: 16
 
 
 本文先定义表示限制及其特征标, 再利用特征标内积计算限制后的不可约重数.
-随后研究分支系数的维数约束、子群链中的复合规律和不变向量.
+随后研究分支系数的维数约束, 子群链中的复合规律和不变向量.
 
 
 > **阅读提示:** 限制表示不是改变矩阵, 而是少看一部分群元素.
@@ -26,41 +26,22 @@ weight: 16
 ## 表示限制的定义
 
 
-设 $H$ 是有限群 $G$ 的子群, 记为:
-$$
-H\leq G.
-$$
-设:
-$$
-\rho:G\to\mathrm{GL}(V)
-$$
-是 $G$ 的有限维复表示.
-把 $\rho$ 的定义域限制到 $H$, 得到映射:
-$$
-\rho|_H:H\to\mathrm{GL}(V),\quad (\rho|_H)(h)=\rho(h).
-$$
+设 $H$ 是有限群 $G$ 的子群, 记为 $H\leq G$.
+设 $\rho:G\to\mathrm{GL}(V)$ 是 $G$ 的有限维复表示.
+把 $\rho$ 的定义域限制到 $H$, 得到映射 $\rho|_H:H\to\mathrm{GL}(V),\quad (\rho|_H)(h)=\rho(h)$.
 由于 $H$ 直接继承 $G$ 的乘法和单位元, $\rho|_H$ 自动满足表示的乘法与单位元条件.
-它称为 $\rho$ 从 $G$ 到 $H$ 的**限制表示**, 相应表示空间记为:
-$$
-V|_H.
-$$
+它称为 $\rho$ 从 $G$ 到 $H$ 的**限制表示**, 相应表示空间记为 $V|_H$.
 
 ---
 ## 限制不改变向量空间
 
 
 $V|_H$ 与 $V$ 具有完全相同的底层向量空间.
-因此:
-$$
-\dim(V|_H)=\dim V.
-$$
+因此, $\dim(V|_H)=\dim V$.
 改变的只是参与作用的群元素集合.
 
 
-若 $U\subseteq V$ 是 $G$-不变子空间, 那么对每个 $h\in H$ 当然也有:
-$$
-\rho(h)U\subseteq U.
-$$
+若 $U\subseteq V$ 是 $G$-不变子空间, 那么对每个 $h\in H$ 当然也有 $\rho(h)U\subseteq U$.
 所以每个 $G$-不变子空间一定是 $H$-不变子空间.
 反过来一般不成立, 因为 $H$-不变性只要求子空间在较少的群元素下保持不变.
 
@@ -73,18 +54,9 @@ $$
 ## 限制特征标
 
 
-设 $V$ 的 $G$-特征标为:
-$$
-\chi_V(g)=\operatorname{tr}(\rho(g)).
-$$
-限制表示在 $h\in H$ 处的特征标为:
-$$
-\chi_{V|_H}(h)=\operatorname{tr}((\rho|_H)(h))=\operatorname{tr}(\rho(h))=\chi_V(h).
-$$
-所以限制表示的特征标就是把原特征标的定义域限制到 $H$:
-$$
-\boxed{\chi_{V|_H}=\chi_V|_H}.
-$$
+设 $V$ 的 $G$-特征标为 $\chi_V(g)=\operatorname{tr}(\rho(g))$.
+限制表示在 $h\in H$ 处的特征标为 $\chi_{V|_H}(h)=\operatorname{tr}((\rho|_H)(h))=\operatorname{tr}(\rho(h))=\chi_V(h)$.
+所以限制表示的特征标就是把原特征标的定义域限制到 $H$ $\chi_{V|_H}=\chi_V|_H$.
 
 
 这里不需要重新计算任何表示矩阵.
@@ -110,28 +82,17 @@ $$
 ## 限制后的不可约分解
 
 
-设:
-$$
-V_1,\ldots,V_r
-$$
-是 $G$ 的全部不可约复表示的一组代表, 对应特征标记为 $\chi_1,\ldots,\chi_r$.
-设:
-$$
-W_1,\ldots,W_s
-$$
-是 $H$ 的全部不可约复表示的一组代表, 对应特征标记为 $\psi_1,\ldots,\psi_s$.
+设 $V_1,\ldots,V_r$ 是 $G$ 的全部不可约复表示的一组代表, 对应特征标记为 $\chi_1,\ldots,\chi_r$.
+设 $W_1,\ldots,W_s$ 是 $H$ 的全部不可约复表示的一组代表, 对应特征标记为 $\psi_1,\ldots,\psi_s$.
 
 
 固定一个 $G$-不可约表示 $V_i$.
-限制到 $H$ 后, Maschke 定理给出不可约分解:
-$$
-V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a.
-$$
+限制到 $H$ 后, Maschke 定理给出不可约分解 $V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a$.
 其中 $b_{i,a}\in\mathbb{Z}_{\geq0}$ 是 $W_a$ 在 $V_i|_H$ 中出现的重数.
 这些整数称为从 $G$ 到 $H$ 的**分支系数**, 整个分解称为 $V_i$ 的**分支规则**.
 
 
-> **术语提示:** “分支”指一个 $G$-不可约表示在只保留子群 $H$ 的作用以后, 分成若干 $H$-不可约表示.
+> **术语提示:** "分支"指一个 $G$-不可约表示在只保留子群 $H$ 的作用以后, 分成若干 $H$-不可约表示.
 > 分支系数 $b_{i,a}$ 就是第 $a$ 种 $H$-不可约类型出现的次数.
 
 ---
@@ -139,18 +100,12 @@ $$
 
 
 限制表示的特征标为 $\chi_i|_H$.
-对不可约分解取特征标得到:
-$$
-\chi_i|_H=\sum_{a=1}^{s}b_{i,a}\psi_a.
-$$
+对不可约分解取特征标得到 $\chi_i|_H=\sum_{a=1}^{s}b_{i,a}\psi_a$.
 不可约特征标 $\psi_a$ 在 $H$ 的类函数空间中构成标准正交基.
-两侧与 $\psi_a$ 取 $H$ 上的内积, 得到:
-$$
-\boxed{b_{i,a}=\langle\psi_a,\chi_i|_H\rangle_H}.
-$$
+两侧与 $\psi_a$ 取 $H$ 上的内积, 得到 $b_{i,a}=\langle\psi_a,\chi_i|_H\rangle_H$.
 展开内积定义可得显式公式:
 $$
-\boxed{b_{i,a}=\frac{1}{|H|}\sum_{h\in H}\bar{\psi_a(h)}\chi_i(h)}.
+b_{i,a}=\frac{1}{|H|}\sum_{h\in H}\bar{\psi_a(h)}\chi_i(h).
 $$
 
 
@@ -162,10 +117,7 @@ $$
 ## 分支系数也是交织映射空间的维数
 
 
-一般重数公式说明, $W_a$ 在 $V_i|_H$ 中的重数还可以写成:
-$$
-\boxed{b_{i,a}=\dim\operatorname{Hom}_H(W_a,V_i|_H)}.
-$$
+一般重数公式说明, $W_a$ 在 $V_i|_H$ 中的重数还可以写成 $b_{i,a}=\dim\operatorname{Hom}_H(W_a,V_i|_H)$.
 因此分支系数同时具有三种含义:
 $$
 \begin{aligned}
@@ -185,19 +137,9 @@ $$
 ## 维数约束
 
 
-记:
-$$
-d_i=\dim V_i,
-$$
-以及:
-$$
-e_a=\dim W_a.
-$$
+记 $d_i=\dim V_i$, 以及 $e_a=\dim W_a$.
 限制不改变底层向量空间的维数.
-对分支规则两侧取维数得到:
-$$
-\boxed{d_i=\sum_{a=1}^{s}b_{i,a}e_a}.
-$$
+对分支规则两侧取维数得到 $d_i=\sum_{a=1}^{s}b_{i,a}e_a$.
 所以每一行分支系数都必须满足这条正整数线性关系.
 它提供了检验分支规则是否完整的第一条必要条件.
 
@@ -209,111 +151,58 @@ $$
 
 
 设 $U$ 与 $V$ 是 $G$ 的两个表示.
-限制与直和相容:
-$$
-(U\oplus V)|_H\cong(U|_H)\oplus(V|_H).
-$$
+限制与直和相容 $(U\oplus V)|_H\cong(U|_H)\oplus(V|_H)$.
 这是因为两侧具有相同的向量空间, 而 $h\in H$ 在两个直和分量上分别按照原表示作用.
 
 
-限制也与张量积相容:
-$$
-(U\otimes V)|_H\cong(U|_H)\otimes(V|_H).
-$$
-两侧在纯张量上的作用都为:
-$$
-h\cdot(u\otimes v)=\rho_U(h)u\otimes\rho_V(h)v.
-$$
+限制也与张量积相容 $(U\otimes V)|_H\cong(U|_H)\otimes(V|_H)$.
+两侧在纯张量上的作用都为 $h\cdot(u\otimes v)=\rho_U(h)u\otimes\rho_V(h)v$.
 
 
-限制还与对偶相容:
-$$
-(V_{\mathrm{dual}})|_H\cong(V|_H)_{\mathrm{dual}}.
-$$
+限制还与对偶相容 $(V_{\mathrm{dual}})|_H\cong(V|_H)_{\mathrm{dual}}$.
 因为两侧对 $h\in H$ 的作用都由 $\rho(h^{-1})$ 的对偶作用给出.
-所以直和、张量积与对偶都可以先在 $G$ 上构造再限制, 也可以先限制到 $H$ 再构造.
+所以直和, 张量积与对偶都可以先在 $G$ 上构造再限制, 也可以先限制到 $H$ 再构造.
 
 ---
 ## 分支矩阵
 
 
-把全部分支系数排列成矩阵:
-$$
-B_{G\to H}=(b_{i,a}).
-$$
+把全部分支系数排列成矩阵 $B_{G\to H}=(b_{i,a})$.
 它的行由 $G$ 的不可约表示标记, 列由 $H$ 的不可约表示标记.
 第 $i$ 行完整记录 $V_i|_H$ 的不可约分解.
 
 
-若用列向量:
-$$
-\bm{d}_G=(d_1,\ldots,d_r)^{\mathsf{T}},
-$$
-以及:
-$$
-\bm{d}_H=(e_1,\ldots,e_s)^{\mathsf{T}}
-$$
-记录不可约表示维数, 则全部维数约束可以统一写成:
-$$
-\boxed{\bm{d}_G=B_{G\to H}\bm{d}_H}.
-$$
+若用列向量 $\bm{d}_G=(d_1,\ldots,d_r)^{\mathsf{T}}$, 以及 $\bm{d}_H=(e_1,\ldots,e_s)^{\mathsf{T}}$.
+记录不可约表示维数, 则全部维数约束可以统一写成 $\bm{d}_G=B_{G\to H}\bm{d}_H$.
 
 ---
 ## 子群链中的限制
 
 
-进一步设:
-$$
-K\leq H\leq G.
-$$
-把 $G$-表示先限制到 $H$, 再限制到 $K$, 与直接限制到 $K$ 完全相同:
-$$
-(V|_H)|_K=V|_K.
-$$
+进一步设 $K\leq H\leq G$.
+把 $G$-表示先限制到 $H$, 再限制到 $K$, 与直接限制到 $K$ 完全相同 $(V|_H)|_K=V|_K$.
 
 
 设 $U_1,\ldots,U_t$ 是 $K$ 的全部不可约复表示的一组代表.
-写出两层分支规则:
-$$
-V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a,
-$$
-以及:
-$$
-W_a|_K\cong\bigoplus_{p=1}^{t}c_{a,p}U_p.
-$$
-把第二层分解代入第一层以后, $U_p$ 在 $V_i|_K$ 中的重数为:
-$$
-\sum_{a=1}^{s}b_{i,a}c_{a,p}.
-$$
-在分支矩阵语言中:
-$$
-\boxed{B_{G\to K}=B_{G\to H}B_{H\to K}}.
-$$
+写出两层分支规则 $V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a$, 以及 $W_a|_K\cong\bigoplus_{p=1}^{t}c_{a,p}U_p$.
+把第二层分解代入第一层以后, $U_p$ 在 $V_i|_K$ 中的重数为 $\sum_{a=1}^{s}b_{i,a}c_{a,p}$.
+在分支矩阵语言中 $B_{G\to K}=B_{G\to H}B_{H\to K}$.
 因此沿子群链逐层分支时, 分支矩阵按照普通矩阵乘法复合.
 
 ---
 ## 平凡分量与子群不变向量
 
 
-设 $W_1$ 是 $H$ 的平凡表示, 因而:
-$$
-\psi_1(h)=1,\quad \forall h\in H.
-$$
+设 $W_1$ 是 $H$ 的平凡表示, 因而 $\psi_1(h)=1,\quad \forall h\in H$.
 $W_1$ 在 $V_i|_H$ 中的重数为:
 $$
 b_{i,1}=\frac{1}{|H|}\sum_{h\in H}\chi_i(h).
 $$
 
 
-定义 $H$-不变向量空间:
-$$
-(V_i)_{\mathrm{inv},H}=\{v\in V_i\mid \rho(h)v=v,\quad \forall h\in H\}.
-$$
+定义 $H$-不变向量空间 $(V_i)_{\mathrm{inv},H}=\{v\in V_i\mid \rho(h)v=v,\quad \forall h\in H\}$.
 每个平凡不可约分量恰好贡献一个不变向量维数, 非平凡不可约分量没有非零不变向量.
-因此:
-$$
-\boxed{b_{i,1}=\dim(V_i)_{\mathrm{inv},H}}.
-$$
+因此, $b_{i,1}=\dim(V_i)_{\mathrm{inv},H}$.
 
 
 相应的投影算符为:
@@ -321,49 +210,21 @@ $$
 P_H=\frac{1}{|H|}\sum_{h\in H}\rho(h).
 $$
 这是特征标投影公式应用于 $H$ 的平凡特征标所得的特殊情形.
-它满足:
-$$
-P_H^2=P_H,
-$$
-并且:
-$$
-\operatorname{im}P_H=(V_i)_{\mathrm{inv},H}.
-$$
-所以:
-$$
-\operatorname{tr}(P_H)=b_{i,1}.
-$$
+它满足 $P_H^2=P_H$, 并且 $\operatorname{im}P_H=(V_i)_{\mathrm{inv},H}$.
+所以, $\operatorname{tr}(P_H)=b_{i,1}$.
 
 ---
 ## 逻辑总结
 
 
-把 $G$-表示的作用限制到子群 $H$ 得到限制表示:
-$$
-(\rho|_H)(h)=\rho(h).
-$$
-限制不改变底层向量空间, 限制特征标就是原特征标在 $H$ 上的限制:
-$$
-\chi_{V|_H}=\chi_V|_H.
-$$
-$G$ 的不可约表示限制到 $H$ 后具有分支规则:
-$$
-V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a.
-$$
+把 $G$-表示的作用限制到子群 $H$ 得到限制表示 $(\rho|_H)(h)=\rho(h)$.
+限制不改变底层向量空间, 限制特征标就是原特征标在 $H$ 上的限制 $\chi_{V|_H}=\chi_V|_H$.
+$G$ 的不可约表示限制到 $H$ 后具有分支规则 $V_i|_H\cong\bigoplus_{a=1}^{s}b_{i,a}W_a$.
 分支系数由 $H$ 上的特征标内积确定:
 $$
-\boxed{b_{i,a}=\langle\psi_a,\chi_i|_H\rangle_H=\frac{1}{|H|}\sum_{h\in H}\bar{\psi_a(h)}\chi_i(h)}.
+b_{i,a}=\langle\psi_a,\chi_i|_H\rangle_H=\frac{1}{|H|}\sum_{h\in H}\bar{\psi_a(h)}\chi_i(h).
 $$
-它们满足维数约束:
-$$
-d_i=\sum_{a=1}^{s}b_{i,a}e_a.
-$$
-沿子群链限制时, 分支矩阵满足:
-$$
-B_{G\to K}=B_{G\to H}B_{H\to K}.
-$$
-平凡表示的分支重数等于子群不变向量空间的维数:
-$$
-b_{i,1}=\dim(V_i)_{\mathrm{inv},H}.
-$$
+它们满足维数约束 $d_i=\sum_{a=1}^{s}b_{i,a}e_a$.
+沿子群链限制时, 分支矩阵满足 $B_{G\to K}=B_{G\to H}B_{H\to K}$.
+平凡表示的分支重数等于子群不变向量空间的维数 $b_{i,1}=\dim(V_i)_{\mathrm{inv},H}$.
 因此分支规则把母群的不可约表示与子群的不可约表示系统地联系起来.

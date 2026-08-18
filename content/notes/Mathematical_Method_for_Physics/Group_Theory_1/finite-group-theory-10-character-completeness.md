@@ -21,39 +21,21 @@ weight: 10
 
 
 设有限群 $G$ 有 $k$ 个共轭类.
-类函数在每个共轭类上只取一个值, 因而:
-$$
-\dim\operatorname{Cl}(G)=k.
-$$
+类函数在每个共轭类上只取一个值, 因而 $\dim\operatorname{Cl}(G)=k$.
 
 
-再设 $G$ 有 $r$ 个两两不等价的不可约复表示, 相应特征标为:
-$$
-\chi_1,\ldots,\chi_r.
-$$
-正交关系为:
-$$
-\langle\chi_i,\chi_j\rangle_G=\delta_{ij}.
-$$
-所以这些特征标线性无关, 从而只能先得到:
-$$
-r\leq k.
-$$
+再设 $G$ 有 $r$ 个两两不等价的不可约复表示, 相应特征标为 $\chi_1,\ldots,\chi_r$.
+正交关系为 $\langle\chi_i,\chi_j\rangle_G=\delta_{ij}$.
+所以这些特征标线性无关, 从而只能先得到 $r\leq k$.
 要证明 $r=k$, 还差一步: 证明不可约特征标已经张成整个 $\operatorname{Cl}(G)$.
 
 ---
 ## 完备性要排除什么
 
 
-令 $X$ 是全部不可约特征标张成的子空间:
-$$
-X=\operatorname{span}\{\chi_1,\ldots,\chi_r\}.
-$$
+令 $X$ 是全部不可约特征标张成的子空间 $X=\operatorname{span}\{\chi_1,\ldots,\chi_r\}$.
 如果 $X$ 不是整个类函数空间, 就会存在一个非零类函数 $f$, 它与 $X$ 中每个函数都正交.
-特别地:
-$$
-\langle\chi_i,f\rangle_G=0,\quad i=1,\ldots,r.
-$$
+特别地 $\langle\chi_i,f\rangle_G=0,\quad i=1,\ldots,r$.
 
 
 因此证明完备性只需证明一件事: 满足这些正交条件的类函数 $f$ 只能是零函数.
@@ -65,27 +47,14 @@ $$
 ## 把类函数变成线性算符
 
 
-设:
-$$
-\rho:G\to\mathrm{GL}(V)
-$$
-是任意有限维复表示.
-由类函数 $f$ 构造算符:
-$$
-T_{f,\rho}=\sum_{g\in G}f(g^{-1})\rho(g).
-$$
+设 $\rho:G\to\mathrm{GL}(V)$ 是任意有限维复表示.
+由类函数 $f$ 构造算符 $T_{f,\rho}=\sum_{g\in G}f(g^{-1})\rho(g)$.
 这个算符是所有群作用 $\rho(g)$ 的加权和.
 
 
 因为 $f$ 在共轭类上保持常数, 把求和指标由 $g$ 换成 $xgx^{-1}$ 不会改变这个和.
-因此对任意 $x\in G$ 都有:
-$$
-\rho(x)T_{f,\rho}\rho(x)^{-1}=T_{f,\rho}.
-$$
-也就是说:
-$$
-T_{f,\rho}\in\operatorname{End}_G(V).
-$$
+因此对任意 $x\in G$ 都有 $\rho(x)T_{f,\rho}\rho(x)^{-1}=T_{f,\rho}$.
+也就是说 $T_{f,\rho}\in\operatorname{End}_G(V)$.
 
 
 > **理解提示:** 类函数在共轭下不变, 所以用它作系数平均出来的算符也不偏向任何一个共轭方向; 这就是它与全部群作用对易的原因.
@@ -95,10 +64,7 @@ $$
 
 
 现在令 $\rho_i$ 是不可约表示 $V_i$ 上的作用.
-Schur 引理说明存在 $\lambda_i\in\mathbb{C}$, 使得:
-$$
-T_{f,\rho_i}=\lambda_i\mathbb{1}_{V_i}.
-$$
+Schur 引理说明存在 $\lambda_i\in\mathbb{C}$, 使得 $T_{f,\rho_i}=\lambda_i\mathbb{1}_{V_i}$.
 计算迹可以确定这个标量:
 $$
 \begin{aligned}
@@ -108,15 +74,9 @@ $$
 \end{aligned}
 $$
 按照对 $f$ 的假设, 右侧等于零.
-另一方面:
-$$
-\operatorname{tr}(T_{f,\rho_i})=\lambda_i\dim V_i.
-$$
+另一方面 $\operatorname{tr}(T_{f,\rho_i})=\lambda_i\dim V_i$.
 因为 $\dim V_i>0$, 所以 $\lambda_i=0$.
-因此:
-$$
-T_{f,\rho_i}=0,quad i=1,\ldots,r.
-$$
+因此, $T_{f,\rho_i}=0,\quad i=1,\ldots,r$.
 
 
 这一步的含义是: 如果 $f$ 与所有不可约特征标正交, 那么由 $f$ 构造的算符在每一种不可约表示上都没有作用.
@@ -129,26 +89,10 @@ Maschke 定理说明正则表示是不可约表示的直和.
 既然 $T_{f,\rho_i}$ 在每个不可约分量上都为零, 它在正则表示上也为零.
 
 
-正则表示空间 $\mathbb{C}[G]$ 有基:
-$$
-\{e_h\mid h\in G\},
-$$
-并且左正则作用满足:
-$$
-\lambda(g)e_h=e_{gh}.
-$$
-把零算符 $T_{f,\lambda}$ 作用在 $e_e$ 上得到:
-$$
-0=T_{f,\lambda}e_e=\sum_{g\in G}f(g^{-1})e_g.
-$$
-这些 $e_g$ 是线性无关的基向量, 所以每个系数都必须为零:
-$$
-f(g^{-1})=0,quad\forall g\in G.
-$$
-取逆映射会重新排列群元素, 因而:
-$$
-f=0.
-$$
+正则表示空间 $\mathbb{C}[G]$ 有基 $\{e_h\mid h\in G\}$, 并且左正则作用满足 $\lambda(g)e_h=e_{gh}$.
+把零算符 $T_{f,\lambda}$ 作用在 $e_e$ 上得到 $0=T_{f,\lambda}e_e=\sum_{g\in G}f(g^{-1})e_g$.
+这些 $e_g$ 是线性无关的基向量, 所以每个系数都必须为零 $f(g^{-1})=0,\quad\forall g\in G$.
+取逆映射会重新排列群元素, 因而 $f=0$.
 
 
 正则表示在这里像一个检测器.
@@ -160,19 +104,13 @@ $$
 
 我们已经证明, 不存在与全部不可约特征标正交的非零类函数.
 因此不可约特征标张成整个类函数空间.
-结合正交关系得到:
-$$
-\boxed{\{\chi_1,\ldots,\chi_r\}\text{ 是 }\operatorname{Cl}(G)\text{ 的一组标准正交基}}.
-$$
+结合正交关系得到 $\{\chi_1,\ldots,\chi_r\}\text{ 是 }\operatorname{Cl}(G)\text{ 的一组标准正交基}$.
 
 
 这里"标准正交基"同时包含两个条件: 不同基向量彼此正交, 每个基向量长度为 $1$; 并且它们张成整个空间.
 
 
-因此任意类函数 $f\in\operatorname{Cl}(G)$ 都有唯一展开:
-$$
-\boxed{f=\sum_{i=1}^{r}\langle\chi_i,f\rangle_G\chi_i}.
-$$
+因此任意类函数 $f\in\operatorname{Cl}(G)$ 都有唯一展开 $f=\sum_{i=1}^{r}\langle\chi_i,f\rangle_G\chi_i$.
 当 $f$ 是某个表示的特征标时, 展开系数是非负整数, 正是不可约表示的重数.
 当 $f$ 只是一般类函数时, 系数不必是整数.
 
@@ -180,22 +118,10 @@ $$
 ## 共轭类数量定理
 
 
-不可约特征标构成 $\operatorname{Cl}(G)$ 的一组基, 所以:
-$$
-r=\dim\operatorname{Cl}(G).
-$$
-另一方面, 类函数由它在每个共轭类上的取值决定, 所以:
-$$
-k=\dim\operatorname{Cl}(G).
-$$
-比较两个等式得到:
-$$
-\boxed{r=k}.
-$$
-也就是说:
-$$
-\boxed{\text{有限群不可约复表示的等价类数量等于共轭类数量}}.
-$$
+不可约特征标构成 $\operatorname{Cl}(G)$ 的一组基, 所以 $r=\dim\operatorname{Cl}(G)$.
+另一方面, 类函数由它在每个共轭类上的取值决定, 所以 $k=\dim\operatorname{Cl}(G)$.
+比较两个等式得到 $r=k$.
+也就是说, 有限群不可约复表示的等价类数量等于共轭类数量.
 
 
 这不是两个对象偶然具有相同数量.
@@ -205,20 +131,11 @@ $$
 ## 逻辑总结
 
 
-正交性先给出:
-$$
-r\leq k.
-$$
-为了证明完备性, 假设类函数 $f$ 与全部不可约特征标正交, 并构造:
-$$
-T_{f,\rho}=\sum_{g\in G}f(g^{-1})\rho(g).
-$$
+正交性先给出 $r\leq k$.
+为了证明完备性, 假设类函数 $f$ 与全部不可约特征标正交, 并构造 $T_{f,\rho}=\sum_{g\in G}f(g^{-1})\rho(g)$.
 类函数性质使它与群作用对易, Schur 引理和迹计算使它在每个不可约表示上为零.
 正则表示再把这个算符还原成各个 $f(g)$, 从而迫使 $f=0$.
 
 
 所以不可约特征标构成全部类函数的一组标准正交基.
-比较这组基的数量与共轭类坐标的数量, 最终得到:
-$$
-\text{不可约表示类型数}=\text{共轭类数}.
-$$
+比较这组基的数量与共轭类坐标的数量, 最终得到 $\text{不可约表示类型数}=\text{共轭类数}$.

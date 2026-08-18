@@ -27,14 +27,8 @@ weight: 9
 
 设 $G$ 是有限群.
 对每个 $h\in G$, 引入一个形式基向量 $e_h$.
-以这些基向量生成的复向量空间记为:
-$$
-\mathbb{C}[G]=\operatorname{span}_{\mathbb{C}}\{e_h\mid h\in G\}.
-$$
-因为不同群元素对应不同基向量, 所以:
-$$
-\dim\mathbb{C}[G]=|G|.
-$$
+以这些基向量生成的复向量空间记为 $\mathbb{C}[G]=\operatorname{span}_{\mathbb{C}}\{e_h\mid h\in G\}$.
+因为不同群元素对应不同基向量, 所以 $\dim\mathbb{C}[G]=|G|$.
 任意向量 $v\in\mathbb{C}[G]$ 都可以唯一写成:
 $$
 v=\sum_{h\in G}a_he_h,
@@ -47,15 +41,9 @@ $$
 ## 左正则表示的构造
 
 
-对每个 $g\in G$, 定义 $\mathbb{C}[G]$ 上的线性变换 $\lambda(g)$, 使它在基向量上的作用为:
-$$
-\lambda(g)e_h=e_{gh},\quad \forall h\in G.
-$$
+对每个 $g\in G$, 定义 $\mathbb{C}[G]$ 上的线性变换 $\lambda(g)$, 使它在基向量上的作用为 $\lambda(g)e_h=e_{gh},\quad \forall h\in G$.
 因为左乘映射 $h\mapsto gh$ 是 $G$ 上的双射, $\lambda(g)$ 只会重新排列基向量, 因而是可逆线性变换.
-它的逆变换为:
-$$
-\lambda(g)^{-1}=\lambda(g^{-1}).
-$$
+它的逆变换为 $\lambda(g)^{-1}=\lambda(g^{-1})$.
 对任意 $g_1,g_2,h\in G$, 有:
 $$
 \begin{aligned}
@@ -65,65 +53,32 @@ $$
 &=\lambda(g_1g_2)e_h.
 \end{aligned}
 $$
-这个等式对所有基向量成立, 所以:
-$$
-\lambda(g_1)\lambda(g_2)=\lambda(g_1g_2).
-$$
-单位元满足:
-$$
-\lambda(e)e_h=e_h,
-$$
-从而:
-$$
-\lambda(e)=\mathbb{1}_{\mathbb{C}[G]}.
-$$
-因此:
-$$
-\lambda:G\to\mathrm{GL}(\mathbb{C}[G])
-$$
-是 $G$ 的一个表示, 称为 $G$ 的**左正则表示**.
+这个等式对所有基向量成立, 所以 $\lambda(g_1)\lambda(g_2)=\lambda(g_1g_2)$.
+单位元满足 $\lambda(e)e_h=e_h$, 从而, $\lambda(e)=\mathbb{1}_{\mathbb{C}[G]}$.
+因此, $\lambda:G\to\mathrm{GL}(\mathbb{C}[G])$ 是 $G$ 的一个表示, 称为 $G$ 的**左正则表示**.
 
 ---
 ## 正则特征标的计算
 
 
-记左正则表示的特征标为:
-$$
-\chi_{\mathrm{reg}}(g)=\operatorname{tr}(\lambda(g)).
-$$
+记左正则表示的特征标为 $\chi_{\mathrm{reg}}(g)=\operatorname{tr}(\lambda(g))$.
 在基 $\{e_h\mid h\in G\}$ 下, $\lambda(g)$ 是置换矩阵.
 置换矩阵的迹等于它所固定的基向量数量.
-因此 $\chi_{\mathrm{reg}}(g)$ 等于满足下式的 $h\in G$ 的数量:
-$$
-\lambda(g)e_h=e_h.
-$$
-根据定义, 这个条件等价于:
-$$
-e_{gh}=e_h,
-$$
-进而等价于:
-$$
-gh=h.
-$$
+因此 $\chi_{\mathrm{reg}}(g)$ 等于满足下式的 $h\in G$ 的数量 $\lambda(g)e_h=e_h$.
+根据定义, 这个条件等价于 $e_{gh}=e_h$, 进而等价于 $gh=h$.
 若 $g=e$, 每个 $h\in G$ 都满足 $eh=h$.
-因此 $\lambda(e)$ 固定全部 $|G|$ 个基向量, 从而:
-$$
-\chi_{\mathrm{reg}}(e)=|G|.
-$$
+因此 $\lambda(e)$ 固定全部 $|G|$ 个基向量, 从而 $\chi_{\mathrm{reg}}(e)=|G|$.
 若 $g\neq e$, 等式 $gh=h$ 右乘 $h^{-1}$ 会推出 $g=e$, 产生矛盾.
-所以此时没有基向量被固定, 因而:
-$$
-\chi_{\mathrm{reg}}(g)=0,\quad g\neq e.
-$$
+所以此时没有基向量被固定, 因而 $\chi_{\mathrm{reg}}(g)=0,\quad g\neq e$.
 正则特征标可以统一写成:
 $$
-\boxed{
+
 \chi_{\mathrm{reg}}(g)=
 \begin{cases}
 |G|,&g=e,\\
 0,&g\neq e.
 \end{cases}
-}
+
 $$
 正则特征标只在群单位元处非零.
 
@@ -131,26 +86,13 @@ $$
 ## 正则表示存在不可约分解
 
 
-设 $V_1,V_2,\ldots,V_k$ 是 $G$ 的全部不可约复表示的一组代表, 并记:
-$$
-d_i=\dim V_i,
-$$
-以及:
-$$
-\chi_i=\chi_{V_i}.
-$$
-根据 Maschke 定理, 左正则表示可以分解成不可约表示的直和:
-$$
-\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}m_iV_i.
-$$
+设 $V_1,V_2,\ldots,V_k$ 是 $G$ 的全部不可约复表示的一组代表, 并记 $d_i=\dim V_i$, 以及 $\chi_i=\chi_{V_i}$.
+根据 Maschke 定理, 左正则表示可以分解成不可约表示的直和 $\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}m_iV_i$.
 这里 $m_i$ 是非负整数, 表示不可约表示 $V_i$ 在左正则表示中的重数.
 
 
 分解存在以后, 问题变成确定每个 $m_i$.
-上一篇得到的一般重数公式正好适用于这个问题:
-$$
-m_i=\langle\chi_i,\chi_{\mathrm{reg}}\rangle_G.
-$$
+上一篇得到的一般重数公式正好适用于这个问题 $m_i=\langle\chi_i,\chi_{\mathrm{reg}}\rangle_G$.
 
 ---
 ## 用重数公式计算正则分解
@@ -169,25 +111,16 @@ m_i
 &=\bar{\chi_i(e)}.
 \end{aligned}
 $$
-特征标在单位元处的取值等于表示维数:
-$$
-\chi_i(e)=\dim V_i=d_i.
-$$
+特征标在单位元处的取值等于表示维数 $\chi_i(e)=\dim V_i=d_i$.
 因为 $d_i$ 是正整数, 它的复共轭仍是自身.
-因此:
-$$
-\boxed{m_i=d_i=\dim V_i}.
-$$
+因此, $m_i=d_i=\dim V_i$.
 这就确定了左正则表示中每个不可约成分的重数.
 
 ---
 ## 正则表示的不可约分解定理
 
 
-把 $m_i=d_i$ 代回 Maschke 分解, 得到:
-$$
-\boxed{\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}d_iV_i}.
-$$
+把 $m_i=d_i$ 代回 Maschke 分解, 得到 $\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}d_iV_i$.
 这里 $d_iV_i$ 表示 $d_i$ 个 $V_i$ 的直和, 不是向量空间上的数量乘法.
 由于每个不可约表示的维数都满足 $d_i\geq1$, 每个不可约表示都至少出现一次.
 因此左正则表示同时包含 $G$ 的全部不可约复表示.
@@ -202,23 +135,17 @@ $$
 
 
 特征标对直和具有可加性.
-所以正则表示的分解对应特征标恒等式:
-$$
-\boxed{\chi_{\mathrm{reg}}=\sum_{i=1}^{k}d_i\chi_i}.
-$$
-在任意群元素 $g$ 处求值, 得到:
-$$
-\chi_{\mathrm{reg}}(g)=\sum_{i=1}^{k}d_i\chi_i(g).
-$$
+所以正则表示的分解对应特征标恒等式 $\chi_{\mathrm{reg}}=\sum_{i=1}^{k}d_i\chi_i$.
+在任意群元素 $g$ 处求值, 得到 $\chi_{\mathrm{reg}}(g)=\sum_{i=1}^{k}d_i\chi_i(g)$.
 再代入正则特征标的具体取值:
 $$
-\boxed{
+
 \sum_{i=1}^{k}d_i\chi_i(g)=
 \begin{cases}
 |G|,&g=e,\\
 0,&g\neq e.
 \end{cases}
-}
+
 $$
 这个公式把全部不可约特征标按照各自维数加权.
 在单位元处, 所有项共同给出群阶.
@@ -228,10 +155,7 @@ $$
 ## 不可约表示维数的平方和
 
 
-左正则表示空间的维数为:
-$$
-\dim\mathbb{C}[G]=|G|.
-$$
+左正则表示空间的维数为 $\dim\mathbb{C}[G]=|G|$.
 另一方面, 使用不可约分解计算维数得到:
 $$
 \begin{aligned}
@@ -240,10 +164,7 @@ $$
 &=\sum_{i=1}^{k}d_i^2.
 \end{aligned}
 $$
-比较两个结果可得:
-$$
-\boxed{|G|=\sum_{i=1}^{k}d_i^2=\sum_{i=1}^{k}(\dim V_i)^2}.
-$$
+比较两个结果可得 $|G|=\sum_{i=1}^{k}d_i^2=\sum_{i=1}^{k}(\dim V_i)^2$.
 平方和中的每一项来自 $d_i$ 维不可约表示出现 $d_i$ 次.
 因此这个公式不仅限制不可约表示的可能维数, 也检验一组不可约表示是否已经完整.
 
@@ -254,10 +175,7 @@ $$
 ## 逻辑总结
 
 
-左正则表示定义为:
-$$
-\lambda(g)e_h=e_{gh}.
-$$
+左正则表示定义为 $\lambda(g)e_h=e_{gh}$.
 它通过左乘重新排列由群元素标记的基向量.
 只有单位元能够固定这些基向量, 所以正则特征标为:
 $$
@@ -267,25 +185,9 @@ $$
 0,&g\neq e.
 \end{cases}
 $$
-对不可约特征标 $\chi_i$ 使用重数公式:
-$$
-m_i=\langle\chi_i,\chi_{\mathrm{reg}}\rangle_G,
-$$
-并利用正则特征标只在单位元处非零, 得到:
-$$
-m_i=\chi_i(e)=d_i.
-$$
-因此:
-$$
-\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}d_iV_i.
-$$
+对不可约特征标 $\chi_i$ 使用重数公式 $m_i=\langle\chi_i,\chi_{\mathrm{reg}}\rangle_G$, 并利用正则特征标只在单位元处非零, 得到 $m_i=\chi_i(e)=d_i$.
+因此, $\mathbb{C}[G]\cong\bigoplus_{i=1}^{k}d_iV_i$.
 这个分解说明每个不可约表示都出现在正则表示中, 而且重数等于自身维数.
-对表示取特征标得到:
-$$
-\chi_{\mathrm{reg}}=\sum_{i=1}^{k}d_i\chi_i.
-$$
-对分解两侧取维数则得到:
-$$
-|G|=\sum_{i=1}^{k}d_i^2.
-$$
+对表示取特征标得到 $\chi_{\mathrm{reg}}=\sum_{i=1}^{k}d_i\chi_i$.
+对分解两侧取维数则得到 $|G|=\sum_{i=1}^{k}d_i^2$.
 正则表示因而把有限群的全部不可约表示集中在同一个自然表示中.

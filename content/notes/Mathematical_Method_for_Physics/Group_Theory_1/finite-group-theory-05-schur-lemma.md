@@ -22,11 +22,7 @@ weight: 5
 
 
 设 $\rho:G\to\mathrm{GL}(V)$ 与 $\sigma:G\to\mathrm{GL}(W)$ 是域 $\mathbb{F}$ 上的两个表示.
-线性映射 $T:V\to W$ 若满足:
-$$
-T\rho(g)=\sigma(g)T,\quad \forall g\in G,
-$$
-就称为从 $\rho$ 到 $\sigma$ 的**交织映射**, 或 $G$-同态.
+线性映射 $T:V\to W$ 若满足 $T\rho(g)=\sigma(g)T,\quad \forall g\in G$, 就称为从 $\rho$ 到 $\sigma$ 的**交织映射**, 或 $G$-同态.
 
 
 这个等式表示先让 $g$ 作用在 $V$ 上, 再施加 $T$, 与先施加 $T$, 再让同一个 $g$ 作用在 $W$ 上, 得到的结果完全相同.
@@ -47,16 +43,9 @@ $$
 Schur 引理要说明: 当 $V$ 与 $W$ 都不可约时, 这些中间情形全部消失.
 
 
-从 $\rho$ 到 $\sigma$ 的所有交织映射组成向量空间:
-$$
-\operatorname{Hom}_G(V,W) =\{T\in\operatorname{Hom}_{\mathbb{F}}(V,W)\mid T\rho(g)=\sigma(g)T, \forall g\in G\}.
-$$
+从 $\rho$ 到 $\sigma$ 的所有交织映射组成向量空间 $\operatorname{Hom}_G(V,W) =\{T\in\operatorname{Hom}_{\mathbb{F}}(V,W)\mid T\rho(g)=\sigma(g)T, \forall g\in G\}$.
 这里的下标 $G$ 表示这些线性映射还必须与 $G$ 的作用相容.
-若 $T_1,T_2\in\operatorname{Hom}_G(V,W)$ 且 $a,b\in\mathbb{F}$, 则:
-$$
-(aT_1+bT_2)\rho(g) =a\sigma(g)T_1+b\sigma(g)T_2 =\sigma(g)(aT_1+bT_2),
-$$
-所以 $aT_1+bT_2$ 仍是交织映射.
+若 $T_1,T_2\in\operatorname{Hom}_G(V,W)$ 且 $a,b\in\mathbb{F}$, 则 $(aT_1+bT_2)\rho(g) =a\sigma(g)T_1+b\sigma(g)T_2 =\sigma(g)(aT_1+bT_2)$, 所以 $aT_1+bT_2$ 仍是交织映射.
 
 ---
 ## 交织映射的核是不变子空间
@@ -65,15 +54,9 @@ $$
 取 $T\in\operatorname{Hom}_G(V,W)$.
 首先证明 $\ker T$ 是 $V$ 的 $G$-不变子空间.
 任取 $v\in\ker T$, 则 $Tv=0$.
-对任意 $g\in G$, 交织关系给出:
-$$
-T(\rho(g)v) =\sigma(g)Tv =\sigma(g)0 =0.
-$$
+对任意 $g\in G$, 交织关系给出 $T(\rho(g)v) =\sigma(g)Tv =\sigma(g)0 =0$.
 因此 $\rho(g)v\in\ker T$.
-这对每个 $v\in\ker T$ 和每个 $g\in G$ 都成立, 所以:
-$$
-\rho(g)(\ker T)\subseteq\ker T, \quad \forall g\in G.
-$$
+这对每个 $v\in\ker T$ 和每个 $g\in G$ 都成立, 所以 $\rho(g)(\ker T)\subseteq\ker T, \quad \forall g\in G$.
 也就是说, $\ker T$ 是 $V$ 的不变子空间.
 这个结论的含义很直接.
 若一个向量被 $T$ 送到零, 那么先让群作用在这个向量上, 再施加 $T$, 仍然会得到零.
@@ -85,15 +68,9 @@ $$
 
 接着证明 $\operatorname{im}T$ 是 $W$ 的 $G$-不变子空间.
 任取 $w\in\operatorname{im}T$, 按照像的定义, 存在 $v\in V$ 使 $w=Tv$.
-对任意 $g\in G$, 有:
-$$
-\sigma(g)w =\sigma(g)Tv =T\rho(g)v.
-$$
+对任意 $g\in G$, 有 $\sigma(g)w =\sigma(g)Tv =T\rho(g)v$.
 由于 $\rho(g)v\in V$, 最右边的向量属于 $\operatorname{im}T$.
-所以:
-$$
-\sigma(g)(\operatorname{im}T) \subseteq\operatorname{im}T, \quad \forall g\in G.
-$$
+所以, $\sigma(g)(\operatorname{im}T) \subseteq\operatorname{im}T, \quad \forall g\in G$.
 因此 $\operatorname{im}T$ 是 $W$ 的不变子空间.
 
 
@@ -108,19 +85,13 @@ $$
 
 设 $V$ 与 $W$ 分别承载不可约表示 $\rho$ 与 $\sigma$, 并且 $T\in\operatorname{Hom}_G(V,W)$.
 由于 $V$ 不可约, 它的不变子空间只有 $\{0\}$ 与 $V$.
-而 $\ker T$ 是 $V$ 的不变子空间, 所以只有两种可能:
-$$
-\ker T=\{0\} \quad\text{或}\quad \ker T=V.
-$$
+而 $\ker T$ 是 $V$ 的不变子空间, 所以只有两种可能 $\ker T=\{0\} \quad\text{或}\quad \ker T=V$.
 若 $T\neq0$, 就不可能有 $\ker T=V$, 因为这将意味着 $T$ 是零映射.
 因此非零交织映射必满足 $\ker T=\{0\}$, 从而 $T$ 是单射.
 
 
 另一方面, $\operatorname{im}T$ 是 $W$ 的不变子空间.
-由于 $W$ 不可约:
-$$
-\operatorname{im}T=\{0\} \quad\text{或}\quad \operatorname{im}T=W.
-$$
+由于 $W$ 不可约 $\operatorname{im}T=\{0\} \quad\text{或}\quad \operatorname{im}T=W$.
 当 $T\neq0$ 时, $\operatorname{im}T\neq\{0\}$, 所以只能有 $\operatorname{im}T=W$.
 因此 $T$ 是满射.
 
@@ -130,15 +101,9 @@ $$
 **任意交织映射 $T:V\to W$ 或者是零映射, 或者是表示同构.**
 这里的逻辑不是先假设 $V$ 与 $W$ 等价, 再寻找可逆映射.
 不可约性本身迫使任意非零交织映射自动成为可逆映射.
-因此, 若 $V$ 与 $W$ 是两个不等价的不可约表示, 就不可能存在非零交织映射:
-$$
-V\not\cong W \quad\Rightarrow\quad \operatorname{Hom}_G(V,W)=\{0\}.
-$$
+因此, 若 $V$ 与 $W$ 是两个不等价的不可约表示, 就不可能存在非零交织映射 $V\not\cong W \quad\Rightarrow\quad \operatorname{Hom}_G(V,W)=\{0\}$.
 还可以立刻得到一个维数限制.
-若两个有限维不可约表示之间存在非零交织映射, 这个映射是向量空间同构, 因而:
-$$
-\dim V=\dim W.
-$$
+若两个有限维不可约表示之间存在非零交织映射, 这个映射是向量空间同构, 因而 $\dim V=\dim W$.
 所以维数不同的不可约表示一定不等价, 它们之间也一定没有非零交织映射.
 
 ---
@@ -146,15 +111,9 @@ $$
 
 
 令 $W=V$ 且 $\sigma=\rho$.
-此时交织条件变为:
-$$
-T\rho(g)=\rho(g)T, \quad \forall g\in G.
-$$
+此时交织条件变为 $T\rho(g)=\rho(g)T, \quad \forall g\in G$.
 这样的 $T$ 称为表示 $V$ 的**自交织映射**.
-所有自交织映射组成:
-$$
-\operatorname{End}_G(V) =\{T\in\operatorname{End}_{\mathbb{F}}(V)\mid T\rho(g)=\rho(g)T, \forall g\in G\}.
-$$
+所有自交织映射组成 $\operatorname{End}_G(V) =\{T\in\operatorname{End}_{\mathbb{F}}(V)\mid T\rho(g)=\rho(g)T, \forall g\in G\}$.
 这个集合不仅可以相加和作数乘, 还可以复合, 因而是一个代数.
 它也称为表示 $\rho(G)$ 的**对易代数**.
 若 $V$ 不可约, Schur 引理第一部分说明 $\operatorname{End}_G(V)$ 中每个非零元素都可逆.
@@ -167,10 +126,7 @@ $$
 
 现在设 $V$ 是有限维复向量空间, $\rho:G\to\mathrm{GL}(V)$ 是不可约表示, 并取 $T\in\operatorname{End}_G(V)$.
 因为 $V$ 是非零有限维复向量空间, $T$ 的特征多项式在 $\mathbb{C}$ 中至少有一个根.
-因此 $T$ 至少有一个特征值 $\lambda\in\mathbb{C}$, 并存在非零向量 $v\in V$ 使:
-$$
-Tv=\lambda v.
-$$
+因此 $T$ 至少有一个特征值 $\lambda\in\mathbb{C}$, 并存在非零向量 $v\in V$ 使 $Tv=\lambda v$.
 于是 $(T-\lambda \mathbb{1}_V)v=0$, 所以 $T-\lambda \mathbb{1}_V$ 不是单射, 从而不可能是可逆映射.
 
 
@@ -185,20 +141,11 @@ $$
 \end{aligned}
 $$
 Schur 引理第一部分说明, 不可约表示的自交织映射若非零就一定可逆.
-但 $T-\lambda \mathbb{1}_V$ 已经被证明不可逆, 所以它只能是零映射:
-$$
-T-\lambda \mathbb{1}_V=0.
-$$
-因此:
-$$
-T=\lambda \mathbb{1}_V.
-$$
+但 $T-\lambda \mathbb{1}_V$ 已经被证明不可逆, 所以它只能是零映射 $T-\lambda \mathbb{1}_V=0$.
+因此, $T=\lambda \mathbb{1}_V$.
 这就是复数域上 Schur 引理的第二部分:
 **有限维不可约复表示的每个自交织映射都是恒等映射的数量倍数.**
-等价地:
-$$
-\operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V.
-$$
+等价地, $\operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V$.
 
 
 > **理解提示:** "数量倍数"指的是 $T=\lambda\mathbb{1}_V$; 同一个复数 $\lambda$ 乘在整个不可约空间上, 不能在不同方向上选择不同系数.
@@ -248,21 +195,12 @@ Schur 引理只在单个不可约分量内部迫使这些常数相同.
 ## 用对易代数判断不可约性
 
 
-Schur 引理给出:
-$$
-V\text{ 不可约} \quad\Rightarrow\quad \operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V.
-$$
+Schur 引理给出 $V\text{ 不可约} \quad\Rightarrow\quad \operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V$.
 对于有限群的有限维复表示, 反方向也成立.
 原因是 Maschke 定理保证每个可约表示都有不变补空间.
 具体地说, 若 $V$ 可约, 就存在非零真不变子空间 $W\subsetneq V$.
-Maschke 定理给出另一个不变子空间 $U$, 使:
-$$
-V=W\oplus U.
-$$
-定义沿 $U$ 投影到 $W$ 的线性映射:
-$$
-P(w+u)=w, \quad w\in W,\quad u\in U.
-$$
+Maschke 定理给出另一个不变子空间 $U$, 使 $V=W\oplus U$.
+定义沿 $U$ 投影到 $W$ 的线性映射 $P(w+u)=w, \quad w\in W,\quad u\in U$.
 由于 $W$ 与 $U$ 都在群作用下保持不变, 对任意 $g\in G$ 有:
 $$
 \begin{aligned}
@@ -274,14 +212,8 @@ P\rho(g)(w+u)
 $$
 所以 $P\in\operatorname{End}_G(V)$.
 但 $P$ 在 $W$ 上等于 $\mathbb{1}_W$, 在 $U$ 上等于零, 因而不可能是 $\mathbb{1}_V$ 的数量倍数.
-因此:
-$$
-\operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V \quad\Rightarrow\quad V\text{ 不可约}.
-$$
-最终得到有限群复表示的判据:
-$$
-V\text{ 不可约} \quad\Leftrightarrow\quad \operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V.
-$$
+因此, $\operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V \quad\Rightarrow\quad V\text{ 不可约}$.
+最终得到有限群复表示的判据 $V\text{ 不可约} \quad\Leftrightarrow\quad \operatorname{End}_G(V)=\mathbb{C}\mathbb{1}_V$.
 反方向使用了 Maschke 定理, 所以不能脱离完全可约的条件随意推广.
 
 
