@@ -37,26 +37,16 @@ $$
 如果群已经明确, 也可以把它简写为 $\langle f,h\rangle$.
 
 
-这个定义满足复内积的三个基本条件.
-首先, 它对第二个变量线性.
-若 $a,b\in\mathbb{C}$, 则:
+这个公式可以理解为把函数值逐项相乘以后, 再对整个群取平均.
+第一个函数带复共轭, 与复向量空间中通常的内积约定一致.
+它对第二个变量线性、对第一个变量共轭线性, 并满足:
 $$
-\langle f,ah_1+bh_2\rangle_G=a\langle f,h_1\rangle_G+b\langle f,h_2\rangle_G.
+\langle f,h\rangle_G=\bar{\langle h,f\rangle_G},\quad \langle f,f\rangle_G\geq0.
 $$
-由于第一个变量中的函数值带有复共轭, 它对第一个变量共轭线性:
-$$
-\langle af_1+bf_2,h\rangle_G=\bar{a}\langle f_1,h\rangle_G+\bar{b}\langle f_2,h\rangle_G.
-$$
-其次, 交换两个变量得到共轭对称性:
-$$
-\langle f,h\rangle_G=\bar{\langle h,f\rangle_G}.
-$$
-最后:
-$$
-\langle f,f\rangle_G=\frac{1}{|G|}\sum_{g\in G}|f(g)|^2\geq0.
-$$
-等号成立当且仅当每个 $f(g)$ 都等于零, 也就是当且仅当 $f=0$.
-因此 $\langle\cdot,\cdot\rangle_G$ 确实是 $\operatorname{Cl}(G)$ 上的内积.
+因此它确实是 $\operatorname{Cl}(G)$ 上的内积.
+
+
+> **理解提示:** 这里的内积不是表示空间中两个向量的内积; 它比较的是两个定义在群上的函数.
 
 ---
 ## 按共轭类改写内积
@@ -103,24 +93,13 @@ $$
 这里 $A:V\to W$, 所以复合映射的次序确实是先作用 $\rho(g)^{-1}$, 再作用 $A$, 最后作用 $\sigma(g)$.
 
 
-需要先验证 $\Pi$ 是 $G$ 的一个表示.
-对任意 $g,h\in G$ 与 $A\in\operatorname{Hom}_{\mathbb{C}}(V,W)$, 有:
+群乘法得到保持, 因为:
 $$
 \begin{aligned}
 \Pi(g)\Pi(h)(A)
 &=\sigma(g)\left(\sigma(h)A\rho(h)^{-1}\right)\rho(g)^{-1}\\
-&=\sigma(gh)A\rho(h)^{-1}\rho(g)^{-1}\\
-&=\sigma(gh)A\rho(gh)^{-1}\\
-&=\Pi(gh)(A).
+&=\sigma(gh)A\rho(gh)^{-1}=\Pi(gh)(A).
 \end{aligned}
-$$
-同时:
-$$
-\Pi(e)(A)=\sigma(e)A\rho(e)^{-1}=A.
-$$
-因此:
-$$
-\Pi(g)\Pi(h)=\Pi(gh),\quad \Pi(e)=\mathbb{1}_{\operatorname{Hom}_{\mathbb{C}}(V,W)}.
 $$
 所以 $\Pi$ 是 $G$ 在 $\operatorname{Hom}_{\mathbb{C}}(V,W)$ 上的表示.
 
@@ -132,28 +111,11 @@ $$
 $$
 \operatorname{Fix}_G(\operatorname{Hom}_{\mathbb{C}}(V,W))=\{A\in\operatorname{Hom}_{\mathbb{C}}(V,W)\mid\Pi(g)(A)=A,\quad \forall g\in G\}.
 $$
-若 $A$ 属于这个不变子空间, 则对每个 $g\in G$ 都有:
+不变条件可以直接改写为:
 $$
-\sigma(g)A\rho(g)^{-1}=A.
+\Pi(g)(A)=A\quad\leftrightarrow\quad\sigma(g)A\rho(g)^{-1}=A\quad\leftrightarrow\quad\sigma(g)A=A\rho(g).
 $$
-在等式右侧复合 $\rho(g)$, 得到:
-$$
-\sigma(g)A=A\rho(g).
-$$
-这正是交织关系.
-因此 $A$ 是从 $\rho$ 到 $\sigma$ 的交织映射.
-
-
-反过来, 若 $A\in\operatorname{Hom}_G(V,W)$, 则:
-$$
-A\rho(g)=\sigma(g)A,\quad \forall g\in G.
-$$
-在等式右侧复合 $\rho(g)^{-1}$, 可得:
-$$
-\sigma(g)A\rho(g)^{-1}=A.
-$$
-所以 $A$ 在 $\Pi$ 的作用下不变.
-于是:
+最右边正是交织关系, 所以:
 $$
 \operatorname{Fix}_G(\operatorname{Hom}_{\mathbb{C}}(V,W))=\operatorname{Hom}_G(V,W).
 $$
@@ -209,45 +171,16 @@ P^2=P.
 $$
 这表明 $P$ 是从 $\operatorname{Hom}_{\mathbb{C}}(V,W)$ 到 $\operatorname{Hom}_G(V,W)$ 的投影算子.
 
+
+> **理解提示:** 平均化不是为了求一个普通平均数; 它把不符合群对称性的部分相互抵消, 只留下与全部群作用相容的部分.
+
 ---
 ## 投影的迹等于像空间的维数
 
 
 设 $P$ 是有限维复向量空间上的线性算子, 并满足 $P^2=P$.
-若 $v$ 是 $P$ 的特征值为 $\lambda$ 的特征向量, 则:
-$$
-P^2v=\lambda^2v.
-$$
-另一方面, $P^2=P$ 给出:
-$$
-P^2v=Pv=\lambda v.
-$$
-因此:
-$$
-\lambda^2=\lambda.
-$$
-所以 $P$ 的特征值只能是 $0$ 或 $1$.
-
-
-还可以直接分解整个空间.
-对任意向量 $v$, 有:
-$$
-v=P(v)+(v-P(v)).
-$$
-其中 $P(v)\in\operatorname{im}P$, 而:
-$$
-P(v-P(v))=P(v)-P^2(v)=0,
-$$
-所以 $v-P(v)\in\ker P$.
-此外, 若 $v\in\operatorname{im}P\cap\ker P$, 则存在 $u$ 使 $v=P(u)$, 并且:
-$$
-v=P(u)=P^2(u)=P(v)=0.
-$$
-因此:
-$$
-\operatorname{Hom}_{\mathbb{C}}(V,W)=\operatorname{im}P\oplus\ker P.
-$$
-在适合这个直和分解的基下, $P$ 在 $\operatorname{im}P$ 上的矩阵是单位矩阵, 在 $\ker P$ 上的矩阵是零矩阵.
+投影在像空间上等于恒等算符, 在核空间上等于零.
+所以它的特征值只可能是 $1$ 或 $0$, 而特征值 $1$ 出现的次数正是像空间维数.
 所以:
 $$
 \operatorname{tr}(P)=\dim(\operatorname{im}P).
@@ -262,52 +195,20 @@ $$
 
 
 现在计算 $\Pi(g)$ 在 $\operatorname{Hom}_{\mathbb{C}}(V,W)$ 上的迹.
-设:
+线性代数中的标准迹公式是:
 $$
-\dim V=m,\quad \dim W=n.
+\operatorname{tr}(A\mapsto BAC)=\operatorname{tr}(B)\operatorname{tr}(C).
 $$
-分别选取 $V$ 的基 $e_1,\ldots,e_m$ 与 $W$ 的基 $f_1,\ldots,f_n$.
-对每一对指标 $(a,i)$, 定义线性映射 $E_{ai}:V\to W$:
-$$
-E_{ai}(e_j)=\delta_{ij}f_a.
-$$
-全部 $E_{ai}$ 构成 $\operatorname{Hom}_{\mathbb{C}}(V,W)$ 的一组基.
-
-
-把 $\sigma(g)$ 与 $\rho(g)^{-1}$ 在所选基下的矩阵元分别记为 $\sigma(g)_{ba}$ 与 $(\rho(g)^{-1})_{ij}$.
-对基映射 $E_{ai}$ 施加 $\Pi(g)$, 可以写成:
-$$
-\Pi(g)(E_{ai})=\sigma(g)E_{ai}\rho(g)^{-1}.
-$$
-展开右侧得到:
-$$
-\Pi(g)(E_{ai})=\sum_{b=1}^{n}\sum_{j=1}^{m}\sigma(g)_{ba}(\rho(g)^{-1})_{ij}E_{bj}.
-$$
-在这项展开中, $E_{ai}$ 自身的系数为:
-$$
-\sigma(g)_{aa}(\rho(g)^{-1})_{ii}.
-$$
-因此 $\Pi(g)$ 的迹为全部这些对角系数之和:
+左边取的是"把矩阵 $A$ 送到 $BAC$"这一线性变换的迹, 不是矩阵 $A$ 自己的迹.
+它可以在矩阵单位基上直接验证, 这里使用其结论即可.
+取 $B=\sigma(g)$ 与 $C=\rho(g)^{-1}$, 得到:
 $$
 \begin{aligned}
 \operatorname{tr}(\Pi(g))
-&=\sum_{a=1}^{n}\sum_{i=1}^{m}\sigma(g)_{aa}(\rho(g)^{-1})_{ii}\\
-&=\left(\sum_{a=1}^{n}\sigma(g)_{aa}\right)\left(\sum_{i=1}^{m}\rho(g)^{-1}_{ii}\right)\\
-&=\operatorname{tr}(\sigma(g))\operatorname{tr}(\rho(g)^{-1}).
+&=\operatorname{tr}(\sigma(g))\operatorname{tr}(\rho(g)^{-1})\\
+&=\chi_W(g)\chi_V(g^{-1})\\
+&=\bar{\chi_V(g)}\chi_W(g).
 \end{aligned}
-$$
-根据特征标的定义:
-$$
-\operatorname{tr}(\sigma(g))=\chi_W(g).
-$$
-又因为 $\rho(g)^{-1}=\rho(g^{-1})$, 所以:
-$$
-\operatorname{tr}(\rho(g)^{-1})=\chi_V(g^{-1}).
-$$
-有限群的复表示满足 $\chi_V(g^{-1})=\bar{\chi_V(g)}$.
-因此:
-$$
-\operatorname{tr}(\Pi(g))=\bar{\chi_V(g)}\chi_W(g).
 $$
 这个等式解释了类函数内积中复共轭所在的位置.
 它不是人为加入的修饰, 而是来自 $\operatorname{Hom}(V,W)$ 上群作用中的逆矩阵 $\rho(g)^{-1}$.
