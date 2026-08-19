@@ -1,12 +1,13 @@
-{{/* MathJax 3 with the physics extension used throughout the migrated notes. */}}
+{{/* MathJax 3 with the physics and mathtools extensions used throughout the notes. */}}
+{{/* Wick contractions: \wick{AB}; nest \wick{A\wick{BC}D} for nested contractions. */}}
 <script>
   window.MathJax = {
     loader: {
-      load: ["ui/safe", "[tex]/physics"]
+      load: ["ui/safe", "[tex]/physics", "[tex]/mathtools"]
     },
     tex: {
       packages: {
-        "[+]": ["physics"]
+        "[+]": ["physics", "mathtools"]
       },
       displayMath: [
         ["\\[", "\\]"],
@@ -18,7 +19,8 @@
       ],
       processEscapes: true,
       macros: {
-        bm: ["\\boldsymbol{#1}", 1]
+        bm: ["\\boldsymbol{#1}", 1],
+        wick: ["\\overbracket{#1}", 1]
       }
     }
   };
