@@ -7,9 +7,9 @@ weight: 21
 前面四篇研究的是 Dirac 方程本身，其中的平面波系数还可以看成普通复数。
 现在要把 $\psi(x)$ 提升为算符值场，使它能够在费米子福克空间中产生和湮灭粒子。
 
+
 标量场使用等时对易关系，Dirac 场则必须使用等时反对易关系。
 这个差别不是把方括号机械地换成花括号，而是与费米场的奇变量性质、正则结构、能谱下界和泡利不相容原理同时相连。
-
 
 ---
 ## 经典旋量场为什么要取格拉斯曼值
@@ -19,83 +19,85 @@ weight: 21
 这个说法把“经典场”与“具有宏观经典期望值的量子态”混在了一起。
 经典场首先是作用量中的数学变量；它是否能够像电磁场那样形成宏观相干态，是另一个物理问题。
 
+
 因此，可以完全一致地定义经典旋量场、Dirac 拉格朗日密度和经典运动方程。
-不过，为了让经典形式在量子化以后自然产生费米统计，通常让旋量分量取值于格拉斯曼代数。
+在只研究线性 Dirac 方程时甚至可以先用复值旋量；为了建立与费米量子理论相容的分级变分、正则结构和路径积分，通常把经典旋量取为格拉斯曼奇变量。
+格拉斯曼取值本身不是自旋统计定理的证明；完整结论还依赖洛伦兹协变性、局域性、正范数和能谱下界。
+
 
 一个格拉斯曼奇变量 $\theta$ 满足：
-
 $$
 \theta_1\theta_2=-\theta_2\theta_1
 $$
-
 令两个变量相同，得到：
-
 $$
 \theta^2=-\theta^2
 $$
-
 在特征不为 $2$ 的数域上，这意味着：
-
 $$
 \theta^2=0
 $$
-
 格拉斯曼变量不是普通实数或复数。
 可以把它们理解成某个反对称代数的生成元：交换两个奇生成元会出现负号，同一个生成元不能重复出现两次。
-两个奇变量的乘积是偶变量，偶变量与普通复系数一样彼此交换。
+两个奇变量的乘积是偶变量；偶变量与其他齐次对象交换时不引入由格拉斯曼奇偶性产生的负号，但它一般仍属于格拉斯曼代数，并可能含有幂零部分。
+
 
 数学上，这个反对称代数是由一个向量空间生成的外代数，并带有偶、奇两类的 $\mathbb{Z}_2$ 分级。
 旋量丛仍决定每个时空点上的洛伦兹旋量类型，格拉斯曼代数则附加在旋量分量的系数上，用来记录交换两个费米变量时的符号。
 因此“旋量”回答场怎样在洛伦兹变换下变化，“格拉斯曼奇”回答场变量彼此交换时怎样变化；它们是两套不同的数学结构。
 
+
 Dirac 场 $\psi_\alpha(x)$ 和 $\psi_\alpha^\dagger(x)$ 被视为格拉斯曼奇变量。
 因此，两个费米场交换位置时要产生负号，而拉格朗日密度、作用量、哈密顿量和守恒流都由偶数个费米场组成，是格拉斯曼偶对象。
-物理作用量仍然是可作为普通数处理的偶量。
+物理作用量是格拉斯曼偶量，因此在奇偶符号规则中可与其他对象交换；不过“偶”并不自动意味着它脱离格拉斯曼代数而成为普通复数。
+
 
 自由 Dirac 拉格朗日密度为：
-
 $$
-\mathcal{L}=\bar\psi(\mathrm{i}\gamma^\mu\partial_\mu-m)\psi
+\mathcal{L}=\bar{\psi}(\mathrm{i}\gamma^\mu\partial_\mu-m)\psi
 $$
-
-使用 $\bar\psi=\psi^\dagger\gamma^0$、$\alpha^i=\gamma^0\gamma^i$ 和 $\beta=\gamma^0$，可以把时间导数单独写出：
-
+使用 $\bar{\psi}=\psi^\dagger\gamma^0$、$\alpha^i=\gamma^0\gamma^i$ 和 $\beta=\gamma^0$，可以把时间导数单独写出：
 $$
 \mathcal{L}=\mathrm{i}\psi^\dagger\partial_t\psi-\psi^\dagger(-\mathrm{i}\bm{\alpha}\cdot\bm{\nabla}+\beta m)\psi
 $$
-
 定义单粒子 Dirac 哈密顿算符：
-
 $$
 h_D=-\mathrm{i}\bm{\alpha}\cdot\bm{\nabla}+\beta m
 $$
-
 于是拉格朗日密度具有很简洁的形式：
-
 $$
-\mathcal{L}=\mathrm{i}\psi^\dagger\dot\psi-\psi^\dagger h_D\psi
+\mathcal{L}=\mathrm{i}\psi^\dagger\dot{\psi}-\psi^\dagger h_D\psi
 $$
-
 这里最重要的结构是：拉格朗日密度只含 $\psi$ 的一阶时间导数，而且不含 $\psi^\dagger$ 的时间导数。
-这与实标量场的 $\frac{1}{2}\dot\phi^2$ 完全不同，也使 Dirac 场的正则量子化成为一个受约束系统。
+这与实标量场的 $[\pdv*{\phi}{t}]^2/2$ 完全不同，也使 Dirac 场的正则量子化成为一个受约束系统。
+
 
 对于格拉斯曼奇变量，微分必须区分从左侧还是从右侧提出变分量。
 例如可以分别定义：
-
 $$
-\delta F=\delta\psi\frac{\partial^L F}{\partial\psi}
+\delta F=\delta\psi\left(\pdv{F}{\psi}\right)_L
 $$
-
 以及：
-
 $$
-\delta F=\frac{\partial^R F}{\partial\psi}\delta\psi
+\delta F=\left(\pdv{F}{\psi}\right)_R\delta\psi
 $$
-
-上标 $L$ 与 $R$ 分别表示左导数和右导数。
+下标 $L$ 与 $R$ 分别表示左导数和右导数。
 因为 $\delta\psi$ 本身也是奇变量，把它从表达式一侧移动到另一侧可能产生负号，所以左右导数不能随意混用。
 本文固定使用与下面正则动量相容的一套左右导数约定；换用另一套一致约定，某些中间符号会改变，但最终的等时反对易关系不变。
 
+
+这套约定可以直接在作用量变分中检验。
+对 $\psi^\dagger$ 变分时，变分量已经在左侧：
+$$
+\delta_{\psi^\dagger}S=\int\delta\psi^\dagger(\mathrm{i}\dot{\psi}-h_D\psi)\dd[4]{x}
+$$
+任意的 $\delta\psi^\dagger$ 给出 $\mathrm{i}\pdv*{\psi}{t}=h_D\psi$。
+对 $\psi$ 变分并把 $\delta\psi$ 保持在右侧，分部积分后得到：
+$$
+\delta_\psi S=-\int[\mathrm{i}\dot{\psi}^\dagger+\mathrm{i}(\partial_i\psi^\dagger)\alpha^i+m\psi^\dagger\beta]\delta\psi\dd[4]{x}
+$$
+因此括号中的行旋量为零，这正是 $\mathrm{i}\pdv*{\bar{\psi}}{x^\mu}\gamma^\mu+m\bar{\psi}=0$。
+左右导数的作用就是固定这类奇变分量移位时的符号。
 
 ---
 ## 退化的勒让德变换与第二类约束
@@ -103,107 +105,98 @@ $$
 
 把 $\psi$ 与 $\psi^\dagger$ 暂时视为独立的正则坐标。
 由拉格朗日密度得到共轭动量：
-
 $$
-\pi_\psi=\frac{\partial^R\mathcal{L}}{\partial\dot\psi}=\mathrm{i}\psi^\dagger
+\pi_\psi=\left(\pdv{\mathcal{L}}{\dot{\psi}}\right)_R=\mathrm{i}\psi^\dagger
 $$
-
 而 $\psi^\dagger$ 的共轭动量为：
-
 $$
-\pi_{\psi^\dagger}=\frac{\partial^L\mathcal{L}}{\partial\dot\psi^\dagger}=0
+\pi_{\psi^\dagger}=\left(\pdv{\mathcal{L}}{\dot{\psi}^\dagger}\right)_L=0
 $$
-
 第二个结果不是运动方程，也不是说 $\psi^\dagger$ 没有物理意义。
 它表示拉格朗日密度对速度的黑塞矩阵不可逆。
 这里的黑塞矩阵是对所有速度变量做二阶偏导得到的矩阵；若它可逆，就能由共轭动量反解全部速度。
-Dirac 拉格朗日密度只对 $\dot\psi$ 呈线性，而且根本不含 $\dot\psi^\dagger$，所以这个反解做不到。
+Dirac 拉格朗日密度只对 $\pdv*{\psi}{t}$ 呈线性，而且根本不含 $\pdv*{\psi^\dagger}{t}$，所以这个反解做不到。
+
 
 因此出现两个初级约束：
-
 $$
 \chi_1=\pi_\psi-\mathrm{i}\psi^\dagger\approx0
 $$
-
 以及：
-
 $$
 \chi_2=\pi_{\psi^\dagger}\approx0
 $$
-
 符号 $\approx0$ 称为弱等号。
 它表示这个关系只在约束曲面上成立，不能在计算所有泊松括号之前就把约束左侧直接删掉。
 约束曲面是完整正则相空间中的一个子空间，真正允许的初始数据只能位于这个子空间上。
 
+
 对于格拉斯曼奇正则变量，分级泊松括号在两个奇变量之间是对称的，而不是反对称的。
 把空间点和旋量指标暂时省略，基本关系可以写成：
-
 $$
-\{\psi,\pi_\psi\}_{\mathrm{gP}}=1
+\{\psi,\pi_\psi\}_{\text{gP}}=1
 $$
-
 以及：
-
 $$
-\{\pi_\psi,\psi\}_{\mathrm{gP}}=1
+\{\pi_\psi,\psi\}_{\text{gP}}=1
 $$
-
-下标 $\mathrm{gP}$ 表示分级泊松括号。
+下标 $\text{gP}$ 表示分级泊松括号。
 “分级”是说代数中的对象分成偶对象与奇对象，交换两个对象时的符号取决于它们各自的奇偶性。
 
+
 把空间和旋量指标恢复后，约束之间的括号为：
-
 $$
-\{\chi_{1\alpha}(\bm{x}),\chi_{2\beta}(\bm{y})\}_{\mathrm{gP}}=-\mathrm{i}\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
+\{\chi_{1\alpha}(\bm{x}),\chi_{2\beta}(\bm{y})\}_{\text{gP}}=-\mathrm{i}\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
 $$
-
 反向次序给出相同结果。
 这个约束括号核可逆，因此 $\chi_1$ 与 $\chi_2$ 是第二类约束。
-第二类约束的意思不是它们不重要，而是它们彼此的泊松括号不为零，必须在量子化前从正则结构中消去这些冗余方向。
+第二类约束的意思不是它们不重要，而是它们彼此的泊松括号不为零，必须在量子化前消去这些非独立正则方向。
+
 
 几何上，约束方程先把完整分级相空间限制到一个约束子空间，狄拉克括号再把原辛结构拉回并修正为这个子空间上真正可用的正则结构。
 这里的第二类约束不生成规范轨道，所以不是把一族等价点再作商；它们直接消去不能独立指定的正则变量。
 这与后面麦克斯韦第一类约束“先限制到约束面、再沿规范轨道取商”必须严格区分。
 
+
 处理第二类约束的工具称为 Dirac 括号。
 它不是 Dirac 方程中的微分算符，而是一种把约束自动设为零后的修正泊松括号。
 若把约束括号核记为 $C_{ab}$，其逆核记为 $C^{-1}_{ab}$，Dirac 括号的结构为：
-
 $$
-\{F,G\}_D=\{F,G\}_{\mathrm{gP}}-\{F,\chi_a\}_{\mathrm{gP}}C^{-1}_{ab}\{\chi_b,G\}_{\mathrm{gP}}
+\{F,G\}_D=\{F,G\}_{\text{gP}}-\{F,\chi_a\}_{\text{gP}}C^{-1}_{ab}\{\chi_b,G\}_{\text{gP}}
 $$
-
 这里还隐含了对约束标签、旋量指标和空间位置的求和或积分。
+在当前约定下，省略旋量单位矩阵后，约束核及其逆核分别为：
+$$
+C_{ab}(\bm{x},\bm{y})=-\mathrm{i}\mqty[0&1\\1&0]_{ab}\delta^{(3)}(\bm{x}-\bm{y}),C^{-1}_{ab}(\bm{x},\bm{y})=\mathrm{i}\mqty[0&1\\1&0]_{ab}\delta^{(3)}(\bm{x}-\bm{y})
+$$
+逆核的定义可以显式检查为：
+$$
+\int C_{ac}(\bm{x},\bm{z})C^{-1}_{cb}(\bm{z},\bm{y})\dd[3]{z}=\delta_{ab}\delta^{(3)}(\bm{x}-\bm{y})
+$$
+基本括号还给出 $\{\psi_\alpha(\bm{x}),\chi_{1\beta}(\bm{y})\}_{\text{gP}}=\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})$ 与 $\{\chi_{2\alpha}(\bm{x}),\psi_\beta^\dagger(\bm{y})\}_{\text{gP}}=\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})$。
+所以 Dirac 括号的修正项直接取出 $C^{-1}_{12}=\mathrm{i}$ 及相应的单位核。
 把 $F=\psi_\alpha(t,\bm{x})$ 与 $G=\psi_\beta^\dagger(t,\bm{y})$ 代入，在本文约定下得到：
-
 $$
 \{\psi_\alpha(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}_D=-\mathrm{i}\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
 $$
-
 其余两个同类 Dirac 括号为零。
+
 
 尽管勒让德变换退化，约束处理后的物理哈密顿密度仍可直接得到。
 先写形式上的勒让德变换：
-
 $$
-\mathcal{H}=\pi_\psi\dot\psi+\dot\psi^\dagger\pi_{\psi^\dagger}-\mathcal{L}
+\mathcal{H}=\pi_\psi\dot{\psi}+\dot{\psi}^\dagger\pi_{\psi^\dagger}-\mathcal{L}
 $$
-
 代入 $\pi_\psi=\mathrm{i}\psi^\dagger$ 与 $\pi_{\psi^\dagger}=0$，时间导数项抵消：
-
 $$
 \mathcal{H}=\psi^\dagger h_D\psi
 $$
-
 显式写开为：
-
 $$
 \mathcal{H}=\psi^\dagger(-\mathrm{i}\bm{\alpha}\cdot\bm{\nabla}+\beta m)\psi
 $$
-
 在完整的受约束哈密顿形式中，还要把 $\chi_1$ 与 $\chi_2$ 乘以拉格朗日乘子加入总哈密顿量。
 这些乘子负责保持约束随时间演化成立；在消去第二类约束以后，物理自由度的哈密顿量就是上式。
-
 
 ---
 ## 从分级正则结构到量子反对易关系
@@ -211,50 +204,44 @@ $$
 
 量子化时，玻色偶变量的经典泊松括号对应量子对易子，费米奇变量的 Dirac 括号对应量子反对易子。
 对两个奇对象，量子化规则写成：
-
 $$
-\{A,B\}_+=\mathrm{i}\{A,B\}_D
+\{A,B\}=\mathrm{i}\{A,B\}_D
 $$
-
-左边的反对易子定义为 $\{A,B\}_+=AB+BA$。
+左边的反对易子定义为 $\{A,B\}=AB+BA$。
 把上一节得到的 Dirac 括号代入，得到 Dirac 场的基本等时反对易关系：
-
 $$
-\{\psi_\alpha(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}_+=\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
+\{\psi_\alpha(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}=\delta_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
 $$
-
 另外两类关系为：
-
 $$
-\{\psi_\alpha(t,\bm{x}),\psi_\beta(t,\bm{y})\}_+=0
+\{\psi_\alpha(t,\bm{x}),\psi_\beta(t,\bm{y})\}=0
 $$
-
 以及：
-
 $$
-\{\psi_\alpha^\dagger(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}_+=0
+\{\psi_\alpha^\dagger(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}=0
 $$
-
 这三式是费米场版本的正则量子化条件。
 狄拉克 $\delta$ 分布仍然扮演连续空间单位矩阵，而 $\delta_{\alpha\beta}$ 是旋量分量空间中的单位矩阵。
 
-利用 $\bar\psi=\psi^\dagger\gamma^0$，第一式也可以写成：
 
+利用 $\bar{\psi}=\psi^\dagger\gamma^0$，第一式也可以写成：
 $$
-\{\psi_\alpha(t,\bm{x}),\bar\psi_\beta(t,\bm{y})\}_+=(\gamma^0)_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
+\{\psi_\alpha(t,\bm{x}),\bar{\psi}_\beta(t,\bm{y})\}=(\gamma^0)_{\alpha\beta}\delta^{(3)}(\bm{x}-\bm{y})
 $$
-
 等时关系看起来选出了时间方向，这是因为正则量子化必须先选择一张初始数据切片。
 完整理论仍然是洛伦兹协变的；后面把反对易关系推广到任意时空点后，会看到类空间隔处的费米场反对易，从而满足微观因果性。
 
+
 这里还要区分两个完全不同的反对易结构。
 $\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}$ 是有限维旋量矩阵的克利福德代数，决定 Dirac 方程的洛伦兹结构。
-$\{\psi_\alpha(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}_+$ 是无限维场算符代数，决定多粒子态的费米统计。
+$\{\psi_\alpha(t,\bm{x}),\psi_\beta^\dagger(t,\bm{y})\}$ 是无限维场算符代数，决定多粒子态的费米统计。
 两者都写成反对易子，但作用对象和物理角色不同。
+
 
 反对易量子化还会同时解决两个问题。
 第一，对任意单个费米模，产生算符的平方为零，所以同一单粒子态最多被占据一次。
 第二，把反粒子部分的算符重新排序时会出现额外负号，使反粒子激发的能量变成正数。
 这两个结论将在后面两篇中分别完整推导，而不是作为额外假设加入。
+
 
 下一篇先把场写成 $u$ 旋量和 $v$ 旋量的模展开，再从本篇的等时场反对易关系推出全部模算符反对易代数，并反向检验场的正则关系。

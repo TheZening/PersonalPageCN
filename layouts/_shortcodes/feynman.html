@@ -1,0 +1,50 @@
+{{- $sourceName := .Get "src" -}}
+{{- if not $sourceName -}}
+  {{- errorf "The feynman shortcode requires src at %s" .Position -}}
+{{- end -}}
+{{- if not (findRE `^[a-z0-9][a-z0-9_-]*(/[a-z0-9][a-z0-9_-]*)*$` $sourceName) -}}
+  {{- errorf "Invalid feynman src %q at %s" $sourceName .Position -}}
+{{- end -}}
+
+{{- $caption := .Get "caption" -}}
+{{- $alt := .Get "alt" -}}
+{{- if not $alt -}}
+  {{- errorf "The feynman shortcode requires explicit alt text at %s" .Position -}}
+{{- end -}}
+
+{{- $size := .Get "size" | default "medium" -}}
+{{- if not (in (slice "small" "medium" "large" "full") $size) -}}
+  {{- errorf "Invalid feynman size %q at %s" $size .Position -}}
+{{- end -}}
+
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- if not (in (slice "lazy" "eager") $loading) -}}
+  {{- errorf "Invalid feynman loading value %q at %s" $loading .Position -}}
+{{- end -}}
+
+{{- $theme := .Get "theme" | default "invert" -}}
+{{- if not (in (slice "invert" "native") $theme) -}}
+  {{- errorf "Invalid feynman theme %q at %s" $theme .Position -}}
+{{- end -}}
+
+{{- $assetPath := printf "feynman/%s.svg" $sourceName -}}
+{{- $diagram := resources.Get $assetPath -}}
+{{- with $diagram -}}
+  {{- if ne .MediaType.Type "image/svg+xml" -}}
+    {{- errorf "Feynman diagram asset %q is not SVG at %s" $assetPath $.Position -}}
+  {{- end -}}
+  {{- $fingerprinted := . | fingerprint "sha256" -}}
+  <figure class="feynman-diagram feynman-diagram--{{ $size }} feynman-diagram--theme-{{ $theme }}">
+    <img
+      class="feynman-diagram__image"
+      src="{{ $fingerprinted.RelPermalink }}"
+      alt="{{ $alt }}"
+      loading="{{ $loading }}"
+      decoding="async">
+    {{- with $caption }}
+      <figcaption class="feynman-diagram__caption">{{ . }}</figcaption>
+    {{- end }}
+  </figure>
+{{- else -}}
+  {{- errorf "Feynman diagram asset %q not found at %s" $assetPath $.Position -}}
+{{- end -}}

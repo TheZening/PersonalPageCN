@@ -157,6 +157,55 @@ mjx-container[display="true"],
   padding-block: 0.5rem;
 }
 
+.feynman-diagram {
+  --feynman-diagram-max-width: 36rem;
+  width: min(100%, var(--feynman-diagram-max-width));
+  margin: 1.8rem auto;
+  text-align: center;
+}
+
+.feynman-diagram--small {
+  --feynman-diagram-max-width: 22rem;
+}
+
+.feynman-diagram--large {
+  --feynman-diagram-max-width: 48rem;
+}
+
+.feynman-diagram--full {
+  --feynman-diagram-max-width: 100%;
+}
+
+.feynman-diagram__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+html.dark .feynman-diagram--theme-invert .feynman-diagram__image {
+  filter: invert(1);
+}
+
+.feynman-diagram__caption {
+  margin-top: 0.75rem;
+  color: #526174;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+html.dark .feynman-diagram__caption {
+  color: #a9b8cb;
+}
+
+@media print {
+  html.dark .feynman-diagram--theme-invert .feynman-diagram__image {
+    filter: none;
+  }
+}
+
 .hextra-search-input {
   border-color: var(--notes-border);
   background: rgba(148, 163, 184, 0.06);

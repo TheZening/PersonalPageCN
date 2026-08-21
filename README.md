@@ -21,6 +21,50 @@ hugo server
 
 然后访问 Hugo 输出的本地地址. 修改 Markdown 后页面会自动刷新.
 
+## 费曼图
+
+费曼图使用 TikZ-Feynman 编写, 在本地生成 SVG 后由 Hugo 短代码载入. 源文件位于 `assets/feynman-src/`, 生成文件位于 `assets/feynman/`.
+
+每幅图都是一个自包含的 `standalone` 文档. 必须在加载 TikZ 前选择 dvisvgm 驱动:
+
+```tex
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\documentclass[dvisvgm,tikz,border=8pt]{standalone}
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{feynman}
+    % 顶点和传播线
+  \end{feynman}
+\end{tikzpicture}
+\end{document}
+```
+
+为了让陈旧检查可靠, 源文件不能使用 `\input`, `\include` 或 `\includegraphics`; 需要的绘图定义应直接写在同一个文件中.
+
+生成全部费曼图:
+
+```bash
+./scripts/build-feynman-diagrams.sh
+```
+
+只生成一幅图时, 可以传入相对于源目录的名称, `.tex` 后缀可以省略:
+
+```bash
+./scripts/build-feynman-diagrams.sh examples/qed_tree_scattering
+```
+
+在 Markdown 帖子中插入生成后的图:
+
+```text
+{{< feynman src="examples/qed_tree_scattering" alt="两条费米子线通过一条光子内线连接" caption="电子与缪子散射的树图" >}}
+```
+
+必须显式提供 `alt` 来说明图中的物理结构. `caption` 是可选的纯文本图题. `size` 可选值为 `small`, `medium`, `large` 和 `full`; 默认使用 `medium`. 单色透明图默认使用 `theme="invert"` 适配深色模式; 彩色图应显式使用 `theme="native"`.
+
+生成的 SVG 与 `.tex` 源文件一起提交. 部署流程运行 `./scripts/build-feynman-diagrams.sh --check`, 如果 SVG 缺失或已经落后于源文件, 构建会直接失败. 当前图形流水线按单色图设计, 深色主题会自动反转线条与标签颜色.
+
 ## 内容结构
 
 ```text

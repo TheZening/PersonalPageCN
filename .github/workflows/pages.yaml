@@ -47,6 +47,9 @@ jobs:
       - name: Check math delimiters
         run: ./scripts/check-math-delimiters.sh
 
+      - name: Check Feynman diagrams
+        run: ./scripts/build-feynman-diagrams.sh --check
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
